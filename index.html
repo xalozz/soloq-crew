@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoloQ Crew</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div>
+        <h1 id="title">SoloQ Crew</h1>
+        <p id="subtitle" class="muted"></p>
+      </div>
+      <div class="top-side">
+        <span id="updated" class="muted"></span>
+        <label class="sort">Ordenar por
+          <select id="sort">
+            <option value="rank">Rango</option>
+            <option value="winrate">Winrate</option>
+            <option value="streak">Racha actual</option>
+            <option value="kda">KDA</option>
+            <option value="games">Partidas</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div id="demo-banner" class="demo" hidden>Datos de demostración: aún no se han cargado datos reales de Riot.</div>
+
+  <main class="wrap">
+    <section>
+      <h2>Clasificación</h2>
+      <div id="ladder" class="ladder" aria-live="polite">Cargando…</div>
+    </section>
+
+    <section>
+      <h2>Récords del grupo</h2>
+      <div id="records" class="records"></div>
+    </section>
+  </main>
+
+  <footer class="wrap muted small">
+    Estadísticas calculadas sobre las últimas partidas de SoloQ guardadas. No afiliado a Riot Games;
+    League of Legends es marca registrada de Riot Games, Inc.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
