@@ -111,24 +111,69 @@ export function profileLinks(platform, gameName, tagLine) {
 }
 
 // Convierte una partida de la API en el registro compacto que guardamos.
-export function compactMatch(match, puuid) {
+// `dd` = diccionarios de Data Dragon ({ spells: {id→clave}, runes: {id→ruta icono} }).
+export const MATCH_RECORD_VERSION = 2;
+
+function loadout(p, dd) {
+  const styles = p.perks?.styles ?? [];
+  const keystone = styles[0]?.selections?.[0]?.perk;
+  const secondary = styles[1]?.style;
+  return {
+    champ: p.championName,
+    spells: [p.summoner1Id, p.summoner2Id].map((id) => dd?.spells?.[id] ?? null),
+    runes: [dd?.runes?.[keystone] ?? null, dd?.runes?.[secondary] ?? null],
+  };
+}
+
+export function compactMatch(match, puuid, dd) {
   const info = match.info;
   const me = info.participants.find((p) => p.puuid === puuid);
   if (!me) return null;
   if (me.gameEndedInEarlySurrender || info.gameDuration < 300) return null; // remake
 
   const team = info.participants.filter((p) => p.teamId === me.teamId);
+  const opp = me.teamPosition
+    ? info.participants.find((p) => p.teamId !== me.teamId && p.teamPosition === me.teamPosition)
+    : null;
+  const teamKills = team.reduce((s, p) => s + (p.kills || 0), 0);
   return {
+    v: MATCH_RECORD_VERSION,
     id: match.metadata.matchId,
     t: info.gameEndTimestamp ?? (info.gameStartTimestamp + info.gameDuration * 1000),
     dur: info.gameDuration,
     win: !!me.win,
     champ: me.championName,
     role: me.teamPosition || null,
+    lvl: me.champLevel,
     k: me.kills, d: me.deaths, a: me.assists,
+    kp: teamKills ? Math.round(((me.kills + me.assists) / teamKills) * 100) : 0,
     cs: (me.totalMinionsKilled || 0) + (me.neutralMinionsKilled || 0),
     vis: me.visionScore || 0,
     dmg: me.totalDamageDealtToChampions || 0,
     teamDmg: team.reduce((s, p) => s + (p.totalDamageDealtToChampions || 0), 0),
+    penta: me.pentaKills || 0,
+    fb: !!me.firstBloodKill,
+    items: [me.item0, me.item1, me.item2, me.item3, me.item4, me.item5, me.item6].map((x) => x || 0),
+    ...(({ spells, runes }) => ({ spells, runes }))(loadout(me, dd)),
+    opp: opp ? loadout(opp, dd) : null,
   };
+}
+
+// Diccionarios de Data Dragon para hechizos y runas (una vez por ejecución).
+export async function loadDataDragon(version) {
+  if (!version) return { spells: {}, runes: {} };
+  const base = `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US`;
+  const spells = {}, runes = {};
+  try {
+    const s = await (await fetch(`${base}/summoner.json`)).json();
+    for (const sp of Object.values(s.data)) spells[sp.key] = sp.id;
+  } catch { /* sin iconos de hechizos */ }
+  try {
+    const r = await (await fetch(`${base}/runesReforged.json`)).json();
+    for (const style of r) {
+      runes[style.id] = style.icon;
+      for (const slot of style.slots) for (const rune of slot.runes) runes[rune.id] = rune.icon;
+    }
+  } catch { /* sin iconos de runas */ }
+  return { spells, runes };
 }

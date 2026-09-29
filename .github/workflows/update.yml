@@ -2,7 +2,7 @@ name: Actualizar datos
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # cada 30 min (GitHub puede retrasarlo unos minutos)
+    - cron: '*/10 * * * *'   # cada 10 min (GitHub puede retrasarlo unos minutos)
   workflow_dispatch:          # botón "Run workflow" para lanzarlo a mano
 
 permissions:

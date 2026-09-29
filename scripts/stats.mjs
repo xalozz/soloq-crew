@@ -137,6 +137,23 @@ export function computeAccountStats(history) {
     worstGame: gameBrief(worstGame.g),
     firstGameAt: history[n - 1].t,
     lastGameAt: history[0].t,
+    totals: { k: K, d: D, a: A },
+    dmgPerMin: Math.round(sum((g) => g.dmg) / Math.max(1, minutes)),
+    avgVision: r1(sum((g) => g.vis) / n),
+    pentas: sum((g) => g.penta || 0),
+    firstBloods: sum((g) => (g.fb ? 1 : 0)),
+    maxKills: Math.max(...history.map((g) => g.k)),
+    maxDurationMin: r1(Math.max(...history.map((g) => g.dur)) / 60),
+    avgKp: (() => {
+      const withKp = history.filter((g) => g.kp != null);
+      return withKp.length ? Math.round(withKp.reduce((s, g) => s + g.kp, 0) / withKp.length) : null;
+    })(),
+    champs: champs.map((c) => {
+      const games = history.filter((g) => g.champ === c.key);
+      const mins = games.reduce((s, g) => s + g.dur, 0) / 60;
+      return { ...c, csPerMin: r1(games.reduce((s, g) => s + g.cs, 0) / Math.max(1, mins)) };
+    }),
+    roles: roles.sort((a, b) => b.games - a.games),
   };
 }
 

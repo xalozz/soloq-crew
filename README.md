@@ -7,7 +7,7 @@ OP.GG, U.GG, DPM.LOL y LeagueOfGraphs.
 ## Cómo funciona
 
 ```
-GitHub Action (cada 30 min) ─► scripts/update.mjs ─► API de Riot
+GitHub Action (cada 10 min) ─► scripts/update.mjs ─► API de Riot
                                      │
                                      ▼
                      data/data.json + data/history/*.json  (commit al repo)
@@ -19,6 +19,9 @@ GitHub Action (cada 30 min) ─► scripts/update.mjs ─► API de Riot
 - La clave de Riot solo la usa el script en el servidor de GitHub; **nunca llega al navegador**.
 - El historial se guarda de forma incremental (hasta 500 partidas SoloQ por cuenta), así las rachas y
   estadísticas se acumulan con el tiempo aunque la API solo devuelva las últimas 100.
+- **LP por partida:** la API de Riot no da los LP ganados en cada partida, así que el script guarda una foto del rango
+  (LP + partidas jugadas) en cada ejecución y asigna a cada partida la diferencia entre la foto de antes y la de después.
+  Si entre dos fotos hubo varias partidas, se muestra el cambio conjunto. Solo funciona desde que se empezó a registrar.
 - Las estadísticas "mejor/peor" de campeón y rol exigen 3+ partidas para no premiar rachas de una sola partida.
 
 ## Puesta en marcha
@@ -67,7 +70,7 @@ aplicación de Access que permita solo los emails de tus amigos.
 ## Personalizar
 
 - Título y subtítulo: `config/players.json` (`title`, `subtitle`).
-- Frecuencia: `cron` en `.github/workflows/update.yml`.
+- Frecuencia: `cron` en `.github/workflows/update.yml` (10 min; en repos públicos Actions es gratis).
 - Partidas iniciales por cuenta: variable `MATCH_COUNT` (por defecto 40, máximo 100).
 - Colores y layout: `style.css`. Récords del grupo: función `buildRecords` en `app.js`.
 - Enlaces extra por jugador (por ejemplo Discord o Twitter): añade `"links": [{ "label": "Discord", "url": "…" }]`
@@ -89,6 +92,6 @@ index.html app.js style.css   la web
 ## Limitaciones
 
 - Solo cuenta partidas de SoloQ (cola 420) y descarta remakes.
-- Los datos van con el retraso del cron (30 min por defecto) y GitHub puede retrasar los cron unos minutos.
+- Los datos van con el retraso del cron (10 min por defecto) y GitHub puede retrasar los cron unos minutos.
 - Si cambias tu Riot ID en el juego, actualiza `config/players.json`.
 - Proyecto no afiliado a Riot Games.

@@ -12,7 +12,7 @@ import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Riot, RiotError, compactMatch, profileLinks } from './riot.mjs';
+import { Riot, RiotError, compactMatch, profileLinks, loadDataDragon, MATCH_RECORD_VERSION } from './riot.mjs';
 import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -28,6 +28,7 @@ const LP_HIST_PUBLISHED = 600;
 const QUEUE_SOLO = 420;
 const HISTORY_CAP = 500;
 const MATCH_COUNT = Math.min(100, Number(process.env.MATCH_COUNT || 40));
+const RECENT_PUBLISHED = 20;
 
 const readJson = async (file, fallback) => {
   try { return JSON.parse(await readFile(file, 'utf8')); } catch { return fallback; }
@@ -51,7 +52,7 @@ async function ddragonVersion() {
   }
 }
 
-async function updateAccount(riot, acc, region, cache, prevSnapshot) {
+async function updateAccount(riot, acc, region, cache, dd) {
   const [gameName, tagLine] = splitRiotId(acc.riotId);
   const cacheKey = acc.riotId.toLowerCase();
 
@@ -63,6 +64,7 @@ async function updateAccount(riot, acc, region, cache, prevSnapshot) {
   }
 
   const summoner = await riot.summonerByPuuid(region, puuid);
+  const leagueAt = Date.now();
   const entries = await riot.leagueEntries(region, puuid);
   const solo = entries.find((e) => e.queueType === 'RANKED_SOLO_5x5');
 
@@ -71,15 +73,18 @@ async function updateAccount(riot, acc, region, cache, prevSnapshot) {
   const stored = await readJson(hf, []);
   const history = Array.isArray(stored) ? stored : stored.games ?? [];
   const skipped = new Set(Array.isArray(stored) ? [] : stored.skipped ?? []);
-  const known = new Set([...history.map((g) => g.id), ...skipped]);
+  // Partidas nuevas o guardadas con un formato antiguo (les faltan objetos, runas, rival…)
+  const byId = new Map(history.map((g) => [g.id, g]));
   const ids = await riot.matchIds(region, puuid, { queue: QUEUE_SOLO, count: MATCH_COUNT });
-  const fresh = ids.filter((id) => !known.has(id));
-  console.log(`  ${acc.riotId}: ${fresh.length} partidas nuevas`);
+  const fresh = ids.filter((id) => !skipped.has(id) && (byId.get(id)?.v ?? 0) < MATCH_RECORD_VERSION);
+  console.log(`  ${acc.riotId}: ${fresh.length} partidas por descargar`);
   for (const id of fresh) {
     try {
-      const rec = compactMatch(await riot.match(region, id), puuid);
-      if (rec) history.push(rec);
-      else skipped.add(id);
+      const rec = compactMatch(await riot.match(region, id), puuid, dd);
+      if (rec) {
+        const i = history.findIndex((g) => g.id === id);
+        if (i >= 0) history[i] = rec; else history.push(rec);
+      } else skipped.add(id);
     } catch (err) {
       if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
       console.warn(`  ! partida ${id}: ${err.message}`);
@@ -108,7 +113,39 @@ async function updateAccount(riot, acc, region, cache, prevSnapshot) {
     stats: computeAccountStats(history),
     links: profileLinks(region, gameName, tagLine),
     updatedAt: new Date().toISOString(),
+    _history: history,
+    _leagueAt: leagueAt,
   };
+}
+
+// Asigna a cada partida el cambio de LP comparando las fotos del rango tomadas antes y después.
+// hist = [[t, score, partidasTotales], ...]. Si entre dos fotos hubo varias partidas,
+// todas reciben el cambio conjunto (n > 1) porque no se puede repartir con exactitud.
+function assignLp(hist, games) {
+  const asc = [...games].sort((a, b) => a.t - b.t);
+  const out = new Map();
+  const used = new Set();
+  for (let i = 1; i < hist.length; i++) {
+    const [tA, sA, gA] = hist[i - 1];
+    const [tB, sB, gB] = hist[i];
+    if (gA == null || gB == null) continue;
+    const dg = gB - gA;
+    if (dg <= 0) continue; // sin partidas (dodge, decay…) o reinicio de temporada
+    const cands = asc.filter((g) => !used.has(g.id) && g.t > tA - 15 * 60e3 && g.t <= tB + 60e3);
+    if (cands.length < dg) continue;
+    for (const g of cands.slice(-dg)) {
+      used.add(g.id);
+      out.set(g.id, { d: sB - sA, n: dg });
+    }
+  }
+  return out;
+}
+
+function lpAverages(games, lpMap) {
+  const exact = games.map((g) => ({ g, lp: lpMap.get(g.id) })).filter((x) => x.lp && x.lp.n === 1);
+  const avg = (xs) => (xs.length ? Math.round(xs.reduce((s, x) => s + x.lp.d, 0) / xs.length) : null);
+  const w = exact.filter((x) => x.g.win), l = exact.filter((x) => !x.g.win);
+  return { win: avg(w), loss: avg(l), winN: w.length, lossN: l.length };
 }
 
 async function main() {
@@ -131,6 +168,8 @@ async function main() {
   const prevAcc = new Map();
   for (const p of previous?.players ?? []) for (const a of p.accounts) prevAcc.set(a.riotId.toLowerCase(), a);
 
+  const ddVersion = (await ddragonVersion()) ?? previous?.ddragonVersion ?? null;
+  const dd = await loadDataDragon(ddVersion);
   const players = [];
   let failures = 0;
   for (const pl of config.players) {
@@ -139,7 +178,7 @@ async function main() {
     for (const acc of pl.accounts) {
       const region = acc.region ?? config.defaultRegion ?? 'euw1';
       try {
-        accounts.push(await updateAccount(riot, acc, region, cache, prevAcc.get(acc.riotId.toLowerCase())));
+        accounts.push(await updateAccount(riot, acc, region, cache, dd));
       } catch (err) {
         // Clave caducada: abortar sin tocar los datos publicados.
         if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
@@ -172,16 +211,25 @@ async function main() {
       const key = a.riotId.toLowerCase();
       const arr = lpHist[key] ?? [];
       const score = rankScore(a.rank);
-      if (score >= 0 && !a.error && arr.at(-1)?.[1] !== score) arr.push([now, score]);
+      const total = a.rank ? a.rank.wins + a.rank.losses : null;
+      const last = arr.at(-1);
+      if (score >= 0 && a._history && (last?.[1] !== score || last?.[2] !== total)) arr.push([a._leagueAt ?? now, score, total]);
       lpHist[key] = arr.slice(-LP_HIST_CAP);
-      a.lpHist = lpHist[key].slice(-LP_HIST_PUBLISHED);
+      a.lpHist = lpHist[key].slice(-LP_HIST_PUBLISHED).map(([t, s]) => [t, s]);
+      if (a._history) {
+        const lpMap = assignLp(lpHist[key], a._history);
+        a.recent = a._history.slice(0, RECENT_PUBLISHED).map((g) => ({ ...g, lp: lpMap.get(g.id) ?? null }));
+        if (a.stats) a.stats.lp = lpAverages(a._history, lpMap);
+      }
+      delete a._history;
+      delete a._leagueAt;
     }
   }
   await writeJson(LP_HIST, lpHist);
 
   const next = {
     generatedAt: new Date().toISOString(),
-    ddragonVersion: (await ddragonVersion()) ?? previous?.ddragonVersion ?? null,
+    ddragonVersion: ddVersion,
     title: config.title ?? 'SoloQ Crew',
     subtitle: config.subtitle ?? '',
     players,

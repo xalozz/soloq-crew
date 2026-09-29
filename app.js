@@ -22,10 +22,7 @@ const expanded = new Set();
 
 // ---------------------------------------------------------------- utilidades
 function h(tag, attrs, ...children) {
-  const el = document.createElementNS(
-    ['svg', 'path', 'polyline', 'line', 'circle', 'title'].includes(tag) && attrs?.svg ? 'http://www.w3.org/2000/svg' : 'http://www.w3.org/1999/xhtml',
-    tag,
-  );
+  const el = document.createElementNS(attrs?.svg ? 'http://www.w3.org/2000/svg' : 'http://www.w3.org/1999/xhtml', tag);
   for (const [k, v] of Object.entries(attrs || {})) {
     if (v == null || v === false || k === 'svg') continue;
     if (k === 'class') el.setAttribute('class', v);
@@ -288,57 +285,203 @@ function row(p, idx) {
 
   return h('div', { class: `row ${open ? 'open' : ''} ${byElo && shownPos <= 3 ? `top top${shownPos}` : ''}`, role: 'row' },
     head,
-    open ? h('div', { class: 'detail' },
-      p.links?.length ? h('div', { class: 'links' }, p.links.map((l) => h('a', { href: l.url, target: '_blank', rel: 'noopener noreferrer' }, l.label))) : null,
-      h('div', { class: 'accs' }, p.accounts.map((a, i) => accountCard(a, p, p.accounts.length > 1 && i === p.bestAccount)))) : null);
+    open ? playerDetail(p) : null);
 }
 
-function statCell(label, value, sub) {
-  return h('div', { class: 'st' }, h('span', { class: 'st-l' }, label), h('b', { class: 'st-v' }, value), sub ? h('span', { class: 'st-s' }, sub) : null);
+// ---------------------------------------------------------------- ficha de jugador
+const detailTab = new Map();  // jugador → pestaña
+const detailAcc = new Map();  // jugador → índice de cuenta
+const DD = () => `https://ddragon.leagueoflegends.com/cdn/${DATA.ddragonVersion}`;
+
+function ddImg(url, size, cls, title) {
+  if (!url || !DATA.ddragonVersion) return h('span', { class: `ico ph ${cls || ''}`, style: `width:${size}px;height:${size}px` });
+  return h('img', {
+    class: `ico ${cls || ''}`, width: size, height: size, loading: 'lazy', alt: title || '', title: title || '', src: url,
+    onerror: (e) => e.target.replaceWith(h('span', { class: `ico ph ${cls || ''}`, style: `width:${size}px;height:${size}px` })),
+  });
 }
-function bwLine(label, g, kind) {
-  if (!g) return h('div', { class: 'bw' }, h('span', { class: 'bw-l' }, label), h('span', { class: 'muted' }, 'Pocos datos'));
-  const name = kind === 'role' ? ROLE_ES[g.key] ?? g.key : g.key;
-  return h('div', { class: 'bw' }, h('span', { class: 'bw-l' }, label),
-    kind === 'champ' ? champIcon(g.key, 22) : roleIcon(g.key),
-    h('b', {}, name), h('span', { class: 'muted' }, `${fmt(g.winrate)}% · ${g.games} part. · KDA ${fmt(g.kda, 2)}`));
-}
-function gameLine(label, g) {
-  if (!g) return null;
-  return h('div', { class: 'bw' }, h('span', { class: 'bw-l' }, label), champIcon(g.champ, 22),
-    h('b', {}, `${g.k}/${g.d}/${g.a}`), h('span', { class: 'muted' }, `${g.win ? 'Victoria' : 'Derrota'} · KDA ${fmt(g.kda, 2)}`));
+const spellImg = (key, size = 18) => (key ? ddImg(`${DD()}/img/spell/${key}.png`, size, 'spell', key.replace('Summoner', '')) : ddImg(null, size, 'spell'));
+const runeImg = (path, size = 18, cls = 'rune') => (path ? ddImg(`https://ddragon.leagueoflegends.com/cdn/img/${path}`, size, cls) : ddImg(null, size, cls));
+const itemImg = (id, size = 26) => (id ? ddImg(`${DD()}/img/item/${id}.png`, size, 'item') : h('span', { class: 'ico item empty', style: `width:${size}px;height:${size}px` }));
+
+function loadoutBlock(l, size) {
+  if (!l) return null;
+  return h('div', { class: 'loadout' },
+    h('span', { class: 'lo-champ' }, champIcon(l.champ, size)),
+    h('span', { class: 'lo-col' }, spellImg(l.spells?.[0], Math.round(size / 2.2)), spellImg(l.spells?.[1], Math.round(size / 2.2))),
+    h('span', { class: 'lo-col' }, runeImg(l.runes?.[0], Math.round(size / 2.2), 'rune key'), runeImg(l.runes?.[1], Math.round(size / 3), 'rune sec')));
 }
 
-function accountCard(acc, p, isMain) {
+const ago = (t) => timeAgo(new Date(t).toISOString());
+const mmss = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+
+function lpBadge(lp) {
+  if (!lp) return h('span', { class: 'm-lp muted', title: 'Partida anterior al registro de LP' }, '— LP');
+  const txt = `${lp.d > 0 ? '+' : ''}${lp.d} LP`;
+  if (lp.n > 1) return h('span', { class: `m-lp ${lp.d >= 0 ? 'pos' : 'neg'}`, title: `Cambio conjunto de ${lp.n} partidas jugadas seguidas entre dos actualizaciones` }, txt, h('small', {}, `${lp.n} part.`));
+  return h('span', { class: `m-lp ${lp.d >= 0 ? 'pos' : 'neg'}` }, txt);
+}
+
+function matchRow(g) {
+  const kda = (g.k + g.a) / Math.max(1, g.d);
+  const perfect = g.d === 0;
+  return h('div', { class: `match ${g.win ? 'win' : 'loss'}` },
+    h('div', { class: 'm-res' }, h('b', {}, g.win ? 'Victoria' : 'Derrota'), h('span', {}, `${mmss(g.dur)} · ${ago(g.t)}`)),
+    h('span', { class: 'm-role' }, roleIcon(g.role)),
+    h('div', { class: 'm-me' }, g.spells ? loadoutBlock(g, 40) : champIcon(g.champ, 40)),
+    g.opp ? h('div', { class: 'm-vs' }, h('small', {}, 'vs'), loadoutBlock(g.opp, 30)) : h('div', { class: 'm-vs' }),
+    h('div', { class: 'm-kda' },
+      h('b', {}, h('span', {}, g.k), ' / ', h('span', { class: 'neg' }, g.d), ' / ', h('span', {}, g.a)),
+      h('span', {}, [perfect ? 'Perfect' : `${fmt(kda, 1)} KDA`, g.kp != null ? `${g.kp}% KP` : null, `${g.cs} CS`].filter(Boolean).join(' · '))),
+    h('div', { class: 'm-items' }, (g.items ?? []).map((id, i) => itemImg(id, i === 6 ? 24 : 26))),
+    lpBadge(g.lp));
+}
+
+function tabHistorial(acc) {
+  const games = acc.recent ?? [];
+  if (!games.length) return h('p', { class: 'empty' }, 'Sin partidas de SoloQ registradas todavía.');
+  return h('div', { class: 'matches' }, games.map(matchRow));
+}
+
+function tile(label, value, cls = '') {
+  return h('div', { class: `tile ${cls}` }, h('b', {}, value), h('span', {}, label));
+}
+
+function nextDivision(rank) {
+  if (!rank || APEX.has(rank.tier)) return null;
+  const d = DIVS.indexOf(rank.division);
+  if (d < 3) return `${TIER_ES[rank.tier]} ${DIVS[d + 1]}`;
+  const t = TIERS.indexOf(rank.tier);
+  return t + 1 < 7 ? `${TIER_ES[TIERS[t + 1]]} IV` : 'Maestro';
+}
+
+function eloChart(hist) {
+  const box = h('div', { class: 'chart' });
+  if (!hist || hist.length < 2) {
+    box.append(h('p', { class: 'empty' }, 'La gráfica se dibuja con los cambios de LP registrados desde el 30 de septiembre. Aparecerá en cuanto haya al menos dos.'));
+    return box;
+  }
+  requestAnimationFrame(() => drawEloChart(box, hist));
+  return box;
+}
+
+function drawEloChart(box, hist) {
+  const W = Math.max(300, box.clientWidth), H = 220, L = 70, R = 12, T = 12, B = 26;
+  const t0 = hist[0][0], t1 = hist.at(-1)[0];
+  let lo = Math.min(...hist.map((x) => x[1])), hi = Math.max(...hist.map((x) => x[1]));
+  lo = Math.floor((lo - 10) / 100) * 100; hi = Math.ceil((hi + 10) / 100) * 100;
+  const x = (t) => L + ((t - t0) / Math.max(1, t1 - t0)) * (W - L - R);
+  const y = (s) => T + (1 - (s - lo) / Math.max(1, hi - lo)) * (H - T - B);
+  const grid = [];
+  const step = hi - lo > 800 ? 400 : 100;
+  for (let s = lo; s <= hi; s += step) {
+    grid.push(svg('line', { x1: L, x2: W - R, y1: y(s), y2: y(s), class: 'grid' }));
+    const lab = s >= 2800 ? `M ${s - 2800}` : `${TIER_ES[TIERS[Math.floor(s / 400)]].slice(0, 3)} ${DIVS[Math.floor((s % 400) / 100)]}`;
+    grid.push(svg('text', { x: L - 8, y: y(s) + 4, class: 'axis', 'text-anchor': 'end' }, lab));
+  }
+  const days = new Set();
+  for (const [t] of hist) {
+    const k = dayKey(t);
+    if (days.has(k)) continue;
+    days.add(k);
+    grid.push(svg('text', { x: x(t), y: H - 6, class: 'axis', 'text-anchor': 'middle' }, prettyDay(k)));
+  }
+  // Escalones: el LP se mantiene hasta el siguiente cambio
+  let d = `M${x(hist[0][0])},${y(hist[0][1])}`;
+  for (let i = 1; i < hist.length; i++) d += `H${x(hist[i][0])}V${y(hist[i][1])}`;
+  d += `H${x(Date.now())}`;
+  const line = svg('path', { d, class: 'eline' });
+  const dot = svg('circle', { r: 5, class: 'edot', cx: -20, cy: -20 });
+  const cross = svg('line', { class: 'ecross', y1: T, y2: H - B, x1: -20, x2: -20 });
+  const chart = svg('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': 'Evolución del elo' }, ...grid, cross, line, dot);
+  const tip = h('div', { class: 'etip', hidden: true });
+  chart.addEventListener('pointermove', (e) => {
+    const r = chart.getBoundingClientRect();
+    const px = ((e.clientX - r.left) / r.width) * W;
+    let best = hist[0];
+    for (const pt of hist) if (Math.abs(x(pt[0]) - px) < Math.abs(x(best[0]) - px)) best = pt;
+    dot.setAttribute('cx', x(best[0])); dot.setAttribute('cy', y(best[1]));
+    cross.setAttribute('x1', x(best[0])); cross.setAttribute('x2', x(best[0]));
+    tip.hidden = false;
+    tip.replaceChildren(h('b', {}, new Date(best[0]).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })), h('span', {}, scoreLabel(best[1])));
+    tip.style.left = `${(x(best[0]) / W) * 100}%`;
+    tip.style.top = `${(y(best[1]) / H) * 100}%`;
+  });
+  chart.addEventListener('pointerleave', () => { tip.hidden = true; dot.setAttribute('cx', -20); cross.setAttribute('x1', -20); cross.setAttribute('x2', -20); });
+  box.replaceChildren(chart, tip);
+}
+
+function tabStats(acc) {
+  const s = acc.stats, r = acc.rank;
+  const next = nextDivision(r);
+  const peak = acc.lpHist?.length ? Math.max(...acc.lpHist.map((x) => x[1])) : rankScore(r);
+  const lp = s?.lp;
+  return h('div', { class: 'sx' },
+    h('div', { class: 'sx-rank', style: `border-left-color: var(--t-${tierKey(r)})` },
+      h('div', { class: 'sx-tier' }, crest(r, 54), h('div', {}, h('b', { class: `t-${tierKey(r)}` }, rankName(r)), h('span', {}, r ? `${r.lp} LP` : 'Sin partidas de clasificación'))),
+      r ? h('div', { class: 'sx-wr' }, h('span', { class: 'lbl' }, 'Winrate'), winBar(r.wins, r.losses)) : null),
+    next ? h('div', { class: 'sx-prog' },
+      h('div', { class: 'sx-prog-top' }, h('span', {}, `Hacia ${next}`), h('b', {}, `${r.lp} / 100 LP`)),
+      h('div', { class: 'sx-prog-bar' }, h('i', { style: `width:${Math.min(100, r.lp)}%` }))) : null,
+    s ? h('div', { class: 'sx-kda' },
+      h('div', {}, h('b', { class: 'big' }, fmt(s.kda, 2)), h('span', { class: 'lbl' }, 'KDA')),
+      s.totals ? h('div', { class: 'sx-tot' }, h('span', { class: 'pos' }, fmtInt(s.totals.k)), ' / ', h('span', { class: 'neg' }, fmtInt(s.totals.d)), ' / ', h('span', { class: 'blue' }, fmtInt(s.totals.a))) : null,
+      h('div', { class: 'sx-reg' }, h('b', {}, s.games), h('span', { class: 'lbl' }, 'Partidas analizadas'))) : null,
+    s ? h('div', { class: 'tiles t3' },
+      tile('CS / min', fmt(s.csPerMin)), tile('Daño / min', s.dmgPerMin != null ? fmtInt(s.dmgPerMin) : '–'), tile('Visión', fmt(s.avgVision ?? null))) : null,
+    s ? h('div', { class: 'tiles t3' },
+      tile('Pentakills', s.pentas ?? '–'), tile('First bloods', s.firstBloods ?? '–', 'warm'), tile('Récord de kills', s.maxKills ?? '–', 'cool')) : null,
+    s ? h('div', { class: 'tiles t3' },
+      tile('KP media', s.avgKp != null ? `${s.avgKp}%` : '–'),
+      tile('LP por victoria / derrota', lp && (lp.winN || lp.lossN) ? h('span', {}, h('span', { class: 'pos' }, lp.win != null ? `▲${lp.win}` : '–'), '  ', h('span', { class: 'neg' }, lp.loss != null ? `▼${Math.abs(lp.loss)}` : '–')) : h('span', { class: 'muted', title: 'Se calcula con las partidas jugadas desde que se registra el LP' }, 'Pronto')),
+      tile('Racha actual · mejor · peor', h('span', {}, streakChip(s), ` ${s.streak.bestWin}V · ${s.streak.worstLoss}D`))) : null,
+    s ? h('p', { class: 'sx-line' },
+      'Duración media ', h('b', {}, `${fmt(s.avgDurationMin)} min`), ' · Más larga ', h('b', {}, `${fmt(s.maxDurationMin ?? null)} min`),
+      ' · Pico ', h('b', { class: `t-${tierKey(r)}` }, peak >= 0 ? scoreLabel(peak) : '–')) : null,
+    h('h4', { class: 'sx-h' }, 'Evolución de elo'),
+    eloChart(acc.lpHist));
+}
+
+function tabCampeones(acc) {
   const s = acc.stats;
-  return h('div', { class: 'acc' },
-    h('div', { class: 'acc-head' },
-      crest(acc.rank, 44),
-      h('div', { class: 'acc-id' },
-        h('b', {}, acc.gameName, h('span', { class: 'muted' }, `#${acc.tagLine}`)),
-        h('span', { class: 'muted small' }, [acc.label, isMain ? 'Cuenta principal' : null, acc.level ? `Nivel ${acc.level}` : null, (acc.region || '').toUpperCase()].filter(Boolean).join(' · '))),
-      h('div', { class: 'acc-rank' }, tierTag(acc.rank), acc.rank ? h('b', {}, `${acc.rank.lp} LP`) : null)),
-    acc.error ? h('p', { class: 'err' }, `No se pudo actualizar: ${acc.error}`) : null,
-    acc.rank ? winBar(acc.rank.wins, acc.rank.losses) : null,
-    s ? h('div', { class: 'st-grid' },
-      statCell('Racha actual', streakChip(s)),
-      statCell('Mejor racha', `${s.streak.bestWin}V`),
-      statCell('Peor racha', `${s.streak.worstLoss}D`),
-      statCell('KDA', fmt(s.kda, 2), `${fmt(s.avgK)} / ${fmt(s.avgD)} / ${fmt(s.avgA)}`),
-      statCell('CS/min', fmt(s.csPerMin)),
-      statCell('Visión/min', fmt(s.visPerMin, 2)),
-      statCell('% daño', s.dmgShare == null ? '–' : `${fmt(s.dmgShare)}%`),
-      statCell('Últimas 20', `${fmt(s.last20.winrate)}%`, sparkline(s.trend, 80, 20)),
-      statCell('Muestra', `${s.games}`, 'partidas analizadas'))
-      : h('p', { class: 'muted' }, 'Sin partidas de SoloQ guardadas todavía.'),
-    s ? h('div', { class: 'bw-list' },
-      bwLine('Mejor campeón', s.bestChamp, 'champ'), bwLine('Peor campeón', s.worstChamp, 'champ'),
-      bwLine('Mejor rol', s.bestRole, 'role'), bwLine('Peor rol', s.worstRole, 'role'),
-      gameLine('Mejor partida', s.bestGame), gameLine('Peor partida', s.worstGame)) : null,
-    s?.topChamps?.length ? h('div', { class: 'tops' }, h('span', { class: 'bw-l' }, 'Más jugados'),
-      s.topChamps.map((c) => h('span', { class: 'tc', title: `${c.key}: ${c.games} partidas, ${fmt(c.winrate)}% WR` }, champIcon(c.key, 28), h('small', {}, `${c.games}`)))) : null,
-    h('div', { class: 'links' }, Object.entries(acc.links || {}).map(([k, url]) =>
-      h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, LINK_LABELS[k] ?? k))));
+  if (!s) return h('p', { class: 'empty' }, 'Sin partidas registradas.');
+  const champs = s.champs ?? s.topChamps ?? [];
+  const bwTile = (label, g, kind) => h('div', { class: 'bw-tile' },
+    h('span', { class: 'lbl' }, label),
+    g ? h('div', { class: 'bw-main' }, kind === 'champ' ? champIcon(g.key, 34) : roleIcon(g.key),
+      h('div', {}, h('b', {}, kind === 'role' ? ROLE_ES[g.key] ?? g.key : g.key), h('span', {}, `${fmt(g.winrate)}% · ${g.games} partidas · KDA ${fmt(g.kda, 2)}`)))
+      : h('span', { class: 'muted' }, 'Pocos datos (mín. 3 partidas)'));
+  return h('div', { class: 'cx' },
+    h('div', { class: 'bw-grid' },
+      bwTile('Mejor campeón', s.bestChamp, 'champ'), bwTile('Peor campeón', s.worstChamp, 'champ'),
+      bwTile('Mejor rol', s.bestRole, 'role'), bwTile('Peor rol', s.worstRole, 'role')),
+    h('div', { class: 'ctable' },
+      h('div', { class: 'ct-head' }, h('span', {}, 'Campeón'), h('span', {}, 'Partidas'), h('span', {}, 'Winrate'), h('span', {}, 'KDA'), h('span', { class: 'c-cs' }, 'CS/min')),
+      champs.map((c) => h('div', { class: 'ct-row' },
+        h('span', { class: 'ct-name' }, champIcon(c.key, 30), h('b', {}, c.key)),
+        h('span', {}, c.games),
+        h('span', {}, winBar(c.wins, c.games - c.wins)),
+        h('span', { class: c.kda >= 3 ? 'pos' : '' }, fmt(c.kda, 2)),
+        h('span', { class: 'c-cs' }, c.csPerMin != null ? fmt(c.csPerMin) : '–')))));
+}
+
+function playerDetail(p) {
+  const tab = detailTab.get(p.name) ?? 'hist';
+  const ai = detailAcc.get(p.name) ?? (p.bestAccount >= 0 ? p.bestAccount : 0);
+  const acc = p.accounts[ai] ?? p.main;
+  const setTab = (t) => { detailTab.set(p.name, t); renderRows(); };
+  const tabs = [['hist', 'Historial'], ['stats', 'Stats & Elo'], ['champs', 'Campeones']];
+  return h('div', { class: 'detail' },
+    h('div', { class: 'dbar' },
+      h('div', { class: 'dtabs', role: 'tablist' }, tabs.map(([k, label]) =>
+        h('button', { class: k === tab ? 'on' : '', role: 'tab', 'aria-selected': k === tab, onclick: () => setTab(k) }, label))),
+      p.accounts.length > 1 ? h('div', { class: 'dacc' }, p.accounts.map((a, i) =>
+        h('button', { class: i === ai ? 'on' : '', onclick: () => { detailAcc.set(p.name, i); renderRows(); } }, a.gameName))) : null,
+      h('div', { class: 'dlinks' },
+        Object.entries(acc.links || {}).filter(([k]) => k !== 'opgg').map(([k, url]) => h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, LINK_LABELS[k] ?? k)),
+        acc.links?.opgg ? h('a', { class: 'main', href: acc.links.opgg, target: '_blank', rel: 'noopener noreferrer' }, 'Ver en OP.GG ↗') : null)),
+    acc.error ? h('p', { class: 'err' }, `No se pudo actualizar esta cuenta: ${acc.error}`) : null,
+    tab === 'hist' ? tabHistorial(acc) : tab === 'stats' ? tabStats(acc) : tabCampeones(acc));
 }
 
 // ---------------------------------------------------------------- estadísticas
