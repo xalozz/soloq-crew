@@ -180,6 +180,12 @@ async function main() {
 }
 
 main().catch((err) => {
+  // Clave caducada/inválida: avisamos pero no marcamos el workflow como fallido,
+  // para no recibir un email de error cada 30 minutos. La web sigue con los últimos datos.
+  if (err instanceof RiotError && (err.status === 401 || err.status === 403)) {
+    console.log(`::warning::${err.message}. Actualiza el secret RIOT_API_KEY.`);
+    process.exit(0);
+  }
   console.error(err.message);
   process.exit(1);
 });
