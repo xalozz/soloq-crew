@@ -1,604 +1,1924 @@
 {
   "games": [
     {
+      "v": 2,
       "id": "EUW1_7998698424",
       "t": 1790698364599,
       "dur": 1083,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 10,
       "k": 4,
       "d": 0,
       "a": 8,
+      "kp": 50,
       "cs": 23,
       "vis": 33,
       "dmg": 6499,
-      "teamDmg": 63797
+      "teamDmg": 63797,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        0,
+        3876,
+        3009,
+        1031,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7998185660",
       "t": 1790632295058,
       "dur": 2095,
       "win": false,
       "champ": "Rakan",
       "role": "UTILITY",
+      "lvl": 15,
       "k": 0,
       "d": 12,
       "a": 24,
+      "kp": 62,
       "cs": 32,
       "vis": 95,
       "dmg": 10051,
-      "teamDmg": 163483
+      "teamDmg": 163483,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2065,
+        3190,
+        3876,
+        3158,
+        3050,
+        3108,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997711883",
       "t": 1790610257288,
       "dur": 1975,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 10,
       "d": 11,
       "a": 37,
+      "kp": 87,
       "cs": 23,
       "vis": 101,
       "dmg": 17058,
-      "teamDmg": 156031
+      "teamDmg": 156031,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3109,
+        3876,
+        3076,
+        3009,
+        3050,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Velkoz",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997275120",
       "t": 1790548403036,
       "dur": 1806,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 3,
       "d": 5,
       "a": 27,
+      "kp": 73,
       "cs": 25,
       "vis": 69,
       "dmg": 9373,
-      "teamDmg": 107867
+      "teamDmg": 107867,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3876,
+        1031,
+        3076,
+        3009,
+        3050,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Soraka",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997245272",
       "t": 1790546281622,
       "dur": 1488,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 4,
       "d": 6,
       "a": 19,
+      "kp": 72,
       "cs": 26,
       "vis": 53,
       "dmg": 13111,
-      "teamDmg": 115810
+      "teamDmg": 115810,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3050,
+        3876,
+        3076,
+        3009,
+        1031,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Soraka",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997212496",
       "t": 1790544551629,
       "dur": 2083,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 2,
       "d": 12,
       "a": 30,
+      "kp": 73,
       "cs": 32,
       "vis": 98,
       "dmg": 12119,
-      "teamDmg": 165776
+      "teamDmg": 165776,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3876,
+        3050,
+        3009,
+        3110,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997172995",
       "t": 1790542240650,
       "dur": 1072,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 9,
       "k": 0,
       "d": 3,
       "a": 17,
+      "kp": 63,
       "cs": 16,
       "vis": 42,
       "dmg": 5600,
-      "teamDmg": 59631
+      "teamDmg": 59631,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3876,
+        3067,
+        1029,
+        3009,
+        1033,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Nautilus",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7996759165",
       "t": 1790525792097,
       "dur": 1973,
       "win": false,
       "champ": "Milio",
       "role": "UTILITY",
+      "lvl": 15,
       "k": 3,
       "d": 8,
       "a": 21,
+      "kp": 53,
       "cs": 66,
       "vis": 76,
       "dmg": 14769,
-      "teamDmg": 136292
+      "teamDmg": 136292,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2065,
+        3876,
+        2530,
+        6655,
+        6620,
+        3158,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7996704888",
       "t": 1790523501456,
       "dur": 2430,
       "win": false,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 17,
       "k": 9,
       "d": 18,
       "a": 17,
+      "kp": 57,
       "cs": 58,
       "vis": 100,
       "dmg": 25105,
-      "teamDmg": 213845
+      "teamDmg": 213845,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6610,
+        3877,
+        6692,
+        6699,
+        3158,
+        3075,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7996547220",
       "t": 1790514344916,
       "dur": 924,
       "win": true,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 8,
       "k": 7,
       "d": 1,
       "a": 3,
+      "kp": 43,
       "cs": 18,
       "vis": 19,
       "dmg": 7826,
-      "teamDmg": 54060
+      "teamDmg": 54060,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2003,
+        3877,
+        1028,
+        2022,
+        6692,
+        3047,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Maokai",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7995585235",
       "t": 1790436309524,
       "dur": 1927,
       "win": true,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 3,
       "d": 9,
       "a": 11,
+      "kp": 47,
       "cs": 34,
       "vis": 84,
       "dmg": 17804,
-      "teamDmg": 141535
+      "teamDmg": 141535,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3871,
+        3916,
+        1082,
+        3020,
+        4646,
+        4645,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Braum",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992727695",
       "t": 1790182171378,
       "dur": 1696,
       "win": false,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 11,
       "k": 1,
       "d": 10,
       "a": 17,
+      "kp": 62,
       "cs": 27,
       "vis": 91,
       "dmg": 8921,
-      "teamDmg": 85871
+      "teamDmg": 85871,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3876,
+        2524,
+        2022,
+        3158,
+        1029,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Poppy",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992116167",
       "t": 1790111288429,
       "dur": 1986,
       "win": true,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 7,
       "d": 12,
       "a": 18,
+      "kp": 52,
       "cs": 43,
       "vis": 69,
       "dmg": 26707,
-      "teamDmg": 134477
+      "teamDmg": 134477,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3047,
+        3877,
+        6692,
+        6610,
+        3071,
+        2022,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Xerath",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7991212048",
       "t": 1790027097030,
       "dur": 1627,
       "win": false,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 12,
       "k": 7,
       "d": 11,
       "a": 8,
+      "kp": 54,
       "cs": 44,
       "vis": 57,
       "dmg": 14449,
-      "teamDmg": 76494
+      "teamDmg": 76494,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6610,
+        3877,
+        3111,
+        3067,
+        1028,
+        6692,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Orianna",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990284980",
       "t": 1789942478241,
       "dur": 2238,
       "win": false,
       "champ": "Galio",
       "role": "UTILITY",
+      "lvl": 15,
       "k": 5,
       "d": 8,
       "a": 20,
+      "kp": 68,
       "cs": 55,
       "vis": 89,
       "dmg": 16818,
-      "teamDmg": 157208
+      "teamDmg": 157208,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3109,
+        3877,
+        3047,
+        6664,
+        3076,
+        2504,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yuumi",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990268684",
       "t": 1789940004976,
       "dur": 935,
       "win": true,
       "champ": "Galio",
       "role": "UTILITY",
+      "lvl": 8,
       "k": 0,
       "d": 3,
       "a": 8,
+      "kp": 44,
       "cs": 27,
       "vis": 38,
       "dmg": 4838,
-      "teamDmg": 41044
+      "teamDmg": 41044,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3877,
+        3158,
+        1031,
+        3067,
+        1006,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Seraphine",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990206757",
       "t": 1789938854856,
       "dur": 2546,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 17,
       "k": 0,
       "d": 14,
       "a": 25,
+      "kp": 52,
       "cs": 29,
       "vis": 132,
       "dmg": 13408,
-      "teamDmg": 205512
+      "teamDmg": 205512,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3076,
+        3876,
+        3158,
+        2504,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Morgana",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989068983",
       "t": 1789854303914,
       "dur": 2267,
       "win": false,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 5,
       "d": 13,
       "a": 16,
+      "kp": 51,
       "cs": 51,
       "vis": 85,
       "dmg": 23142,
-      "teamDmg": 183033
+      "teamDmg": 183033,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6610,
+        3877,
+        3158,
+        6699,
+        6692,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Shen",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988949296",
       "t": 1789848664781,
       "dur": 1589,
       "win": false,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 12,
       "k": 9,
       "d": 9,
       "a": 3,
+      "kp": 50,
       "cs": 34,
       "vis": 70,
       "dmg": 20519,
-      "teamDmg": 92917
+      "teamDmg": 92917,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3871,
+        4646,
+        1082,
+        4645,
+        1052,
+        3020,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Nautilus",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988674748",
       "t": 1789833434678,
       "dur": 1490,
       "win": false,
       "champ": "Pyke",
       "role": "UTILITY",
+      "lvl": 11,
       "k": 4,
       "d": 12,
       "a": 7,
+      "kp": 44,
       "cs": 22,
       "vis": 36,
       "dmg": 8233,
-      "teamDmg": 107892
+      "teamDmg": 107892,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3814,
+        3877,
+        3009,
+        0,
+        3179,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7987638857",
       "t": 1789749932070,
       "dur": 1850,
       "win": true,
       "champ": "Pyke",
       "role": "UTILITY",
+      "lvl": 14,
       "k": 4,
       "d": 5,
       "a": 10,
+      "kp": 35,
       "cs": 25,
       "vis": 94,
       "dmg": 10129,
-      "teamDmg": 120777
+      "teamDmg": 120777,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3877,
+        3179,
+        3009,
+        6695,
+        3134,
+        1028,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Karma",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7987090086",
       "t": 1789684031183,
       "dur": 2349,
       "win": false,
       "champ": "Galio",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 1,
       "d": 14,
       "a": 19,
+      "kp": 32,
       "cs": 40,
       "vis": 87,
       "dmg": 18757,
-      "teamDmg": 195086
+      "teamDmg": 195086,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3111,
+        4005,
+        3877,
+        3075,
+        3211,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7986713482",
       "t": 1789665677853,
       "dur": 1515,
       "win": false,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 11,
       "k": 2,
       "d": 9,
       "a": 9,
+      "kp": 46,
       "cs": 51,
       "vis": 76,
       "dmg": 11643,
-      "teamDmg": 91027
+      "teamDmg": 91027,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4646,
+        3871,
+        1058,
+        1082,
+        3020,
+        3145,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Braum",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7986055274",
       "t": 1789593660791,
       "dur": 1780,
       "win": false,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 1,
       "d": 13,
       "a": 18,
+      "kp": 68,
       "cs": 38,
       "vis": 78,
       "dmg": 8528,
-      "teamDmg": 97498
+      "teamDmg": 97498,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3110,
+        3876,
+        3009,
+        1031,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Nautilus",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985791412",
       "t": 1789582474870,
       "dur": 1684,
       "win": false,
       "champ": "Elise",
       "role": "JUNGLE",
+      "lvl": 13,
       "k": 3,
       "d": 7,
       "a": 5,
+      "kp": 67,
       "cs": 128,
       "vis": 32,
       "dmg": 13279,
-      "teamDmg": 80526
+      "teamDmg": 80526,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4646,
+        4645,
+        3020,
+        1029,
+        1082,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "MonkeyKing",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985765578",
       "t": 1789580371794,
       "dur": 1723,
       "win": true,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 4,
       "d": 7,
       "a": 9,
+      "kp": 35,
       "cs": 34,
       "vis": 68,
       "dmg": 10334,
-      "teamDmg": 118826
+      "teamDmg": 118826,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4646,
+        3871,
+        1082,
+        3020,
+        4645,
+        1052,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985704448",
       "t": 1789578029622,
       "dur": 1693,
       "win": true,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 14,
       "k": 4,
       "d": 11,
       "a": 16,
+      "kp": 50,
       "cs": 30,
       "vis": 72,
       "dmg": 17544,
-      "teamDmg": 122095
+      "teamDmg": 122095,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3020,
+        1082,
+        3871,
+        4646,
+        4645,
+        1029,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Camille",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985669341",
       "t": 1789576037693,
       "dur": 1592,
       "win": true,
       "champ": "Galio",
       "role": "UTILITY",
+      "lvl": 14,
       "k": 5,
       "d": 2,
       "a": 22,
+      "kp": 59,
       "cs": 54,
       "vis": 39,
       "dmg": 13364,
-      "teamDmg": 115593
+      "teamDmg": 115593,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        3877,
+        1057,
+        3211,
+        3009,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Xerath",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985651665",
       "t": 1789574023106,
       "dur": 1492,
       "win": false,
       "champ": "Rakan",
       "role": "UTILITY",
+      "lvl": 11,
       "k": 4,
       "d": 8,
       "a": 12,
+      "kp": 57,
       "cs": 23,
       "vis": 49,
       "dmg": 6991,
-      "teamDmg": 84679
+      "teamDmg": 84679,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2065,
+        3876,
+        0,
+        3067,
+        3158,
+        3050,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Swain",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985613390",
       "t": 1789572311980,
       "dur": 1299,
       "win": true,
       "champ": "Galio",
       "role": "UTILITY",
+      "lvl": 10,
       "k": 1,
       "d": 5,
       "a": 10,
+      "kp": 65,
       "cs": 22,
       "vis": 41,
       "dmg": 6473,
-      "teamDmg": 59222
+      "teamDmg": 59222,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3877,
+        1057,
+        1006,
+        1001,
+        1033,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zilean",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985109370",
       "t": 1789508356540,
       "dur": 2036,
       "win": true,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 15,
       "k": 8,
       "d": 8,
       "a": 13,
+      "kp": 46,
       "cs": 34,
       "vis": 86,
       "dmg": 23159,
-      "teamDmg": 136274
+      "teamDmg": 136274,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3157,
+        3871,
+        4645,
+        4646,
+        3020,
+        1082,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7985064657",
       "t": 1789506077681,
       "dur": 2240,
       "win": true,
       "champ": "Elise",
       "role": "UTILITY",
+      "lvl": 17,
       "k": 8,
       "d": 12,
       "a": 18,
+      "kp": 58,
       "cs": 69,
       "vis": 106,
       "dmg": 29743,
-      "teamDmg": 165261
+      "teamDmg": 165261,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3157,
+        3871,
+        4630,
+        4646,
+        3020,
+        4645,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7984646421",
       "t": 1789487864402,
       "dur": 2221,
       "win": true,
       "champ": "Thresh",
       "role": "UTILITY",
+      "lvl": 15,
       "k": 6,
       "d": 14,
       "a": 17,
+      "kp": 46,
       "cs": 32,
       "vis": 95,
       "dmg": 14140,
-      "teamDmg": 171809
+      "teamDmg": 171809,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3876,
+        3050,
+        3110,
+        3009,
+        2504,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7984109119",
       "t": 1789420976791,
       "dur": 1612,
       "win": false,
       "champ": "Yuumi",
       "role": "UTILITY",
+      "lvl": 12,
       "k": 3,
       "d": 8,
       "a": 9,
+      "kp": 55,
       "cs": 16,
       "vis": 34,
       "dmg": 8485,
-      "teamDmg": 71261
+      "teamDmg": 71261,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3871,
+        3504,
+        6655,
+        3158,
+        4642,
+        1052,
+        3364
+      ],
+      "spells": [
+        "SummonerHeal",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Rakan",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7984063935",
       "t": 1789419125807,
       "dur": 1777,
       "win": false,
       "champ": "Milio",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 2,
       "d": 10,
       "a": 17,
+      "kp": 68,
       "cs": 21,
       "vis": 64,
       "dmg": 9898,
-      "teamDmg": 123126
+      "teamDmg": 123126,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        2065,
+        3871,
+        6620,
+        3158,
+        3108,
+        3114,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Yuumi",
+        "spells": [
+          "SummonerHeal",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983845468",
       "t": 1789410418535,
       "dur": 2127,
       "win": true,
       "champ": "Pyke",
       "role": "UTILITY",
+      "lvl": 16,
       "k": 10,
       "d": 13,
       "a": 8,
+      "kp": 35,
       "cs": 37,
       "vis": 114,
       "dmg": 20096,
-      "teamDmg": 177298
+      "teamDmg": 177298,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3814,
+        3877,
+        6696,
+        3134,
+        3179,
+        3009,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Shaco",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983575358",
       "t": 1789397164950,
       "dur": 2569,
       "win": true,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 18,
       "k": 8,
       "d": 17,
       "a": 16,
+      "kp": 51,
       "cs": 52,
       "vis": 109,
       "dmg": 29388,
-      "teamDmg": 156463
+      "teamDmg": 156463,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3877,
+        6610,
+        6692,
+        3053,
+        3047,
+        3071,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Zilean",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983200576",
       "t": 1789338730314,
       "dur": 1585,
       "win": false,
       "champ": "Rengar",
       "role": "JUNGLE",
+      "lvl": 14,
       "k": 2,
       "d": 6,
       "a": 6,
+      "kp": 31,
       "cs": 164,
       "vis": 26,
       "dmg": 7146,
-      "teamDmg": 88851
+      "teamDmg": 88851,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6695,
+        3134,
+        3047,
+        6697,
+        1036,
+        1036,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Maokai",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983160841",
       "t": 1789336743800,
       "dur": 1456,
       "win": true,
       "champ": "Blitzcrank",
       "role": "UTILITY",
+      "lvl": 12,
       "k": 5,
       "d": 5,
       "a": 15,
+      "kp": 53,
       "cs": 21,
       "vis": 50,
       "dmg": 7488,
-      "teamDmg": 111214
+      "teamDmg": 111214,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3190,
+        2065,
+        3876,
+        3158,
+        3082,
+        1027,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Milio",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983119622",
       "t": 1789334977355,
       "dur": 1858,
       "win": true,
       "champ": "Pantheon",
       "role": "UTILITY",
+      "lvl": 14,
       "k": 5,
       "d": 11,
       "a": 12,
+      "kp": 47,
       "cs": 27,
       "vis": 63,
       "dmg": 14214,
-      "teamDmg": 124588
+      "teamDmg": 124588,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6692,
+        3877,
+        6610,
+        3044,
+        3047,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Zyra",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     }
   ],
   "skipped": []

@@ -1,574 +1,1828 @@
 {
   "games": [
     {
+      "v": 2,
       "id": "EUW1_7998698424",
       "t": 1790698364599,
       "dur": 1083,
       "win": true,
       "champ": "Viktor",
       "role": "BOTTOM",
+      "lvl": 11,
       "k": 4,
       "d": 2,
       "a": 6,
+      "kp": 42,
       "cs": 137,
       "vis": 10,
       "dmg": 18033,
-      "teamDmg": 63797
+      "teamDmg": 63797,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        6655,
+        4645,
+        0,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Yunara",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7998644416",
       "t": 1790695853559,
       "dur": 2070,
       "win": true,
       "champ": "Tristana",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 9,
       "d": 6,
       "a": 6,
+      "kp": 42,
       "cs": 234,
       "vis": 17,
       "dmg": 18773,
-      "teamDmg": 109672
+      "teamDmg": 109672,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3032,
+        1033,
+        6675,
+        3026,
+        3031,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Jinx",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7998629830",
       "t": 1790693427028,
       "dur": 1484,
       "win": false,
       "champ": "Jinx",
       "role": "BOTTOM",
+      "lvl": 13,
       "k": 3,
       "d": 5,
       "a": 1,
+      "kp": 29,
       "cs": 232,
       "vis": 14,
       "dmg": 14152,
-      "teamDmg": 66378
+      "teamDmg": 66378,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        2523,
+        3085,
+        3035,
+        6670,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerHaste"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Aphelios",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7998602896",
       "t": 1790691641845,
       "dur": 1501,
       "win": false,
       "champ": "Kaisa",
       "role": "BOTTOM",
+      "lvl": 14,
       "k": 7,
       "d": 7,
       "a": 6,
+      "kp": 54,
       "cs": 218,
       "vis": 24,
       "dmg": 18381,
-      "teamDmg": 77097
+      "teamDmg": 77097,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        6672,
+        2421,
+        3115,
+        3124,
+        1058,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Mel",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997884627",
       "t": 1790619459485,
       "dur": 1880,
       "win": true,
       "champ": "Viktor",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 6,
       "d": 1,
       "a": 7,
+      "kp": 48,
       "cs": 251,
       "vis": 29,
       "dmg": 29342,
-      "teamDmg": 87243
+      "teamDmg": 87243,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        6655,
+        2421,
+        3089,
+        4645,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7997834708",
       "t": 1790617205194,
       "dur": 2093,
       "win": true,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 8,
       "d": 5,
       "a": 6,
+      "kp": 31,
       "cs": 325,
       "vis": 28,
       "dmg": 27792,
-      "teamDmg": 132815
+      "teamDmg": 132815,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3031,
+        3032,
+        3139,
+        3036,
+        6675,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7995260676",
       "t": 1790410822152,
       "dur": 1890,
       "win": false,
       "champ": "Braum",
       "role": "UTILITY",
+      "lvl": 13,
       "k": 2,
       "d": 7,
       "a": 19,
+      "kp": 62,
       "cs": 30,
       "vis": 73,
       "dmg": 6089,
-      "teamDmg": 118853
+      "teamDmg": 118853,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3876,
+        3075,
+        3190,
+        3111,
+        3109,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7995243095",
       "t": 1790408463630,
       "dur": 1622,
       "win": true,
       "champ": "Aphelios",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 11,
       "d": 1,
       "a": 3,
+      "kp": 42,
       "cs": 236,
       "vis": 33,
       "dmg": 26019,
-      "teamDmg": 94497
+      "teamDmg": 94497,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        6676,
+        3036,
+        3031,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Vayne",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7995232420",
       "t": 1790406076121,
       "dur": 1541,
       "win": false,
       "champ": "Jinx",
       "role": "BOTTOM",
+      "lvl": 14,
       "k": 0,
       "d": 4,
       "a": 3,
+      "kp": 50,
       "cs": 231,
       "vis": 11,
       "dmg": 12060,
-      "teamDmg": 61377
+      "teamDmg": 61377,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3123,
+        6672,
+        3085,
+        1038,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ezreal",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7995232126",
       "t": 1790404202422,
       "dur": 1553,
       "win": false,
       "champ": "Lulu",
       "role": "UTILITY",
+      "lvl": 12,
       "k": 2,
       "d": 4,
       "a": 10,
+      "kp": 67,
       "cs": 31,
       "vis": 60,
       "dmg": 4337,
-      "teamDmg": 65122
+      "teamDmg": 65122,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3870,
+        3504,
+        3222,
+        3113,
+        3158,
+        1052,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Morgana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992864269",
       "t": 1790190124514,
       "dur": 1816,
       "win": true,
       "champ": "Jinx",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 15,
       "d": 5,
       "a": 5,
+      "kp": 56,
       "cs": 251,
       "vis": 16,
       "dmg": 39301,
-      "teamDmg": 131619
+      "teamDmg": 131619,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3085,
+        6672,
+        3031,
+        3036,
+        6670,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Tristana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992821307",
       "t": 1790187962507,
       "dur": 1928,
       "win": true,
       "champ": "Jinx",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 16,
       "d": 2,
       "a": 15,
+      "kp": 79,
       "cs": 296,
       "vis": 22,
       "dmg": 51147,
-      "teamDmg": 139059
+      "teamDmg": 139059,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3026,
+        6672,
+        3085,
+        3036,
+        3031,
+        1038,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992772980",
       "t": 1790185673191,
       "dur": 2056,
       "win": true,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 4,
       "d": 4,
       "a": 7,
+      "kp": 27,
       "cs": 330,
       "vis": 23,
       "dmg": 28177,
-      "teamDmg": 183505
+      "teamDmg": 183505,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3032,
+        3031,
+        6675,
+        3026,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7992722137",
       "t": 1790183312605,
       "dur": 2471,
       "win": false,
       "champ": "Yunara",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 12,
       "d": 6,
       "a": 9,
+      "kp": 60,
       "cs": 413,
       "vis": 41,
       "dmg": 54199,
-      "teamDmg": 166573
+      "teamDmg": 166573,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3143,
+        6672,
+        3036,
+        3031,
+        3026,
+        3085,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBoost"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ashe",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990883078",
       "t": 1790013026084,
       "dur": 1496,
       "win": true,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 7,
       "d": 1,
       "a": 8,
+      "kp": 52,
       "cs": 237,
       "vis": 14,
       "dmg": 15534,
-      "teamDmg": 86426
+      "teamDmg": 86426,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3508,
+        6675,
+        1018,
+        1038,
+        1037,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Nilah",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990839307",
       "t": 1790011159914,
       "dur": 1635,
       "win": false,
       "champ": "Yunara",
       "role": "BOTTOM",
+      "lvl": 13,
       "k": 7,
       "d": 3,
       "a": 5,
+      "kp": 63,
       "cs": 261,
       "vis": 18,
       "dmg": 27649,
-      "teamDmg": 91017
+      "teamDmg": 91017,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1018,
+        3032,
+        3085,
+        3036,
+        1038,
+        1037,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990810536",
       "t": 1790008992163,
       "dur": 1659,
       "win": false,
       "champ": "Ezreal",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 4,
       "d": 5,
       "a": 8,
+      "kp": 44,
       "cs": 236,
       "vis": 13,
       "dmg": 19269,
-      "teamDmg": 98484
+      "teamDmg": 98484,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3042,
+        3078,
+        6694,
+        2021,
+        1028,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBoost"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ashe",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990743292",
       "t": 1790005905444,
       "dur": 1894,
       "win": false,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 6,
       "d": 11,
       "a": 2,
+      "kp": 27,
       "cs": 244,
       "vis": 16,
       "dmg": 33074,
-      "teamDmg": 141476
+      "teamDmg": 141476,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3508,
+        6675,
+        3031,
+        6670,
+        3035,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lucian",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7990711017",
       "t": 1790003547320,
       "dur": 1653,
       "win": false,
       "champ": "Vayne",
       "role": "TOP",
+      "lvl": 16,
       "k": 3,
       "d": 10,
       "a": 1,
+      "kp": 33,
       "cs": 186,
       "vis": 13,
       "dmg": 12259,
-      "teamDmg": 69098
+      "teamDmg": 69098,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3047,
+        3144,
+        3073,
+        3508,
+        2019,
+        1018,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Kayn",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989816786",
       "t": 1789921607607,
       "dur": 1982,
       "win": true,
       "champ": "Yunara",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 10,
       "d": 7,
       "a": 12,
+      "kp": 46,
       "cs": 329,
       "vis": 20,
       "dmg": 48265,
-      "teamDmg": 155364
+      "teamDmg": 155364,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3026,
+        3032,
+        3085,
+        3031,
+        3033,
+        1038,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Twitch",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989767927",
       "t": 1789919332068,
       "dur": 1706,
       "win": false,
       "champ": "Yunara",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 7,
       "d": 4,
       "a": 9,
+      "kp": 73,
       "cs": 285,
       "vis": 26,
       "dmg": 31066,
-      "teamDmg": 99891
+      "teamDmg": 99891,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2019,
+        3032,
+        3085,
+        3033,
+        3031,
+        1038,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Jhin",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989725038",
       "t": 1789917298368,
       "dur": 1853,
       "win": false,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 8,
       "d": 9,
       "a": 4,
+      "kp": 38,
       "cs": 271,
       "vis": 21,
       "dmg": 26176,
-      "teamDmg": 126533
+      "teamDmg": 126533,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6675,
+        3032,
+        1033,
+        3033,
+        3031,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Kalista",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989674871",
       "t": 1789915132433,
       "dur": 2262,
       "win": false,
       "champ": "Tristana",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 7,
       "d": 9,
       "a": 10,
+      "kp": 40,
       "cs": 286,
       "vis": 19,
       "dmg": 23198,
-      "teamDmg": 146301
+      "teamDmg": 146301,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        0,
+        3032,
+        3140,
+        3031,
+        3033,
+        6675,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989578844",
       "t": 1789910045092,
       "dur": 2313,
       "win": true,
       "champ": "Tristana",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 7,
       "d": 3,
       "a": 8,
+      "kp": 44,
       "cs": 326,
       "vis": 26,
       "dmg": 31732,
-      "teamDmg": 146639
+      "teamDmg": 146639,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3026,
+        3032,
+        1033,
+        3031,
+        3036,
+        6675,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Xayah",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989541922",
       "t": 1789907156634,
       "dur": 1655,
       "win": true,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 8,
       "d": 7,
       "a": 4,
+      "kp": 32,
       "cs": 224,
       "vis": 20,
       "dmg": 20609,
-      "teamDmg": 106841
+      "teamDmg": 106841,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3032,
+        3031,
+        6675,
+        3123,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Mel",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989506232",
       "t": 1789905205752,
       "dur": 1481,
       "win": true,
       "champ": "Xayah",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 6,
       "d": 2,
       "a": 8,
+      "kp": 30,
       "cs": 218,
       "vis": 11,
       "dmg": 20812,
-      "teamDmg": 106095
+      "teamDmg": 106095,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3032,
+        6675,
+        3031,
+        6670,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Katarina",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7989480700",
       "t": 1789903393321,
       "dur": 2018,
       "win": false,
       "champ": "Tristana",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 6,
       "d": 7,
       "a": 7,
+      "kp": 45,
       "cs": 296,
       "vis": 17,
       "dmg": 24464,
-      "teamDmg": 133900
+      "teamDmg": 133900,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3031,
+        3032,
+        3140,
+        6675,
+        1086,
+        3033,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Aphelios",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988324835",
       "t": 1789810459274,
       "dur": 2166,
       "win": false,
       "champ": "Vayne",
       "role": "TOP",
+      "lvl": 19,
       "k": 6,
       "d": 5,
       "a": 4,
+      "kp": 29,
       "cs": 290,
       "vis": 32,
       "dmg": 31570,
-      "teamDmg": 137306
+      "teamDmg": 137306,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6665,
+        3153,
+        3140,
+        3124,
+        3302,
+        3006,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Ornn",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988298931",
       "t": 1789807790869,
       "dur": 2479,
       "win": false,
       "champ": "Viktor",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 9,
       "d": 8,
       "a": 8,
+      "kp": 45,
       "cs": 315,
       "vis": 26,
       "dmg": 49462,
-      "teamDmg": 166156
+      "teamDmg": 166156,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        3089,
+        2503,
+        3157,
+        4645,
+        3100,
+        3916,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Sivir",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988281811",
       "t": 1789804906932,
       "dur": 3160,
       "win": false,
       "champ": "Viktor",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 9,
       "d": 12,
       "a": 11,
+      "kp": 30,
       "cs": 335,
       "vis": 22,
       "dmg": 49744,
-      "teamDmg": 283389
+      "teamDmg": 283389,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        3157,
+        3089,
+        3100,
+        3102,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Ezreal",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7988267837",
       "t": 1789798785970,
       "dur": 1940,
       "win": false,
       "champ": "Jinx",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 7,
       "d": 10,
       "a": 3,
+      "kp": 30,
       "cs": 248,
       "vis": 27,
       "dmg": 24522,
-      "teamDmg": 113248
+      "teamDmg": 113248,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        3085,
+        2523,
+        3140,
+        3031,
+        3036,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Caitlyn",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7987638857",
       "t": 1789749932070,
       "dur": 1850,
       "win": true,
       "champ": "Caitlyn",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 5,
       "d": 4,
       "a": 10,
+      "kp": 38,
       "cs": 295,
       "vis": 20,
       "dmg": 26414,
-      "teamDmg": 120777
+      "teamDmg": 120777,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        2523,
+        3031,
+        3094,
+        3036,
+        3134,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zeri",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983921529",
       "t": 1789413966480,
       "dur": 2431,
       "win": true,
       "champ": "Vayne",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 11,
       "d": 9,
       "a": 10,
+      "kp": 50,
       "cs": 319,
       "vis": 44,
       "dmg": 65189,
-      "teamDmg": 264646
+      "teamDmg": 264646,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3073,
+        3153,
+        3143,
+        6665,
+        3302,
+        3124,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "TahmKench",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983859939",
       "t": 1789410967267,
       "dur": 1626,
       "win": false,
       "champ": "Yunara",
       "role": "BOTTOM",
+      "lvl": 15,
       "k": 9,
       "d": 7,
       "a": 6,
+      "kp": 75,
       "cs": 253,
       "vis": 21,
       "dmg": 31071,
-      "teamDmg": 100705
+      "teamDmg": 100705,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3032,
+        3085,
+        3140,
+        3036,
+        3031,
+        1036,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983807043",
       "t": 1789409013158,
       "dur": 1959,
       "win": true,
       "champ": "Ezreal",
       "role": "BOTTOM",
+      "lvl": 17,
       "k": 17,
       "d": 9,
       "a": 10,
+      "kp": 44,
       "cs": 216,
       "vis": 23,
       "dmg": 30974,
-      "teamDmg": 156523
+      "teamDmg": 156523,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3042,
+        3078,
+        3161,
+        6694,
+        3156,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBoost"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Karthus",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7983761050",
       "t": 1789406790170,
       "dur": 1873,
       "win": false,
       "champ": "Viktor",
       "role": "MIDDLE",
+      "lvl": 17,
       "k": 9,
       "d": 9,
       "a": 5,
+      "kp": 40,
       "cs": 242,
       "vis": 16,
       "dmg": 26770,
-      "teamDmg": 113282
+      "teamDmg": 113282,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3152,
+        2503,
+        3157,
+        4645,
+        3173,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "TwistedFate",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7977792113",
       "t": 1788906242849,
       "dur": 2111,
       "win": false,
       "champ": "Viktor",
       "role": "BOTTOM",
+      "lvl": 18,
       "k": 12,
       "d": 4,
       "a": 10,
+      "kp": 56,
       "cs": 324,
       "vis": 27,
       "dmg": 49714,
-      "teamDmg": 131331
+      "teamDmg": 131331,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        2503,
+        3157,
+        4645,
+        3135,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Caitlyn",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     },
     {
+      "v": 2,
       "id": "EUW1_7976516044",
       "t": 1788809663880,
       "dur": 1859,
       "win": false,
       "champ": "Kaisa",
       "role": "BOTTOM",
+      "lvl": 16,
       "k": 9,
       "d": 5,
       "a": 3,
+      "kp": 57,
       "cs": 289,
       "vis": 13,
       "dmg": 28938,
-      "teamDmg": 88218
+      "teamDmg": 88218,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3115,
+        3087,
+        3157,
+        3124,
+        4632,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Caitlyn",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      }
     }
   ],
   "skipped": [
