@@ -2,7 +2,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { profileLinks } from './riot.mjs';
-import { computeAccountStats, pickBestAccount } from './stats.mjs';
+import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
 
 const CHAMPS = ['Ahri', 'Jinx', 'Lux', 'Yasuo', 'Thresh', 'LeeSin', 'Ezreal', 'Darius', 'Ashe', 'Zed', 'Sett', 'Caitlyn', 'MissFortune', 'Viego', 'Kaisa', 'Garen', 'Lulu', 'Nautilus', 'Sylas', 'Vi'];
 const ROLES = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
@@ -67,6 +67,10 @@ export async function writeDemo(configPath, outPath) {
         updatedAt: new Date().toISOString(),
       };
     });
+    for (const a of accounts) {
+      const sc = rankScore(a.rank);
+      a.lpHist = [[Date.now() - 2 * 864e5, sc - 60], [Date.now() - 864e5, sc - 25], [Date.now() - 3600e3, sc]];
+    }
     const { index, score } = pickBestAccount(accounts);
     return { name: pl.name, links: pl.links ?? [], bestAccount: index, score, accounts };
   });

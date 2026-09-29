@@ -5,47 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SoloQ Crew</title>
   <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <div>
-        <h1 id="title">SoloQ Crew</h1>
-        <p id="subtitle" class="muted"></p>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a class="brand" href="#ranking" aria-label="Inicio">
+        <span class="brand-mark">SQ</span>
+        <span class="brand-text">SOLOQ <em>CREW</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="#ranking" class="active">Ranking</a>
+        <a href="#estadisticas">Estadísticas</a>
+        <a href="#dias">Días</a>
+        <a href="#records">Récords</a>
       </div>
-      <div class="top-side">
-        <span id="updated" class="muted"></span>
-        <label class="sort">Ordenar por
-          <select id="sort">
-            <option value="rank">Rango</option>
-            <option value="winrate">Winrate</option>
-            <option value="streak">Racha actual</option>
-            <option value="kda">KDA</option>
-            <option value="games">Partidas</option>
-          </select>
-        </label>
-      </div>
-    </div>
+      <span id="updated" class="nav-updated"></span>
+    </nav>
   </header>
 
-  <div id="demo-banner" class="demo" hidden>Datos de demostración: aún no se han cargado datos reales de Riot.</div>
-
   <main class="wrap">
-    <section>
-      <h2>Clasificación</h2>
-      <div id="ladder" class="ladder" aria-live="polite">Cargando…</div>
+    <section id="ranking" class="section">
+      <div class="rank-head">
+        <h1 class="display">Ranking</h1>
+        <div class="head-meta">
+          <div class="meta-chip"><span>Última<br>actualización</span><b id="meta-updated">–</b></div>
+          <div class="meta-chip"><span>Partidas<br>del grupo</span><b id="meta-games">–</b></div>
+          <div class="meta-chip"><span>Winrate<br>del grupo</span><b id="meta-wr">–</b></div>
+        </div>
+      </div>
+
+      <div id="podium" class="podium"></div>
+
+      <div class="controls">
+        <div class="pills" id="sort" role="tablist" aria-label="Ordenar por">
+          <button data-sort="rank" class="on">Elo</button>
+          <button data-sort="today">LP hoy</button>
+          <button data-sort="winrate">Winrate</button>
+          <button data-sort="streak">Racha</button>
+          <button data-sort="kda">KDA</button>
+        </div>
+        <label class="search">
+          <input id="search" type="search" placeholder="Buscar jugador" autocomplete="off">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </label>
+      </div>
+
+      <div class="table" role="table" aria-label="Clasificación">
+        <div class="thead" role="row">
+          <span>#</span><span>Jugador</span><span class="c-role">Rol</span><span>Elo</span>
+          <span class="c-wr">V / D</span><span class="c-trend">Últimas 20</span><span class="c-streak">Racha</span>
+          <span class="c-today">LP hoy</span><span class="c-kda">KDA</span><span></span>
+        </div>
+        <div id="rows"></div>
+      </div>
     </section>
 
-    <section>
-      <h2>Récords del grupo</h2>
-      <div id="records" class="records"></div>
+    <section id="estadisticas" class="section">
+      <h2 class="display display-md center">Estadísticas</h2>
+      <p class="center muted sub">Medias por partida sobre las últimas partidas de SoloQ de la cuenta principal de cada uno</p>
+      <div id="stats" class="panel stats-grid"></div>
+    </section>
+
+    <section id="dias" class="section">
+      <div class="panel days">
+        <h3 class="card-title">Mejores días</h3>
+        <p class="card-sub">Quién más elo ganó (o perdió) en un solo día, y qué día fue</p>
+        <div class="toggle" id="days-toggle">
+          <button data-mode="up" class="on">Subidones</button>
+          <button data-mode="down">Bajones</button>
+        </div>
+        <div id="days-list"></div>
+        <p class="muted small center">Diferencia de LP entre el cierre de un día y el del anterior (hora de Madrid).</p>
+      </div>
+    </section>
+
+    <section id="records" class="section">
+      <h2 class="display display-md center">Récords</h2>
+      <div id="records-grid" class="records"></div>
     </section>
   </main>
 
-  <footer class="wrap muted small">
-    Estadísticas calculadas sobre las últimas partidas de SoloQ guardadas. No afiliado a Riot Games;
-    League of Legends es marca registrada de Riot Games, Inc.
+  <footer class="wrap footer">
+    SoloQ Crew · proyecto sin ánimo de lucro de un grupo de amigos. No está respaldado por Riot Games ni refleja sus opiniones.
+    League of Legends y Riot Games son marcas registradas de Riot Games, Inc.
   </footer>
 
   <script src="app.js"></script>

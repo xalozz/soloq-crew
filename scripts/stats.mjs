@@ -14,7 +14,7 @@ export function rankScore(rank) {
   if (!rank || !rank.tier) return -1;
   const tier = TIER_ORDER.indexOf(rank.tier);
   if (tier < 0) return -1;
-  if (APEX.has(rank.tier)) return 3200 + rank.lp; // Master+ se compara solo por LP
+  if (APEX.has(rank.tier)) return 2800 + rank.lp; // Master+ continúa justo tras Diamante I 100 LP
   const div = DIVISION_ORDER[rank.division] ?? 0;
   return tier * 400 + div * 100 + rank.lp;
 }
@@ -106,8 +106,10 @@ export function computeAccountStats(history) {
   const last = (cnt) => history.slice(0, cnt);
   const wrLast = (cnt) => {
     const s = last(cnt);
-    return { games: s.length, winrate: pct(s.filter((g) => g.win).length, s.length) };
+    const w = s.filter((g) => g.win).length;
+    return { games: s.length, wins: w, losses: s.length - w, winrate: pct(w, s.length) };
   };
+  const mainRole = [...roles].sort((a, b) => b.games - a.games)[0]?.key ?? null;
 
   return {
     games: n,
@@ -122,6 +124,8 @@ export function computeAccountStats(history) {
     avgDurationMin: r1(minutes / n),
     streak: streaks(history),
     form: history.slice(0, 10).map((g) => (g.win ? 'W' : 'L')),
+    trend: history.slice(0, 20).reverse().map((g) => (g.win ? 1 : 0)), // antigua → reciente
+    mainRole,
     last10: wrLast(10),
     last20: wrLast(20),
     topChamps: champs.slice(0, 5),

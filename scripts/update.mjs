@@ -13,7 +13,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Riot, RiotError, compactMatch, profileLinks } from './riot.mjs';
-import { computeAccountStats, pickBestAccount } from './stats.mjs';
+import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'config', 'players.json');
@@ -21,6 +21,9 @@ const DATA_DIR = path.join(ROOT, 'data');
 const OUT = path.join(DATA_DIR, 'data.json');
 const PUUIDS = path.join(DATA_DIR, 'puuids.json');
 const HIST_DIR = path.join(DATA_DIR, 'history');
+const LP_HIST = path.join(DATA_DIR, 'lp-history.json');
+const LP_HIST_CAP = 3000;
+const LP_HIST_PUBLISHED = 600;
 
 const QUEUE_SOLO = 420;
 const HISTORY_CAP = 500;
@@ -159,6 +162,22 @@ async function main() {
 
   players.sort((a, b) => b.score - a.score);
   await writeJson(PUUIDS, cache);
+
+  // Historial de LP: un punto [timestamp, score] cada vez que cambia el elo de una cuenta.
+  // La web lo usa para "LP hoy", cambios de posición y mejores/peores días.
+  const lpHist = await readJson(LP_HIST, {});
+  const now = Date.now();
+  for (const p of players) {
+    for (const a of p.accounts) {
+      const key = a.riotId.toLowerCase();
+      const arr = lpHist[key] ?? [];
+      const score = rankScore(a.rank);
+      if (score >= 0 && !a.error && arr.at(-1)?.[1] !== score) arr.push([now, score]);
+      lpHist[key] = arr.slice(-LP_HIST_CAP);
+      a.lpHist = lpHist[key].slice(-LP_HIST_PUBLISHED);
+    }
+  }
+  await writeJson(LP_HIST, lpHist);
 
   const next = {
     generatedAt: new Date().toISOString(),
