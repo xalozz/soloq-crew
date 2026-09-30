@@ -154,6 +154,35 @@ export function computeAccountStats(history) {
       return { ...c, csPerMin: r1(games.reduce((s, g) => s + g.cs, 0) / Math.max(1, mins)) };
     }),
     roles: roles.sort((a, b) => b.games - a.games),
+    gold: goldStats(history),
+  };
+}
+
+// Estadísticas de oro (solo partidas con timeline descargado).
+const THROW_MIN = 3000; // ventaja de equipo a partir de la cual perder cuenta como "throw"
+function goldStats(history) {
+  const g = history.filter((x) => x.gold);
+  if (!g.length) return null;
+  const brief = (x, val) => (x ? { ...gameBrief(x), val, dur: x.dur, min: x.gold.maxLeadMin } : null);
+  const by = (arr, f, dir = 1) => (arr.length ? arr.reduce((m, x) => (dir * (f(x) - f(m)) > 0 ? x : m)) : null);
+  const losses = g.filter((x) => !x.win), wins = g.filter((x) => x.win);
+  const with15 = g.filter((x) => x.gold.gd15 != null);
+  const throwG = by(losses, (x) => x.gold.maxLead);
+  const comebackG = by(wins, (x) => x.gold.maxDef, -1);
+  const leadG = by(g, (x) => x.gold.maxLead);
+  const best15 = by(with15, (x) => x.gold.gd15);
+  const worst15 = by(with15, (x) => x.gold.gd15, -1);
+  return {
+    games: g.length,
+    avgGd15: with15.length ? Math.round(with15.reduce((s, x) => s + x.gold.gd15, 0) / with15.length) : null,
+    avgTgd15: Math.round(g.filter((x) => x.gold.tgd15 != null).reduce((s, x, _, a) => s + x.gold.tgd15 / a.length, 0)),
+    throws: losses.filter((x) => x.gold.maxLead >= THROW_MIN).length,
+    comebacks: wins.filter((x) => x.gold.maxDef <= -THROW_MIN).length,
+    biggestThrow: throwG && throwG.gold.maxLead > 0 ? brief(throwG, throwG.gold.maxLead) : null,
+    biggestComeback: comebackG && comebackG.gold.maxDef < 0 ? brief(comebackG, comebackG.gold.maxDef) : null,
+    biggestLead: leadG ? brief(leadG, leadG.gold.maxLead) : null,
+    best15: best15 ? brief(best15, best15.gold.gd15) : null,
+    worst15: worst15 ? brief(worst15, worst15.gold.gd15) : null,
   };
 }
 

@@ -256,6 +256,10 @@ button { font: inherit; color: inherit; }
 .m-kda b { font-size: 17px; font-weight: 900; letter-spacing: .01em; white-space: nowrap; }
 .m-kda > span { font-size: 11px; color: var(--muted); white-space: nowrap; }
 .m-items { display: flex; gap: 3px; align-items: center; }
+.m-gold { display: flex; gap: 6px; align-items: center; justify-content: center; flex-wrap: wrap; font-size: 11px; font-weight: 700; margin-top: 2px; }
+.throw-tag, .comeback-tag { font-size: 9px; font-weight: 900; letter-spacing: .06em; padding: 1px 6px; border-radius: 4px; }
+.throw-tag { background: rgba(242, 101, 126, .18); color: var(--loss); }
+.comeback-tag { background: rgba(51, 214, 154, .18); color: var(--win); }
 .ico.item.empty { background: var(--panel-3); opacity: .5; }
 .m-lp { font-size: 15px; font-weight: 900; text-align: right; display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2; }
 .m-lp small { font-size: 10px; font-weight: 700; color: var(--muted); }
@@ -286,6 +290,7 @@ button { font: inherit; color: inherit; }
 .tile.warm b { color: #ffa45c; }
 .tile.cool { background: linear-gradient(180deg, rgba(51, 214, 154, .1), var(--panel)); border-color: rgba(51, 214, 154, .35); }
 .tile.cool b { color: var(--win); }
+.tile.hot { background: linear-gradient(180deg, rgba(242, 101, 126, .12), var(--panel)); border-color: rgba(242, 101, 126, .35); }
 .sx-line { margin: 0; padding: 10px 14px; text-align: center; font-size: 12px; color: #cfcfd6; }
 .sx-h { margin: 8px 0 0; font-size: 12px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
 .chart { position: relative; padding: 10px 8px 4px; min-height: 120px; }
@@ -376,6 +381,8 @@ button { font: inherit; color: inherit; }
 .rec-main .avatar { border-radius: 50%; }
 .rec-v { font-size: 19px; font-weight: 900; letter-spacing: -.01em; }
 .rec-w { font-size: 13px; font-weight: 700; color: #d6d6db; }
+.rec-w .muted { font-weight: 500; font-size: 12px; }
+.rec-gold .rec-v { font-size: 22px; }
 
 .footer { padding: 50px 16px 60px; color: var(--muted); font-size: 12px; text-align: center; }
 

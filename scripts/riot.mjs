@@ -88,6 +88,9 @@ export class Riot {
   match(platform, id) {
     return this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/${id}`);
   }
+  timeline(platform, id) {
+    return this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/${id}/timeline`);
+  }
 }
 
 // Enlaces a webs de estadísticas.
@@ -112,7 +115,7 @@ export function profileLinks(platform, gameName, tagLine) {
 
 // Convierte una partida de la API en el registro compacto que guardamos.
 // `dd` = diccionarios de Data Dragon ({ spells: {id→clave}, runes: {id→ruta icono} }).
-export const MATCH_RECORD_VERSION = 2;
+export const MATCH_RECORD_VERSION = 3;
 
 function loadout(p, dd) {
   const styles = p.perks?.styles ?? [];
@@ -125,7 +128,7 @@ function loadout(p, dd) {
   };
 }
 
-export function compactMatch(match, puuid, dd) {
+export function compactMatch(match, puuid, dd, timeline) {
   const info = match.info;
   const me = info.participants.find((p) => p.puuid === puuid);
   if (!me) return null;
@@ -156,7 +159,35 @@ export function compactMatch(match, puuid, dd) {
     items: [me.item0, me.item1, me.item2, me.item3, me.item4, me.item5, me.item6].map((x) => x || 0),
     ...(({ spells, runes }) => ({ spells, runes }))(loadout(me, dd)),
     opp: opp ? loadout(opp, dd) : null,
+    gold: timeline ? goldFromTimeline(info, timeline, me, opp) : null,
   };
+}
+
+// Diferencias de oro a partir del timeline (un fotograma por minuto).
+//  maxLead: mayor ventaja de oro de su equipo en algún momento
+//  maxDef:  mayor desventaja (negativo)
+//  tgd15:   diferencia de oro del equipo en el minuto 15
+//  gd15:    su oro menos el de su rival de línea en el minuto 15
+function goldFromTimeline(info, timeline, me, opp) {
+  const frames = timeline?.info?.frames;
+  if (!frames?.length) return null;
+  const teamOf = new Map(info.participants.map((p) => [p.participantId, p.teamId]));
+  let maxLead = 0, maxDef = 0, tgd15 = null, gd15 = null, maxLeadMin = 0;
+  frames.forEach((f, minute) => {
+    let diff = 0;
+    for (const [pid, pf] of Object.entries(f.participantFrames ?? {})) {
+      diff += (teamOf.get(Number(pid)) === me.teamId ? 1 : -1) * (pf.totalGold || 0);
+    }
+    if (diff > maxLead) { maxLead = diff; maxLeadMin = minute; }
+    if (diff < maxDef) maxDef = diff;
+    if (minute === 15) {
+      tgd15 = diff;
+      const mine = f.participantFrames?.[me.participantId]?.totalGold;
+      const theirs = opp ? f.participantFrames?.[opp.participantId]?.totalGold : null;
+      if (mine != null && theirs != null) gd15 = mine - theirs;
+    }
+  });
+  return { maxLead, maxLeadMin, maxDef, tgd15, gd15 };
 }
 
 // Diccionarios de Data Dragon para hechizos y runas (una vez por ejecución).

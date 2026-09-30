@@ -41,6 +41,7 @@ const svg = (tag, attrs, ...kids) => h(tag, { ...attrs, svg: true }, ...kids);
 const fmt = (n, d = 1) => (n == null || Number.isNaN(n) ? '–' : Number(n).toFixed(d).replace(/\.0+$/, ''));
 const fmtInt = (n) => (n == null ? '–' : Number(n).toLocaleString('es-ES'));
 const signed = (n) => (n > 0 ? `+${n}` : `${n}`);
+const goldK = (v, sign = true) => (v == null ? '–' : `${sign ? (v > 0 ? '+' : v < 0 ? '−' : '') : ''}${(Math.abs(v) / 1000).toLocaleString('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}k`);
 
 const dayFmt = new Intl.DateTimeFormat('sv-SE', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' });
 const dayKey = (t) => dayFmt.format(new Date(t));
@@ -332,7 +333,11 @@ function matchRow(g) {
     g.opp ? h('div', { class: 'm-vs' }, h('small', {}, 'vs'), loadoutBlock(g.opp, 30)) : h('div', { class: 'm-vs' }),
     h('div', { class: 'm-kda' },
       h('b', {}, h('span', {}, g.k), ' / ', h('span', { class: 'neg' }, g.d), ' / ', h('span', {}, g.a)),
-      h('span', {}, [perfect ? 'Perfect' : `${fmt(kda, 1)} KDA`, g.kp != null ? `${g.kp}% KP` : null, `${g.cs} CS`].filter(Boolean).join(' · '))),
+      h('span', {}, [perfect ? 'Perfect' : `${fmt(kda, 1)} KDA`, g.kp != null ? `${g.kp}% KP` : null, `${g.cs} CS`].filter(Boolean).join(' · ')),
+      g.gold ? h('span', { class: 'm-gold', title: `Ventaja máx. del equipo ${goldK(g.gold.maxLead)} · desventaja máx. ${goldK(g.gold.maxDef)}` },
+        g.gold.gd15 != null ? h('span', { class: g.gold.gd15 >= 0 ? 'pos' : 'neg' }, `${goldK(g.gold.gd15)} oro @15`) : null,
+        !g.win && g.gold.maxLead >= 3000 ? h('span', { class: 'throw-tag' }, `THROW ${goldK(g.gold.maxLead)}`) : null,
+        g.win && g.gold.maxDef <= -3000 ? h('span', { class: 'comeback-tag' }, `REMONTADA ${goldK(g.gold.maxDef)}`) : null) : null),
     h('div', { class: 'm-items' }, (g.items ?? []).map((id, i) => itemImg(id, i === 6 ? 24 : 26))),
     lpBadge(g.lp));
 }
@@ -435,6 +440,10 @@ function tabStats(acc) {
       tile('KP media', s.avgKp != null ? `${s.avgKp}%` : '–'),
       tile('LP por victoria / derrota', lp && (lp.winN || lp.lossN) ? h('span', {}, h('span', { class: 'pos' }, lp.win != null ? `▲${lp.win}` : '–'), '  ', h('span', { class: 'neg' }, lp.loss != null ? `▼${Math.abs(lp.loss)}` : '–')) : h('span', { class: 'muted', title: 'Se calcula con las partidas jugadas desde que se registra el LP' }, 'Pronto')),
       tile('Racha actual · mejor · peor', h('span', {}, streakChip(s), ` ${s.streak.bestWin}V · ${s.streak.worstLoss}D`))) : null,
+    s?.gold ? h('div', { class: 'tiles t3' },
+      tile('Oro @15 vs rival (media)', h('span', { class: (s.gold.avgGd15 ?? 0) >= 0 ? 'pos' : 'neg' }, goldK(s.gold.avgGd15))),
+      tile('Mayor ventaja de oro', s.gold.biggestLead ? goldK(s.gold.biggestLead.val) : '–', 'cool'),
+      tile(`Mayor throw · ${s.gold.throws} partidas lanzadas`, s.gold.biggestThrow ? h('span', { class: 'neg' }, goldK(s.gold.biggestThrow.val)) : '–', 'hot')) : null,
     s ? h('p', { class: 'sx-line' },
       'Duración media ', h('b', {}, `${fmt(s.avgDurationMin)} min`), ' · Más larga ', h('b', {}, `${fmt(s.maxDurationMin ?? null)} min`),
       ' · Pico ', h('b', { class: `t-${tierKey(r)}` }, peak >= 0 ? scoreLabel(peak) : '–')) : null,
@@ -492,6 +501,8 @@ const STAT_CARDS = [
   { title: 'CS/min', sub: 'Farmeo por minuto', get: (s) => s.csPerMin, d: 1 },
   { title: 'Visión', sub: 'Puntuación de visión por minuto', get: (s) => s.visPerMin, d: 2 },
   { title: '% daño', sub: 'Parte del daño a campeones de su equipo', get: (s) => s.dmgShare, d: 1, suffix: '%' },
+  { title: 'Oro @15', sub: 'Diferencia media de oro con su rival de línea al minuto 15', get: (s) => s.gold?.avgGd15, fmt: goldK, games: (s) => s.gold.games },
+  { title: 'Throws', sub: 'Partidas perdidas tras ir +3k de oro por equipo', get: (s) => s.gold?.throws, d: 0, games: (s) => s.gold.games },
 ];
 
 function statCard(def, players) {
@@ -500,18 +511,19 @@ function statCard(def, players) {
     .sort((a, b) => b.v - a.v);
   if (!list.length) return null;
   const [first, ...rest] = list;
-  const val = (v) => `${fmt(v, def.d)}${def.suffix ?? ''}`;
+  const val = (v) => (def.fmt ? def.fmt(v) : `${fmt(v, def.d)}${def.suffix ?? ''}`);
+  const games = (p) => (def.games ? def.games(p.s) : p.s.games);
   return h('article', { class: 'scard' },
     h('h3', { class: 'card-title' }, def.title),
     h('p', { class: 'card-sub' }, def.sub),
     h('div', { class: 'leader' },
       h('span', { class: 'leader-pos' }, '1'),
       h('div', { class: 'leader-who' }, avatar(first.p, 76, 'big'), h('b', {}, first.p.name), tierTag(first.p.rank)),
-      h('div', { class: 'leader-val' }, h('b', {}, val(first.v)), h('span', {}, `${first.p.s.games} partidas`))),
+      h('div', { class: 'leader-val' }, h('b', {}, val(first.v)), h('span', {}, `${games(first.p)} partidas`))),
     h('ol', { class: 'lb', start: 2 }, rest.map((x, i) =>
       h('li', { class: `lb-row t-border-${tierKey(x.p.rank)}` },
         h('span', { class: 'lb-pos' }, i + 2), avatar(x.p, 26), h('span', { class: 'lb-name' }, x.p.name),
-        h('b', { class: 'lb-val' }, val(x.v)), h('span', { class: 'lb-games' }, `${x.p.s.games} partidas`)))));
+        h('b', { class: 'lb-val' }, val(x.v)), h('span', { class: 'lb-games' }, `${games(x.p)} partidas`)))));
 }
 
 function kdaCard(players) {
@@ -568,6 +580,22 @@ function renderRecords(players) {
     ['Mejor campeón (5+ partidas)', pick(champs, (x) => x.c.winrate * 1000 + x.c.games), (x) => `${x.c.key} ${fmt(x.c.winrate, 0)}%`, 'good', (x) => x.c.key],
     ['Más partidas en temporada', pick(rows.filter((r) => r.rank), (r) => r.wins + r.losses), (r) => `${fmtInt(r.wins + r.losses)} partidas`, 'neutral'],
   ];
+  const goldRec = (key, dir = 1) => {
+    const c = rows.filter((r) => r.s.gold?.[key]).map((r) => ({ p: r, g: r.s.gold[key] }));
+    return c.length ? c.reduce((m, x) => (dir * (x.g.val - m.g.val) > 0 ? x : m)) : null;
+  };
+  const goldCard = (title, x, tone, note) => (x ? h('div', { class: `rec rec-${tone} rec-gold` },
+    h('span', { class: 'rec-t' }, title),
+    h('div', { class: 'rec-main' }, champIcon(x.g.champ, 34), h('b', { class: 'rec-v' }, `${goldK(x.g.val)} de oro`)),
+    h('span', { class: 'rec-w' }, x.p.name, h('span', { class: 'muted' }, ` · ${x.g.champ} ${x.g.k}/${x.g.d}/${x.g.a} · ${note(x.g)} · ${ago(x.g.t)}`))) : null);
+  const goldCards = [
+    goldCard('Mayor throw', goldRec('biggestThrow'), 'bad', (g) => `iba ganando en el min ${g.min} y perdió`),
+    goldCard('Mayor remontada', goldRec('biggestComeback', -1), 'good', () => 'iba perdiendo y ganó'),
+    goldCard('Mayor ventaja de oro', goldRec('biggestLead'), 'neutral', (g) => (g.win ? 'victoria' : 'derrota')),
+    goldCard('Mejor oro @15 vs rival', goldRec('best15'), 'good', (g) => (g.win ? 'victoria' : 'derrota')),
+    goldCard('Peor oro @15 vs rival', goldRec('worst15', -1), 'bad', (g) => (g.win ? 'victoria' : 'derrota')),
+  ].filter(Boolean);
+
   const cards = defs.filter((d) => d[1]).map(([title, r, fmtFn, tone, champFn]) => {
     const p = r.p && r.c ? r.p : r;
     return h('div', { class: `rec rec-${tone}` },
@@ -575,7 +603,7 @@ function renderRecords(players) {
       h('div', { class: 'rec-main' }, champFn ? champIcon(champFn(r), 34) : avatar(p, 34), h('b', { class: 'rec-v' }, fmtFn(r))),
       h('span', { class: 'rec-w' }, p.name));
   });
-  document.getElementById('records-grid').replaceChildren(...cards);
+  document.getElementById('records-grid').replaceChildren(...goldCards, ...cards);
 }
 
 // ---------------------------------------------------------------- render

@@ -80,7 +80,13 @@ async function updateAccount(riot, acc, region, cache, dd) {
   console.log(`  ${acc.riotId}: ${fresh.length} partidas por descargar`);
   for (const id of fresh) {
     try {
-      const rec = compactMatch(await riot.match(region, id), puuid, dd);
+      const match = await riot.match(region, id);
+      let timeline = null;
+      try { timeline = await riot.timeline(region, id); } catch (err) {
+        if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
+        console.warn(`  ! timeline ${id}: ${err.message}`);
+      }
+      const rec = compactMatch(match, puuid, dd, timeline);
       if (rec) {
         const i = history.findIndex((g) => g.id === id);
         if (i >= 0) history[i] = rec; else history.push(rec);
