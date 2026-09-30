@@ -574,32 +574,64 @@ function tabStats(acc) {
   const next = nextDivision(r);
   const peak = acc.lpHist?.length ? Math.max(...acc.lpHist.map((x) => x[1])) : rankScore(r);
   const lp = s?.lp;
+  const season = r ? r.wins + r.losses : null;
+  const wr = r && season ? (r.wins / season) * 100 : null;
+  const kv = (label, value, cls) => h('div', { class: 'kv' }, h('span', {}, label), h('b', { class: cls || '' }, value ?? '–'));
+  const group = (title, ...rows) => h('div', { class: 'sg' }, h('h5', {}, title), ...rows);
+  const signCls = (v) => (v == null ? '' : v >= 0 ? 'pos' : 'neg');
+
+  // Franja superior: rango · winrate · progreso de división
+  const head = h('div', { class: 'sx-head', style: `--tc: var(--t-${tierKey(r)})` },
+    h('div', { class: 'sxh-rank' }, crest(r, 46),
+      h('div', {}, h('b', { class: `t-${tierKey(r)}` }, rankName(r)), h('span', {}, r ? `${r.lp} LP` : 'Sin clasificar'))),
+    r ? h('div', { class: 'sxh-col' },
+      h('div', { class: 'sxh-top' }, h('span', {}, 'Winrate'), h('b', { class: wr >= 50 ? 'pos' : 'neg' }, `${fmt(wr, 1)}%`),
+        h('small', {}, h('span', { class: 'pos' }, `${r.wins}V`), ' ', h('span', { class: 'neg' }, `${r.losses}D`))),
+      h('div', { class: 'thin split' }, h('i', { class: 'w', style: `width:${wr}%` }), h('i', { class: 'l', style: `width:${100 - wr}%` }))) : null,
+    next ? h('div', { class: 'sxh-col' },
+      h('div', { class: 'sxh-top' }, h('span', {}, `Hacia ${next}`), h('b', {}, `${r.lp}`), h('small', {}, '/ 100 LP')),
+      h('div', { class: 'thin' }, h('i', { class: 'acc', style: `width:${Math.min(100, r.lp)}%` })))
+      : r ? h('div', { class: 'sxh-col' }, h('div', { class: 'sxh-top' }, h('span', {}, 'Liga'), h('b', {}, `${r.lp} LP`))) : null);
+
+  if (!s) return h('div', { class: 'sx' }, head, h('p', { class: 'empty' }, 'Sin partidas de SoloQ registradas todavía.'), h('h4', { class: 'sx-h' }, 'Evolución de elo'), eloChart(acc));
+
+  // KDA destacado
+  const kdaBox = h('div', { class: 'sx-kda2' },
+    h('span', { class: 'lbl' }, 'KDA'),
+    h('b', { class: 'big' }, fmt(s.kda, 2)),
+    h('div', { class: 'kda-line' }, h('span', { class: 'pos' }, fmt(s.avgK)), ' / ', h('span', { class: 'neg' }, fmt(s.avgD)), ' / ', h('span', { class: 'blue' }, fmt(s.avgA)),
+      h('small', {}, ' por partida')),
+    s.totals ? h('div', { class: 'kda-tot' }, `${fmtInt(s.totals.k)} / ${fmtInt(s.totals.d)} / ${fmtInt(s.totals.a)} en total`) : null,
+    h('div', { class: 'kda-games' }, h('b', {}, fmtInt(s.games)), ` partidas analizadas${season && season > s.games ? ` de ${fmtInt(season)}` : ''}`));
+
+  const groups = h('div', { class: 'sgrid' },
+    group('Combate',
+      kv('KP media', s.avgKp != null ? `${s.avgKp}%` : null),
+      kv('Récord de kills', s.maxKills),
+      kv('First bloods', s.firstBloods),
+      kv('Pentakills', s.pentas)),
+    group('Farmeo y visión',
+      kv('CS / min', fmt(s.csPerMin)),
+      kv('Daño / min', s.dmgPerMin != null ? fmtInt(s.dmgPerMin) : null),
+      kv('% daño equipo', s.dmgShare != null ? `${fmt(s.dmgShare)}%` : null),
+      kv('Visión / partida', fmt(s.avgVision ?? null))),
+    group('Oro',
+      kv('Oro @15 vs rival', s.gold ? goldK(s.gold.avgGd15) : null, signCls(s.gold?.avgGd15)),
+      kv('Mayor ventaja', s.gold?.biggestLead ? goldK(s.gold.biggestLead.val) : null, 'pos'),
+      kv('Mayor throw', s.gold?.biggestThrow ? goldK(s.gold.biggestThrow.val, false) : null, 'neg'),
+      kv('Partidas lanzadas', s.gold ? `${s.gold.throws}` : null)),
+    group('Rachas y LP',
+      kv('Racha actual', streakChip(s)),
+      kv('Mejor / peor', h('span', {}, h('span', { class: 'pos' }, `${s.streak.bestWin}V`), ' · ', h('span', { class: 'neg' }, `${s.streak.worstLoss}D`))),
+      kv('LP por victoria', lp?.win != null ? `+${lp.win}` : null, 'pos'),
+      kv('LP por derrota', lp?.loss != null ? `${lp.loss}` : null, 'neg')));
+
   return h('div', { class: 'sx' },
-    h('div', { class: 'sx-rank', style: `border-left-color: var(--t-${tierKey(r)})` },
-      h('div', { class: 'sx-tier' }, crest(r, 54), h('div', {}, h('b', { class: `t-${tierKey(r)}` }, rankName(r)), h('span', {}, r ? `${r.lp} LP` : 'Sin partidas de clasificación'))),
-      r ? h('div', { class: 'sx-wr' }, h('span', { class: 'lbl' }, 'Winrate'), winBar(r.wins, r.losses)) : null),
-    next ? h('div', { class: 'sx-prog' },
-      h('div', { class: 'sx-prog-top' }, h('span', {}, `Hacia ${next}`), h('b', {}, `${r.lp} / 100 LP`)),
-      h('div', { class: 'sx-prog-bar' }, h('i', { style: `width:${Math.min(100, r.lp)}%` }))) : null,
-    s ? h('div', { class: 'sx-kda' },
-      h('div', {}, h('b', { class: 'big' }, fmt(s.kda, 2)), h('span', { class: 'lbl' }, 'KDA')),
-      s.totals ? h('div', { class: 'sx-tot' }, h('span', { class: 'pos' }, fmtInt(s.totals.k)), ' / ', h('span', { class: 'neg' }, fmtInt(s.totals.d)), ' / ', h('span', { class: 'blue' }, fmtInt(s.totals.a))) : null,
-      h('div', { class: 'sx-reg' }, h('b', {}, s.games), h('span', { class: 'lbl' }, 'Partidas analizadas'))) : null,
-    s ? h('div', { class: 'tiles t3' },
-      tile('CS / min', fmt(s.csPerMin)), tile('Daño / min', s.dmgPerMin != null ? fmtInt(s.dmgPerMin) : '–'), tile('Visión', fmt(s.avgVision ?? null))) : null,
-    s ? h('div', { class: 'tiles t3' },
-      tile('Pentakills', s.pentas ?? '–'), tile('First bloods', s.firstBloods ?? '–', 'warm'), tile('Récord de kills', s.maxKills ?? '–', 'cool')) : null,
-    s ? h('div', { class: 'tiles t3' },
-      tile('KP media', s.avgKp != null ? `${s.avgKp}%` : '–'),
-      tile('LP por victoria / derrota', lp && (lp.winN || lp.lossN) ? h('span', {}, h('span', { class: 'pos' }, lp.win != null ? `▲${lp.win}` : '–'), '  ', h('span', { class: 'neg' }, lp.loss != null ? `▼${Math.abs(lp.loss)}` : '–')) : h('span', { class: 'muted', title: 'Se calcula con las partidas jugadas desde que se registra el LP' }, 'Pronto')),
-      tile('Racha actual · mejor · peor', h('span', {}, streakChip(s), ` ${s.streak.bestWin}V · ${s.streak.worstLoss}D`))) : null,
-    s?.gold ? h('div', { class: 'tiles t3' },
-      tile('Oro @15 vs rival (media)', h('span', { class: (s.gold.avgGd15 ?? 0) >= 0 ? 'pos' : 'neg' }, goldK(s.gold.avgGd15))),
-      tile('Mayor ventaja de oro', s.gold.biggestLead ? goldK(s.gold.biggestLead.val) : '–', 'cool'),
-      tile(`Mayor throw · ${s.gold.throws} partidas lanzadas`, s.gold.biggestThrow ? h('span', { class: 'neg' }, goldK(s.gold.biggestThrow.val)) : '–', 'hot')) : null,
-    s ? h('p', { class: 'sx-line' },
+    head,
+    h('div', { class: 'sx-body' }, kdaBox, groups),
+    h('p', { class: 'sx-line' },
       'Duración media ', h('b', {}, `${fmt(s.avgDurationMin)} min`), ' · Más larga ', h('b', {}, `${fmt(s.maxDurationMin ?? null)} min`),
-      ' · Pico ', h('b', { class: `t-${tierKey(r)}` }, peak >= 0 ? scoreLabel(peak) : '–')) : null,
+      ' · Pico registrado ', h('b', { class: `t-${tierKey(r)}` }, peak >= 0 ? scoreLabel(peak) : '–')),
     h('h4', { class: 'sx-h' }, 'Evolución de elo'),
     eloChart(acc));
 }

@@ -379,6 +379,42 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .etip[hidden] { display: none; }
 .etip b { color: var(--accent); }
 
+/* stats & elo (compacto) */
+.sx-head {
+  display: grid; grid-template-columns: auto 1fr 1fr; gap: 22px; align-items: center;
+  background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--tc); border-radius: 12px; padding: 10px 16px;
+}
+.sxh-rank { display: flex; align-items: center; gap: 10px; }
+.sxh-rank b { display: block; font-size: 18px; font-weight: 900; line-height: 1.1; }
+.sxh-rank span { font-size: 12px; color: var(--muted); }
+.sxh-col { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.sxh-top { display: flex; align-items: baseline; gap: 8px; font-size: 12px; white-space: nowrap; }
+.sxh-top > span { color: var(--muted); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; margin-right: auto; overflow: hidden; text-overflow: ellipsis; }
+.sxh-top b { font-size: 15px; font-weight: 900; }
+.sxh-top small { color: var(--muted); font-weight: 700; }
+.thin { display: flex; gap: 2px; height: 5px; background: var(--panel-3); border-radius: 3px; overflow: hidden; }
+.thin i { display: block; height: 100%; border-radius: 3px; }
+.thin.split { background: transparent; }
+.thin i.w { background: var(--win); } .thin i.l { background: var(--loss); } .thin i.acc { background: var(--accent); }
+.sx-body { display: grid; grid-template-columns: 190px 1fr; gap: 10px; }
+.sx-kda2 {
+  background: linear-gradient(160deg, rgba(255, 155, 180, .10), var(--panel) 60%); border: 1px solid var(--line); border-radius: 12px;
+  padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; justify-content: center;
+}
+.sx-kda2 .big { font-size: 44px; font-weight: 900; color: var(--pink); line-height: 1; letter-spacing: -.02em; }
+.kda-line { font-size: 16px; font-weight: 800; }
+.kda-line small { font-size: 11px; font-weight: 600; color: var(--muted); }
+.kda-tot, .kda-games { font-size: 11px; color: var(--muted); }
+.kda-games b { color: var(--text); }
+.sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.sg { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.sg h5 { margin: 0 0 6px; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.kv { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px solid #1f1f23; font-size: 12px; }
+.sg h5 + .kv { border-top: 0; }
+.kv > span { color: #bdbdc5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kv > b { font-size: 14px; font-weight: 900; white-space: nowrap; }
+.kv .chip { font-size: 12px; padding: 1px 7px; }
+
 /* reparto de roles en la ficha */
 .rs { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
 .rs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12px; }
@@ -580,6 +616,7 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 
 /* ------------------------------------------------ responsive */
 @media (max-width: 1080px) {
+  .sgrid { grid-template-columns: 1fr 1fr; }
   .awards { grid-template-columns: 1fr 1fr; }
   .best5 { grid-template-columns: repeat(3, 1fr); }
   .table { --cols: 50px minmax(160px, 1.6fr) 36px minmax(140px, 1.1fr) minmax(150px, 1.2fr) 96px 60px 72px 24px; }
@@ -605,6 +642,15 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
   .nav-updated { padding: 7px 10px; } .nav-updated #updated { display: none; }
 }
 @media (max-width: 640px) {
+  .sx-head { grid-template-columns: 1fr; gap: 10px; padding: 10px 12px; }
+  .sx-body { grid-template-columns: 1fr; }
+  .sx-kda2 { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .sx-kda2 .big { font-size: 34px; }
+  .sx-kda2 .lbl { width: 100%; }
+  .sgrid { gap: 8px; }
+  .sg { padding: 8px 10px; }
+  .kv { font-size: 11px; }
+  .kv > b { font-size: 13px; }
   .awards { grid-template-columns: 1fr; }
   .aw-title { font-size: 17px; }
   .best5 { grid-template-columns: 1fr 1fr; gap: 8px; }
