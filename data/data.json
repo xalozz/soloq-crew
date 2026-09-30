@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T07:42:50.122Z",
+  "generatedAt": "2026-09-30T07:55:30.924Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -322,7 +322,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-30T07:39:22.930Z",
+          "updatedAt": "2026-09-30T07:55:23.413Z",
           "lpHist": [
             [
               1790720384833,
@@ -1806,7 +1806,7 @@
             "dpm": "https://dpm.lol/xPATQ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPATQ-EUW"
           },
-          "updatedAt": "2026-09-30T07:41:05.264Z",
+          "updatedAt": "2026-09-30T07:55:27.183Z",
           "lpHist": [
             [
               1790720384833,
@@ -3316,7 +3316,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-09-30T07:42:50.121Z",
+          "updatedAt": "2026-09-30T07:55:30.923Z",
           "lpHist": [
             [
               1790720384833,
@@ -4824,7 +4824,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-09-30T07:34:16.577Z",
+          "updatedAt": "2026-09-30T07:55:09.686Z",
           "lpHist": [
             [
               1790720384833,
@@ -6364,7 +6364,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T07:32:31.378Z",
+          "updatedAt": "2026-09-30T07:55:06.022Z",
           "lpHist": [
             [
               1790720384833,
@@ -7911,7 +7911,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-09-30T07:37:43.270Z",
+          "updatedAt": "2026-09-30T07:55:19.681Z",
           "lpHist": [
             [
               1790720384833,
@@ -9051,7 +9051,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1111,
+      "score": 1130,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -9064,29 +9064,29 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 11,
-            "wins": 150,
+            "lp": 30,
+            "wins": 151,
             "losses": 162,
-            "winrate": 48.1,
-            "hotStreak": false
+            "winrate": 48.2,
+            "hotStreak": true
           },
           "stats": {
-            "games": 41,
-            "wins": 20,
+            "games": 42,
+            "wins": 21,
             "losses": 21,
-            "winrate": 48.8,
-            "avgK": 6.5,
-            "avgD": 5.7,
-            "avgA": 7.2,
+            "winrate": 50,
+            "avgK": 6.7,
+            "avgD": 5.9,
+            "avgA": 7.3,
             "kda": 2.39,
             "csPerMin": 6.5,
-            "visPerMin": 0.75,
-            "dmgShare": 23.9,
-            "avgDurationMin": 31.7,
+            "visPerMin": 0.74,
+            "dmgShare": 23.8,
+            "avgDurationMin": 32,
             "streak": {
               "current": {
                 "type": "W",
-                "count": 2
+                "count": 3
               },
               "bestWin": 4,
               "worstLoss": 5
@@ -9094,17 +9094,16 @@
             "form": [
               "W",
               "W",
+              "W",
               "L",
               "W",
               "W",
               "L",
               "L",
               "W",
-              "L",
               "L"
             ],
             "trend": [
-              1,
               0,
               0,
               0,
@@ -9122,15 +9121,16 @@
               1,
               1,
               0,
+              1,
               1,
               1
             ],
             "mainRole": "TOP",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 6,
+              "losses": 4,
+              "winrate": 60
             },
             "last20": {
               "games": 20,
@@ -9191,10 +9191,10 @@
             },
             "bestRole": {
               "key": "TOP",
-              "games": 28,
-              "wins": 17,
-              "winrate": 60.7,
-              "kda": 2.46
+              "games": 29,
+              "wins": 18,
+              "winrate": 62.1,
+              "kda": 2.45
             },
             "worstRole": {
               "key": "MIDDLE",
@@ -9226,14 +9226,14 @@
               "kda": 0.3
             },
             "firstGameAt": 1788287248888,
-            "lastGameAt": 1790720954815,
+            "lastGameAt": 1790754836313,
             "totals": {
-              "k": 268,
-              "d": 235,
-              "a": 294
+              "k": 281,
+              "d": 246,
+              "a": 306
             },
-            "dmgPerMin": 927,
-            "avgVision": 23.6,
+            "dmgPerMin": 932,
+            "avgVision": 23.8,
             "pentas": 0,
             "firstBloods": 1,
             "maxKills": 15,
@@ -9297,6 +9297,14 @@
                 "csPerMin": 6
               },
               {
+                "key": "Swain",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 2.27,
+                "csPerMin": 5.4
+              },
+              {
                 "key": "Locke",
                 "games": 1,
                 "wins": 0,
@@ -9356,10 +9364,10 @@
             "roles": [
               {
                 "key": "TOP",
-                "games": 28,
-                "wins": 17,
-                "winrate": 60.7,
-                "kda": 2.46
+                "games": 29,
+                "wins": 18,
+                "winrate": 62.1,
+                "kda": 2.45
               },
               {
                 "key": "MIDDLE",
@@ -9377,11 +9385,11 @@
               }
             ],
             "gold": {
-              "games": 40,
-              "avgGd15": 556,
-              "avgTgd15": 609,
+              "games": 41,
+              "avgGd15": 569,
+              "avgTgd15": 691,
               "throws": 2,
-              "comebacks": 3,
+              "comebacks": 4,
               "biggestThrow": {
                 "id": "EUW1_7983791281",
                 "t": 1789408812581,
@@ -9454,9 +9462,9 @@
               }
             },
             "lp": {
-              "win": null,
+              "win": 19,
               "loss": null,
-              "winN": 0,
+              "winN": 1,
               "lossN": 0
             }
           },
@@ -9466,7 +9474,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-09-30T07:36:01.730Z",
+          "updatedAt": "2026-09-30T07:55:16.612Z",
           "lpHist": [
             [
               1790720384833,
@@ -9475,9 +9483,72 @@
             [
               1790722183451,
               1111
+            ],
+            [
+              1790754910919,
+              1130
             ]
           ],
           "recent": [
+            {
+              "v": 3,
+              "id": "EUW1_7999346041",
+              "t": 1790754836313,
+              "dur": 2723,
+              "win": true,
+              "champ": "Swain",
+              "role": "TOP",
+              "lvl": 20,
+              "k": 13,
+              "d": 11,
+              "a": 12,
+              "kp": 41,
+              "cs": 244,
+              "vis": 29,
+              "dmg": 48923,
+              "teamDmg": 232857,
+              "penta": 0,
+              "fb": false,
+              "items": [
+                3065,
+                4633,
+                6657,
+                3116,
+                3118,
+                3111,
+                3364
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                "perk-images/Styles/7201_Precision.png"
+              ],
+              "opp": {
+                "champ": "Teemo",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 4914,
+                "maxLeadMin": 19,
+                "maxDef": -3099,
+                "tgd15": 3984,
+                "gd15": 1072
+              },
+              "lp": {
+                "d": 19,
+                "n": 1
+              }
+            },
             {
               "v": 3,
               "id": "EUW1_7999185104",
@@ -10539,62 +10610,6 @@
                 "maxDef": -6194,
                 "tgd15": -1384,
                 "gd15": 492
-              },
-              "lp": null
-            },
-            {
-              "v": 3,
-              "id": "EUW1_7989468057",
-              "t": 1789903139675,
-              "dur": 1994,
-              "win": true,
-              "champ": "Malphite",
-              "role": "TOP",
-              "lvl": 18,
-              "k": 7,
-              "d": 5,
-              "a": 4,
-              "kp": 28,
-              "cs": 210,
-              "vis": 27,
-              "dmg": 30413,
-              "teamDmg": 152231,
-              "penta": 0,
-              "fb": true,
-              "items": [
-                1031,
-                3118,
-                3111,
-                6664,
-                2504,
-                1033,
-                3340
-              ],
-              "spells": [
-                "SummonerTeleport",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Singed",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 8475,
-                "maxLeadMin": 33,
-                "maxDef": -517,
-                "tgd15": 2366,
-                "gd15": 1044
               },
               "lp": null
             }
