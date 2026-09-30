@@ -846,7 +846,7 @@ function computeBest5(players) {
     const p = best.pick[i] ?? null;
     // Mejor campeón del grupo en el rol, jugase quien lo jugase
     const pool = [];
-    for (const q of cand) for (const c of q.s.byRole[role]?.champs ?? []) if (c.games >= MIN_CHAMP_GAMES) pool.push({ q, c });
+    for (const q of cand) for (const c of q.s.byRole[role]?.champs ?? []) if (c.games >= 10) pool.push({ q, c });
     const groupChamp = pool.length ? pool.reduce((m, x) => (adjWr(x.c.wins, x.c.games, 2) > adjWr(m.c.wins, m.c.games, 2) ? x : m)) : null;
     return { role, p, r: p ? p.s.byRole[role] : null, champ: p ? bestChamp(p.s.byRole[role].champs) : null, groupChamp };
   });
@@ -869,7 +869,7 @@ function renderBest5(players) {
       champ ? h('p', { class: 'b5-note' }, `Con ${champ.key}: ${fmt(champ.winrate, 0)}% en ${champ.games} partidas`) : null)
       : h('p', { class: 'empty' }, `Nadie juega habitualmente este rol (mín. ${MIN_ROLE_GAMES} partidas y 20 % de las suyas)`),
     groupChamp ? h('div', { class: 'b5-foot' },
-      h('span', { class: 'lbl' }, 'Mejor campeón del grupo aquí'),
+      h('span', { class: 'lbl' }, `Pick con mejor winrate en ${ROLE_ES[role].toLowerCase()} (de cualquiera, mín. 10)`),
       h('div', {}, champIcon(groupChamp.c.key, 22), h('b', {}, groupChamp.c.key),
         h('span', { class: 'muted' }, ` · ${groupChamp.q.name} · ${fmt(groupChamp.c.winrate, 0)}% (${groupChamp.c.games})`))) : null)));
 }

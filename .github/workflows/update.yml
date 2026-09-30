@@ -29,7 +29,7 @@ jobs:
       - name: Actualizar en bucle
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
-          LOOP_SECONDS: 21000   # ~5h50m
+          LOOP_SECONDS: 19800   # ~5h30m (margen para que la última vuelta termine antes del límite de 6 h)
           SLEEP_SECONDS: 480    # 8 min entre actualizaciones
         run: |
           git config user.name "soloq-bot"
