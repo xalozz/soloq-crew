@@ -63,6 +63,11 @@ button { font: inherit; color: inherit; }
 .nav-links a { padding: 7px 16px; border-radius: 999px; font-weight: 600; font-size: 14px; color: #d6d6db; }
 .nav-links a:hover { color: var(--text); background: var(--panel-3); }
 .nav-links a.active { background: var(--accent); color: var(--accent-ink); font-style: italic; font-weight: 800; }
+button.nav-updated { font: inherit; font-size: 12px; background: transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
+.rf-ico { display: inline-block; font-size: 14px; color: var(--accent); transition: transform .4s; }
+.nav-updated.spin .rf-ico { animation: rf 0.8s linear infinite; }
+@keyframes rf { to { transform: rotate(360deg); } }
 .nav-updated { flex: none; font-size: 12px; color: var(--muted); padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; }
 
 /* ------------------------------------------------ títulos */
@@ -597,7 +602,7 @@ button { font: inherit; color: inherit; }
   .c-role, .c-trend, .c-streak, .thead .c-role, .thead .c-trend, .thead .c-streak { display: none; }
   .stats-grid { grid-template-columns: 1fr; }
   .kda-row { grid-template-columns: 1fr 1fr; }
-  .nav-updated { display: none; }
+  .nav-updated { padding: 7px 10px; } .nav-updated #updated { display: none; }
 }
 @media (max-width: 640px) {
   .awards { grid-template-columns: 1fr; }

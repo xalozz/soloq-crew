@@ -25,6 +25,9 @@ const LP_HIST = path.join(DATA_DIR, 'lp-history.json');
 const MATCH_DIR = path.join(DATA_DIR, 'matches');           // detalle de partidas para el historial desplegable
 const DETAIL_RECENT = 20;                                  // partidas recientes con detalle
 const matchFile = (id) => path.join(MATCH_DIR, `${id}.json`);
+// Estado de la pasada rápida (no se publica): cuentas "pendientes" tras un cambio de rango
+const QUICK_STATE = path.join(ROOT, '.quick-state.json');
+const DIRTY_MS = 12 * 60e3; // tras detectar una partida, seguir actualizando esa cuenta 12 min (Riot tarda en publicarla)
 const LP_HIST_CAP = 3000;
 const LP_HIST_PUBLISHED = 600;
 
@@ -233,10 +236,43 @@ async function main() {
   const prevAcc = new Map();
   for (const p of previous?.players ?? []) for (const a of p.accounts) prevAcc.set(a.riotId.toLowerCase(), a);
 
+  // Pasada rápida (--quick): solo mira el rango de cada cuenta (1 petición) y actualiza a fondo
+  // únicamente las que han cambiado o siguen "pendientes". Pensada para ejecutarse cada minuto.
+  const QUICK = process.argv.includes('--quick') && previous && !previous.demo;
+  const quickState = QUICK ? await readJson(QUICK_STATE, { dirty: {} }) : null;
+  let toUpdate = null; // null = todas
+  if (QUICK) {
+    toUpdate = new Set();
+    const now0 = Date.now();
+    for (const pl of config.players) {
+      for (const acc of pl.accounts) {
+        const key = acc.riotId.toLowerCase();
+        const region = acc.region ?? config.defaultRegion ?? 'euw1';
+        const prev = prevAcc.get(key);
+        const puuid = cache[key]?.puuid;
+        if (!prev || !puuid || prev.error) { toUpdate.add(key); continue; }
+        const solo = (await riot.leagueEntries(region, puuid)).find((e) => e.queueType === 'RANKED_SOLO_5x5');
+        const r = prev.rank;
+        const changed = solo
+          ? !r || r.tier !== solo.tier || r.division !== solo.rank || r.lp !== solo.leaguePoints || r.wins !== solo.wins || r.losses !== solo.losses
+          : !!r;
+        if (changed) quickState.dirty[key] = now0 + DIRTY_MS;
+        if ((quickState.dirty[key] ?? 0) > now0) toUpdate.add(key);
+        else delete quickState.dirty[key];
+      }
+    }
+    await writeJson(QUICK_STATE, quickState);
+    if (!toUpdate.size) {
+      console.log(`Rápida: sin partidas nuevas (${riot.calls} peticiones).`);
+      return;
+    }
+    console.log(`Rápida: actualizando ${[...toUpdate].join(', ')}`);
+  }
+
   const ddVersion = (await ddragonVersion()) ?? previous?.ddragonVersion ?? null;
   const dd = await loadDataDragon(ddVersion);
   // Máximo de partidas antiguas a descargar por ejecución (el resto, en las siguientes)
-  const budget = { left: Number(process.env.BACKFILL_BUDGET || 350), details: 80 };
+  const budget = QUICK ? { left: 0, details: 15 } : { left: Number(process.env.BACKFILL_BUDGET || 350), details: 80 };
   await mkdir(MATCH_DIR, { recursive: true });
   const players = [];
   let failures = 0;
@@ -245,6 +281,10 @@ async function main() {
     const accounts = [];
     for (const acc of pl.accounts) {
       const region = acc.region ?? config.defaultRegion ?? 'euw1';
+      if (toUpdate && !toUpdate.has(acc.riotId.toLowerCase())) {
+        accounts.push({ ...prevAcc.get(acc.riotId.toLowerCase()) }); // sin cambios: se reutiliza tal cual
+        continue;
+      }
       try {
         accounts.push(await updateAccount(riot, acc, region, cache, dd, budget));
       } catch (err) {
@@ -303,7 +343,7 @@ async function main() {
   }
   await writeJson(LP_HIST, lpHist);
   // Borrar detalles que ya no hacen falta (solo si todas las cuentas se actualizaron bien)
-  if (!failures) {
+  if (!failures && !QUICK) {
     for (const f of await readdir(MATCH_DIR)) {
       if (f.endsWith('.json') && !keepDetails.has(f.slice(0, -5))) await unlink(path.join(MATCH_DIR, f));
     }

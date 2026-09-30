@@ -1051,8 +1051,33 @@ function wire() {
   setInterval(() => DATA && renderMeta(), 60_000);
 }
 
+// Recarga de datos: automática cada minuto y con el botón ↻ (mantiene lo que tengas desplegado)
+let refreshing = false;
+async function refreshData(manual = false) {
+  if (refreshing || document.hidden && !manual) return;
+  refreshing = true;
+  const btn = document.getElementById('refresh');
+  btn?.classList.add('spin');
+  try {
+    const res = await fetch(`data/data.json?t=${Date.now()}`);
+    if (res.ok) {
+      const fresh = await res.json();
+      if (!DATA || fresh.generatedAt !== DATA.generatedAt) {
+        DATA = fresh;
+        detailCache.clear();
+        render();
+      } else renderMeta();
+    }
+  } catch { /* sin conexión: se reintenta en el siguiente minuto */ }
+  setTimeout(() => btn?.classList.remove('spin'), 400);
+  refreshing = false;
+}
+
 async function init() {
   wire();
+  document.getElementById('refresh').addEventListener('click', () => refreshData(true));
+  setInterval(() => refreshData(false), 60_000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshData(false); });
   try {
     const res = await fetch(`data/data.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(res.status);

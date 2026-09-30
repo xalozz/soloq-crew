@@ -1,8 +1,11 @@
 name: Actualizar datos
 
-# GitHub se salta muchas ejecuciones de los cron frecuentes, así que en vez de depender de
-# un cron cada 10 min, cada ejecución se queda viva ~5h50m actualizando cada ~8 min.
-# El cron horario solo sirve para relanzarla (si ya hay una en marcha, la nueva espera en cola).
+# GitHub se salta muchas ejecuciones de los cron frecuentes, así que cada ejecución se queda viva
+# ~5h30m en un bucle propio. El cron horario solo sirve para relanzarla (si ya hay una en marcha,
+# la nueva espera en cola).
+#
+# Cada minuto: pasada rápida (1 petición por cuenta) que solo actualiza a quien ha jugado.
+# Cada ~15 min: pasada completa + descarga en segundo plano de partidas antiguas (BACKFILL_BUDGET).
 on:
   schedule:
     - cron: '17 * * * *'
@@ -29,23 +32,33 @@ jobs:
       - name: Actualizar en bucle
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
-          LOOP_SECONDS: 19800   # ~5h30m (margen para que la última vuelta termine antes del límite de 6 h)
-          SLEEP_SECONDS: 480    # 8 min entre actualizaciones
+          LOOP_SECONDS: 19800    # ~5h30m (margen para que la última vuelta termine antes del límite de 6 h)
+          CYCLE_SECONDS: 60      # una pasada rápida por minuto
+          FULL_EVERY: 15         # una pasada completa cada 15 ciclos
+          BACKFILL_BUDGET: 120   # partidas antiguas por pasada completa
         run: |
           git config user.name "soloq-bot"
           git config user.email "soloq-bot@users.noreply.github.com"
           end=$((SECONDS + LOOP_SECONDS))
+          i=0
           while [ $SECONDS -lt $end ]; do
+            t0=$SECONDS
             # Coger cambios de código o datos subidos mientras tanto
             git pull -q --rebase origin main || { git rebase --abort 2>/dev/null; git reset -q --hard origin/main; }
-            node scripts/update.mjs || echo "::warning::La actualización ha fallado; se reintenta en el siguiente ciclo"
+            if [ $((i % FULL_EVERY)) -eq 0 ]; then
+              node scripts/update.mjs || echo "::warning::La pasada completa ha fallado; se reintenta más tarde"
+            else
+              node scripts/update.mjs --quick || echo "::warning::La pasada rápida ha fallado"
+            fi
             git add data
             if ! git diff --cached --quiet; then
               git commit -q -m "Actualizar datos"
-              for i in 1 2 3; do
+              for n in 1 2 3; do
                 git pull -q --rebase origin main && git push -q origin HEAD:main && break
                 sleep 5
               done
             fi
-            sleep $SLEEP_SECONDS
+            i=$((i + 1))
+            left=$((CYCLE_SECONDS - (SECONDS - t0)))
+            [ $left -gt 0 ] && sleep $left
           done
