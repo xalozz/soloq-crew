@@ -360,60 +360,101 @@ function nextDivision(rank) {
   return t + 1 < 7 ? `${TIER_ES[TIERS[t + 1]]} IV` : 'Maestro';
 }
 
-function eloChart(hist) {
+// Serie de elo: tramo registrado (lpHist) + tramo reconstruido hacia atrás con el resultado de cada partida.
+function eloSeries(acc) {
+  const real = (acc.lpHist ?? []).map(([t, v]) => [t, v]);
+  const lp = acc.stats?.lp;
+  const W = lp?.win ?? 25, L = Math.abs(lp?.loss ?? -25);
+  const T0 = real.length ? real[0][0] : Date.now();
+  let sc = real.length ? real[0][1] : rankScore(acc.rank);
+  const est = [];
+  if (sc >= 0) {
+    const before = (acc.seq ?? []).filter((g) => g[0] < T0).sort((x, y) => y[0] - x[0]);
+    if (before.length) est.push([T0, sc]);
+    for (const [t, win, d] of before) {
+      est.push([t, sc]);
+      sc = Math.max(0, sc - (d ?? (win ? W : -L)));
+    }
+    if (before.length) est.push([before.at(-1)[0] - 30 * 60e3, sc]);
+    est.reverse();
+  }
+  return { est, real, W, L, measured: !!(lp?.winN || lp?.lossN) };
+}
+
+function eloChart(acc) {
   const box = h('div', { class: 'chart' });
-  if (!hist || hist.length < 2) {
-    box.append(h('p', { class: 'empty' }, 'La gráfica se dibuja con los cambios de LP registrados desde el 30 de septiembre. Aparecerá en cuanto haya al menos dos.'));
+  const ser = eloSeries(acc);
+  if (ser.est.length < 2 && ser.real.length < 2) {
+    box.append(h('p', { class: 'empty' }, 'Todavía no hay partidas suficientes para dibujar la evolución.'));
     return box;
   }
-  requestAnimationFrame(() => drawEloChart(box, hist));
+  requestAnimationFrame(() => drawEloChart(box, ser));
   return box;
 }
 
-function drawEloChart(box, hist) {
-  const W = Math.max(300, box.clientWidth), H = 220, L = 70, R = 12, T = 12, B = 26;
-  const t0 = hist[0][0], t1 = hist.at(-1)[0];
-  let lo = Math.min(...hist.map((x) => x[1])), hi = Math.max(...hist.map((x) => x[1]));
-  lo = Math.floor((lo - 10) / 100) * 100; hi = Math.ceil((hi + 10) / 100) * 100;
-  const x = (t) => L + ((t - t0) / Math.max(1, t1 - t0)) * (W - L - R);
-  const y = (s) => T + (1 - (s - lo) / Math.max(1, hi - lo)) * (H - T - B);
-  const grid = [];
-  const step = hi - lo > 800 ? 400 : 100;
-  for (let s = lo; s <= hi; s += step) {
-    grid.push(svg('line', { x1: L, x2: W - R, y1: y(s), y2: y(s), class: 'grid' }));
-    const lab = s >= 2800 ? `M ${s - 2800}` : `${TIER_ES[TIERS[Math.floor(s / 400)]].slice(0, 3)} ${DIVS[Math.floor((s % 400) / 100)]}`;
-    grid.push(svg('text', { x: L - 8, y: y(s) + 4, class: 'axis', 'text-anchor': 'end' }, lab));
+function drawEloChart(box, { est, real, W, L, measured }) {
+  const Wd = Math.max(300, box.clientWidth), H = 240, Lm = 64, R = 14, T = 14, B = 26;
+  // Un punto por partida (o por cambio de LP registrado), en orden: se lee como la curva de un torneo
+  const pts = [...est.map((p) => [p[0], p[1], true]), ...real.map((p) => [p[0], p[1], false])]
+    .sort((a, b) => a[0] - b[0])
+    .filter((p, i, arr) => i === 0 || p[1] !== arr[i - 1][1] || p[2] !== arr[i - 1][2]);
+  if (pts.length < 2) pts.push([Date.now(), pts[0][1], false]);
+  const n = pts.length;
+  let lo = Math.min(...pts.map((p) => p[1])), hi = Math.max(...pts.map((p) => p[1]));
+  lo = Math.max(0, Math.floor((lo - 15) / 100) * 100); hi = Math.ceil((hi + 15) / 100) * 100;
+  const x = (i) => Lm + (i / Math.max(1, n - 1)) * (Wd - Lm - R);
+  const y = (v) => T + (1 - (v - lo) / Math.max(1, hi - lo)) * (H - T - B);
+  const els = [];
+  const span = hi - lo;
+  const step = span > 2400 ? 800 : span > 700 ? 400 : 100;
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    els.push(svg('line', { x1: Lm, x2: Wd - R, y1: y(v), y2: y(v), class: 'grid' }));
+    const lab = v >= 2800 ? `M ${v - 2800}` : `${TIER_ES[TIERS[Math.floor(v / 400)]].slice(0, 3)} ${DIVS[Math.floor((v % 400) / 100)]}`;
+    els.push(svg('text', { x: Lm - 8, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, lab));
   }
-  const days = new Set();
-  for (const [t] of hist) {
-    const k = dayKey(t);
-    if (days.has(k)) continue;
-    days.add(k);
-    grid.push(svg('text', { x: x(t), y: H - 6, class: 'axis', 'text-anchor': 'middle' }, prettyDay(k)));
+  const nTicks = Math.max(2, Math.min(6, Math.floor((Wd - Lm) / 110)));
+  const seen = new Set();
+  for (let k = 0; k < nTicks; k++) {
+    const i = Math.round(((n - 1) * k) / (nTicks - 1));
+    const key = dayKey(pts[i][0]);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    els.push(svg('text', { x: x(i), y: H - 6, class: 'axis', 'text-anchor': k === 0 ? 'start' : k === nTicks - 1 ? 'end' : 'middle' }, prettyDay(key)));
   }
-  // Escalones: el LP se mantiene hasta el siguiente cambio
-  let d = `M${x(hist[0][0])},${y(hist[0][1])}`;
-  for (let i = 1; i < hist.length; i++) d += `H${x(hist[i][0])}V${y(hist[i][1])}`;
-  d += `H${x(Date.now())}`;
-  const line = svg('path', { d, class: 'eline' });
+  // Tramo estimado (discontinuo) y registrado (continuo); comparten el punto de unión
+  const lastEst = pts.map((p) => p[2]).lastIndexOf(true);
+  const line = (from, to, cls) => {
+    if (to - from < 1) return;
+    const d = pts.slice(from, to + 1).map((p, j) => `${j ? 'L' : 'M'}${x(from + j).toFixed(1)},${y(p[1]).toFixed(1)}`).join('');
+    els.push(svg('path', { d, class: cls }));
+  };
+  if (lastEst >= 0) line(0, Math.min(n - 1, lastEst + 1), 'eline est');
+  line(Math.max(0, lastEst + 1), n - 1, 'eline');
   const dot = svg('circle', { r: 5, class: 'edot', cx: -20, cy: -20 });
   const cross = svg('line', { class: 'ecross', y1: T, y2: H - B, x1: -20, x2: -20 });
-  const chart = svg('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': 'Evolución del elo' }, ...grid, cross, line, dot);
+  const chart = svg('svg', { viewBox: `0 0 ${Wd} ${H}`, width: Wd, height: H, role: 'img', 'aria-label': 'Evolución del elo' }, ...els, cross, dot);
   const tip = h('div', { class: 'etip', hidden: true });
   chart.addEventListener('pointermove', (e) => {
     const r = chart.getBoundingClientRect();
-    const px = ((e.clientX - r.left) / r.width) * W;
-    let best = hist[0];
-    for (const pt of hist) if (Math.abs(x(pt[0]) - px) < Math.abs(x(best[0]) - px)) best = pt;
-    dot.setAttribute('cx', x(best[0])); dot.setAttribute('cy', y(best[1]));
-    cross.setAttribute('x1', x(best[0])); cross.setAttribute('x2', x(best[0]));
+    const px = ((e.clientX - r.left) / r.width) * Wd;
+    const i = Math.max(0, Math.min(n - 1, Math.round(((px - Lm) / (Wd - Lm - R)) * (n - 1))));
+    const p = pts[i];
+    dot.setAttribute('cx', x(i)); dot.setAttribute('cy', y(p[1]));
+    cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i));
     tip.hidden = false;
-    tip.replaceChildren(h('b', {}, new Date(best[0]).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })), h('span', {}, scoreLabel(best[1])));
-    tip.style.left = `${(x(best[0]) / W) * 100}%`;
-    tip.style.top = `${(y(best[1]) / H) * 100}%`;
+    tip.replaceChildren(
+      h('b', {}, new Date(p[0]).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })),
+      h('span', {}, `${p[2] ? '≈ ' : ''}${scoreLabel(p[1])}`),
+      p[2] ? h('small', {}, 'estimado') : null);
+    tip.style.left = `${(x(i) / Wd) * 100}%`;
+    tip.style.top = `${(y(p[1]) / H) * 100}%`;
   });
   chart.addEventListener('pointerleave', () => { tip.hidden = true; dot.setAttribute('cx', -20); cross.setAttribute('x1', -20); cross.setAttribute('x2', -20); });
-  box.replaceChildren(chart, tip);
+  const legend = h('div', { class: 'elegend' },
+    lastEst >= 0 ? h('span', {}, h('i', { class: 'lg est' }), `Estimado con sus victorias y derrotas (≈ +${W} / −${L} LP por partida${measured ? ', medidos' : ''})`) : null,
+    real.length ? h('span', {}, h('i', { class: 'lg' }), 'LP registrado') : null,
+    h('span', { class: 'lg-note' }, `${n} puntos · uno por partida`));
+  box.replaceChildren(chart, tip, legend);
 }
 
 function tabStats(acc) {
@@ -448,7 +489,7 @@ function tabStats(acc) {
       'Duración media ', h('b', {}, `${fmt(s.avgDurationMin)} min`), ' · Más larga ', h('b', {}, `${fmt(s.maxDurationMin ?? null)} min`),
       ' · Pico ', h('b', { class: `t-${tierKey(r)}` }, peak >= 0 ? scoreLabel(peak) : '–')) : null,
     h('h4', { class: 'sx-h' }, 'Evolución de elo'),
-    eloChart(acc.lpHist));
+    eloChart(acc));
 }
 
 function tabCampeones(acc) {

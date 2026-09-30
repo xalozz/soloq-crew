@@ -27,8 +27,9 @@ const LP_HIST_PUBLISHED = 600;
 
 const QUEUE_SOLO = 420;
 const HISTORY_CAP = 500;
-const MATCH_COUNT = Math.min(100, Number(process.env.MATCH_COUNT || 40));
+const MATCH_COUNT = Math.min(100, Number(process.env.MATCH_COUNT || 100));
 const RECENT_PUBLISHED = 20;
+const SEQ_PUBLISHED = 100; // partidas para reconstruir la curva de elo
 
 const readJson = async (file, fallback) => {
   try { return JSON.parse(await readFile(file, 'utf8')); } catch { return fallback; }
@@ -225,6 +226,11 @@ async function main() {
       if (a._history) {
         const lpMap = assignLp(lpHist[key], a._history);
         a.recent = a._history.slice(0, RECENT_PUBLISHED).map((g) => ({ ...g, lp: lpMap.get(g.id) ?? null }));
+        // [fin, victoria, LP exacto si se conoce] para reconstruir la curva de elo hacia atrás
+        a.seq = a._history.slice(0, SEQ_PUBLISHED).map((g) => {
+          const lp = lpMap.get(g.id);
+          return [g.t, g.win ? 1 : 0, lp && lp.n === 1 ? lp.d : null];
+        });
         if (a.stats) a.stats.lp = lpAverages(a._history, lpMap);
       }
       delete a._history;

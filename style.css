@@ -298,6 +298,12 @@ button { font: inherit; color: inherit; }
 .chart .grid { stroke: var(--line); stroke-width: 1; }
 .chart .axis { fill: var(--muted); font-size: 11px; font-family: inherit; }
 .chart .eline { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.chart .eline.est { stroke: #a9c93a; stroke-dasharray: 5 4; opacity: .8; }
+.elegend { display: flex; gap: 16px; flex-wrap: wrap; padding: 6px 10px 4px; font-size: 11px; color: var(--muted); }
+.elegend span { display: inline-flex; align-items: center; gap: 6px; }
+.lg { display: inline-block; width: 18px; height: 0; border-top: 2px solid var(--accent); }
+.lg.est { border-top: 2px dashed #a9c93a; }
+.etip small { color: var(--muted); }
 .chart .edot { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
 .chart .ecross { stroke: #5a5a63; stroke-width: 1; stroke-dasharray: 3 3; }
 .etip {
