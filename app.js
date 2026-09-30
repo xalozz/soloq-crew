@@ -625,7 +625,7 @@ function rolesCard(players) {
           }),
           h('td', { class: 'rt-total' }, total));
       })))),
-    h('p', { class: 'muted small center' }, 'Sobre las últimas partidas de SoloQ analizadas de la cuenta principal. Resaltado: su rol principal.'));
+    h('p', { class: 'muted small center' }, 'Partidas de SoloQ de esta temporada de la cuenta principal. Resaltado: su rol principal.'));
 }
 
 // ---------------------------------------------------------------- días

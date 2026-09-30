@@ -26,7 +26,7 @@ const LP_HIST_CAP = 3000;
 const LP_HIST_PUBLISHED = 600;
 
 const QUEUE_SOLO = 420;
-const HISTORY_CAP = 500;
+const HISTORY_CAP = 3000;
 const MATCH_COUNT = Math.min(100, Number(process.env.MATCH_COUNT || 100));
 const RECENT_PUBLISHED = 20;
 const SEQ_PUBLISHED = 100; // partidas para reconstruir la curva de elo
@@ -53,7 +53,7 @@ async function ddragonVersion() {
   }
 }
 
-async function updateAccount(riot, acc, region, cache, dd) {
+async function updateAccount(riot, acc, region, cache, dd, budget) {
   const [gameName, tagLine] = splitRiotId(acc.riotId);
   const cacheKey = acc.riotId.toLowerCase();
 
@@ -74,18 +74,43 @@ async function updateAccount(riot, acc, region, cache, dd) {
   const stored = await readJson(hf, []);
   const history = Array.isArray(stored) ? stored : stored.games ?? [];
   const skipped = new Set(Array.isArray(stored) ? [] : stored.skipped ?? []);
+  let seasonComplete = !Array.isArray(stored) && stored.seasonComplete === true;
+  const seasonGames = solo ? solo.wins + solo.losses : 0;
   // Partidas nuevas o guardadas con un formato antiguo (les faltan objetos, runas, rival…)
   const byId = new Map(history.map((g) => [g.id, g]));
+  const needs = (id) => !skipped.has(id) && (byId.get(id)?.v ?? 0) < MATCH_RECORD_VERSION;
   const ids = await riot.matchIds(region, puuid, { queue: QUEUE_SOLO, count: MATCH_COUNT });
-  const fresh = ids.filter((id) => !skipped.has(id) && (byId.get(id)?.v ?? 0) < MATCH_RECORD_VERSION);
-  console.log(`  ${acc.riotId}: ${fresh.length} partidas por descargar`);
-  for (const id of fresh) {
+  const recent = ids.filter(needs);
+
+  // Relleno de la temporada completa (poco a poco, con un presupuesto por ejecución).
+  // Riot cuenta V+D de la temporada; bajamos IDs hasta cubrir ese número (+ margen por remakes).
+  let older = [];
+  if (!seasonComplete && seasonGames > ids.length && budget.left > 0) {
+    const all = [...ids];
+    const want = seasonGames + 20;
+    for (let start = ids.length; start < want; start += 100) {
+      const page = await riot.matchIds(region, puuid, { queue: QUEUE_SOLO, start, count: Math.min(100, want - start) });
+      all.push(...page);
+      if (page.length < Math.min(100, want - start)) break;
+    }
+    older = all.slice(ids.length).filter(needs);
+    if (!older.length) seasonComplete = true;
+  } else if (seasonGames <= ids.length) seasonComplete = true;
+  const olderNow = older.slice(0, Math.max(0, budget.left));
+  budget.left -= olderNow.length;
+  if (older.length && older.length === olderNow.length) seasonComplete = true;
+  console.log(`  ${acc.riotId}: ${recent.length} recientes, ${olderNow.length}/${older.length} de temporada por descargar`);
+
+  for (const id of [...recent, ...olderNow]) {
+    const isRecent = !olderNow.includes(id);
     try {
       const match = await riot.match(region, id);
       let timeline = null;
-      try { timeline = await riot.timeline(region, id); } catch (err) {
-        if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
-        console.warn(`  ! timeline ${id}: ${err.message}`);
+      if (isRecent) {
+        try { timeline = await riot.timeline(region, id); } catch (err) {
+          if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
+          console.warn(`  ! timeline ${id}: ${err.message}`);
+        }
       }
       const rec = compactMatch(match, puuid, dd, timeline);
       if (rec) {
@@ -99,7 +124,7 @@ async function updateAccount(riot, acc, region, cache, dd) {
   }
   history.sort((a, b) => b.t - a.t);
   history.length = Math.min(history.length, HISTORY_CAP);
-  await writeJson(hf, { games: history, skipped: [...skipped].slice(-200) });
+  await writeJson(hf, { games: history, skipped: [...skipped].slice(-2000), seasonComplete });
 
   const games = solo ? solo.wins + solo.losses : 0;
   return {
@@ -177,6 +202,8 @@ async function main() {
 
   const ddVersion = (await ddragonVersion()) ?? previous?.ddragonVersion ?? null;
   const dd = await loadDataDragon(ddVersion);
+  // Máximo de partidas antiguas a descargar por ejecución (el resto, en las siguientes)
+  const budget = { left: Number(process.env.BACKFILL_BUDGET || 350) };
   const players = [];
   let failures = 0;
   for (const pl of config.players) {
@@ -185,7 +212,7 @@ async function main() {
     for (const acc of pl.accounts) {
       const region = acc.region ?? config.defaultRegion ?? 'euw1';
       try {
-        accounts.push(await updateAccount(riot, acc, region, cache, dd));
+        accounts.push(await updateAccount(riot, acc, region, cache, dd, budget));
       } catch (err) {
         // Clave caducada: abortar sin tocar los datos publicados.
         if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
