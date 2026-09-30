@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T15:40:46.998Z",
+  "generatedAt": "2026-09-30T15:54:04.474Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -10650,7 +10650,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 1931,
+      "score": 1949,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -10663,29 +10663,29 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "I",
-            "lp": 31,
-            "wins": 78,
+            "lp": 49,
+            "wins": 79,
             "losses": 87,
-            "winrate": 47.3,
+            "winrate": 47.6,
             "hotStreak": true
           },
           "stats": {
-            "games": 165,
-            "wins": 77,
+            "games": 166,
+            "wins": 78,
             "losses": 88,
-            "winrate": 46.7,
+            "winrate": 47,
             "avgK": 7.2,
             "avgD": 6.2,
             "avgA": 7.5,
             "kda": 2.37,
             "csPerMin": 8,
-            "visPerMin": 0.68,
+            "visPerMin": 0.67,
             "dmgShare": 23.1,
             "avgDurationMin": 30.6,
             "streak": {
               "current": {
                 "type": "W",
-                "count": 4
+                "count": 5
               },
               "bestWin": 6,
               "worstLoss": 5
@@ -10695,17 +10695,16 @@
               "W",
               "W",
               "W",
+              "W",
               "L",
               "L",
               "W",
               "W",
-              "L",
-              "W"
+              "L"
             ],
             "trend": [
               0,
               0,
-              0,
               1,
               0,
               1,
@@ -10719,6 +10718,7 @@
               1,
               0,
               0,
+              1,
               1,
               1,
               1,
@@ -10733,9 +10733,9 @@
             },
             "last20": {
               "games": 20,
-              "wins": 11,
-              "losses": 9,
-              "winrate": 55
+              "wins": 12,
+              "losses": 8,
+              "winrate": 60
             },
             "topChamps": [
               {
@@ -10767,11 +10767,11 @@
                 "kda": 2.89
               },
               {
-                "key": "Kaisa",
+                "key": "Ezreal",
                 "games": 12,
-                "wins": 3,
-                "winrate": 25,
-                "kda": 2.32
+                "wins": 7,
+                "winrate": 58.3,
+                "kda": 2.31
               }
             ],
             "bestChamp": {
@@ -10827,16 +10827,16 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1790781288367,
+            "lastGameAt": 1790783566583,
             "totals": {
-              "k": 1192,
-              "d": 1023,
-              "a": 1230
+              "k": 1200,
+              "d": 1028,
+              "a": 1237
             },
-            "dmgPerMin": 901,
-            "avgVision": 20.7,
+            "dmgPerMin": 903,
+            "avgVision": 20.6,
             "pentas": 1,
-            "firstBloods": 24,
+            "firstBloods": 25,
             "maxKills": 19,
             "maxDurationMin": 52.7,
             "avgKp": 46,
@@ -10874,6 +10874,14 @@
                 "csPerMin": 8.7
               },
               {
+                "key": "Ezreal",
+                "games": 12,
+                "wins": 7,
+                "winrate": 58.3,
+                "kda": 2.31,
+                "csPerMin": 7.5
+              },
+              {
                 "key": "Kaisa",
                 "games": 12,
                 "wins": 3,
@@ -10888,14 +10896,6 @@
                 "winrate": 33.3,
                 "kda": 2.42,
                 "csPerMin": 8.2
-              },
-              {
-                "key": "Ezreal",
-                "games": 11,
-                "wins": 6,
-                "winrate": 54.5,
-                "kda": 2.25,
-                "csPerMin": 7.5
               },
               {
                 "key": "Vayne",
@@ -11005,9 +11005,9 @@
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 151,
-                "wins": 72,
-                "winrate": 47.7,
+                "games": 152,
+                "wins": 73,
+                "winrate": 48,
                 "kda": 2.4
               },
               {
@@ -11040,9 +11040,9 @@
               }
             ],
             "gold": {
-              "games": 99,
-              "avgGd15": 215,
-              "avgTgd15": 208,
+              "games": 100,
+              "avgGd15": 220,
+              "avgTgd15": 224,
               "throws": 16,
               "comebacks": 6,
               "biggestThrow": {
@@ -11187,11 +11187,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 151,
-                "wins": 72,
-                "winrate": 47.7,
+                "games": 152,
+                "wins": 73,
+                "winrate": 48,
                 "kda": 2.4,
-                "gd15": 336,
+                "gd15": 340,
                 "champs": [
                   {
                     "key": "Jinx",
@@ -11222,18 +11222,18 @@
                     "kda": 2.89
                   },
                   {
+                    "key": "Ezreal",
+                    "games": 12,
+                    "wins": 7,
+                    "winrate": 58.3,
+                    "kda": 2.31
+                  },
+                  {
                     "key": "Kaisa",
                     "games": 12,
                     "wins": 3,
                     "winrate": 25,
                     "kda": 2.32
-                  },
-                  {
-                    "key": "Tristana",
-                    "games": 12,
-                    "wins": 4,
-                    "winrate": 33.3,
-                    "kda": 2.42
                   }
                 ]
               },
@@ -11283,8 +11283,8 @@
               "avgKda": 3.62,
               "pentas": 1,
               "quadras": 2,
-              "quadraGames": 165,
-              "firstBloods": 24
+              "quadraGames": 166,
+              "firstBloods": 25
             },
             "gameRecords": {
               "kills": {
@@ -11421,7 +11421,7 @@
             "lp": {
               "win": 18,
               "loss": null,
-              "winN": 2,
+              "winN": 3,
               "lossN": 0
             }
           },
@@ -11431,7 +11431,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T15:37:39.467Z",
+          "updatedAt": "2026-09-30T15:54:04.470Z",
           "lpHist": [
             [
               1790720384833,
@@ -11448,9 +11448,76 @@
             [
               1790781337316,
               1931
+            ],
+            [
+              1790783638983,
+              1949
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_7999636785",
+              "t": 1790783566583,
+              "dur": 1699,
+              "win": true,
+              "champ": "Ezreal",
+              "role": "BOTTOM",
+              "lvl": 15,
+              "k": 8,
+              "d": 5,
+              "a": 7,
+              "kp": 35,
+              "cs": 204,
+              "vis": 9,
+              "dmg": 37257,
+              "teamDmg": 164121,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8810,
+              "goldEarned": 12199,
+              "fb": true,
+              "items": [
+                1086,
+                3078,
+                3042,
+                6694,
+                1037,
+                2055,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerBarrier"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Caitlyn",
+                "spells": [
+                  "SummonerBarrier",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 7524,
+                "maxLeadMin": 29,
+                "maxDef": -1040,
+                "tgd15": 1805,
+                "gd15": 683
+              },
+              "lp": {
+                "d": 18,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_7999598966",
@@ -12596,69 +12663,14 @@
                 "gd15": 809
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7990743292",
-              "t": 1790005905444,
-              "dur": 1894,
-              "win": false,
-              "champ": "Xayah",
-              "role": "BOTTOM",
-              "lvl": 15,
-              "k": 6,
-              "d": 11,
-              "a": 2,
-              "kp": 27,
-              "cs": 244,
-              "vis": 16,
-              "dmg": 33074,
-              "teamDmg": 141476,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6098,
-              "goldEarned": 13476,
-              "fb": false,
-              "items": [
-                1086,
-                3508,
-                6675,
-                3031,
-                6670,
-                3035,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBarrier"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Lucian",
-                "spells": [
-                  "SummonerBarrier",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 4342,
-                "maxLeadMin": 19,
-                "maxDef": -10440,
-                "tgd15": 1964,
-                "gd15": 336
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790783566583,
+              1,
+              18
+            ],
             [
               1790781288367,
               1,
@@ -13152,11 +13164,6 @@
             [
               1786368077261,
               1,
-              null
-            ],
-            [
-              1786364695075,
-              0,
               null
             ]
           ]
