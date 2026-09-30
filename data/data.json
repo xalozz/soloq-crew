@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T12:54:41.957Z",
+  "generatedAt": "2026-09-30T13:42:24.608Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -614,6 +614,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Chogath",
+                "wins": 172,
+                "games": 314
+              },
+              "mainChar": {
+                "champ": "Chogath",
+                "winrate": 54.8,
+                "games": 314
+              },
+              "autofill": {
+                "lane": "SOLO",
+                "games": 40,
+                "wins": 21,
+                "winrate": 52.5
+              },
+              "champPool": 9,
+              "kdaStreak": 3,
+              "avgKda": 3.03,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 97,
+              "firstBloods": 26
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7917416379",
+                "t": 1783960389258,
+                "dur": 1891,
+                "champ": "Chogath",
+                "role": "JUNGLE",
+                "k": 20,
+                "d": 2,
+                "a": 12,
+                "win": true,
+                "kda": 16,
+                "val": 20
+              },
+              "assists": {
+                "id": "EUW1_7906217304",
+                "t": 1782992942302,
+                "dur": 2077,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 16,
+                "d": 9,
+                "a": 19,
+                "win": true,
+                "kda": 3.89,
+                "val": 19
+              },
+              "damage": {
+                "id": "EUW1_7909275700",
+                "t": 1783253503853,
+                "dur": 3092,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 15,
+                "d": 8,
+                "a": 9,
+                "win": true,
+                "kda": 3,
+                "val": 76936
+              },
+              "vision": {
+                "id": "EUW1_7905935929",
+                "t": 1782945423621,
+                "dur": 1775,
+                "champ": "Nautilus",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 8,
+                "a": 15,
+                "win": true,
+                "kda": 2.13,
+                "val": 94
+              },
+              "longestWin": {
+                "id": "EUW1_7909275700",
+                "t": 1783253503853,
+                "dur": 3092,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 15,
+                "d": 8,
+                "a": 9,
+                "win": true,
+                "kda": 3,
+                "val": 3092
+              },
+              "kda": {
+                "id": "EUW1_7943426184",
+                "t": 1786132144789,
+                "dur": 1315,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 10,
+                "d": 1,
+                "a": 7,
+                "win": true,
+                "kda": 17,
+                "val": 17
+              },
+              "kp": {
+                "id": "EUW1_7917416379",
+                "t": 1783960389258,
+                "dur": 1891,
+                "champ": "Chogath",
+                "role": "JUNGLE",
+                "k": 20,
+                "d": 2,
+                "a": 12,
+                "win": true,
+                "kda": 16,
+                "val": 76
+              },
+              "towers": {
+                "id": "EUW1_7945187829",
+                "t": 1786284248361,
+                "dur": 1764,
+                "champ": "Chogath",
+                "role": "TOP",
+                "k": 12,
+                "d": 2,
+                "a": 3,
+                "win": true,
+                "kda": 7.5,
+                "val": 18700
+              },
+              "gold": {
+                "id": "EUW1_7945057655",
+                "t": 1786277292893,
+                "dur": 2838,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 8,
+                "d": 9,
+                "a": 8,
+                "win": false,
+                "kda": 1.78,
+                "val": 19155
+              },
+              "csMin": {
+                "id": "EUW1_7916723581",
+                "t": 1783887785909,
+                "dur": 2108,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 4,
+                "d": 5,
+                "a": 1,
+                "win": true,
+                "kda": 1,
+                "val": 9.9
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -627,7 +784,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:46.766Z",
+          "updatedAt": "2026-09-30T13:37:56.890Z",
           "lpHist": [
             [
               1790720384833,
@@ -640,7 +797,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7988093560",
               "t": 1789771199194,
               "dur": 1849,
@@ -657,6 +814,10 @@
               "dmg": 21416,
               "teamDmg": 109048,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2469,
+              "goldEarned": 11302,
               "fb": false,
               "items": [
                 3152,
@@ -696,7 +857,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7985009216",
               "t": 1789503855412,
               "dur": 1865,
@@ -713,6 +874,10 @@
               "dmg": 15495,
               "teamDmg": 100836,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 888,
+              "goldEarned": 9672,
               "fb": false,
               "items": [
                 3152,
@@ -752,7 +917,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7984966893",
               "t": 1789501627339,
               "dur": 1385,
@@ -769,6 +934,10 @@
               "dmg": 18643,
               "teamDmg": 75554,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6287,
+              "goldEarned": 10980,
               "fb": false,
               "items": [
                 3152,
@@ -808,7 +977,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7984217075",
               "t": 1789427223055,
               "dur": 2143,
@@ -825,6 +994,10 @@
               "dmg": 33941,
               "teamDmg": 145582,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 17243,
+              "goldEarned": 17641,
               "fb": false,
               "items": [
                 3152,
@@ -864,7 +1037,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7983228828",
               "t": 1789341153166,
               "dur": 1812,
@@ -881,6 +1054,10 @@
               "dmg": 24342,
               "teamDmg": 147054,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4863,
+              "goldEarned": 10589,
               "fb": false,
               "items": [
                 2504,
@@ -920,7 +1097,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7979066106",
               "t": 1789034410877,
               "dur": 922,
@@ -937,6 +1114,10 @@
               "dmg": 3482,
               "teamDmg": 29289,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 4721,
               "fb": false,
               "items": [
                 3152,
@@ -976,7 +1157,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7979033426",
               "t": 1789033105152,
               "dur": 1448,
@@ -993,6 +1174,10 @@
               "dmg": 20365,
               "teamDmg": 105111,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 11189,
+              "goldEarned": 11413,
               "fb": false,
               "items": [
                 0,
@@ -1032,7 +1217,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7979045646",
               "t": 1789031384832,
               "dur": 1649,
@@ -1049,6 +1234,10 @@
               "dmg": 14387,
               "teamDmg": 83000,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8829,
+              "goldEarned": 11807,
               "fb": true,
               "items": [
                 3152,
@@ -1088,7 +1277,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7975986215",
               "t": 1788776824573,
               "dur": 920,
@@ -1105,6 +1294,10 @@
               "dmg": 9377,
               "teamDmg": 40761,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5548,
+              "goldEarned": 7438,
               "fb": false,
               "items": [
                 3152,
@@ -1144,7 +1337,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7975976646",
               "t": 1788775435550,
               "dur": 1972,
@@ -1161,6 +1354,10 @@
               "dmg": 29364,
               "teamDmg": 155578,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5299,
+              "goldEarned": 13174,
               "fb": false,
               "items": [
                 3152,
@@ -1200,7 +1397,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7974900125",
               "t": 1788695010291,
               "dur": 1860,
@@ -1217,6 +1414,10 @@
               "dmg": 24816,
               "teamDmg": 142130,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6130,
+              "goldEarned": 14019,
               "fb": false,
               "items": [
                 3152,
@@ -1256,7 +1457,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7974864321",
               "t": 1788692610768,
               "dur": 1558,
@@ -1273,6 +1474,10 @@
               "dmg": 13970,
               "teamDmg": 92479,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10071,
+              "goldEarned": 11729,
               "fb": false,
               "items": [
                 3152,
@@ -1312,7 +1517,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7973697966",
               "t": 1788602236108,
               "dur": 1986,
@@ -1329,6 +1534,10 @@
               "dmg": 25342,
               "teamDmg": 151388,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7667,
+              "goldEarned": 12397,
               "fb": false,
               "items": [
                 3152,
@@ -1368,7 +1577,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7966285005",
               "t": 1788022407371,
               "dur": 1321,
@@ -1385,6 +1594,10 @@
               "dmg": 12648,
               "teamDmg": 76541,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 16980,
+              "goldEarned": 10711,
               "fb": false,
               "items": [
                 3152,
@@ -1424,7 +1637,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7966251923",
               "t": 1788020626515,
               "dur": 1425,
@@ -1441,6 +1654,10 @@
               "dmg": 14563,
               "teamDmg": 80542,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4519,
+              "goldEarned": 9765,
               "fb": false,
               "items": [
                 3084,
@@ -1480,7 +1697,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7957343149",
               "t": 1787320220769,
               "dur": 2569,
@@ -1497,6 +1714,10 @@
               "dmg": 34470,
               "teamDmg": 188833,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 573,
+              "goldEarned": 17181,
               "fb": true,
               "items": [
                 3152,
@@ -1536,7 +1757,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7957315487",
               "t": 1787316781494,
               "dur": 2029,
@@ -1553,6 +1774,10 @@
               "dmg": 22731,
               "teamDmg": 137943,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6913,
+              "goldEarned": 12602,
               "fb": false,
               "items": [
                 3143,
@@ -1592,7 +1817,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7957282079",
               "t": 1787313899756,
               "dur": 911,
@@ -1609,6 +1834,10 @@
               "dmg": 11874,
               "teamDmg": 32379,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 5610,
               "fb": false,
               "items": [
                 3084,
@@ -1648,7 +1877,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7957261666",
               "t": 1787311934401,
               "dur": 1448,
@@ -1665,6 +1894,10 @@
               "dmg": 9245,
               "teamDmg": 59407,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8915,
+              "goldEarned": 10394,
               "fb": false,
               "items": [
                 3152,
@@ -1704,7 +1937,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7957226841",
               "t": 1787307998359,
               "dur": 923,
@@ -1721,6 +1954,10 @@
               "dmg": 5014,
               "teamDmg": 43001,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4558,
+              "goldEarned": 5410,
               "fb": false,
               "items": [
                 3084,
@@ -2734,6 +2971,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Alistar",
+                "wins": 58,
+                "games": 108
+              },
+              "mainChar": {
+                "champ": "Alistar",
+                "winrate": 53.7,
+                "games": 108
+              },
+              "autofill": {
+                "lane": "UTILITY",
+                "games": 23,
+                "wins": 8,
+                "winrate": 34.8
+              },
+              "champPool": 13,
+              "kdaStreak": 2,
+              "avgKda": 4.41,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 98,
+              "firstBloods": 9
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7930402612",
+                "t": 1785078278446,
+                "dur": 1963,
+                "champ": "Pyke",
+                "role": "UTILITY",
+                "k": 11,
+                "d": 5,
+                "a": 6,
+                "win": true,
+                "kda": 3.4,
+                "val": 11
+              },
+              "assists": {
+                "id": "EUW1_7758974526",
+                "t": 1772389749941,
+                "dur": 2656,
+                "champ": "Braum",
+                "role": "UTILITY",
+                "k": 4,
+                "d": 9,
+                "a": 43,
+                "win": true,
+                "kda": 5.22,
+                "val": 43
+              },
+              "damage": {
+                "id": "EUW1_7916388591",
+                "t": 1783872010211,
+                "dur": 2107,
+                "champ": "Ornn",
+                "role": "TOP",
+                "k": 4,
+                "d": 1,
+                "a": 7,
+                "win": true,
+                "kda": 11,
+                "val": 37475
+              },
+              "vision": {
+                "id": "EUW1_7916959901",
+                "t": 1783900613683,
+                "dur": 2720,
+                "champ": "Alistar",
+                "role": "UTILITY",
+                "k": 0,
+                "d": 13,
+                "a": 23,
+                "win": false,
+                "kda": 1.77,
+                "val": 162
+              },
+              "longestWin": {
+                "id": "EUW1_7705896589",
+                "t": 1769629217307,
+                "dur": 2868,
+                "champ": "Bard",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 9,
+                "a": 26,
+                "win": true,
+                "kda": 3.11,
+                "val": 2868
+              },
+              "kda": {
+                "id": "EUW1_7842308131",
+                "t": 1777912085819,
+                "dur": 1681,
+                "champ": "Alistar",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 1,
+                "a": 26,
+                "win": true,
+                "kda": 28,
+                "val": 28
+              },
+              "kp": {
+                "id": "EUW1_7760620444",
+                "t": 1772479934840,
+                "dur": 2186,
+                "champ": "Alistar",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 7,
+                "a": 18,
+                "win": false,
+                "kda": 2.71,
+                "val": 86
+              },
+              "towers": {
+                "id": "EUW1_7948635594",
+                "t": 1786565955863,
+                "dur": 2173,
+                "champ": "Ornn",
+                "role": "TOP",
+                "k": 3,
+                "d": 4,
+                "a": 8,
+                "win": false,
+                "kda": 2.75,
+                "val": 10820
+              },
+              "gold": {
+                "id": "EUW1_7948635594",
+                "t": 1786565955863,
+                "dur": 2173,
+                "champ": "Ornn",
+                "role": "TOP",
+                "k": 3,
+                "d": 4,
+                "a": 8,
+                "win": false,
+                "kda": 2.75,
+                "val": 14463
+              },
+              "csMin": {
+                "id": "EUW1_7818408458",
+                "t": 1776011253467,
+                "dur": 1717,
+                "champ": "Trundle",
+                "role": "TOP",
+                "k": 2,
+                "d": 2,
+                "a": 7,
+                "win": true,
+                "kda": 4.5,
+                "val": 9.5
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -2747,7 +3141,7 @@
             "dpm": "https://dpm.lol/xPATQ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPATQ-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:50.547Z",
+          "updatedAt": "2026-09-30T13:40:08.122Z",
           "lpHist": [
             [
               1790720384833,
@@ -2760,7 +3154,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7953594298",
               "t": 1786991573770,
               "dur": 1769,
@@ -2777,6 +3171,10 @@
               "dmg": 7061,
               "teamDmg": 104620,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 683,
+              "goldEarned": 9994,
               "fb": false,
               "items": [
                 3869,
@@ -2816,7 +3214,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952639516",
               "t": 1786906808653,
               "dur": 1691,
@@ -2833,6 +3231,10 @@
               "dmg": 4914,
               "teamDmg": 89060,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 72,
+              "goldEarned": 7340,
               "fb": false,
               "items": [
                 3876,
@@ -2872,7 +3274,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952584101",
               "t": 1786904731315,
               "dur": 1621,
@@ -2889,6 +3291,10 @@
               "dmg": 13364,
               "teamDmg": 79754,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10275,
+              "goldEarned": 11343,
               "fb": false,
               "items": [
                 6665,
@@ -2928,7 +3334,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952444782",
               "t": 1786898079218,
               "dur": 1770,
@@ -2945,6 +3351,10 @@
               "dmg": 6274,
               "teamDmg": 123342,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2160,
+              "goldEarned": 8959,
               "fb": false,
               "items": [
                 3869,
@@ -2984,7 +3394,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952398792",
               "t": 1786895695810,
               "dur": 1564,
@@ -3001,6 +3411,10 @@
               "dmg": 6458,
               "teamDmg": 107831,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 128,
+              "goldEarned": 7667,
               "fb": false,
               "items": [
                 3876,
@@ -3040,7 +3454,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952350584",
               "t": 1786893840105,
               "dur": 2190,
@@ -3057,6 +3471,10 @@
               "dmg": 9224,
               "teamDmg": 157186,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 183,
+              "goldEarned": 10183,
               "fb": false,
               "items": [
                 3869,
@@ -3096,7 +3514,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952305191",
               "t": 1786891307344,
               "dur": 1425,
@@ -3113,6 +3531,10 @@
               "dmg": 9134,
               "teamDmg": 50579,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1010,
+              "goldEarned": 7766,
               "fb": false,
               "items": [
                 3068,
@@ -3152,7 +3574,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952146448",
               "t": 1786882888713,
               "dur": 1573,
@@ -3169,6 +3591,10 @@
               "dmg": 5734,
               "teamDmg": 90351,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 524,
+              "goldEarned": 7622,
               "fb": false,
               "items": [
                 3876,
@@ -3208,7 +3634,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7952123753",
               "t": 1786880888324,
               "dur": 1909,
@@ -3225,6 +3651,10 @@
               "dmg": 6446,
               "teamDmg": 131667,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 8344,
               "fb": false,
               "items": [
                 3869,
@@ -3264,7 +3694,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7951891811",
               "t": 1786841644065,
               "dur": 1522,
@@ -3281,6 +3711,10 @@
               "dmg": 6124,
               "teamDmg": 115622,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 914,
+              "goldEarned": 6786,
               "fb": false,
               "items": [
                 3876,
@@ -3320,7 +3754,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7951875495",
               "t": 1786839632446,
               "dur": 1824,
@@ -3337,6 +3771,10 @@
               "dmg": 8640,
               "teamDmg": 120202,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3154,
+              "goldEarned": 9779,
               "fb": false,
               "items": [
                 3869,
@@ -3376,7 +3814,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7951843476",
               "t": 1786837481378,
               "dur": 1894,
@@ -3393,6 +3831,10 @@
               "dmg": 5909,
               "teamDmg": 143904,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1983,
+              "goldEarned": 10098,
               "fb": false,
               "items": [
                 3869,
@@ -3432,7 +3874,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7951397089",
               "t": 1786814992020,
               "dur": 1260,
@@ -3449,6 +3891,10 @@
               "dmg": 7231,
               "teamDmg": 66179,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1456,
+              "goldEarned": 6290,
               "fb": false,
               "items": [
                 3869,
@@ -3488,7 +3934,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7950865288",
               "t": 1786756987113,
               "dur": 1734,
@@ -3505,6 +3951,10 @@
               "dmg": 9785,
               "teamDmg": 136204,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2074,
+              "goldEarned": 9235,
               "fb": false,
               "items": [
                 3869,
@@ -3544,7 +3994,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7950847202",
               "t": 1786754864351,
               "dur": 1935,
@@ -3561,6 +4011,10 @@
               "dmg": 7796,
               "teamDmg": 119476,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 83,
+              "goldEarned": 8818,
               "fb": true,
               "items": [
                 3869,
@@ -3600,7 +4054,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7950824105",
               "t": 1786752483576,
               "dur": 1509,
@@ -3617,6 +4071,10 @@
               "dmg": 10951,
               "teamDmg": 65436,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4375,
+              "goldEarned": 7998,
               "fb": false,
               "items": [
                 3068,
@@ -3656,7 +4114,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7950783239",
               "t": 1786750609302,
               "dur": 2261,
@@ -3673,6 +4131,10 @@
               "dmg": 10319,
               "teamDmg": 132292,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2837,
+              "goldEarned": 11408,
               "fb": false,
               "items": [
                 3869,
@@ -3712,7 +4174,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7948695050",
               "t": 1786568133307,
               "dur": 1867,
@@ -3729,6 +4191,10 @@
               "dmg": 8507,
               "teamDmg": 133029,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 8690,
               "fb": false,
               "items": [
                 3869,
@@ -3768,7 +4234,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7948635594",
               "t": 1786565955863,
               "dur": 2173,
@@ -3785,6 +4251,10 @@
               "dmg": 20621,
               "teamDmg": 132685,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10820,
+              "goldEarned": 14463,
               "fb": false,
               "items": [
                 2525,
@@ -3824,7 +4294,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7948531926",
               "t": 1786560479825,
               "dur": 2093,
@@ -3841,6 +4311,10 @@
               "dmg": 13581,
               "teamDmg": 129544,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6061,
+              "goldEarned": 11359,
               "fb": false,
               "items": [
                 3877,
@@ -5573,6 +6047,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Zac",
+                "wins": 41,
+                "games": 78
+              },
+              "mainChar": {
+                "champ": "Leona",
+                "winrate": 58.1,
+                "games": 31
+              },
+              "autofill": {
+                "lane": "UTILITY",
+                "games": 396,
+                "wins": 195,
+                "winrate": 49.2
+              },
+              "champPool": 53,
+              "kdaStreak": 3,
+              "avgKda": 3.13,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 98,
+              "firstBloods": 59
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7847872168",
+                "t": 1778348241706,
+                "dur": 1642,
+                "champ": "Viego",
+                "role": "JUNGLE",
+                "k": 22,
+                "d": 4,
+                "a": 8,
+                "win": true,
+                "kda": 7.5,
+                "val": 22
+              },
+              "assists": {
+                "id": "EUW1_7884953715",
+                "t": 1781283542999,
+                "dur": 1888,
+                "champ": "Nami",
+                "role": "UTILITY",
+                "k": 4,
+                "d": 5,
+                "a": 40,
+                "win": true,
+                "kda": 8.8,
+                "val": 40
+              },
+              "damage": {
+                "id": "EUW1_7764554348",
+                "t": 1772750878910,
+                "dur": 2080,
+                "champ": "Elise",
+                "role": "JUNGLE",
+                "k": 14,
+                "d": 5,
+                "a": 14,
+                "win": true,
+                "kda": 5.6,
+                "val": 65574
+              },
+              "vision": {
+                "id": "EUW1_7843793547",
+                "t": 1778012045297,
+                "dur": 2738,
+                "champ": "Thresh",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 11,
+                "a": 26,
+                "win": false,
+                "kda": 2.82,
+                "val": 158
+              },
+              "longestWin": {
+                "id": "EUW1_7752022864",
+                "t": 1772041555540,
+                "dur": 2978,
+                "champ": "FiddleSticks",
+                "role": "JUNGLE",
+                "k": 10,
+                "d": 9,
+                "a": 20,
+                "win": true,
+                "kda": 3.33,
+                "val": 2978
+              },
+              "kda": {
+                "id": "EUW1_7952915263",
+                "t": 1786919233915,
+                "dur": 1370,
+                "champ": "Galio",
+                "role": "UTILITY",
+                "k": 3,
+                "d": 1,
+                "a": 20,
+                "win": true,
+                "kda": 23,
+                "val": 23
+              },
+              "kp": {
+                "id": "EUW1_7912434476",
+                "t": 1783522176829,
+                "dur": 2008,
+                "champ": "Milio",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 6,
+                "a": 23,
+                "win": true,
+                "kda": 4.17,
+                "val": 89
+              },
+              "towers": {
+                "id": "EUW1_7992116167",
+                "t": 1790111288429,
+                "dur": 1986,
+                "champ": "Pantheon",
+                "role": "UTILITY",
+                "k": 7,
+                "d": 12,
+                "a": 18,
+                "win": true,
+                "kda": 2.08,
+                "val": 10262
+              },
+              "gold": {
+                "id": "EUW1_7983575358",
+                "t": 1789397164950,
+                "dur": 2569,
+                "champ": "Pantheon",
+                "role": "UTILITY",
+                "k": 8,
+                "d": 17,
+                "a": 16,
+                "win": true,
+                "kda": 1.41,
+                "val": 15813
+              },
+              "csMin": {
+                "id": "EUW1_7736611523",
+                "t": 1771277634900,
+                "dur": 1653,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 5,
+                "d": 8,
+                "a": 2,
+                "win": false,
+                "kda": 0.88,
+                "val": 9
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -5586,7 +6217,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-09-30T12:54:41.954Z",
+          "updatedAt": "2026-09-30T13:42:24.531Z",
           "lpHist": [
             [
               1790720384833,
@@ -5599,7 +6230,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998698424",
               "t": 1790698364599,
               "dur": 1083,
@@ -5616,6 +6247,10 @@
               "dmg": 6499,
               "teamDmg": 63797,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3862,
+              "goldEarned": 6722,
               "fb": false,
               "items": [
                 3190,
@@ -5655,7 +6290,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998185660",
               "t": 1790632295058,
               "dur": 2095,
@@ -5672,6 +6307,10 @@
               "dmg": 10051,
               "teamDmg": 163483,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3247,
+              "goldEarned": 10415,
               "fb": false,
               "items": [
                 2065,
@@ -5711,7 +6350,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997711883",
               "t": 1790610257288,
               "dur": 1975,
@@ -5728,6 +6367,10 @@
               "dmg": 17058,
               "teamDmg": 156031,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 756,
+              "goldEarned": 14049,
               "fb": false,
               "items": [
                 3190,
@@ -5767,7 +6410,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997275120",
               "t": 1790548403036,
               "dur": 1806,
@@ -5784,6 +6427,10 @@
               "dmg": 9373,
               "teamDmg": 107867,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3114,
+              "goldEarned": 9859,
               "fb": false,
               "items": [
                 3190,
@@ -5823,7 +6470,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997245272",
               "t": 1790546281622,
               "dur": 1488,
@@ -5840,6 +6487,10 @@
               "dmg": 13111,
               "teamDmg": 115810,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4714,
+              "goldEarned": 9717,
               "fb": false,
               "items": [
                 3190,
@@ -5879,7 +6530,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997212496",
               "t": 1790544551629,
               "dur": 2083,
@@ -5896,6 +6547,10 @@
               "dmg": 12119,
               "teamDmg": 165776,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4765,
+              "goldEarned": 11490,
               "fb": false,
               "items": [
                 3190,
@@ -5935,7 +6590,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997172995",
               "t": 1790542240650,
               "dur": 1072,
@@ -5952,6 +6607,10 @@
               "dmg": 5600,
               "teamDmg": 59631,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1264,
+              "goldEarned": 5965,
               "fb": false,
               "items": [
                 3190,
@@ -5991,7 +6650,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7996759165",
               "t": 1790525792097,
               "dur": 1973,
@@ -6008,6 +6667,10 @@
               "dmg": 14769,
               "teamDmg": 136292,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3055,
+              "goldEarned": 12506,
               "fb": false,
               "items": [
                 2065,
@@ -6047,7 +6710,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7996704888",
               "t": 1790523501456,
               "dur": 2430,
@@ -6064,6 +6727,10 @@
               "dmg": 25105,
               "teamDmg": 213845,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 542,
+              "goldEarned": 14922,
               "fb": false,
               "items": [
                 6610,
@@ -6103,7 +6770,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7996547220",
               "t": 1790514344916,
               "dur": 924,
@@ -6120,6 +6787,10 @@
               "dmg": 7826,
               "teamDmg": 54060,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1246,
+              "goldEarned": 5900,
               "fb": false,
               "items": [
                 2003,
@@ -6159,7 +6830,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995585235",
               "t": 1790436309524,
               "dur": 1927,
@@ -6176,6 +6847,10 @@
               "dmg": 17804,
               "teamDmg": 141535,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1006,
+              "goldEarned": 9727,
               "fb": false,
               "items": [
                 3871,
@@ -6215,7 +6890,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992727695",
               "t": 1790182171378,
               "dur": 1696,
@@ -6232,6 +6907,10 @@
               "dmg": 8921,
               "teamDmg": 85871,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 560,
+              "goldEarned": 7951,
               "fb": false,
               "items": [
                 3876,
@@ -6271,7 +6950,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992116167",
               "t": 1790111288429,
               "dur": 1986,
@@ -6288,6 +6967,10 @@
               "dmg": 26707,
               "teamDmg": 134477,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10262,
+              "goldEarned": 12815,
               "fb": false,
               "items": [
                 3047,
@@ -6327,7 +7010,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991212048",
               "t": 1790027097030,
               "dur": 1627,
@@ -6344,6 +7027,10 @@
               "dmg": 14449,
               "teamDmg": 76494,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 9685,
               "fb": false,
               "items": [
                 6610,
@@ -6383,7 +7070,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990284980",
               "t": 1789942478241,
               "dur": 2238,
@@ -6400,6 +7087,10 @@
               "dmg": 16818,
               "teamDmg": 157208,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1056,
+              "goldEarned": 12907,
               "fb": false,
               "items": [
                 3109,
@@ -6439,7 +7130,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990268684",
               "t": 1789940004976,
               "dur": 935,
@@ -6456,6 +7147,10 @@
               "dmg": 4838,
               "teamDmg": 41044,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 4762,
               "fb": false,
               "items": [
                 3877,
@@ -6495,7 +7190,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990206757",
               "t": 1789938854856,
               "dur": 2546,
@@ -6512,6 +7207,10 @@
               "dmg": 13408,
               "teamDmg": 205512,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2709,
+              "goldEarned": 12294,
               "fb": false,
               "items": [
                 3190,
@@ -6551,7 +7250,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989068983",
               "t": 1789854303914,
               "dur": 2267,
@@ -6568,6 +7267,10 @@
               "dmg": 23142,
               "teamDmg": 183033,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1084,
+              "goldEarned": 13384,
               "fb": false,
               "items": [
                 6610,
@@ -6607,7 +7310,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7988949296",
               "t": 1789848664781,
               "dur": 1589,
@@ -6624,6 +7327,10 @@
               "dmg": 20519,
               "teamDmg": 92917,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 515,
+              "goldEarned": 9685,
               "fb": false,
               "items": [
                 3871,
@@ -6663,7 +7370,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7988674748",
               "t": 1789833434678,
               "dur": 1490,
@@ -6680,6 +7387,10 @@
               "dmg": 8233,
               "teamDmg": 107892,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 101,
+              "goldEarned": 7837,
               "fb": false,
               "items": [
                 3814,
@@ -8047,6 +8758,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Diana",
+                "wins": 259,
+                "games": 481
+              },
+              "mainChar": {
+                "champ": "Shen",
+                "winrate": 56.3,
+                "games": 71
+              },
+              "autofill": {
+                "lane": "JUNGLE",
+                "games": 104,
+                "wins": 47,
+                "winrate": 45.2
+              },
+              "champPool": 23,
+              "kdaStreak": 7,
+              "avgKda": 4.21,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 365,
+              "firstBloods": 52
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7997749403",
+                "t": 1790613682790,
+                "dur": 2495,
+                "champ": "Briar",
+                "role": "JUNGLE",
+                "k": 24,
+                "d": 10,
+                "a": 18,
+                "win": true,
+                "kda": 4.2,
+                "val": 24
+              },
+              "assists": {
+                "id": "EUW1_7945460453",
+                "t": 1786298724037,
+                "dur": 2394,
+                "champ": "Rakan",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 6,
+                "a": 38,
+                "win": true,
+                "kda": 6.5,
+                "val": 38
+              },
+              "damage": {
+                "id": "EUW1_7761781372",
+                "t": 1772563595958,
+                "dur": 2332,
+                "champ": "Diana",
+                "role": "JUNGLE",
+                "k": 21,
+                "d": 6,
+                "a": 7,
+                "win": false,
+                "kda": 4.67,
+                "val": 73047
+              },
+              "vision": {
+                "id": "EUW1_7945210360",
+                "t": 1786286533805,
+                "dur": 2377,
+                "champ": "Braum",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 6,
+                "a": 18,
+                "win": true,
+                "kda": 3.17,
+                "val": 134
+              },
+              "longestWin": {
+                "id": "EUW1_7802502682",
+                "t": 1774737259755,
+                "dur": 2968,
+                "champ": "Diana",
+                "role": "JUNGLE",
+                "k": 16,
+                "d": 12,
+                "a": 19,
+                "win": true,
+                "kda": 2.92,
+                "val": 2968
+              },
+              "kda": {
+                "id": "EUW1_7833228571",
+                "t": 1777203411216,
+                "dur": 1675,
+                "champ": "Diana",
+                "role": "JUNGLE",
+                "k": 22,
+                "d": 1,
+                "a": 11,
+                "win": true,
+                "kda": 33,
+                "val": 33
+              },
+              "kp": {
+                "id": "EUW1_7937698844",
+                "t": 1785673318886,
+                "dur": 2464,
+                "champ": "Braum",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 5,
+                "a": 13,
+                "win": false,
+                "kda": 3,
+                "val": 88
+              },
+              "towers": {
+                "id": "EUW1_7913498476",
+                "t": 1783614390880,
+                "dur": 1872,
+                "champ": "Diana",
+                "role": "JUNGLE",
+                "k": 11,
+                "d": 2,
+                "a": 10,
+                "win": false,
+                "kda": 10.5,
+                "val": 14571
+              },
+              "gold": {
+                "id": "EUW1_7997749403",
+                "t": 1790613682790,
+                "dur": 2495,
+                "champ": "Briar",
+                "role": "JUNGLE",
+                "k": 24,
+                "d": 10,
+                "a": 18,
+                "win": true,
+                "kda": 4.2,
+                "val": 26196
+              },
+              "csMin": {
+                "id": "EUW1_7908506334",
+                "t": 1783182088871,
+                "dur": 928,
+                "champ": "Diana",
+                "role": "JUNGLE",
+                "k": 2,
+                "d": 0,
+                "a": 3,
+                "win": true,
+                "kda": 5,
+                "val": 10.3
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -8060,7 +8928,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:35.540Z",
+          "updatedAt": "2026-09-30T13:31:24.249Z",
           "lpHist": [
             [
               1790720384833,
@@ -8073,7 +8941,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998844473",
               "t": 1790706048628,
               "dur": 1869,
@@ -8090,6 +8958,10 @@
               "dmg": 18070,
               "teamDmg": 109680,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 885,
+              "goldEarned": 13675,
               "fb": false,
               "items": [
                 6333,
@@ -8129,7 +9001,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998777970",
               "t": 1790703929381,
               "dur": 2809,
@@ -8146,6 +9018,10 @@
               "dmg": 30979,
               "teamDmg": 333615,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 812,
+              "goldEarned": 20255,
               "fb": false,
               "items": [
                 3071,
@@ -8185,7 +9061,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997834708",
               "t": 1790617205194,
               "dur": 2093,
@@ -8202,6 +9078,10 @@
               "dmg": 35859,
               "teamDmg": 132815,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7359,
+              "goldEarned": 19916,
               "fb": false,
               "items": [
                 4645,
@@ -8241,7 +9121,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997749403",
               "t": 1790613682790,
               "dur": 2495,
@@ -8258,6 +9138,10 @@
               "dmg": 67412,
               "teamDmg": 221114,
               "penta": 0,
+              "quadra": 0,
+              "triple": 2,
+              "towerDmg": 991,
+              "goldEarned": 26196,
               "fb": false,
               "items": [
                 3153,
@@ -8297,7 +9181,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7996894001",
               "t": 1790532237689,
               "dur": 2376,
@@ -8314,6 +9198,10 @@
               "dmg": 44056,
               "teamDmg": 234770,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2497,
+              "goldEarned": 18270,
               "fb": false,
               "items": [
                 4645,
@@ -8353,7 +9241,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995713420",
               "t": 1790443474721,
               "dur": 1775,
@@ -8370,6 +9258,10 @@
               "dmg": 7638,
               "teamDmg": 105668,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2471,
+              "goldEarned": 10322,
               "fb": false,
               "items": [
                 2065,
@@ -8409,7 +9301,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995681057",
               "t": 1790441225313,
               "dur": 1858,
@@ -8426,6 +9318,10 @@
               "dmg": 25497,
               "teamDmg": 118862,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 12457,
+              "goldEarned": 17077,
               "fb": false,
               "items": [
                 4633,
@@ -8465,7 +9361,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995636990",
               "t": 1790438828428,
               "dur": 1754,
@@ -8482,6 +9378,10 @@
               "dmg": 22990,
               "teamDmg": 131383,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5092,
+              "goldEarned": 14041,
               "fb": false,
               "items": [
                 3152,
@@ -8521,7 +9421,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995581016",
               "t": 1790435744996,
               "dur": 1760,
@@ -8538,6 +9438,10 @@
               "dmg": 28145,
               "teamDmg": 141749,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5113,
+              "goldEarned": 14629,
               "fb": false,
               "items": [
                 4645,
@@ -8577,7 +9481,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991899432",
               "t": 1790102597814,
               "dur": 1815,
@@ -8594,6 +9498,10 @@
               "dmg": 29343,
               "teamDmg": 136502,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1905,
+              "goldEarned": 13961,
               "fb": false,
               "items": [
                 4645,
@@ -8633,7 +9541,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991865013",
               "t": 1790100459070,
               "dur": 1623,
@@ -8650,6 +9558,10 @@
               "dmg": 27179,
               "teamDmg": 115893,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 679,
+              "goldEarned": 11392,
               "fb": false,
               "items": [
                 2503,
@@ -8689,7 +9601,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991840464",
               "t": 1790098533772,
               "dur": 1552,
@@ -8706,6 +9618,10 @@
               "dmg": 12293,
               "teamDmg": 68244,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 10152,
               "fb": false,
               "items": [
                 3152,
@@ -8745,7 +9661,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991774510",
               "t": 1790095475942,
               "dur": 1914,
@@ -8762,6 +9678,10 @@
               "dmg": 31909,
               "teamDmg": 127767,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1462,
+              "goldEarned": 17196,
               "fb": false,
               "items": [
                 3748,
@@ -8801,7 +9721,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990883078",
               "t": 1790013026084,
               "dur": 1496,
@@ -8818,6 +9738,10 @@
               "dmg": 11203,
               "teamDmg": 86426,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2149,
+              "goldEarned": 11849,
               "fb": false,
               "items": [
                 3153,
@@ -8857,7 +9781,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990839307",
               "t": 1790011159914,
               "dur": 1635,
@@ -8874,6 +9798,10 @@
               "dmg": 19421,
               "teamDmg": 91017,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1433,
+              "goldEarned": 11283,
               "fb": false,
               "items": [
                 3152,
@@ -8913,7 +9841,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990810536",
               "t": 1790008992163,
               "dur": 1659,
@@ -8930,6 +9858,10 @@
               "dmg": 11633,
               "teamDmg": 98484,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 217,
+              "goldEarned": 11444,
               "fb": false,
               "items": [
                 3748,
@@ -8969,7 +9901,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990768786",
               "t": 1790006871096,
               "dur": 1695,
@@ -8986,6 +9918,10 @@
               "dmg": 29507,
               "teamDmg": 116662,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 9755,
+              "goldEarned": 15957,
               "fb": false,
               "items": [
                 3152,
@@ -9025,7 +9961,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990442397",
               "t": 1789970691419,
               "dur": 1874,
@@ -9042,6 +9978,10 @@
               "dmg": 30279,
               "teamDmg": 136560,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5596,
+              "goldEarned": 15479,
               "fb": false,
               "items": [
                 4645,
@@ -9081,7 +10021,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990450673",
               "t": 1789968550686,
               "dur": 1553,
@@ -9098,6 +10038,10 @@
               "dmg": 20652,
               "teamDmg": 89940,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1771,
+              "goldEarned": 13067,
               "fb": false,
               "items": [
                 4645,
@@ -9137,7 +10081,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990042102",
               "t": 1789931527526,
               "dur": 1654,
@@ -9154,6 +10098,10 @@
               "dmg": 16098,
               "teamDmg": 80685,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 11136,
               "fb": false,
               "items": [
                 3153,
@@ -10313,6 +11261,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Jinx",
+                "wins": 22,
+                "games": 42
+              },
+              "mainChar": {
+                "champ": "Jinx",
+                "winrate": 52.4,
+                "games": 42
+              },
+              "autofill": {
+                "lane": "BOTTOM",
+                "games": 14,
+                "wins": 5,
+                "winrate": 35.7
+              },
+              "champPool": 13,
+              "kdaStreak": 2,
+              "avgKda": 3.48,
+              "pentas": 1,
+              "quadras": 2,
+              "quadraGames": 163,
+              "firstBloods": 24
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7954267643",
+                "t": 1787057054824,
+                "dur": 2031,
+                "champ": "Viktor",
+                "role": "BOTTOM",
+                "k": 19,
+                "d": 11,
+                "a": 11,
+                "win": false,
+                "kda": 2.73,
+                "val": 19
+              },
+              "assists": {
+                "id": "EUW1_7946201261",
+                "t": 1786368077261,
+                "dur": 2255,
+                "champ": "Lulu",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 10,
+                "a": 31,
+                "win": true,
+                "kda": 3.6,
+                "val": 31
+              },
+              "damage": {
+                "id": "EUW1_7906640992",
+                "t": 1783019173640,
+                "dur": 2156,
+                "champ": "Jinx",
+                "role": "BOTTOM",
+                "k": 13,
+                "d": 6,
+                "a": 6,
+                "win": true,
+                "kda": 3.17,
+                "val": 65895
+              },
+              "vision": {
+                "id": "EUW1_7946201261",
+                "t": 1786368077261,
+                "dur": 2255,
+                "champ": "Lulu",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 10,
+                "a": 31,
+                "win": true,
+                "kda": 3.6,
+                "val": 117
+              },
+              "longestWin": {
+                "id": "EUW1_7940290522",
+                "t": 1785870994798,
+                "dur": 2792,
+                "champ": "Jinx",
+                "role": "BOTTOM",
+                "k": 3,
+                "d": 12,
+                "a": 13,
+                "win": true,
+                "kda": 1.33,
+                "val": 2792
+              },
+              "kda": {
+                "id": "EUW1_7938885906",
+                "t": 1785764630036,
+                "dur": 1837,
+                "champ": "Kaisa",
+                "role": "BOTTOM",
+                "k": 16,
+                "d": 1,
+                "a": 7,
+                "win": true,
+                "kda": 23,
+                "val": 23
+              },
+              "kp": {
+                "id": "EUW1_7608398701",
+                "t": 1763496503655,
+                "dur": 1692,
+                "champ": "Sivir",
+                "role": "BOTTOM",
+                "k": 8,
+                "d": 9,
+                "a": 9,
+                "win": false,
+                "kda": 1.89,
+                "val": 85
+              },
+              "towers": {
+                "id": "EUW1_7953122793",
+                "t": 1786956653231,
+                "dur": 1941,
+                "champ": "Tristana",
+                "role": "BOTTOM",
+                "k": 18,
+                "d": 5,
+                "a": 4,
+                "win": true,
+                "kda": 4.4,
+                "val": 22957
+              },
+              "gold": {
+                "id": "EUW1_7992722137",
+                "t": 1790183312605,
+                "dur": 2471,
+                "champ": "Yunara",
+                "role": "BOTTOM",
+                "k": 12,
+                "d": 6,
+                "a": 9,
+                "win": false,
+                "kda": 3.5,
+                "val": 25672
+              },
+              "csMin": {
+                "id": "EUW1_7954355905",
+                "t": 1787063218049,
+                "dur": 1489,
+                "champ": "Jinx",
+                "role": "BOTTOM",
+                "k": 1,
+                "d": 2,
+                "a": 3,
+                "win": false,
+                "kda": 2,
+                "val": 12
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -10326,7 +11431,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:31.894Z",
+          "updatedAt": "2026-09-30T13:23:25.610Z",
           "lpHist": [
             [
               1790720384833,
@@ -10339,7 +11444,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998698424",
               "t": 1790698364599,
               "dur": 1083,
@@ -10356,6 +11461,10 @@
               "dmg": 18033,
               "teamDmg": 63797,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4226,
+              "goldEarned": 8321,
               "fb": false,
               "items": [
                 1056,
@@ -10395,7 +11504,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998644416",
               "t": 1790695853559,
               "dur": 2070,
@@ -10412,6 +11521,10 @@
               "dmg": 18773,
               "teamDmg": 109672,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 14904,
+              "goldEarned": 16760,
               "fb": false,
               "items": [
                 1086,
@@ -10451,7 +11564,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998629830",
               "t": 1790693427028,
               "dur": 1484,
@@ -10468,6 +11581,10 @@
               "dmg": 14152,
               "teamDmg": 66378,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4441,
+              "goldEarned": 10699,
               "fb": false,
               "items": [
                 1086,
@@ -10507,7 +11624,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998602896",
               "t": 1790691641845,
               "dur": 1501,
@@ -10524,6 +11641,10 @@
               "dmg": 18381,
               "teamDmg": 77097,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 9695,
+              "goldEarned": 13564,
               "fb": false,
               "items": [
                 1086,
@@ -10563,7 +11684,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997884627",
               "t": 1790619459485,
               "dur": 1880,
@@ -10580,6 +11701,10 @@
               "dmg": 29342,
               "teamDmg": 87243,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 16184,
+              "goldEarned": 15026,
               "fb": false,
               "items": [
                 1056,
@@ -10619,7 +11744,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997834708",
               "t": 1790617205194,
               "dur": 2093,
@@ -10636,6 +11761,10 @@
               "dmg": 27792,
               "teamDmg": 132815,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 17890,
+              "goldEarned": 17977,
               "fb": false,
               "items": [
                 3031,
@@ -10675,7 +11804,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995260676",
               "t": 1790410822152,
               "dur": 1890,
@@ -10692,6 +11821,10 @@
               "dmg": 6089,
               "teamDmg": 118853,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 663,
+              "goldEarned": 9263,
               "fb": false,
               "items": [
                 3876,
@@ -10731,7 +11864,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995243095",
               "t": 1790408463630,
               "dur": 1622,
@@ -10748,6 +11881,10 @@
               "dmg": 26019,
               "teamDmg": 94497,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 14571,
+              "goldEarned": 15707,
               "fb": false,
               "items": [
                 1086,
@@ -10787,7 +11924,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995232420",
               "t": 1790406076121,
               "dur": 1541,
@@ -10804,6 +11941,10 @@
               "dmg": 12060,
               "teamDmg": 61377,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4478,
+              "goldEarned": 9629,
               "fb": false,
               "items": [
                 1086,
@@ -10843,7 +11984,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995232126",
               "t": 1790404202422,
               "dur": 1553,
@@ -10860,6 +12001,10 @@
               "dmg": 4337,
               "teamDmg": 65122,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 343,
+              "goldEarned": 7531,
               "fb": false,
               "items": [
                 3870,
@@ -10899,7 +12044,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992864269",
               "t": 1790190124514,
               "dur": 1816,
@@ -10916,6 +12061,10 @@
               "dmg": 39301,
               "teamDmg": 131619,
               "penta": 0,
+              "quadra": 1,
+              "triple": 2,
+              "towerDmg": 10872,
+              "goldEarned": 17768,
               "fb": false,
               "items": [
                 3085,
@@ -10955,7 +12104,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992821307",
               "t": 1790187962507,
               "dur": 1928,
@@ -10972,6 +12121,10 @@
               "dmg": 51147,
               "teamDmg": 139059,
               "penta": 0,
+              "quadra": 0,
+              "triple": 1,
+              "towerDmg": 17344,
+              "goldEarned": 20425,
               "fb": false,
               "items": [
                 3026,
@@ -11011,7 +12164,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992772980",
               "t": 1790185673191,
               "dur": 2056,
@@ -11028,6 +12181,10 @@
               "dmg": 28177,
               "teamDmg": 183505,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 11606,
+              "goldEarned": 16871,
               "fb": false,
               "items": [
                 1086,
@@ -11067,7 +12224,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992722137",
               "t": 1790183312605,
               "dur": 2471,
@@ -11084,6 +12241,10 @@
               "dmg": 54199,
               "teamDmg": 166573,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10249,
+              "goldEarned": 25672,
               "fb": false,
               "items": [
                 3143,
@@ -11123,7 +12284,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990883078",
               "t": 1790013026084,
               "dur": 1496,
@@ -11140,6 +12301,10 @@
               "dmg": 15534,
               "teamDmg": 86426,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5262,
+              "goldEarned": 12391,
               "fb": false,
               "items": [
                 1086,
@@ -11179,7 +12344,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990839307",
               "t": 1790011159914,
               "dur": 1635,
@@ -11196,6 +12361,10 @@
               "dmg": 27649,
               "teamDmg": 91017,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 12864,
+              "goldEarned": 13504,
               "fb": false,
               "items": [
                 1018,
@@ -11235,7 +12404,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990810536",
               "t": 1790008992163,
               "dur": 1659,
@@ -11252,6 +12421,10 @@
               "dmg": 19269,
               "teamDmg": 98484,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5592,
+              "goldEarned": 12734,
               "fb": false,
               "items": [
                 1086,
@@ -11291,7 +12464,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990743292",
               "t": 1790005905444,
               "dur": 1894,
@@ -11308,6 +12481,10 @@
               "dmg": 33074,
               "teamDmg": 141476,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6098,
+              "goldEarned": 13476,
               "fb": false,
               "items": [
                 1086,
@@ -11347,7 +12524,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990711017",
               "t": 1790003547320,
               "dur": 1653,
@@ -11364,6 +12541,10 @@
               "dmg": 12259,
               "teamDmg": 69098,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3510,
+              "goldEarned": 10775,
               "fb": false,
               "items": [
                 3047,
@@ -11403,7 +12584,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989816786",
               "t": 1789921607607,
               "dur": 1982,
@@ -11420,6 +12601,10 @@
               "dmg": 48265,
               "teamDmg": 155364,
               "penta": 0,
+              "quadra": 0,
+              "triple": 1,
+              "towerDmg": 15098,
+              "goldEarned": 20516,
               "fb": false,
               "items": [
                 3026,
@@ -12776,6 +13961,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Fizz",
+                "wins": 123,
+                "games": 220
+              },
+              "mainChar": {
+                "champ": "Malzahar",
+                "winrate": 58.6,
+                "games": 116
+              },
+              "autofill": {
+                "lane": "SOLO",
+                "games": 170,
+                "wins": 74,
+                "winrate": 43.5
+              },
+              "champPool": 29,
+              "kdaStreak": 4,
+              "avgKda": 2.91,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 98,
+              "firstBloods": 97
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7937330300",
+                "t": 1785625890525,
+                "dur": 2409,
+                "champ": "Fizz",
+                "role": "MIDDLE",
+                "k": 26,
+                "d": 15,
+                "a": 7,
+                "win": true,
+                "kda": 2.2,
+                "val": 26
+              },
+              "assists": {
+                "id": "EUW1_7957371495",
+                "t": 1787320738495,
+                "dur": 1952,
+                "champ": "Thresh",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 10,
+                "a": 25,
+                "win": true,
+                "kda": 2.7,
+                "val": 25
+              },
+              "damage": {
+                "id": "EUW1_7995462041",
+                "t": 1790429925770,
+                "dur": 3064,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 21,
+                "d": 13,
+                "a": 9,
+                "win": false,
+                "kda": 2.31,
+                "val": 125863
+              },
+              "vision": {
+                "id": "EUW1_7875047457",
+                "t": 1780496683379,
+                "dur": 2303,
+                "champ": "Morgana",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 13,
+                "a": 16,
+                "win": false,
+                "kda": 1.62,
+                "val": 131
+              },
+              "longestWin": {
+                "id": "EUW1_7719645464",
+                "t": 1770413393754,
+                "dur": 3172,
+                "champ": "Fizz",
+                "role": "MIDDLE",
+                "k": 16,
+                "d": 17,
+                "a": 9,
+                "win": true,
+                "kda": 1.47,
+                "val": 3172
+              },
+              "kda": {
+                "id": "EUW1_7846045721",
+                "t": 1778192919379,
+                "dur": 1904,
+                "champ": "Fizz",
+                "role": "MIDDLE",
+                "k": 18,
+                "d": 1,
+                "a": 13,
+                "win": true,
+                "kda": 31,
+                "val": 31
+              },
+              "kp": {
+                "id": "EUW1_7789283882",
+                "t": 1774015828651,
+                "dur": 1593,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 13,
+                "d": 4,
+                "a": 3,
+                "win": false,
+                "kda": 4,
+                "val": 84
+              },
+              "towers": {
+                "id": "EUW1_7972717930",
+                "t": 1788525457457,
+                "dur": 1481,
+                "champ": "Tristana",
+                "role": "MIDDLE",
+                "k": 9,
+                "d": 2,
+                "a": 4,
+                "win": true,
+                "kda": 6.5,
+                "val": 19687
+              },
+              "gold": {
+                "id": "EUW1_7995462041",
+                "t": 1790429925770,
+                "dur": 3064,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 21,
+                "d": 13,
+                "a": 9,
+                "win": false,
+                "kda": 2.31,
+                "val": 30126
+              },
+              "csMin": {
+                "id": "EUW1_7979566982",
+                "t": 1789068306649,
+                "dur": 1204,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 3,
+                "d": 2,
+                "a": 2,
+                "win": true,
+                "kda": 2.5,
+                "val": 10.9
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -12789,7 +14131,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:43.086Z",
+          "updatedAt": "2026-09-30T13:35:45.546Z",
           "lpHist": [
             [
               1790720384833,
@@ -12802,7 +14144,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7996547220",
               "t": 1790514344916,
               "dur": 924,
@@ -12819,6 +14161,10 @@
               "dmg": 10734,
               "teamDmg": 54060,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5785,
+              "goldEarned": 7076,
               "fb": false,
               "items": [
                 1056,
@@ -12858,7 +14204,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995860637",
               "t": 1790450541554,
               "dur": 1792,
@@ -12875,6 +14221,10 @@
               "dmg": 24678,
               "teamDmg": 133910,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 9278,
+              "goldEarned": 14263,
               "fb": false,
               "items": [
                 6692,
@@ -12914,7 +14264,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995817804",
               "t": 1790448458387,
               "dur": 1356,
@@ -12931,6 +14281,10 @@
               "dmg": 15138,
               "teamDmg": 82887,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4472,
+              "goldEarned": 10276,
               "fb": false,
               "items": [
                 1056,
@@ -12970,7 +14324,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995779879",
               "t": 1790446488874,
               "dur": 1495,
@@ -12987,6 +14341,10 @@
               "dmg": 30683,
               "teamDmg": 109781,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 15958,
+              "goldEarned": 14395,
               "fb": false,
               "items": [
                 2520,
@@ -13026,7 +14384,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995697423",
               "t": 1790442929800,
               "dur": 2275,
@@ -13043,6 +14401,10 @@
               "dmg": 38620,
               "teamDmg": 203852,
               "penta": 0,
+              "quadra": 0,
+              "triple": 1,
+              "towerDmg": 3446,
+              "goldEarned": 19197,
               "fb": false,
               "items": [
                 6699,
@@ -13082,7 +14444,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995585235",
               "t": 1790436309524,
               "dur": 1927,
@@ -13099,6 +14461,10 @@
               "dmg": 27628,
               "teamDmg": 141535,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 14159,
+              "goldEarned": 14901,
               "fb": false,
               "items": [
                 6653,
@@ -13138,7 +14504,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7995462041",
               "t": 1790429925770,
               "dur": 3064,
@@ -13155,6 +14521,10 @@
               "dmg": 125863,
               "teamDmg": 416691,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 19098,
+              "goldEarned": 30126,
               "fb": false,
               "items": [
                 3036,
@@ -13194,7 +14564,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7994828074",
               "t": 1790365916353,
               "dur": 1587,
@@ -13211,6 +14581,10 @@
               "dmg": 37407,
               "teamDmg": 118061,
               "penta": 0,
+              "quadra": 0,
+              "triple": 1,
+              "towerDmg": 3695,
+              "goldEarned": 16353,
               "fb": false,
               "items": [
                 2520,
@@ -13250,7 +14624,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7994303491",
               "t": 1790329487072,
               "dur": 1567,
@@ -13267,6 +14641,10 @@
               "dmg": 14123,
               "teamDmg": 66066,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1650,
+              "goldEarned": 9581,
               "fb": false,
               "items": [
                 3047,
@@ -13306,7 +14684,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7993900769",
               "t": 1790280447374,
               "dur": 2132,
@@ -13323,6 +14701,10 @@
               "dmg": 28551,
               "teamDmg": 141218,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7282,
+              "goldEarned": 15273,
               "fb": false,
               "items": [
                 6699,
@@ -13362,7 +14744,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7993128108",
               "t": 1790201251666,
               "dur": 1918,
@@ -13379,6 +14761,10 @@
               "dmg": 14768,
               "teamDmg": 106923,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5623,
+              "goldEarned": 11544,
               "fb": false,
               "items": [
                 4633,
@@ -13418,7 +14804,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992727695",
               "t": 1790182171378,
               "dur": 1696,
@@ -13435,6 +14821,10 @@
               "dmg": 12701,
               "teamDmg": 85871,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 10954,
               "fb": false,
               "items": [
                 3111,
@@ -13474,7 +14864,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992116167",
               "t": 1790111288429,
               "dur": 1986,
@@ -13491,6 +14881,10 @@
               "dmg": 22434,
               "teamDmg": 134477,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3331,
+              "goldEarned": 16625,
               "fb": false,
               "items": [
                 3047,
@@ -13530,7 +14924,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989759646",
               "t": 1789918679941,
               "dur": 1834,
@@ -13547,6 +14941,10 @@
               "dmg": 16319,
               "teamDmg": 97492,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4257,
+              "goldEarned": 14684,
               "fb": true,
               "items": [
                 6610,
@@ -13586,7 +14984,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989471471",
               "t": 1789902581704,
               "dur": 2108,
@@ -13603,6 +15001,10 @@
               "dmg": 40984,
               "teamDmg": 153526,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5477,
+              "goldEarned": 18074,
               "fb": false,
               "items": [
                 3814,
@@ -13642,7 +15044,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989068983",
               "t": 1789854303914,
               "dur": 2267,
@@ -13659,6 +15061,10 @@
               "dmg": 43683,
               "teamDmg": 183033,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7804,
+              "goldEarned": 19497,
               "fb": false,
               "items": [
                 3036,
@@ -13698,7 +15104,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7988949296",
               "t": 1789848664781,
               "dur": 1589,
@@ -13715,6 +15121,10 @@
               "dmg": 12345,
               "teamDmg": 92917,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 10033,
               "fb": false,
               "items": [
                 6676,
@@ -13754,7 +15164,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7988674748",
               "t": 1789833434678,
               "dur": 1490,
@@ -13771,6 +15181,10 @@
               "dmg": 20364,
               "teamDmg": 107892,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7324,
+              "goldEarned": 8247,
               "fb": false,
               "items": [
                 1086,
@@ -13810,7 +15224,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7987882036",
               "t": 1789762683643,
               "dur": 2092,
@@ -13827,6 +15241,10 @@
               "dmg": 32256,
               "teamDmg": 141252,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5384,
+              "goldEarned": 15128,
               "fb": false,
               "items": [
                 6692,
@@ -13866,7 +15284,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7987773135",
               "t": 1789757949707,
               "dur": 2487,
@@ -13883,6 +15301,10 @@
               "dmg": 47334,
               "teamDmg": 258113,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3015,
+              "goldEarned": 19840,
               "fb": false,
               "items": [
                 2520,
@@ -15227,6 +16649,163 @@
                 ]
               }
             },
+            "awards": {
+              "oneTrick": {
+                "champ": "Heimerdinger",
+                "wins": 29,
+                "games": 62
+              },
+              "mainChar": {
+                "champ": "Teemo",
+                "winrate": 56.8,
+                "games": 37
+              },
+              "autofill": {
+                "lane": "SOLO",
+                "games": 59,
+                "wins": 30,
+                "winrate": 50.8
+              },
+              "champPool": 25,
+              "kdaStreak": 3,
+              "avgKda": 2.75,
+              "pentas": 0,
+              "quadras": 0,
+              "quadraGames": 98,
+              "firstBloods": 16
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7715366877",
+                "t": 1770160615781,
+                "dur": 3097,
+                "champ": "Veigar",
+                "role": "MIDDLE",
+                "k": 19,
+                "d": 14,
+                "a": 12,
+                "win": false,
+                "kda": 2.21,
+                "val": 19
+              },
+              "assists": {
+                "id": "EUW1_7921362654",
+                "t": 1784310006756,
+                "dur": 3071,
+                "champ": "Alistar",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 11,
+                "a": 30,
+                "win": false,
+                "kda": 3.18,
+                "val": 30
+              },
+              "damage": {
+                "id": "EUW1_7715366877",
+                "t": 1770160615781,
+                "dur": 3097,
+                "champ": "Veigar",
+                "role": "MIDDLE",
+                "k": 19,
+                "d": 14,
+                "a": 12,
+                "win": false,
+                "kda": 2.21,
+                "val": 85418
+              },
+              "vision": {
+                "id": "EUW1_7921362654",
+                "t": 1784310006756,
+                "dur": 3071,
+                "champ": "Alistar",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 11,
+                "a": 30,
+                "win": false,
+                "kda": 3.18,
+                "val": 151
+              },
+              "longestWin": {
+                "id": "EUW1_7846937764",
+                "t": 1778272893196,
+                "dur": 2733,
+                "champ": "Mel",
+                "role": "UTILITY",
+                "k": 13,
+                "d": 9,
+                "a": 21,
+                "win": true,
+                "kda": 3.78,
+                "val": 2733
+              },
+              "kda": {
+                "id": "EUW1_7758951875",
+                "t": 1772388271019,
+                "dur": 1882,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 9,
+                "d": 0,
+                "a": 12,
+                "win": true,
+                "kda": 21,
+                "val": 21
+              },
+              "kp": {
+                "id": "EUW1_7684112814",
+                "t": 1768338811171,
+                "dur": 1817,
+                "champ": "Swain",
+                "role": "UTILITY",
+                "k": 7,
+                "d": 5,
+                "a": 22,
+                "win": true,
+                "kda": 5.8,
+                "val": 74
+              },
+              "towers": {
+                "id": "EUW1_7937330300",
+                "t": 1785625890525,
+                "dur": 2409,
+                "champ": "Teemo",
+                "role": "TOP",
+                "k": 7,
+                "d": 8,
+                "a": 13,
+                "win": true,
+                "kda": 2.5,
+                "val": 21360
+              },
+              "gold": {
+                "id": "EUW1_7937330300",
+                "t": 1785625890525,
+                "dur": 2409,
+                "champ": "Teemo",
+                "role": "TOP",
+                "k": 7,
+                "d": 8,
+                "a": 13,
+                "win": true,
+                "kda": 2.5,
+                "val": 19700
+              },
+              "csMin": {
+                "id": "EUW1_7969653454",
+                "t": 1788276373026,
+                "dur": 1617,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 5,
+                "d": 1,
+                "a": 7,
+                "win": false,
+                "kda": 12,
+                "val": 10.4
+              }
+            },
             "lp": {
               "win": 19,
               "loss": null,
@@ -15240,7 +16819,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-09-30T12:47:39.290Z",
+          "updatedAt": "2026-09-30T13:33:34.506Z",
           "lpHist": [
             [
               1790720384833,
@@ -15257,7 +16836,7 @@
           ],
           "recent": [
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7999346041",
               "t": 1790754836313,
               "dur": 2723,
@@ -15274,6 +16853,10 @@
               "dmg": 48923,
               "teamDmg": 232857,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4481,
+              "goldEarned": 17113,
               "fb": false,
               "items": [
                 3065,
@@ -15316,7 +16899,7 @@
               }
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7999185104",
               "t": 1790720954815,
               "dur": 1590,
@@ -15333,6 +16916,10 @@
               "dmg": 34053,
               "teamDmg": 94657,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 12953,
+              "goldEarned": 14851,
               "fb": false,
               "items": [
                 4630,
@@ -15372,7 +16959,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7999061539",
               "t": 1790714488335,
               "dur": 1523,
@@ -15389,6 +16976,10 @@
               "dmg": 15913,
               "teamDmg": 102975,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3588,
+              "goldEarned": 8636,
               "fb": false,
               "items": [
                 1086,
@@ -15428,7 +17019,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998819975",
               "t": 1790706370925,
               "dur": 2734,
@@ -15445,6 +17036,10 @@
               "dmg": 77911,
               "teamDmg": 234608,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10576,
+              "goldEarned": 19558,
               "fb": false,
               "items": [
                 3118,
@@ -15484,7 +17079,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7998485635",
               "t": 1790681443774,
               "dur": 1732,
@@ -15501,6 +17096,10 @@
               "dmg": 28088,
               "teamDmg": 112875,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 11751,
+              "goldEarned": 11591,
               "fb": false,
               "items": [
                 1086,
@@ -15540,7 +17139,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7997904200",
               "t": 1790621022424,
               "dur": 2099,
@@ -15557,6 +17156,10 @@
               "dmg": 26473,
               "teamDmg": 146942,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 11826,
+              "goldEarned": 14674,
               "fb": false,
               "items": [
                 1058,
@@ -15596,7 +17199,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7994286229",
               "t": 1790328908521,
               "dur": 1742,
@@ -15613,6 +17216,10 @@
               "dmg": 21045,
               "teamDmg": 88151,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6039,
+              "goldEarned": 11697,
               "fb": false,
               "items": [
                 0,
@@ -15652,7 +17259,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7993406784",
               "t": 1790249357870,
               "dur": 1561,
@@ -15669,6 +17276,10 @@
               "dmg": 14596,
               "teamDmg": 61338,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1104,
+              "goldEarned": 9731,
               "fb": false,
               "items": [
                 4645,
@@ -15708,7 +17319,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7993379318",
               "t": 1790247188690,
               "dur": 2135,
@@ -15725,6 +17336,10 @@
               "dmg": 40733,
               "teamDmg": 167456,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5672,
+              "goldEarned": 16150,
               "fb": false,
               "items": [
                 4645,
@@ -15764,7 +17379,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992749984",
               "t": 1790183915488,
               "dur": 2039,
@@ -15781,6 +17396,10 @@
               "dmg": 53071,
               "teamDmg": 131185,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6891,
+              "goldEarned": 16135,
               "fb": false,
               "items": [
                 4645,
@@ -15820,7 +17439,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992705869",
               "t": 1790180938304,
               "dur": 1418,
@@ -15837,6 +17456,10 @@
               "dmg": 8267,
               "teamDmg": 50169,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1934,
+              "goldEarned": 7054,
               "fb": false,
               "items": [
                 6664,
@@ -15876,7 +17499,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992632268",
               "t": 1790177271166,
               "dur": 1849,
@@ -15893,6 +17516,10 @@
               "dmg": 29531,
               "teamDmg": 106114,
               "penta": 0,
+              "quadra": 0,
+              "triple": 1,
+              "towerDmg": 7465,
+              "goldEarned": 14359,
               "fb": false,
               "items": [
                 3116,
@@ -15932,7 +17559,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7992421993",
               "t": 1790157064264,
               "dur": 2637,
@@ -15949,6 +17576,10 @@
               "dmg": 53913,
               "teamDmg": 221456,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6554,
+              "goldEarned": 15855,
               "fb": false,
               "items": [
                 3175,
@@ -15988,7 +17619,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991849249",
               "t": 1790100275500,
               "dur": 2030,
@@ -16005,6 +17636,10 @@
               "dmg": 28680,
               "teamDmg": 103990,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2921,
+              "goldEarned": 11878,
               "fb": false,
               "items": [
                 1052,
@@ -16044,7 +17679,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991814087",
               "t": 1790097637487,
               "dur": 1316,
@@ -16061,6 +17696,10 @@
               "dmg": 18965,
               "teamDmg": 83159,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6497,
+              "goldEarned": 8624,
               "fb": false,
               "items": [
                 1056,
@@ -16100,7 +17739,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991235489",
               "t": 1790028457238,
               "dur": 2423,
@@ -16117,6 +17756,10 @@
               "dmg": 42926,
               "teamDmg": 149321,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5512,
+              "goldEarned": 16863,
               "fb": false,
               "items": [
                 6653,
@@ -16156,7 +17799,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7991172636",
               "t": 1790025667088,
               "dur": 2332,
@@ -16173,6 +17816,10 @@
               "dmg": 24289,
               "teamDmg": 178577,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6440,
+              "goldEarned": 14261,
               "fb": false,
               "items": [
                 3118,
@@ -16212,7 +17859,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7990762799",
               "t": 1790006385076,
               "dur": 1767,
@@ -16229,6 +17876,10 @@
               "dmg": 16719,
               "teamDmg": 82442,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 7046,
               "fb": false,
               "items": [
                 0,
@@ -16268,7 +17919,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989896109",
               "t": 1789925436824,
               "dur": 1802,
@@ -16285,6 +17936,10 @@
               "dmg": 25219,
               "teamDmg": 108695,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2976,
+              "goldEarned": 11961,
               "fb": false,
               "items": [
                 3089,
@@ -16324,7 +17979,7 @@
               "lp": null
             },
             {
-              "v": 3,
+              "v": 4,
               "id": "EUW1_7989531938",
               "t": 1789907494913,
               "dur": 2335,
@@ -16341,6 +17996,10 @@
               "dmg": 28496,
               "teamDmg": 163486,
               "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6128,
+              "goldEarned": 12902,
               "fb": false,
               "items": [
                 3020,
