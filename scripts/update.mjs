@@ -111,13 +111,16 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
     try {
       const match = await riot.match(region, id);
       let timeline = null;
-      if (isRecent) {
+      const prev = byId.get(id);
+      // Si ya teníamos el oro de esta partida (formato anterior), no hace falta volver a pedir el timeline
+      if (isRecent && !prev?.gold) {
         try { timeline = await riot.timeline(region, id); } catch (err) {
           if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
           console.warn(`  ! timeline ${id}: ${err.message}`);
         }
       }
       const rec = compactMatch(match, puuid, dd, timeline);
+      if (rec && !timeline && prev?.gold) rec.gold = prev.gold;
       if (isRecent && rec) await writeJson(matchFile(id), matchDetail(match, dd));
       if (rec) {
         const i = history.findIndex((g) => g.id === id);
