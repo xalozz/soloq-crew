@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T11:47:55.307Z",
+  "generatedAt": "2026-09-30T12:05:35.372Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -28,17 +28,17 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 97,
-            "wins": 58,
-            "losses": 39,
-            "winrate": 59.8,
-            "avgK": 6.3,
-            "avgD": 5,
-            "avgA": 5.4,
-            "kda": 2.35,
-            "csPerMin": 7.3,
-            "visPerMin": 1.31,
-            "dmgShare": 20.3,
+            "games": 320,
+            "wins": 168,
+            "losses": 152,
+            "winrate": 52.5,
+            "avgK": 6.5,
+            "avgD": 5.3,
+            "avgA": 5.8,
+            "kda": 2.32,
+            "csPerMin": 7.2,
+            "visPerMin": 1.28,
+            "dmgShare": 20.9,
             "avgDurationMin": 29.1,
             "streak": {
               "current": {
@@ -46,7 +46,7 @@
                 "count": 2
               },
               "bestWin": 9,
-              "worstLoss": 5
+              "worstLoss": 7
             },
             "form": [
               "L",
@@ -82,7 +82,7 @@
               0,
               0
             ],
-            "mainRole": "TOP",
+            "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
               "wins": 6,
@@ -98,58 +98,72 @@
             "topChamps": [
               {
                 "key": "Chogath",
-                "games": 94,
-                "wins": 57,
-                "winrate": 60.6,
-                "kda": 2.41
+                "games": 285,
+                "wins": 156,
+                "winrate": 54.7,
+                "kda": 2.44
+              },
+              {
+                "key": "Naafiri",
+                "games": 9,
+                "wins": 4,
+                "winrate": 44.4,
+                "kda": 2.55
+              },
+              {
+                "key": "Teemo",
+                "games": 6,
+                "wins": 1,
+                "winrate": 16.7,
+                "kda": 1.8
               },
               {
                 "key": "KogMaw",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.14
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 1.3
               },
               {
-                "key": "Vayne",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.14
-              },
-              {
-                "key": "Quinn",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.57
+                "key": "Brand",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 1.41
               }
             ],
             "bestChamp": {
               "key": "Chogath",
-              "games": 94,
-              "wins": 57,
-              "winrate": 60.6,
-              "kda": 2.41
+              "games": 285,
+              "wins": 156,
+              "winrate": 54.7,
+              "kda": 2.44
             },
-            "worstChamp": null,
+            "worstChamp": {
+              "key": "Teemo",
+              "games": 6,
+              "wins": 1,
+              "winrate": 16.7,
+              "kda": 1.8
+            },
             "bestRole": {
-              "key": "MIDDLE",
-              "games": 34,
-              "wins": 22,
-              "winrate": 64.7,
-              "kda": 2.8
+              "key": "JUNGLE",
+              "games": 17,
+              "wins": 10,
+              "winrate": 58.8,
+              "kda": 3.51
             },
             "worstRole": {
-              "key": "JUNGLE",
-              "games": 5,
-              "wins": 2,
-              "winrate": 40,
-              "kda": 2.07
+              "key": "BOTTOM",
+              "games": 20,
+              "wins": 9,
+              "winrate": 45,
+              "kda": 1.53
             },
             "bestGame": {
               "id": "EUW1_7943426184",
               "t": 1786132144789,
+              "dur": 1315,
               "champ": "Chogath",
               "role": "MIDDLE",
               "k": 10,
@@ -159,46 +173,79 @@
               "kda": 17
             },
             "worstGame": {
-              "id": "EUW1_7939641244",
-              "t": 1785803050910,
+              "id": "EUW1_7923124258",
+              "t": 1784458873337,
+              "dur": 1312,
               "champ": "Chogath",
-              "role": "JUNGLE",
+              "role": "MIDDLE",
               "k": 0,
-              "d": 0,
+              "d": 7,
               "a": 0,
-              "win": true,
+              "win": false,
               "kda": 0
             },
-            "firstGameAt": 1785797594024,
+            "firstGameAt": 1781994323672,
             "lastGameAt": 1789771199194,
             "totals": {
-              "k": 607,
-              "d": 481,
-              "a": 522
+              "k": 2078,
+              "d": 1696,
+              "a": 1861
             },
-            "dmgPerMin": 783,
-            "avgVision": 38.1,
+            "dmgPerMin": 799,
+            "avgVision": 37.2,
             "pentas": 0,
-            "firstBloods": 5,
-            "maxKills": 16,
-            "maxDurationMin": 47.3,
-            "avgKp": 38,
+            "firstBloods": 26,
+            "maxKills": 20,
+            "maxDurationMin": 51.5,
+            "avgKp": 41,
             "champs": [
               {
                 "key": "Chogath",
-                "games": 94,
-                "wins": 57,
-                "winrate": 60.6,
-                "kda": 2.41,
+                "games": 285,
+                "wins": 156,
+                "winrate": 54.7,
+                "kda": 2.44,
                 "csPerMin": 7.3
               },
               {
-                "key": "KogMaw",
-                "games": 1,
+                "key": "Naafiri",
+                "games": 9,
+                "wins": 4,
+                "winrate": 44.4,
+                "kda": 2.55,
+                "csPerMin": 7.2
+              },
+              {
+                "key": "Teemo",
+                "games": 6,
                 "wins": 1,
-                "winrate": 100,
-                "kda": 1.14,
-                "csPerMin": 7.6
+                "winrate": 16.7,
+                "kda": 1.8,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "KogMaw",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 1.3,
+                "csPerMin": 7.1
+              },
+              {
+                "key": "Brand",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 1.41,
+                "csPerMin": 7
+              },
+              {
+                "key": "MissFortune",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.11,
+                "csPerMin": 6.7
               },
               {
                 "key": "Vayne",
@@ -215,36 +262,91 @@
                 "winrate": 0,
                 "kda": 1.57,
                 "csPerMin": 7.3
+              },
+              {
+                "key": "Leona",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.43,
+                "csPerMin": 1.4
+              },
+              {
+                "key": "Tristana",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.8,
+                "csPerMin": 8.1
+              },
+              {
+                "key": "Kassadin",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.63,
+                "csPerMin": 4.4
+              },
+              {
+                "key": "Hwei",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.38,
+                "csPerMin": 7
+              },
+              {
+                "key": "Twitch",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 2.43,
+                "csPerMin": 6.3
+              },
+              {
+                "key": "Nautilus",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 2.13,
+                "csPerMin": 1.5
               }
             ],
             "roles": [
               {
+                "key": "MIDDLE",
+                "games": 208,
+                "wins": 109,
+                "winrate": 52.4,
+                "kda": 2.43
+              },
+              {
                 "key": "TOP",
-                "games": 57,
-                "wins": 33,
-                "winrate": 57.9,
+                "games": 73,
+                "wins": 39,
+                "winrate": 53.4,
                 "kda": 2.16
               },
               {
-                "key": "MIDDLE",
-                "games": 34,
-                "wins": 22,
-                "winrate": 64.7,
-                "kda": 2.8
+                "key": "BOTTOM",
+                "games": 20,
+                "wins": 9,
+                "winrate": 45,
+                "kda": 1.53
               },
               {
                 "key": "JUNGLE",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.07
+                "games": 17,
+                "wins": 10,
+                "winrate": 58.8,
+                "kda": 3.51
               },
               {
-                "key": "BOTTOM",
-                "games": 1,
+                "key": "UTILITY",
+                "games": 2,
                 "wins": 1,
-                "winrate": 100,
-                "kda": 1.14
+                "winrate": 50,
+                "kda": 1.8
               }
             ],
             "gold": {
@@ -256,6 +358,7 @@
               "biggestThrow": {
                 "id": "EUW1_7945057655",
                 "t": 1786277292893,
+                "dur": 2838,
                 "champ": "Chogath",
                 "role": "MIDDLE",
                 "k": 8,
@@ -264,12 +367,12 @@
                 "win": false,
                 "kda": 1.78,
                 "val": 9019,
-                "dur": 2838,
                 "min": 34
               },
               "biggestComeback": {
                 "id": "EUW1_7950784887",
                 "t": 1786750085622,
+                "dur": 2123,
                 "champ": "Chogath",
                 "role": "TOP",
                 "k": 6,
@@ -278,12 +381,12 @@
                 "win": true,
                 "kda": 0.85,
                 "val": -8516,
-                "dur": 2123,
                 "min": 36
               },
               "biggestLead": {
                 "id": "EUW1_7956639524",
                 "t": 1787250873247,
+                "dur": 1789,
                 "champ": "Chogath",
                 "role": "TOP",
                 "k": 6,
@@ -292,12 +395,12 @@
                 "win": true,
                 "kda": 3,
                 "val": 17398,
-                "dur": 1789,
                 "min": 30
               },
               "best15": {
                 "id": "EUW1_7945231759",
                 "t": 1786287200001,
+                "dur": 2467,
                 "champ": "Chogath",
                 "role": "TOP",
                 "k": 13,
@@ -306,12 +409,12 @@
                 "win": true,
                 "kda": 3.86,
                 "val": 2477,
-                "dur": 2467,
                 "min": 30
               },
               "worst15": {
                 "id": "EUW1_7950875627",
                 "t": 1786756934151,
+                "dur": 1995,
                 "champ": "Chogath",
                 "role": "TOP",
                 "k": 11,
@@ -320,24 +423,30 @@
                 "win": false,
                 "kda": 2.14,
                 "val": -2663,
-                "dur": 1995,
                 "min": 31
               }
             },
             "byRole": {
               "TOP": {
-                "games": 57,
-                "wins": 33,
-                "winrate": 57.9,
+                "games": 73,
+                "wins": 39,
+                "winrate": 53.4,
                 "kda": 2.16,
                 "gd15": -143,
                 "champs": [
                   {
                     "key": "Chogath",
-                    "games": 55,
-                    "wins": 33,
-                    "winrate": 60,
-                    "kda": 2.23
+                    "games": 66,
+                    "wins": 38,
+                    "winrate": 57.6,
+                    "kda": 2.25
+                  },
+                  {
+                    "key": "Teemo",
+                    "games": 5,
+                    "wins": 1,
+                    "winrate": 20,
+                    "kda": 1.86
                   },
                   {
                     "key": "Vayne",
@@ -356,50 +465,143 @@
                 ]
               },
               "JUNGLE": {
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.07,
+                "games": 17,
+                "wins": 10,
+                "winrate": 58.8,
+                "kda": 3.51,
                 "gd15": -754,
                 "champs": [
                   {
                     "key": "Chogath",
-                    "games": 5,
-                    "wins": 2,
-                    "winrate": 40,
-                    "kda": 2.07
+                    "games": 15,
+                    "wins": 9,
+                    "winrate": 60,
+                    "kda": 3.56
+                  },
+                  {
+                    "key": "Naafiri",
+                    "games": 2,
+                    "wins": 1,
+                    "winrate": 50,
+                    "kda": 3.2
                   }
                 ]
               },
               "MIDDLE": {
-                "games": 34,
-                "wins": 22,
-                "winrate": 64.7,
-                "kda": 2.8,
+                "games": 208,
+                "wins": 109,
+                "winrate": 52.4,
+                "kda": 2.43,
                 "gd15": -226,
                 "champs": [
                   {
                     "key": "Chogath",
-                    "games": 34,
-                    "wins": 22,
-                    "winrate": 64.7,
-                    "kda": 2.8
+                    "games": 198,
+                    "wins": 106,
+                    "winrate": 53.5,
+                    "kda": 2.46
+                  },
+                  {
+                    "key": "Naafiri",
+                    "games": 7,
+                    "wins": 3,
+                    "winrate": 42.9,
+                    "kda": 2.33
+                  },
+                  {
+                    "key": "Tristana",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.8
+                  },
+                  {
+                    "key": "Kassadin",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 0.63
+                  },
+                  {
+                    "key": "Teemo",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.5
                   }
                 ]
               },
               "BOTTOM": {
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.14,
+                "games": 20,
+                "wins": 9,
+                "winrate": 45,
+                "kda": 1.53,
                 "gd15": 620,
                 "champs": [
                   {
+                    "key": "Chogath",
+                    "games": 6,
+                    "wins": 3,
+                    "winrate": 50,
+                    "kda": 2
+                  },
+                  {
                     "key": "KogMaw",
+                    "games": 5,
+                    "wins": 2,
+                    "winrate": 40,
+                    "kda": 1.3
+                  },
+                  {
+                    "key": "Brand",
+                    "games": 5,
+                    "wins": 2,
+                    "winrate": 40,
+                    "kda": 1.41
+                  },
+                  {
+                    "key": "MissFortune",
+                    "games": 2,
+                    "wins": 1,
+                    "winrate": 50,
+                    "kda": 1.11
+                  },
+                  {
+                    "key": "Hwei",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.38
+                  },
+                  {
+                    "key": "Twitch",
                     "games": 1,
                     "wins": 1,
                     "winrate": 100,
-                    "kda": 1.14
+                    "kda": 2.43
+                  }
+                ]
+              },
+              "UTILITY": {
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.8,
+                "gd15": null,
+                "champs": [
+                  {
+                    "key": "Leona",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.43
+                  },
+                  {
+                    "key": "Nautilus",
+                    "games": 1,
+                    "wins": 1,
+                    "winrate": 100,
+                    "kda": 2.13
                   }
                 ]
               }
@@ -417,7 +619,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-30T11:47:47.793Z",
+          "updatedAt": "2026-09-30T12:05:27.903Z",
           "lpHist": [
             [
               1790720384833,
@@ -2035,6 +2237,21 @@
               1785797594024,
               0,
               null
+            ],
+            [
+              1785795419780,
+              0,
+              null
+            ],
+            [
+              1785793834941,
+              1,
+              null
+            ],
+            [
+              1785791724323,
+              0,
+              null
             ]
           ]
         }
@@ -2199,6 +2416,7 @@
             "bestGame": {
               "id": "EUW1_7940228048",
               "t": 1785867543195,
+              "dur": 1748,
               "champ": "Braum",
               "role": "UTILITY",
               "k": 1,
@@ -2210,6 +2428,7 @@
             "worstGame": {
               "id": "EUW1_7922015722",
               "t": 1784366992542,
+              "dur": 1574,
               "champ": "Ornn",
               "role": "TOP",
               "k": 0,
@@ -2331,6 +2550,7 @@
               "biggestThrow": {
                 "id": "EUW1_7916217983",
                 "t": 1783863172906,
+                "dur": 2122,
                 "champ": "Alistar",
                 "role": "UTILITY",
                 "k": 2,
@@ -2339,12 +2559,12 @@
                 "win": false,
                 "kda": 1.75,
                 "val": 7142,
-                "dur": 2122,
                 "min": 27
               },
               "biggestComeback": {
                 "id": "EUW1_7908459681",
                 "t": 1783180125005,
+                "dur": 2098,
                 "champ": "TahmKench",
                 "role": "UTILITY",
                 "k": 0,
@@ -2353,12 +2573,12 @@
                 "win": true,
                 "kda": 2.33,
                 "val": -8723,
-                "dur": 2098,
                 "min": 35
               },
               "biggestLead": {
                 "id": "EUW1_7945442001",
                 "t": 1786296765582,
+                "dur": 1844,
                 "champ": "Senna",
                 "role": "UTILITY",
                 "k": 1,
@@ -2367,12 +2587,12 @@
                 "win": true,
                 "kda": 2.83,
                 "val": 16468,
-                "dur": 1844,
                 "min": 31
               },
               "best15": {
                 "id": "EUW1_7944377613",
                 "t": 1786211930127,
+                "dur": 910,
                 "champ": "Senna",
                 "role": "UTILITY",
                 "k": 2,
@@ -2381,12 +2601,12 @@
                 "win": true,
                 "kda": 11,
                 "val": 2076,
-                "dur": 910,
                 "min": 15
               },
               "worst15": {
                 "id": "EUW1_7917533951",
                 "t": 1783966278171,
+                "dur": 1587,
                 "champ": "TahmKench",
                 "role": "UTILITY",
                 "k": 1,
@@ -2395,7 +2615,6 @@
                 "win": false,
                 "kda": 1.71,
                 "val": -2594,
-                "dur": 1587,
                 "min": 6
               }
             },
@@ -2481,7 +2700,7 @@
             "dpm": "https://dpm.lol/xPATQ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPATQ-EUW"
           },
-          "updatedAt": "2026-09-30T11:47:51.538Z",
+          "updatedAt": "2026-09-30T12:05:31.606Z",
           "lpHist": [
             [
               1790720384833,
@@ -4262,6 +4481,7 @@
             "bestGame": {
               "id": "EUW1_7985669341",
               "t": 1789576037693,
+              "dur": 1592,
               "champ": "Galio",
               "role": "UTILITY",
               "k": 5,
@@ -4273,6 +4493,7 @@
             "worstGame": {
               "id": "EUW1_7979431751",
               "t": 1789062103979,
+              "dur": 1608,
               "champ": "Braum",
               "role": "UTILITY",
               "k": 0,
@@ -4513,6 +4734,7 @@
               "biggestThrow": {
                 "id": "EUW1_7980434640",
                 "t": 1789147660924,
+                "dur": 2631,
                 "champ": "Malphite",
                 "role": "UTILITY",
                 "k": 2,
@@ -4521,12 +4743,12 @@
                 "win": false,
                 "kda": 0.9,
                 "val": 7995,
-                "dur": 2631,
                 "min": 24
               },
               "biggestComeback": {
                 "id": "EUW1_7985064657",
                 "t": 1789506077681,
+                "dur": 2240,
                 "champ": "Elise",
                 "role": "UTILITY",
                 "k": 8,
@@ -4535,12 +4757,12 @@
                 "win": true,
                 "kda": 2.17,
                 "val": -7572,
-                "dur": 2240,
                 "min": 0
               },
               "biggestLead": {
                 "id": "EUW1_7971010086",
                 "t": 1788375738010,
+                "dur": 1758,
                 "champ": "Pyke",
                 "role": "UTILITY",
                 "k": 12,
@@ -4549,12 +4771,12 @@
                 "win": true,
                 "kda": 2.88,
                 "val": 17679,
-                "dur": 1758,
                 "min": 30
               },
               "best15": {
                 "id": "EUW1_7971010086",
                 "t": 1788375738010,
+                "dur": 1758,
                 "champ": "Pyke",
                 "role": "UTILITY",
                 "k": 12,
@@ -4563,12 +4785,12 @@
                 "win": true,
                 "kda": 2.88,
                 "val": 1953,
-                "dur": 1758,
                 "min": 30
               },
               "worst15": {
                 "id": "EUW1_7970274130",
                 "t": 1788303658142,
+                "dur": 2077,
                 "champ": "Nami",
                 "role": "UTILITY",
                 "k": 0,
@@ -4577,7 +4799,6 @@
                 "win": false,
                 "kda": 1,
                 "val": -3794,
-                "dur": 2077,
                 "min": 32
               }
             },
@@ -4686,7 +4907,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-09-30T11:47:55.305Z",
+          "updatedAt": "2026-09-30T12:05:35.369Z",
           "lpHist": [
             [
               1790720384833,
@@ -6473,6 +6694,7 @@
             "bestGame": {
               "id": "EUW1_7833228571",
               "t": 1777203411216,
+              "dur": 1675,
               "champ": "Diana",
               "role": "JUNGLE",
               "k": 22,
@@ -6484,6 +6706,7 @@
             "worstGame": {
               "id": "EUW1_7870501922",
               "t": 1780134614308,
+              "dur": 1685,
               "champ": "Diana",
               "role": "JUNGLE",
               "k": 0,
@@ -6866,6 +7089,7 @@
               "biggestThrow": {
                 "id": "EUW1_7966331199",
                 "t": 1788025835094,
+                "dur": 2296,
                 "champ": "Nocturne",
                 "role": "JUNGLE",
                 "k": 6,
@@ -6874,12 +7098,12 @@
                 "win": false,
                 "kda": 1.82,
                 "val": 6769,
-                "dur": 2296,
                 "min": 20
               },
               "biggestComeback": {
                 "id": "EUW1_7996894001",
                 "t": 1790532237689,
+                "dur": 2376,
                 "champ": "Zyra",
                 "role": "JUNGLE",
                 "k": 11,
@@ -6888,12 +7112,12 @@
                 "win": true,
                 "kda": 1.73,
                 "val": -7612,
-                "dur": 2376,
                 "min": 40
               },
               "biggestLead": {
                 "id": "EUW1_7969695753",
                 "t": 1788277667702,
+                "dur": 1346,
                 "champ": "Diana",
                 "role": "JUNGLE",
                 "k": 5,
@@ -6902,12 +7126,12 @@
                 "win": true,
                 "kda": 3.75,
                 "val": 17294,
-                "dur": 1346,
                 "min": 19
               },
               "best15": {
                 "id": "EUW1_7969788431",
                 "t": 1788283282252,
+                "dur": 1656,
                 "champ": "Briar",
                 "role": "JUNGLE",
                 "k": 12,
@@ -6916,12 +7140,12 @@
                 "win": false,
                 "kda": 3.4,
                 "val": 3237,
-                "dur": 1656,
                 "min": 0
               },
               "worst15": {
                 "id": "EUW1_7977410367",
                 "t": 1788889711474,
+                "dur": 1455,
                 "champ": "Briar",
                 "role": "JUNGLE",
                 "k": 2,
@@ -6930,7 +7154,6 @@
                 "win": false,
                 "kda": 0.89,
                 "val": -2373,
-                "dur": 1455,
                 "min": 7
               }
             },
@@ -7148,7 +7371,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-09-30T11:40:08.974Z",
+          "updatedAt": "2026-09-30T11:57:05.102Z",
           "lpHist": [
             [
               1790720384833,
@@ -8945,6 +9168,7 @@
             "bestGame": {
               "id": "EUW1_7938885906",
               "t": 1785764630036,
+              "dur": 1837,
               "champ": "Kaisa",
               "role": "BOTTOM",
               "k": 16,
@@ -8956,6 +9180,7 @@
             "worstGame": {
               "id": "EUW1_7940959980",
               "t": 1785935014238,
+              "dur": 1463,
               "champ": "Vayne",
               "role": "TOP",
               "k": 1,
@@ -9186,6 +9411,7 @@
               "biggestThrow": {
                 "id": "EUW1_7947393028",
                 "t": 1786465733015,
+                "dur": 2092,
                 "champ": "Ezreal",
                 "role": "BOTTOM",
                 "k": 11,
@@ -9194,12 +9420,12 @@
                 "win": false,
                 "kda": 3.8,
                 "val": 9822,
-                "dur": 2092,
                 "min": 29
               },
               "biggestComeback": {
                 "id": "EUW1_7983921529",
                 "t": 1789413966480,
+                "dur": 2431,
                 "champ": "Vayne",
                 "role": "BOTTOM",
                 "k": 11,
@@ -9208,12 +9434,12 @@
                 "win": true,
                 "kda": 2.33,
                 "val": -8636,
-                "dur": 2431,
                 "min": 41
               },
               "biggestLead": {
                 "id": "EUW1_7989506232",
                 "t": 1789905205752,
+                "dur": 1481,
                 "champ": "Xayah",
                 "role": "BOTTOM",
                 "k": 6,
@@ -9222,12 +9448,12 @@
                 "win": true,
                 "kda": 7,
                 "val": 15993,
-                "dur": 1481,
                 "min": 25
               },
               "best15": {
                 "id": "EUW1_7946470139",
                 "t": 1786383622599,
+                "dur": 1482,
                 "champ": "Caitlyn",
                 "role": "BOTTOM",
                 "k": 10,
@@ -9236,12 +9462,12 @@
                 "win": true,
                 "kda": 18,
                 "val": 5057,
-                "dur": 1482,
                 "min": 25
               },
               "worst15": {
                 "id": "EUW1_7990711017",
                 "t": 1790003547320,
+                "dur": 1653,
                 "champ": "Vayne",
                 "role": "TOP",
                 "k": 3,
@@ -9250,7 +9476,6 @@
                 "win": false,
                 "kda": 0.4,
                 "val": -4139,
-                "dur": 1653,
                 "min": 0
               }
             },
@@ -9412,7 +9637,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T11:40:05.436Z",
+          "updatedAt": "2026-09-30T11:56:33.323Z",
           "lpHist": [
             [
               1790720384833,
@@ -11074,17 +11299,17 @@
             "hotStreak": true
           },
           "stats": {
-            "games": 720,
-            "wins": 365,
-            "losses": 355,
-            "winrate": 50.7,
-            "avgK": 7.2,
+            "games": 837,
+            "wins": 423,
+            "losses": 414,
+            "winrate": 50.5,
+            "avgK": 7.3,
             "avgD": 7,
-            "avgA": 7,
+            "avgA": 6.9,
             "kda": 2.03,
             "csPerMin": 6.7,
-            "visPerMin": 0.8,
-            "dmgShare": 20.5,
+            "visPerMin": 0.79,
+            "dmgShare": 20.8,
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
@@ -11144,38 +11369,38 @@
             "topChamps": [
               {
                 "key": "Fizz",
-                "games": 184,
-                "wins": 106,
-                "winrate": 57.6,
-                "kda": 2.2
+                "games": 220,
+                "wins": 123,
+                "winrate": 55.9,
+                "kda": 2.19
               },
               {
                 "key": "Zed",
-                "games": 100,
-                "wins": 50,
-                "winrate": 50,
-                "kda": 2.09
+                "games": 116,
+                "wins": 59,
+                "winrate": 50.9,
+                "kda": 2.2
               },
               {
                 "key": "Malzahar",
-                "games": 92,
-                "wins": 52,
-                "winrate": 56.5,
-                "kda": 2.08
+                "games": 116,
+                "wins": 68,
+                "winrate": 58.6,
+                "kda": 2.14
               },
               {
                 "key": "LeeSin",
-                "games": 49,
+                "games": 51,
                 "wins": 24,
-                "winrate": 49,
-                "kda": 2.4
+                "winrate": 47.1,
+                "kda": 2.37
               },
               {
-                "key": "Galio",
-                "games": 34,
-                "wins": 17,
-                "winrate": 50,
-                "kda": 2.18
+                "key": "Graves",
+                "games": 41,
+                "wins": 20,
+                "winrate": 48.8,
+                "kda": 2.08
               }
             ],
             "bestChamp": {
@@ -11187,28 +11412,29 @@
             },
             "worstChamp": {
               "key": "Jax",
-              "games": 4,
+              "games": 5,
               "wins": 0,
               "winrate": 0,
-              "kda": 0.85
+              "kda": 0.86
             },
             "bestRole": {
-              "key": "MIDDLE",
-              "games": 542,
-              "wins": 282,
-              "winrate": 52,
-              "kda": 1.99
+              "key": "TOP",
+              "games": 32,
+              "wins": 17,
+              "winrate": 53.1,
+              "kda": 1.43
             },
             "worstRole": {
               "key": "UTILITY",
-              "games": 7,
+              "games": 8,
               "wins": 3,
-              "winrate": 42.9,
-              "kda": 2.13
+              "winrate": 37.5,
+              "kda": 1.92
             },
             "bestGame": {
               "id": "EUW1_7846045721",
               "t": 1778192919379,
+              "dur": 1904,
               "champ": "Fizz",
               "role": "MIDDLE",
               "k": 18,
@@ -11220,6 +11446,7 @@
             "worstGame": {
               "id": "EUW1_7938382430",
               "t": 1785704894520,
+              "dur": 1516,
               "champ": "Yasuo",
               "role": "MIDDLE",
               "k": 0,
@@ -11228,84 +11455,100 @@
               "win": false,
               "kda": 0
             },
-            "firstGameAt": 1772273377619,
+            "firstGameAt": 1769986840562,
             "lastGameAt": 1790514344916,
             "totals": {
-              "k": 5194,
-              "d": 5044,
-              "a": 5035
+              "k": 6112,
+              "d": 5855,
+              "a": 5771
             },
-            "dmgPerMin": 816,
-            "avgVision": 24.6,
+            "dmgPerMin": 826,
+            "avgVision": 24.5,
             "pentas": 0,
-            "firstBloods": 80,
+            "firstBloods": 97,
             "maxKills": 26,
             "maxDurationMin": 54.4,
             "avgKp": 42,
             "champs": [
               {
                 "key": "Fizz",
-                "games": 184,
-                "wins": 106,
-                "winrate": 57.6,
-                "kda": 2.2,
+                "games": 220,
+                "wins": 123,
+                "winrate": 55.9,
+                "kda": 2.19,
                 "csPerMin": 6.5
               },
               {
                 "key": "Zed",
-                "games": 100,
-                "wins": 50,
-                "winrate": 50,
-                "kda": 2.09,
-                "csPerMin": 6.5
+                "games": 116,
+                "wins": 59,
+                "winrate": 50.9,
+                "kda": 2.2,
+                "csPerMin": 6.4
               },
               {
                 "key": "Malzahar",
-                "games": 92,
-                "wins": 52,
-                "winrate": 56.5,
-                "kda": 2.08,
-                "csPerMin": 8.3
+                "games": 116,
+                "wins": 68,
+                "winrate": 58.6,
+                "kda": 2.14,
+                "csPerMin": 8.4
               },
               {
                 "key": "LeeSin",
-                "games": 49,
+                "games": 51,
                 "wins": 24,
-                "winrate": 49,
-                "kda": 2.4,
+                "winrate": 47.1,
+                "kda": 2.37,
                 "csPerMin": 6
               },
               {
+                "key": "Graves",
+                "games": 41,
+                "wins": 20,
+                "winrate": 48.8,
+                "kda": 2.08,
+                "csPerMin": 7.3
+              },
+              {
                 "key": "Galio",
-                "games": 34,
-                "wins": 17,
+                "games": 36,
+                "wins": 18,
                 "winrate": 50,
                 "kda": 2.18,
                 "csPerMin": 6
               },
               {
-                "key": "Graves",
-                "games": 34,
-                "wins": 18,
-                "winrate": 52.9,
-                "kda": 2.16,
-                "csPerMin": 7.3
-              },
-              {
                 "key": "Yasuo",
-                "games": 27,
-                "wins": 12,
-                "winrate": 44.4,
-                "kda": 0.97,
-                "csPerMin": 7.1
+                "games": 32,
+                "wins": 14,
+                "winrate": 43.8,
+                "kda": 1.04,
+                "csPerMin": 7.2
               },
               {
                 "key": "TwistedFate",
-                "games": 26,
-                "wins": 10,
-                "winrate": 38.5,
-                "kda": 1.62,
+                "games": 27,
+                "wins": 11,
+                "winrate": 40.7,
+                "kda": 1.64,
                 "csPerMin": 6.5
+              },
+              {
+                "key": "Teemo",
+                "games": 21,
+                "wins": 11,
+                "winrate": 52.4,
+                "kda": 1.35,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "Tristana",
+                "games": 20,
+                "wins": 8,
+                "winrate": 40,
+                "kda": 1.26,
+                "csPerMin": 6.8
               },
               {
                 "key": "Viktor",
@@ -11316,14 +11559,6 @@
                 "csPerMin": 7
               },
               {
-                "key": "Tristana",
-                "games": 17,
-                "wins": 7,
-                "winrate": 41.2,
-                "kda": 1.23,
-                "csPerMin": 6.9
-              },
-              {
                 "key": "Veigar",
                 "games": 17,
                 "wins": 6,
@@ -11332,12 +11567,12 @@
                 "csPerMin": 6.8
               },
               {
-                "key": "Teemo",
-                "games": 16,
-                "wins": 8,
-                "winrate": 50,
-                "kda": 1.39,
-                "csPerMin": 6.8
+                "key": "Ziggs",
+                "games": 15,
+                "wins": 9,
+                "winrate": 60,
+                "kda": 2.64,
+                "csPerMin": 7.3
               },
               {
                 "key": "JarvanIV",
@@ -11356,6 +11591,14 @@
                 "csPerMin": 7
               },
               {
+                "key": "Rumble",
+                "games": 13,
+                "wins": 7,
+                "winrate": 53.8,
+                "kda": 2.23,
+                "csPerMin": 6.4
+              },
+              {
                 "key": "FiddleSticks",
                 "games": 12,
                 "wins": 5,
@@ -11364,28 +11607,12 @@
                 "csPerMin": 6.2
               },
               {
-                "key": "Rumble",
-                "games": 12,
-                "wins": 6,
-                "winrate": 50,
-                "kda": 2.2,
-                "csPerMin": 6.4
-              },
-              {
-                "key": "Ziggs",
-                "games": 10,
-                "wins": 7,
-                "winrate": 70,
-                "kda": 3,
-                "csPerMin": 7.4
-              },
-              {
                 "key": "Elise",
-                "games": 6,
+                "games": 8,
                 "wins": 4,
-                "winrate": 66.7,
-                "kda": 2.5,
-                "csPerMin": 5.9
+                "winrate": 50,
+                "kda": 2.31,
+                "csPerMin": 5.7
               },
               {
                 "key": "Nasus",
@@ -11397,11 +11624,19 @@
               },
               {
                 "key": "Trundle",
-                "games": 4,
+                "games": 5,
                 "wins": 2,
-                "winrate": 50,
-                "kda": 2.73,
+                "winrate": 40,
+                "kda": 2.44,
                 "csPerMin": 6.4
+              },
+              {
+                "key": "Jax",
+                "games": 5,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.86,
+                "csPerMin": 6.1
               },
               {
                 "key": "Ahri",
@@ -11412,12 +11647,20 @@
                 "csPerMin": 6.8
               },
               {
-                "key": "Jax",
+                "key": "Thresh",
                 "games": 4,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.85,
-                "csPerMin": 5.9
+                "wins": 1,
+                "winrate": 25,
+                "kda": 1.67,
+                "csPerMin": 1.1
+              },
+              {
+                "key": "Yone",
+                "games": 4,
+                "wins": 1,
+                "winrate": 25,
+                "kda": 0.86,
+                "csPerMin": 7.3
               },
               {
                 "key": "Maokai",
@@ -11428,28 +11671,28 @@
                 "csPerMin": 4
               },
               {
-                "key": "Thresh",
-                "games": 3,
-                "wins": 1,
-                "winrate": 33.3,
-                "kda": 2.07,
-                "csPerMin": 1.2
-              },
-              {
-                "key": "Yone",
-                "games": 3,
-                "wins": 1,
-                "winrate": 33.3,
-                "kda": 0.92,
-                "csPerMin": 7.5
-              },
-              {
                 "key": "Khazix",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.36,
+                "csPerMin": 6.3
+              },
+              {
+                "key": "Kassadin",
                 "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.24,
-                "csPerMin": 6.5
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.23,
+                "csPerMin": 5.7
+              },
+              {
+                "key": "Morgana",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.36,
+                "csPerMin": 4.2
               },
               {
                 "key": "MasterYi",
@@ -11476,22 +11719,6 @@
                 "csPerMin": 0.9
               },
               {
-                "key": "Kassadin",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1,
-                "csPerMin": 5.9
-              },
-              {
-                "key": "Morgana",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.62,
-                "csPerMin": 1
-              },
-              {
                 "key": "Ivern",
                 "games": 1,
                 "wins": 1,
@@ -11514,36 +11741,44 @@
                 "winrate": 100,
                 "kda": 3.38,
                 "csPerMin": 1
+              },
+              {
+                "key": "Garen",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.44,
+                "csPerMin": 5.6
               }
             ],
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 542,
-                "wins": 282,
-                "winrate": 52,
-                "kda": 1.99
+                "games": 635,
+                "wins": 332,
+                "winrate": 52.3,
+                "kda": 2.02
               },
               {
                 "key": "JUNGLE",
-                "games": 144,
-                "wins": 67,
-                "winrate": 46.5,
-                "kda": 2.27
+                "games": 160,
+                "wins": 71,
+                "winrate": 44.4,
+                "kda": 2.21
               },
               {
                 "key": "TOP",
-                "games": 25,
-                "wins": 13,
-                "winrate": 52,
-                "kda": 1.52
+                "games": 32,
+                "wins": 17,
+                "winrate": 53.1,
+                "kda": 1.43
               },
               {
                 "key": "UTILITY",
-                "games": 7,
+                "games": 8,
                 "wins": 3,
-                "winrate": 42.9,
-                "kda": 2.13
+                "winrate": 37.5,
+                "kda": 1.92
               },
               {
                 "key": "BOTTOM",
@@ -11562,6 +11797,7 @@
               "biggestThrow": {
                 "id": "EUW1_7995462041",
                 "t": 1790429925770,
+                "dur": 3064,
                 "champ": "Zed",
                 "role": "MIDDLE",
                 "k": 21,
@@ -11570,12 +11806,12 @@
                 "win": false,
                 "kda": 2.31,
                 "val": 12873,
-                "dur": 3064,
                 "min": 40
               },
               "biggestComeback": {
                 "id": "EUW1_7995585235",
                 "t": 1790436309524,
+                "dur": 1927,
                 "champ": "Malzahar",
                 "role": "MIDDLE",
                 "k": 5,
@@ -11584,12 +11820,12 @@
                 "win": true,
                 "kda": 1.63,
                 "val": -6608,
-                "dur": 1927,
                 "min": 33
               },
               "biggestLead": {
                 "id": "EUW1_7972411367",
                 "t": 1788478101452,
+                "dur": 1833,
                 "champ": "Zed",
                 "role": "MIDDLE",
                 "k": 9,
@@ -11598,12 +11834,12 @@
                 "win": true,
                 "kda": 2.67,
                 "val": 16719,
-                "dur": 1833,
                 "min": 31
               },
               "best15": {
                 "id": "EUW1_7995462041",
                 "t": 1790429925770,
+                "dur": 3064,
                 "champ": "Zed",
                 "role": "MIDDLE",
                 "k": 21,
@@ -11612,12 +11848,12 @@
                 "win": false,
                 "kda": 2.31,
                 "val": 3833,
-                "dur": 3064,
                 "min": 40
               },
               "worst15": {
                 "id": "EUW1_7974117599",
                 "t": 1788627788272,
+                "dur": 1645,
                 "champ": "Khazix",
                 "role": "JUNGLE",
                 "k": 3,
@@ -11626,24 +11862,23 @@
                 "win": false,
                 "kda": 0.5,
                 "val": -3336,
-                "dur": 1645,
                 "min": 3
               }
             },
             "byRole": {
               "TOP": {
-                "games": 25,
-                "wins": 13,
-                "winrate": 52,
-                "kda": 1.52,
+                "games": 32,
+                "wins": 17,
+                "winrate": 53.1,
+                "kda": 1.43,
                 "gd15": -1812,
                 "champs": [
                   {
                     "key": "Teemo",
-                    "games": 14,
-                    "wins": 8,
-                    "winrate": 57.1,
-                    "kda": 1.41
+                    "games": 18,
+                    "wins": 11,
+                    "winrate": 61.1,
+                    "kda": 1.37
                   },
                   {
                     "key": "Nasus",
@@ -11654,10 +11889,10 @@
                   },
                   {
                     "key": "Jax",
-                    "games": 3,
+                    "games": 4,
                     "wins": 0,
                     "winrate": 0,
-                    "kda": 0.92
+                    "kda": 0.91
                   },
                   {
                     "key": "Maokai",
@@ -11672,36 +11907,43 @@
                     "wins": 1,
                     "winrate": 100,
                     "kda": 3.5
+                  },
+                  {
+                    "key": "Garen",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 0.44
                   }
                 ]
               },
               "JUNGLE": {
-                "games": 144,
-                "wins": 67,
-                "winrate": 46.5,
-                "kda": 2.27,
+                "games": 160,
+                "wins": 71,
+                "winrate": 44.4,
+                "kda": 2.21,
                 "gd15": -291,
                 "champs": [
                   {
                     "key": "LeeSin",
-                    "games": 49,
+                    "games": 51,
                     "wins": 24,
-                    "winrate": 49,
-                    "kda": 2.4
+                    "winrate": 47.1,
+                    "kda": 2.37
                   },
                   {
                     "key": "Graves",
-                    "games": 34,
-                    "wins": 18,
-                    "winrate": 52.9,
-                    "kda": 2.16
+                    "games": 41,
+                    "wins": 20,
+                    "winrate": 48.8,
+                    "kda": 2.08
                   },
                   {
                     "key": "Zed",
-                    "games": 18,
-                    "wins": 7,
-                    "winrate": 38.9,
-                    "kda": 2.03
+                    "games": 21,
+                    "wins": 8,
+                    "winrate": 38.1,
+                    "kda": 2.06
                   },
                   {
                     "key": "JarvanIV",
@@ -11719,61 +11961,61 @@
                   },
                   {
                     "key": "Elise",
-                    "games": 6,
+                    "games": 8,
                     "wins": 4,
-                    "winrate": 66.7,
-                    "kda": 2.5
+                    "winrate": 50,
+                    "kda": 2.31
                   }
                 ]
               },
               "MIDDLE": {
-                "games": 542,
-                "wins": 282,
-                "winrate": 52,
-                "kda": 1.99,
+                "games": 635,
+                "wins": 332,
+                "winrate": 52.3,
+                "kda": 2.02,
                 "gd15": 342,
                 "champs": [
                   {
                     "key": "Fizz",
-                    "games": 184,
-                    "wins": 106,
-                    "winrate": 57.6,
-                    "kda": 2.2
+                    "games": 220,
+                    "wins": 123,
+                    "winrate": 55.9,
+                    "kda": 2.19
                   },
                   {
                     "key": "Malzahar",
-                    "games": 91,
-                    "wins": 52,
-                    "winrate": 57.1,
-                    "kda": 2.1
+                    "games": 115,
+                    "wins": 68,
+                    "winrate": 59.1,
+                    "kda": 2.15
                   },
                   {
                     "key": "Zed",
-                    "games": 82,
-                    "wins": 43,
-                    "winrate": 52.4,
-                    "kda": 2.11
+                    "games": 95,
+                    "wins": 51,
+                    "winrate": 53.7,
+                    "kda": 2.23
                   },
                   {
                     "key": "Galio",
-                    "games": 34,
-                    "wins": 17,
+                    "games": 36,
+                    "wins": 18,
                     "winrate": 50,
                     "kda": 2.18
                   },
                   {
                     "key": "Yasuo",
-                    "games": 27,
-                    "wins": 12,
-                    "winrate": 44.4,
-                    "kda": 0.97
+                    "games": 32,
+                    "wins": 14,
+                    "winrate": 43.8,
+                    "kda": 1.04
                   },
                   {
                     "key": "TwistedFate",
-                    "games": 25,
-                    "wins": 9,
-                    "winrate": 36,
-                    "kda": 1.58
+                    "games": 26,
+                    "wins": 10,
+                    "winrate": 38.5,
+                    "kda": 1.6
                   }
                 ]
               },
@@ -11801,18 +12043,18 @@
                 ]
               },
               "UTILITY": {
-                "games": 7,
+                "games": 8,
                 "wins": 3,
-                "winrate": 42.9,
-                "kda": 2.13,
+                "winrate": 37.5,
+                "kda": 1.92,
                 "gd15": null,
                 "champs": [
                   {
                     "key": "Thresh",
-                    "games": 3,
+                    "games": 4,
                     "wins": 1,
-                    "winrate": 33.3,
-                    "kda": 2.07
+                    "winrate": 25,
+                    "kda": 1.67
                   },
                   {
                     "key": "Blitzcrank",
@@ -11858,7 +12100,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-09-30T11:47:44.288Z",
+          "updatedAt": "2026-09-30T12:00:34.769Z",
           "lpHist": [
             [
               1790720384833,
@@ -13655,6 +13897,7 @@
             "bestGame": {
               "id": "EUW1_7758951875",
               "t": 1772388271019,
+              "dur": 1882,
               "champ": "Malzahar",
               "role": "MIDDLE",
               "k": 9,
@@ -13666,6 +13909,7 @@
             "worstGame": {
               "id": "EUW1_7759176975",
               "t": 1772394517071,
+              "dur": 1029,
               "champ": "Sivir",
               "role": "MIDDLE",
               "k": 0,
@@ -14041,6 +14285,7 @@
               "biggestThrow": {
                 "id": "EUW1_7983791281",
                 "t": 1789408812581,
+                "dur": 2181,
                 "champ": "Veigar",
                 "role": "MIDDLE",
                 "k": 10,
@@ -14049,12 +14294,12 @@
                 "win": false,
                 "kda": 2.33,
                 "val": 8053,
-                "dur": 2181,
                 "min": 27
               },
               "biggestComeback": {
                 "id": "EUW1_7983732677",
                 "t": 1789405382064,
+                "dur": 2178,
                 "champ": "Syndra",
                 "role": "MIDDLE",
                 "k": 5,
@@ -14063,12 +14308,12 @@
                 "win": true,
                 "kda": 3,
                 "val": -7946,
-                "dur": 2178,
                 "min": 37
               },
               "biggestLead": {
                 "id": "EUW1_7997904200",
                 "t": 1790621022424,
+                "dur": 2099,
                 "champ": "Teemo",
                 "role": "TOP",
                 "k": 4,
@@ -14077,12 +14322,12 @@
                 "win": true,
                 "kda": 2,
                 "val": 18259,
-                "dur": 2099,
                 "min": 35
               },
               "best15": {
                 "id": "EUW1_7987817077",
                 "t": 1789759513102,
+                "dur": 1768,
                 "champ": "Heimerdinger",
                 "role": "TOP",
                 "k": 4,
@@ -14091,12 +14336,12 @@
                 "win": true,
                 "kda": 2.67,
                 "val": 3446,
-                "dur": 1768,
                 "min": 22
               },
               "worst15": {
                 "id": "EUW1_7938092064",
                 "t": 1785692376041,
+                "dur": 1613,
                 "champ": "Teemo",
                 "role": "TOP",
                 "k": 2,
@@ -14105,7 +14350,6 @@
                 "win": true,
                 "kda": 2.2,
                 "val": -4528,
-                "dur": 1613,
                 "min": 27
               }
             },
@@ -14307,7 +14551,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-09-30T11:40:12.713Z",
+          "updatedAt": "2026-09-30T11:57:40.990Z",
           "lpHist": [
             [
               1790720384833,
