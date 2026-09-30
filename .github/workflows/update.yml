@@ -1,8 +1,11 @@
 name: Actualizar datos
 
+# GitHub se salta muchas ejecuciones de los cron frecuentes, así que en vez de depender de
+# un cron cada 10 min, cada ejecución se queda viva ~5h50m actualizando cada ~8 min.
+# El cron horario solo sirve para relanzarla (si ya hay una en marcha, la nueva espera en cola).
 on:
   schedule:
-    - cron: '*/10 * * * *'   # cada 10 min (GitHub puede retrasarlo unos minutos)
+    - cron: '17 * * * *'
   workflow_dispatch:          # botón "Run workflow" para lanzarlo a mano
 
 permissions:
@@ -15,7 +18,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 358
     steps:
       - uses: actions/checkout@v4
 
@@ -23,19 +26,26 @@ jobs:
         with:
           node-version: 22
 
-      - name: Consultar la API de Riot
-        run: node scripts/update.mjs
+      - name: Actualizar en bucle
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
-
-      - name: Guardar cambios
+          LOOP_SECONDS: 21000   # ~5h50m
+          SLEEP_SECONDS: 480    # 8 min entre actualizaciones
         run: |
           git config user.name "soloq-bot"
           git config user.email "soloq-bot@users.noreply.github.com"
-          git add data
-          if git diff --cached --quiet; then
-            echo "Sin cambios que guardar"
-          else
-            git commit -m "Actualizar datos"
-            git push
-          fi
+          end=$((SECONDS + LOOP_SECONDS))
+          while [ $SECONDS -lt $end ]; do
+            # Coger cambios de código o datos subidos mientras tanto
+            git pull -q --rebase origin main || { git rebase --abort 2>/dev/null; git reset -q --hard origin/main; }
+            node scripts/update.mjs || echo "::warning::La actualización ha fallado; se reintenta en el siguiente ciclo"
+            git add data
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Actualizar datos"
+              for i in 1 2 3; do
+                git pull -q --rebase origin main && git push -q origin HEAD:main && break
+                sleep 5
+              done
+            fi
+            sleep $SLEEP_SECONDS
+          done

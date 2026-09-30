@@ -7,7 +7,7 @@ OP.GG, U.GG, DPM.LOL y LeagueOfGraphs.
 ## Cómo funciona
 
 ```
-GitHub Action (cada 10 min) ─► scripts/update.mjs ─► API de Riot
+GitHub Action (bucle de ~6 h, actualiza cada ~8 min) ─► scripts/update.mjs ─► API de Riot
                                      │
                                      ▼
                      data/data.json + data/history/*.json  (commit al repo)
@@ -70,7 +70,7 @@ aplicación de Access que permita solo los emails de tus amigos.
 ## Personalizar
 
 - Título y subtítulo: `config/players.json` (`title`, `subtitle`).
-- Frecuencia: `cron` en `.github/workflows/update.yml` (10 min; en repos públicos Actions es gratis).
+- Frecuencia: `cron` en `.github/workflows/update.yml` (bucle con `SLEEP_SECONDS`; en repos públicos Actions es gratis).
 - Partidas iniciales por cuenta: variable `MATCH_COUNT` (por defecto 40, máximo 100).
 - Colores y layout: `style.css`. Récords del grupo: función `buildRecords` en `app.js`.
 - Enlaces extra por jugador (por ejemplo Discord o Twitter): añade `"links": [{ "label": "Discord", "url": "…" }]`
