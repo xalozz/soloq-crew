@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T07:55:30.924Z",
+  "generatedAt": "2026-09-30T09:12:15.811Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -28,25 +28,25 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 38,
-            "wins": 25,
-            "losses": 13,
-            "winrate": 65.8,
-            "avgK": 5.4,
-            "avgD": 4.8,
-            "avgA": 5.5,
-            "kda": 2.27,
-            "csPerMin": 7.5,
-            "visPerMin": 1.35,
-            "dmgShare": 18.6,
-            "avgDurationMin": 27.5,
+            "games": 97,
+            "wins": 58,
+            "losses": 39,
+            "winrate": 59.8,
+            "avgK": 6.3,
+            "avgD": 5,
+            "avgA": 5.4,
+            "kda": 2.35,
+            "csPerMin": 7.3,
+            "visPerMin": 1.31,
+            "dmgShare": 20.3,
+            "avgDurationMin": 29.1,
             "streak": {
               "current": {
                 "type": "L",
                 "count": 2
               },
-              "bestWin": 7,
-              "worstLoss": 2
+              "bestWin": 9,
+              "worstLoss": 5
             },
             "form": [
               "L",
@@ -82,7 +82,7 @@
               0,
               0
             ],
-            "mainRole": "MIDDLE",
+            "mainRole": "TOP",
             "last10": {
               "games": 10,
               "wins": 6,
@@ -98,10 +98,10 @@
             "topChamps": [
               {
                 "key": "Chogath",
-                "games": 36,
-                "wins": 24,
-                "winrate": 66.7,
-                "kda": 2.4
+                "games": 94,
+                "wins": 57,
+                "winrate": 60.6,
+                "kda": 2.41
               },
               {
                 "key": "KogMaw",
@@ -116,74 +116,81 @@
                 "wins": 0,
                 "winrate": 0,
                 "kda": 0.14
+              },
+              {
+                "key": "Quinn",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.57
               }
             ],
             "bestChamp": {
               "key": "Chogath",
-              "games": 36,
-              "wins": 24,
-              "winrate": 66.7,
-              "kda": 2.4
+              "games": 94,
+              "wins": 57,
+              "winrate": 60.6,
+              "kda": 2.41
             },
             "worstChamp": null,
             "bestRole": {
-              "key": "TOP",
-              "games": 16,
-              "wins": 11,
-              "winrate": 68.8,
-              "kda": 2.03
+              "key": "MIDDLE",
+              "games": 34,
+              "wins": 22,
+              "winrate": 64.7,
+              "kda": 2.8
             },
             "worstRole": {
-              "key": "MIDDLE",
-              "games": 20,
-              "wins": 13,
-              "winrate": 65,
-              "kda": 2.57
+              "key": "JUNGLE",
+              "games": 5,
+              "wins": 2,
+              "winrate": 40,
+              "kda": 2.07
             },
             "bestGame": {
-              "id": "EUW1_7952266296",
-              "t": 1786889900008,
+              "id": "EUW1_7943426184",
+              "t": 1786132144789,
               "champ": "Chogath",
               "role": "MIDDLE",
-              "k": 7,
+              "k": 10,
               "d": 1,
-              "a": 5,
+              "a": 7,
               "win": true,
-              "kda": 12
+              "kda": 17
             },
             "worstGame": {
-              "id": "EUW1_7953168799",
-              "t": 1786962731098,
-              "champ": "Vayne",
-              "role": "TOP",
-              "k": 1,
-              "d": 7,
+              "id": "EUW1_7939641244",
+              "t": 1785803050910,
+              "champ": "Chogath",
+              "role": "JUNGLE",
+              "k": 0,
+              "d": 0,
               "a": 0,
-              "win": false,
-              "kda": 0.14
+              "win": true,
+              "kda": 0
             },
-            "firstGameAt": 1786818101307,
+            "firstGameAt": 1785797594024,
             "lastGameAt": 1789771199194,
             "totals": {
-              "k": 207,
-              "d": 184,
-              "a": 210
+              "k": 607,
+              "d": 481,
+              "a": 522
             },
-            "dmgPerMin": 712,
-            "avgVision": 37.1,
+            "dmgPerMin": 783,
+            "avgVision": 38.1,
             "pentas": 0,
-            "firstBloods": 3,
+            "firstBloods": 5,
             "maxKills": 16,
-            "maxDurationMin": 42.8,
-            "avgKp": 36,
+            "maxDurationMin": 47.3,
+            "avgKp": 38,
             "champs": [
               {
                 "key": "Chogath",
-                "games": 36,
-                "wins": 24,
-                "winrate": 66.7,
-                "kda": 2.4,
-                "csPerMin": 7.5
+                "games": 94,
+                "wins": 57,
+                "winrate": 60.6,
+                "kda": 2.41,
+                "csPerMin": 7.3
               },
               {
                 "key": "KogMaw",
@@ -200,22 +207,37 @@
                 "winrate": 0,
                 "kda": 0.14,
                 "csPerMin": 7.6
+              },
+              {
+                "key": "Quinn",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.57,
+                "csPerMin": 7.3
               }
             ],
             "roles": [
               {
-                "key": "MIDDLE",
-                "games": 20,
-                "wins": 13,
-                "winrate": 65,
-                "kda": 2.57
+                "key": "TOP",
+                "games": 57,
+                "wins": 33,
+                "winrate": 57.9,
+                "kda": 2.16
               },
               {
-                "key": "TOP",
-                "games": 16,
-                "wins": 11,
-                "winrate": 68.8,
-                "kda": 2.03
+                "key": "MIDDLE",
+                "games": 34,
+                "wins": 22,
+                "winrate": 64.7,
+                "kda": 2.8
+              },
+              {
+                "key": "JUNGLE",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 2.07
               },
               {
                 "key": "BOTTOM",
@@ -223,48 +245,41 @@
                 "wins": 1,
                 "winrate": 100,
                 "kda": 1.14
-              },
-              {
-                "key": "JUNGLE",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.18
               }
             ],
             "gold": {
-              "games": 38,
-              "avgGd15": -224,
-              "avgTgd15": 727,
-              "throws": 1,
-              "comebacks": 4,
+              "games": 97,
+              "avgGd15": -190,
+              "avgTgd15": 38,
+              "throws": 3,
+              "comebacks": 11,
               "biggestThrow": {
-                "id": "EUW1_7957343149",
-                "t": 1787320220769,
-                "champ": "Chogath",
-                "role": "JUNGLE",
-                "k": 16,
-                "d": 11,
-                "a": 8,
-                "win": false,
-                "kda": 2.18,
-                "val": 6547,
-                "dur": 2569,
-                "min": 24
-              },
-              "biggestComeback": {
-                "id": "EUW1_7974900125",
-                "t": 1788695010291,
+                "id": "EUW1_7945057655",
+                "t": 1786277292893,
                 "champ": "Chogath",
                 "role": "MIDDLE",
-                "k": 7,
-                "d": 6,
-                "a": 4,
+                "k": 8,
+                "d": 9,
+                "a": 8,
+                "win": false,
+                "kda": 1.78,
+                "val": 9019,
+                "dur": 2838,
+                "min": 34
+              },
+              "biggestComeback": {
+                "id": "EUW1_7950784887",
+                "t": 1786750085622,
+                "champ": "Chogath",
+                "role": "TOP",
+                "k": 6,
+                "d": 13,
+                "a": 5,
                 "win": true,
-                "kda": 1.83,
-                "val": -8207,
-                "dur": 1860,
-                "min": 14
+                "kda": 0.85,
+                "val": -8516,
+                "dur": 2123,
+                "min": 36
               },
               "biggestLead": {
                 "id": "EUW1_7956639524",
@@ -281,31 +296,31 @@
                 "min": 30
               },
               "best15": {
-                "id": "EUW1_7975986215",
-                "t": 1788776824573,
+                "id": "EUW1_7945231759",
+                "t": 1786287200001,
                 "champ": "Chogath",
                 "role": "TOP",
-                "k": 5,
-                "d": 2,
-                "a": 1,
+                "k": 13,
+                "d": 7,
+                "a": 14,
                 "win": true,
-                "kda": 3,
-                "val": 2392,
-                "dur": 920,
-                "min": 15
+                "kda": 3.86,
+                "val": 2477,
+                "dur": 2467,
+                "min": 30
               },
               "worst15": {
-                "id": "EUW1_7983228828",
-                "t": 1789341153166,
+                "id": "EUW1_7950875627",
+                "t": 1786756934151,
                 "champ": "Chogath",
                 "role": "TOP",
-                "k": 3,
+                "k": 11,
                 "d": 7,
-                "a": 11,
-                "win": true,
-                "kda": 2,
-                "val": -2226,
-                "dur": 1812,
+                "a": 4,
+                "win": false,
+                "kda": 2.14,
+                "val": -2663,
+                "dur": 1995,
                 "min": 31
               }
             },
@@ -322,7 +337,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:23.413Z",
+          "updatedAt": "2026-09-30T09:07:03.789Z",
           "lpHist": [
             [
               1790720384833,
@@ -1454,6 +1469,493 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1789771199194,
+              0,
+              null
+            ],
+            [
+              1789503855412,
+              0,
+              null
+            ],
+            [
+              1789501627339,
+              1,
+              null
+            ],
+            [
+              1789427223055,
+              1,
+              null
+            ],
+            [
+              1789341153166,
+              1,
+              null
+            ],
+            [
+              1789034410877,
+              0,
+              null
+            ],
+            [
+              1789033105152,
+              1,
+              null
+            ],
+            [
+              1789031384832,
+              1,
+              null
+            ],
+            [
+              1788776824573,
+              1,
+              null
+            ],
+            [
+              1788775435550,
+              0,
+              null
+            ],
+            [
+              1788695010291,
+              1,
+              null
+            ],
+            [
+              1788692610768,
+              1,
+              null
+            ],
+            [
+              1788602236108,
+              0,
+              null
+            ],
+            [
+              1788022407371,
+              1,
+              null
+            ],
+            [
+              1788020626515,
+              1,
+              null
+            ],
+            [
+              1787320220769,
+              0,
+              null
+            ],
+            [
+              1787316781494,
+              1,
+              null
+            ],
+            [
+              1787313899756,
+              0,
+              null
+            ],
+            [
+              1787311934401,
+              0,
+              null
+            ],
+            [
+              1787307998359,
+              1,
+              null
+            ],
+            [
+              1787306616202,
+              0,
+              null
+            ],
+            [
+              1787303563695,
+              1,
+              null
+            ],
+            [
+              1787255684700,
+              1,
+              null
+            ],
+            [
+              1787250873247,
+              1,
+              null
+            ],
+            [
+              1787248663973,
+              0,
+              null
+            ],
+            [
+              1787246839554,
+              1,
+              null
+            ],
+            [
+              1787244765448,
+              0,
+              null
+            ],
+            [
+              1787240566671,
+              1,
+              null
+            ],
+            [
+              1786962731098,
+              0,
+              null
+            ],
+            [
+              1786960658681,
+              1,
+              null
+            ],
+            [
+              1786898448334,
+              0,
+              null
+            ],
+            [
+              1786896550494,
+              1,
+              null
+            ],
+            [
+              1786894734272,
+              1,
+              null
+            ],
+            [
+              1786892255170,
+              1,
+              null
+            ],
+            [
+              1786889900008,
+              1,
+              null
+            ],
+            [
+              1786836392910,
+              1,
+              null
+            ],
+            [
+              1786834343632,
+              1,
+              null
+            ],
+            [
+              1786818101307,
+              1,
+              null
+            ],
+            [
+              1786815911821,
+              1,
+              null
+            ],
+            [
+              1786814605752,
+              1,
+              null
+            ],
+            [
+              1786792721581,
+              0,
+              null
+            ],
+            [
+              1786789631004,
+              1,
+              null
+            ],
+            [
+              1786787827436,
+              1,
+              null
+            ],
+            [
+              1786756934151,
+              0,
+              null
+            ],
+            [
+              1786754018420,
+              1,
+              null
+            ],
+            [
+              1786752090335,
+              1,
+              null
+            ],
+            [
+              1786750085622,
+              1,
+              null
+            ],
+            [
+              1786747404799,
+              1,
+              null
+            ],
+            [
+              1786745246136,
+              0,
+              null
+            ],
+            [
+              1786743090787,
+              1,
+              null
+            ],
+            [
+              1786740663224,
+              1,
+              null
+            ],
+            [
+              1786544532428,
+              1,
+              null
+            ],
+            [
+              1786542408749,
+              0,
+              null
+            ],
+            [
+              1786529897902,
+              1,
+              null
+            ],
+            [
+              1786527904772,
+              0,
+              null
+            ],
+            [
+              1786525939251,
+              0,
+              null
+            ],
+            [
+              1786491446147,
+              0,
+              null
+            ],
+            [
+              1786489051397,
+              0,
+              null
+            ],
+            [
+              1786486625313,
+              1,
+              null
+            ],
+            [
+              1786484529982,
+              0,
+              null
+            ],
+            [
+              1786482982424,
+              0,
+              null
+            ],
+            [
+              1786480707310,
+              0,
+              null
+            ],
+            [
+              1786479023458,
+              0,
+              null
+            ],
+            [
+              1786471835167,
+              0,
+              null
+            ],
+            [
+              1786404950964,
+              1,
+              null
+            ],
+            [
+              1786402937023,
+              0,
+              null
+            ],
+            [
+              1786400757409,
+              1,
+              null
+            ],
+            [
+              1786398215290,
+              0,
+              null
+            ],
+            [
+              1786395856021,
+              1,
+              null
+            ],
+            [
+              1786392950721,
+              0,
+              null
+            ],
+            [
+              1786390404897,
+              1,
+              null
+            ],
+            [
+              1786387459399,
+              1,
+              null
+            ],
+            [
+              1786302225698,
+              0,
+              null
+            ],
+            [
+              1786299660956,
+              1,
+              null
+            ],
+            [
+              1786296562930,
+              1,
+              null
+            ],
+            [
+              1786294224334,
+              0,
+              null
+            ],
+            [
+              1786292360091,
+              0,
+              null
+            ],
+            [
+              1786289376791,
+              1,
+              null
+            ],
+            [
+              1786287200001,
+              1,
+              null
+            ],
+            [
+              1786284248361,
+              1,
+              null
+            ],
+            [
+              1786281586617,
+              1,
+              null
+            ],
+            [
+              1786279373676,
+              0,
+              null
+            ],
+            [
+              1786277292893,
+              0,
+              null
+            ],
+            [
+              1786274097397,
+              1,
+              null
+            ],
+            [
+              1786220879662,
+              1,
+              null
+            ],
+            [
+              1786209279164,
+              0,
+              null
+            ],
+            [
+              1786138001879,
+              1,
+              null
+            ],
+            [
+              1786135899259,
+              1,
+              null
+            ],
+            [
+              1786132144789,
+              1,
+              null
+            ],
+            [
+              1786130412414,
+              1,
+              null
+            ],
+            [
+              1785965374824,
+              0,
+              null
+            ],
+            [
+              1785962879575,
+              1,
+              null
+            ],
+            [
+              1785804747496,
+              0,
+              null
+            ],
+            [
+              1785803050910,
+              1,
+              null
+            ],
+            [
+              1785802348710,
+              1,
+              null
+            ],
+            [
+              1785799914479,
+              0,
+              null
+            ],
+            [
+              1785797594024,
+              0,
+              null
+            ]
           ]
         }
       ]
@@ -1482,25 +1984,25 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 39,
-            "wins": 22,
-            "losses": 17,
-            "winrate": 56.4,
-            "avgK": 2.1,
-            "avgD": 5.1,
-            "avgA": 15.2,
-            "kda": 3.38,
+            "games": 98,
+            "wins": 50,
+            "losses": 48,
+            "winrate": 51,
+            "avgK": 2.2,
+            "avgD": 5.7,
+            "avgA": 13.4,
+            "kda": 2.74,
             "csPerMin": 1.6,
-            "visPerMin": 2.75,
-            "dmgShare": 7.7,
-            "avgDurationMin": 30.3,
+            "visPerMin": 2.71,
+            "dmgShare": 8,
+            "avgDurationMin": 30.4,
             "streak": {
               "current": {
                 "type": "L",
                 "count": 3
               },
               "bestWin": 5,
-              "worstLoss": 3
+              "worstLoss": 6
             },
             "form": [
               "L",
@@ -1552,38 +2054,38 @@
             "topChamps": [
               {
                 "key": "Alistar",
-                "games": 13,
-                "wins": 9,
-                "winrate": 69.2,
-                "kda": 3.33
+                "games": 38,
+                "wins": 20,
+                "winrate": 52.6,
+                "kda": 2.63
               },
               {
                 "key": "Braum",
-                "games": 11,
-                "wins": 5,
-                "winrate": 45.5,
-                "kda": 3.71
-              },
-              {
-                "key": "TahmKench",
-                "games": 6,
-                "wins": 5,
-                "winrate": 83.3,
-                "kda": 3.85
+                "games": 22,
+                "wins": 12,
+                "winrate": 54.5,
+                "kda": 3.44
               },
               {
                 "key": "Ornn",
-                "games": 5,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.5
+                "games": 12,
+                "wins": 2,
+                "winrate": 16.7,
+                "kda": 2
               },
               {
-                "key": "Senna",
-                "games": 3,
-                "wins": 3,
-                "winrate": 100,
-                "kda": 5.22
+                "key": "TahmKench",
+                "games": 12,
+                "wins": 10,
+                "winrate": 83.3,
+                "kda": 3.46
+              },
+              {
+                "key": "Nautilus",
+                "games": 4,
+                "wins": 1,
+                "winrate": 25,
+                "kda": 1.28
               }
             ],
             "bestChamp": {
@@ -1595,24 +2097,24 @@
             },
             "worstChamp": {
               "key": "Ornn",
-              "games": 5,
-              "wins": 0,
-              "winrate": 0,
-              "kda": 1.5
+              "games": 12,
+              "wins": 2,
+              "winrate": 16.7,
+              "kda": 2
             },
             "bestRole": {
               "key": "UTILITY",
-              "games": 34,
-              "wins": 22,
-              "winrate": 64.7,
-              "kda": 3.61
+              "games": 86,
+              "wins": 48,
+              "winrate": 55.8,
+              "kda": 2.8
             },
             "worstRole": {
               "key": "TOP",
-              "games": 5,
-              "wins": 0,
-              "winrate": 0,
-              "kda": 1.5
+              "games": 12,
+              "wins": 2,
+              "winrate": 16.7,
+              "kda": 2
             },
             "bestGame": {
               "id": "EUW1_7940228048",
@@ -1626,62 +2128,70 @@
               "kda": 25
             },
             "worstGame": {
-              "id": "EUW1_7944305182",
-              "t": 1786208565593,
+              "id": "EUW1_7922015722",
+              "t": 1784366992542,
               "champ": "Ornn",
               "role": "TOP",
-              "k": 2,
-              "d": 4,
+              "k": 0,
+              "d": 2,
               "a": 0,
               "win": false,
-              "kda": 0.5
+              "kda": 0
             },
-            "firstGameAt": 1785259973973,
+            "firstGameAt": 1782419749433,
             "lastGameAt": 1786991573770,
             "totals": {
-              "k": 82,
-              "d": 200,
-              "a": 593
+              "k": 217,
+              "d": 559,
+              "a": 1312
             },
-            "dmgPerMin": 298,
-            "avgVision": 83.2,
+            "dmgPerMin": 302,
+            "avgVision": 82.5,
             "pentas": 0,
-            "firstBloods": 1,
-            "maxKills": 5,
+            "firstBloods": 4,
+            "maxKills": 11,
             "maxDurationMin": 45.6,
-            "avgKp": 54,
+            "avgKp": 52,
             "champs": [
               {
                 "key": "Alistar",
-                "games": 13,
-                "wins": 9,
-                "winrate": 69.2,
-                "kda": 3.33,
+                "games": 38,
+                "wins": 20,
+                "winrate": 52.6,
+                "kda": 2.63,
                 "csPerMin": 0.8
               },
               {
                 "key": "Braum",
-                "games": 11,
-                "wins": 5,
-                "winrate": 45.5,
-                "kda": 3.71,
+                "games": 22,
+                "wins": 12,
+                "winrate": 54.5,
+                "kda": 3.44,
                 "csPerMin": 0.8
               },
               {
-                "key": "TahmKench",
-                "games": 6,
-                "wins": 5,
-                "winrate": 83.3,
-                "kda": 3.85,
-                "csPerMin": 1.1
+                "key": "Ornn",
+                "games": 12,
+                "wins": 2,
+                "winrate": 16.7,
+                "kda": 2,
+                "csPerMin": 7.4
               },
               {
-                "key": "Ornn",
-                "games": 5,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.5,
-                "csPerMin": 7
+                "key": "TahmKench",
+                "games": 12,
+                "wins": 10,
+                "winrate": 83.3,
+                "kda": 3.46,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Nautilus",
+                "games": 4,
+                "wins": 1,
+                "winrate": 25,
+                "kda": 1.28,
+                "csPerMin": 1
               },
               {
                 "key": "Senna",
@@ -1692,63 +2202,79 @@
                 "csPerMin": 1.3
               },
               {
+                "key": "Leona",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.72,
+                "csPerMin": 1
+              },
+              {
                 "key": "Blitzcrank",
-                "games": 1,
+                "games": 2,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 3,
-                "csPerMin": 0.7
+                "kda": 1.61,
+                "csPerMin": 0.6
+              },
+              {
+                "key": "Pyke",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.4,
+                "csPerMin": 0.8
               }
             ],
             "roles": [
               {
                 "key": "UTILITY",
-                "games": 34,
-                "wins": 22,
-                "winrate": 64.7,
-                "kda": 3.61
+                "games": 86,
+                "wins": 48,
+                "winrate": 55.8,
+                "kda": 2.8
               },
               {
                 "key": "TOP",
-                "games": 5,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.5
+                "games": 12,
+                "wins": 2,
+                "winrate": 16.7,
+                "kda": 2
               }
             ],
             "gold": {
-              "games": 39,
-              "avgGd15": -84,
-              "avgTgd15": -355,
-              "throws": 1,
-              "comebacks": 4,
+              "games": 98,
+              "avgGd15": -253,
+              "avgTgd15": -633,
+              "throws": 5,
+              "comebacks": 9,
               "biggestThrow": {
-                "id": "EUW1_7932590551",
-                "t": 1785259973973,
-                "champ": "Blitzcrank",
+                "id": "EUW1_7916217983",
+                "t": 1783863172906,
+                "champ": "Alistar",
                 "role": "UTILITY",
                 "k": 2,
-                "d": 7,
+                "d": 12,
                 "a": 19,
                 "win": false,
-                "kda": 3,
-                "val": 3117,
-                "dur": 2222,
-                "min": 32
+                "kda": 1.75,
+                "val": 7142,
+                "dur": 2122,
+                "min": 27
               },
               "biggestComeback": {
-                "id": "EUW1_7938409728",
-                "t": 1785706181346,
-                "champ": "Braum",
+                "id": "EUW1_7908459681",
+                "t": 1783180125005,
+                "champ": "TahmKench",
                 "role": "UTILITY",
-                "k": 5,
+                "k": 0,
                 "d": 6,
-                "a": 20,
+                "a": 14,
                 "win": true,
-                "kda": 4.17,
-                "val": -7606,
-                "dur": 2175,
-                "min": 12
+                "kda": 2.33,
+                "val": -8723,
+                "dur": 2098,
+                "min": 35
               },
               "biggestLead": {
                 "id": "EUW1_7945442001",
@@ -1779,18 +2305,18 @@
                 "min": 15
               },
               "worst15": {
-                "id": "EUW1_7944305182",
-                "t": 1786208565593,
-                "champ": "Ornn",
-                "role": "TOP",
-                "k": 2,
-                "d": 4,
-                "a": 0,
+                "id": "EUW1_7917533951",
+                "t": 1783966278171,
+                "champ": "TahmKench",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 7,
+                "a": 11,
                 "win": false,
-                "kda": 0.5,
-                "val": -2539,
-                "dur": 1269,
-                "min": 0
+                "kda": 1.71,
+                "val": -2594,
+                "dur": 1587,
+                "min": 6
               }
             },
             "lp": {
@@ -1806,7 +2332,7 @@
             "dpm": "https://dpm.lol/xPATQ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPATQ-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:27.183Z",
+          "updatedAt": "2026-09-30T09:09:39.988Z",
           "lpHist": [
             [
               1790720384833,
@@ -2938,6 +3464,498 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1786991573770,
+              0,
+              null
+            ],
+            [
+              1786906808653,
+              0,
+              null
+            ],
+            [
+              1786904731315,
+              0,
+              null
+            ],
+            [
+              1786898079218,
+              1,
+              null
+            ],
+            [
+              1786895695810,
+              1,
+              null
+            ],
+            [
+              1786893840105,
+              0,
+              null
+            ],
+            [
+              1786891307344,
+              0,
+              null
+            ],
+            [
+              1786882888713,
+              1,
+              null
+            ],
+            [
+              1786880888324,
+              0,
+              null
+            ],
+            [
+              1786841644065,
+              1,
+              null
+            ],
+            [
+              1786839632446,
+              1,
+              null
+            ],
+            [
+              1786837481378,
+              1,
+              null
+            ],
+            [
+              1786814992020,
+              1,
+              null
+            ],
+            [
+              1786756987113,
+              1,
+              null
+            ],
+            [
+              1786754864351,
+              0,
+              null
+            ],
+            [
+              1786752483576,
+              0,
+              null
+            ],
+            [
+              1786750609302,
+              1,
+              null
+            ],
+            [
+              1786568133307,
+              0,
+              null
+            ],
+            [
+              1786565955863,
+              0,
+              null
+            ],
+            [
+              1786560479825,
+              1,
+              null
+            ],
+            [
+              1786557961922,
+              1,
+              null
+            ],
+            [
+              1786555865781,
+              1,
+              null
+            ],
+            [
+              1786388221846,
+              0,
+              null
+            ],
+            [
+              1786385668279,
+              0,
+              null
+            ],
+            [
+              1786383426659,
+              1,
+              null
+            ],
+            [
+              1786299907124,
+              1,
+              null
+            ],
+            [
+              1786296765582,
+              1,
+              null
+            ],
+            [
+              1786211930127,
+              1,
+              null
+            ],
+            [
+              1786210709339,
+              0,
+              null
+            ],
+            [
+              1786208565593,
+              0,
+              null
+            ],
+            [
+              1786036931497,
+              1,
+              null
+            ],
+            [
+              1786034619834,
+              1,
+              null
+            ],
+            [
+              1785867543195,
+              1,
+              null
+            ],
+            [
+              1785706181346,
+              1,
+              null
+            ],
+            [
+              1785688689425,
+              0,
+              null
+            ],
+            [
+              1785687007408,
+              1,
+              null
+            ],
+            [
+              1785684846469,
+              0,
+              null
+            ],
+            [
+              1785262432356,
+              1,
+              null
+            ],
+            [
+              1785259973973,
+              0,
+              null
+            ],
+            [
+              1785257413004,
+              0,
+              null
+            ],
+            [
+              1785083212978,
+              1,
+              null
+            ],
+            [
+              1785080436947,
+              0,
+              null
+            ],
+            [
+              1785078278446,
+              1,
+              null
+            ],
+            [
+              1785075978825,
+              0,
+              null
+            ],
+            [
+              1785067054991,
+              0,
+              null
+            ],
+            [
+              1785064930128,
+              1,
+              null
+            ],
+            [
+              1785062579062,
+              1,
+              null
+            ],
+            [
+              1784739927513,
+              0,
+              null
+            ],
+            [
+              1784737592442,
+              1,
+              null
+            ],
+            [
+              1784666944193,
+              1,
+              null
+            ],
+            [
+              1784657007679,
+              1,
+              null
+            ],
+            [
+              1784572756365,
+              0,
+              null
+            ],
+            [
+              1784570541090,
+              1,
+              null
+            ],
+            [
+              1784485479609,
+              0,
+              null
+            ],
+            [
+              1784483347543,
+              0,
+              null
+            ],
+            [
+              1784465562666,
+              0,
+              null
+            ],
+            [
+              1784463369221,
+              1,
+              null
+            ],
+            [
+              1784461588009,
+              1,
+              null
+            ],
+            [
+              1784366992542,
+              0,
+              null
+            ],
+            [
+              1784364982205,
+              1,
+              null
+            ],
+            [
+              1784225512051,
+              1,
+              null
+            ],
+            [
+              1784223403753,
+              1,
+              null
+            ],
+            [
+              1784054232413,
+              0,
+              null
+            ],
+            [
+              1784052313771,
+              0,
+              null
+            ],
+            [
+              1783976546310,
+              0,
+              null
+            ],
+            [
+              1783966278171,
+              0,
+              null
+            ],
+            [
+              1783964204411,
+              0,
+              null
+            ],
+            [
+              1783900613683,
+              0,
+              null
+            ],
+            [
+              1783897630245,
+              1,
+              null
+            ],
+            [
+              1783894585983,
+              0,
+              null
+            ],
+            [
+              1783882625043,
+              0,
+              null
+            ],
+            [
+              1783872010211,
+              1,
+              null
+            ],
+            [
+              1783863172906,
+              0,
+              null
+            ],
+            [
+              1783629355137,
+              1,
+              null
+            ],
+            [
+              1783624863573,
+              0,
+              null
+            ],
+            [
+              1783622418051,
+              1,
+              null
+            ],
+            [
+              1783618805406,
+              1,
+              null
+            ],
+            [
+              1783616272210,
+              0,
+              null
+            ],
+            [
+              1783614390880,
+              0,
+              null
+            ],
+            [
+              1783363415409,
+              0,
+              null
+            ],
+            [
+              1783361179357,
+              1,
+              null
+            ],
+            [
+              1783280527278,
+              1,
+              null
+            ],
+            [
+              1783273818786,
+              1,
+              null
+            ],
+            [
+              1783271220128,
+              1,
+              null
+            ],
+            [
+              1783268899613,
+              0,
+              null
+            ],
+            [
+              1783180125005,
+              1,
+              null
+            ],
+            [
+              1783177631335,
+              0,
+              null
+            ],
+            [
+              1783175286108,
+              0,
+              null
+            ],
+            [
+              1783173531828,
+              0,
+              null
+            ],
+            [
+              1782842735851,
+              0,
+              null
+            ],
+            [
+              1782839436301,
+              1,
+              null
+            ],
+            [
+              1782767840557,
+              0,
+              null
+            ],
+            [
+              1782759055915,
+              0,
+              null
+            ],
+            [
+              1782756821079,
+              1,
+              null
+            ],
+            [
+              1782754754750,
+              1,
+              null
+            ],
+            [
+              1782569094571,
+              1,
+              null
+            ],
+            [
+              1782422210319,
+              1,
+              null
+            ],
+            [
+              1782419749433,
+              0,
+              null
+            ]
           ]
         }
       ]
@@ -2966,25 +3984,25 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 40,
-            "wins": 23,
-            "losses": 17,
-            "winrate": 57.5,
-            "avgK": 4.2,
-            "avgD": 9.1,
-            "avgA": 14.9,
-            "kda": 2.12,
-            "csPerMin": 1.3,
-            "visPerMin": 2.36,
-            "dmgShare": 11.4,
-            "avgDurationMin": 29.9,
+            "games": 98,
+            "wins": 48,
+            "losses": 50,
+            "winrate": 49,
+            "avgK": 3.9,
+            "avgD": 9.2,
+            "avgA": 14.4,
+            "kda": 2,
+            "csPerMin": 1.2,
+            "visPerMin": 2.4,
+            "dmgShare": 11.1,
+            "avgDurationMin": 30.4,
             "streak": {
               "current": {
                 "type": "W",
                 "count": 1
               },
               "bestWin": 5,
-              "worstLoss": 4
+              "worstLoss": 6
             },
             "form": [
               "W",
@@ -3036,60 +4054,60 @@
             "topChamps": [
               {
                 "key": "Thresh",
-                "games": 10,
-                "wins": 8,
-                "winrate": 80,
-                "kda": 2.8
-              },
-              {
-                "key": "Elise",
-                "games": 8,
-                "wins": 5,
-                "winrate": 62.5,
-                "kda": 1.74
-              },
-              {
-                "key": "Pantheon",
-                "games": 7,
-                "wins": 4,
-                "winrate": 57.1,
-                "kda": 1.66
+                "games": 15,
+                "wins": 11,
+                "winrate": 73.3,
+                "kda": 2.81
               },
               {
                 "key": "Galio",
-                "games": 5,
-                "wins": 3,
-                "winrate": 60,
-                "kda": 2.84
+                "games": 14,
+                "wins": 7,
+                "winrate": 50,
+                "kda": 2.36
+              },
+              {
+                "key": "Elise",
+                "games": 11,
+                "wins": 6,
+                "winrate": 54.5,
+                "kda": 1.91
               },
               {
                 "key": "Pyke",
-                "games": 3,
-                "wins": 2,
-                "winrate": 66.7,
-                "kda": 1.43
+                "games": 11,
+                "wins": 7,
+                "winrate": 63.6,
+                "kda": 1.7
+              },
+              {
+                "key": "Pantheon",
+                "games": 10,
+                "wins": 6,
+                "winrate": 60,
+                "kda": 1.64
               }
             ],
             "bestChamp": {
               "key": "Thresh",
-              "games": 10,
-              "wins": 8,
-              "winrate": 80,
-              "kda": 2.8
+              "games": 15,
+              "wins": 11,
+              "winrate": 73.3,
+              "kda": 2.81
             },
             "worstChamp": {
-              "key": "Pantheon",
+              "key": "Milio",
               "games": 7,
-              "wins": 4,
-              "winrate": 57.1,
-              "kda": 1.66
+              "wins": 1,
+              "winrate": 14.3,
+              "kda": 1.98
             },
             "bestRole": {
               "key": "UTILITY",
-              "games": 38,
-              "wins": 23,
-              "winrate": 60.5,
-              "kda": 2.15
+              "games": 95,
+              "wins": 48,
+              "winrate": 50.5,
+              "kda": 2.02
             },
             "worstRole": null,
             "bestGame": {
@@ -3104,86 +4122,118 @@
               "kda": 13.5
             },
             "worstGame": {
-              "id": "EUW1_7988674748",
-              "t": 1789833434678,
-              "champ": "Pyke",
+              "id": "EUW1_7979431751",
+              "t": 1789062103979,
+              "champ": "Braum",
               "role": "UTILITY",
-              "k": 4,
-              "d": 12,
-              "a": 7,
+              "k": 0,
+              "d": 10,
+              "a": 1,
               "win": false,
-              "kda": 0.92
+              "kda": 0.1
             },
-            "firstGameAt": 1789334977355,
+            "firstGameAt": 1787175534464,
             "lastGameAt": 1790698364599,
             "totals": {
-              "k": 169,
-              "d": 362,
-              "a": 597
+              "k": 382,
+              "d": 900,
+              "a": 1415
             },
-            "dmgPerMin": 466,
-            "avgVision": 70.5,
+            "dmgPerMin": 440,
+            "avgVision": 72.8,
             "pentas": 0,
-            "firstBloods": 1,
-            "maxKills": 10,
-            "maxDurationMin": 42.8,
+            "firstBloods": 5,
+            "maxKills": 13,
+            "maxDurationMin": 44.9,
             "avgKp": 54,
             "champs": [
               {
                 "key": "Thresh",
-                "games": 10,
-                "wins": 8,
-                "winrate": 80,
-                "kda": 2.8,
+                "games": 15,
+                "wins": 11,
+                "winrate": 73.3,
+                "kda": 2.81,
                 "csPerMin": 0.9
-              },
-              {
-                "key": "Elise",
-                "games": 8,
-                "wins": 5,
-                "winrate": 62.5,
-                "kda": 1.74,
-                "csPerMin": 1.7
-              },
-              {
-                "key": "Pantheon",
-                "games": 7,
-                "wins": 4,
-                "winrate": 57.1,
-                "kda": 1.66,
-                "csPerMin": 1.3
               },
               {
                 "key": "Galio",
-                "games": 5,
-                "wins": 3,
-                "winrate": 60,
-                "kda": 2.84,
-                "csPerMin": 1.4
+                "games": 14,
+                "wins": 7,
+                "winrate": 50,
+                "kda": 2.36,
+                "csPerMin": 1.3
+              },
+              {
+                "key": "Elise",
+                "games": 11,
+                "wins": 6,
+                "winrate": 54.5,
+                "kda": 1.91,
+                "csPerMin": 1.6
               },
               {
                 "key": "Pyke",
-                "games": 3,
-                "wins": 2,
-                "winrate": 66.7,
-                "kda": 1.43,
-                "csPerMin": 0.9
+                "games": 11,
+                "wins": 7,
+                "winrate": 63.6,
+                "kda": 1.7,
+                "csPerMin": 0.8
+              },
+              {
+                "key": "Pantheon",
+                "games": 10,
+                "wins": 6,
+                "winrate": 60,
+                "kda": 1.64,
+                "csPerMin": 1.4
               },
               {
                 "key": "Rakan",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2,
-                "csPerMin": 0.9
+                "games": 8,
+                "wins": 2,
+                "winrate": 25,
+                "kda": 2.09,
+                "csPerMin": 1
               },
               {
                 "key": "Milio",
+                "games": 7,
+                "wins": 1,
+                "winrate": 14.3,
+                "kda": 1.98,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Alistar",
+                "games": 4,
+                "wins": 2,
+                "winrate": 50,
+                "kda": 2.46,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Blitzcrank",
                 "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.39,
-                "csPerMin": 1.4
+                "wins": 2,
+                "winrate": 100,
+                "kda": 3,
+                "csPerMin": 0.8
+              },
+              {
+                "key": "Braum",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.13,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Nami",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.34,
+                "csPerMin": 0.8
               },
               {
                 "key": "Yuumi",
@@ -3202,21 +4252,93 @@
                 "csPerMin": 6.2
               },
               {
-                "key": "Blitzcrank",
+                "key": "Malphite",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.9,
+                "csPerMin": 1.3
+              },
+              {
+                "key": "Brand",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2,
+                "csPerMin": 2.2
+              },
+              {
+                "key": "Nautilus",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.13,
+                "csPerMin": 0.6
+              },
+              {
+                "key": "Leona",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Xerath",
                 "games": 1,
                 "wins": 1,
                 "winrate": 100,
-                "kda": 4,
+                "kda": 2.4,
                 "csPerMin": 0.9
+              },
+              {
+                "key": "Jax",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.18,
+                "csPerMin": 5.5
+              },
+              {
+                "key": "Janna",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 4.5,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Rell",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.22,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Soraka",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.38,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Sylas",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.07,
+                "csPerMin": 1.5
               }
             ],
             "roles": [
               {
                 "key": "UTILITY",
-                "games": 38,
-                "wins": 23,
-                "winrate": 60.5,
-                "kda": 2.15
+                "games": 95,
+                "wins": 48,
+                "winrate": 50.5,
+                "kda": 2.02
               },
               {
                 "key": "JUNGLE",
@@ -3224,27 +4346,34 @@
                 "wins": 0,
                 "winrate": 0,
                 "kda": 1.23
+              },
+              {
+                "key": "TOP",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.18
               }
             ],
             "gold": {
-              "games": 40,
-              "avgGd15": 199,
-              "avgTgd15": 137,
-              "throws": 4,
-              "comebacks": 6,
+              "games": 98,
+              "avgGd15": 54,
+              "avgTgd15": 86,
+              "throws": 12,
+              "comebacks": 8,
               "biggestThrow": {
-                "id": "EUW1_7987090086",
-                "t": 1789684031183,
-                "champ": "Galio",
+                "id": "EUW1_7980434640",
+                "t": 1789147660924,
+                "champ": "Malphite",
                 "role": "UTILITY",
-                "k": 1,
-                "d": 14,
-                "a": 19,
+                "k": 2,
+                "d": 20,
+                "a": 16,
                 "win": false,
-                "kda": 1.43,
-                "val": 7893,
-                "dur": 2349,
-                "min": 26
+                "kda": 0.9,
+                "val": 7995,
+                "dur": 2631,
+                "min": 24
               },
               "biggestComeback": {
                 "id": "EUW1_7985064657",
@@ -3261,46 +4390,46 @@
                 "min": 0
               },
               "biggestLead": {
-                "id": "EUW1_7983119622",
-                "t": 1789334977355,
-                "champ": "Pantheon",
+                "id": "EUW1_7971010086",
+                "t": 1788375738010,
+                "champ": "Pyke",
                 "role": "UTILITY",
-                "k": 5,
-                "d": 11,
-                "a": 12,
+                "k": 12,
+                "d": 8,
+                "a": 11,
                 "win": true,
-                "kda": 1.55,
-                "val": 13170,
-                "dur": 1858,
-                "min": 31
+                "kda": 2.88,
+                "val": 17679,
+                "dur": 1758,
+                "min": 30
               },
               "best15": {
-                "id": "EUW1_7990284980",
-                "t": 1789942478241,
-                "champ": "Galio",
+                "id": "EUW1_7971010086",
+                "t": 1788375738010,
+                "champ": "Pyke",
                 "role": "UTILITY",
-                "k": 5,
+                "k": 12,
                 "d": 8,
-                "a": 20,
-                "win": false,
-                "kda": 3.13,
-                "val": 1555,
-                "dur": 2238,
-                "min": 15
+                "a": 11,
+                "win": true,
+                "kda": 2.88,
+                "val": 1953,
+                "dur": 1758,
+                "min": 30
               },
               "worst15": {
-                "id": "EUW1_7983200576",
-                "t": 1789338730314,
-                "champ": "Rengar",
-                "role": "JUNGLE",
-                "k": 2,
-                "d": 6,
-                "a": 6,
+                "id": "EUW1_7970274130",
+                "t": 1788303658142,
+                "champ": "Nami",
+                "role": "UTILITY",
+                "k": 0,
+                "d": 18,
+                "a": 18,
                 "win": false,
-                "kda": 1.33,
-                "val": -1855,
-                "dur": 1585,
-                "min": 2
+                "kda": 1,
+                "val": -3794,
+                "dur": 2077,
+                "min": 32
               }
             },
             "lp": {
@@ -3316,7 +4445,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-09-30T07:55:30.923Z",
+          "updatedAt": "2026-09-30T09:12:15.809Z",
           "lpHist": [
             [
               1790720384833,
@@ -4448,6 +5577,498 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1790698364599,
+              1,
+              null
+            ],
+            [
+              1790632295058,
+              0,
+              null
+            ],
+            [
+              1790610257288,
+              1,
+              null
+            ],
+            [
+              1790548403036,
+              1,
+              null
+            ],
+            [
+              1790546281622,
+              1,
+              null
+            ],
+            [
+              1790544551629,
+              1,
+              null
+            ],
+            [
+              1790542240650,
+              1,
+              null
+            ],
+            [
+              1790525792097,
+              0,
+              null
+            ],
+            [
+              1790523501456,
+              0,
+              null
+            ],
+            [
+              1790514344916,
+              1,
+              null
+            ],
+            [
+              1790436309524,
+              1,
+              null
+            ],
+            [
+              1790182171378,
+              0,
+              null
+            ],
+            [
+              1790111288429,
+              1,
+              null
+            ],
+            [
+              1790027097030,
+              0,
+              null
+            ],
+            [
+              1789942478241,
+              0,
+              null
+            ],
+            [
+              1789940004976,
+              1,
+              null
+            ],
+            [
+              1789938854856,
+              1,
+              null
+            ],
+            [
+              1789854303914,
+              0,
+              null
+            ],
+            [
+              1789848664781,
+              0,
+              null
+            ],
+            [
+              1789833434678,
+              0,
+              null
+            ],
+            [
+              1789749932070,
+              1,
+              null
+            ],
+            [
+              1789684031183,
+              0,
+              null
+            ],
+            [
+              1789665677853,
+              0,
+              null
+            ],
+            [
+              1789593660791,
+              0,
+              null
+            ],
+            [
+              1789582474870,
+              0,
+              null
+            ],
+            [
+              1789580371794,
+              1,
+              null
+            ],
+            [
+              1789578029622,
+              1,
+              null
+            ],
+            [
+              1789576037693,
+              1,
+              null
+            ],
+            [
+              1789574023106,
+              0,
+              null
+            ],
+            [
+              1789572311980,
+              1,
+              null
+            ],
+            [
+              1789508356540,
+              1,
+              null
+            ],
+            [
+              1789506077681,
+              1,
+              null
+            ],
+            [
+              1789487864402,
+              1,
+              null
+            ],
+            [
+              1789420976791,
+              0,
+              null
+            ],
+            [
+              1789419125807,
+              0,
+              null
+            ],
+            [
+              1789410418535,
+              1,
+              null
+            ],
+            [
+              1789397164950,
+              1,
+              null
+            ],
+            [
+              1789338730314,
+              0,
+              null
+            ],
+            [
+              1789336743800,
+              1,
+              null
+            ],
+            [
+              1789334977355,
+              1,
+              null
+            ],
+            [
+              1789313746483,
+              0,
+              null
+            ],
+            [
+              1789310592301,
+              1,
+              null
+            ],
+            [
+              1789258333687,
+              1,
+              null
+            ],
+            [
+              1789252652426,
+              0,
+              null
+            ],
+            [
+              1789224314468,
+              1,
+              null
+            ],
+            [
+              1789222302493,
+              0,
+              null
+            ],
+            [
+              1789147660924,
+              0,
+              null
+            ],
+            [
+              1789144778565,
+              1,
+              null
+            ],
+            [
+              1789140897705,
+              0,
+              null
+            ],
+            [
+              1789139023299,
+              0,
+              null
+            ],
+            [
+              1789077314911,
+              0,
+              null
+            ],
+            [
+              1789075338493,
+              0,
+              null
+            ],
+            [
+              1789062103979,
+              0,
+              null
+            ],
+            [
+              1789059962695,
+              0,
+              null
+            ],
+            [
+              1789057022752,
+              1,
+              null
+            ],
+            [
+              1789054889505,
+              0,
+              null
+            ],
+            [
+              1789052226470,
+              0,
+              null
+            ],
+            [
+              1788985171615,
+              1,
+              null
+            ],
+            [
+              1788978871378,
+              0,
+              null
+            ],
+            [
+              1788976305905,
+              1,
+              null
+            ],
+            [
+              1788973413751,
+              0,
+              null
+            ],
+            [
+              1788971713800,
+              1,
+              null
+            ],
+            [
+              1788906242849,
+              0,
+              null
+            ],
+            [
+              1788903777233,
+              1,
+              null
+            ],
+            [
+              1788817059197,
+              0,
+              null
+            ],
+            [
+              1788733887430,
+              1,
+              null
+            ],
+            [
+              1788731613920,
+              1,
+              null
+            ],
+            [
+              1788637557728,
+              1,
+              null
+            ],
+            [
+              1788633356112,
+              0,
+              null
+            ],
+            [
+              1788631169359,
+              0,
+              null
+            ],
+            [
+              1788607529674,
+              0,
+              null
+            ],
+            [
+              1788564466040,
+              0,
+              null
+            ],
+            [
+              1788560936218,
+              1,
+              null
+            ],
+            [
+              1788558780706,
+              1,
+              null
+            ],
+            [
+              1788555904193,
+              0,
+              null
+            ],
+            [
+              1788553771215,
+              1,
+              null
+            ],
+            [
+              1788550656308,
+              1,
+              null
+            ],
+            [
+              1788548459688,
+              1,
+              null
+            ],
+            [
+              1788545361481,
+              1,
+              null
+            ],
+            [
+              1788476017532,
+              0,
+              null
+            ],
+            [
+              1788375738010,
+              1,
+              null
+            ],
+            [
+              1788303658142,
+              0,
+              null
+            ],
+            [
+              1788289333945,
+              0,
+              null
+            ],
+            [
+              1788287057168,
+              0,
+              null
+            ],
+            [
+              1788050338314,
+              0,
+              null
+            ],
+            [
+              1787938793746,
+              0,
+              null
+            ],
+            [
+              1787936189064,
+              1,
+              null
+            ],
+            [
+              1787933170362,
+              1,
+              null
+            ],
+            [
+              1787870779026,
+              0,
+              null
+            ],
+            [
+              1787612573138,
+              0,
+              null
+            ],
+            [
+              1787439454027,
+              0,
+              null
+            ],
+            [
+              1787355166516,
+              1,
+              null
+            ],
+            [
+              1787353027136,
+              0,
+              null
+            ],
+            [
+              1787340656203,
+              1,
+              null
+            ],
+            [
+              1787264611701,
+              1,
+              null
+            ],
+            [
+              1787261878735,
+              0,
+              null
+            ],
+            [
+              1787177632527,
+              0,
+              null
+            ],
+            [
+              1787175534464,
+              1,
+              null
+            ]
           ]
         }
       ]
@@ -4476,25 +6097,25 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 40,
-            "wins": 18,
-            "losses": 22,
-            "winrate": 45,
-            "avgK": 8.5,
-            "avgD": 6.4,
-            "avgA": 8.7,
-            "kda": 2.67,
+            "games": 95,
+            "wins": 45,
+            "losses": 50,
+            "winrate": 47.4,
+            "avgK": 7.7,
+            "avgD": 6.3,
+            "avgA": 9.2,
+            "kda": 2.69,
             "csPerMin": 6.5,
-            "visPerMin": 0.99,
-            "dmgShare": 18.4,
-            "avgDurationMin": 30.1,
+            "visPerMin": 0.95,
+            "dmgShare": 17.6,
+            "avgDurationMin": 29.6,
             "streak": {
               "current": {
                 "type": "L",
                 "count": 2
               },
               "bestWin": 8,
-              "worstLoss": 4
+              "worstLoss": 5
             },
             "form": [
               "L",
@@ -4546,128 +6167,144 @@
             "topChamps": [
               {
                 "key": "Diana",
-                "games": 16,
-                "wins": 9,
-                "winrate": 56.3,
-                "kda": 2.89
+                "games": 37,
+                "wins": 22,
+                "winrate": 59.5,
+                "kda": 2.91
               },
               {
                 "key": "Briar",
-                "games": 12,
-                "wins": 4,
-                "winrate": 33.3,
-                "kda": 2.44
+                "games": 24,
+                "wins": 9,
+                "winrate": 37.5,
+                "kda": 2.3
               },
               {
                 "key": "Zyra",
-                "games": 5,
+                "games": 11,
+                "wins": 4,
+                "winrate": 36.4,
+                "kda": 2.71
+              },
+              {
+                "key": "Nocturne",
+                "games": 6,
                 "wins": 2,
-                "winrate": 40,
-                "kda": 2.22
+                "winrate": 33.3,
+                "kda": 2.52
               },
               {
-                "key": "Leona",
+                "key": "Lillia",
                 "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.11
-              },
-              {
-                "key": "Janna",
-                "games": 1,
                 "wins": 1,
-                "winrate": 100,
-                "kda": 9.5
+                "winrate": 50,
+                "kda": 2.67
               }
             ],
             "bestChamp": {
               "key": "Diana",
-              "games": 16,
-              "wins": 9,
-              "winrate": 56.3,
-              "kda": 2.89
+              "games": 37,
+              "wins": 22,
+              "winrate": 59.5,
+              "kda": 2.91
             },
             "worstChamp": {
-              "key": "Briar",
-              "games": 12,
-              "wins": 4,
+              "key": "Nocturne",
+              "games": 6,
+              "wins": 2,
               "winrate": 33.3,
-              "kda": 2.44
+              "kda": 2.52
             },
             "bestRole": {
               "key": "JUNGLE",
-              "games": 37,
-              "wins": 17,
-              "winrate": 45.9,
-              "kda": 2.66
+              "games": 83,
+              "wins": 40,
+              "winrate": 48.2,
+              "kda": 2.7
             },
             "worstRole": {
-              "key": "UTILITY",
+              "key": "MIDDLE",
               "games": 3,
               "wins": 1,
               "winrate": 33.3,
-              "kda": 2.85
+              "kda": 1.65
             },
             "bestGame": {
-              "id": "EUW1_7982405828",
-              "t": 1789303415055,
-              "champ": "Zyra",
+              "id": "EUW1_7968203354",
+              "t": 1788155765399,
+              "champ": "Diana",
               "role": "JUNGLE",
-              "k": 6,
-              "d": 1,
-              "a": 6,
+              "k": 12,
+              "d": 0,
+              "a": 12,
               "win": true,
-              "kda": 12
+              "kda": 24
             },
             "worstGame": {
-              "id": "EUW1_7986612005",
-              "t": 1789660395638,
-              "champ": "Zyra",
+              "id": "EUW1_7979431751",
+              "t": 1789062103979,
+              "champ": "Diana",
               "role": "JUNGLE",
-              "k": 2,
+              "k": 3,
               "d": 8,
-              "a": 5,
+              "a": 0,
               "win": false,
-              "kda": 0.88
+              "kda": 0.38
             },
-            "firstGameAt": 1789298598729,
+            "firstGameAt": 1788025835094,
             "lastGameAt": 1790706048628,
             "totals": {
-              "k": 341,
-              "d": 257,
-              "a": 346
+              "k": 734,
+              "d": 596,
+              "a": 871
             },
-            "dmgPerMin": 756,
-            "avgVision": 29.9,
+            "dmgPerMin": 718,
+            "avgVision": 28.2,
             "pentas": 0,
-            "firstBloods": 2,
+            "firstBloods": 6,
             "maxKills": 24,
             "maxDurationMin": 46.8,
-            "avgKp": 52,
+            "avgKp": 50,
             "champs": [
               {
                 "key": "Diana",
-                "games": 16,
-                "wins": 9,
-                "winrate": 56.3,
-                "kda": 2.89,
-                "csPerMin": 7.7
+                "games": 37,
+                "wins": 22,
+                "winrate": 59.5,
+                "kda": 2.91,
+                "csPerMin": 7.6
               },
               {
                 "key": "Briar",
-                "games": 12,
-                "wins": 4,
-                "winrate": 33.3,
-                "kda": 2.44,
-                "csPerMin": 6.1
+                "games": 24,
+                "wins": 9,
+                "winrate": 37.5,
+                "kda": 2.3,
+                "csPerMin": 6.2
               },
               {
                 "key": "Zyra",
-                "games": 5,
+                "games": 11,
+                "wins": 4,
+                "winrate": 36.4,
+                "kda": 2.71,
+                "csPerMin": 7.1
+              },
+              {
+                "key": "Nocturne",
+                "games": 6,
                 "wins": 2,
-                "winrate": 40,
-                "kda": 2.22,
+                "winrate": 33.3,
+                "kda": 2.52,
                 "csPerMin": 6.6
+              },
+              {
+                "key": "Lillia",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.67,
+                "csPerMin": 7.8
               },
               {
                 "key": "Leona",
@@ -4675,6 +6312,22 @@
                 "wins": 0,
                 "winrate": 0,
                 "kda": 2.11,
+                "csPerMin": 1.1
+              },
+              {
+                "key": "Nami",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 5.09,
+                "csPerMin": 1
+              },
+              {
+                "key": "Lulu",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 3.5,
                 "csPerMin": 1.1
               },
               {
@@ -4694,65 +6347,104 @@
                 "csPerMin": 7.5
               },
               {
-                "key": "Lillia",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 3.75,
-                "csPerMin": 7.6
-              },
-              {
-                "key": "Nocturne",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 8,
-                "csPerMin": 7.6
-              },
-              {
                 "key": "Chogath",
                 "games": 1,
                 "wins": 0,
                 "winrate": 0,
                 "kda": 2.5,
                 "csPerMin": 8.4
+              },
+              {
+                "key": "Lux",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.8,
+                "csPerMin": 1.8
+              },
+              {
+                "key": "Thresh",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 6,
+                "csPerMin": 1.7
+              },
+              {
+                "key": "Rammus",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 7.33,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "Amumu",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 5,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "Ahri",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.3,
+                "csPerMin": 6.4
+              },
+              {
+                "key": "Ziggs",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.8,
+                "csPerMin": 6.5
               }
             ],
             "roles": [
               {
                 "key": "JUNGLE",
-                "games": 37,
-                "wins": 17,
-                "winrate": 45.9,
-                "kda": 2.66
+                "games": 83,
+                "wins": 40,
+                "winrate": 48.2,
+                "kda": 2.7
               },
               {
                 "key": "UTILITY",
+                "games": 9,
+                "wins": 4,
+                "winrate": 44.4,
+                "kda": 3.1
+              },
+              {
+                "key": "MIDDLE",
                 "games": 3,
                 "wins": 1,
                 "winrate": 33.3,
-                "kda": 2.85
+                "kda": 1.65
               }
             ],
             "gold": {
-              "games": 40,
-              "avgGd15": 567,
-              "avgTgd15": 474,
-              "throws": 4,
+              "games": 95,
+              "avgGd15": 419,
+              "avgTgd15": 791,
+              "throws": 10,
               "comebacks": 2,
               "biggestThrow": {
-                "id": "EUW1_7989975487",
-                "t": 1789929573032,
-                "champ": "Zyra",
+                "id": "EUW1_7966331199",
+                "t": 1788025835094,
+                "champ": "Nocturne",
                 "role": "JUNGLE",
-                "k": 8,
-                "d": 8,
-                "a": 20,
+                "k": 6,
+                "d": 11,
+                "a": 14,
                 "win": false,
-                "kda": 3.5,
-                "val": 6151,
-                "dur": 2772,
-                "min": 14
+                "kda": 1.82,
+                "val": 6769,
+                "dur": 2296,
+                "min": 20
               },
               "biggestComeback": {
                 "id": "EUW1_7996894001",
@@ -4769,46 +6461,46 @@
                 "min": 40
               },
               "biggestLead": {
-                "id": "EUW1_7995713420",
-                "t": 1790443474721,
-                "champ": "Janna",
-                "role": "UTILITY",
+                "id": "EUW1_7969695753",
+                "t": 1788277667702,
+                "champ": "Diana",
+                "role": "JUNGLE",
                 "k": 5,
-                "d": 2,
-                "a": 14,
+                "d": 4,
+                "a": 10,
                 "win": true,
-                "kda": 9.5,
-                "val": 15493,
-                "dur": 1775,
-                "min": 30
+                "kda": 3.75,
+                "val": 17294,
+                "dur": 1346,
+                "min": 19
               },
               "best15": {
-                "id": "EUW1_7988324835",
-                "t": 1789810459274,
+                "id": "EUW1_7969788431",
+                "t": 1788283282252,
                 "champ": "Briar",
                 "role": "JUNGLE",
-                "k": 11,
-                "d": 8,
-                "a": 8,
+                "k": 12,
+                "d": 5,
+                "a": 5,
                 "win": false,
-                "kda": 2.38,
-                "val": 2306,
-                "dur": 2166,
-                "min": 21
+                "kda": 3.4,
+                "val": 3237,
+                "dur": 1656,
+                "min": 0
               },
               "worst15": {
-                "id": "EUW1_7982308183",
-                "t": 1789298598729,
-                "champ": "Leona",
-                "role": "UTILITY",
-                "k": 0,
-                "d": 10,
-                "a": 17,
+                "id": "EUW1_7977410367",
+                "t": 1788889711474,
+                "champ": "Briar",
+                "role": "JUNGLE",
+                "k": 2,
+                "d": 9,
+                "a": 6,
                 "win": false,
-                "kda": 1.7,
-                "val": -1687,
-                "dur": 1927,
-                "min": 9
+                "kda": 0.89,
+                "val": -2373,
+                "dur": 1455,
+                "min": 7
               }
             },
             "lp": {
@@ -4824,7 +6516,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:09.686Z",
+          "updatedAt": "2026-09-30T08:59:20.050Z",
           "lpHist": [
             [
               1790720384833,
@@ -5956,6 +7648,483 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1790706048628,
+              0,
+              null
+            ],
+            [
+              1790703929381,
+              0,
+              null
+            ],
+            [
+              1790617205194,
+              1,
+              null
+            ],
+            [
+              1790613682790,
+              1,
+              null
+            ],
+            [
+              1790532237689,
+              1,
+              null
+            ],
+            [
+              1790443474721,
+              1,
+              null
+            ],
+            [
+              1790441225313,
+              1,
+              null
+            ],
+            [
+              1790438828428,
+              1,
+              null
+            ],
+            [
+              1790435744996,
+              1,
+              null
+            ],
+            [
+              1790102597814,
+              1,
+              null
+            ],
+            [
+              1790100459070,
+              0,
+              null
+            ],
+            [
+              1790098533772,
+              0,
+              null
+            ],
+            [
+              1790095475942,
+              1,
+              null
+            ],
+            [
+              1790013026084,
+              1,
+              null
+            ],
+            [
+              1790011159914,
+              0,
+              null
+            ],
+            [
+              1790008992163,
+              0,
+              null
+            ],
+            [
+              1790006871096,
+              1,
+              null
+            ],
+            [
+              1789970691419,
+              0,
+              null
+            ],
+            [
+              1789968550686,
+              0,
+              null
+            ],
+            [
+              1789931527526,
+              0,
+              null
+            ],
+            [
+              1789929573032,
+              0,
+              null
+            ],
+            [
+              1789847133232,
+              1,
+              null
+            ],
+            [
+              1789843783171,
+              0,
+              null
+            ],
+            [
+              1789831298323,
+              0,
+              null
+            ],
+            [
+              1789829545759,
+              0,
+              null
+            ],
+            [
+              1789827314298,
+              1,
+              null
+            ],
+            [
+              1789810459274,
+              0,
+              null
+            ],
+            [
+              1789807790869,
+              0,
+              null
+            ],
+            [
+              1789669179231,
+              0,
+              null
+            ],
+            [
+              1789666698061,
+              0,
+              null
+            ],
+            [
+              1789665321294,
+              1,
+              null
+            ],
+            [
+              1789662591460,
+              0,
+              null
+            ],
+            [
+              1789660395638,
+              0,
+              null
+            ],
+            [
+              1789495282053,
+              1,
+              null
+            ],
+            [
+              1789493906543,
+              1,
+              null
+            ],
+            [
+              1789490792716,
+              0,
+              null
+            ],
+            [
+              1789488706388,
+              0,
+              null
+            ],
+            [
+              1789410110773,
+              1,
+              null
+            ],
+            [
+              1789303415055,
+              1,
+              null
+            ],
+            [
+              1789298598729,
+              0,
+              null
+            ],
+            [
+              1789253569150,
+              1,
+              null
+            ],
+            [
+              1789251350087,
+              0,
+              null
+            ],
+            [
+              1789249745566,
+              0,
+              null
+            ],
+            [
+              1789247991345,
+              1,
+              null
+            ],
+            [
+              1789245656064,
+              0,
+              null
+            ],
+            [
+              1789242919262,
+              1,
+              null
+            ],
+            [
+              1789239655647,
+              1,
+              null
+            ],
+            [
+              1789236805594,
+              1,
+              null
+            ],
+            [
+              1789202909806,
+              0,
+              null
+            ],
+            [
+              1789168223108,
+              1,
+              null
+            ],
+            [
+              1789165448798,
+              1,
+              null
+            ],
+            [
+              1789162784005,
+              0,
+              null
+            ],
+            [
+              1789064584814,
+              0,
+              null
+            ],
+            [
+              1789062103979,
+              0,
+              null
+            ],
+            [
+              1789059962695,
+              0,
+              null
+            ],
+            [
+              1789056267816,
+              1,
+              null
+            ],
+            [
+              1788978871378,
+              0,
+              null
+            ],
+            [
+              1788891799787,
+              1,
+              null
+            ],
+            [
+              1788889711474,
+              0,
+              null
+            ],
+            [
+              1788888044706,
+              0,
+              null
+            ],
+            [
+              1788805175654,
+              0,
+              null
+            ],
+            [
+              1788760441441,
+              1,
+              null
+            ],
+            [
+              1788718388219,
+              1,
+              null
+            ],
+            [
+              1788713530069,
+              1,
+              null
+            ],
+            [
+              1788711645550,
+              0,
+              null
+            ],
+            [
+              1788709423191,
+              1,
+              null
+            ],
+            [
+              1788707458066,
+              0,
+              null
+            ],
+            [
+              1788696341335,
+              1,
+              null
+            ],
+            [
+              1788693779562,
+              0,
+              null
+            ],
+            [
+              1788684715313,
+              1,
+              null
+            ],
+            [
+              1788637557728,
+              1,
+              null
+            ],
+            [
+              1788634071283,
+              1,
+              null
+            ],
+            [
+              1788619685819,
+              1,
+              null
+            ],
+            [
+              1788617853825,
+              0,
+              null
+            ],
+            [
+              1788544077797,
+              1,
+              null
+            ],
+            [
+              1788536808848,
+              1,
+              null
+            ],
+            [
+              1788460590512,
+              1,
+              null
+            ],
+            [
+              1788283282252,
+              0,
+              null
+            ],
+            [
+              1788281382727,
+              0,
+              null
+            ],
+            [
+              1788277667702,
+              1,
+              null
+            ],
+            [
+              1788202085758,
+              0,
+              null
+            ],
+            [
+              1788155765399,
+              1,
+              null
+            ],
+            [
+              1788108352245,
+              0,
+              null
+            ],
+            [
+              1788106529212,
+              0,
+              null
+            ],
+            [
+              1788104638837,
+              0,
+              null
+            ],
+            [
+              1788102270733,
+              0,
+              null
+            ],
+            [
+              1788097900413,
+              0,
+              null
+            ],
+            [
+              1788090402653,
+              1,
+              null
+            ],
+            [
+              1788080307964,
+              1,
+              null
+            ],
+            [
+              1788077842969,
+              0,
+              null
+            ],
+            [
+              1788045999692,
+              1,
+              null
+            ],
+            [
+              1788043678004,
+              0,
+              null
+            ],
+            [
+              1788041143767,
+              0,
+              null
+            ],
+            [
+              1788028339568,
+              1,
+              null
+            ],
+            [
+              1788025835094,
+              0,
+              null
+            ]
           ]
         }
       ]
@@ -5984,24 +8153,24 @@
             "hotStreak": false
           },
           "stats": {
-            "games": 38,
-            "wins": 16,
-            "losses": 22,
-            "winrate": 42.1,
-            "avgK": 7.6,
-            "avgD": 5.8,
-            "avgA": 7.1,
-            "kda": 2.54,
-            "csPerMin": 8.1,
-            "visPerMin": 0.75,
+            "games": 97,
+            "wins": 42,
+            "losses": 55,
+            "winrate": 43.3,
+            "avgK": 6.9,
+            "avgD": 6,
+            "avgA": 7.5,
+            "kda": 2.38,
+            "csPerMin": 7.9,
+            "visPerMin": 0.7,
             "dmgShare": 23.4,
-            "avgDurationMin": 31.6,
+            "avgDurationMin": 30.9,
             "streak": {
               "current": {
                 "type": "W",
                 "count": 2
               },
-              "bestWin": 3,
+              "bestWin": 6,
               "worstLoss": 5
             },
             "form": [
@@ -6053,47 +8222,47 @@
             },
             "topChamps": [
               {
-                "key": "Xayah",
-                "games": 7,
-                "wins": 5,
-                "winrate": 71.4,
-                "kda": 2.21
-              },
-              {
                 "key": "Viktor",
-                "games": 6,
-                "wins": 2,
-                "winrate": 33.3,
-                "kda": 2.67
-              },
-              {
-                "key": "Jinx",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.62
-              },
-              {
-                "key": "Yunara",
-                "games": 5,
-                "wins": 1,
-                "winrate": 20,
-                "kda": 3.19
+                "games": 26,
+                "wins": 12,
+                "winrate": 46.2,
+                "kda": 2.33
               },
               {
                 "key": "Tristana",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.4
+                "games": 12,
+                "wins": 4,
+                "winrate": 33.3,
+                "kda": 2.42
+              },
+              {
+                "key": "Jinx",
+                "games": 12,
+                "wins": 5,
+                "winrate": 41.7,
+                "kda": 2.32
+              },
+              {
+                "key": "Ezreal",
+                "games": 9,
+                "wins": 5,
+                "winrate": 55.6,
+                "kda": 2.39
+              },
+              {
+                "key": "Xayah",
+                "games": 8,
+                "wins": 6,
+                "winrate": 75,
+                "kda": 2.64
               }
             ],
             "bestChamp": {
               "key": "Xayah",
-              "games": 7,
-              "wins": 5,
-              "winrate": 71.4,
-              "kda": 2.21
+              "games": 8,
+              "wins": 6,
+              "winrate": 75,
+              "kda": 2.64
             },
             "worstChamp": {
               "key": "Yunara",
@@ -6103,23 +8272,29 @@
               "kda": 3.19
             },
             "bestRole": {
-              "key": "BOTTOM",
-              "games": 33,
-              "wins": 16,
-              "winrate": 48.5,
-              "kda": 2.7
+              "key": "MIDDLE",
+              "games": 4,
+              "wins": 3,
+              "winrate": 75,
+              "kda": 2.87
             },
-            "worstRole": null,
+            "worstRole": {
+              "key": "UTILITY",
+              "games": 3,
+              "wins": 1,
+              "winrate": 33.3,
+              "kda": 3.29
+            },
             "bestGame": {
-              "id": "EUW1_7992821307",
-              "t": 1790187962507,
-              "champ": "Jinx",
+              "id": "EUW1_7946470139",
+              "t": 1786383622599,
+              "champ": "Caitlyn",
               "role": "BOTTOM",
-              "k": 16,
-              "d": 2,
-              "a": 15,
+              "k": 10,
+              "d": 1,
+              "a": 8,
               "win": true,
-              "kda": 15.5
+              "kda": 18
             },
             "worstGame": {
               "id": "EUW1_7990711017",
@@ -6132,44 +8307,68 @@
               "win": false,
               "kda": 0.4
             },
-            "firstGameAt": 1788809663880,
+            "firstGameAt": 1786368077261,
             "lastGameAt": 1790698364599,
             "totals": {
-              "k": 288,
-              "d": 219,
-              "a": 269
+              "k": 665,
+              "d": 583,
+              "a": 725
             },
-            "dmgPerMin": 913,
-            "avgVision": 23.8,
+            "dmgPerMin": 900,
+            "avgVision": 21.8,
             "pentas": 0,
-            "firstBloods": 2,
-            "maxKills": 17,
+            "firstBloods": 13,
+            "maxKills": 19,
             "maxDurationMin": 52.7,
             "avgKp": 46,
             "champs": [
               {
-                "key": "Xayah",
-                "games": 7,
-                "wins": 5,
-                "winrate": 71.4,
-                "kda": 2.21,
-                "csPerMin": 8.9
+                "key": "Viktor",
+                "games": 26,
+                "wins": 12,
+                "winrate": 46.2,
+                "kda": 2.33,
+                "csPerMin": 7.7
               },
               {
-                "key": "Viktor",
-                "games": 6,
-                "wins": 2,
+                "key": "Tristana",
+                "games": 12,
+                "wins": 4,
                 "winrate": 33.3,
-                "kda": 2.67,
-                "csPerMin": 7.6
+                "kda": 2.42,
+                "csPerMin": 8.2
               },
               {
                 "key": "Jinx",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.62,
+                "games": 12,
+                "wins": 5,
+                "winrate": 41.7,
+                "kda": 2.32,
                 "csPerMin": 8.7
+              },
+              {
+                "key": "Ezreal",
+                "games": 9,
+                "wins": 5,
+                "winrate": 55.6,
+                "kda": 2.39,
+                "csPerMin": 7.6
+              },
+              {
+                "key": "Xayah",
+                "games": 8,
+                "wins": 6,
+                "winrate": 75,
+                "kda": 2.64,
+                "csPerMin": 9
+              },
+              {
+                "key": "Caitlyn",
+                "games": 6,
+                "wins": 2,
+                "winrate": 33.3,
+                "kda": 1.92,
+                "csPerMin": 7.8
               },
               {
                 "key": "Yunara",
@@ -6180,12 +8379,12 @@
                 "csPerMin": 9.8
               },
               {
-                "key": "Tristana",
+                "key": "Kaisa",
                 "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.4,
-                "csPerMin": 7.9
+                "wins": 1,
+                "winrate": 25,
+                "kda": 2.23,
+                "csPerMin": 8.5
               },
               {
                 "key": "Vayne",
@@ -6196,19 +8395,27 @@
                 "csPerMin": 7.6
               },
               {
-                "key": "Kaisa",
+                "key": "Aphelios",
                 "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.08,
-                "csPerMin": 9.1
+                "wins": 2,
+                "winrate": 100,
+                "kda": 8.75,
+                "csPerMin": 8.8
               },
               {
-                "key": "Ezreal",
+                "key": "Lulu",
                 "games": 2,
                 "wins": 1,
                 "winrate": 50,
-                "kda": 2.79,
+                "kda": 3.43,
+                "csPerMin": 1
+              },
+              {
+                "key": "Ashe",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.69,
                 "csPerMin": 7.5
               },
               {
@@ -6220,44 +8427,67 @@
                 "csPerMin": 1
               },
               {
-                "key": "Aphelios",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 14,
-                "csPerMin": 8.7
-              },
-              {
-                "key": "Lulu",
+                "key": "Varus",
                 "games": 1,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 3,
-                "csPerMin": 1.2
+                "kda": 1.33,
+                "csPerMin": 7.8
               },
               {
-                "key": "Caitlyn",
+                "key": "MonkeyKing",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "Malzahar",
                 "games": 1,
                 "wins": 1,
                 "winrate": 100,
-                "kda": 3.75,
-                "csPerMin": 9.6
+                "kda": 3,
+                "csPerMin": 7.7
+              },
+              {
+                "key": "Smolder",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.38,
+                "csPerMin": 7.7
+              },
+              {
+                "key": "Ahri",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 5.5,
+                "csPerMin": 7.5
               }
             ],
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 33,
-                "wins": 16,
-                "winrate": 48.5,
-                "kda": 2.7
+                "games": 87,
+                "wins": 38,
+                "winrate": 43.7,
+                "kda": 2.39
+              },
+              {
+                "key": "MIDDLE",
+                "games": 4,
+                "wins": 3,
+                "winrate": 75,
+                "kda": 2.87
               },
               {
                 "key": "UTILITY",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 3
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 3.29
               },
               {
                 "key": "TOP",
@@ -6267,32 +8497,32 @@
                 "kda": 0.93
               },
               {
-                "key": "MIDDLE",
+                "key": "JUNGLE",
                 "games": 1,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 1.56
+                "kda": 1
               }
             ],
             "gold": {
-              "games": 38,
-              "avgGd15": 304,
-              "avgTgd15": 123,
-              "throws": 7,
-              "comebacks": 1,
+              "games": 97,
+              "avgGd15": 171,
+              "avgTgd15": 182,
+              "throws": 16,
+              "comebacks": 6,
               "biggestThrow": {
-                "id": "EUW1_7992722137",
-                "t": 1790183312605,
-                "champ": "Yunara",
+                "id": "EUW1_7947393028",
+                "t": 1786465733015,
+                "champ": "Ezreal",
                 "role": "BOTTOM",
-                "k": 12,
-                "d": 6,
-                "a": 9,
+                "k": 11,
+                "d": 5,
+                "a": 8,
                 "win": false,
-                "kda": 3.5,
-                "val": 6837,
-                "dur": 2471,
-                "min": 28
+                "kda": 3.8,
+                "val": 9822,
+                "dur": 2092,
+                "min": 29
               },
               "biggestComeback": {
                 "id": "EUW1_7983921529",
@@ -6323,17 +8553,17 @@
                 "min": 25
               },
               "best15": {
-                "id": "EUW1_7989506232",
-                "t": 1789905205752,
-                "champ": "Xayah",
+                "id": "EUW1_7946470139",
+                "t": 1786383622599,
+                "champ": "Caitlyn",
                 "role": "BOTTOM",
-                "k": 6,
-                "d": 2,
+                "k": 10,
+                "d": 1,
                 "a": 8,
                 "win": true,
-                "kda": 7,
-                "val": 3396,
-                "dur": 1481,
+                "kda": 18,
+                "val": 5057,
+                "dur": 1482,
                 "min": 25
               },
               "worst15": {
@@ -6364,7 +8594,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:06.022Z",
+          "updatedAt": "2026-09-30T08:56:42.802Z",
           "lpHist": [
             [
               1790720384833,
@@ -7496,6 +9726,493 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1790698364599,
+              1,
+              null
+            ],
+            [
+              1790695853559,
+              1,
+              null
+            ],
+            [
+              1790693427028,
+              0,
+              null
+            ],
+            [
+              1790691641845,
+              0,
+              null
+            ],
+            [
+              1790619459485,
+              1,
+              null
+            ],
+            [
+              1790617205194,
+              1,
+              null
+            ],
+            [
+              1790410822152,
+              0,
+              null
+            ],
+            [
+              1790408463630,
+              1,
+              null
+            ],
+            [
+              1790406076121,
+              0,
+              null
+            ],
+            [
+              1790404202422,
+              0,
+              null
+            ],
+            [
+              1790190124514,
+              1,
+              null
+            ],
+            [
+              1790187962507,
+              1,
+              null
+            ],
+            [
+              1790185673191,
+              1,
+              null
+            ],
+            [
+              1790183312605,
+              0,
+              null
+            ],
+            [
+              1790013026084,
+              1,
+              null
+            ],
+            [
+              1790011159914,
+              0,
+              null
+            ],
+            [
+              1790008992163,
+              0,
+              null
+            ],
+            [
+              1790005905444,
+              0,
+              null
+            ],
+            [
+              1790003547320,
+              0,
+              null
+            ],
+            [
+              1789921607607,
+              1,
+              null
+            ],
+            [
+              1789919332068,
+              0,
+              null
+            ],
+            [
+              1789917298368,
+              0,
+              null
+            ],
+            [
+              1789915132433,
+              0,
+              null
+            ],
+            [
+              1789910045092,
+              1,
+              null
+            ],
+            [
+              1789907156634,
+              1,
+              null
+            ],
+            [
+              1789905205752,
+              1,
+              null
+            ],
+            [
+              1789903393321,
+              0,
+              null
+            ],
+            [
+              1789810459274,
+              0,
+              null
+            ],
+            [
+              1789807790869,
+              0,
+              null
+            ],
+            [
+              1789804906932,
+              0,
+              null
+            ],
+            [
+              1789798785970,
+              0,
+              null
+            ],
+            [
+              1789749932070,
+              1,
+              null
+            ],
+            [
+              1789413966480,
+              1,
+              null
+            ],
+            [
+              1789410967267,
+              0,
+              null
+            ],
+            [
+              1789409013158,
+              1,
+              null
+            ],
+            [
+              1789406790170,
+              0,
+              null
+            ],
+            [
+              1788906242849,
+              0,
+              null
+            ],
+            [
+              1788809663880,
+              0,
+              null
+            ],
+            [
+              1788807385705,
+              1,
+              null
+            ],
+            [
+              1788805175654,
+              0,
+              null
+            ],
+            [
+              1788598848040,
+              0,
+              null
+            ],
+            [
+              1788559919763,
+              0,
+              null
+            ],
+            [
+              1788533695803,
+              1,
+              null
+            ],
+            [
+              1788530016198,
+              0,
+              null
+            ],
+            [
+              1788527736683,
+              0,
+              null
+            ],
+            [
+              1788456217069,
+              1,
+              null
+            ],
+            [
+              1788453986330,
+              0,
+              null
+            ],
+            [
+              1788450514740,
+              1,
+              null
+            ],
+            [
+              1788292513801,
+              0,
+              null
+            ],
+            [
+              1788290250792,
+              0,
+              null
+            ],
+            [
+              1788288257624,
+              0,
+              null
+            ],
+            [
+              1788286318272,
+              1,
+              null
+            ],
+            [
+              1787158240465,
+              1,
+              null
+            ],
+            [
+              1787153208630,
+              0,
+              null
+            ],
+            [
+              1787142553594,
+              0,
+              null
+            ],
+            [
+              1787140012438,
+              1,
+              null
+            ],
+            [
+              1787138808586,
+              0,
+              null
+            ],
+            [
+              1787131598083,
+              0,
+              null
+            ],
+            [
+              1787077570545,
+              0,
+              null
+            ],
+            [
+              1787075075785,
+              0,
+              null
+            ],
+            [
+              1787073214955,
+              1,
+              null
+            ],
+            [
+              1787071388586,
+              0,
+              null
+            ],
+            [
+              1787063218049,
+              0,
+              null
+            ],
+            [
+              1787061485063,
+              0,
+              null
+            ],
+            [
+              1787058971393,
+              0,
+              null
+            ],
+            [
+              1787057054824,
+              0,
+              null
+            ],
+            [
+              1787054783521,
+              1,
+              null
+            ],
+            [
+              1787052656132,
+              0,
+              null
+            ],
+            [
+              1787050656073,
+              1,
+              null
+            ],
+            [
+              1787048771568,
+              0,
+              null
+            ],
+            [
+              1787040025594,
+              1,
+              null
+            ],
+            [
+              1787037763307,
+              0,
+              null
+            ],
+            [
+              1787035646320,
+              1,
+              null
+            ],
+            [
+              1786967990530,
+              0,
+              null
+            ],
+            [
+              1786965892933,
+              1,
+              null
+            ],
+            [
+              1786963871814,
+              1,
+              null
+            ],
+            [
+              1786961695612,
+              1,
+              null
+            ],
+            [
+              1786959845844,
+              1,
+              null
+            ],
+            [
+              1786956653231,
+              1,
+              null
+            ],
+            [
+              1786954405917,
+              1,
+              null
+            ],
+            [
+              1786951770083,
+              0,
+              null
+            ],
+            [
+              1786633326681,
+              0,
+              null
+            ],
+            [
+              1786631407787,
+              0,
+              null
+            ],
+            [
+              1786629359063,
+              1,
+              null
+            ],
+            [
+              1786626655047,
+              0,
+              null
+            ],
+            [
+              1786624602009,
+              1,
+              null
+            ],
+            [
+              1786542100510,
+              0,
+              null
+            ],
+            [
+              1786539302515,
+              1,
+              null
+            ],
+            [
+              1786478462442,
+              0,
+              null
+            ],
+            [
+              1786475514175,
+              0,
+              null
+            ],
+            [
+              1786473606555,
+              0,
+              null
+            ],
+            [
+              1786470877154,
+              1,
+              null
+            ],
+            [
+              1786468473413,
+              1,
+              null
+            ],
+            [
+              1786465733015,
+              0,
+              null
+            ],
+            [
+              1786463047186,
+              1,
+              null
+            ],
+            [
+              1786383622599,
+              1,
+              null
+            ],
+            [
+              1786368077261,
+              1,
+              null
+            ]
           ]
         }
       ]
@@ -7524,18 +10241,18 @@
             "hotStreak": true
           },
           "stats": {
-            "games": 39,
-            "wins": 19,
-            "losses": 20,
-            "winrate": 48.7,
-            "avgK": 7.8,
-            "avgD": 7.7,
-            "avgA": 7.5,
-            "kda": 1.99,
-            "csPerMin": 6.3,
-            "visPerMin": 0.78,
-            "dmgShare": 20.7,
-            "avgDurationMin": 31.5,
+            "games": 98,
+            "wins": 52,
+            "losses": 46,
+            "winrate": 53.1,
+            "avgK": 7.4,
+            "avgD": 7.1,
+            "avgA": 7.7,
+            "kda": 2.12,
+            "csPerMin": 6.5,
+            "visPerMin": 0.87,
+            "dmgShare": 19.6,
+            "avgDurationMin": 30.4,
             "streak": {
               "current": {
                 "type": "W",
@@ -7578,7 +10295,7 @@
               1,
               1
             ],
-            "mainRole": "MIDDLE",
+            "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
               "wins": 8,
@@ -7594,184 +10311,200 @@
             "topChamps": [
               {
                 "key": "Zed",
-                "games": 12,
-                "wins": 7,
-                "winrate": 58.3,
-                "kda": 2.32
+                "games": 19,
+                "wins": 10,
+                "winrate": 52.6,
+                "kda": 2.19
               },
               {
-                "key": "Fizz",
-                "games": 4,
-                "wins": 4,
-                "winrate": 100,
-                "kda": 2.05
-              },
-              {
-                "key": "Galio",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.48
-              },
-              {
-                "key": "JarvanIV",
-                "games": 4,
-                "wins": 1,
-                "winrate": 25,
-                "kda": 2.45
+                "key": "LeeSin",
+                "games": 17,
+                "wins": 9,
+                "winrate": 52.9,
+                "kda": 2.5
               },
               {
                 "key": "Graves",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.48
+                "games": 12,
+                "wins": 8,
+                "winrate": 66.7,
+                "kda": 2.3
+              },
+              {
+                "key": "Fizz",
+                "games": 11,
+                "wins": 9,
+                "winrate": 81.8,
+                "kda": 2.39
+              },
+              {
+                "key": "JarvanIV",
+                "games": 7,
+                "wins": 3,
+                "winrate": 42.9,
+                "kda": 3.03
               }
             ],
             "bestChamp": {
               "key": "Fizz",
-              "games": 4,
-              "wins": 4,
-              "winrate": 100,
-              "kda": 2.05
+              "games": 11,
+              "wins": 9,
+              "winrate": 81.8,
+              "kda": 2.39
             },
             "worstChamp": {
-              "key": "LeeSin",
+              "key": "Viktor",
               "games": 3,
               "wins": 0,
               "winrate": 0,
-              "kda": 1.79
+              "kda": 0.69
             },
             "bestRole": {
-              "key": "MIDDLE",
-              "games": 20,
-              "wins": 12,
-              "winrate": 60,
-              "kda": 1.92
+              "key": "TOP",
+              "games": 3,
+              "wins": 2,
+              "winrate": 66.7,
+              "kda": 1.26
             },
             "worstRole": {
               "key": "JUNGLE",
-              "games": 18,
-              "wins": 7,
-              "winrate": 38.9,
-              "kda": 2.14
+              "games": 55,
+              "wins": 27,
+              "winrate": 49.1,
+              "kda": 2.3
             },
             "bestGame": {
-              "id": "EUW1_7992116167",
-              "t": 1790111288429,
-              "champ": "JarvanIV",
-              "role": "JUNGLE",
-              "k": 9,
-              "d": 2,
-              "a": 16,
+              "id": "EUW1_7975071800",
+              "t": 1788703956951,
+              "champ": "Fizz",
+              "role": "MIDDLE",
+              "k": 12,
+              "d": 1,
+              "a": 7,
               "win": true,
-              "kda": 12.5
+              "kda": 19
             },
             "worstGame": {
-              "id": "EUW1_7988674748",
-              "t": 1789833434678,
-              "champ": "Tristana",
+              "id": "EUW1_7972771966",
+              "t": 1788529564490,
+              "champ": "Viktor",
               "role": "MIDDLE",
-              "k": 3,
-              "d": 12,
+              "k": 0,
+              "d": 9,
               "a": 1,
               "win": false,
-              "kda": 0.33
+              "kda": 0.11
             },
-            "firstGameAt": 1789203882019,
+            "firstGameAt": 1788424597090,
             "lastGameAt": 1790514344916,
             "totals": {
-              "k": 305,
-              "d": 300,
-              "a": 291
+              "k": 724,
+              "d": 698,
+              "a": 757
             },
-            "dmgPerMin": 875,
-            "avgVision": 24.4,
+            "dmgPerMin": 788,
+            "avgVision": 26.5,
             "pentas": 0,
-            "firstBloods": 4,
-            "maxKills": 21,
+            "firstBloods": 8,
+            "maxKills": 22,
             "maxDurationMin": 51.1,
             "avgKp": 44,
             "champs": [
               {
                 "key": "Zed",
-                "games": 12,
-                "wins": 7,
-                "winrate": 58.3,
-                "kda": 2.32,
-                "csPerMin": 6.2
-              },
-              {
-                "key": "Fizz",
-                "games": 4,
-                "wins": 4,
-                "winrate": 100,
-                "kda": 2.05,
-                "csPerMin": 5.9
-              },
-              {
-                "key": "Galio",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.48,
-                "csPerMin": 6.8
-              },
-              {
-                "key": "JarvanIV",
-                "games": 4,
-                "wins": 1,
-                "winrate": 25,
-                "kda": 2.45,
-                "csPerMin": 6.4
-              },
-              {
-                "key": "Graves",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 2.48,
-                "csPerMin": 7.5
+                "games": 19,
+                "wins": 10,
+                "winrate": 52.6,
+                "kda": 2.19,
+                "csPerMin": 6.3
               },
               {
                 "key": "LeeSin",
-                "games": 3,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.79,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Malzahar",
-                "games": 2,
-                "wins": 2,
-                "winrate": 100,
-                "kda": 1.83,
-                "csPerMin": 7.4
-              },
-              {
-                "key": "Tristana",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.33,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Teemo",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.21,
+                "games": 17,
+                "wins": 9,
+                "winrate": 52.9,
+                "kda": 2.5,
                 "csPerMin": 5.9
               },
               {
+                "key": "Graves",
+                "games": 12,
+                "wins": 8,
+                "winrate": 66.7,
+                "kda": 2.3,
+                "csPerMin": 7.4
+              },
+              {
+                "key": "Fizz",
+                "games": 11,
+                "wins": 9,
+                "winrate": 81.8,
+                "kda": 2.39,
+                "csPerMin": 6
+              },
+              {
+                "key": "JarvanIV",
+                "games": 7,
+                "wins": 3,
+                "winrate": 42.9,
+                "kda": 3.03,
+                "csPerMin": 6.3
+              },
+              {
+                "key": "Galio",
+                "games": 5,
+                "wins": 3,
+                "winrate": 60,
+                "kda": 2.61,
+                "csPerMin": 6.9
+              },
+              {
+                "key": "Malzahar",
+                "games": 5,
+                "wins": 4,
+                "winrate": 80,
+                "kda": 1.96,
+                "csPerMin": 8.4
+              },
+              {
                 "key": "FiddleSticks",
-                "games": 1,
+                "games": 4,
+                "wins": 1,
+                "winrate": 25,
+                "kda": 2.48,
+                "csPerMin": 6.4
+              },
+              {
+                "key": "Elise",
+                "games": 3,
+                "wins": 2,
+                "winrate": 66.7,
+                "kda": 1.73,
+                "csPerMin": 6.1
+              },
+              {
+                "key": "Viktor",
+                "games": 3,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 1.18,
-                "csPerMin": 5.6
+                "kda": 0.69,
+                "csPerMin": 6.5
+              },
+              {
+                "key": "Tristana",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.21,
+                "csPerMin": 6.8
+              },
+              {
+                "key": "Teemo",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.03,
+                "csPerMin": 5.7
               },
               {
                 "key": "TwistedFate",
@@ -7782,51 +10515,91 @@
                 "csPerMin": 6.4
               },
               {
-                "key": "Elise",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.64,
-                "csPerMin": 4.9
-              },
-              {
-                "key": "Viktor",
+                "key": "MasterYi",
                 "games": 1,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 0.64,
+                "kda": 1.33,
+                "csPerMin": 5.8
+              },
+              {
+                "key": "Ryze",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.83,
+                "csPerMin": 6.4
+              },
+              {
+                "key": "Maokai",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 2.6,
                 "csPerMin": 6.2
+              },
+              {
+                "key": "Trundle",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2,
+                "csPerMin": 5.8
+              },
+              {
+                "key": "Khazix",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.5,
+                "csPerMin": 6.3
+              },
+              {
+                "key": "Gragas",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.33,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Yasuo",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.38,
+                "csPerMin": 6.8
               }
             ],
             "roles": [
               {
-                "key": "MIDDLE",
-                "games": 20,
-                "wins": 12,
-                "winrate": 60,
-                "kda": 1.92
+                "key": "JUNGLE",
+                "games": 55,
+                "wins": 27,
+                "winrate": 49.1,
+                "kda": 2.3
               },
               {
-                "key": "JUNGLE",
-                "games": 18,
-                "wins": 7,
-                "winrate": 38.9,
-                "kda": 2.14
+                "key": "MIDDLE",
+                "games": 40,
+                "wins": 23,
+                "winrate": 57.5,
+                "kda": 1.99
               },
               {
                 "key": "TOP",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.21
+                "games": 3,
+                "wins": 2,
+                "winrate": 66.7,
+                "kda": 1.26
               }
             ],
             "gold": {
-              "games": 39,
-              "avgGd15": 4,
-              "avgTgd15": 475,
-              "throws": 4,
-              "comebacks": 3,
+              "games": 98,
+              "avgGd15": -77,
+              "avgTgd15": 324,
+              "throws": 9,
+              "comebacks": 6,
               "biggestThrow": {
                 "id": "EUW1_7995462041",
                 "t": 1790429925770,
@@ -7856,18 +10629,18 @@
                 "min": 33
               },
               "biggestLead": {
-                "id": "EUW1_7995779879",
-                "t": 1790446488874,
+                "id": "EUW1_7972411367",
+                "t": 1788478101452,
                 "champ": "Zed",
                 "role": "MIDDLE",
-                "k": 13,
-                "d": 5,
+                "k": 9,
+                "d": 6,
                 "a": 7,
                 "win": true,
-                "kda": 4,
-                "val": 15940,
-                "dur": 1495,
-                "min": 25
+                "kda": 2.67,
+                "val": 16719,
+                "dur": 1833,
+                "min": 31
               },
               "best15": {
                 "id": "EUW1_7995462041",
@@ -7884,18 +10657,18 @@
                 "min": 40
               },
               "worst15": {
-                "id": "EUW1_7992116167",
-                "t": 1790111288429,
-                "champ": "JarvanIV",
+                "id": "EUW1_7974117599",
+                "t": 1788627788272,
+                "champ": "Khazix",
                 "role": "JUNGLE",
-                "k": 9,
-                "d": 2,
-                "a": 16,
-                "win": true,
-                "kda": 12.5,
-                "val": -2410,
-                "dur": 1986,
-                "min": 34
+                "k": 3,
+                "d": 10,
+                "a": 2,
+                "win": false,
+                "kda": 0.5,
+                "val": -3336,
+                "dur": 1645,
+                "min": 3
               }
             },
             "lp": {
@@ -7911,7 +10684,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:19.681Z",
+          "updatedAt": "2026-09-30T09:04:27.499Z",
           "lpHist": [
             [
               1790720384833,
@@ -9043,6 +11816,498 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1790514344916,
+              1,
+              null
+            ],
+            [
+              1790450541554,
+              1,
+              null
+            ],
+            [
+              1790448458387,
+              1,
+              null
+            ],
+            [
+              1790446488874,
+              1,
+              null
+            ],
+            [
+              1790442929800,
+              1,
+              null
+            ],
+            [
+              1790436309524,
+              1,
+              null
+            ],
+            [
+              1790429925770,
+              0,
+              null
+            ],
+            [
+              1790365916353,
+              1,
+              null
+            ],
+            [
+              1790329487072,
+              0,
+              null
+            ],
+            [
+              1790280447374,
+              1,
+              null
+            ],
+            [
+              1790201251666,
+              0,
+              null
+            ],
+            [
+              1790182171378,
+              0,
+              null
+            ],
+            [
+              1790111288429,
+              1,
+              null
+            ],
+            [
+              1789918679941,
+              0,
+              null
+            ],
+            [
+              1789902581704,
+              0,
+              null
+            ],
+            [
+              1789854303914,
+              0,
+              null
+            ],
+            [
+              1789848664781,
+              0,
+              null
+            ],
+            [
+              1789833434678,
+              0,
+              null
+            ],
+            [
+              1789762683643,
+              1,
+              null
+            ],
+            [
+              1789757949707,
+              1,
+              null
+            ],
+            [
+              1789736797396,
+              1,
+              null
+            ],
+            [
+              1789734185692,
+              1,
+              null
+            ],
+            [
+              1789724504907,
+              0,
+              null
+            ],
+            [
+              1789686251208,
+              1,
+              null
+            ],
+            [
+              1789684031183,
+              0,
+              null
+            ],
+            [
+              1789637962947,
+              0,
+              null
+            ],
+            [
+              1789601531366,
+              0,
+              null
+            ],
+            [
+              1789593660791,
+              0,
+              null
+            ],
+            [
+              1789313746483,
+              0,
+              null
+            ],
+            [
+              1789310592301,
+              1,
+              null
+            ],
+            [
+              1789308257777,
+              1,
+              null
+            ],
+            [
+              1789303200104,
+              1,
+              null
+            ],
+            [
+              1789258333687,
+              1,
+              null
+            ],
+            [
+              1789252652426,
+              0,
+              null
+            ],
+            [
+              1789239682966,
+              0,
+              null
+            ],
+            [
+              1789237668006,
+              1,
+              null
+            ],
+            [
+              1789222302493,
+              0,
+              null
+            ],
+            [
+              1789213249567,
+              0,
+              null
+            ],
+            [
+              1789203882019,
+              0,
+              null
+            ],
+            [
+              1789166097539,
+              1,
+              null
+            ],
+            [
+              1789159496632,
+              1,
+              null
+            ],
+            [
+              1789154451830,
+              0,
+              null
+            ],
+            [
+              1789147660924,
+              0,
+              null
+            ],
+            [
+              1789144778565,
+              1,
+              null
+            ],
+            [
+              1789140897705,
+              0,
+              null
+            ],
+            [
+              1789139023299,
+              0,
+              null
+            ],
+            [
+              1789130143247,
+              1,
+              null
+            ],
+            [
+              1789125046386,
+              1,
+              null
+            ],
+            [
+              1789075338493,
+              0,
+              null
+            ],
+            [
+              1789072997418,
+              1,
+              null
+            ],
+            [
+              1789070179657,
+              0,
+              null
+            ],
+            [
+              1789068306649,
+              1,
+              null
+            ],
+            [
+              1789046072544,
+              0,
+              null
+            ],
+            [
+              1789044124554,
+              1,
+              null
+            ],
+            [
+              1789041977384,
+              1,
+              null
+            ],
+            [
+              1788996403632,
+              0,
+              null
+            ],
+            [
+              1788990639271,
+              0,
+              null
+            ],
+            [
+              1788985171615,
+              1,
+              null
+            ],
+            [
+              1788962261390,
+              1,
+              null
+            ],
+            [
+              1788896019329,
+              1,
+              null
+            ],
+            [
+              1788882259013,
+              1,
+              null
+            ],
+            [
+              1788869142143,
+              0,
+              null
+            ],
+            [
+              1788713378448,
+              1,
+              null
+            ],
+            [
+              1788703956951,
+              1,
+              null
+            ],
+            [
+              1788638938816,
+              0,
+              null
+            ],
+            [
+              1788633356112,
+              0,
+              null
+            ],
+            [
+              1788631169359,
+              0,
+              null
+            ],
+            [
+              1788627788272,
+              0,
+              null
+            ],
+            [
+              1788625891362,
+              1,
+              null
+            ],
+            [
+              1788623501748,
+              1,
+              null
+            ],
+            [
+              1788621133285,
+              0,
+              null
+            ],
+            [
+              1788618064597,
+              1,
+              null
+            ],
+            [
+              1788615926060,
+              1,
+              null
+            ],
+            [
+              1788613877481,
+              1,
+              null
+            ],
+            [
+              1788607529674,
+              0,
+              null
+            ],
+            [
+              1788603281657,
+              1,
+              null
+            ],
+            [
+              1788601234445,
+              0,
+              null
+            ],
+            [
+              1788596415456,
+              1,
+              null
+            ],
+            [
+              1788594339107,
+              0,
+              null
+            ],
+            [
+              1788560936218,
+              1,
+              null
+            ],
+            [
+              1788558780706,
+              1,
+              null
+            ],
+            [
+              1788555904193,
+              0,
+              null
+            ],
+            [
+              1788553771215,
+              1,
+              null
+            ],
+            [
+              1788550656308,
+              1,
+              null
+            ],
+            [
+              1788548459688,
+              1,
+              null
+            ],
+            [
+              1788545361481,
+              1,
+              null
+            ],
+            [
+              1788529564490,
+              0,
+              null
+            ],
+            [
+              1788527574859,
+              1,
+              null
+            ],
+            [
+              1788525457457,
+              1,
+              null
+            ],
+            [
+              1788478101452,
+              1,
+              null
+            ],
+            [
+              1788476017532,
+              0,
+              null
+            ],
+            [
+              1788470172241,
+              0,
+              null
+            ],
+            [
+              1788467953323,
+              0,
+              null
+            ],
+            [
+              1788465965190,
+              0,
+              null
+            ],
+            [
+              1788446904307,
+              1,
+              null
+            ],
+            [
+              1788437342054,
+              0,
+              null
+            ],
+            [
+              1788426993992,
+              1,
+              null
+            ],
+            [
+              1788424597090,
+              0,
+              null
+            ]
           ]
         }
       ]
@@ -9071,25 +12336,25 @@
             "hotStreak": true
           },
           "stats": {
-            "games": 42,
-            "wins": 21,
-            "losses": 21,
-            "winrate": 50,
-            "avgK": 6.7,
-            "avgD": 5.9,
-            "avgA": 7.3,
-            "kda": 2.39,
-            "csPerMin": 6.5,
-            "visPerMin": 0.74,
-            "dmgShare": 23.8,
-            "avgDurationMin": 32,
+            "games": 98,
+            "wins": 44,
+            "losses": 54,
+            "winrate": 44.9,
+            "avgK": 5.6,
+            "avgD": 6.4,
+            "avgA": 7.6,
+            "kda": 2.07,
+            "csPerMin": 6,
+            "visPerMin": 0.94,
+            "dmgShare": 22.5,
+            "avgDurationMin": 31.4,
             "streak": {
               "current": {
                 "type": "W",
                 "count": 3
               },
-              "bestWin": 4,
-              "worstLoss": 5
+              "bestWin": 5,
+              "worstLoss": 6
             },
             "form": [
               "W",
@@ -9141,10 +12406,24 @@
             "topChamps": [
               {
                 "key": "Heimerdinger",
-                "games": 14,
-                "wins": 9,
-                "winrate": 64.3,
-                "kda": 2.83
+                "games": 23,
+                "wins": 11,
+                "winrate": 47.8,
+                "kda": 2.39
+              },
+              {
+                "key": "Teemo",
+                "games": 20,
+                "wins": 11,
+                "winrate": 55,
+                "kda": 1.56
+              },
+              {
+                "key": "Syndra",
+                "games": 9,
+                "wins": 7,
+                "winrate": 77.8,
+                "kda": 3.04
               },
               {
                 "key": "Malphite",
@@ -9154,33 +12433,19 @@
                 "kda": 4
               },
               {
-                "key": "Teemo",
-                "games": 5,
-                "wins": 3,
-                "winrate": 60,
-                "kda": 1.76
-              },
-              {
-                "key": "Mel",
-                "games": 3,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2
-              },
-              {
-                "key": "Syndra",
-                "games": 2,
+                "key": "Caitlyn",
+                "games": 4,
                 "wins": 2,
-                "winrate": 100,
-                "kda": 4.45
+                "winrate": 50,
+                "kda": 2.33
               }
             ],
             "bestChamp": {
-              "key": "Malphite",
-              "games": 6,
-              "wins": 4,
-              "winrate": 66.7,
-              "kda": 4
+              "key": "Syndra",
+              "games": 9,
+              "wins": 7,
+              "winrate": 77.8,
+              "kda": 3.04
             },
             "worstChamp": {
               "key": "Mel",
@@ -9190,18 +12455,18 @@
               "kda": 2
             },
             "bestRole": {
-              "key": "TOP",
-              "games": 29,
-              "wins": 18,
-              "winrate": 62.1,
-              "kda": 2.45
+              "key": "BOTTOM",
+              "games": 6,
+              "wins": 4,
+              "winrate": 66.7,
+              "kda": 3
             },
             "worstRole": {
-              "key": "MIDDLE",
-              "games": 12,
-              "wins": 3,
-              "winrate": 25,
-              "kda": 2.32
+              "key": "UTILITY",
+              "games": 11,
+              "wins": 1,
+              "winrate": 9.1,
+              "kda": 1.57
             },
             "bestGame": {
               "id": "EUW1_7972899596",
@@ -9215,38 +12480,54 @@
               "kda": 18
             },
             "worstGame": {
-              "id": "EUW1_7990762799",
-              "t": 1790006385076,
-              "champ": "Rumble",
+              "id": "EUW1_7939277320",
+              "t": 1785785166247,
+              "champ": "Teemo",
               "role": "TOP",
-              "k": 2,
-              "d": 10,
+              "k": 1,
+              "d": 7,
               "a": 1,
               "win": false,
-              "kda": 0.3
+              "kda": 0.29
             },
-            "firstGameAt": 1788287248888,
+            "firstGameAt": 1778703848519,
             "lastGameAt": 1790754836313,
             "totals": {
-              "k": 281,
-              "d": 246,
-              "a": 306
+              "k": 549,
+              "d": 626,
+              "a": 749
             },
-            "dmgPerMin": 932,
-            "avgVision": 23.8,
+            "dmgPerMin": 865,
+            "avgVision": 29.4,
             "pentas": 0,
-            "firstBloods": 1,
+            "firstBloods": 5,
             "maxKills": 15,
-            "maxDurationMin": 45.6,
-            "avgKp": 38,
+            "maxDurationMin": 51.2,
+            "avgKp": 39,
             "champs": [
               {
                 "key": "Heimerdinger",
-                "games": 14,
-                "wins": 9,
-                "winrate": 64.3,
-                "kda": 2.83,
-                "csPerMin": 7.5
+                "games": 23,
+                "wins": 11,
+                "winrate": 47.8,
+                "kda": 2.39,
+                "csPerMin": 7.2
+              },
+              {
+                "key": "Teemo",
+                "games": 20,
+                "wins": 11,
+                "winrate": 55,
+                "kda": 1.56,
+                "csPerMin": 6.8
+              },
+              {
+                "key": "Syndra",
+                "games": 9,
+                "wins": 7,
+                "winrate": 77.8,
+                "kda": 3.04,
+                "csPerMin": 6.4
               },
               {
                 "key": "Malphite",
@@ -9257,12 +12538,20 @@
                 "csPerMin": 5.6
               },
               {
-                "key": "Teemo",
-                "games": 5,
-                "wins": 3,
-                "winrate": 60,
-                "kda": 1.76,
+                "key": "Caitlyn",
+                "games": 4,
+                "wins": 2,
+                "winrate": 50,
+                "kda": 2.33,
                 "csPerMin": 6.9
+              },
+              {
+                "key": "Swain",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.66,
+                "csPerMin": 3.1
               },
               {
                 "key": "Mel",
@@ -9273,20 +12562,28 @@
                 "csPerMin": 6.8
               },
               {
-                "key": "Syndra",
-                "games": 2,
-                "wins": 2,
-                "winrate": 100,
-                "kda": 4.45,
-                "csPerMin": 6.1
+                "key": "Ahri",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 2.26,
+                "csPerMin": 6
               },
               {
-                "key": "Ahri",
+                "key": "Malzahar",
+                "games": 3,
+                "wins": 2,
+                "winrate": 66.7,
+                "kda": 3.08,
+                "csPerMin": 8.6
+              },
+              {
+                "key": "Veigar",
                 "games": 2,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 2.33,
-                "csPerMin": 5.7
+                "kda": 1.56,
+                "csPerMin": 5.8
               },
               {
                 "key": "Yone",
@@ -9297,12 +12594,36 @@
                 "csPerMin": 6
               },
               {
-                "key": "Swain",
-                "games": 1,
+                "key": "Neeko",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.95,
+                "csPerMin": 2
+              },
+              {
+                "key": "Karthus",
+                "games": 2,
                 "wins": 1,
-                "winrate": 100,
-                "kda": 2.27,
-                "csPerMin": 5.4
+                "winrate": 50,
+                "kda": 2.33,
+                "csPerMin": 6.1
+              },
+              {
+                "key": "Brand",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.91,
+                "csPerMin": 3.8
+              },
+              {
+                "key": "Senna",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.42,
+                "csPerMin": 2.2
               },
               {
                 "key": "Locke",
@@ -9329,14 +12650,6 @@
                 "csPerMin": 4.5
               },
               {
-                "key": "Malzahar",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.5,
-                "csPerMin": 7.5
-              },
-              {
                 "key": "Rumble",
                 "games": 1,
                 "wins": 0,
@@ -9345,51 +12658,106 @@
                 "csPerMin": 3.7
               },
               {
-                "key": "Veigar",
+                "key": "Kennen",
                 "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.33,
-                "csPerMin": 5.6
+                "wins": 1,
+                "winrate": 100,
+                "kda": 3.5,
+                "csPerMin": 5.3
               },
               {
-                "key": "Caitlyn",
+                "key": "Soraka",
                 "games": 1,
                 "wins": 0,
                 "winrate": 0,
-                "kda": 1.86,
-                "csPerMin": 6.2
+                "kda": 0.6,
+                "csPerMin": 0.8
+              },
+              {
+                "key": "Zed",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.38,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Alistar",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 3.18,
+                "csPerMin": 0.6
+              },
+              {
+                "key": "Leona",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Lissandra",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.33,
+                "csPerMin": 7.1
+              },
+              {
+                "key": "Illaoi",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.29,
+                "csPerMin": 7.1
+              },
+              {
+                "key": "Rakan",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1,
+                "csPerMin": 0.9
               }
             ],
             "roles": [
               {
                 "key": "TOP",
-                "games": 29,
-                "wins": 18,
-                "winrate": 62.1,
-                "kda": 2.45
+                "games": 53,
+                "wins": 29,
+                "winrate": 54.7,
+                "kda": 2.06
               },
               {
                 "key": "MIDDLE",
-                "games": 12,
-                "wins": 3,
-                "winrate": 25,
-                "kda": 2.32
+                "games": 28,
+                "wins": 10,
+                "winrate": 35.7,
+                "kda": 2.24
+              },
+              {
+                "key": "UTILITY",
+                "games": 11,
+                "wins": 1,
+                "winrate": 9.1,
+                "kda": 1.57
               },
               {
                 "key": "BOTTOM",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.86
+                "games": 6,
+                "wins": 4,
+                "winrate": 66.7,
+                "kda": 3
               }
             ],
             "gold": {
-              "games": 41,
-              "avgGd15": 569,
-              "avgTgd15": 691,
-              "throws": 2,
-              "comebacks": 4,
+              "games": 98,
+              "avgGd15": 165,
+              "avgTgd15": 107,
+              "throws": 11,
+              "comebacks": 9,
               "biggestThrow": {
                 "id": "EUW1_7983791281",
                 "t": 1789408812581,
@@ -9447,18 +12815,18 @@
                 "min": 22
               },
               "worst15": {
-                "id": "EUW1_7990762799",
-                "t": 1790006385076,
-                "champ": "Rumble",
+                "id": "EUW1_7938092064",
+                "t": 1785692376041,
+                "champ": "Teemo",
                 "role": "TOP",
                 "k": 2,
-                "d": 10,
-                "a": 1,
-                "win": false,
-                "kda": 0.3,
-                "val": -2608,
-                "dur": 1767,
-                "min": 5
+                "d": 5,
+                "a": 9,
+                "win": true,
+                "kda": 2.2,
+                "val": -4528,
+                "dur": 1613,
+                "min": 27
               }
             },
             "lp": {
@@ -9474,7 +12842,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-09-30T07:55:16.612Z",
+          "updatedAt": "2026-09-30T09:01:52.257Z",
           "lpHist": [
             [
               1790720384833,
@@ -10613,6 +13981,498 @@
               },
               "lp": null
             }
+          ],
+          "seq": [
+            [
+              1790754836313,
+              1,
+              19
+            ],
+            [
+              1790720954815,
+              1,
+              null
+            ],
+            [
+              1790714488335,
+              1,
+              null
+            ],
+            [
+              1790706370925,
+              0,
+              null
+            ],
+            [
+              1790681443774,
+              1,
+              null
+            ],
+            [
+              1790621022424,
+              1,
+              null
+            ],
+            [
+              1790328908521,
+              0,
+              null
+            ],
+            [
+              1790249357870,
+              0,
+              null
+            ],
+            [
+              1790247188690,
+              1,
+              null
+            ],
+            [
+              1790183915488,
+              0,
+              null
+            ],
+            [
+              1790180938304,
+              0,
+              null
+            ],
+            [
+              1790177271166,
+              0,
+              null
+            ],
+            [
+              1790157064264,
+              0,
+              null
+            ],
+            [
+              1790100275500,
+              0,
+              null
+            ],
+            [
+              1790097637487,
+              1,
+              null
+            ],
+            [
+              1790028457238,
+              0,
+              null
+            ],
+            [
+              1790025667088,
+              1,
+              null
+            ],
+            [
+              1790006385076,
+              0,
+              null
+            ],
+            [
+              1789925436824,
+              0,
+              null
+            ],
+            [
+              1789907494913,
+              0,
+              null
+            ],
+            [
+              1789903139675,
+              1,
+              null
+            ],
+            [
+              1789759513102,
+              1,
+              null
+            ],
+            [
+              1789747576665,
+              1,
+              null
+            ],
+            [
+              1789408812581,
+              0,
+              null
+            ],
+            [
+              1789405382064,
+              1,
+              null
+            ],
+            [
+              1789236767864,
+              0,
+              null
+            ],
+            [
+              1789158996105,
+              0,
+              null
+            ],
+            [
+              1789148657055,
+              1,
+              null
+            ],
+            [
+              1789144960264,
+              1,
+              null
+            ],
+            [
+              1789044702539,
+              0,
+              null
+            ],
+            [
+              1788990639271,
+              0,
+              null
+            ],
+            [
+              1788815167529,
+              0,
+              null
+            ],
+            [
+              1788738655378,
+              0,
+              null
+            ],
+            [
+              1788719536173,
+              1,
+              null
+            ],
+            [
+              1788712390978,
+              1,
+              null
+            ],
+            [
+              1788703614017,
+              1,
+              null
+            ],
+            [
+              1788536707335,
+              1,
+              null
+            ],
+            [
+              1788457287315,
+              0,
+              null
+            ],
+            [
+              1788453930454,
+              1,
+              null
+            ],
+            [
+              1788447625051,
+              0,
+              null
+            ],
+            [
+              1788302837662,
+              1,
+              null
+            ],
+            [
+              1788287248888,
+              1,
+              null
+            ],
+            [
+              1788279412288,
+              0,
+              null
+            ],
+            [
+              1788276373026,
+              0,
+              null
+            ],
+            [
+              1788219157026,
+              1,
+              null
+            ],
+            [
+              1788213905494,
+              1,
+              null
+            ],
+            [
+              1788207401168,
+              1,
+              null
+            ],
+            [
+              1788196317335,
+              1,
+              null
+            ],
+            [
+              1788193348204,
+              1,
+              null
+            ],
+            [
+              1788005357275,
+              0,
+              null
+            ],
+            [
+              1788000665580,
+              1,
+              null
+            ],
+            [
+              1787955430151,
+              0,
+              null
+            ],
+            [
+              1787935744355,
+              0,
+              null
+            ],
+            [
+              1787932879308,
+              0,
+              null
+            ],
+            [
+              1787916573012,
+              0,
+              null
+            ],
+            [
+              1787853571392,
+              1,
+              null
+            ],
+            [
+              1787830758218,
+              1,
+              null
+            ],
+            [
+              1787792415216,
+              1,
+              null
+            ],
+            [
+              1787780077867,
+              1,
+              null
+            ],
+            [
+              1787769437586,
+              0,
+              null
+            ],
+            [
+              1787156963771,
+              0,
+              null
+            ],
+            [
+              1786544072804,
+              0,
+              null
+            ],
+            [
+              1786306999799,
+              1,
+              null
+            ],
+            [
+              1786222907780,
+              0,
+              null
+            ],
+            [
+              1786217232686,
+              0,
+              null
+            ],
+            [
+              1786208815968,
+              1,
+              null
+            ],
+            [
+              1786205186760,
+              1,
+              null
+            ],
+            [
+              1786036523843,
+              0,
+              null
+            ],
+            [
+              1786033311928,
+              0,
+              null
+            ],
+            [
+              1785785166247,
+              0,
+              null
+            ],
+            [
+              1785692376041,
+              1,
+              null
+            ],
+            [
+              1785668002129,
+              1,
+              null
+            ],
+            [
+              1785625890525,
+              1,
+              null
+            ],
+            [
+              1785605176483,
+              0,
+              null
+            ],
+            [
+              1785416906851,
+              0,
+              null
+            ],
+            [
+              1785358295045,
+              0,
+              null
+            ],
+            [
+              1785346453722,
+              0,
+              null
+            ],
+            [
+              1785081480021,
+              0,
+              null
+            ],
+            [
+              1785079047492,
+              1,
+              null
+            ],
+            [
+              1785077152858,
+              1,
+              null
+            ],
+            [
+              1784310006756,
+              0,
+              null
+            ],
+            [
+              1784288923527,
+              0,
+              null
+            ],
+            [
+              1780432818686,
+              0,
+              null
+            ],
+            [
+              1780245605982,
+              0,
+              null
+            ],
+            [
+              1780242312275,
+              0,
+              null
+            ],
+            [
+              1780179456396,
+              0,
+              null
+            ],
+            [
+              1780176500799,
+              1,
+              null
+            ],
+            [
+              1780173827645,
+              1,
+              null
+            ],
+            [
+              1779821537533,
+              0,
+              null
+            ],
+            [
+              1779536956503,
+              1,
+              null
+            ],
+            [
+              1778873110741,
+              0,
+              null
+            ],
+            [
+              1778865187919,
+              0,
+              null
+            ],
+            [
+              1778787795228,
+              0,
+              null
+            ],
+            [
+              1778786001488,
+              0,
+              null
+            ],
+            [
+              1778711526345,
+              0,
+              null
+            ],
+            [
+              1778709502012,
+              0,
+              null
+            ],
+            [
+              1778707149323,
+              1,
+              null
+            ],
+            [
+              1778703848519,
+              1,
+              null
+            ]
           ]
         }
       ]

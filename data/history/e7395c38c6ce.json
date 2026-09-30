@@ -2256,20 +2256,3143 @@
       }
     },
     {
+      "v": 3,
       "id": "EUW1_7969856352",
       "t": 1788287248888,
       "dur": 2429,
       "win": true,
       "champ": "Heimerdinger",
       "role": "TOP",
+      "lvl": 20,
       "k": 8,
       "d": 5,
       "a": 13,
+      "kp": 42,
       "cs": 295,
       "vis": 38,
       "dmg": 40355,
-      "teamDmg": 196029
+      "teamDmg": 196029,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        2503,
+        3020,
+        3157,
+        3135,
+        1026,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Darius",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8144,
+        "maxLeadMin": 41,
+        "maxDef": -880,
+        "tgd15": 1400,
+        "gd15": -683
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7969712102",
+      "t": 1788279412288,
+      "dur": 1801,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 18,
+      "k": 13,
+      "d": 7,
+      "a": 7,
+      "kp": 63,
+      "cs": 209,
+      "vis": 22,
+      "dmg": 44559,
+      "teamDmg": 117610,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        2503,
+        3089,
+        3020,
+        3157,
+        3135,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Camille",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 361,
+        "maxLeadMin": 2,
+        "maxDef": -11346,
+        "tgd15": -3245,
+        "gd15": 2833
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7969653454",
+      "t": 1788276373026,
+      "dur": 1617,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 5,
+      "d": 1,
+      "a": 7,
+      "kp": 63,
+      "cs": 281,
+      "vis": 22,
+      "dmg": 25446,
+      "teamDmg": 70139,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        2503,
+        3116,
+        3175,
+        3089,
+        3147,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Sylas",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -10328,
+        "tgd15": -7117,
+        "gd15": 362
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7969237478",
+      "t": 1788219157026,
+      "dur": 1556,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 17,
+      "k": 7,
+      "d": 5,
+      "a": 5,
+      "kp": 26,
+      "cs": 200,
+      "vis": 16,
+      "dmg": 27089,
+      "teamDmg": 124991,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        3087,
+        3020,
+        1043,
+        1026,
+        2508,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13555,
+        "maxLeadMin": 18,
+        "maxDef": 0,
+        "tgd15": 9125,
+        "gd15": 1056
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7969157815",
+      "t": 1788213905494,
+      "dur": 918,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 12,
+      "k": 4,
+      "d": 2,
+      "a": 0,
+      "kp": 21,
+      "cs": 88,
+      "vis": 11,
+      "dmg": 13722,
+      "teamDmg": 48727,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        3916,
+        3087,
+        0,
+        1001,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Nasus",
+        "spells": [
+          "SummonerHaste",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5227,
+        "maxLeadMin": 16,
+        "maxDef": -666,
+        "tgd15": 4608,
+        "gd15": 912
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7968963881",
+      "t": 1788207401168,
+      "dur": 2042,
+      "win": true,
+      "champ": "Kennen",
+      "role": "TOP",
+      "lvl": 19,
+      "k": 9,
+      "d": 6,
+      "a": 12,
+      "kp": 55,
+      "cs": 181,
+      "vis": 39,
+      "dmg": 31247,
+      "teamDmg": 144954,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        4645,
+        3020,
+        3152,
+        3157,
+        1058,
+        1058,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Mordekaiser",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5767,
+        "maxLeadMin": 34,
+        "maxDef": -3142,
+        "tgd15": 1073,
+        "gd15": 2522
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7968680959",
+      "t": 1788196317335,
+      "dur": 2223,
+      "win": true,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 3,
+      "d": 4,
+      "a": 14,
+      "kp": 33,
+      "cs": 274,
+      "vis": 41,
+      "dmg": 32872,
+      "teamDmg": 161496,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        2503,
+        3020,
+        3157,
+        4630,
+        1026,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Darius",
+        "spells": [
+          "SummonerHaste",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9307,
+        "maxLeadMin": 37,
+        "maxDef": -31,
+        "tgd15": 1645,
+        "gd15": 470
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7968626299",
+      "t": 1788193348204,
+      "dur": 1568,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 17,
+      "k": 11,
+      "d": 4,
+      "a": 7,
+      "kp": 39,
+      "cs": 166,
+      "vis": 21,
+      "dmg": 37509,
+      "teamDmg": 118417,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3087,
+        3020,
+        6653,
+        3115,
+        3802,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Illaoi",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 12026,
+        "maxLeadMin": 27,
+        "maxDef": -461,
+        "tgd15": 1991,
+        "gd15": 1954
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7965953720",
+      "t": 1788005357275,
+      "dur": 2472,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 8,
+      "d": 8,
+      "a": 10,
+      "kp": 40,
+      "cs": 292,
+      "vis": 30,
+      "dmg": 60091,
+      "teamDmg": 174844,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        2503,
+        3020,
+        3157,
+        4645,
+        3135,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Garen",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6154,
+        "maxLeadMin": 24,
+        "maxDef": -10083,
+        "tgd15": -1667,
+        "gd15": -132
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7965885052",
+      "t": 1788000665580,
+      "dur": 2204,
+      "win": true,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 7,
+      "d": 4,
+      "a": 16,
+      "kp": 47,
+      "cs": 277,
+      "vis": 29,
+      "dmg": 43705,
+      "teamDmg": 175125,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        4630,
+        2503,
+        3157,
+        3020,
+        3089,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Mordekaiser",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9001,
+        "maxLeadMin": 37,
+        "maxDef": -144,
+        "tgd15": 388,
+        "gd15": 382
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7965538974",
+      "t": 1787955430151,
+      "dur": 1435,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 13,
+      "k": 1,
+      "d": 4,
+      "a": 1,
+      "kp": 15,
+      "cs": 128,
+      "vis": 7,
+      "dmg": 10620,
+      "teamDmg": 54135,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        2503,
+        1052,
+        1058,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yorick",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -16541,
+        "tgd15": -8511,
+        "gd15": -1800
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7965068954",
+      "t": 1787935744355,
+      "dur": 2174,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 19,
+      "k": 3,
+      "d": 4,
+      "a": 4,
+      "kp": 32,
+      "cs": 271,
+      "vis": 32,
+      "dmg": 30205,
+      "teamDmg": 107855,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        2503,
+        3020,
+        2421,
+        3135,
+        3089,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Akali",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 714,
+        "maxLeadMin": 6,
+        "maxDef": -10012,
+        "tgd15": -1381,
+        "gd15": 100
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7965031601",
+      "t": 1787932879308,
+      "dur": 1759,
+      "win": false,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 6,
+      "d": 9,
+      "a": 7,
+      "kp": 54,
+      "cs": 169,
+      "vis": 15,
+      "dmg": 26045,
+      "teamDmg": 89586,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3175,
+        6655,
+        1082,
+        3157,
+        4645,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Veigar",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -6638,
+        "tgd15": -2605,
+        "gd15": -1118
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7964748288",
+      "t": 1787916573012,
+      "dur": 1160,
+      "win": false,
+      "champ": "Caitlyn",
+      "role": "BOTTOM",
+      "lvl": 10,
+      "k": 2,
+      "d": 6,
+      "a": 3,
+      "kp": 33,
+      "cs": 97,
+      "vis": 9,
+      "dmg": 7675,
+      "teamDmg": 51557,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        2523,
+        1038,
+        2031,
+        1018,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerBarrier",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zeri",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -9675,
+        "tgd15": -3780,
+        "gd15": -3276
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7964016348",
+      "t": 1787853571392,
+      "dur": 1742,
+      "win": true,
+      "champ": "Syndra",
+      "role": "BOTTOM",
+      "lvl": 15,
+      "k": 6,
+      "d": 4,
+      "a": 10,
+      "kp": 41,
+      "cs": 172,
+      "vis": 21,
+      "dmg": 22724,
+      "teamDmg": 111496,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        3089,
+        1052,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 11225,
+        "maxLeadMin": 29,
+        "maxDef": -774,
+        "tgd15": 1592,
+        "gd15": 951
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7963604314",
+      "t": 1787830758218,
+      "dur": 2028,
+      "win": true,
+      "champ": "Syndra",
+      "role": "BOTTOM",
+      "lvl": 17,
+      "k": 12,
+      "d": 3,
+      "a": 7,
+      "kp": 51,
+      "cs": 243,
+      "vis": 26,
+      "dmg": 28904,
+      "teamDmg": 143467,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        3089,
+        2420,
+        3135,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Samira",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3631,
+        "maxLeadMin": 31,
+        "maxDef": -5428,
+        "tgd15": -4980,
+        "gd15": 993
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7963394353",
+      "t": 1787792415216,
+      "dur": 2166,
+      "win": true,
+      "champ": "Caitlyn",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 10,
+      "d": 7,
+      "a": 8,
+      "kp": 35,
+      "cs": 292,
+      "vis": 25,
+      "dmg": 28559,
+      "teamDmg": 135858,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3031,
+        6676,
+        3094,
+        3036,
+        3026,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerBarrier",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ziggs",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 14803,
+        "maxLeadMin": 36,
+        "maxDef": -589,
+        "tgd15": 6367,
+        "gd15": 365
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7963220510",
+      "t": 1787780077867,
+      "dur": 1783,
+      "win": true,
+      "champ": "Caitlyn",
+      "role": "BOTTOM",
+      "lvl": 15,
+      "k": 9,
+      "d": 1,
+      "a": 4,
+      "kp": 59,
+      "cs": 225,
+      "vis": 23,
+      "dmg": 22692,
+      "teamDmg": 92090,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1055,
+        6676,
+        3094,
+        3031,
+        3035,
+        6670,
+        3340
+      ],
+      "spells": [
+        "SummonerBarrier",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "MissFortune",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10537,
+        "maxLeadMin": 30,
+        "maxDef": -2158,
+        "tgd15": -881,
+        "gd15": 186
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7962943016",
+      "t": 1787769437586,
+      "dur": 1045,
+      "win": false,
+      "champ": "Soraka",
+      "role": "UTILITY",
+      "lvl": 8,
+      "k": 0,
+      "d": 5,
+      "a": 3,
+      "kp": 43,
+      "cs": 14,
+      "vis": 29,
+      "dmg": 2927,
+      "teamDmg": 37463,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1001,
+        6617,
+        3869,
+        0,
+        0,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerHeal",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 205,
+        "maxLeadMin": 4,
+        "maxDef": -10777,
+        "tgd15": -8167,
+        "gd15": -1764
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7955497876",
+      "t": 1787156963771,
+      "dur": 1543,
+      "win": false,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 14,
+      "k": 2,
+      "d": 9,
+      "a": 5,
+      "kp": 58,
+      "cs": 142,
+      "vis": 20,
+      "dmg": 18120,
+      "teamDmg": 49708,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6653,
+        0,
+        3087,
+        3020,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Maokai",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 40,
+        "maxLeadMin": 1,
+        "maxDef": -18410,
+        "tgd15": -6342,
+        "gd15": -674
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7948266128",
+      "t": 1786544072804,
+      "dur": 1851,
+      "win": false,
+      "champ": "Neeko",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 1,
+      "d": 12,
+      "a": 7,
+      "kp": 35,
+      "cs": 69,
+      "vis": 72,
+      "dmg": 14162,
+      "teamDmg": 78763,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3020,
+        3871,
+        3152,
+        3157,
+        1052,
+        1027,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Seraphine",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 20,
+        "maxLeadMin": 1,
+        "maxDef": -15202,
+        "tgd15": -2326,
+        "gd15": 18
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7945669699",
+      "t": 1786306999799,
+      "dur": 2128,
+      "win": true,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 7,
+      "d": 7,
+      "a": 13,
+      "kp": 36,
+      "cs": 219,
+      "vis": 25,
+      "dmg": 36744,
+      "teamDmg": 171855,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        6655,
+        2055,
+        3157,
+        4645,
+        3175,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ryze",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7823,
+        "maxLeadMin": 36,
+        "maxDef": 0,
+        "tgd15": 2349,
+        "gd15": 482
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7944581819",
+      "t": 1786222907780,
+      "dur": 1336,
+      "win": false,
+      "champ": "Karthus",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 2,
+      "d": 7,
+      "a": 5,
+      "kp": 35,
+      "cs": 156,
+      "vis": 7,
+      "dmg": 20103,
+      "teamDmg": 67413,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1058,
+        2503,
+        3175,
+        3802,
+        3070,
+        3108,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ahri",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 31,
+        "maxLeadMin": 1,
+        "maxDef": -13080,
+        "tgd15": -4948,
+        "gd15": -1474
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7944445515",
+      "t": 1786217232686,
+      "dur": 2547,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 13,
+      "d": 12,
+      "a": 5,
+      "kp": 41,
+      "cs": 246,
+      "vis": 31,
+      "dmg": 58715,
+      "teamDmg": 190684,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3020,
+        2503,
+        3089,
+        3157,
+        4645,
+        3116,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Vayne",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHaste"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5542,
+        "maxLeadMin": 19,
+        "maxDef": -10847,
+        "tgd15": 1256,
+        "gd15": 981
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7944314872",
+      "t": 1786208815968,
+      "dur": 1211,
+      "win": true,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 2,
+      "d": 0,
+      "a": 2,
+      "kp": 15,
+      "cs": 162,
+      "vis": 13,
+      "dmg": 11828,
+      "teamDmg": 68877,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        6655,
+        2031,
+        3175,
+        3145,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ryze",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 14490,
+        "maxLeadMin": 21,
+        "maxDef": 0,
+        "tgd15": 7753,
+        "gd15": 90
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7944240994",
+      "t": 1786205186760,
+      "dur": 1773,
+      "win": true,
+      "champ": "Karthus",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 4,
+      "d": 5,
+      "a": 17,
+      "kp": 54,
+      "cs": 161,
+      "vis": 23,
+      "dmg": 32118,
+      "teamDmg": 138146,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1058,
+        3175,
+        4645,
+        3118,
+        1082,
+        1058,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kassadin",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6502,
+        "maxLeadMin": 26,
+        "maxDef": -572,
+        "tgd15": 1240,
+        "gd15": 1282
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7942220958",
+      "t": 1786036523843,
+      "dur": 1810,
+      "win": false,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 16,
+      "k": 3,
+      "d": 12,
+      "a": 6,
+      "kp": 21,
+      "cs": 166,
+      "vis": 18,
+      "dmg": 20437,
+      "teamDmg": 117337,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        2508,
+        3087,
+        3020,
+        3147,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2184,
+        "maxLeadMin": 15,
+        "maxDef": -8567,
+        "tgd15": 2184,
+        "gd15": -778
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7942159824",
+      "t": 1786033311928,
+      "dur": 2073,
+      "win": false,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 8,
+      "d": 6,
+      "a": 1,
+      "kp": 41,
+      "cs": 315,
+      "vis": 30,
+      "dmg": 42843,
+      "teamDmg": 130212,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        3118,
+        6653,
+        3087,
+        4630,
+        3020,
+        3089,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "DrMundo",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerHaste"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1993,
+        "maxLeadMin": 12,
+        "maxDef": -8908,
+        "tgd15": 300,
+        "gd15": 1688
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7939277320",
+      "t": 1785785166247,
+      "dur": 1342,
+      "win": false,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 13,
+      "k": 1,
+      "d": 7,
+      "a": 1,
+      "kp": 20,
+      "cs": 132,
+      "vis": 12,
+      "dmg": 14316,
+      "teamDmg": 59140,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3087,
+        2508,
+        2031,
+        3020,
+        3147,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Olaf",
+        "spells": [
+          "SummonerHaste",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 177,
+        "maxLeadMin": 3,
+        "maxDef": -7749,
+        "tgd15": -3337,
+        "gd15": -1659
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7938092064",
+      "t": 1785692376041,
+      "dur": 1613,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 14,
+      "k": 2,
+      "d": 5,
+      "a": 9,
+      "kp": 22,
+      "cs": 79,
+      "vis": 22,
+      "dmg": 10312,
+      "teamDmg": 121511,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        3087,
+        3020,
+        2508,
+        3147,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Irelia",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10653,
+        "maxLeadMin": 27,
+        "maxDef": -679,
+        "tgd15": 2729,
+        "gd15": -4528
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7937610433",
+      "t": 1785668002129,
+      "dur": 2722,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 8,
+      "d": 15,
+      "a": 11,
+      "kp": 38,
+      "cs": 287,
+      "vis": 40,
+      "dmg": 44247,
+      "teamDmg": 192555,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        3087,
+        3118,
+        3157,
+        6653,
+        3020,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Irelia",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1778,
+        "maxLeadMin": 46,
+        "maxDef": -6526,
+        "tgd15": -928,
+        "gd15": -2326
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7937330300",
+      "t": 1785625890525,
+      "dur": 2409,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 7,
+      "d": 8,
+      "a": 13,
+      "kp": 32,
+      "cs": 301,
+      "vis": 34,
+      "dmg": 41550,
+      "teamDmg": 189634,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        3118,
+        6653,
+        3135,
+        3020,
+        3087,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Malphite",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 11023,
+        "maxLeadMin": 41,
+        "maxDef": -1735,
+        "tgd15": 1941,
+        "gd15": -942
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7936925616",
+      "t": 1785605176483,
+      "dur": 2309,
+      "win": false,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 11,
+      "d": 9,
+      "a": 15,
+      "kp": 53,
+      "cs": 262,
+      "vis": 27,
+      "dmg": 44594,
+      "teamDmg": 160281,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3089,
+        6655,
+        3102,
+        3157,
+        4645,
+        3175,
+        3364
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Diana",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1835,
+        "maxLeadMin": 3,
+        "maxDef": -8736,
+        "tgd15": -1441,
+        "gd15": -1240
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7934451344",
+      "t": 1785416906851,
+      "dur": 1626,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 2,
+      "d": 11,
+      "a": 4,
+      "kp": 38,
+      "cs": 178,
+      "vis": 19,
+      "dmg": 16463,
+      "teamDmg": 69764,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        2503,
+        3116,
+        2421,
+        1058,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Varus",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -13788,
+        "tgd15": -4520,
+        "gd15": -1686
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7933875606",
+      "t": 1785358295045,
+      "dur": 2699,
+      "win": false,
+      "champ": "Brand",
+      "role": "UTILITY",
+      "lvl": 18,
+      "k": 3,
+      "d": 16,
+      "a": 25,
+      "kp": 44,
+      "cs": 67,
+      "vis": 137,
+      "dmg": 36333,
+      "teamDmg": 227361,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3116,
+        6653,
+        3870,
+        3020,
+        3165,
+        3118,
+        3364
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3688,
+        "maxLeadMin": 9,
+        "maxDef": -5482,
+        "tgd15": 1310,
+        "gd15": 271
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7933590077",
+      "t": 1785346453722,
+      "dur": 1534,
+      "win": false,
+      "champ": "Veigar",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 1,
+      "d": 7,
+      "a": 3,
+      "kp": 24,
+      "cs": 156,
+      "vis": 13,
+      "dmg": 15124,
+      "teamDmg": 93102,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4646,
+        6657,
+        3070,
+        3175,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Illaoi",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10,
+        "maxLeadMin": 1,
+        "maxDef": -14056,
+        "tgd15": -4909,
+        "gd15": -1355
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7930459372",
+      "t": 1785081480021,
+      "dur": 2020,
+      "win": false,
+      "champ": "Zed",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 15,
+      "d": 8,
+      "a": 4,
+      "kp": 50,
+      "cs": 176,
+      "vis": 23,
+      "dmg": 24586,
+      "teamDmg": 133714,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6692,
+        3171,
+        6694,
+        6699,
+        3156,
+        1038,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3456,
+        "maxLeadMin": 32,
+        "maxDef": -3764,
+        "tgd15": -2347,
+        "gd15": 1038
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7930421028",
+      "t": 1785079047492,
+      "dur": 1619,
+      "win": true,
+      "champ": "Ahri",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 4,
+      "d": 4,
+      "a": 4,
+      "kp": 27,
+      "cs": 188,
+      "vis": 18,
+      "dmg": 17682,
+      "teamDmg": 114642,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        3175,
+        2420,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5680,
+        "maxLeadMin": 27,
+        "maxDef": -64,
+        "tgd15": 2074,
+        "gd15": 178
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7930389720",
+      "t": 1785077152858,
+      "dur": 1421,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 1,
+      "d": 4,
+      "a": 5,
+      "kp": 21,
+      "cs": 185,
+      "vis": 14,
+      "dmg": 8239,
+      "teamDmg": 74572,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1086,
+        3087,
+        3020,
+        3118,
+        1052,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Malphite",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9745,
+        "maxLeadMin": 24,
+        "maxDef": -181,
+        "tgd15": 4124,
+        "gd15": -844
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7921362654",
+      "t": 1784310006756,
+      "dur": 3071,
+      "win": false,
+      "champ": "Alistar",
+      "role": "UTILITY",
+      "lvl": 18,
+      "k": 5,
+      "d": 11,
+      "a": 30,
+      "kp": 52,
+      "cs": 32,
+      "vis": 151,
+      "dmg": 21295,
+      "teamDmg": 226161,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3047,
+        3869,
+        3190,
+        2504,
+        3075,
+        3110,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6277,
+        "maxLeadMin": 42,
+        "maxDef": -1381,
+        "tgd15": 3666,
+        "gd15": 541
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7921066891",
+      "t": 1784288923527,
+      "dur": 2064,
+      "win": false,
+      "champ": "Swain",
+      "role": "UTILITY",
+      "lvl": 13,
+      "k": 1,
+      "d": 9,
+      "a": 15,
+      "kp": 48,
+      "cs": 55,
+      "vis": 77,
+      "dmg": 16629,
+      "teamDmg": 110226,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        3869,
+        3020,
+        3116,
+        3211,
+        3067,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2683,
+        "maxLeadMin": 15,
+        "maxDef": -7497,
+        "tgd15": 2683,
+        "gd15": 425
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7874491397",
+      "t": 1780432818686,
+      "dur": 1452,
+      "win": false,
+      "champ": "Senna",
+      "role": "UTILITY",
+      "lvl": 11,
+      "k": 1,
+      "d": 7,
+      "a": 7,
+      "kp": 50,
+      "cs": 42,
+      "vis": 45,
+      "dmg": 11517,
+      "teamDmg": 68646,
+      "penta": 0,
+      "fb": true,
+      "items": [
+        3144,
+        3869,
+        3009,
+        3113,
+        0,
+        3071,
+        3364
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Rell",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1274,
+        "maxLeadMin": 7,
+        "maxDef": -7757,
+        "tgd15": -349,
+        "gd15": 349
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7872022411",
+      "t": 1780245605982,
+      "dur": 2121,
+      "win": false,
+      "champ": "Teemo",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 5,
+      "d": 10,
+      "a": 14,
+      "kp": 59,
+      "cs": 256,
+      "vis": 30,
+      "dmg": 49863,
+      "teamDmg": 154533,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        3087,
+        3175,
+        3115,
+        6653,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Ahri",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1028,
+        "maxLeadMin": 15,
+        "maxDef": -11315,
+        "tgd15": 1028,
+        "gd15": 1835
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7871962092",
+      "t": 1780242312275,
+      "dur": 1611,
+      "win": false,
+      "champ": "Leona",
+      "role": "UTILITY",
+      "lvl": 11,
+      "k": 2,
+      "d": 8,
+      "a": 6,
+      "kp": 40,
+      "cs": 23,
+      "vis": 63,
+      "dmg": 6916,
+      "teamDmg": 65205,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1057,
+        2031,
+        3869,
+        3190,
+        3047,
+        3211,
+        3364
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Senna",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1939,
+        "maxLeadMin": 8,
+        "maxDef": -9439,
+        "tgd15": -1754,
+        "gd15": -326
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7871273056",
+      "t": 1780179456396,
+      "dur": 1826,
+      "win": false,
+      "champ": "Teemo",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 5,
+      "d": 7,
+      "a": 8,
+      "kp": 50,
+      "cs": 230,
+      "vis": 18,
+      "dmg": 30729,
+      "teamDmg": 125746,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3916,
+        3087,
+        3170,
+        0,
+        3118,
+        6653,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Veigar",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3373,
+        "maxLeadMin": 18,
+        "maxDef": -4631,
+        "tgd15": 753,
+        "gd15": 806
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7871206775",
+      "t": 1780176500799,
+      "dur": 1824,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 3,
+      "d": 2,
+      "a": 10,
+      "kp": 57,
+      "cs": 258,
+      "vis": 24,
+      "dmg": 22881,
+      "teamDmg": 99017,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2503,
+        3175,
+        1026,
+        3116,
+        6653,
+        4630,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ekko",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4972,
+        "maxLeadMin": 31,
+        "maxDef": -4154,
+        "tgd15": 1078,
+        "gd15": -145
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7871121124",
+      "t": 1780173827645,
+      "dur": 2483,
+      "win": true,
+      "champ": "Brand",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 6,
+      "d": 7,
+      "a": 10,
+      "kp": 30,
+      "cs": 261,
+      "vis": 27,
+      "dmg": 52196,
+      "teamDmg": 220352,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6653,
+        3089,
+        2503,
+        3916,
+        3168,
+        3116,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "AurelionSol",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5954,
+        "maxLeadMin": 42,
+        "maxDef": -2017,
+        "tgd15": -851,
+        "gd15": -110
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7866778154",
+      "t": 1779821537533,
+      "dur": 2233,
+      "win": false,
+      "champ": "Swain",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 4,
+      "d": 12,
+      "a": 8,
+      "kp": 36,
+      "cs": 63,
+      "vis": 102,
+      "dmg": 18958,
+      "teamDmg": 150428,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        3870,
+        6653,
+        2421,
+        3020,
+        1058,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Karma",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4921,
+        "maxLeadMin": 24,
+        "maxDef": -3747,
+        "tgd15": -629,
+        "gd15": 163
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7863062658",
+      "t": 1779536956503,
+      "dur": 1858,
+      "win": true,
+      "champ": "Senna",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 2,
+      "d": 5,
+      "a": 19,
+      "kp": 43,
+      "cs": 78,
+      "vis": 61,
+      "dmg": 13333,
+      "teamDmg": 125185,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3071,
+        3087,
+        3009,
+        3877,
+        3086,
+        3144,
+        3364
+      ],
+      "spells": [
+        "SummonerHeal",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15100,
+        "maxLeadMin": 31,
+        "maxDef": 0,
+        "tgd15": 3188,
+        "gd15": -170
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7854832500",
+      "t": 1778873110741,
+      "dur": 1694,
+      "win": false,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 16,
+      "k": 3,
+      "d": 10,
+      "a": 2,
+      "kp": 38,
+      "cs": 221,
+      "vis": 24,
+      "dmg": 23248,
+      "teamDmg": 78969,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3118,
+        0,
+        3020,
+        3087,
+        6653,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kayle",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1306,
+        "maxLeadMin": 10,
+        "maxDef": -13249,
+        "tgd15": -267,
+        "gd15": 1457
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7854668507",
+      "t": 1778865187919,
+      "dur": 1496,
+      "win": false,
+      "champ": "Lissandra",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 3,
+      "d": 6,
+      "a": 5,
+      "kp": 67,
+      "cs": 177,
+      "vis": 9,
+      "dmg": 17320,
+      "teamDmg": 71124,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1026,
+        3118,
+        3168,
+        3157,
+        2022,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "XinZhao",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 25,
+        "maxLeadMin": 1,
+        "maxDef": -16725,
+        "tgd15": -7054,
+        "gd15": -2512
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7853723348",
+      "t": 1778787795228,
+      "dur": 1500,
+      "win": false,
+      "champ": "Neeko",
+      "role": "UTILITY",
+      "lvl": 12,
+      "k": 3,
+      "d": 9,
+      "a": 9,
+      "kp": 40,
+      "cs": 45,
+      "vis": 53,
+      "dmg": 13172,
+      "teamDmg": 91688,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        6655,
+        3870,
+        3009,
+        3152,
+        1052,
+        1029,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Swain",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 114,
+        "maxLeadMin": 2,
+        "maxDef": -4778,
+        "tgd15": -2261,
+        "gd15": -525
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7853655280",
+      "t": 1778786001488,
+      "dur": 2323,
+      "win": false,
+      "champ": "Illaoi",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 4,
+      "d": 7,
+      "a": 5,
+      "kp": 29,
+      "cs": 273,
+      "vis": 35,
+      "dmg": 25779,
+      "teamDmg": 152600,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2021,
+        6662,
+        3047,
+        3071,
+        3065,
+        1028,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Garen",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3024,
+        "maxLeadMin": 18,
+        "maxDef": -6592,
+        "tgd15": 437,
+        "gd15": -1161
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7852743129",
+      "t": 1778711526345,
+      "dur": 1560,
+      "win": false,
+      "champ": "Heimerdinger",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 2,
+      "d": 5,
+      "a": 1,
+      "kp": 17,
+      "cs": 192,
+      "vis": 19,
+      "dmg": 19662,
+      "teamDmg": 71619,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        2503,
+        4645,
+        1001,
+        1011,
+        1052,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Shyvana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10,
+        "maxLeadMin": 1,
+        "maxDef": -15261,
+        "tgd15": -5276,
+        "gd15": 402
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7852686274",
+      "t": 1778709502012,
+      "dur": 1801,
+      "win": false,
+      "champ": "Rakan",
+      "role": "UTILITY",
+      "lvl": 12,
+      "k": 0,
+      "d": 6,
+      "a": 6,
+      "kp": 33,
+      "cs": 28,
+      "vis": 76,
+      "dmg": 3954,
+      "teamDmg": 95146,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        3009,
+        3869,
+        2031,
+        3190,
+        3050,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Velkoz",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3333,
+        "maxLeadMin": 8,
+        "maxDef": -12425,
+        "tgd15": 433,
+        "gd15": -682
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7852616850",
+      "t": 1778707149323,
+      "dur": 2056,
+      "win": true,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 5,
+      "d": 8,
+      "a": 3,
+      "kp": 26,
+      "cs": 206,
+      "vis": 36,
+      "dmg": 18161,
+      "teamDmg": 138287,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        4645,
+        4629,
+        0,
+        0,
+        6655,
+        3175,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Galio",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3552,
+        "maxLeadMin": 34,
+        "maxDef": -3213,
+        "tgd15": 1253,
+        "gd15": -1514
+      }
+    },
+    {
+      "v": 3,
+      "id": "EUW1_7852540584",
+      "t": 1778703848519,
+      "dur": 1468,
+      "win": true,
+      "champ": "Teemo",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 1,
+      "d": 3,
+      "a": 5,
+      "kp": 14,
+      "cs": 162,
+      "vis": 16,
+      "dmg": 14460,
+      "teamDmg": 100609,
+      "penta": 0,
+      "fb": false,
+      "items": [
+        1056,
+        2508,
+        3118,
+        3020,
+        3115,
+        1028,
+        3340
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Graves",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15448,
+        "maxLeadMin": 25,
+        "maxDef": 0,
+        "tgd15": 4084,
+        "gd15": 1176
+      }
     }
   ],
-  "skipped": []
+  "skipped": [
+    "EUW1_7933575250",
+    "EUW1_7869920792"
+  ]
 }
