@@ -314,6 +314,26 @@ button { font: inherit; color: inherit; }
 .etip[hidden] { display: none; }
 .etip b { color: var(--accent); }
 
+/* reparto de roles en la ficha */
+.rs { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.rs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12px; }
+.rs-head b { font-size: 14px; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: .04em; }
+.rs-bar { display: flex; gap: 2px; height: 10px; border-radius: 5px; overflow: hidden; }
+.rs-bar i { display: block; height: 100%; min-width: 3px; }
+.rs-tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.rs-tile {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px 8px; border-radius: 10px;
+  background: var(--panel-3); border: 1px solid transparent; border-bottom: 3px solid var(--rc);
+}
+.rs-tile .role-ico { width: 26px; height: 26px; margin-bottom: 4px; }
+.rs-tile.main { border-color: var(--accent); border-bottom-color: var(--rc); background: linear-gradient(180deg, rgba(214, 255, 61, .08), var(--panel-3)); }
+.rs-tile.main .rs-share { color: var(--accent); }
+.rs-tile.zero { opacity: .45; }
+.rs-share { font-size: 20px; font-weight: 900; }
+.rs-n { font-size: 11px; color: var(--muted); }
+.rs-wr { font-size: 12px; font-weight: 800; }
+.rt-total small { color: var(--muted); font-weight: 600; }
+
 /* campeones */
 .cx { display: flex; flex-direction: column; gap: 12px; }
 .bw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
@@ -511,6 +531,12 @@ button { font: inherit; color: inherit; }
   .tile b { font-size: 16px; }
   .tile > span { font-size: 9px; }
   .bw-grid { grid-template-columns: 1fr; }
+  .rs-tiles { gap: 4px; }
+  .rs-tile { padding: 8px 2px 6px; }
+  .rs-tile .role-ico { width: 20px; height: 20px; }
+  .rs-share { font-size: 15px; }
+  .rs-n { font-size: 9px; }
+  .rs-wr { font-size: 10px; }
   .ct-head, .ct-row { grid-template-columns: minmax(0, 1fr) 44px minmax(90px, 1fr) 44px; gap: 8px; }
   .c-cs { display: none; }
   .leader-val b { font-size: 38px; }

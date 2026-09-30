@@ -497,6 +497,34 @@ function tabStats(acc) {
     eloChart(acc));
 }
 
+// Colores por rol (paleta categórica validada para fondo oscuro; siempre acompañados de icono y texto)
+const ROLE_COLOR = { TOP: '#3987e5', JUNGLE: '#d95926', MIDDLE: '#199e70', BOTTOM: '#c98500', UTILITY: '#d55181' };
+
+function roleShareBlock(acc) {
+  const br = acc.stats?.byRole;
+  if (!br) return null;
+  const ROLES = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
+  const counts = ROLES.map((r) => br[r]?.games ?? 0);
+  const total = counts.reduce((a, b) => a + b, 0);
+  if (!total) return null;
+  const shares = pct100(counts);
+  const main = shares.indexOf(Math.max(...shares));
+  const season = acc.rank ? acc.rank.wins + acc.rank.losses : null;
+  return h('div', { class: 'rs' },
+    h('div', { class: 'rs-head' }, h('b', {}, 'Roles'),
+      h('span', { class: 'muted' }, `${total} partidas analizadas${season ? ` de ${season} en la temporada` : ''}`)),
+    h('div', { class: 'rs-bar', role: 'img', 'aria-label': ROLES.map((r, i) => `${ROLE_ES[r]} ${shares[i]}%`).join(', ') },
+      ROLES.map((r, i) => (counts[i] ? h('i', { style: `flex:${counts[i]};background:${ROLE_COLOR[r]}`, title: `${ROLE_ES[r]}: ${shares[i]}% · ${counts[i]} partidas` }) : null))),
+    h('div', { class: 'rs-tiles' }, ROLES.map((r, i) => {
+      const x = br[r];
+      return h('div', { class: `rs-tile ${i === main ? 'main' : ''} ${counts[i] ? '' : 'zero'}`, style: `--rc:${ROLE_COLOR[r]}`, title: x ? `${x.wins}V ${x.games - x.wins}D · KDA ${fmt(x.kda, 2)}` : '' },
+        roleIcon(r),
+        h('b', { class: 'rs-share' }, `${shares[i]}%`),
+        h('span', { class: 'rs-n' }, `${counts[i]} partidas`),
+        x ? h('span', { class: `rs-wr ${x.winrate >= 50 ? 'pos' : 'neg'}` }, `${fmt(x.winrate, 0)}% WR`) : h('span', { class: 'rs-wr muted' }, '–'));
+    })));
+}
+
 function tabCampeones(acc) {
   const s = acc.stats;
   if (!s) return h('p', { class: 'empty' }, 'Sin partidas registradas.');
@@ -507,6 +535,7 @@ function tabCampeones(acc) {
       h('div', {}, h('b', {}, kind === 'role' ? ROLE_ES[g.key] ?? g.key : g.key), h('span', {}, `${fmt(g.winrate)}% · ${g.games} partidas · KDA ${fmt(g.kda, 2)}`)))
       : h('span', { class: 'muted' }, 'Pocos datos (mín. 3 partidas)'));
   return h('div', { class: 'cx' },
+    roleShareBlock(acc),
     h('div', { class: 'bw-grid' },
       bwTile('Mejor campeón', s.bestChamp, 'champ'), bwTile('Peor campeón', s.worstChamp, 'champ'),
       bwTile('Mejor rol', s.bestRole, 'role'), bwTile('Peor rol', s.worstRole, 'role')),
@@ -606,7 +635,7 @@ function rolesCard(players) {
     h('p', { class: 'card-sub' }, '% de partidas en cada rol (suma 100 %) y winrate en ese rol'),
     h('div', { class: 'rtable-wrap' }, h('table', { class: 'rtable' },
       h('thead', {}, h('tr', {}, h('th', {}, 'Jugador'),
-        ROLES.map((r) => h('th', {}, h('span', { class: 'rth' }, roleIcon(r), ROLE_ES[r]))), h('th', {}, 'Partidas'))),
+        ROLES.map((r) => h('th', {}, h('span', { class: 'rth' }, roleIcon(r), ROLE_ES[r]))), h('th', { title: 'Partidas analizadas / partidas de SoloQ de la temporada según Riot' }, 'Partidas'))),
       h('tbody', {}, rows.map((p) => {
         const br = p.s.byRole;
         const counts = ROLES.map((r) => br[r]?.games ?? 0);
@@ -623,9 +652,9 @@ function rolesCard(players) {
               h('span', { class: `rt-wr ${x.winrate >= 50 ? 'pos' : 'neg'}` }, `${fmt(x.winrate, 0)}% WR`),
               h('span', { class: 'rt-n' }, `${x.games} part.`));
           }),
-          h('td', { class: 'rt-total' }, total));
+          h('td', { class: 'rt-total', title: 'Analizadas / temporada' }, h('b', {}, total), p.wins + p.losses > total ? h('small', {}, ` / ${p.wins + p.losses}`) : null));
       })))),
-    h('p', { class: 'muted small center' }, 'Partidas de SoloQ de esta temporada de la cuenta principal. Resaltado: su rol principal.'));
+    h('p', { class: 'muted small center' }, 'Partidas de SoloQ de esta temporada de la cuenta principal. Resaltado: su rol principal. En "Partidas", analizadas / total de la temporada (mientras se descarga el historial pueden no coincidir; los remakes no cuentan).'));
 }
 
 // ---------------------------------------------------------------- días
