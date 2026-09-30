@@ -142,7 +142,9 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
           hotStreak: !!solo.hotStreak,
         }
       : null,
-    stats: computeAccountStats(history),
+    // Solo la temporada actual: las N partidas más recientes, con N = victorias + derrotas según Riot
+    // (los remakes no se guardan ni cuentan). Evita mezclar partidas de la temporada anterior.
+    stats: computeAccountStats(seasonGames ? history.slice(0, seasonGames) : history),
     links: profileLinks(region, gameName, tagLine),
     updatedAt: new Date().toISOString(),
     _history: history,
