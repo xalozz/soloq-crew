@@ -328,10 +328,82 @@ function lpBadge(lp) {
   return h('span', { class: `m-lp ${lp.d >= 0 ? 'pos' : 'neg'}` }, txt);
 }
 
-function matchRow(g) {
+// ---------------------------------------------------------------- detalle de partida (10 jugadores)
+const openMatches = new Set();
+const detailCache = new Map(); // id → datos | null (no disponible)
+const REGION_LOG = { EUW1: 'euw', EUN1: 'eune', NA1: 'na', KR: 'kr', BR1: 'br', LA1: 'lan', LA2: 'las', OC1: 'oce', TR1: 'tr', RU: 'ru', JP1: 'jp' };
+const logUrl = (id) => { const [r, n] = id.split('_'); return `https://www.leagueofgraphs.com/match/${REGION_LOG[r] ?? 'euw'}/${n}`; };
+const friendIds = () => new Set((DATA?.players ?? []).flatMap((p) => p.accounts.map((a) => a.riotId.toLowerCase())));
+
+async function loadDetail(id) {
+  if (detailCache.has(id)) return detailCache.get(id);
+  try {
+    const r = await fetch(`data/matches/${encodeURIComponent(id)}.json?t=${Math.floor(Date.now() / 6e5)}`);
+    const d = r.ok ? await r.json() : null;
+    detailCache.set(id, d);
+    return d;
+  } catch { return null; }
+}
+
+function matchDetailView(id, meRiotId) {
+  const box = h('div', { class: 'md' }, h('p', { class: 'md-loading' }, 'Cargando partida…'));
+  loadDetail(id).then((d) => {
+    if (!d) {
+      box.replaceChildren(h('p', { class: 'empty' }, 'Detalle no disponible: solo se guardan las últimas 20 partidas de cada uno y las de los récords.'),
+        h('div', { class: 'md-foot' }, extLink(logUrl(id), 'Ver en LeagueOfGraphs ↗')));
+      return;
+    }
+    const friends = friendIds();
+    const me = (meRiotId || '').toLowerCase();
+    box.replaceChildren(
+      h('div', { class: 'md-teams' }, d.teams.map((t) => h('div', { class: `md-team ${t.teamId === 100 ? 'side-blue' : 'side-red'}` },
+        h('div', { class: 'md-head' },
+          h('b', { class: 'md-side' }, t.teamId === 100 ? 'Lado azul' : 'Lado rojo'),
+          h('span', { class: t.win ? 'pos' : 'neg' }, t.win ? 'Victoria' : 'Derrota'),
+          h('span', { class: 'muted' }, `${t.kills} kills · ${goldK(t.gold, false)} oro`),
+          t.bans?.length ? h('span', { class: 'md-bans' }, h('small', {}, 'Bans'), t.bans.map((c) => champIcon(c, 18))) : null),
+        t.players.map((p) => {
+          const rid = (p.rid || '').toLowerCase();
+          const kda = (p.k + p.a) / Math.max(1, p.d);
+          return h('div', { class: `md-p ${rid === me ? 'me' : friends.has(rid) ? 'friend' : ''}` },
+            h('div', { class: 'md-lo' }, loadoutBlock(p, 32), p.lvl ? h('span', { class: 'md-lvl' }, p.lvl) : null),
+            h('div', { class: 'md-name' }, h('b', { title: p.rid }, p.rid), h('span', {}, h('span', {}, p.k), ' / ', h('span', { class: 'neg' }, p.d), ' / ', h('span', {}, p.a),
+              h('small', {}, ` · ${p.d ? fmt(kda, 1) : 'Perfect'} KDA`))),
+            h('div', { class: 'md-num' }, h('b', {}, p.cs), h('small', {}, 'CS')),
+            h('div', { class: 'md-num' }, h('b', {}, goldK(p.dmg, false)), h('small', {}, 'daño')),
+            h('div', { class: 'm-items md-items' }, (p.items ?? []).map((it, i) => itemImg(it, i === 6 ? 20 : 22))));
+        })))),
+      h('div', { class: 'md-foot' }, h('span', { class: 'muted' }, `${mmss(d.dur)} · ${new Date(d.t).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })}`),
+        extLink(logUrl(id), 'Ver en LeagueOfGraphs ↗')));
+  });
+  return box;
+}
+
+// Ventana con el detalle de una partida (desde los récords)
+function openMatchModal(id, title, meRiotId) {
+  const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
+  const onKey = (e) => { if (e.key === 'Escape') close(); };
+  const ov = h('div', { class: 'modal', onclick: (e) => { if (e.target === ov) close(); } },
+    h('div', { class: 'modal-box', role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
+      h('div', { class: 'modal-head' }, h('b', {}, title), h('button', { class: 'modal-x', onclick: close, 'aria-label': 'Cerrar' }, '×')),
+      matchDetailView(id, meRiotId)));
+  document.addEventListener('keydown', onKey);
+  document.body.append(ov);
+}
+
+function matchRow(g, acc) {
   const kda = (g.k + g.a) / Math.max(1, g.d);
   const perfect = g.d === 0;
-  return h('div', { class: `match ${g.win ? 'win' : 'loss'}` },
+  const open = openMatches.has(g.id);
+  const toggle = () => {
+    if (openMatches.has(g.id)) openMatches.delete(g.id); else openMatches.add(g.id);
+    const fresh = matchRow(g, acc);
+    wrap.replaceWith(fresh);
+  };
+  const row = h('div', {
+    class: `match ${g.win ? 'win' : 'loss'} ${open ? 'open' : ''}`, role: 'button', tabindex: 0, 'aria-expanded': open,
+    onclick: toggle, onkeydown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } },
+  },
     h('div', { class: 'm-res' }, h('b', {}, g.win ? 'Victoria' : 'Derrota'), h('span', {}, `${mmss(g.dur)} · ${ago(g.t)}`)),
     h('span', { class: 'm-role' }, roleIcon(g.role)),
     h('div', { class: 'm-me' }, g.spells ? loadoutBlock(g, 40) : champIcon(g.champ, 40)),
@@ -344,13 +416,16 @@ function matchRow(g) {
         !g.win && g.gold.maxLead >= 3000 ? h('span', { class: 'throw-tag' }, `THROW ${goldK(g.gold.maxLead)}`) : null,
         g.win && g.gold.maxDef <= -3000 ? h('span', { class: 'comeback-tag' }, `REMONTADA ${goldK(g.gold.maxDef)}`) : null) : null),
     h('div', { class: 'm-items' }, (g.items ?? []).map((id, i) => itemImg(id, i === 6 ? 24 : 26))),
-    lpBadge(g.lp));
+    lpBadge(g.lp),
+    h('span', { class: 'm-chev', 'aria-hidden': 'true' }, open ? '▴' : '▾'));
+  const wrap = h('div', { class: `mwrap ${g.win ? 'win' : 'loss'} ${open ? 'open' : ''}` }, row, open ? matchDetailView(g.id, acc?.riotId) : null);
+  return wrap;
 }
 
 function tabHistorial(acc) {
   const games = acc.recent ?? [];
   if (!games.length) return h('p', { class: 'empty' }, 'Sin partidas de SoloQ registradas todavía.');
-  return h('div', { class: 'matches' }, games.map(matchRow));
+  return h('div', { class: 'matches' }, games.map((g) => matchRow(g, acc)));
 }
 
 function tile(label, value, cls = '') {
@@ -693,8 +768,8 @@ function renderRecords(players) {
     ['Peor racha registrada', pick(rows, (r) => r.s.streak.worstLoss), (r) => `${r.s.streak.worstLoss} derrotas`, 'bad'],
     ['Mejor winrate de temporada', pick(elig, (r) => r.rank.winrate), (r) => `${fmt(r.rank.winrate)}%`, 'good'],
     ['Peor winrate de temporada', pick(elig, (r) => r.rank.winrate, -1), (r) => `${fmt(r.rank.winrate)}%`, 'bad'],
-    ['Mejor partida', pick(rows, (r) => r.s.bestGame.kda), (r) => `${r.s.bestGame.champ} ${r.s.bestGame.k}/${r.s.bestGame.d}/${r.s.bestGame.a}`, 'good', (r) => r.s.bestGame.champ],
-    ['Peor partida', pick(rows, (r) => r.s.worstGame.kda, -1), (r) => `${r.s.worstGame.champ} ${r.s.worstGame.k}/${r.s.worstGame.d}/${r.s.worstGame.a}`, 'bad', (r) => r.s.worstGame.champ],
+    ['Mejor partida', pick(rows, (r) => r.s.bestGame.kda), (r) => `${r.s.bestGame.champ} ${r.s.bestGame.k}/${r.s.bestGame.d}/${r.s.bestGame.a}`, 'good', (r) => r.s.bestGame.champ, (r) => r.s.bestGame.id],
+    ['Peor partida', pick(rows, (r) => r.s.worstGame.kda, -1), (r) => `${r.s.worstGame.champ} ${r.s.worstGame.k}/${r.s.worstGame.d}/${r.s.worstGame.a}`, 'bad', (r) => r.s.worstGame.champ, (r) => r.s.worstGame.id],
     ['Mejor campeón (5+ partidas)', pick(champs, (x) => x.c.winrate * 1000 + x.c.games), (x) => `${x.c.key} ${fmt(x.c.winrate, 0)}%`, 'good', (x) => x.c.key],
     ['Más partidas en temporada', pick(rows.filter((r) => r.rank), (r) => r.wins + r.losses), (r) => `${fmtInt(r.wins + r.losses)} partidas`, 'neutral'],
   ];
@@ -702,7 +777,8 @@ function renderRecords(players) {
     const c = rows.filter((r) => r.s.gold?.[key]).map((r) => ({ p: r, g: r.s.gold[key] }));
     return c.length ? c.reduce((m, x) => (dir * (x.g.val - m.g.val) > 0 ? x : m)) : null;
   };
-  const goldCard = (title, x, tone, note) => (x ? h('div', { class: `rec rec-${tone} rec-gold` },
+  const goldCard = (title, x, tone, note) => (x ? h('div', { class: `rec rec-${tone} rec-gold clickable`, role: 'button', tabindex: 0, title: 'Ver la partida',
+    onclick: () => openMatchModal(x.g.id, `${title} · ${x.p.name}`, x.p.main?.riotId) },
     h('span', { class: 'rec-t' }, title),
     h('div', { class: 'rec-main' }, champIcon(x.g.champ, 34), h('b', { class: 'rec-v' }, `${goldK(x.g.val)} de oro`)),
     h('span', { class: 'rec-w' }, x.p.name, h('span', { class: 'muted' }, ` · ${x.g.champ} ${x.g.k}/${x.g.d}/${x.g.a} · ${note(x.g)} · ${ago(x.g.t)}`))) : null);
@@ -714,9 +790,10 @@ function renderRecords(players) {
     goldCard('Peor oro @15 vs rival', goldRec('worst15', -1), 'bad', (g) => (g.win ? 'victoria' : 'derrota')),
   ].filter(Boolean);
 
-  const cards = defs.filter((d) => d[1]).map(([title, r, fmtFn, tone, champFn]) => {
+  const cards = defs.filter((d) => d[1]).map(([title, r, fmtFn, tone, champFn, idFn]) => {
     const p = r.p && r.c ? r.p : r;
-    return h('div', { class: `rec rec-${tone}` },
+    const mid = idFn ? idFn(r) : null;
+    return h('div', mid ? { class: `rec rec-${tone} clickable`, role: 'button', tabindex: 0, title: 'Ver la partida', onclick: () => openMatchModal(mid, `${title} · ${p.name}`, p.main?.riotId) } : { class: `rec rec-${tone}` },
       h('span', { class: 'rec-t' }, title),
       h('div', { class: 'rec-main' }, champFn ? champIcon(champFn(r), 34) : avatar(p, 34), h('b', { class: 'rec-v' }, fmtFn(r))),
       h('span', { class: 'rec-w' }, p.name));

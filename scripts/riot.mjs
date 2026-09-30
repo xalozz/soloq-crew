@@ -190,11 +190,41 @@ function goldFromTimeline(info, timeline, me, opp) {
   return { maxLead, maxLeadMin, maxDef, tgd15, gd15 };
 }
 
+// Detalle completo de una partida (los 10 jugadores) para el historial desplegable.
+export function matchDetail(match, dd) {
+  const info = match.info;
+  const teams = [100, 200].map((teamId) => {
+    const t = info.teams?.find((x) => x.teamId === teamId);
+    const players = info.participants.filter((p) => p.teamId === teamId).map((p) => ({
+      rid: p.riotIdGameName ? `${p.riotIdGameName}#${p.riotIdTagline}` : p.summonerName || '?',
+      pos: p.teamPosition || null,
+      lvl: p.champLevel,
+      ...loadout(p, dd),
+      k: p.kills, d: p.deaths, a: p.assists,
+      cs: (p.totalMinionsKilled || 0) + (p.neutralMinionsKilled || 0),
+      dmg: p.totalDamageDealtToChampions || 0,
+      gold: p.goldEarned || 0,
+      items: [p.item0, p.item1, p.item2, p.item3, p.item4, p.item5, p.item6].map((x) => x || 0),
+    }));
+    const order = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
+    players.sort((a, b) => order.indexOf(a.pos) - order.indexOf(b.pos));
+    return {
+      teamId,
+      win: !!t?.win,
+      kills: players.reduce((s, p) => s + p.k, 0),
+      gold: players.reduce((s, p) => s + p.gold, 0),
+      bans: (t?.bans ?? []).map((b) => dd?.champs?.[b.championId] ?? null).filter(Boolean),
+      players,
+    };
+  });
+  return { id: match.metadata.matchId, t: info.gameEndTimestamp, dur: info.gameDuration, teams };
+}
+
 // Diccionarios de Data Dragon para hechizos y runas (una vez por ejecución).
 export async function loadDataDragon(version) {
   if (!version) return { spells: {}, runes: {} };
   const base = `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US`;
-  const spells = {}, runes = {};
+  const spells = {}, runes = {}, champs = {};
   try {
     const s = await (await fetch(`${base}/summoner.json`)).json();
     for (const sp of Object.values(s.data)) spells[sp.key] = sp.id;
@@ -206,5 +236,9 @@ export async function loadDataDragon(version) {
       for (const slot of style.slots) for (const rune of slot.runes) runes[rune.id] = rune.icon;
     }
   } catch { /* sin iconos de runas */ }
-  return { spells, runes };
+  try {
+    const c = await (await fetch(`${base}/champion.json`)).json();
+    for (const ch of Object.values(c.data)) champs[ch.key] = ch.id;
+  } catch { /* bans sin icono */ }
+  return { spells, runes, champs };
 }

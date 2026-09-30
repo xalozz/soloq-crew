@@ -7,12 +7,12 @@
 //   MATCH_COUNT   partidas recientes a pedir por cuenta (defecto 40, máx. 100)
 //   MIN_INTERVAL_MS  espaciado entre peticiones (defecto 1250 ms)
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Riot, RiotError, compactMatch, profileLinks, loadDataDragon, MATCH_RECORD_VERSION } from './riot.mjs';
+import { Riot, RiotError, compactMatch, matchDetail, profileLinks, loadDataDragon, MATCH_RECORD_VERSION } from './riot.mjs';
 import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -22,6 +22,9 @@ const OUT = path.join(DATA_DIR, 'data.json');
 const PUUIDS = path.join(DATA_DIR, 'puuids.json');
 const HIST_DIR = path.join(DATA_DIR, 'history');
 const LP_HIST = path.join(DATA_DIR, 'lp-history.json');
+const MATCH_DIR = path.join(DATA_DIR, 'matches');           // detalle de partidas para el historial desplegable
+const DETAIL_RECENT = 20;                                  // partidas recientes con detalle
+const matchFile = (id) => path.join(MATCH_DIR, `${id}.json`);
 const LP_HIST_CAP = 3000;
 const LP_HIST_PUBLISHED = 600;
 
@@ -113,6 +116,7 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
         }
       }
       const rec = compactMatch(match, puuid, dd, timeline);
+      if (isRecent && rec) await writeJson(matchFile(id), matchDetail(match, dd));
       if (rec) {
         const i = history.findIndex((g) => g.id === id);
         if (i >= 0) history[i] = rec; else history.push(rec);
@@ -125,6 +129,26 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
   history.sort((a, b) => b.t - a.t);
   history.length = Math.min(history.length, HISTORY_CAP);
   await writeJson(hf, { games: history, skipped: [...skipped].slice(-2000), seasonComplete });
+
+  // Detalle de los 10 jugadores: partidas recientes + las de los récords (mejor/peor partida, throws…)
+  const seasonHist = seasonGames ? history.slice(0, seasonGames) : history;
+  const stats = computeAccountStats(seasonHist);
+  const detailIds = new Set(history.slice(0, DETAIL_RECENT).map((g) => g.id));
+  if (stats) {
+    for (const g of [stats.bestGame, stats.worstGame, ...Object.values(stats.gold ?? {}).filter((x) => x && typeof x === 'object')]) {
+      if (g?.id) detailIds.add(g.id);
+    }
+  }
+  for (const id of detailIds) {
+    if (existsSync(matchFile(id)) || budget.details <= 0) continue;
+    try {
+      budget.details--;
+      await writeJson(matchFile(id), matchDetail(await riot.match(region, id), dd));
+    } catch (err) {
+      if (err instanceof RiotError && (err.status === 401 || err.status === 403)) throw err;
+      console.warn(`  ! detalle ${id}: ${err.message}`);
+    }
+  }
 
   const games = solo ? solo.wins + solo.losses : 0;
   return {
@@ -144,7 +168,8 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
       : null,
     // Solo la temporada actual: las N partidas más recientes, con N = victorias + derrotas según Riot
     // (los remakes no se guardan ni cuentan). Evita mezclar partidas de la temporada anterior.
-    stats: computeAccountStats(seasonGames ? history.slice(0, seasonGames) : history),
+    stats,
+    _detailIds: detailIds,
     links: profileLinks(region, gameName, tagLine),
     updatedAt: new Date().toISOString(),
     _history: history,
@@ -205,7 +230,8 @@ async function main() {
   const ddVersion = (await ddragonVersion()) ?? previous?.ddragonVersion ?? null;
   const dd = await loadDataDragon(ddVersion);
   // Máximo de partidas antiguas a descargar por ejecución (el resto, en las siguientes)
-  const budget = { left: Number(process.env.BACKFILL_BUDGET || 350) };
+  const budget = { left: Number(process.env.BACKFILL_BUDGET || 350), details: 80 };
+  await mkdir(MATCH_DIR, { recursive: true });
   const players = [];
   let failures = 0;
   for (const pl of config.players) {
@@ -241,6 +267,7 @@ async function main() {
   // Historial de LP: un punto [timestamp, score] cada vez que cambia el elo de una cuenta.
   // La web lo usa para "LP hoy", cambios de posición y mejores/peores días.
   const lpHist = await readJson(LP_HIST, {});
+  const keepDetails = new Set();
   const now = Date.now();
   for (const p of players) {
     for (const a of p.accounts) {
@@ -264,9 +291,17 @@ async function main() {
       }
       delete a._history;
       delete a._leagueAt;
+      if (a._detailIds) for (const id of a._detailIds) keepDetails.add(id);
+      delete a._detailIds;
     }
   }
   await writeJson(LP_HIST, lpHist);
+  // Borrar detalles que ya no hacen falta (solo si todas las cuentas se actualizaron bien)
+  if (!failures) {
+    for (const f of await readdir(MATCH_DIR)) {
+      if (f.endsWith('.json') && !keepDetails.has(f.slice(0, -5))) await unlink(path.join(MATCH_DIR, f));
+    }
+  }
 
   const next = {
     generatedAt: new Date().toISOString(),

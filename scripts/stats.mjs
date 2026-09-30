@@ -79,7 +79,7 @@ function bestWorst(groups) {
 
 function gameBrief(g) {
   return {
-    id: g.id, t: g.t, champ: g.champ, role: g.role,
+    id: g.id, t: g.t, dur: g.dur, champ: g.champ, role: g.role,
     k: g.k, d: g.d, a: g.a, win: g.win, kda: r2(kda(g.k, g.d, g.a)),
   };
 }
@@ -99,9 +99,12 @@ export function computeAccountStats(history) {
   const cw = bestWorst(champs);
   const rw = bestWorst(roles);
 
-  const withKda = history.map((g) => ({ g, v: kda(g.k, g.d, g.a) }));
+  // Mejor/peor partida: sin partidas de menos de 10 min (rendiciones tempranas); la peor, con al menos una muerte
+  const pool = history.filter((g) => g.dur >= 600);
+  const withKda = (pool.length ? pool : history).map((g) => ({ g, v: kda(g.k, g.d, g.a) }));
   const bestGame = withKda.reduce((m, x) => (x.v > m.v || (x.v === m.v && x.g.k > m.g.k) ? x : m));
-  const worstGame = withKda.reduce((m, x) => (x.v < m.v || (x.v === m.v && x.g.d > m.g.d) ? x : m));
+  const worstPool = withKda.filter((x) => x.g.d > 0);
+  const worstGame = (worstPool.length ? worstPool : withKda).reduce((m, x) => (x.v < m.v || (x.v === m.v && x.g.d > m.g.d) ? x : m));
 
   const last = (cnt) => history.slice(0, cnt);
   const wrLast = (cnt) => {
