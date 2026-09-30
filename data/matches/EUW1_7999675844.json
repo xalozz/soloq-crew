@@ -1,0 +1,327 @@
+{
+  "id": "EUW1_7999675844",
+  "t": 1790786370968,
+  "dur": 2094,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": false,
+      "kills": 23,
+      "gold": 66288,
+      "bans": [
+        "Locke",
+        "Garen",
+        "Zilean",
+        "Talon",
+        "Pyke"
+      ],
+      "players": [
+        {
+          "rid": "SDRC#8199",
+          "pos": "TOP",
+          "lvl": 16,
+          "champ": "Gragas",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 4,
+          "d": 9,
+          "a": 6,
+          "cs": 166,
+          "dmg": 14388,
+          "gold": 11441,
+          "items": [
+            3100,
+            4645,
+            3152,
+            3020,
+            3113,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "chien100laisse#woaf",
+          "pos": "JUNGLE",
+          "lvl": 17,
+          "champ": "Darius",
+          "spells": [
+            "SummonerSmite",
+            "SummonerHaste"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 6,
+          "d": 6,
+          "a": 4,
+          "cs": 250,
+          "dmg": 15395,
+          "gold": 14304,
+          "items": [
+            3742,
+            3111,
+            3078,
+            4401,
+            3053,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "Brazilia#11S",
+          "pos": "MIDDLE",
+          "lvl": 16,
+          "champ": "Qiyana",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 5,
+          "d": 10,
+          "a": 5,
+          "cs": 228,
+          "dmg": 19883,
+          "gold": 13435,
+          "items": [
+            3168,
+            6333,
+            6697,
+            3814,
+            6699,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "xALOzZ#EUW",
+          "pos": "BOTTOM",
+          "lvl": 18,
+          "champ": "Xayah",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 6,
+          "d": 6,
+          "a": 6,
+          "cs": 326,
+          "dmg": 29572,
+          "gold": 18362,
+          "items": [
+            3026,
+            3032,
+            3140,
+            3031,
+            3033,
+            6675,
+            3363
+          ]
+        },
+        {
+          "rid": "mouz cage#1112",
+          "pos": "UTILITY",
+          "lvl": 13,
+          "champ": "Janna",
+          "spells": [
+            "SummonerFlash",
+            "SummonerHeal"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 2,
+          "d": 11,
+          "a": 9,
+          "cs": 22,
+          "dmg": 7747,
+          "gold": 8746,
+          "items": [
+            3870,
+            6617,
+            3107,
+            3009,
+            3114,
+            3114,
+            3364
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": true,
+      "kills": 42,
+      "gold": 76438,
+      "bans": [
+        "Shaco",
+        "Samira",
+        "Yorick",
+        "Neeko",
+        "Viktor"
+      ],
+      "players": [
+        {
+          "rid": "Goodgulf#EUW",
+          "pos": "TOP",
+          "lvl": 19,
+          "champ": "Kennen",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 10,
+          "d": 5,
+          "a": 5,
+          "cs": 241,
+          "dmg": 33171,
+          "gold": 15186,
+          "items": [
+            3157,
+            3020,
+            3089,
+            0,
+            4646,
+            4645,
+            3340
+          ]
+        },
+        {
+          "rid": "Raggen#georg",
+          "pos": "JUNGLE",
+          "lvl": 18,
+          "champ": "JarvanIV",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7200_Domination.png"
+          ],
+          "k": 20,
+          "d": 6,
+          "a": 15,
+          "cs": 223,
+          "dmg": 48026,
+          "gold": 18992,
+          "items": [
+            6699,
+            6698,
+            3047,
+            2520,
+            6333,
+            6696,
+            3364
+          ]
+        },
+        {
+          "rid": "Mathilde#TFT",
+          "pos": "MIDDLE",
+          "lvl": 18,
+          "champ": "Ahri",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 5,
+          "d": 4,
+          "a": 17,
+          "cs": 260,
+          "dmg": 27256,
+          "gold": 14732,
+          "items": [
+            3100,
+            3118,
+            3174,
+            4645,
+            3089,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "ЖΨЮ#XXXL",
+          "pos": "BOTTOM",
+          "lvl": 17,
+          "champ": "Varus",
+          "spells": [
+            "SummonerFlash",
+            "SummonerExhaust"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7200_Domination.png"
+          ],
+          "k": 3,
+          "d": 5,
+          "a": 9,
+          "cs": 283,
+          "dmg": 14746,
+          "gold": 16592,
+          "items": [
+            2421,
+            6665,
+            3087,
+            3302,
+            0,
+            3124,
+            3363
+          ]
+        },
+        {
+          "rid": "FashionBloom#EUW",
+          "pos": "UTILITY",
+          "lvl": 15,
+          "champ": "Zyra",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 4,
+          "d": 3,
+          "a": 12,
+          "cs": 59,
+          "dmg": 29214,
+          "gold": 10936,
+          "items": [
+            3871,
+            6653,
+            3020,
+            3916,
+            3116,
+            3067,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}

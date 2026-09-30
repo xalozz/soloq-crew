@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T16:31:58.691Z",
+  "generatedAt": "2026-09-30T16:40:15.635Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -10657,7 +10657,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 1949,
+      "score": 1927,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -10670,34 +10670,35 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "I",
-            "lp": 49,
+            "lp": 27,
             "wins": 79,
-            "losses": 87,
-            "winrate": 47.6,
-            "hotStreak": true
+            "losses": 88,
+            "winrate": 47.3,
+            "hotStreak": false
           },
           "stats": {
-            "games": 166,
+            "games": 167,
             "wins": 78,
-            "losses": 88,
-            "winrate": 47,
+            "losses": 89,
+            "winrate": 46.7,
             "avgK": 7.2,
             "avgD": 6.2,
-            "avgA": 7.5,
+            "avgA": 7.4,
             "kda": 2.37,
             "csPerMin": 8,
-            "visPerMin": 0.67,
+            "visPerMin": 0.68,
             "dmgShare": 23.1,
             "avgDurationMin": 30.6,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 5
+                "type": "L",
+                "count": 1
               },
               "bestWin": 6,
               "worstLoss": 5
             },
             "form": [
+              "L",
               "W",
               "W",
               "W",
@@ -10706,12 +10707,10 @@
               "L",
               "L",
               "W",
-              "W",
-              "L"
+              "W"
             ],
             "trend": [
               0,
-              0,
               1,
               0,
               1,
@@ -10729,7 +10728,8 @@
               1,
               1,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "BOTTOM",
             "last10": {
@@ -10768,10 +10768,10 @@
               },
               {
                 "key": "Xayah",
-                "games": 14,
+                "games": 15,
                 "wins": 11,
-                "winrate": 78.6,
-                "kda": 2.89
+                "winrate": 73.3,
+                "kda": 2.82
               },
               {
                 "key": "Ezreal",
@@ -10834,14 +10834,14 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1790783566583,
+            "lastGameAt": 1790786370968,
             "totals": {
-              "k": 1200,
-              "d": 1028,
-              "a": 1237
+              "k": 1206,
+              "d": 1034,
+              "a": 1243
             },
             "dmgPerMin": 903,
-            "avgVision": 20.6,
+            "avgVision": 20.7,
             "pentas": 1,
             "firstBloods": 25,
             "maxKills": 19,
@@ -10874,11 +10874,11 @@
               },
               {
                 "key": "Xayah",
-                "games": 14,
+                "games": 15,
                 "wins": 11,
-                "winrate": 78.6,
-                "kda": 2.89,
-                "csPerMin": 8.7
+                "winrate": 73.3,
+                "kda": 2.82,
+                "csPerMin": 8.8
               },
               {
                 "key": "Ezreal",
@@ -11012,9 +11012,9 @@
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 152,
+                "games": 153,
                 "wins": 73,
-                "winrate": 48,
+                "winrate": 47.7,
                 "kda": 2.4
               },
               {
@@ -11047,9 +11047,9 @@
               }
             ],
             "gold": {
-              "games": 100,
-              "avgGd15": 220,
-              "avgTgd15": 224,
+              "games": 101,
+              "avgGd15": 215,
+              "avgTgd15": 182,
               "throws": 16,
               "comebacks": 6,
               "biggestThrow": {
@@ -11194,11 +11194,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 152,
+                "games": 153,
                 "wins": 73,
-                "winrate": 48,
+                "winrate": 47.7,
                 "kda": 2.4,
-                "gd15": 340,
+                "gd15": 334,
                 "champs": [
                   {
                     "key": "Jinx",
@@ -11223,10 +11223,10 @@
                   },
                   {
                     "key": "Xayah",
-                    "games": 14,
+                    "games": 15,
                     "wins": 11,
-                    "winrate": 78.6,
-                    "kda": 2.89
+                    "winrate": 73.3,
+                    "kda": 2.82
                   },
                   {
                     "key": "Ezreal",
@@ -11287,10 +11287,10 @@
               },
               "champPool": 13,
               "kdaStreak": 3,
-              "avgKda": 3.62,
+              "avgKda": 3.61,
               "pentas": 1,
               "quadras": 2,
-              "quadraGames": 166,
+              "quadraGames": 167,
               "firstBloods": 25
             },
             "gameRecords": {
@@ -11427,9 +11427,9 @@
             },
             "lp": {
               "win": 18,
-              "loss": null,
+              "loss": -22,
               "winN": 3,
-              "lossN": 0
+              "lossN": 1
             }
           },
           "links": {
@@ -11438,7 +11438,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-30T16:29:02.455Z",
+          "updatedAt": "2026-09-30T16:40:15.633Z",
           "lpHist": [
             [
               1790720384833,
@@ -11459,9 +11459,76 @@
             [
               1790783638983,
               1949
+            ],
+            [
+              1790786410130,
+              1927
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_7999675844",
+              "t": 1790786370968,
+              "dur": 2094,
+              "win": false,
+              "champ": "Xayah",
+              "role": "BOTTOM",
+              "lvl": 18,
+              "k": 6,
+              "d": 6,
+              "a": 6,
+              "kp": 52,
+              "cs": 326,
+              "vis": 30,
+              "dmg": 29572,
+              "teamDmg": 86985,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8635,
+              "goldEarned": 18362,
+              "fb": false,
+              "items": [
+                3026,
+                3032,
+                3140,
+                3031,
+                3033,
+                6675,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerBarrier"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Varus",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerExhaust"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 5,
+                "maxLeadMin": 1,
+                "maxDef": -10150,
+                "tgd15": -3985,
+                "gd15": -196
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_7999636785",
@@ -12610,69 +12677,14 @@
                 "gd15": 2359
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7990810536",
-              "t": 1790008992163,
-              "dur": 1659,
-              "win": false,
-              "champ": "Ezreal",
-              "role": "BOTTOM",
-              "lvl": 15,
-              "k": 4,
-              "d": 5,
-              "a": 8,
-              "kp": 44,
-              "cs": 236,
-              "vis": 13,
-              "dmg": 19269,
-              "teamDmg": 98484,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 5592,
-              "goldEarned": 12734,
-              "fb": false,
-              "items": [
-                1086,
-                3042,
-                3078,
-                6694,
-                2021,
-                1028,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBoost"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Ashe",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerBarrier"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 560,
-                "maxLeadMin": 12,
-                "maxDef": -8357,
-                "tgd15": -54,
-                "gd15": 809
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790786370968,
+              0,
+              -22
+            ],
             [
               1790783566583,
               1,
@@ -13165,11 +13177,6 @@
             ],
             [
               1786383622599,
-              1,
-              null
-            ],
-            [
-              1786368077261,
               1,
               null
             ]
