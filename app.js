@@ -37,6 +37,11 @@ function h(tag, attrs, ...children) {
   return el;
 }
 const svg = (tag, attrs, ...kids) => h(tag, { ...attrs, svg: true }, ...kids);
+// Enlace externo que siempre abre en pestaña nueva (algunos navegadores integrados ignoran target=_blank)
+const extLink = (url, label, cls) => h('a', {
+  href: url, target: '_blank', rel: 'noopener noreferrer', class: cls,
+  onclick: (e) => { if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return; e.preventDefault(); window.open(url, '_blank', 'noopener'); },
+}, label);
 
 const fmt = (n, d = 1) => (n == null || Number.isNaN(n) ? '–' : Number(n).toFixed(d).replace(/\.0+$/, ''));
 const fmtInt = (n) => (n == null ? '–' : Number(n).toLocaleString('es-ES'));
@@ -528,8 +533,8 @@ function playerDetail(p) {
       p.accounts.length > 1 ? h('div', { class: 'dacc' }, p.accounts.map((a, i) =>
         h('button', { class: i === ai ? 'on' : '', onclick: () => { detailAcc.set(p.name, i); renderRows(); } }, a.gameName))) : null,
       h('div', { class: 'dlinks' },
-        Object.entries(acc.links || {}).filter(([k]) => k !== 'opgg').map(([k, url]) => h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, LINK_LABELS[k] ?? k)),
-        acc.links?.opgg ? h('a', { class: 'main', href: acc.links.opgg, target: '_blank', rel: 'noopener noreferrer' }, 'Ver en OP.GG ↗') : null)),
+        Object.entries(acc.links || {}).filter(([k]) => k !== 'opgg').map(([k, url]) => extLink(url, `${LINK_LABELS[k] ?? k} ↗`)),
+        acc.links?.opgg ? extLink(acc.links.opgg, 'Ver en OP.GG ↗', 'main') : null)),
     acc.error ? h('p', { class: 'err' }, `No se pudo actualizar esta cuenta: ${acc.error}`) : null,
     tab === 'hist' ? tabHistorial(acc) : tab === 'stats' ? tabStats(acc) : tabCampeones(acc));
 }
@@ -578,6 +583,49 @@ function kdaCard(players) {
         h('span', { class: 'leader-pos' }, i + 1),
         h('div', { class: 'leader-who' }, avatar(p, 64, 'big'), h('b', {}, p.name), tierTag(p.rank)),
         h('div', { class: 'leader-val' }, h('b', {}, fmt(p.s.kda, 2)), h('span', {}, `${p.s.games} partidas`))))));
+}
+
+// ---------------------------------------------------------------- roles
+// Porcentajes enteros que suman exactamente 100 (método del mayor resto)
+function pct100(counts) {
+  const total = counts.reduce((a, b) => a + b, 0);
+  if (!total) return counts.map(() => 0);
+  const raw = counts.map((c) => (c / total) * 100);
+  const out = raw.map(Math.floor);
+  let left = 100 - out.reduce((a, b) => a + b, 0);
+  raw.map((v, i) => [v - Math.floor(v), i]).sort((a, b) => b[0] - a[0]).forEach(([, i]) => { if (left-- > 0) out[i]++; });
+  return out;
+}
+
+function rolesCard(players) {
+  const rows = [...players].filter((p) => p.s?.byRole).sort(SORTERS.rank);
+  if (!rows.length) return null;
+  const ROLES = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
+  return h('article', { class: 'scard wide' },
+    h('h3', { class: 'card-title' }, 'Roles'),
+    h('p', { class: 'card-sub' }, '% de partidas en cada rol (suma 100 %) y winrate en ese rol'),
+    h('div', { class: 'rtable-wrap' }, h('table', { class: 'rtable' },
+      h('thead', {}, h('tr', {}, h('th', {}, 'Jugador'),
+        ROLES.map((r) => h('th', {}, h('span', { class: 'rth' }, roleIcon(r), ROLE_ES[r]))), h('th', {}, 'Partidas'))),
+      h('tbody', {}, rows.map((p) => {
+        const br = p.s.byRole;
+        const counts = ROLES.map((r) => br[r]?.games ?? 0);
+        const shares = pct100(counts);
+        const total = counts.reduce((a, b) => a + b, 0);
+        const main = shares.indexOf(Math.max(...shares));
+        return h('tr', {},
+          h('td', { class: 'rt-player' }, avatar(p, 26), h('b', {}, p.name)),
+          ROLES.map((r, i) => {
+            const x = br[r];
+            if (!x?.games) return h('td', { class: 'rt-cell zero' }, h('span', { class: 'rt-share' }, '0%'));
+            return h('td', { class: `rt-cell ${i === main ? 'main' : ''}`, style: `--share:${shares[i]}%`, title: `${ROLE_ES[r]}: ${x.games} partidas · ${x.wins}V ${x.games - x.wins}D · KDA ${fmt(x.kda, 2)}` },
+              h('span', { class: 'rt-share' }, `${shares[i]}%`),
+              h('span', { class: `rt-wr ${x.winrate >= 50 ? 'pos' : 'neg'}` }, `${fmt(x.winrate, 0)}% WR`),
+              h('span', { class: 'rt-n' }, `${x.games} part.`));
+          }),
+          h('td', { class: 'rt-total' }, total));
+      })))),
+    h('p', { class: 'muted small center' }, 'Sobre las últimas partidas de SoloQ analizadas de la cuenta principal. Resaltado: su rol principal.'));
 }
 
 // ---------------------------------------------------------------- días
@@ -753,7 +801,7 @@ function render() {
   document.getElementById('podium').replaceChildren(...top.map(podiumCard));
   renderRows();
   document.getElementById('stats').replaceChildren(
-    ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '');
+    ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '', rolesCard(MODEL) ?? '');
   renderBest5(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
