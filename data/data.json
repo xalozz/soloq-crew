@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T22:54:06.058Z",
+  "generatedAt": "2026-09-30T07:42:50.122Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -232,6 +232,83 @@
                 "kda": 2.18
               }
             ],
+            "gold": {
+              "games": 38,
+              "avgGd15": -224,
+              "avgTgd15": 727,
+              "throws": 1,
+              "comebacks": 4,
+              "biggestThrow": {
+                "id": "EUW1_7957343149",
+                "t": 1787320220769,
+                "champ": "Chogath",
+                "role": "JUNGLE",
+                "k": 16,
+                "d": 11,
+                "a": 8,
+                "win": false,
+                "kda": 2.18,
+                "val": 6547,
+                "dur": 2569,
+                "min": 24
+              },
+              "biggestComeback": {
+                "id": "EUW1_7974900125",
+                "t": 1788695010291,
+                "champ": "Chogath",
+                "role": "MIDDLE",
+                "k": 7,
+                "d": 6,
+                "a": 4,
+                "win": true,
+                "kda": 1.83,
+                "val": -8207,
+                "dur": 1860,
+                "min": 14
+              },
+              "biggestLead": {
+                "id": "EUW1_7956639524",
+                "t": 1787250873247,
+                "champ": "Chogath",
+                "role": "TOP",
+                "k": 6,
+                "d": 4,
+                "a": 6,
+                "win": true,
+                "kda": 3,
+                "val": 17398,
+                "dur": 1789,
+                "min": 30
+              },
+              "best15": {
+                "id": "EUW1_7975986215",
+                "t": 1788776824573,
+                "champ": "Chogath",
+                "role": "TOP",
+                "k": 5,
+                "d": 2,
+                "a": 1,
+                "win": true,
+                "kda": 3,
+                "val": 2392,
+                "dur": 920,
+                "min": 15
+              },
+              "worst15": {
+                "id": "EUW1_7983228828",
+                "t": 1789341153166,
+                "champ": "Chogath",
+                "role": "TOP",
+                "k": 3,
+                "d": 7,
+                "a": 11,
+                "win": true,
+                "kda": 2,
+                "val": -2226,
+                "dur": 1812,
+                "min": 31
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -245,7 +322,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-29T22:52:19.897Z",
+          "updatedAt": "2026-09-30T07:39:22.930Z",
           "lpHist": [
             [
               1790720384833,
@@ -258,7 +335,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7988093560",
               "t": 1789771199194,
               "dur": 1849,
@@ -304,10 +381,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 305,
+                "maxLeadMin": 9,
+                "maxDef": -10132,
+                "tgd15": -3990,
+                "gd15": -1119
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7985009216",
               "t": 1789503855412,
               "dur": 1865,
@@ -353,10 +437,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 20,
+                "maxLeadMin": 1,
+                "maxDef": -8945,
+                "tgd15": -1630,
+                "gd15": -1157
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7984966893",
               "t": 1789501627339,
               "dur": 1385,
@@ -402,10 +493,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9632,
+                "maxLeadMin": 24,
+                "maxDef": -1759,
+                "tgd15": 1036,
+                "gd15": 1100
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7984217075",
               "t": 1789427223055,
               "dur": 2143,
@@ -451,10 +549,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5943,
+                "maxLeadMin": 36,
+                "maxDef": -4389,
+                "tgd15": -574,
+                "gd15": 365
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7983228828",
               "t": 1789341153166,
               "dur": 1812,
@@ -500,10 +605,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5466,
+                "maxLeadMin": 31,
+                "maxDef": -654,
+                "tgd15": 1505,
+                "gd15": -2226
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7979066106",
               "t": 1789034410877,
               "dur": 922,
@@ -549,10 +661,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 329,
+                "maxLeadMin": 2,
+                "maxDef": -7620,
+                "tgd15": -7180,
+                "gd15": -1019
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7979033426",
               "t": 1789033105152,
               "dur": 1448,
@@ -598,10 +717,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7760,
+                "maxLeadMin": 25,
+                "maxDef": -689,
+                "tgd15": 5013,
+                "gd15": 620
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7979045646",
               "t": 1789031384832,
               "dur": 1649,
@@ -647,10 +773,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6367,
+                "maxLeadMin": 28,
+                "maxDef": -1182,
+                "tgd15": -436,
+                "gd15": -877
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7975986215",
               "t": 1788776824573,
               "dur": 920,
@@ -696,10 +829,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9393,
+                "maxLeadMin": 15,
+                "maxDef": -77,
+                "tgd15": 9393,
+                "gd15": 2392
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7975976646",
               "t": 1788775435550,
               "dur": 1972,
@@ -745,10 +885,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 25,
+                "maxLeadMin": 1,
+                "maxDef": -10755,
+                "tgd15": -8210,
+                "gd15": -333
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7974900125",
               "t": 1788695010291,
               "dur": 1860,
@@ -794,10 +941,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2849,
+                "maxLeadMin": 14,
+                "maxDef": -8207,
+                "tgd15": 2161,
+                "gd15": 712
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7974864321",
               "t": 1788692610768,
               "dur": 1558,
@@ -843,10 +997,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 11385,
+                "maxLeadMin": 26,
+                "maxDef": -1033,
+                "tgd15": -294,
+                "gd15": 843
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7973697966",
               "t": 1788602236108,
               "dur": 1986,
@@ -892,10 +1053,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -8856,
+                "tgd15": -2949,
+                "gd15": 1189
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7966285005",
               "t": 1788022407371,
               "dur": 1321,
@@ -941,10 +1109,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 15470,
+                "maxLeadMin": 23,
+                "maxDef": -440,
+                "tgd15": 8146,
+                "gd15": 376
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7966251923",
               "t": 1788020626515,
               "dur": 1425,
@@ -990,10 +1165,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10213,
+                "maxLeadMin": 24,
+                "maxDef": -721,
+                "tgd15": 3347,
+                "gd15": -1074
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7957343149",
               "t": 1787320220769,
               "dur": 2569,
@@ -1039,10 +1221,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6547,
+                "maxLeadMin": 24,
+                "maxDef": -9881,
+                "tgd15": 3098,
+                "gd15": 397
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7957315487",
               "t": 1787316781494,
               "dur": 2029,
@@ -1088,10 +1277,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2300,
+                "maxLeadMin": 34,
+                "maxDef": -3362,
+                "tgd15": -196,
+                "gd15": -1703
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7957282079",
               "t": 1787313899756,
               "dur": 911,
@@ -1137,10 +1333,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -11628,
+                "tgd15": -11279,
+                "gd15": 382
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7957261666",
               "t": 1787311934401,
               "dur": 1448,
@@ -1186,10 +1389,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10,
+                "maxLeadMin": 1,
+                "maxDef": -11177,
+                "tgd15": -5060,
+                "gd15": 397
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7957226841",
               "t": 1787307998359,
               "dur": 923,
@@ -1234,6 +1444,13 @@
                   "perk-images/Styles/Domination/Electrocute/Electrocute.png",
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 8797,
+                "maxLeadMin": 16,
+                "maxDef": 0,
+                "tgd15": 8236,
+                "gd15": -1861
               },
               "lp": null
             }
@@ -1499,6 +1716,83 @@
                 "kda": 1.5
               }
             ],
+            "gold": {
+              "games": 39,
+              "avgGd15": -84,
+              "avgTgd15": -355,
+              "throws": 1,
+              "comebacks": 4,
+              "biggestThrow": {
+                "id": "EUW1_7932590551",
+                "t": 1785259973973,
+                "champ": "Blitzcrank",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 7,
+                "a": 19,
+                "win": false,
+                "kda": 3,
+                "val": 3117,
+                "dur": 2222,
+                "min": 32
+              },
+              "biggestComeback": {
+                "id": "EUW1_7938409728",
+                "t": 1785706181346,
+                "champ": "Braum",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 6,
+                "a": 20,
+                "win": true,
+                "kda": 4.17,
+                "val": -7606,
+                "dur": 2175,
+                "min": 12
+              },
+              "biggestLead": {
+                "id": "EUW1_7945442001",
+                "t": 1786296765582,
+                "champ": "Senna",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 6,
+                "a": 16,
+                "win": true,
+                "kda": 2.83,
+                "val": 16468,
+                "dur": 1844,
+                "min": 31
+              },
+              "best15": {
+                "id": "EUW1_7944377613",
+                "t": 1786211930127,
+                "champ": "Senna",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 0,
+                "a": 9,
+                "win": true,
+                "kda": 11,
+                "val": 2076,
+                "dur": 910,
+                "min": 15
+              },
+              "worst15": {
+                "id": "EUW1_7944305182",
+                "t": 1786208565593,
+                "champ": "Ornn",
+                "role": "TOP",
+                "k": 2,
+                "d": 4,
+                "a": 0,
+                "win": false,
+                "kda": 0.5,
+                "val": -2539,
+                "dur": 1269,
+                "min": 0
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -1512,7 +1806,7 @@
             "dpm": "https://dpm.lol/xPATQ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPATQ-EUW"
           },
-          "updatedAt": "2026-09-29T22:53:12.294Z",
+          "updatedAt": "2026-09-30T07:41:05.264Z",
           "lpHist": [
             [
               1790720384833,
@@ -1525,7 +1819,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7953594298",
               "t": 1786991573770,
               "dur": 1769,
@@ -1571,10 +1865,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1131,
+                "maxLeadMin": 21,
+                "maxDef": -3341,
+                "tgd15": 813,
+                "gd15": 1137
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952639516",
               "t": 1786906808653,
               "dur": 1691,
@@ -1620,10 +1921,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 226,
+                "maxLeadMin": 3,
+                "maxDef": -7115,
+                "tgd15": -1643,
+                "gd15": 237
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952584101",
               "t": 1786904731315,
               "dur": 1621,
@@ -1669,10 +1977,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 139,
+                "maxLeadMin": 2,
+                "maxDef": -16259,
+                "tgd15": -4524,
+                "gd15": 330
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952444782",
               "t": 1786898079218,
               "dur": 1770,
@@ -1718,10 +2033,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9128,
+                "maxLeadMin": 30,
+                "maxDef": -1768,
+                "tgd15": -1768,
+                "gd15": -220
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952398792",
               "t": 1786895695810,
               "dur": 1564,
@@ -1767,10 +2089,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9139,
+                "maxLeadMin": 26,
+                "maxDef": -559,
+                "tgd15": 907,
+                "gd15": 234
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952350584",
               "t": 1786893840105,
               "dur": 2190,
@@ -1816,10 +2145,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2538,
+                "maxLeadMin": 19,
+                "maxDef": -5825,
+                "tgd15": 594,
+                "gd15": 401
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952305191",
               "t": 1786891307344,
               "dur": 1425,
@@ -1865,10 +2201,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 11,
+                "maxLeadMin": 1,
+                "maxDef": -14021,
+                "tgd15": -3511,
+                "gd15": -1578
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952146448",
               "t": 1786882888713,
               "dur": 1573,
@@ -1914,10 +2257,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6889,
+                "maxLeadMin": 27,
+                "maxDef": -1749,
+                "tgd15": 636,
+                "gd15": 79
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7952123753",
               "t": 1786880888324,
               "dur": 1909,
@@ -1963,10 +2313,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 333,
+                "maxLeadMin": 6,
+                "maxDef": -9167,
+                "tgd15": -3292,
+                "gd15": -1052
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7951891811",
               "t": 1786841644065,
               "dur": 1522,
@@ -2012,10 +2369,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7963,
+                "maxLeadMin": 26,
+                "maxDef": -89,
+                "tgd15": 3249,
+                "gd15": -1273
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7951875495",
               "t": 1786839632446,
               "dur": 1824,
@@ -2061,10 +2425,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9876,
+                "maxLeadMin": 31,
+                "maxDef": -142,
+                "tgd15": 3831,
+                "gd15": 300
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7951843476",
               "t": 1786837481378,
               "dur": 1894,
@@ -2110,10 +2481,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12770,
+                "maxLeadMin": 32,
+                "maxDef": -421,
+                "tgd15": 689,
+                "gd15": 59
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7951397089",
               "t": 1786814992020,
               "dur": 1260,
@@ -2159,10 +2537,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10323,
+                "maxLeadMin": 21,
+                "maxDef": -10,
+                "tgd15": 5922,
+                "gd15": -366
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7950865288",
               "t": 1786756987113,
               "dur": 1734,
@@ -2208,10 +2593,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 11578,
+                "maxLeadMin": 25,
+                "maxDef": -115,
+                "tgd15": 2611,
+                "gd15": 386
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7950847202",
               "t": 1786754864351,
               "dur": 1935,
@@ -2257,10 +2649,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1457,
+                "maxLeadMin": 10,
+                "maxDef": -10970,
+                "tgd15": -2325,
+                "gd15": 632
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7950824105",
               "t": 1786752483576,
               "dur": 1509,
@@ -2306,10 +2705,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 63,
+                "maxLeadMin": 2,
+                "maxDef": -12689,
+                "tgd15": -4020,
+                "gd15": 214
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7950783239",
               "t": 1786750609302,
               "dur": 2261,
@@ -2355,10 +2761,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5419,
+                "maxLeadMin": 38,
+                "maxDef": -4895,
+                "tgd15": -163,
+                "gd15": 107
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7948695050",
               "t": 1786568133307,
               "dur": 1867,
@@ -2404,10 +2817,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 858,
+                "maxLeadMin": 3,
+                "maxDef": -12557,
+                "tgd15": -3841,
+                "gd15": -574
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7948635594",
               "t": 1786565955863,
               "dur": 2173,
@@ -2453,10 +2873,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1055,
+                "maxLeadMin": 34,
+                "maxDef": -5628,
+                "tgd15": -4095,
+                "gd15": -1163
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7948531926",
               "t": 1786560479825,
               "dur": 2093,
@@ -2501,6 +2928,13 @@
                   "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
                   "perk-images/Styles/7204_Resolve.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 12841,
+                "maxLeadMin": 35,
+                "maxDef": -726,
+                "tgd15": 953,
+                "gd15": 338
               },
               "lp": null
             }
@@ -2792,6 +3226,83 @@
                 "kda": 1.23
               }
             ],
+            "gold": {
+              "games": 40,
+              "avgGd15": 199,
+              "avgTgd15": 137,
+              "throws": 4,
+              "comebacks": 6,
+              "biggestThrow": {
+                "id": "EUW1_7987090086",
+                "t": 1789684031183,
+                "champ": "Galio",
+                "role": "UTILITY",
+                "k": 1,
+                "d": 14,
+                "a": 19,
+                "win": false,
+                "kda": 1.43,
+                "val": 7893,
+                "dur": 2349,
+                "min": 26
+              },
+              "biggestComeback": {
+                "id": "EUW1_7985064657",
+                "t": 1789506077681,
+                "champ": "Elise",
+                "role": "UTILITY",
+                "k": 8,
+                "d": 12,
+                "a": 18,
+                "win": true,
+                "kda": 2.17,
+                "val": -7572,
+                "dur": 2240,
+                "min": 0
+              },
+              "biggestLead": {
+                "id": "EUW1_7983119622",
+                "t": 1789334977355,
+                "champ": "Pantheon",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 11,
+                "a": 12,
+                "win": true,
+                "kda": 1.55,
+                "val": 13170,
+                "dur": 1858,
+                "min": 31
+              },
+              "best15": {
+                "id": "EUW1_7990284980",
+                "t": 1789942478241,
+                "champ": "Galio",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 8,
+                "a": 20,
+                "win": false,
+                "kda": 3.13,
+                "val": 1555,
+                "dur": 2238,
+                "min": 15
+              },
+              "worst15": {
+                "id": "EUW1_7983200576",
+                "t": 1789338730314,
+                "champ": "Rengar",
+                "role": "JUNGLE",
+                "k": 2,
+                "d": 6,
+                "a": 6,
+                "win": false,
+                "kda": 1.33,
+                "val": -1855,
+                "dur": 1585,
+                "min": 2
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -2805,7 +3316,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-09-29T22:54:06.056Z",
+          "updatedAt": "2026-09-30T07:42:50.121Z",
           "lpHist": [
             [
               1790720384833,
@@ -2818,7 +3329,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998698424",
               "t": 1790698364599,
               "dur": 1083,
@@ -2864,10 +3375,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 8425,
+                "maxLeadMin": 18,
+                "maxDef": -132,
+                "tgd15": 5626,
+                "gd15": 1375
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998185660",
               "t": 1790632295058,
               "dur": 2095,
@@ -2913,10 +3431,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1216,
+                "maxLeadMin": 13,
+                "maxDef": -9601,
+                "tgd15": 639,
+                "gd15": -543
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997711883",
               "t": 1790610257288,
               "dur": 1975,
@@ -2962,10 +3487,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3928,
+                "maxLeadMin": 33,
+                "maxDef": -6310,
+                "tgd15": -3405,
+                "gd15": 530
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997275120",
               "t": 1790548403036,
               "dur": 1806,
@@ -3011,10 +3543,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9673,
+                "maxLeadMin": 31,
+                "maxDef": -204,
+                "tgd15": 172,
+                "gd15": 674
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997245272",
               "t": 1790546281622,
               "dur": 1488,
@@ -3060,10 +3599,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9309,
+                "maxLeadMin": 25,
+                "maxDef": -2157,
+                "tgd15": -65,
+                "gd15": 827
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997212496",
               "t": 1790544551629,
               "dur": 2083,
@@ -3109,10 +3655,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4806,
+                "maxLeadMin": 16,
+                "maxDef": -1264,
+                "tgd15": 4677,
+                "gd15": -323
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997172995",
               "t": 1790542240650,
               "dur": 1072,
@@ -3158,10 +3711,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9472,
+                "maxLeadMin": 18,
+                "maxDef": -844,
+                "tgd15": 6141,
+                "gd15": 666
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7996759165",
               "t": 1790525792097,
               "dur": 1973,
@@ -3207,10 +3767,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5060,
+                "maxLeadMin": 18,
+                "maxDef": -7278,
+                "tgd15": 2707,
+                "gd15": 899
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7996704888",
               "t": 1790523501456,
               "dur": 2430,
@@ -3256,10 +3823,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 200,
+                "maxLeadMin": 2,
+                "maxDef": -16297,
+                "tgd15": -6549,
+                "gd15": -1148
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7996547220",
               "t": 1790514344916,
               "dur": 924,
@@ -3305,10 +3879,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7398,
+                "maxLeadMin": 15,
+                "maxDef": 0,
+                "tgd15": 7398,
+                "gd15": 1421
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995585235",
               "t": 1790436309524,
               "dur": 1927,
@@ -3354,10 +3935,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4520,
+                "maxLeadMin": 33,
+                "maxDef": -6608,
+                "tgd15": -2379,
+                "gd15": -751
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992727695",
               "t": 1790182171378,
               "dur": 1696,
@@ -3403,10 +3991,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2269,
+                "maxLeadMin": 19,
+                "maxDef": -8137,
+                "tgd15": -333,
+                "gd15": -352
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992116167",
               "t": 1790111288429,
               "dur": 1986,
@@ -3452,10 +4047,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10922,
+                "maxLeadMin": 34,
+                "maxDef": -952,
+                "tgd15": -952,
+                "gd15": -618
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991212048",
               "t": 1790027097030,
               "dur": 1627,
@@ -3501,10 +4103,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -9247,
+                "tgd15": -5888,
+                "gd15": 660
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990284980",
               "t": 1789942478241,
               "dur": 2238,
@@ -3550,10 +4159,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3474,
+                "maxLeadMin": 15,
+                "maxDef": -5365,
+                "tgd15": 3474,
+                "gd15": 1555
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990268684",
               "t": 1789940004976,
               "dur": 935,
@@ -3599,10 +4215,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5819,
+                "maxLeadMin": 16,
+                "maxDef": -275,
+                "tgd15": 4038,
+                "gd15": -349
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990206757",
               "t": 1789938854856,
               "dur": 2546,
@@ -3648,10 +4271,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10114,
+                "maxLeadMin": 43,
+                "maxDef": -5016,
+                "tgd15": -1319,
+                "gd15": -1116
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989068983",
               "t": 1789854303914,
               "dur": 2267,
@@ -3697,10 +4327,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3156,
+                "maxLeadMin": 22,
+                "maxDef": -2936,
+                "tgd15": 1750,
+                "gd15": 902
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7988949296",
               "t": 1789848664781,
               "dur": 1589,
@@ -3746,10 +4383,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1878,
+                "maxLeadMin": 16,
+                "maxDef": -11048,
+                "tgd15": 806,
+                "gd15": 1458
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7988674748",
               "t": 1789833434678,
               "dur": 1490,
@@ -3794,6 +4438,13 @@
                   "perk-images/Styles/Resolve/Guardian/Guardian.png",
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 488,
+                "maxLeadMin": 6,
+                "maxDef": -12459,
+                "tgd15": -3831,
+                "gd15": 404
               },
               "lp": null
             }
@@ -4083,6 +4734,83 @@
                 "kda": 2.85
               }
             ],
+            "gold": {
+              "games": 40,
+              "avgGd15": 567,
+              "avgTgd15": 474,
+              "throws": 4,
+              "comebacks": 2,
+              "biggestThrow": {
+                "id": "EUW1_7989975487",
+                "t": 1789929573032,
+                "champ": "Zyra",
+                "role": "JUNGLE",
+                "k": 8,
+                "d": 8,
+                "a": 20,
+                "win": false,
+                "kda": 3.5,
+                "val": 6151,
+                "dur": 2772,
+                "min": 14
+              },
+              "biggestComeback": {
+                "id": "EUW1_7996894001",
+                "t": 1790532237689,
+                "champ": "Zyra",
+                "role": "JUNGLE",
+                "k": 11,
+                "d": 15,
+                "a": 15,
+                "win": true,
+                "kda": 1.73,
+                "val": -7612,
+                "dur": 2376,
+                "min": 40
+              },
+              "biggestLead": {
+                "id": "EUW1_7995713420",
+                "t": 1790443474721,
+                "champ": "Janna",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 2,
+                "a": 14,
+                "win": true,
+                "kda": 9.5,
+                "val": 15493,
+                "dur": 1775,
+                "min": 30
+              },
+              "best15": {
+                "id": "EUW1_7988324835",
+                "t": 1789810459274,
+                "champ": "Briar",
+                "role": "JUNGLE",
+                "k": 11,
+                "d": 8,
+                "a": 8,
+                "win": false,
+                "kda": 2.38,
+                "val": 2306,
+                "dur": 2166,
+                "min": 21
+              },
+              "worst15": {
+                "id": "EUW1_7982308183",
+                "t": 1789298598729,
+                "champ": "Leona",
+                "role": "UTILITY",
+                "k": 0,
+                "d": 10,
+                "a": 17,
+                "win": false,
+                "kda": 1.7,
+                "val": -1687,
+                "dur": 1927,
+                "min": 9
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -4096,7 +4824,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-09-29T22:49:42.431Z",
+          "updatedAt": "2026-09-30T07:34:16.577Z",
           "lpHist": [
             [
               1790720384833,
@@ -4109,7 +4837,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998844473",
               "t": 1790706048628,
               "dur": 1869,
@@ -4155,10 +4883,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1928,
+                "maxLeadMin": 9,
+                "maxDef": -5242,
+                "tgd15": -764,
+                "gd15": 1679
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998777970",
               "t": 1790703929381,
               "dur": 2809,
@@ -4204,10 +4939,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5176,
+                "maxLeadMin": 37,
+                "maxDef": -4068,
+                "tgd15": 903,
+                "gd15": 1223
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997834708",
               "t": 1790617205194,
               "dur": 2093,
@@ -4253,10 +4995,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7177,
+                "maxLeadMin": 28,
+                "maxDef": -469,
+                "tgd15": 2493,
+                "gd15": 1186
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997749403",
               "t": 1790613682790,
               "dur": 2495,
@@ -4302,10 +5051,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3933,
+                "maxLeadMin": 42,
+                "maxDef": -5134,
+                "tgd15": -357,
+                "gd15": 1561
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7996894001",
               "t": 1790532237689,
               "dur": 2376,
@@ -4351,10 +5107,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 11942,
+                "maxLeadMin": 40,
+                "maxDef": -7612,
+                "tgd15": -6621,
+                "gd15": -209
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995713420",
               "t": 1790443474721,
               "dur": 1775,
@@ -4400,10 +5163,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 15493,
+                "maxLeadMin": 30,
+                "maxDef": -15,
+                "tgd15": 4266,
+                "gd15": 321
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995681057",
               "t": 1790441225313,
               "dur": 1858,
@@ -4449,10 +5219,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12631,
+                "maxLeadMin": 31,
+                "maxDef": -770,
+                "tgd15": 741,
+                "gd15": -237
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995636990",
               "t": 1790438828428,
               "dur": 1754,
@@ -4498,10 +5275,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12985,
+                "maxLeadMin": 30,
+                "maxDef": -1150,
+                "tgd15": 245,
+                "gd15": -132
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995581016",
               "t": 1790435744996,
               "dur": 1760,
@@ -4547,10 +5331,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 8071,
+                "maxLeadMin": 22,
+                "maxDef": -5,
+                "tgd15": 3070,
+                "gd15": 728
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991899432",
               "t": 1790102597814,
               "dur": 1815,
@@ -4596,10 +5387,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 9611,
+                "maxLeadMin": 31,
+                "maxDef": 0,
+                "tgd15": 4113,
+                "gd15": 682
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991865013",
               "t": 1790100459070,
               "dur": 1623,
@@ -4645,10 +5443,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -10692,
+                "tgd15": -5799,
+                "gd15": -883
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991840464",
               "t": 1790098533772,
               "dur": 1552,
@@ -4694,10 +5499,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2264,
+                "maxLeadMin": 16,
+                "maxDef": -7525,
+                "tgd15": 1881,
+                "gd15": 1063
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991774510",
               "t": 1790095475942,
               "dur": 1914,
@@ -4743,10 +5555,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4602,
+                "maxLeadMin": 32,
+                "maxDef": -588,
+                "tgd15": -588,
+                "gd15": 1059
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990883078",
               "t": 1790013026084,
               "dur": 1496,
@@ -4792,10 +5611,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12706,
+                "maxLeadMin": 25,
+                "maxDef": 0,
+                "tgd15": 4095,
+                "gd15": 1241
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990839307",
               "t": 1790011159914,
               "dur": 1635,
@@ -4841,10 +5667,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3514,
+                "maxLeadMin": 19,
+                "maxDef": -10723,
+                "tgd15": 1053,
+                "gd15": 1365
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990810536",
               "t": 1790008992163,
               "dur": 1659,
@@ -4890,10 +5723,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 560,
+                "maxLeadMin": 12,
+                "maxDef": -8357,
+                "tgd15": -54,
+                "gd15": -329
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990768786",
               "t": 1790006871096,
               "dur": 1695,
@@ -4939,10 +5779,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 8936,
+                "maxLeadMin": 29,
+                "maxDef": -83,
+                "tgd15": 2908,
+                "gd15": 1372
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990442397",
               "t": 1789970691419,
               "dur": 1874,
@@ -4988,10 +5835,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1463,
+                "maxLeadMin": 5,
+                "maxDef": -9221,
+                "tgd15": -2401,
+                "gd15": -21
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990450673",
               "t": 1789968550686,
               "dur": 1553,
@@ -5037,10 +5891,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -11260,
+                "tgd15": -877,
+                "gd15": -370
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990042102",
               "t": 1789931527526,
               "dur": 1654,
@@ -5085,6 +5946,13 @@
                   "perk-images/Styles/Domination/Electrocute/Electrocute.png",
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 1946,
+                "maxLeadMin": 22,
+                "maxDef": -9178,
+                "tgd15": 670,
+                "gd15": 1539
               },
               "lp": null
             }
@@ -5406,6 +6274,83 @@
                 "kda": 1.56
               }
             ],
+            "gold": {
+              "games": 38,
+              "avgGd15": 304,
+              "avgTgd15": 123,
+              "throws": 7,
+              "comebacks": 1,
+              "biggestThrow": {
+                "id": "EUW1_7992722137",
+                "t": 1790183312605,
+                "champ": "Yunara",
+                "role": "BOTTOM",
+                "k": 12,
+                "d": 6,
+                "a": 9,
+                "win": false,
+                "kda": 3.5,
+                "val": 6837,
+                "dur": 2471,
+                "min": 28
+              },
+              "biggestComeback": {
+                "id": "EUW1_7983921529",
+                "t": 1789413966480,
+                "champ": "Vayne",
+                "role": "BOTTOM",
+                "k": 11,
+                "d": 9,
+                "a": 10,
+                "win": true,
+                "kda": 2.33,
+                "val": -8636,
+                "dur": 2431,
+                "min": 41
+              },
+              "biggestLead": {
+                "id": "EUW1_7989506232",
+                "t": 1789905205752,
+                "champ": "Xayah",
+                "role": "BOTTOM",
+                "k": 6,
+                "d": 2,
+                "a": 8,
+                "win": true,
+                "kda": 7,
+                "val": 15993,
+                "dur": 1481,
+                "min": 25
+              },
+              "best15": {
+                "id": "EUW1_7989506232",
+                "t": 1789905205752,
+                "champ": "Xayah",
+                "role": "BOTTOM",
+                "k": 6,
+                "d": 2,
+                "a": 8,
+                "win": true,
+                "kda": 7,
+                "val": 3396,
+                "dur": 1481,
+                "min": 25
+              },
+              "worst15": {
+                "id": "EUW1_7990711017",
+                "t": 1790003547320,
+                "champ": "Vayne",
+                "role": "TOP",
+                "k": 3,
+                "d": 10,
+                "a": 1,
+                "win": false,
+                "kda": 0.4,
+                "val": -4139,
+                "dur": 1653,
+                "min": 0
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -5419,7 +6364,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-09-29T22:48:48.466Z",
+          "updatedAt": "2026-09-30T07:32:31.378Z",
           "lpHist": [
             [
               1790720384833,
@@ -5432,7 +6377,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998698424",
               "t": 1790698364599,
               "dur": 1083,
@@ -5478,10 +6423,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 8425,
+                "maxLeadMin": 18,
+                "maxDef": -132,
+                "tgd15": 5626,
+                "gd15": 878
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998644416",
               "t": 1790695853559,
               "dur": 2070,
@@ -5527,10 +6479,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 13219,
+                "maxLeadMin": 35,
+                "maxDef": 0,
+                "tgd15": 2153,
+                "gd15": -1964
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998629830",
               "t": 1790693427028,
               "dur": 1484,
@@ -5576,10 +6535,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 990,
+                "maxLeadMin": 9,
+                "maxDef": -11729,
+                "tgd15": -633,
+                "gd15": 2048
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998602896",
               "t": 1790691641845,
               "dur": 1501,
@@ -5625,10 +6591,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 434,
+                "maxLeadMin": 11,
+                "maxDef": -9386,
+                "tgd15": -271,
+                "gd15": 716
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997884627",
               "t": 1790619459485,
               "dur": 1880,
@@ -5674,10 +6647,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10537,
+                "maxLeadMin": 32,
+                "maxDef": 0,
+                "tgd15": 3044,
+                "gd15": 1498
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997834708",
               "t": 1790617205194,
               "dur": 2093,
@@ -5723,10 +6703,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7177,
+                "maxLeadMin": 28,
+                "maxDef": -469,
+                "tgd15": 2493,
+                "gd15": -363
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995260676",
               "t": 1790410822152,
               "dur": 1890,
@@ -5772,10 +6759,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3024,
+                "maxLeadMin": 28,
+                "maxDef": -1543,
+                "tgd15": 2634,
+                "gd15": -2106
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995243095",
               "t": 1790408463630,
               "dur": 1622,
@@ -5821,10 +6815,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 14605,
+                "maxLeadMin": 27,
+                "maxDef": -1201,
+                "tgd15": 5188,
+                "gd15": 2841
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995232420",
               "t": 1790406076121,
               "dur": 1541,
@@ -5870,10 +6871,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 315,
+                "maxLeadMin": 3,
+                "maxDef": -14354,
+                "tgd15": -6156,
+                "gd15": -441
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995232126",
               "t": 1790404202422,
               "dur": 1553,
@@ -5919,10 +6927,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 779,
+                "maxLeadMin": 4,
+                "maxDef": -10012,
+                "tgd15": -4556,
+                "gd15": -347
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992864269",
               "t": 1790190124514,
               "dur": 1816,
@@ -5968,10 +6983,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7073,
+                "maxLeadMin": 31,
+                "maxDef": -2112,
+                "tgd15": -985,
+                "gd15": 358
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992821307",
               "t": 1790187962507,
               "dur": 1928,
@@ -6017,10 +7039,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10524,
+                "maxLeadMin": 33,
+                "maxDef": -598,
+                "tgd15": 2260,
+                "gd15": 2785
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992772980",
               "t": 1790185673191,
               "dur": 2056,
@@ -6066,10 +7095,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6614,
+                "maxLeadMin": 34,
+                "maxDef": -1602,
+                "tgd15": -1602,
+                "gd15": 355
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992722137",
               "t": 1790183312605,
               "dur": 2471,
@@ -6115,10 +7151,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6837,
+                "maxLeadMin": 28,
+                "maxDef": -1954,
+                "tgd15": 589,
+                "gd15": 1029
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990883078",
               "t": 1790013026084,
               "dur": 1496,
@@ -6164,10 +7207,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12706,
+                "maxLeadMin": 25,
+                "maxDef": 0,
+                "tgd15": 4095,
+                "gd15": 1947
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990839307",
               "t": 1790011159914,
               "dur": 1635,
@@ -6213,10 +7263,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3514,
+                "maxLeadMin": 19,
+                "maxDef": -10723,
+                "tgd15": 1053,
+                "gd15": 2359
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990810536",
               "t": 1790008992163,
               "dur": 1659,
@@ -6262,10 +7319,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 560,
+                "maxLeadMin": 12,
+                "maxDef": -8357,
+                "tgd15": -54,
+                "gd15": 809
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990743292",
               "t": 1790005905444,
               "dur": 1894,
@@ -6311,10 +7375,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4342,
+                "maxLeadMin": 19,
+                "maxDef": -10440,
+                "tgd15": 1964,
+                "gd15": 336
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990711017",
               "t": 1790003547320,
               "dur": 1653,
@@ -6360,10 +7431,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -12562,
+                "tgd15": -9110,
+                "gd15": -4139
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989816786",
               "t": 1789921607607,
               "dur": 1982,
@@ -6408,6 +7486,13 @@
                   "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 8440,
+                "maxLeadMin": 29,
+                "maxDef": -1288,
+                "tgd15": -242,
+                "gd15": -590
               },
               "lp": null
             }
@@ -6736,6 +7821,83 @@
                 "kda": 1.21
               }
             ],
+            "gold": {
+              "games": 39,
+              "avgGd15": 4,
+              "avgTgd15": 475,
+              "throws": 4,
+              "comebacks": 3,
+              "biggestThrow": {
+                "id": "EUW1_7995462041",
+                "t": 1790429925770,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 21,
+                "d": 13,
+                "a": 9,
+                "win": false,
+                "kda": 2.31,
+                "val": 12873,
+                "dur": 3064,
+                "min": 40
+              },
+              "biggestComeback": {
+                "id": "EUW1_7995585235",
+                "t": 1790436309524,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 5,
+                "d": 8,
+                "a": 8,
+                "win": true,
+                "kda": 1.63,
+                "val": -6608,
+                "dur": 1927,
+                "min": 33
+              },
+              "biggestLead": {
+                "id": "EUW1_7995779879",
+                "t": 1790446488874,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 13,
+                "d": 5,
+                "a": 7,
+                "win": true,
+                "kda": 4,
+                "val": 15940,
+                "dur": 1495,
+                "min": 25
+              },
+              "best15": {
+                "id": "EUW1_7995462041",
+                "t": 1790429925770,
+                "champ": "Zed",
+                "role": "MIDDLE",
+                "k": 21,
+                "d": 13,
+                "a": 9,
+                "win": false,
+                "kda": 2.31,
+                "val": 3833,
+                "dur": 3064,
+                "min": 40
+              },
+              "worst15": {
+                "id": "EUW1_7992116167",
+                "t": 1790111288429,
+                "champ": "JarvanIV",
+                "role": "JUNGLE",
+                "k": 9,
+                "d": 2,
+                "a": 16,
+                "win": true,
+                "kda": 12.5,
+                "val": -2410,
+                "dur": 1986,
+                "min": 34
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -6749,7 +7911,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-09-29T22:51:28.497Z",
+          "updatedAt": "2026-09-30T07:37:43.270Z",
           "lpHist": [
             [
               1790720384833,
@@ -6762,7 +7924,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7996547220",
               "t": 1790514344916,
               "dur": 924,
@@ -6808,10 +7970,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7398,
+                "maxLeadMin": 15,
+                "maxDef": 0,
+                "tgd15": 7398,
+                "gd15": 2357
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995860637",
               "t": 1790450541554,
               "dur": 1792,
@@ -6857,10 +8026,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4044,
+                "maxLeadMin": 30,
+                "maxDef": -6214,
+                "tgd15": -5009,
+                "gd15": 269
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995817804",
               "t": 1790448458387,
               "dur": 1356,
@@ -6906,10 +8082,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 11608,
+                "maxLeadMin": 23,
+                "maxDef": -20,
+                "tgd15": 4329,
+                "gd15": 1373
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995779879",
               "t": 1790446488874,
               "dur": 1495,
@@ -6955,10 +8138,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 15940,
+                "maxLeadMin": 25,
+                "maxDef": -20,
+                "tgd15": 7421,
+                "gd15": 2185
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995697423",
               "t": 1790442929800,
               "dur": 2275,
@@ -7004,10 +8194,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6786,
+                "maxLeadMin": 38,
+                "maxDef": -1492,
+                "tgd15": 685,
+                "gd15": -960
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995585235",
               "t": 1790436309524,
               "dur": 1927,
@@ -7053,10 +8250,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 4520,
+                "maxLeadMin": 33,
+                "maxDef": -6608,
+                "tgd15": -2379,
+                "gd15": 965
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7995462041",
               "t": 1790429925770,
               "dur": 3064,
@@ -7102,10 +8306,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12873,
+                "maxLeadMin": 40,
+                "maxDef": -1119,
+                "tgd15": 4506,
+                "gd15": 3833
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7994828074",
               "t": 1790365916353,
               "dur": 1587,
@@ -7151,10 +8362,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2079,
+                "maxLeadMin": 23,
+                "maxDef": -2552,
+                "tgd15": -1086,
+                "gd15": -483
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7994303491",
               "t": 1790329487072,
               "dur": 1567,
@@ -7200,10 +8418,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -12241,
+                "tgd15": -6450,
+                "gd15": -1191
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7993900769",
               "t": 1790280447374,
               "dur": 2132,
@@ -7249,10 +8474,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 8910,
+                "maxLeadMin": 27,
+                "maxDef": -1495,
+                "tgd15": 2531,
+                "gd15": -977
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7993128108",
               "t": 1790201251666,
               "dur": 1918,
@@ -7298,10 +8530,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2479,
+                "maxLeadMin": 12,
+                "maxDef": -7913,
+                "tgd15": -1625,
+                "gd15": 505
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992727695",
               "t": 1790182171378,
               "dur": 1696,
@@ -7347,10 +8586,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2269,
+                "maxLeadMin": 19,
+                "maxDef": -8137,
+                "tgd15": -333,
+                "gd15": -1970
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992116167",
               "t": 1790111288429,
               "dur": 1986,
@@ -7396,10 +8642,17 @@
                   "perk-images/Styles/7200_Domination.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10922,
+                "maxLeadMin": 34,
+                "maxDef": -952,
+                "tgd15": -952,
+                "gd15": -2410
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989759646",
               "t": 1789918679941,
               "dur": 1834,
@@ -7445,10 +8698,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 318,
+                "maxLeadMin": 6,
+                "maxDef": -11936,
+                "tgd15": -83,
+                "gd15": 1612
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989471471",
               "t": 1789902581704,
               "dur": 2108,
@@ -7494,10 +8754,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3649,
+                "maxLeadMin": 28,
+                "maxDef": -3267,
+                "tgd15": 2097,
+                "gd15": 500
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989068983",
               "t": 1789854303914,
               "dur": 2267,
@@ -7543,10 +8810,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3156,
+                "maxLeadMin": 22,
+                "maxDef": -2936,
+                "tgd15": 1750,
+                "gd15": 943
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7988949296",
               "t": 1789848664781,
               "dur": 1589,
@@ -7592,10 +8866,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1878,
+                "maxLeadMin": 16,
+                "maxDef": -11048,
+                "tgd15": 806,
+                "gd15": 1526
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7988674748",
               "t": 1789833434678,
               "dur": 1490,
@@ -7641,10 +8922,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 488,
+                "maxLeadMin": 6,
+                "maxDef": -12459,
+                "tgd15": -3831,
+                "gd15": -2189
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7987882036",
               "t": 1789762683643,
               "dur": 2092,
@@ -7690,10 +8978,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10490,
+                "maxLeadMin": 29,
+                "maxDef": -1447,
+                "tgd15": 2449,
+                "gd15": -1072
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7987773135",
               "t": 1789757949707,
               "dur": 2487,
@@ -7738,6 +9033,13 @@
                   "perk-images/Styles/Precision/Conqueror/Conqueror.png",
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 6878,
+                "maxLeadMin": 42,
+                "maxDef": -1565,
+                "tgd15": -1565,
+                "gd15": -1481
               },
               "lp": null
             }
@@ -8074,6 +9376,83 @@
                 "kda": 1.86
               }
             ],
+            "gold": {
+              "games": 40,
+              "avgGd15": 556,
+              "avgTgd15": 609,
+              "throws": 2,
+              "comebacks": 3,
+              "biggestThrow": {
+                "id": "EUW1_7983791281",
+                "t": 1789408812581,
+                "champ": "Veigar",
+                "role": "MIDDLE",
+                "k": 10,
+                "d": 9,
+                "a": 11,
+                "win": false,
+                "kda": 2.33,
+                "val": 8053,
+                "dur": 2181,
+                "min": 27
+              },
+              "biggestComeback": {
+                "id": "EUW1_7983732677",
+                "t": 1789405382064,
+                "champ": "Syndra",
+                "role": "MIDDLE",
+                "k": 5,
+                "d": 5,
+                "a": 10,
+                "win": true,
+                "kda": 3,
+                "val": -7946,
+                "dur": 2178,
+                "min": 37
+              },
+              "biggestLead": {
+                "id": "EUW1_7997904200",
+                "t": 1790621022424,
+                "champ": "Teemo",
+                "role": "TOP",
+                "k": 4,
+                "d": 6,
+                "a": 8,
+                "win": true,
+                "kda": 2,
+                "val": 18259,
+                "dur": 2099,
+                "min": 35
+              },
+              "best15": {
+                "id": "EUW1_7987817077",
+                "t": 1789759513102,
+                "champ": "Heimerdinger",
+                "role": "TOP",
+                "k": 4,
+                "d": 3,
+                "a": 4,
+                "win": true,
+                "kda": 2.67,
+                "val": 3446,
+                "dur": 1768,
+                "min": 22
+              },
+              "worst15": {
+                "id": "EUW1_7990762799",
+                "t": 1790006385076,
+                "champ": "Rumble",
+                "role": "TOP",
+                "k": 2,
+                "d": 10,
+                "a": 1,
+                "win": false,
+                "kda": 0.3,
+                "val": -2608,
+                "dur": 1767,
+                "min": 5
+              }
+            },
             "lp": {
               "win": null,
               "loss": null,
@@ -8087,7 +9466,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-09-29T22:50:36.111Z",
+          "updatedAt": "2026-09-30T07:36:01.730Z",
           "lpHist": [
             [
               1790720384833,
@@ -8100,7 +9479,7 @@
           ],
           "recent": [
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7999185104",
               "t": 1790720954815,
               "dur": 1590,
@@ -8146,10 +9525,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 10253,
+                "maxLeadMin": 27,
+                "maxDef": -1399,
+                "tgd15": 2217,
+                "gd15": 3431
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7999061539",
               "t": 1790714488335,
               "dur": 1523,
@@ -8195,10 +9581,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 14709,
+                "maxLeadMin": 26,
+                "maxDef": -1197,
+                "tgd15": 5570,
+                "gd15": -806
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998819975",
               "t": 1790706370925,
               "dur": 2734,
@@ -8244,10 +9637,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 3466,
+                "maxLeadMin": 15,
+                "maxDef": -10182,
+                "tgd15": 3466,
+                "gd15": 2699
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7998485635",
               "t": 1790681443774,
               "dur": 1732,
@@ -8293,10 +9693,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 7251,
+                "maxLeadMin": 21,
+                "maxDef": -305,
+                "tgd15": 3414,
+                "gd15": 2225
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7997904200",
               "t": 1790621022424,
               "dur": 2099,
@@ -8342,10 +9749,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 18259,
+                "maxLeadMin": 35,
+                "maxDef": 0,
+                "tgd15": 2132,
+                "gd15": -1270
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7994286229",
               "t": 1790328908521,
               "dur": 1742,
@@ -8391,10 +9805,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 2456,
+                "maxLeadMin": 17,
+                "maxDef": -8814,
+                "tgd15": 335,
+                "gd15": -597
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7993406784",
               "t": 1790249357870,
               "dur": 1561,
@@ -8440,10 +9861,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 94,
+                "maxLeadMin": 1,
+                "maxDef": -7067,
+                "tgd15": -3812,
+                "gd15": 637
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7993379318",
               "t": 1790247188690,
               "dur": 2135,
@@ -8489,10 +9917,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 12853,
+                "maxLeadMin": 36,
+                "maxDef": -710,
+                "tgd15": 93,
+                "gd15": 928
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992749984",
               "t": 1790183915488,
               "dur": 2039,
@@ -8538,10 +9973,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1640,
+                "maxLeadMin": 27,
+                "maxDef": -5888,
+                "tgd15": 556,
+                "gd15": 2988
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992705869",
               "t": 1790180938304,
               "dur": 1418,
@@ -8587,10 +10029,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -14675,
+                "tgd15": -3551,
+                "gd15": 831
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992632268",
               "t": 1790177271166,
               "dur": 1849,
@@ -8636,10 +10085,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1656,
+                "maxLeadMin": 5,
+                "maxDef": -8926,
+                "tgd15": -1378,
+                "gd15": 2020
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7992421993",
               "t": 1790157064264,
               "dur": 2637,
@@ -8685,10 +10141,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1761,
+                "maxLeadMin": 28,
+                "maxDef": -5467,
+                "tgd15": -749,
+                "gd15": -986
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991849249",
               "t": 1790100275500,
               "dur": 2030,
@@ -8734,10 +10197,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 963,
+                "maxLeadMin": 6,
+                "maxDef": -17562,
+                "tgd15": -1245,
+                "gd15": 574
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991814087",
               "t": 1790097637487,
               "dur": 1316,
@@ -8783,10 +10253,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 6448,
+                "maxLeadMin": 22,
+                "maxDef": 0,
+                "tgd15": 3981,
+                "gd15": 859
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991235489",
               "t": 1790028457238,
               "dur": 2423,
@@ -8832,10 +10309,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1191,
+                "maxLeadMin": 7,
+                "maxDef": -6224,
+                "tgd15": -674,
+                "gd15": 171
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7991172636",
               "t": 1790025667088,
               "dur": 2332,
@@ -8881,10 +10365,17 @@
                   "perk-images/Styles/7202_Sorcery.png"
                 ]
               },
+              "gold": {
+                "maxLead": 5249,
+                "maxLeadMin": 39,
+                "maxDef": -7521,
+                "tgd15": -161,
+                "gd15": -991
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7990762799",
               "t": 1790006385076,
               "dur": 1767,
@@ -8930,10 +10421,17 @@
                   "perk-images/Styles/7204_Resolve.png"
                 ]
               },
+              "gold": {
+                "maxLead": 490,
+                "maxLeadMin": 5,
+                "maxDef": -12796,
+                "tgd15": -3971,
+                "gd15": -2608
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989896109",
               "t": 1789925436824,
               "dur": 1802,
@@ -8979,10 +10477,17 @@
                   "perk-images/Styles/7203_Whimsy.png"
                 ]
               },
+              "gold": {
+                "maxLead": 722,
+                "maxLeadMin": 16,
+                "maxDef": -8693,
+                "tgd15": -275,
+                "gd15": 1376
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989531938",
               "t": 1789907494913,
               "dur": 2335,
@@ -9028,10 +10533,17 @@
                   "perk-images/Styles/7201_Precision.png"
                 ]
               },
+              "gold": {
+                "maxLead": 1296,
+                "maxLeadMin": 28,
+                "maxDef": -6194,
+                "tgd15": -1384,
+                "gd15": 492
+              },
               "lp": null
             },
             {
-              "v": 2,
+              "v": 3,
               "id": "EUW1_7989468057",
               "t": 1789903139675,
               "dur": 1994,
@@ -9076,6 +10588,13 @@
                   "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
                   "perk-images/Styles/7201_Precision.png"
                 ]
+              },
+              "gold": {
+                "maxLead": 8475,
+                "maxLeadMin": 33,
+                "maxDef": -517,
+                "tgd15": 2366,
+                "gd15": 1044
               },
               "lp": null
             }
