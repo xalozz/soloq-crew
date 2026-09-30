@@ -647,6 +647,83 @@ function renderRecords(players) {
   document.getElementById('records-grid').replaceChildren(...goldCards, ...cards);
 }
 
+// ---------------------------------------------------------------- best 5
+const ROLE_ORDER = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
+const MIN_ROLE_GAMES = 10;
+let best5Mode = 'perf';
+const MIN_CHAMP_GAMES = 3;
+// Winrate ajustado: añade partidas "fantasma" al 50 % para que 3 de 3 no gane a 30 de 50.
+const adjWr = (wins, games, prior = 5) => ((wins + prior) / (games + prior * 2)) * 100;
+
+function bestChamp(champs) {
+  const ok = (champs ?? []).filter((c) => c.games >= MIN_CHAMP_GAMES);
+  if (!ok.length) return (champs ?? [])[0] ?? null;
+  return ok.reduce((m, c) => (adjWr(c.wins, c.games, 2) > adjWr(m.wins, m.games, 2) ? c : m));
+}
+
+function computeBest5(players) {
+  const cand = players.filter((p) => p.s?.byRole);
+  const score = (p, role) => {
+    const r = p.s.byRole[role];
+    const total = Object.values(p.s.byRole).reduce((n, x) => n + x.games, 0);
+    if (!r || r.games < MIN_ROLE_GAMES || r.games < total * 0.2) return null; // solo roles que juega de verdad
+    return best5Mode === 'elo' ? Math.max(0, p.score) : adjWr(r.wins, r.games, 10);
+  };
+  // Búsqueda exhaustiva (7 jugadores × 5 roles = pocas combinaciones): maximiza la suma de puntuaciones
+  let best = { total: -1, pick: [] };
+  const walk = (i, used, pick, total) => {
+    if (i === ROLE_ORDER.length) {
+      const filled = pick.filter(Boolean).length;
+      const key = filled * 1000 + total;
+      if (key > best.total) best = { total: key, pick: [...pick] };
+      return;
+    }
+    let any = false;
+    for (const p of cand) {
+      if (used.has(p.name)) continue;
+      const sc = score(p, ROLE_ORDER[i]);
+      if (sc == null) continue;
+      any = true;
+      used.add(p.name); pick.push(p);
+      walk(i + 1, used, pick, total + sc);
+      used.delete(p.name); pick.pop();
+    }
+    pick.push(null); walk(i + 1, used, pick, total); pick.pop();
+    if (!any) return;
+  };
+  walk(0, new Set(), [], 0);
+  return ROLE_ORDER.map((role, i) => {
+    const p = best.pick[i] ?? null;
+    // Mejor campeón del grupo en el rol, jugase quien lo jugase
+    const pool = [];
+    for (const q of cand) for (const c of q.s.byRole[role]?.champs ?? []) if (c.games >= MIN_CHAMP_GAMES) pool.push({ q, c });
+    const groupChamp = pool.length ? pool.reduce((m, x) => (adjWr(x.c.wins, x.c.games, 2) > adjWr(m.c.wins, m.c.games, 2) ? x : m)) : null;
+    return { role, p, r: p ? p.s.byRole[role] : null, champ: p ? bestChamp(p.s.byRole[role].champs) : null, groupChamp };
+  });
+}
+
+function renderBest5(players) {
+  const slots = computeBest5(players);
+  const grid = document.getElementById('best5-grid');
+  document.querySelectorAll('#best5-toggle button').forEach((b) => b.classList.toggle('on', b.dataset.mode === best5Mode));
+  grid.replaceChildren(...slots.map(({ role, p, r, champ, groupChamp }) => h('article', { class: `b5 ${p ? '' : 'empty'}` },
+    h('div', { class: 'b5-role' }, roleIcon(role), h('b', {}, ROLE_ES[role])),
+    p ? h('div', { class: 'b5-body' },
+      h('div', { class: 'b5-champ' }, champIcon(champ?.key, 76), h('span', { class: 'b5-champ-name' }, champ?.key ?? '')),
+      h('div', { class: 'b5-player' }, avatar(p, 30), h('div', {}, h('b', {}, p.name), tierTag(p.rank))),
+      h('div', { class: 'b5-stats' },
+        h('div', {}, h('b', { class: r.winrate >= 50 ? 'pos' : 'neg' }, `${fmt(r.winrate, 0)}%`), h('span', {}, 'winrate')),
+        h('div', {}, h('b', {}, r.games), h('span', {}, 'partidas')),
+        h('div', {}, h('b', {}, fmt(r.kda, 2)), h('span', {}, 'KDA')),
+        h('div', {}, h('b', { class: (r.gd15 ?? 0) >= 0 ? 'pos' : 'neg' }, r.gd15 != null ? goldK(r.gd15) : '–'), h('span', {}, 'oro @15'))),
+      champ ? h('p', { class: 'b5-note' }, `Con ${champ.key}: ${fmt(champ.winrate, 0)}% en ${champ.games} partidas`) : null)
+      : h('p', { class: 'empty' }, `Nadie juega habitualmente este rol (mín. ${MIN_ROLE_GAMES} partidas y 20 % de las suyas)`),
+    groupChamp ? h('div', { class: 'b5-foot' },
+      h('span', { class: 'lbl' }, 'Mejor campeón del grupo aquí'),
+      h('div', {}, champIcon(groupChamp.c.key, 22), h('b', {}, groupChamp.c.key),
+        h('span', { class: 'muted' }, ` · ${groupChamp.q.name} · ${fmt(groupChamp.c.winrate, 0)}% (${groupChamp.c.games})`))) : null)));
+}
+
 // ---------------------------------------------------------------- render
 let MODEL = [];
 
@@ -677,6 +754,7 @@ function render() {
   renderRows();
   document.getElementById('stats').replaceChildren(
     ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '');
+  renderBest5(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
 }
@@ -690,6 +768,12 @@ function wire() {
     renderRows();
   });
   document.getElementById('search').addEventListener('input', (e) => { query = e.target.value; renderRows(); });
+  document.getElementById('best5-toggle').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-mode]');
+    if (!b) return;
+    best5Mode = b.dataset.mode;
+    renderBest5(MODEL);
+  });
   document.getElementById('days-toggle').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-mode]');
     if (!b) return;

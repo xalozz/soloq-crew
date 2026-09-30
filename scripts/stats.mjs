@@ -155,7 +155,26 @@ export function computeAccountStats(history) {
     }),
     roles: roles.sort((a, b) => b.games - a.games),
     gold: goldStats(history),
+    byRole: roleBreakdown(history),
   };
+}
+
+// Rendimiento por rol y, dentro de cada rol, por campeón (para el "Best 5").
+function roleBreakdown(history) {
+  const out = {};
+  for (const role of ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']) {
+    const games = history.filter((g) => g.role === role);
+    if (!games.length) continue;
+    const wins = games.filter((g) => g.win).length;
+    const K = games.reduce((s, g) => s + g.k, 0), D = games.reduce((s, g) => s + g.d, 0), A = games.reduce((s, g) => s + g.a, 0);
+    const gd = games.filter((g) => g.gold?.gd15 != null);
+    out[role] = {
+      games: games.length, wins, winrate: pct(wins, games.length), kda: r2(kda(K, D, A)),
+      gd15: gd.length ? Math.round(gd.reduce((s, g) => s + g.gold.gd15, 0) / gd.length) : null,
+      champs: groupBy(games, (g) => g.champ).sort((a, b) => b.games - a.games).slice(0, 6),
+    };
+  }
+  return out;
 }
 
 // Estadísticas de oro (solo partidas con timeline descargado).
