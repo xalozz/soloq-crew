@@ -764,14 +764,10 @@ function renderRecords(players) {
   const defs = [
     ['Racha de victorias activa', pick(W, (r) => r.s.streak.current.count), (r) => `${r.s.streak.current.count} seguidas`, 'good'],
     ['Racha de derrotas activa', pick(L, (r) => r.s.streak.current.count), (r) => `${r.s.streak.current.count} seguidas`, 'bad'],
-    ['Mejor racha registrada', pick(rows, (r) => r.s.streak.bestWin), (r) => `${r.s.streak.bestWin} victorias`, 'good'],
-    ['Peor racha registrada', pick(rows, (r) => r.s.streak.worstLoss), (r) => `${r.s.streak.worstLoss} derrotas`, 'bad'],
     ['Mejor winrate de temporada', pick(elig, (r) => r.rank.winrate), (r) => `${fmt(r.rank.winrate)}%`, 'good'],
     ['Peor winrate de temporada', pick(elig, (r) => r.rank.winrate, -1), (r) => `${fmt(r.rank.winrate)}%`, 'bad'],
     ['Mejor partida', pick(rows, (r) => r.s.bestGame.kda), (r) => `${r.s.bestGame.champ} ${r.s.bestGame.k}/${r.s.bestGame.d}/${r.s.bestGame.a}`, 'good', (r) => r.s.bestGame.champ, (r) => r.s.bestGame.id],
     ['Peor partida', pick(rows, (r) => r.s.worstGame.kda, -1), (r) => `${r.s.worstGame.champ} ${r.s.worstGame.k}/${r.s.worstGame.d}/${r.s.worstGame.a}`, 'bad', (r) => r.s.worstGame.champ, (r) => r.s.worstGame.id],
-    ['Mejor campeón (5+ partidas)', pick(champs, (x) => x.c.winrate * 1000 + x.c.games), (x) => `${x.c.key} ${fmt(x.c.winrate, 0)}%`, 'good', (x) => x.c.key],
-    ['Más partidas en temporada', pick(rows.filter((r) => r.rank), (r) => r.wins + r.losses), (r) => `${fmtInt(r.wins + r.losses)} partidas`, 'neutral'],
   ];
   const goldRec = (key, dir = 1) => {
     const c = rows.filter((r) => r.s.gold?.[key]).map((r) => ({ p: r, g: r.s.gold[key] }));
@@ -878,6 +874,79 @@ function renderBest5(players) {
         h('span', { class: 'muted' }, ` · ${groupChamp.q.name} · ${fmt(groupChamp.c.winrate, 0)}% (${groupChamp.c.games})`))) : null)));
 }
 
+// ---------------------------------------------------------------- premios
+const awardsOpen = new Set();
+const AWARDS = [
+  { key: 'grind', icon: '⚔', title: 'El grindeador', desc: 'Más partidas ganadas en la temporada.', val: (p) => p.rank?.wins, fmt: (v) => `${v} victorias` },
+  { key: 'onetrick', icon: '♛', title: 'One trick king', desc: 'Más victorias con un mismo campeón.', val: (p) => p.s?.awards?.oneTrick?.wins,
+    fmt: (v, p) => `${v} victorias`, extra: (p) => p.s.awards.oneTrick.champ },
+  { key: 'mainchar', icon: '★', title: 'Main character', desc: 'Mejor winrate con un mismo campeón (mínimo 30 partidas con él).', val: (p) => p.s?.awards?.mainChar?.winrate,
+    fmt: (v, p) => `${fmt(v, 1)}%`, extra: (p) => `${p.s.awards.mainChar.champ} · ${p.s.awards.mainChar.games} part.` },
+  { key: 'autofill', icon: '⇄', title: 'Mejor autofill', desc: 'Mejor winrate fuera de su línea principal (top y mid cuentan como la misma), mínimo 20 partidas fuera de ella.',
+    val: (p) => (p.s?.awards?.autofill?.games >= 20 ? p.s.awards.autofill.winrate : null), fmt: (v) => `${fmt(v, 1)}%`, extra: (p) => `${p.s.awards.autofill.games} part. fuera de línea` },
+  { key: 'streak', icon: '⚡', title: 'Sin frenos', desc: 'La racha de victorias seguidas más larga.', val: (p) => p.s?.streak?.bestWin, fmt: (v) => `${v} seguidas` },
+  { key: 'penta', icon: '✋', title: 'Pentakill hunter', desc: 'Más pentakills.', val: (p) => p.s?.awards?.pentas, fmt: (v) => `${v} penta${v === 1 ? '' : 's'}` },
+  { key: 'quadra', icon: '✦', title: 'Cuadra killer', desc: 'Más cuádruples asesinatos.', val: (p) => p.s?.awards?.quadras, fmt: (v) => `${v} cuadra${v === 1 ? '' : 's'}`,
+    note: (rows) => (rows.some((p) => (p.s?.awards?.quadraGames ?? 0) < (p.s?.games ?? 0)) ? 'Aún descargando datos de cuádruples de partidas antiguas' : null) },
+  { key: 'pool', icon: '◎', title: 'Maestro del champion pool', desc: 'Ha ganado con más campeones diferentes.', val: (p) => p.s?.awards?.champPool, fmt: (v) => `${v} campeones` },
+  { key: 'consistency', icon: '◆', title: 'Consistency king', desc: 'La racha más larga de partidas seguidas con KDA de 5 o más.', val: (p) => p.s?.awards?.kdaStreak, fmt: (v) => `${v} seguidas` },
+  { key: 'kda', icon: '✚', title: 'KDA player', desc: 'Mejor KDA medio por partida (mínimo 50 partidas).', val: (p) => (p.s?.games >= 50 ? p.s?.awards?.avgKda : null), fmt: (v) => `${fmt(v, 2)} KDA` },
+  { key: 'sheriff', icon: '✪', title: 'El sheriff', desc: 'Más primeras sangres (first bloods).', val: (p) => p.s?.awards?.firstBloods, fmt: (v) => `${v} first bloods` },
+  { key: 'pochi', icon: '☠', title: 'Pochiqueue', desc: 'La racha de derrotas seguidas más larga.', val: (p) => p.s?.streak?.worstLoss, fmt: (v) => `${v} seguidas`, bad: true },
+];
+
+const GAME_RECORDS = [
+  ['kills', '⚔', 'Más kills', (v) => `${v} kills`],
+  ['assists', '✚', 'Más asistencias', (v) => `${v} asist.`],
+  ['damage', '✦', 'Más daño a campeones', (v) => goldK(v, false)],
+  ['vision', '◉', 'Más visión', (v) => `${v} visión`],
+  ['longestWin', '⌛', 'Victoria más larga', (v) => mmss(v)],
+  ['kda', '◆', 'Mejor KDA', (v) => `${fmt(v, 1)} KDA`],
+  ['kp', '◎', 'Mayor participación', (v) => `${v}% KP`],
+  ['towers', '♜', 'Más daño a torres', (v) => goldK(v, false)],
+  ['gold', '¤', 'Más oro', (v) => goldK(v, false)],
+  ['csMin', '⚘', 'Mejor CS/min', (v) => `${fmt(v, 1)} CS/min`],
+];
+
+function renderAwards(players) {
+  const rows = players.filter((p) => p.s);
+  const cards = AWARDS.map((a) => {
+    const ranked = rows.map((p) => ({ p, v: a.val(p) })).filter((x) => x.v != null && x.v > 0).sort((x, y) => y.v - x.v);
+    const lead = ranked[0];
+    const open = awardsOpen.has(a.key);
+    const note = a.note?.(rows);
+    return h('article', { class: `aw ${a.bad ? 'bad' : ''}` },
+      h('div', { class: 'aw-top' }, h('span', { class: 'aw-ico', 'aria-hidden': 'true' }, a.icon),
+        lead ? h('span', { class: 'aw-badge' }, a.fmt(lead.v, lead.p)) : null),
+      h('h4', { class: 'aw-title' }, a.title),
+      h('p', { class: 'aw-desc' }, a.desc),
+      note ? h('p', { class: 'aw-note' }, note) : null,
+      h('div', { class: 'aw-foot' },
+        lead ? h('div', { class: 'aw-lead' }, avatar(lead.p, 28), h('div', {}, h('small', {}, 'En cabeza'), h('b', {}, lead.p.name),
+          a.extra ? h('span', { class: 'aw-extra' }, a.extra(lead.p)) : null)) : h('span', { class: 'muted small' }, 'Nadie todavía'),
+        ranked.length > 1 ? h('button', { class: 'aw-more', onclick: () => { open ? awardsOpen.delete(a.key) : awardsOpen.add(a.key); renderAwards(MODEL); } },
+          open ? 'Ocultar ↑' : 'Ver clasificación →') : null),
+      open ? h('ol', { class: 'aw-list' }, ranked.map((x, i) => h('li', {},
+        h('span', { class: 'lb-pos' }, i + 1), avatar(x.p, 22), h('span', { class: 'lb-name' }, x.p.name),
+        a.extra ? h('span', { class: 'aw-extra' }, a.extra(x.p)) : h('span'), h('b', {}, a.fmt(x.v, x.p))))) : null);
+  });
+  document.getElementById('awards').replaceChildren(...cards);
+
+  const gcards = GAME_RECORDS.map(([key, icon, title, f]) => {
+    const c = rows.filter((p) => p.s.gameRecords?.[key]).map((p) => ({ p, g: p.s.gameRecords[key] }));
+    if (!c.length) return null;
+    const x = c.reduce((m, y) => (y.g.val > m.g.val ? y : m));
+    return h('div', { class: 'gr', role: 'button', tabindex: 0, title: 'Ver la partida',
+      onclick: () => openMatchModal(x.g.id, `${title} · ${x.p.name}`, x.p.main?.riotId),
+      onkeydown: (e) => { if (e.key === 'Enter') openMatchModal(x.g.id, `${title} · ${x.p.name}`, x.p.main?.riotId); } },
+      h('span', { class: 'aw-ico sm', 'aria-hidden': 'true' }, icon),
+      h('div', { class: 'gr-main' }, h('b', { class: 'gr-title' }, title),
+        h('span', { class: 'gr-who' }, avatar(x.p, 18), x.p.name, h('span', { class: 'muted' }, ` · ${x.g.champ} ${x.g.k}/${x.g.d}/${x.g.a}`))),
+      h('div', { class: 'gr-side' }, h('span', { class: 'aw-badge sm' }, f(x.g.val)), h('small', { class: 'gr-ver' }, 'Ver →')));
+  }).filter(Boolean);
+  document.getElementById('game-records').replaceChildren(...gcards);
+}
+
 // ---------------------------------------------------------------- render
 let MODEL = [];
 
@@ -909,6 +978,7 @@ function render() {
   document.getElementById('stats').replaceChildren(
     ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '', rolesCard(MODEL) ?? '');
   renderBest5(MODEL);
+  renderAwards(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
 }
@@ -927,6 +997,7 @@ function wire() {
     if (!b) return;
     best5Mode = b.dataset.mode;
     renderBest5(MODEL);
+  renderAwards(MODEL);
   });
   document.getElementById('days-toggle').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-mode]');

@@ -115,7 +115,7 @@ export function profileLinks(platform, gameName, tagLine) {
 
 // Convierte una partida de la API en el registro compacto que guardamos.
 // `dd` = diccionarios de Data Dragon ({ spells: {id→clave}, runes: {id→ruta icono} }).
-export const MATCH_RECORD_VERSION = 3;
+export const MATCH_RECORD_VERSION = 4;
 
 function loadout(p, dd) {
   const styles = p.perks?.styles ?? [];
@@ -155,6 +155,10 @@ export function compactMatch(match, puuid, dd, timeline) {
     dmg: me.totalDamageDealtToChampions || 0,
     teamDmg: team.reduce((s, p) => s + (p.totalDamageDealtToChampions || 0), 0),
     penta: me.pentaKills || 0,
+    quadra: me.quadraKills || 0,
+    triple: me.tripleKills || 0,
+    towerDmg: me.damageDealtToBuildings ?? me.damageDealtToTurrets ?? 0,
+    goldEarned: me.goldEarned || 0,
     fb: !!me.firstBloodKill,
     items: [me.item0, me.item1, me.item2, me.item3, me.item4, me.item5, me.item6].map((x) => x || 0),
     ...(({ spells, runes }) => ({ spells, runes }))(loadout(me, dd)),

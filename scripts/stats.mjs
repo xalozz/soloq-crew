@@ -159,7 +159,67 @@ export function computeAccountStats(history) {
     roles: roles.sort((a, b) => b.games - a.games),
     gold: goldStats(history),
     byRole: roleBreakdown(history),
+    awards: awardStats(history),
+    gameRecords: gameRecords(history),
   };
+}
+
+// Premios de temporada (inspirados en los del SoloQ Challenge)
+function awardStats(history) {
+  if (!history.length) return null;
+  const champs = groupBy(history, (g) => g.champ);
+  const oneTrick = champs.reduce((m, c) => (!m || c.wins > m.wins || (c.wins === m.wins && c.games < m.games) ? c : m), null);
+  const main = champs.filter((c) => c.games >= 30).reduce((m, c) => (!m || c.winrate > m.winrate ? c : m), null);
+  // Autofill: fuera de su línea principal (top y mid cuentan como la misma)
+  const lane = (r) => (r === 'TOP' || r === 'MIDDLE' ? 'SOLO' : r);
+  const laneCount = {};
+  for (const g of history) if (g.role) laneCount[lane(g.role)] = (laneCount[lane(g.role)] || 0) + 1;
+  const mainLane = Object.entries(laneCount).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+  const off = history.filter((g) => g.role && lane(g.role) !== mainLane);
+  const offW = off.filter((g) => g.win).length;
+  // Racha más larga con KDA >= 5 (en orden cronológico)
+  let run = 0, bestRun = 0;
+  for (let i = history.length - 1; i >= 0; i--) {
+    const g = history[i];
+    if (kda(g.k, g.d, g.a) >= 5) { run++; if (run > bestRun) bestRun = run; } else run = 0;
+  }
+  const perGameKda = history.reduce((s, g) => s + kda(g.k, g.d, g.a), 0) / history.length;
+  const withFull = history.filter((g) => g.quadra != null);
+  return {
+    oneTrick: oneTrick ? { champ: oneTrick.key, wins: oneTrick.wins, games: oneTrick.games } : null,
+    mainChar: main ? { champ: main.key, winrate: main.winrate, games: main.games } : null,
+    autofill: { lane: mainLane, games: off.length, wins: offW, winrate: pct(offW, off.length) },
+    champPool: new Set(history.filter((g) => g.win).map((g) => g.champ)).size,
+    kdaStreak: bestRun,
+    avgKda: r2(perGameKda),
+    pentas: history.reduce((s, g) => s + (g.penta || 0), 0),
+    quadras: withFull.reduce((s, g) => s + (g.quadra || 0), 0),
+    quadraGames: withFull.length,
+    firstBloods: history.reduce((s, g) => s + (g.fb ? 1 : 0), 0),
+  };
+}
+
+// Récords de una sola partida: la mejor de cada jugador en cada categoría
+function gameRecords(history) {
+  const long = history.filter((g) => g.dur >= 600);
+  const best = (arr, f) => {
+    const x = arr.reduce((m, g) => (f(g) != null && (!m || f(g) > f(m)) ? g : m), null);
+    return x ? { ...gameBrief(x), val: f(x) } : null;
+  };
+  const out = {
+    kills: best(long, (g) => g.k),
+    assists: best(long, (g) => g.a),
+    damage: best(long, (g) => g.dmg),
+    vision: best(long, (g) => g.vis),
+    longestWin: best(history.filter((g) => g.win), (g) => g.dur),
+    kda: best(long, (g) => r2(kda(g.k, g.d, g.a))),
+    kp: best(long.filter((g) => g.kp != null && g.k + g.a >= 15), (g) => g.kp), // con al menos 15 kills+asist.
+    towers: best(long.filter((g) => g.towerDmg != null), (g) => g.towerDmg),
+    gold: best(long.filter((g) => g.goldEarned != null), (g) => g.goldEarned),
+    csMin: best(history.filter((g) => g.dur >= 900), (g) => r1(g.cs / (g.dur / 60))),
+  };
+  for (const k of Object.keys(out)) if (!out[k]) delete out[k];
+  return out;
 }
 
 // Rendimiento por rol y, dentro de cada rol, por campeón (para el "Best 5").

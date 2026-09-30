@@ -78,6 +78,8 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
   const history = Array.isArray(stored) ? stored : stored.games ?? [];
   const skipped = new Set(Array.isArray(stored) ? [] : stored.skipped ?? []);
   let seasonComplete = !Array.isArray(stored) && stored.seasonComplete === true;
+  // Si hay partidas guardadas con un formato antiguo, volver a recorrer la temporada para actualizarlas
+  if (history.some((g) => (g.v ?? 0) < MATCH_RECORD_VERSION)) seasonComplete = false;
   const seasonGames = solo ? solo.wins + solo.losses : 0;
   // Partidas nuevas o guardadas con un formato antiguo (les faltan objetos, runas, rival…)
   const byId = new Map(history.map((g) => [g.id, g]));
@@ -135,7 +137,8 @@ async function updateAccount(riot, acc, region, cache, dd, budget) {
   const stats = computeAccountStats(seasonHist);
   const detailIds = new Set(history.slice(0, DETAIL_RECENT).map((g) => g.id));
   if (stats) {
-    for (const g of [stats.bestGame, stats.worstGame, ...Object.values(stats.gold ?? {}).filter((x) => x && typeof x === 'object')]) {
+    for (const g of [stats.bestGame, stats.worstGame, ...Object.values(stats.gold ?? {}).filter((x) => x && typeof x === 'object'),
+      ...Object.values(stats.gameRecords ?? {})]) {
       if (g?.id) detailIds.add(g.id);
     }
   }
