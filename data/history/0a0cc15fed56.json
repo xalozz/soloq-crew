@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_7999558325",
+      "t": 1790779083506,
+      "dur": 1896,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 17,
+      "k": 12,
+      "d": 3,
+      "a": 11,
+      "kp": 59,
+      "cs": 306,
+      "vis": 31,
+      "dmg": 29888,
+      "teamDmg": 112783,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 17960,
+      "goldEarned": 18247,
+      "fb": false,
+      "items": [
+        1086,
+        6672,
+        3085,
+        3031,
+        3036,
+        1038,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Cassiopeia",
+        "spells": [
+          "SummonerHaste",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15652,
+        "maxLeadMin": 32,
+        "maxDef": -1350,
+        "tgd15": 2848,
+        "gd15": 2593
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_7998698424",
       "t": 1790698364599,
       "dur": 1083,
