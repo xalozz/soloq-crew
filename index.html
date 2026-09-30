@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Carga siempre la última versión de estilos y código (evita que la caché muestre una versión antigua) -->
+  <script>document.write('<link rel="stylesheet" href="style.css?v=' + Date.now() + '">');</script>
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <div class="bg-glow" aria-hidden="true"></div>
@@ -108,6 +110,6 @@
     League of Legends y Riot Games son marcas registradas de Riot Games, Inc.
   </footer>
 
-  <script src="app.js"></script>
+  <script>document.write('<script src="app.js?v=' + Date.now() + '"><\/script>');</script>
 </body>
 </html>
