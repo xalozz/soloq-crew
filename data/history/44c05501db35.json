@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_7999652990",
+      "t": 1790785288927,
+      "dur": 2186,
+      "win": false,
+      "champ": "JarvanIV",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 10,
+      "d": 5,
+      "a": 23,
+      "kp": 70,
+      "cs": 255,
+      "vis": 44,
+      "dmg": 25867,
+      "teamDmg": 139659,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3777,
+      "goldEarned": 18177,
+      "fb": true,
+      "items": [
+        6610,
+        6692,
+        3047,
+        3143,
+        3110,
+        3071,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Udyr",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6982,
+        "maxLeadMin": 33,
+        "maxDef": -1567,
+        "tgd15": 1308,
+        "gd15": 1302
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_7996547220",
       "t": 1790514344916,
       "dur": 924,
