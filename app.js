@@ -379,6 +379,38 @@ function matchDetailView(id, meRiotId) {
   return box;
 }
 
+// Ventana genérica (detalle de partida, explicaciones…)
+function openModal(title, content) {
+  const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
+  const onKey = (e) => { if (e.key === 'Escape') close(); };
+  const ov = h('div', { class: 'modal', onclick: (e) => { if (e.target === ov) close(); } },
+    h('div', { class: 'modal-box narrow', role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
+      h('div', { class: 'modal-head' }, h('b', {}, title), h('button', { class: 'modal-x', onclick: close, 'aria-label': 'Cerrar' }, '×')),
+      content));
+  document.addEventListener('keydown', onKey);
+  document.body.append(ov);
+}
+
+function best5Info() {
+  const P = (...c) => h('p', {}, ...c);
+  openModal('Cómo se calcula el Best 5', h('div', { class: 'info-body' },
+    h('h4', {}, 'Por rendimiento'),
+    P('Cada jugador recibe una puntuación en cada rol con su ', h('b', {}, 'winrate ajustado'), ':'),
+    h('div', { class: 'formula' }, '(victorias + 10) / (partidas + 20)'),
+    P('Es como si todos empezaran con 10 victorias y 10 derrotas "fantasma": con muchas partidas casi no cambia nada, con pocas se acerca al 50 %. Así 5 de 5 no gana a 60 de 100.'),
+    P(h('b', {}, 'Ejemplo: '), '41 victorias en 75 partidas (54,7 %) → 51 / 95 = 53,7 %.'),
+    h('h4', {}, 'Quién puede ir a cada rol'),
+    P('Solo los roles que el jugador juega de verdad: mínimo 10 partidas en ese rol y al menos el 20 % de todas las suyas.'),
+    h('h4', {}, 'Cómo se forma el quinteto'),
+    P('Se prueban todas las combinaciones posibles sin repetir jugador y gana la que ', h('b', {}, 'más suma entre los cinco roles'), '. Por eso alguien puede salir en su segundo mejor rol si así el equipo entero sale mejor.'),
+    h('h4', {}, 'El campeón de cada casilla'),
+    P('Su mejor campeón en ese rol (mínimo 3 partidas) con un ajuste más suave: (victorias + 2) / (partidas + 4).'),
+    P(h('b', {}, 'Pick con mejor winrate: '), 'el mejor campeón del grupo en ese rol, lo juegue quien lo juegue (mínimo 10 partidas, misma fórmula). Puede no coincidir con el jugador elegido: un jugador puede tener un gran campeón pero peor media en el rol.'),
+    h('h4', {}, 'Por elo'),
+    P('Mismas condiciones para entrar en un rol, pero puntúa el rango de cada jugador en lugar del winrate.'),
+    P(h('span', { class: 'muted' }, 'Datos: partidas de SoloQ de la temporada de la cuenta principal de cada uno.'))));
+}
+
 // Ventana con el detalle de una partida (desde los récords)
 function openMatchModal(id, title, meRiotId) {
   const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
@@ -992,6 +1024,7 @@ function wire() {
     renderRows();
   });
   document.getElementById('search').addEventListener('input', (e) => { query = e.target.value; renderRows(); });
+  document.getElementById('best5-info').addEventListener('click', best5Info);
   document.getElementById('best5-toggle').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-mode]');
     if (!b) return;
