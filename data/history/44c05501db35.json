@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8000313926",
+      "t": 1790848218963,
+      "dur": 2368,
+      "win": false,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 22,
+      "d": 6,
+      "a": 11,
+      "kp": 51,
+      "cs": 294,
+      "vis": 26,
+      "dmg": 60010,
+      "teamDmg": 219361,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 1,
+      "towerDmg": 10334,
+      "goldEarned": 21512,
+      "fb": false,
+      "items": [
+        4645,
+        3100,
+        4646,
+        3157,
+        3171,
+        3137,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Hwei",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6064,
+        "maxLeadMin": 16,
+        "maxDef": -2171,
+        "tgd15": 4632,
+        "gd15": 1163
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8000310552",
       "t": 1790845537228,
       "dur": 1133,
