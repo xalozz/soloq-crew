@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T16:41:01.164Z",
+  "generatedAt": "2026-10-01T17:00:53.857Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8,7 +8,7 @@
       "name": "Teyeno tuniña",
       "links": [],
       "bestAccount": 0,
-      "score": 2775,
+      "score": 2765,
       "accounts": [
         {
           "riotId": "Teyeno tuniña#EUW",
@@ -21,19 +21,19 @@
           "rank": {
             "tier": "DIAMOND",
             "division": "I",
-            "lp": 75,
+            "lp": 65,
             "wins": 273,
-            "losses": 236,
-            "winrate": 53.6,
+            "losses": 237,
+            "winrate": 53.5,
             "hotStreak": false
           },
           "stats": {
-            "games": 355,
+            "games": 356,
             "wins": 186,
-            "losses": 169,
-            "winrate": 52.4,
+            "losses": 170,
+            "winrate": 52.2,
             "avgK": 6.5,
-            "avgD": 5.3,
+            "avgD": 5.4,
             "avgA": 5.8,
             "kda": 2.3,
             "csPerMin": 7.3,
@@ -43,7 +43,7 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 3
+                "count": 4
               },
               "bestWin": 9,
               "worstLoss": 7
@@ -52,17 +52,16 @@
               "L",
               "L",
               "L",
-              "W",
-              "L",
-              "L",
               "L",
               "W",
+              "L",
+              "L",
+              "L",
               "W",
               "W"
             ],
             "trend": [
               1,
-              1,
               0,
               1,
               1,
@@ -78,6 +77,7 @@
               0,
               0,
               1,
+              0,
               0,
               0,
               0
@@ -85,22 +85,22 @@
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 3,
+              "losses": 7,
+              "winrate": 30
             },
             "last20": {
               "games": 20,
-              "wins": 11,
-              "losses": 9,
-              "winrate": 55
+              "wins": 10,
+              "losses": 10,
+              "winrate": 50
             },
             "topChamps": [
               {
                 "key": "Chogath",
-                "games": 318,
+                "games": 319,
                 "wins": 173,
-                "winrate": 54.4,
+                "winrate": 54.2,
                 "kda": 2.4
               },
               {
@@ -134,9 +134,9 @@
             ],
             "bestChamp": {
               "key": "Chogath",
-              "games": 318,
+              "games": 319,
               "wins": 173,
-              "winrate": 54.4,
+              "winrate": 54.2,
               "kda": 2.4
             },
             "worstChamp": {
@@ -185,13 +185,13 @@
               "kda": 0
             },
             "firstGameAt": 1778855292871,
-            "lastGameAt": 1790871831693,
+            "lastGameAt": 1790873976686,
             "totals": {
-              "k": 2306,
-              "d": 1899,
-              "a": 2067
+              "k": 2310,
+              "d": 1905,
+              "a": 2069
             },
-            "dmgPerMin": 801,
+            "dmgPerMin": 800,
             "avgVision": 37.1,
             "pentas": 0,
             "firstBloods": 26,
@@ -201,9 +201,9 @@
             "champs": [
               {
                 "key": "Chogath",
-                "games": 318,
+                "games": 319,
                 "wins": 173,
-                "winrate": 54.4,
+                "winrate": 54.2,
                 "kda": 2.4,
                 "csPerMin": 7.3
               },
@@ -323,10 +323,10 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 237,
+                "games": 238,
                 "wins": 124,
-                "winrate": 52.3,
-                "kda": 2.41
+                "winrate": 52.1,
+                "kda": 2.4
               },
               {
                 "key": "TOP",
@@ -358,9 +358,9 @@
               }
             ],
             "gold": {
-              "games": 102,
-              "avgGd15": -202,
-              "avgTgd15": -1,
+              "games": 103,
+              "avgGd15": -233,
+              "avgTgd15": -63,
               "throws": 3,
               "comebacks": 11,
               "biggestThrow": {
@@ -420,18 +420,18 @@
                 "min": 30
               },
               "worst15": {
-                "id": "EUW1_7999882416",
-                "t": 1790797216280,
-                "dur": 1922,
+                "id": "EUW1_8000633578",
+                "t": 1790873976686,
+                "dur": 1736,
                 "champ": "Chogath",
-                "role": "BOTTOM",
-                "k": 6,
-                "d": 13,
-                "a": 7,
+                "role": "MIDDLE",
+                "k": 4,
+                "d": 6,
+                "a": 2,
                 "win": false,
                 "kda": 1,
-                "val": -3235,
-                "min": 17
+                "val": -3399,
+                "min": 3
               }
             },
             "byRole": {
@@ -496,18 +496,18 @@
                 ]
               },
               "MIDDLE": {
-                "games": 237,
+                "games": 238,
                 "wins": 124,
-                "winrate": 52.3,
-                "kda": 2.41,
-                "gd15": -181,
+                "winrate": 52.1,
+                "kda": 2.4,
+                "gd15": -268,
                 "champs": [
                   {
                     "key": "Chogath",
-                    "games": 227,
+                    "games": 228,
                     "wins": 121,
-                    "winrate": 53.3,
-                    "kda": 2.43
+                    "winrate": 53.1,
+                    "kda": 2.42
                   },
                   {
                     "key": "Naafiri",
@@ -618,12 +618,12 @@
               "oneTrick": {
                 "champ": "Chogath",
                 "wins": 173,
-                "games": 318
+                "games": 319
               },
               "mainChar": {
                 "champ": "Chogath",
-                "winrate": 54.4,
-                "games": 318
+                "winrate": 54.2,
+                "games": 319
               },
               "autofill": {
                 "lane": "SOLO",
@@ -633,10 +633,10 @@
               },
               "champPool": 9,
               "kdaStreak": 3,
-              "avgKda": 3.02,
+              "avgKda": 3.01,
               "pentas": 0,
               "quadras": 1,
-              "quadraGames": 355,
+              "quadraGames": 356,
               "firstBloods": 26
             },
             "gameRecords": {
@@ -773,9 +773,9 @@
             },
             "lp": {
               "win": 30,
-              "loss": -7,
+              "loss": -8,
               "winN": 1,
-              "lossN": 4
+              "lossN": 5
             }
           },
           "links": {
@@ -784,7 +784,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-10-01T16:40:53.635Z",
+          "updatedAt": "2026-10-01T17:00:53.854Z",
           "lpHist": [
             [
               1790720384833,
@@ -813,9 +813,76 @@
             [
               1790871881832,
               2775
+            ],
+            [
+              1790874048591,
+              2765
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8000633578",
+              "t": 1790873976686,
+              "dur": 1736,
+              "win": false,
+              "champ": "Chogath",
+              "role": "MIDDLE",
+              "lvl": 16,
+              "k": 4,
+              "d": 6,
+              "a": 2,
+              "kp": 30,
+              "cs": 224,
+              "vis": 30,
+              "dmg": 18277,
+              "teamDmg": 85579,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3359,
+              "goldEarned": 10501,
+              "fb": false,
+              "items": [
+                3152,
+                3175,
+                2504,
+                3108,
+                3147,
+                1056,
+                3340
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerTeleport"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Locke",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 12,
+                "maxLeadMin": 3,
+                "maxDef": -12765,
+                "tgd15": -6299,
+                "gd15": -3399
+              },
+              "lp": {
+                "d": -10,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8000584982",
@@ -1970,69 +2037,14 @@
                 "gd15": 376
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7966251923",
-              "t": 1788020626515,
-              "dur": 1425,
-              "win": true,
-              "champ": "Chogath",
-              "role": "TOP",
-              "lvl": 16,
-              "k": 4,
-              "d": 3,
-              "a": 4,
-              "kp": 30,
-              "cs": 186,
-              "vis": 21,
-              "dmg": 14563,
-              "teamDmg": 80542,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4519,
-              "goldEarned": 9765,
-              "fb": false,
-              "items": [
-                3084,
-                3076,
-                3067,
-                1056,
-                1057,
-                3047,
-                3340
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerTeleport"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "KSante",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerTeleport"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 10213,
-                "maxLeadMin": 24,
-                "maxDef": -721,
-                "tgd15": 3347,
-                "gd15": -1074
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790873976686,
+              0,
+              -10
+            ],
             [
               1790871831693,
               0,
@@ -2525,11 +2537,6 @@
             ],
             [
               1785803050910,
-              1,
-              null
-            ],
-            [
-              1785802348710,
               1,
               null
             ]
@@ -16029,27 +16036,27 @@
             "division": "IV",
             "lp": 0,
             "wins": 157,
-            "losses": 166,
-            "winrate": 48.6,
+            "losses": 167,
+            "winrate": 48.5,
             "hotStreak": false
           },
           "stats": {
-            "games": 323,
+            "games": 324,
             "wins": 157,
-            "losses": 166,
-            "winrate": 48.6,
-            "avgK": 5,
+            "losses": 167,
+            "winrate": 48.5,
+            "avgK": 5.1,
             "avgD": 6.2,
-            "avgA": 7.9,
+            "avgA": 7.8,
             "kda": 2.07,
             "csPerMin": 6,
             "visPerMin": 1.03,
-            "dmgShare": 21.8,
+            "dmgShare": 21.7,
             "avgDurationMin": 31,
             "streak": {
               "current": {
                 "type": "L",
-                "count": 4
+                "count": 5
               },
               "bestWin": 9,
               "worstLoss": 6
@@ -16059,7 +16066,7 @@
               "L",
               "L",
               "L",
-              "W",
+              "L",
               "W",
               "W",
               "W",
@@ -16067,7 +16074,6 @@
               "W"
             ],
             "trend": [
-              0,
               1,
               0,
               0,
@@ -16083,6 +16089,7 @@
               1,
               1,
               1,
+              0,
               0,
               0,
               0,
@@ -16091,9 +16098,9 @@
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 6,
-              "losses": 4,
-              "winrate": 60
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
@@ -16161,9 +16168,9 @@
             },
             "worstRole": {
               "key": "MIDDLE",
-              "games": 133,
+              "games": 134,
               "wins": 59,
-              "winrate": 44.4,
+              "winrate": 44,
               "kda": 2.18
             },
             "bestGame": {
@@ -16191,11 +16198,11 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1790870043379,
+            "lastGameAt": 1790873976194,
             "totals": {
-              "k": 1630,
-              "d": 2009,
-              "a": 2536
+              "k": 1640,
+              "d": 2016,
+              "a": 2542
             },
             "dmgPerMin": 854,
             "avgVision": 31.8,
@@ -16270,20 +16277,20 @@
                 "csPerMin": 2.3
               },
               {
+                "key": "Mel",
+                "games": 10,
+                "wins": 3,
+                "winrate": 30,
+                "kda": 2.27,
+                "csPerMin": 5.6
+              },
+              {
                 "key": "Malphite",
                 "games": 9,
                 "wins": 6,
                 "winrate": 66.7,
                 "kda": 4.39,
                 "csPerMin": 5.6
-              },
-              {
-                "key": "Mel",
-                "games": 9,
-                "wins": 3,
-                "winrate": 33.3,
-                "kda": 2.27,
-                "csPerMin": 5.3
               },
               {
                 "key": "Caitlyn",
@@ -16521,9 +16528,9 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 133,
+                "games": 134,
                 "wins": 59,
-                "winrate": 44.4,
+                "winrate": 44,
                 "kda": 2.18
               },
               {
@@ -16549,9 +16556,9 @@
               }
             ],
             "gold": {
-              "games": 108,
-              "avgGd15": 228,
-              "avgTgd15": 227,
+              "games": 109,
+              "avgGd15": 227,
+              "avgTgd15": 200,
               "throws": 13,
               "comebacks": 10,
               "biggestThrow": {
@@ -16678,11 +16685,11 @@
                 ]
               },
               "MIDDLE": {
-                "games": 133,
+                "games": 134,
                 "wins": 59,
-                "winrate": 44.4,
+                "winrate": 44,
                 "kda": 2.18,
-                "gd15": -152,
+                "gd15": -142,
                 "champs": [
                   {
                     "key": "Malzahar",
@@ -16714,10 +16721,10 @@
                   },
                   {
                     "key": "Mel",
-                    "games": 7,
+                    "games": 8,
                     "wins": 1,
-                    "winrate": 14.3,
-                    "kda": 1.83
+                    "winrate": 12.5,
+                    "kda": 1.89
                   },
                   {
                     "key": "Lissandra",
@@ -16832,7 +16839,7 @@
               "avgKda": 2.76,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 323,
+              "quadraGames": 324,
               "firstBloods": 16
             },
             "gameRecords": {
@@ -16969,9 +16976,9 @@
             },
             "lp": {
               "win": 23,
-              "loss": -18,
+              "loss": -14,
               "winN": 7,
-              "lossN": 4
+              "lossN": 5
             }
           },
           "links": {
@@ -16980,7 +16987,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-01T16:40:46.111Z",
+          "updatedAt": "2026-10-01T17:00:47.678Z",
           "lpHist": [
             [
               1790720384833,
@@ -17033,9 +17040,76 @@
             [
               1790870081325,
               1200
+            ],
+            [
+              1790874042235,
+              1200
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8000614898",
+              "t": 1790873976194,
+              "dur": 2444,
+              "win": false,
+              "champ": "Mel",
+              "role": "MIDDLE",
+              "lvl": 18,
+              "k": 10,
+              "d": 7,
+              "a": 6,
+              "kp": 46,
+              "cs": 296,
+              "vis": 33,
+              "dmg": 33189,
+              "teamDmg": 174507,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3446,
+              "goldEarned": 17751,
+              "fb": false,
+              "items": [
+                3089,
+                2503,
+                6653,
+                3175,
+                6655,
+                4646,
+                3340
+              ],
+              "spells": [
+                "SummonerTeleport",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Malzahar",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerTeleport"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 20,
+                "maxLeadMin": 8,
+                "maxDef": -10353,
+                "tgd15": -2678,
+                "gd15": 141
+              },
+              "lp": {
+                "d": 0,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8000568914",
@@ -18208,69 +18282,14 @@
                 "gd15": 928
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7992749984",
-              "t": 1790183915488,
-              "dur": 2039,
-              "win": false,
-              "champ": "Heimerdinger",
-              "role": "TOP",
-              "lvl": 19,
-              "k": 15,
-              "d": 7,
-              "a": 3,
-              "kp": 51,
-              "cs": 244,
-              "vis": 21,
-              "dmg": 53071,
-              "teamDmg": 131185,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6891,
-              "goldEarned": 16135,
-              "fb": false,
-              "items": [
-                4645,
-                2503,
-                3089,
-                3157,
-                3020,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerExhaust",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Urgot",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 1640,
-                "maxLeadMin": 27,
-                "maxDef": -5888,
-                "tgd15": 556,
-                "gd15": 2988
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790873976194,
+              0,
+              0
+            ],
             [
               1790870043379,
               0,
@@ -18764,11 +18783,6 @@
             [
               1779821537533,
               0,
-              null
-            ],
-            [
-              1779536956503,
-              1,
               null
             ]
           ]
