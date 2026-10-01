@@ -120,6 +120,8 @@ function buildModel(raw) {
       ...p, main, s, rank, score,
       baseScore: base,
       today: base != null && score >= 0 ? score - base : null,
+      // Partidas jugadas hoy (hora de Madrid): sin partidas, "LP hoy" se muestra como "–"
+      gamesToday: (main?.recent ?? []).filter((g) => dayKey(g.t) === dayKey(Date.now())).length,
       wins: rank?.wins ?? 0, losses: rank?.losses ?? 0,
       winrate: rank ? rank.winrate : -1,
       totalGames: totalW + totalL,
@@ -138,7 +140,7 @@ function buildModel(raw) {
 
 const SORTERS = {
   rank: (a, b) => b.score - a.score,
-  today: (a, b) => (b.today ?? -1e9) - (a.today ?? -1e9),
+  today: (a, b) => (b.gamesToday ? 1 : 0) - (a.gamesToday ? 1 : 0) || (b.today ?? -1e9) - (a.today ?? -1e9) || b.score - a.score,
   winrate: (a, b) => b.winrate - a.winrate,
   streak: (a, b) => b.streakVal - a.streakVal,
   kda: (a, b) => (b.s?.kda ?? -1) - (a.s?.kda ?? -1),
@@ -228,10 +230,12 @@ function streakChip(s) {
   return h('span', { class: `chip ${win ? 'chip-w' : 'chip-l'}`, title: win ? 'Victorias seguidas' : 'Derrotas seguidas' }, `${c.count}${win ? 'V' : 'D'}`);
 }
 
-function todayCell(v) {
-  if (v == null) return h('span', { class: 'muted' }, '–');
-  if (v === 0) return h('span', { class: 'muted' }, '0');
-  return h('b', { class: v > 0 ? 'pos' : 'neg' }, `${v > 0 ? '▲' : '▼'} ${Math.abs(v)}`);
+function todayCell(v, games) {
+  if (!games) return h('span', { class: 'today-none', title: 'No ha jugado hoy' }, '–');
+  const n = h('small', { class: 'today-n' }, `${games} part.`);
+  if (v == null) return h('span', { class: 'today-wrap' }, h('span', { class: 'muted' }, '?'), n);
+  if (v === 0) return h('span', { class: 'today-wrap', title: 'Ha ganado y perdido los mismos LP' }, h('b', { class: 'today-zero' }, '0'), n);
+  return h('span', { class: 'today-wrap' }, h('b', { class: v > 0 ? 'pos' : 'neg' }, `${v > 0 ? '▲' : '▼'} ${Math.abs(v)}`), n);
 }
 
 function tierTag(rank) {
@@ -285,11 +289,11 @@ function row(p, idx) {
     h('span', { class: 'c-wr' }, winBar(p.wins, p.losses)),
     h('span', { class: 'c-trend' }, sparkline(s?.trend)),
     h('span', { class: 'c-streak' }, streakChip(s)),
-    h('span', { class: 'c-today' }, todayCell(p.today)),
+    h('span', { class: 'c-today' }, todayCell(p.today, p.gamesToday)),
     h('span', { class: 'c-kda' }, h('b', {}, s ? fmt(s.kda, 2) : '–')),
     h('span', { class: 'c-chev', 'aria-hidden': 'true' }, open ? '−' : '+'));
 
-  return h('div', { class: `row ${open ? 'open' : ''} ${byElo && shownPos <= 3 ? `top top${shownPos}` : ''}`, role: 'row' },
+  return h('div', { class: `row ${open ? 'open' : ''} ${byElo && shownPos <= 3 ? `top top${shownPos}` : ''} ${sortKey === 'today' && !p.gamesToday ? 'idle' : ''}`, role: 'row' },
     head,
     open ? playerDetail(p) : null);
 }
@@ -1019,6 +1023,7 @@ function renderRows() {
   const list = [...MODEL].sort(SORTERS[sortKey])
     .filter((p) => !q || p.name.toLowerCase().includes(q) || p.accounts.some((a) => a.riotId.toLowerCase().includes(q)));
   const box = document.getElementById('rows');
+  box.closest('.table').dataset.sort = sortKey;
   box.replaceChildren(...(list.length ? list.map(row) : [h('p', { class: 'empty' }, 'Ningún jugador coincide con la búsqueda.')]));
 }
 

@@ -174,6 +174,12 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .elo-txt b { font-size: 14px; font-weight: 800; white-space: nowrap; }
 .elo-txt small { font-size: 12px; color: var(--muted); }
 .c-kda b { font-weight: 800; }
+.today-none { color: #55555d; font-weight: 800; }
+.today-wrap { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.today-zero { color: #cfcfd6; }
+.today-n { font-size: 10px; color: var(--muted); font-weight: 600; }
+.row.idle { opacity: .45; }
+.row.idle::before { background: #3a3a41; }
 .c-chev { color: var(--muted); font-size: 18px; text-align: center; }
 
 .avatar { border-radius: 10px; display: block; flex: none; background: var(--panel-3); object-fit: cover; }
@@ -666,6 +672,8 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
   .thead { display: none; }
   .tr { gap: 10px; padding: 10px 12px; }
   .c-wr, .c-today { display: none; }
+  .table[data-sort="today"] .c-today { display: block; text-align: right; }
+  .table[data-sort="today"] .c-elo { display: none; }
   .c-elo .crest { width: 26px; height: 26px; }
   .c-pos .num { font-size: 18px; }
   .panel { padding: 24px 14px; border-radius: 18px; }
