@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T16:09:48.338Z",
+  "generatedAt": "2026-10-01T16:24:47.238Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8,7 +8,7 @@
       "name": "Teyeno tuniña",
       "links": [],
       "bestAccount": 0,
-      "score": 2785,
+      "score": 2775,
       "accounts": [
         {
           "riotId": "Teyeno tuniña#EUW",
@@ -21,17 +21,17 @@
           "rank": {
             "tier": "DIAMOND",
             "division": "I",
-            "lp": 85,
+            "lp": 75,
             "wins": 273,
-            "losses": 235,
-            "winrate": 53.7,
+            "losses": 236,
+            "winrate": 53.6,
             "hotStreak": false
           },
           "stats": {
-            "games": 354,
+            "games": 355,
             "wins": 186,
-            "losses": 168,
-            "winrate": 52.5,
+            "losses": 169,
+            "winrate": 52.4,
             "avgK": 6.5,
             "avgD": 5.3,
             "avgA": 5.8,
@@ -43,7 +43,7 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 2
+                "count": 3
               },
               "bestWin": 9,
               "worstLoss": 7
@@ -51,17 +51,16 @@
             "form": [
               "L",
               "L",
+              "L",
               "W",
               "L",
               "L",
               "L",
               "W",
               "W",
-              "W",
-              "L"
+              "W"
             ],
             "trend": [
-              0,
               1,
               1,
               0,
@@ -79,6 +78,7 @@
               0,
               0,
               1,
+              0,
               0,
               0
             ],
@@ -111,18 +111,18 @@
                 "kda": 2.55
               },
               {
+                "key": "KogMaw",
+                "games": 6,
+                "wins": 2,
+                "winrate": 33.3,
+                "kda": 1.47
+              },
+              {
                 "key": "Teemo",
                 "games": 6,
                 "wins": 1,
                 "winrate": 16.7,
                 "kda": 1.8
-              },
-              {
-                "key": "KogMaw",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 1.3
               },
               {
                 "key": "Brand",
@@ -155,10 +155,10 @@
             },
             "worstRole": {
               "key": "BOTTOM",
-              "games": 22,
+              "games": 23,
               "wins": 10,
-              "winrate": 45.5,
-              "kda": 1.55
+              "winrate": 43.5,
+              "kda": 1.58
             },
             "bestGame": {
               "id": "EUW1_7943426184",
@@ -185,13 +185,13 @@
               "kda": 0
             },
             "firstGameAt": 1778855292871,
-            "lastGameAt": 1790800514627,
+            "lastGameAt": 1790871831693,
             "totals": {
-              "k": 2297,
-              "d": 1891,
-              "a": 2057
+              "k": 2306,
+              "d": 1899,
+              "a": 2067
             },
-            "dmgPerMin": 799,
+            "dmgPerMin": 801,
             "avgVision": 37.1,
             "pentas": 0,
             "firstBloods": 26,
@@ -216,20 +216,20 @@
                 "csPerMin": 7.2
               },
               {
+                "key": "KogMaw",
+                "games": 6,
+                "wins": 2,
+                "winrate": 33.3,
+                "kda": 1.47,
+                "csPerMin": 7.2
+              },
+              {
                 "key": "Teemo",
                 "games": 6,
                 "wins": 1,
                 "winrate": 16.7,
                 "kda": 1.8,
                 "csPerMin": 6.9
-              },
-              {
-                "key": "KogMaw",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 1.3,
-                "csPerMin": 7.1
               },
               {
                 "key": "Brand",
@@ -337,10 +337,10 @@
               },
               {
                 "key": "BOTTOM",
-                "games": 22,
+                "games": 23,
                 "wins": 10,
-                "winrate": 45.5,
-                "kda": 1.55
+                "winrate": 43.5,
+                "kda": 1.58
               },
               {
                 "key": "JUNGLE",
@@ -358,9 +358,9 @@
               }
             ],
             "gold": {
-              "games": 101,
-              "avgGd15": -207,
-              "avgTgd15": 16,
+              "games": 102,
+              "avgGd15": -202,
+              "avgTgd15": -1,
               "throws": 3,
               "comebacks": 11,
               "biggestThrow": {
@@ -540,11 +540,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 22,
+                "games": 23,
                 "wins": 10,
-                "winrate": 45.5,
-                "kda": 1.55,
-                "gd15": -1307,
+                "winrate": 43.5,
+                "kda": 1.58,
+                "gd15": -769,
                 "champs": [
                   {
                     "key": "Chogath",
@@ -555,10 +555,10 @@
                   },
                   {
                     "key": "KogMaw",
-                    "games": 5,
+                    "games": 6,
                     "wins": 2,
-                    "winrate": 40,
-                    "kda": 1.3
+                    "winrate": 33.3,
+                    "kda": 1.47
                   },
                   {
                     "key": "Brand",
@@ -627,16 +627,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 41,
+                "games": 42,
                 "wins": 21,
-                "winrate": 51.2
+                "winrate": 50
               },
               "champPool": 9,
               "kdaStreak": 3,
               "avgKda": 3.02,
               "pentas": 0,
               "quadras": 1,
-              "quadraGames": 354,
+              "quadraGames": 355,
               "firstBloods": 26
             },
             "gameRecords": {
@@ -775,7 +775,7 @@
               "win": 30,
               "loss": -7,
               "winN": 1,
-              "lossN": 3
+              "lossN": 4
             }
           },
           "links": {
@@ -784,7 +784,7 @@
             "dpm": "https://dpm.lol/Teyeno%20tuni%C3%B1a-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/Teyeno%20tuni%C3%B1a-EUW"
           },
-          "updatedAt": "2026-09-30T22:02:01.844Z",
+          "updatedAt": "2026-10-01T16:24:47.235Z",
           "lpHist": [
             [
               1790720384833,
@@ -809,9 +809,76 @@
             [
               1790800620531,
               2785
+            ],
+            [
+              1790871881832,
+              2775
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8000584982",
+              "t": 1790871831693,
+              "dur": 1922,
+              "win": false,
+              "champ": "KogMaw",
+              "role": "BOTTOM",
+              "lvl": 17,
+              "k": 9,
+              "d": 8,
+              "a": 10,
+              "kp": 68,
+              "cs": 239,
+              "vis": 32,
+              "dmg": 43092,
+              "teamDmg": 155129,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3958,
+              "goldEarned": 18217,
+              "fb": false,
+              "items": [
+                3089,
+                2510,
+                6655,
+                3135,
+                4646,
+                0,
+                3340
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerHaste"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Yasuo",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 90,
+                "maxLeadMin": 7,
+                "maxDef": -6025,
+                "tgd15": -1734,
+                "gd15": 309
+              },
+              "lp": {
+                "d": -10,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_7999986636",
@@ -1963,69 +2030,14 @@
                 "gd15": -1074
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7957343149",
-              "t": 1787320220769,
-              "dur": 2569,
-              "win": false,
-              "champ": "Chogath",
-              "role": "JUNGLE",
-              "lvl": 18,
-              "k": 16,
-              "d": 11,
-              "a": 8,
-              "kp": 52,
-              "cs": 213,
-              "vis": 76,
-              "dmg": 34470,
-              "teamDmg": 188833,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 573,
-              "goldEarned": 17181,
-              "fb": true,
-              "items": [
-                3152,
-                4633,
-                3075,
-                3047,
-                4401,
-                2504,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerSmite"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "MonkeyKing",
-                "spells": [
-                  "SummonerSmite",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 6547,
-                "maxLeadMin": 24,
-                "maxDef": -9881,
-                "tgd15": 3098,
-                "gd15": 397
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790871831693,
+              0,
+              -10
+            ],
             [
               1790800514627,
               0,
@@ -2519,11 +2531,6 @@
             [
               1785802348710,
               1,
-              null
-            ],
-            [
-              1785799914479,
-              0,
               null
             ]
           ]
