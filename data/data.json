@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T10:26:43.233Z",
+  "generatedAt": "2026-10-02T11:02:46.491Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13286,7 +13286,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1747,
+      "score": 1767,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13299,17 +13299,17 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "III",
-            "lp": 47,
-            "wins": 437,
+            "lp": 67,
+            "wins": 438,
             "losses": 441,
             "winrate": 49.8,
             "hotStreak": false
           },
           "stats": {
-            "games": 849,
-            "wins": 428,
+            "games": 850,
+            "wins": 429,
             "losses": 421,
-            "winrate": 50.4,
+            "winrate": 50.5,
             "avgK": 7.3,
             "avgD": 7,
             "avgA": 6.9,
@@ -13321,25 +13321,24 @@
             "streak": {
               "current": {
                 "type": "W",
-                "count": 1
+                "count": 2
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
               "W",
-              "L",
-              "W",
-              "L",
-              "L",
-              "L",
               "W",
               "L",
               "W",
+              "L",
+              "L",
+              "L",
+              "W",
+              "L",
               "W"
             ],
             "trend": [
-              1,
               0,
               1,
               1,
@@ -13358,6 +13357,7 @@
               0,
               1,
               0,
+              1,
               1
             ],
             "mainRole": "MIDDLE",
@@ -13463,14 +13463,14 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1790936442546,
+            "lastGameAt": 1790938914645,
             "totals": {
-              "k": 6220,
-              "d": 5948,
-              "a": 5878
+              "k": 6225,
+              "d": 5957,
+              "a": 5887
             },
-            "dmgPerMin": 827,
-            "avgVision": 24.5,
+            "dmgPerMin": 826,
+            "avgVision": 24.6,
             "pentas": 0,
             "firstBloods": 100,
             "maxKills": 26,
@@ -13615,11 +13615,11 @@
               },
               {
                 "key": "Elise",
-                "games": 8,
-                "wins": 4,
-                "winrate": 50,
-                "kda": 2.31,
-                "csPerMin": 5.7
+                "games": 9,
+                "wins": 5,
+                "winrate": 55.6,
+                "kda": 2.22,
+                "csPerMin": 5.8
               },
               {
                 "key": "Nasus",
@@ -13768,9 +13768,9 @@
               },
               {
                 "key": "JUNGLE",
-                "games": 161,
-                "wins": 71,
-                "winrate": 44.1,
+                "games": 162,
+                "wins": 72,
+                "winrate": 44.4,
                 "kda": 2.23
               },
               {
@@ -13796,9 +13796,9 @@
               }
             ],
             "gold": {
-              "games": 110,
-              "avgGd15": 19,
-              "avgTgd15": 429,
+              "games": 111,
+              "avgGd15": 23,
+              "avgTgd15": 447,
               "throws": 12,
               "comebacks": 7,
               "biggestThrow": {
@@ -13925,11 +13925,11 @@
                 ]
               },
               "JUNGLE": {
-                "games": 161,
-                "wins": 71,
-                "winrate": 44.1,
+                "games": 162,
+                "wins": 72,
+                "winrate": 44.4,
                 "kda": 2.23,
-                "gd15": -262,
+                "gd15": -250,
                 "champs": [
                   {
                     "key": "LeeSin",
@@ -13968,10 +13968,10 @@
                   },
                   {
                     "key": "Elise",
-                    "games": 8,
-                    "wins": 4,
-                    "winrate": 50,
-                    "kda": 2.31
+                    "games": 9,
+                    "wins": 5,
+                    "winrate": 55.6,
+                    "kda": 2.22
                   }
                 ]
               },
@@ -14107,16 +14107,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 172,
-                "wins": 74,
-                "winrate": 43
+                "games": 173,
+                "wins": 75,
+                "winrate": 43.4
               },
               "champPool": 29,
               "kdaStreak": 4,
               "avgKda": 2.92,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 849,
+              "quadraGames": 850,
               "firstBloods": 100
             },
             "gameRecords": {
@@ -14254,7 +14254,7 @@
             "lp": {
               "win": 20,
               "loss": -20,
-              "winN": 5,
+              "winN": 6,
               "lossN": 7
             }
           },
@@ -14264,7 +14264,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-02T10:26:43.230Z",
+          "updatedAt": "2026-10-02T11:02:46.487Z",
           "lpHist": [
             [
               1790720384833,
@@ -14321,9 +14321,76 @@
             [
               1790936560306,
               1747
+            ],
+            [
+              1790938960917,
+              1767
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8001279110",
+              "t": 1790938914645,
+              "dur": 2096,
+              "win": true,
+              "champ": "Elise",
+              "role": "JUNGLE",
+              "lvl": 18,
+              "k": 5,
+              "d": 9,
+              "a": 9,
+              "kp": 40,
+              "cs": 222,
+              "vis": 52,
+              "dmg": 20069,
+              "teamDmg": 146939,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 370,
+              "goldEarned": 13247,
+              "fb": false,
+              "items": [
+                4645,
+                4646,
+                3020,
+                3157,
+                1026,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerSmite",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "FiddleSticks",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerSmite"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8939,
+                "maxLeadMin": 35,
+                "maxDef": -2230,
+                "tgd15": 2374,
+                "gd15": 444
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8001257275",
@@ -15499,69 +15566,14 @@
                 "gd15": 3833
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7994828074",
-              "t": 1790365916353,
-              "dur": 1587,
-              "win": true,
-              "champ": "Zed",
-              "role": "JUNGLE",
-              "lvl": 16,
-              "k": 18,
-              "d": 4,
-              "a": 7,
-              "kp": 64,
-              "cs": 216,
-              "vis": 26,
-              "dmg": 37407,
-              "teamDmg": 118061,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 1,
-              "towerDmg": 3695,
-              "goldEarned": 16353,
-              "fb": false,
-              "items": [
-                2520,
-                6699,
-                3158,
-                6694,
-                6695,
-                6696,
-                3364
-              ],
-              "spells": [
-                "SummonerSmite",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "Fizz",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerSmite"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 2079,
-                "maxLeadMin": 23,
-                "maxDef": -2552,
-                "tgd15": -1086,
-                "gd15": -483
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790938914645,
+              1,
+              20
+            ],
             [
               1790936442546,
               1,
@@ -16055,11 +16067,6 @@
             [
               1788529564490,
               0,
-              null
-            ],
-            [
-              1788527574859,
-              1,
               null
             ]
           ]
