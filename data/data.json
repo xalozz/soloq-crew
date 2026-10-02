@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T15:57:15.223Z",
+  "generatedAt": "2026-10-02T16:21:16.054Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13328,7 +13328,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1805,
+      "score": 1824,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13341,15 +13341,15 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "II",
-            "lp": 5,
-            "wins": 440,
+            "lp": 24,
+            "wins": 441,
             "losses": 443,
-            "winrate": 49.8,
-            "hotStreak": false
+            "winrate": 49.9,
+            "hotStreak": true
           },
           "stats": {
-            "games": 854,
-            "wins": 431,
+            "games": 855,
+            "wins": 432,
             "losses": 423,
             "winrate": 50.5,
             "avgK": 7.3,
@@ -13363,7 +13363,7 @@
             "streak": {
               "current": {
                 "type": "W",
-                "count": 2
+                "count": 3
               },
               "bestWin": 10,
               "worstLoss": 11
@@ -13371,19 +13371,18 @@
             "form": [
               "W",
               "W",
+              "W",
               "L",
               "L",
               "W",
               "W",
               "L",
               "W",
-              "L",
               "L"
             ],
             "trend": [
               1,
               1,
-              1,
               0,
               0,
               1,
@@ -13399,15 +13398,16 @@
               1,
               0,
               0,
+              1,
               1,
               1
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 6,
+              "losses": 4,
+              "winrate": 60
             },
             "last20": {
               "games": 20,
@@ -13505,11 +13505,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1790956027243,
+            "lastGameAt": 1790958026588,
             "totals": {
-              "k": 6248,
-              "d": 5977,
-              "a": 5923
+              "k": 6255,
+              "d": 5981,
+              "a": 5940
             },
             "dmgPerMin": 826,
             "avgVision": 24.5,
@@ -13664,20 +13664,20 @@
                 "csPerMin": 5.8
               },
               {
+                "key": "Trundle",
+                "games": 6,
+                "wins": 3,
+                "winrate": 50,
+                "kda": 2.7,
+                "csPerMin": 6.4
+              },
+              {
                 "key": "Nasus",
                 "games": 6,
                 "wins": 2,
                 "winrate": 33.3,
                 "kda": 1.45,
                 "csPerMin": 6.2
-              },
-              {
-                "key": "Trundle",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.44,
-                "csPerMin": 6.4
               },
               {
                 "key": "Jax",
@@ -13810,10 +13810,10 @@
               },
               {
                 "key": "JUNGLE",
-                "games": 164,
-                "wins": 74,
-                "winrate": 45.1,
-                "kda": 2.24
+                "games": 165,
+                "wins": 75,
+                "winrate": 45.5,
+                "kda": 2.25
               },
               {
                 "key": "TOP",
@@ -13838,9 +13838,9 @@
               }
             ],
             "gold": {
-              "games": 115,
-              "avgGd15": 20,
-              "avgTgd15": 409,
+              "games": 116,
+              "avgGd15": 25,
+              "avgTgd15": 428,
               "throws": 12,
               "comebacks": 7,
               "biggestThrow": {
@@ -13967,11 +13967,11 @@
                 ]
               },
               "JUNGLE": {
-                "games": 164,
-                "wins": 74,
-                "winrate": 45.1,
-                "kda": 2.24,
-                "gd15": -242,
+                "games": 165,
+                "wins": 75,
+                "winrate": 45.5,
+                "kda": 2.25,
+                "gd15": -227,
                 "champs": [
                   {
                     "key": "LeeSin",
@@ -14149,16 +14149,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 175,
-                "wins": 77,
-                "winrate": 44
+                "games": 176,
+                "wins": 78,
+                "winrate": 44.3
               },
               "champPool": 29,
               "kdaStreak": 4,
-              "avgKda": 2.91,
+              "avgKda": 2.92,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 854,
+              "quadraGames": 855,
               "firstBloods": 101
             },
             "gameRecords": {
@@ -14296,7 +14296,7 @@
             "lp": {
               "win": 20,
               "loss": -15,
-              "winN": 8,
+              "winN": 9,
               "lossN": 9
             }
           },
@@ -14306,7 +14306,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-02T15:49:19.192Z",
+          "updatedAt": "2026-10-02T16:21:16.048Z",
           "lpHist": [
             [
               1790720384833,
@@ -14383,9 +14383,76 @@
             [
               1790956152692,
               1805
+            ],
+            [
+              1790958070377,
+              1824
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8001542522",
+              "t": 1790958026588,
+              "dur": 1718,
+              "win": true,
+              "champ": "Trundle",
+              "role": "JUNGLE",
+              "lvl": 16,
+              "k": 7,
+              "d": 4,
+              "a": 17,
+              "kp": 55,
+              "cs": 200,
+              "vis": 27,
+              "dmg": 20849,
+              "teamDmg": 120379,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10425,
+              "goldEarned": 14153,
+              "fb": false,
+              "items": [
+                3078,
+                3047,
+                3742,
+                3074,
+                3076,
+                1029,
+                3364
+              ],
+              "spells": [
+                "SummonerSmite",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Qiyana",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerSmite"
+                ],
+                "runes": [
+                  "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8885,
+                "maxLeadMin": 29,
+                "maxDef": -175,
+                "tgd15": 2584,
+                "gd15": 612
+              },
+              "lp": {
+                "d": 19,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8001509478",
@@ -15576,69 +15643,14 @@
                 "gd15": 269
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7995817804",
-              "t": 1790448458387,
-              "dur": 1356,
-              "win": true,
-              "champ": "Galio",
-              "role": "MIDDLE",
-              "lvl": 14,
-              "k": 6,
-              "d": 3,
-              "a": 10,
-              "kp": 44,
-              "cs": 148,
-              "vis": 13,
-              "dmg": 15138,
-              "teamDmg": 82887,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4472,
-              "goldEarned": 10276,
-              "fb": false,
-              "items": [
-                1056,
-                3174,
-                6664,
-                4633,
-                1029,
-                1029,
-                3364
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Jayce",
-                "spells": [
-                  "SummonerTeleport",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 11608,
-                "maxLeadMin": 23,
-                "maxDef": -20,
-                "tgd15": 4329,
-                "gd15": 1373
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790958026588,
+              1,
+              19
+            ],
             [
               1790956027243,
               1,
@@ -16132,11 +16144,6 @@
             [
               1788555904193,
               0,
-              null
-            ],
-            [
-              1788553771215,
-              1,
               null
             ]
           ]
