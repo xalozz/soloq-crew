@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T16:56:18.377Z",
+  "generatedAt": "2026-10-02T17:36:15.230Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -16168,7 +16168,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1193,
+      "score": 1171,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16181,17 +16181,17 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 93,
+            "lp": 71,
             "wins": 158,
-            "losses": 168,
-            "winrate": 48.5,
+            "losses": 169,
+            "winrate": 48.3,
             "hotStreak": false
           },
           "stats": {
-            "games": 326,
+            "games": 327,
             "wins": 158,
-            "losses": 168,
-            "winrate": 48.5,
+            "losses": 169,
+            "winrate": 48.3,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
@@ -16202,26 +16202,25 @@
             "avgDurationMin": 31,
             "streak": {
               "current": {
-                "type": "W",
+                "type": "L",
                 "count": 1
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
-              "W",
-              "L",
-              "L",
-              "L",
-              "L",
-              "L",
               "L",
               "W",
+              "L",
+              "L",
+              "L",
+              "L",
+              "L",
+              "L",
               "W",
               "W"
             ],
             "trend": [
-              0,
               1,
               1,
               0,
@@ -16240,14 +16239,15 @@
               0,
               0,
               0,
-              1
+              1,
+              0
             ],
-            "mainRole": "MIDDLE",
+            "mainRole": "TOP",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 3,
+              "losses": 7,
+              "winrate": 30
             },
             "last20": {
               "games": 20,
@@ -16272,10 +16272,10 @@
               },
               {
                 "key": "Teemo",
-                "games": 37,
+                "games": 38,
                 "wins": 21,
-                "winrate": 56.8,
-                "kda": 1.61
+                "winrate": 55.3,
+                "kda": 1.58
               },
               {
                 "key": "Syndra",
@@ -16345,14 +16345,14 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1790960139141,
+            "lastGameAt": 1790962553226,
             "totals": {
-              "k": 1653,
-              "d": 2028,
-              "a": 2552
+              "k": 1655,
+              "d": 2035,
+              "a": 2555
             },
-            "dmgPerMin": 854,
-            "avgVision": 31.8,
+            "dmgPerMin": 855,
+            "avgVision": 31.7,
             "pentas": 0,
             "firstBloods": 17,
             "maxKills": 19,
@@ -16377,11 +16377,11 @@
               },
               {
                 "key": "Teemo",
-                "games": 37,
+                "games": 38,
                 "wins": 21,
-                "winrate": 56.8,
-                "kda": 1.61,
-                "csPerMin": 6.5
+                "winrate": 55.3,
+                "kda": 1.58,
+                "csPerMin": 6.4
               },
               {
                 "key": "Syndra",
@@ -16674,18 +16674,18 @@
             ],
             "roles": [
               {
+                "key": "TOP",
+                "games": 134,
+                "wins": 69,
+                "winrate": 51.5,
+                "kda": 1.96
+              },
+              {
                 "key": "MIDDLE",
                 "games": 134,
                 "wins": 59,
                 "winrate": 44,
                 "kda": 2.18
-              },
-              {
-                "key": "TOP",
-                "games": 133,
-                "wins": 69,
-                "winrate": 51.9,
-                "kda": 1.97
               },
               {
                 "key": "UTILITY",
@@ -16703,9 +16703,9 @@
               }
             ],
             "gold": {
-              "games": 111,
-              "avgGd15": 238,
-              "avgTgd15": 229,
+              "games": 112,
+              "avgGd15": 226,
+              "avgTgd15": 216,
               "throws": 13,
               "comebacks": 10,
               "biggestThrow": {
@@ -16781,11 +16781,11 @@
             },
             "byRole": {
               "TOP": {
-                "games": 133,
+                "games": 134,
                 "wins": 69,
-                "winrate": 51.9,
-                "kda": 1.97,
-                "gd15": 534,
+                "winrate": 51.5,
+                "kda": 1.96,
+                "gd15": 509,
                 "champs": [
                   {
                     "key": "Heimerdinger",
@@ -16796,10 +16796,10 @@
                   },
                   {
                     "key": "Teemo",
-                    "games": 34,
+                    "games": 35,
                     "wins": 21,
-                    "winrate": 61.8,
-                    "kda": 1.58
+                    "winrate": 60,
+                    "kda": 1.56
                   },
                   {
                     "key": "Malphite",
@@ -16972,8 +16972,8 @@
               },
               "mainChar": {
                 "champ": "Teemo",
-                "winrate": 56.8,
-                "games": 37
+                "winrate": 55.3,
+                "games": 38
               },
               "autofill": {
                 "lane": "SOLO",
@@ -16986,7 +16986,7 @@
               "avgKda": 2.75,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 326,
+              "quadraGames": 327,
               "firstBloods": 17
             },
             "gameRecords": {
@@ -17123,9 +17123,9 @@
             },
             "lp": {
               "win": 22,
-              "loss": -16,
+              "loss": -17,
               "winN": 8,
-              "lossN": 6
+              "lossN": 7
             }
           },
           "links": {
@@ -17134,7 +17134,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-02T16:56:15.099Z",
+          "updatedAt": "2026-10-02T17:36:15.226Z",
           "lpHist": [
             [
               1790720384833,
@@ -17199,9 +17199,76 @@
             [
               1790960169604,
               1193
+            ],
+            [
+              1790962569706,
+              1171
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8001606307",
+              "t": 1790962553226,
+              "dur": 1908,
+              "win": false,
+              "champ": "Teemo",
+              "role": "TOP",
+              "lvl": 15,
+              "k": 2,
+              "d": 7,
+              "a": 3,
+              "kp": 26,
+              "cs": 162,
+              "vis": 25,
+              "dmg": 31745,
+              "teamDmg": 118898,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6827,
+              "goldEarned": 9066,
+              "fb": false,
+              "items": [
+                1086,
+                3087,
+                3118,
+                2031,
+                3009,
+                2508,
+                3340
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "TahmKench",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -12566,
+                "tgd15": -1158,
+                "gd15": -1132
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8001565307",
@@ -18383,69 +18450,14 @@
                 "gd15": -1270
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7994286229",
-              "t": 1790328908521,
-              "dur": 1742,
-              "win": false,
-              "champ": "Locke",
-              "role": "MIDDLE",
-              "lvl": 15,
-              "k": 10,
-              "d": 8,
-              "a": 3,
-              "kp": 41,
-              "cs": 135,
-              "vis": 10,
-              "dmg": 21045,
-              "teamDmg": 88151,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6039,
-              "goldEarned": 11697,
-              "fb": false,
-              "items": [
-                0,
-                3100,
-                3175,
-                3157,
-                4645,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "Katarina",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerTeleport"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 2456,
-                "maxLeadMin": 17,
-                "maxDef": -8814,
-                "tgd15": 335,
-                "gd15": -597
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1790962553226,
+              0,
+              -22
+            ],
             [
               1790960139141,
               1,
@@ -18939,11 +18951,6 @@
             [
               1780179456396,
               0,
-              null
-            ],
-            [
-              1780176500799,
-              1,
               null
             ]
           ]
