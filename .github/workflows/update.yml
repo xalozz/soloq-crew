@@ -52,20 +52,22 @@ jobs:
           while [ $SECONDS -lt $end ]; do
             t0=$SECONDS
             # Coger cambios de código o datos subidos mientras tanto
-            git pull -q --rebase origin main || { git rebase --abort 2>/dev/null; git reset -q --hard origin/main; }
+            timeout 60 git pull -q --rebase origin main || { git rebase --abort 2>/dev/null; git fetch -q origin main; git reset -q --hard origin/main; }
             if [ $((i % FULL_EVERY)) -eq 0 ]; then
-              node scripts/update.mjs || echo "::warning::La pasada completa ha fallado; se reintenta más tarde"
+              timeout 900 node scripts/update.mjs || echo "::warning::La pasada completa ha fallado o se ha colgado; se reintenta más tarde"
             else
-              node scripts/update.mjs --quick || echo "::warning::La pasada rápida ha fallado"
+              timeout 240 node scripts/update.mjs --quick || echo "::warning::La pasada rápida ha fallado o se ha colgado"
             fi
             git add data
             if ! git diff --cached --quiet; then
               git commit -q -m "Actualizar datos"
               for n in 1 2 3; do
-                git pull -q --rebase origin main && git push -q origin HEAD:main && break
+                timeout 60 git pull -q --rebase origin main && timeout 60 git push -q origin HEAD:main && break
                 sleep 5
               done
             fi
+            # Latido: commit vacío en la rama "heartbeat" (no publica la web); la web lo usa para el indicador "En directo"
+            hb=$(git commit-tree "$(git hash-object -t tree /dev/null)" -m "latido $(date -u +%FT%TZ)") && timeout 30 git push -f -q origin "$hb:refs/heads/heartbeat" || true
             i=$((i + 1))
             left=$((CYCLE_SECONDS - (SECONDS - t0)))
             [ $left -gt 0 ] && sleep $left

@@ -42,7 +42,7 @@ export class Riot {
 
       let res;
       try {
-        res = await fetch(url, { headers: { 'X-Riot-Token': this.apiKey } });
+        res = await fetch(url, { headers: { 'X-Riot-Token': this.apiKey }, signal: AbortSignal.timeout(20000) });
       } catch (err) {
         if (attempt === 4) throw err;
         await sleep(2000 * (attempt + 1));
@@ -230,18 +230,18 @@ export async function loadDataDragon(version) {
   const base = `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US`;
   const spells = {}, runes = {}, champs = {};
   try {
-    const s = await (await fetch(`${base}/summoner.json`)).json();
+    const s = await (await fetch(`${base}/summoner.json`, { signal: AbortSignal.timeout(20000) })).json();
     for (const sp of Object.values(s.data)) spells[sp.key] = sp.id;
   } catch { /* sin iconos de hechizos */ }
   try {
-    const r = await (await fetch(`${base}/runesReforged.json`)).json();
+    const r = await (await fetch(`${base}/runesReforged.json`, { signal: AbortSignal.timeout(20000) })).json();
     for (const style of r) {
       runes[style.id] = style.icon;
       for (const slot of style.slots) for (const rune of slot.runes) runes[rune.id] = rune.icon;
     }
   } catch { /* sin iconos de runas */ }
   try {
-    const c = await (await fetch(`${base}/champion.json`)).json();
+    const c = await (await fetch(`${base}/champion.json`, { signal: AbortSignal.timeout(20000) })).json();
     for (const ch of Object.values(c.data)) champs[ch.key] = ch.id;
   } catch { /* bans sin icono */ }
   return { spells, runes, champs };

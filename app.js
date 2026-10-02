@@ -1114,24 +1114,24 @@ async function refreshData(manual = false) {
 async function checkLive() {
   const el = document.getElementById('live');
   if (!el) return;
+  const set = (cls, text, title) => { el.className = `live ${cls}`; el.querySelector('span').textContent = text; el.title = title; };
   try {
-    const r = await fetch('https://api.github.com/repos/xalozz/soloq-crew/actions/workflows/update.yml/runs?status=in_progress&per_page=1', { cache: 'no-store' });
+    // El actualizador hace un "latido" cada minuto en la rama heartbeat
+    const r = await fetch('https://api.github.com/repos/xalozz/soloq-crew/commits/heartbeat', { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
-    const on = (await r.json()).total_count > 0;
-    el.className = `live ${on ? 'on' : 'off'}`;
-    el.querySelector('span').textContent = on ? 'En directo' : 'Parado';
-    el.title = on ? 'El actualizador está encendido: mira el rango de todos cada minuto' : 'El actualizador está parado ahora mismo: se relanza solo; si dura mucho, avisa';
+    const t = new Date((await r.json()).commit.committer.date).getTime();
+    const mins = Math.round((Date.now() - t) / 60000);
+    if (mins <= 4) set('on', 'En directo', `Último latido hace ${mins <= 0 ? 'menos de 1' : mins} min: mira el rango de todos cada minuto`);
+    else set('off', 'Parado', `Sin latido desde hace ${mins} min. Se relanza solo; si dura mucho, avisa`);
   } catch {
-    el.className = 'live unk';
-    el.querySelector('span').textContent = 'Estado ?';
-    el.title = 'No se ha podido comprobar el estado (pulsa para verlo en GitHub)';
+    set('unk', 'Estado ?', 'No se ha podido comprobar el estado (pulsa para verlo en GitHub)');
   }
 }
 
 async function init() {
   wire();
   checkLive();
-  setInterval(checkLive, 5 * 60_000);
+  setInterval(checkLive, 3 * 60_000);
   document.getElementById('refresh').addEventListener('click', () => refreshData(true));
   setInterval(() => refreshData(false), 60_000);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshData(false); });

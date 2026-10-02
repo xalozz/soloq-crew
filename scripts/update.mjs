@@ -52,7 +52,7 @@ const histFile = (puuid) =>
 
 async function ddragonVersion() {
   try {
-    const res = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
+    const res = await fetch('https://ddragon.leagueoflegends.com/api/versions.json', { signal: AbortSignal.timeout(20000) });
     return (await res.json())[0];
   } catch {
     return null;
