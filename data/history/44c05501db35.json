@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8001361218",
+      "t": 1790946583363,
+      "dur": 1952,
+      "win": false,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 9,
+      "d": 8,
+      "a": 7,
+      "kp": 39,
+      "cs": 178,
+      "vis": 20,
+      "dmg": 21217,
+      "teamDmg": 128972,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1901,
+      "goldEarned": 12228,
+      "fb": false,
+      "items": [
+        4645,
+        3100,
+        3171,
+        3157,
+        4630,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Galio",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2980,
+        "maxLeadMin": 30,
+        "maxDef": -5553,
+        "tgd15": -2982,
+        "gd15": -207
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8001348386",
       "t": 1790944304043,
       "dur": 396,
