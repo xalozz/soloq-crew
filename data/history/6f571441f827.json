@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8002744159",
+      "t": 1791052856414,
+      "dur": 2008,
+      "win": false,
+      "champ": "Zyra",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 16,
+      "d": 12,
+      "a": 10,
+      "kp": 67,
+      "cs": 231,
+      "vis": 29,
+      "dmg": 34028,
+      "teamDmg": 122194,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 17173,
+      "fb": false,
+      "items": [
+        3157,
+        4645,
+        3020,
+        1026,
+        3089,
+        6653,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Kayn",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1321,
+        "maxLeadMin": 13,
+        "maxDef": -11676,
+        "tgd15": 405,
+        "gd15": 1899
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8002459641",
       "t": 1791036411601,
       "dur": 1867,
