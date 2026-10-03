@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8003055369",
+      "t": 1791067580907,
+      "dur": 2048,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 7,
+      "d": 4,
+      "a": 14,
+      "kp": 49,
+      "cs": 237,
+      "vis": 24,
+      "dmg": 32358,
+      "teamDmg": 155831,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 11019,
+      "goldEarned": 15243,
+      "fb": false,
+      "items": [
+        6653,
+        2503,
+        3175,
+        2420,
+        3116,
+        3118,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4968,
+        "maxLeadMin": 34,
+        "maxDef": -683,
+        "tgd15": 2387,
+        "gd15": 1174
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8002658279",
       "t": 1791048385802,
       "dur": 2000,
