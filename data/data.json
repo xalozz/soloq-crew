@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:32:44.922Z",
+  "generatedAt": "2026-10-04T10:45:45.221Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -4905,7 +4905,7 @@
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
-      "score": 2113,
+      "score": 2093,
       "accounts": [
         {
           "riotId": "ArNOOBal#EUW",
@@ -4917,18 +4917,18 @@
           "profileIconId": 7138,
           "rank": {
             "tier": "EMERALD",
-            "division": "III",
-            "lp": 13,
+            "division": "IV",
+            "lp": 93,
             "wins": 523,
-            "losses": 516,
+            "losses": 517,
             "winrate": 50.3,
             "hotStreak": false
           },
           "stats": {
-            "games": 873,
+            "games": 874,
             "wins": 437,
-            "losses": 436,
-            "winrate": 50.1,
+            "losses": 437,
+            "winrate": 50,
             "avgK": 6.4,
             "avgD": 5.6,
             "avgA": 9.2,
@@ -4940,13 +4940,14 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 8,
               "worstLoss": 8
             },
             "form": [
               "L",
+              "L",
               "W",
               "W",
               "L",
@@ -4954,7 +4955,6 @@
               "W",
               "W",
               "L",
-              "W",
               "W"
             ],
             "trend": [
@@ -4963,7 +4963,6 @@
               1,
               1,
               1,
-              1,
               0,
               0,
               1,
@@ -4977,27 +4976,28 @@
               0,
               1,
               1,
+              0,
               0
             ],
             "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
-              "wins": 7,
-              "losses": 3,
-              "winrate": 70
+              "wins": 6,
+              "losses": 4,
+              "winrate": 60
             },
             "last20": {
               "games": 20,
-              "wins": 14,
-              "losses": 6,
-              "winrate": 70
+              "wins": 13,
+              "losses": 7,
+              "winrate": 65
             },
             "topChamps": [
               {
                 "key": "Diana",
-                "games": 488,
+                "games": 489,
                 "wins": 266,
-                "winrate": 54.5,
+                "winrate": 54.4,
                 "kda": 2.82
               },
               {
@@ -5082,11 +5082,11 @@
               "kda": 0
             },
             "firstGameAt": 1772394469336,
-            "lastGameAt": 1791102154834,
+            "lastGameAt": 1791110657701,
             "totals": {
-              "k": 5586,
-              "d": 4870,
-              "a": 8064
+              "k": 5603,
+              "d": 4880,
+              "a": 8076
             },
             "dmgPerMin": 659,
             "avgVision": 30.6,
@@ -5098,9 +5098,9 @@
             "champs": [
               {
                 "key": "Diana",
-                "games": 488,
+                "games": 489,
                 "wins": 266,
-                "winrate": 54.5,
+                "winrate": 54.4,
                 "kda": 2.82,
                 "csPerMin": 7.4
               },
@@ -5412,7 +5412,7 @@
             "roles": [
               {
                 "key": "JUNGLE",
-                "games": 767,
+                "games": 768,
                 "wins": 389,
                 "winrate": 50.7,
                 "kda": 2.9
@@ -5447,24 +5447,24 @@
               }
             ],
             "gold": {
-              "games": 107,
-              "avgGd15": 442,
-              "avgTgd15": 686,
-              "throws": 10,
+              "games": 108,
+              "avgGd15": 458,
+              "avgTgd15": 725,
+              "throws": 11,
               "comebacks": 3,
               "biggestThrow": {
-                "id": "EUW1_7966331199",
-                "t": 1788025835094,
-                "dur": 2296,
-                "champ": "Nocturne",
+                "id": "EUW1_8003338216",
+                "t": 1791110657701,
+                "dur": 2359,
+                "champ": "Diana",
                 "role": "JUNGLE",
-                "k": 6,
-                "d": 11,
-                "a": 14,
+                "k": 17,
+                "d": 10,
+                "a": 12,
                 "win": false,
-                "kda": 1.82,
-                "val": 6769,
-                "min": 20
+                "kda": 2.9,
+                "val": 8907,
+                "min": 24
               },
               "biggestComeback": {
                 "id": "EUW1_7996894001",
@@ -5562,17 +5562,17 @@
                 ]
               },
               "JUNGLE": {
-                "games": 767,
+                "games": 768,
                 "wins": 389,
                 "winrate": 50.7,
                 "kda": 2.9,
-                "gd15": 527,
+                "gd15": 545,
                 "champs": [
                   {
                     "key": "Diana",
-                    "games": 474,
+                    "games": 475,
                     "wins": 257,
-                    "winrate": 54.2,
+                    "winrate": 54.1,
                     "kda": 2.85
                   },
                   {
@@ -5735,7 +5735,7 @@
               "oneTrick": {
                 "champ": "Diana",
                 "wins": 266,
-                "games": 488
+                "games": 489
               },
               "mainChar": {
                 "champ": "Shen",
@@ -5750,10 +5750,10 @@
               },
               "champPool": 23,
               "kdaStreak": 7,
-              "avgKda": 4.23,
+              "avgKda": 4.22,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 873,
+              "quadraGames": 874,
               "firstBloods": 52
             },
             "gameRecords": {
@@ -5892,7 +5892,7 @@
               "win": 20,
               "loss": -20,
               "winN": 8,
-              "lossN": 4
+              "lossN": 5
             }
           },
           "links": {
@@ -5901,7 +5901,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-04T08:23:44.791Z",
+          "updatedAt": "2026-10-04T10:45:45.213Z",
           "lpHist": [
             [
               1790720384833,
@@ -5958,9 +5958,76 @@
             [
               1791102217932,
               2113
+            ],
+            [
+              1791110737711,
+              2093
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8003338216",
+              "t": 1791110657701,
+              "dur": 2359,
+              "win": false,
+              "champ": "Diana",
+              "role": "JUNGLE",
+              "lvl": 18,
+              "k": 17,
+              "d": 10,
+              "a": 12,
+              "kp": 59,
+              "cs": 239,
+              "vis": 46,
+              "dmg": 40114,
+              "teamDmg": 190959,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6943,
+              "goldEarned": 19042,
+              "fb": false,
+              "items": [
+                2510,
+                3157,
+                4645,
+                3020,
+                3089,
+                3135,
+                3340
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerSmite"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Volibear",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerSmite"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8907,
+                "maxLeadMin": 24,
+                "maxDef": -2469,
+                "tgd15": 4909,
+                "gd15": 2262
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8003262399",
@@ -7136,69 +7203,14 @@
                 "gd15": -237
               },
               "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7995636990",
-              "t": 1790438828428,
-              "dur": 1754,
-              "win": true,
-              "champ": "Diana",
-              "role": "JUNGLE",
-              "lvl": 18,
-              "k": 7,
-              "d": 4,
-              "a": 11,
-              "kp": 44,
-              "cs": 216,
-              "vis": 33,
-              "dmg": 22990,
-              "teamDmg": 131383,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 5092,
-              "goldEarned": 14041,
-              "fb": false,
-              "items": [
-                3152,
-                2421,
-                3047,
-                1082,
-                6653,
-                4633,
-                3340
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerSmite"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Graves",
-                "spells": [
-                  "SummonerSmite",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 12985,
-                "maxLeadMin": 30,
-                "maxDef": -1150,
-                "tgd15": 245,
-                "gd15": -132
-              },
-              "lp": null
             }
           ],
           "seq": [
+            [
+              1791110657701,
+              0,
+              -20
+            ],
             [
               1791102154834,
               0,
@@ -7692,11 +7704,6 @@
             [
               1788097900413,
               0,
-              null
-            ],
-            [
-              1788090402653,
-              1,
               null
             ]
           ]
