@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8003373631",
+      "t": 1791112902643,
+      "dur": 2540,
+      "win": false,
+      "champ": "Zed",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 9,
+      "d": 17,
+      "a": 4,
+      "kp": 26,
+      "cs": 225,
+      "vis": 45,
+      "dmg": 25893,
+      "teamDmg": 193431,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 16064,
+      "fb": true,
+      "items": [
+        2520,
+        6699,
+        6694,
+        3814,
+        3158,
+        3133,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Rengar",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5483,
+        "maxLeadMin": 24,
+        "maxDef": -7211,
+        "tgd15": 2439,
+        "gd15": -259
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8003339941",
       "t": 1791109930827,
       "dur": 1884,
