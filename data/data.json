@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T08:23:44.794Z",
+  "generatedAt": "2026-10-04T10:32:44.922Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13398,7 +13398,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1842,
+      "score": 1862,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13411,15 +13411,15 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "II",
-            "lp": 42,
-            "wins": 446,
+            "lp": 62,
+            "wins": 447,
             "losses": 447,
-            "winrate": 49.9,
+            "winrate": 50,
             "hotStreak": false
           },
           "stats": {
-            "games": 864,
-            "wins": 437,
+            "games": 865,
+            "wins": 438,
             "losses": 427,
             "winrate": 50.6,
             "avgK": 7.3,
@@ -13432,27 +13432,26 @@
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "L",
-                "count": 2
+                "type": "W",
+                "count": 1
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
-              "L",
-              "L",
               "W",
               "L",
-              "W",
-              "W",
-              "W",
+              "L",
               "W",
               "L",
-              "W"
+              "W",
+              "W",
+              "W",
+              "W",
+              "L"
             ],
             "trend": [
               0,
-              0,
               1,
               0,
               1,
@@ -13470,7 +13469,8 @@
               0,
               1,
               0,
-              0
+              0,
+              1
             ],
             "mainRole": "MIDDLE",
             "last10": {
@@ -13481,9 +13481,9 @@
             },
             "last20": {
               "games": 20,
-              "wins": 11,
-              "losses": 9,
-              "winrate": 55
+              "wins": 12,
+              "losses": 8,
+              "winrate": 60
             },
             "topChamps": [
               {
@@ -13516,10 +13516,10 @@
               },
               {
                 "key": "Graves",
-                "games": 44,
-                "wins": 22,
-                "winrate": 50,
-                "kda": 2.09
+                "games": 45,
+                "wins": 23,
+                "winrate": 51.1,
+                "kda": 2.13
               }
             ],
             "bestChamp": {
@@ -13575,11 +13575,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1791066847481,
+            "lastGameAt": 1791109930827,
             "totals": {
-              "k": 6314,
-              "d": 6041,
-              "a": 6016
+              "k": 6325,
+              "d": 6045,
+              "a": 6025
             },
             "dmgPerMin": 824,
             "avgVision": 24.6,
@@ -13623,10 +13623,10 @@
               },
               {
                 "key": "Graves",
-                "games": 44,
-                "wins": 22,
-                "winrate": 50,
-                "kda": 2.09,
+                "games": 45,
+                "wins": 23,
+                "winrate": 51.1,
+                "kda": 2.13,
                 "csPerMin": 7.3
               },
               {
@@ -13880,10 +13880,10 @@
               },
               {
                 "key": "JUNGLE",
-                "games": 171,
-                "wins": 79,
-                "winrate": 46.2,
-                "kda": 2.27
+                "games": 172,
+                "wins": 80,
+                "winrate": 46.5,
+                "kda": 2.28
               },
               {
                 "key": "TOP",
@@ -13908,9 +13908,9 @@
               }
             ],
             "gold": {
-              "games": 125,
-              "avgGd15": 25,
-              "avgTgd15": 383,
+              "games": 126,
+              "avgGd15": 31,
+              "avgTgd15": 417,
               "throws": 13,
               "comebacks": 9,
               "biggestThrow": {
@@ -14037,11 +14037,11 @@
                 ]
               },
               "JUNGLE": {
-                "games": 171,
-                "wins": 79,
-                "winrate": 46.2,
-                "kda": 2.27,
-                "gd15": -165,
+                "games": 172,
+                "wins": 80,
+                "winrate": 46.5,
+                "kda": 2.28,
+                "gd15": -152,
                 "champs": [
                   {
                     "key": "LeeSin",
@@ -14052,10 +14052,10 @@
                   },
                   {
                     "key": "Graves",
-                    "games": 44,
-                    "wins": 22,
-                    "winrate": 50,
-                    "kda": 2.09
+                    "games": 45,
+                    "wins": 23,
+                    "winrate": 51.1,
+                    "kda": 2.13
                   },
                   {
                     "key": "Zed",
@@ -14219,16 +14219,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 182,
-                "wins": 82,
-                "winrate": 45.1
+                "games": 183,
+                "wins": 83,
+                "winrate": 45.4
               },
               "champPool": 29,
               "kdaStreak": 4,
               "avgKda": 2.93,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 864,
+              "quadraGames": 865,
               "firstBloods": 102
             },
             "gameRecords": {
@@ -14366,7 +14366,7 @@
             "lp": {
               "win": 20,
               "loss": -17,
-              "winN": 14,
+              "winN": 15,
               "lossN": 13
             }
           },
@@ -14376,7 +14376,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-03T22:35:21.902Z",
+          "updatedAt": "2026-10-04T10:32:44.918Z",
           "lpHist": [
             [
               1790720384833,
@@ -14493,9 +14493,76 @@
             [
               1791066916594,
               1842
+            ],
+            [
+              1791109958074,
+              1862
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8003339941",
+              "t": 1791109930827,
+              "dur": 1884,
+              "win": true,
+              "champ": "Graves",
+              "role": "JUNGLE",
+              "lvl": 18,
+              "k": 11,
+              "d": 4,
+              "a": 9,
+              "kp": 45,
+              "cs": 294,
+              "vis": 41,
+              "dmg": 24444,
+              "teamDmg": 115101,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 9019,
+              "goldEarned": 18277,
+              "fb": false,
+              "items": [
+                3031,
+                6676,
+                3008,
+                3036,
+                6673,
+                3072,
+                3364
+              ],
+              "spells": [
+                "SummonerSmite",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+                "perk-images/Styles/7201_Precision.png"
+              ],
+              "opp": {
+                "champ": "LeeSin",
+                "spells": [
+                  "SummonerSmite",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 14080,
+                "maxLeadMin": 32,
+                "maxDef": 0,
+                "tgd15": 4605,
+                "gd15": 700
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8003064854",
@@ -15692,72 +15759,14 @@
                 "d": -20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8000335789",
-              "t": 1790851305809,
-              "dur": 2814,
-              "win": false,
-              "champ": "Fizz",
-              "role": "MIDDLE",
-              "lvl": 18,
-              "k": 19,
-              "d": 15,
-              "a": 15,
-              "kp": 61,
-              "cs": 230,
-              "vis": 38,
-              "dmg": 51095,
-              "teamDmg": 261750,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 1,
-              "towerDmg": 14955,
-              "goldEarned": 21188,
-              "fb": false,
-              "items": [
-                3100,
-                4645,
-                3171,
-                3157,
-                3137,
-                3165,
-                3364
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Katarina",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 11404,
-                "maxLeadMin": 24,
-                "maxDef": -7367,
-                "tgd15": 6264,
-                "gd15": 3707
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791109930827,
+              1,
+              20
+            ],
             [
               1791066847481,
               0,
@@ -16250,11 +16259,6 @@
             ],
             [
               1788618064597,
-              1,
-              null
-            ],
-            [
-              1788615926060,
               1,
               null
             ]
