@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T15:23:49.644Z",
+  "generatedAt": "2026-10-05T15:58:49.688Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -4905,7 +4905,7 @@
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
-      "score": 2160,
+      "score": 2140,
       "accounts": [
         {
           "riotId": "ArNOOBal#EUW",
@@ -4918,17 +4918,17 @@
           "rank": {
             "tier": "EMERALD",
             "division": "III",
-            "lp": 60,
+            "lp": 40,
             "wins": 532,
-            "losses": 523,
+            "losses": 524,
             "winrate": 50.4,
             "hotStreak": false
           },
           "stats": {
-            "games": 889,
+            "games": 890,
             "wins": 446,
-            "losses": 443,
-            "winrate": 50.2,
+            "losses": 444,
+            "winrate": 50.1,
             "avgK": 6.4,
             "avgD": 5.6,
             "avgA": 9.2,
@@ -4939,26 +4939,25 @@
             "avgDurationMin": 29.5,
             "streak": {
               "current": {
-                "type": "W",
+                "type": "L",
                 "count": 1
               },
               "bestWin": 8,
               "worstLoss": 8
             },
             "form": [
-              "W",
-              "L",
-              "L",
-              "L",
               "L",
               "W",
               "L",
+              "L",
+              "L",
+              "L",
               "W",
+              "L",
               "W",
               "W"
             ],
             "trend": [
-              0,
               1,
               1,
               0,
@@ -4977,14 +4976,15 @@
               0,
               0,
               0,
-              1
+              1,
+              0
             ],
             "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 4,
+              "losses": 6,
+              "winrate": 40
             },
             "last20": {
               "games": 20,
@@ -5023,10 +5023,10 @@
               },
               {
                 "key": "Briar",
-                "games": 37,
+                "games": 38,
                 "wins": 19,
-                "winrate": 51.4,
-                "kda": 2.38
+                "winrate": 50,
+                "kda": 2.33
               }
             ],
             "bestChamp": {
@@ -5082,16 +5082,16 @@
               "kda": 0
             },
             "firstGameAt": 1772394469336,
-            "lastGameAt": 1791213812111,
+            "lastGameAt": 1791215846768,
             "totals": {
-              "k": 5717,
-              "d": 4967,
-              "a": 8196
+              "k": 5722,
+              "d": 4977,
+              "a": 8200
             },
             "dmgPerMin": 660,
             "avgVision": 30.6,
             "pentas": 0,
-            "firstBloods": 55,
+            "firstBloods": 56,
             "maxKills": 24,
             "maxDurationMin": 50.1,
             "avgKp": 51,
@@ -5130,10 +5130,10 @@
               },
               {
                 "key": "Briar",
-                "games": 37,
+                "games": 38,
                 "wins": 19,
-                "winrate": 51.4,
-                "kda": 2.38,
+                "winrate": 50,
+                "kda": 2.33,
                 "csPerMin": 6.3
               },
               {
@@ -5412,7 +5412,7 @@
             "roles": [
               {
                 "key": "JUNGLE",
-                "games": 781,
+                "games": 782,
                 "wins": 397,
                 "winrate": 50.8,
                 "kda": 2.9
@@ -5447,9 +5447,9 @@
               }
             ],
             "gold": {
-              "games": 123,
-              "avgGd15": 440,
-              "avgTgd15": 914,
+              "games": 124,
+              "avgGd15": 431,
+              "avgTgd15": 892,
               "throws": 11,
               "comebacks": 3,
               "biggestThrow": {
@@ -5562,11 +5562,11 @@
                 ]
               },
               "JUNGLE": {
-                "games": 781,
+                "games": 782,
                 "wins": 397,
                 "winrate": 50.8,
                 "kda": 2.9,
-                "gd15": 526,
+                "gd15": 515,
                 "champs": [
                   {
                     "key": "Diana",
@@ -5598,10 +5598,10 @@
                   },
                   {
                     "key": "Briar",
-                    "games": 37,
+                    "games": 38,
                     "wins": 19,
-                    "winrate": 51.4,
-                    "kda": 2.38
+                    "winrate": 50,
+                    "kda": 2.33
                   },
                   {
                     "key": "DrMundo",
@@ -5753,8 +5753,8 @@
               "avgKda": 4.21,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 889,
-              "firstBloods": 55
+              "quadraGames": 890,
+              "firstBloods": 56
             },
             "gameRecords": {
               "kills": {
@@ -5892,7 +5892,7 @@
               "win": 20,
               "loss": -20,
               "winN": 17,
-              "lossN": 11
+              "lossN": 12
             }
           },
           "links": {
@@ -5901,7 +5901,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-05T15:23:49.633Z",
+          "updatedAt": "2026-10-05T15:58:49.683Z",
           "lpHist": [
             [
               1790720384833,
@@ -6022,9 +6022,76 @@
             [
               1791213824043,
               2160
+            ],
+            [
+              1791215923650,
+              2140
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8004623784",
+              "t": 1791215846768,
+              "dur": 1432,
+              "win": false,
+              "champ": "Briar",
+              "role": "JUNGLE",
+              "lvl": 12,
+              "k": 5,
+              "d": 10,
+              "a": 4,
+              "kp": 31,
+              "cs": 119,
+              "vis": 12,
+              "dmg": 9273,
+              "teamDmg": 77181,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 8970,
+              "fb": true,
+              "items": [
+                3071,
+                6676,
+                2019,
+                1036,
+                1001,
+                1036,
+                3340
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerSmite"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+                "perk-images/Styles/7200_Domination.png"
+              ],
+              "opp": {
+                "champ": "Karthus",
+                "spells": [
+                  "SummonerExhaust",
+                  "SummonerSmite"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 34,
+                "maxLeadMin": 2,
+                "maxDef": -8173,
+                "tgd15": -1797,
+                "gd15": -581
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8004570393",
@@ -7221,72 +7288,14 @@
                 "d": 21,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8002744159",
-              "t": 1791052856414,
-              "dur": 2008,
-              "win": false,
-              "champ": "Zyra",
-              "role": "JUNGLE",
-              "lvl": 18,
-              "k": 16,
-              "d": 12,
-              "a": 10,
-              "kp": 67,
-              "cs": 231,
-              "vis": 29,
-              "dmg": 34028,
-              "teamDmg": 122194,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 0,
-              "goldEarned": 17173,
-              "fb": false,
-              "items": [
-                3157,
-                4645,
-                3020,
-                1026,
-                3089,
-                6653,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerSmite"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "Kayn",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerSmite"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 1321,
-                "maxLeadMin": 13,
-                "maxDef": -11676,
-                "tgd15": 405,
-                "gd15": 1899
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791215846768,
+              0,
+              -20
+            ],
             [
               1791213812111,
               1,
@@ -7779,11 +7788,6 @@
             ],
             [
               1788637557728,
-              1,
-              null
-            ],
-            [
-              1788634071283,
               1,
               null
             ]
