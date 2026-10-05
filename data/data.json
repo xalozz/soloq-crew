@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T22:01:42.616Z",
+  "generatedAt": "2026-10-05T22:39:39.145Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -10954,7 +10954,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 2046,
+      "score": 2025,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -10967,34 +10967,35 @@
           "rank": {
             "tier": "EMERALD",
             "division": "IV",
-            "lp": 46,
+            "lp": 25,
             "wins": 91,
-            "losses": 94,
-            "winrate": 49.2,
-            "hotStreak": true
+            "losses": 95,
+            "winrate": 48.9,
+            "hotStreak": false
           },
           "stats": {
-            "games": 185,
+            "games": 186,
             "wins": 90,
-            "losses": 95,
-            "winrate": 48.6,
+            "losses": 96,
+            "winrate": 48.4,
             "avgK": 7.2,
             "avgD": 6.1,
             "avgA": 7.3,
-            "kda": 2.4,
+            "kda": 2.39,
             "csPerMin": 8,
-            "visPerMin": 0.68,
-            "dmgShare": 23.3,
+            "visPerMin": 0.67,
+            "dmgShare": 23.4,
             "avgDurationMin": 30.3,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 4
+                "type": "L",
+                "count": 1
               },
               "bestWin": 6,
               "worstLoss": 5
             },
             "form": [
+              "L",
               "W",
               "W",
               "W",
@@ -11003,11 +11004,9 @@
               "W",
               "L",
               "L",
-              "L",
-              "W"
+              "L"
             ],
             "trend": [
-              1,
               0,
               1,
               0,
@@ -11026,20 +11025,21 @@
               1,
               1,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "BOTTOM",
             "last10": {
               "games": 10,
-              "wins": 6,
-              "losses": 4,
-              "winrate": 60
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
-              "wins": 13,
-              "losses": 7,
-              "winrate": 65
+              "wins": 12,
+              "losses": 8,
+              "winrate": 60
             },
             "topChamps": [
               {
@@ -11101,9 +11101,9 @@
             },
             "worstRole": {
               "key": "TOP",
-              "games": 6,
+              "games": 7,
               "wins": 1,
-              "winrate": 16.7,
+              "winrate": 14.3,
               "kda": 1
             },
             "bestGame": {
@@ -11131,13 +11131,13 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1791237543325,
+            "lastGameAt": 1791239872167,
             "totals": {
-              "k": 1337,
-              "d": 1121,
-              "a": 1353
+              "k": 1342,
+              "d": 1129,
+              "a": 1356
             },
-            "dmgPerMin": 900,
+            "dmgPerMin": 905,
             "avgVision": 20.5,
             "pentas": 1,
             "firstBloods": 29,
@@ -11211,10 +11211,10 @@
               },
               {
                 "key": "Vayne",
-                "games": 7,
+                "games": 8,
                 "wins": 2,
-                "winrate": 28.6,
-                "kda": 1.24,
+                "winrate": 25,
+                "kda": 1.21,
                 "csPerMin": 7.3
               },
               {
@@ -11316,9 +11316,9 @@
               },
               {
                 "key": "TOP",
-                "games": 6,
+                "games": 7,
                 "wins": 1,
-                "winrate": 16.7,
+                "winrate": 14.3,
                 "kda": 1
               },
               {
@@ -11344,9 +11344,9 @@
               }
             ],
             "gold": {
-              "games": 119,
-              "avgGd15": 267,
-              "avgTgd15": 221,
+              "games": 120,
+              "avgGd15": 260,
+              "avgTgd15": 206,
               "throws": 17,
               "comebacks": 10,
               "biggestThrow": {
@@ -11422,17 +11422,17 @@
             },
             "byRole": {
               "TOP": {
-                "games": 6,
+                "games": 7,
                 "wins": 1,
-                "winrate": 16.7,
+                "winrate": 14.3,
                 "kda": 1,
-                "gd15": -953,
+                "gd15": -862,
                 "champs": [
                   {
                     "key": "Vayne",
-                    "games": 6,
+                    "games": 7,
                     "wins": 1,
-                    "winrate": 16.7,
+                    "winrate": 14.3,
                     "kda": 1
                   }
                 ]
@@ -11578,16 +11578,16 @@
               },
               "autofill": {
                 "lane": "BOTTOM",
-                "games": 15,
+                "games": 16,
                 "wins": 5,
-                "winrate": 33.3
+                "winrate": 31.3
               },
               "champPool": 14,
               "kdaStreak": 3,
-              "avgKda": 3.61,
+              "avgKda": 3.59,
               "pentas": 1,
               "quadras": 3,
-              "quadraGames": 185,
+              "quadraGames": 186,
               "firstBloods": 29
             },
             "gameRecords": {
@@ -11726,7 +11726,7 @@
               "win": 19,
               "loss": -18,
               "winN": 15,
-              "lossN": 7
+              "lossN": 8
             }
           },
           "links": {
@@ -11735,7 +11735,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-05T22:01:36.094Z",
+          "updatedAt": "2026-10-05T22:39:39.142Z",
           "lpHist": [
             [
               1790720384833,
@@ -11832,9 +11832,76 @@
             [
               1791237574098,
               2046
+            ],
+            [
+              1791239973573,
+              2025
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005111524",
+              "t": 1791239872167,
+              "dur": 1935,
+              "win": false,
+              "champ": "Vayne",
+              "role": "TOP",
+              "lvl": 18,
+              "k": 5,
+              "d": 8,
+              "a": 3,
+              "kp": 31,
+              "cs": 251,
+              "vis": 11,
+              "dmg": 58273,
+              "teamDmg": 153095,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 10973,
+              "goldEarned": 14240,
+              "fb": false,
+              "items": [
+                3302,
+                3006,
+                3153,
+                3123,
+                3124,
+                1031,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerTeleport"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "DrMundo",
+                "spells": [
+                  "SummonerBarrier",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -9713,
+                "tgd15": -1593,
+                "gd15": -588
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005060270",
@@ -13031,72 +13098,14 @@
                 "d": -22,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7999636785",
-              "t": 1790783566583,
-              "dur": 1699,
-              "win": true,
-              "champ": "Ezreal",
-              "role": "BOTTOM",
-              "lvl": 15,
-              "k": 8,
-              "d": 5,
-              "a": 7,
-              "kp": 35,
-              "cs": 204,
-              "vis": 9,
-              "dmg": 37257,
-              "teamDmg": 164121,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 8810,
-              "goldEarned": 12199,
-              "fb": true,
-              "items": [
-                1086,
-                3078,
-                3042,
-                6694,
-                1037,
-                2055,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBarrier"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Caitlyn",
-                "spells": [
-                  "SummonerBarrier",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 7524,
-                "maxLeadMin": 29,
-                "maxDef": -1040,
-                "tgd15": 1805,
-                "gd15": 683
-              },
-              "lp": {
-                "d": 18,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791239872167,
+              0,
+              -21
+            ],
             [
               1791237543325,
               1,
@@ -13589,11 +13598,6 @@
             ],
             [
               1786961695612,
-              1,
-              null
-            ],
-            [
-              1786959845844,
               1,
               null
             ]
