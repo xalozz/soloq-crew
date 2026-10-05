@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T16:39:55.624Z",
+  "generatedAt": "2026-10-05T17:00:50.442Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -16445,7 +16445,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1200,
+      "score": 1218,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16458,34 +16458,35 @@
           "rank": {
             "tier": "GOLD",
             "division": "IV",
-            "lp": 0,
-            "wins": 161,
+            "lp": 18,
+            "wins": 162,
             "losses": 171,
-            "winrate": 48.5,
+            "winrate": 48.6,
             "hotStreak": false
           },
           "stats": {
-            "games": 332,
-            "wins": 161,
+            "games": 333,
+            "wins": 162,
             "losses": 171,
-            "winrate": 48.5,
+            "winrate": 48.6,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
-            "kda": 2.07,
+            "kda": 2.08,
             "csPerMin": 6,
             "visPerMin": 1.02,
             "dmgShare": 21.8,
             "avgDurationMin": 31,
             "streak": {
               "current": {
-                "type": "L",
+                "type": "W",
                 "count": 1
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
+              "W",
               "L",
               "W",
               "W",
@@ -16493,7 +16494,6 @@
               "L",
               "L",
               "W",
-              "L",
               "L",
               "L"
             ],
@@ -16504,7 +16504,6 @@
               1,
               1,
               1,
-              1,
               0,
               0,
               0,
@@ -16517,14 +16516,15 @@
               1,
               1,
               1,
-              0
+              0,
+              1
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
@@ -16556,10 +16556,10 @@
               },
               {
                 "key": "Syndra",
-                "games": 25,
-                "wins": 14,
-                "winrate": 56,
-                "kda": 2.27
+                "games": 26,
+                "wins": 15,
+                "winrate": 57.7,
+                "kda": 2.31
               },
               {
                 "key": "Brand",
@@ -16592,10 +16592,10 @@
             },
             "worstRole": {
               "key": "MIDDLE",
-              "games": 139,
-              "wins": 62,
-              "winrate": 44.6,
-              "kda": 2.19
+              "games": 140,
+              "wins": 63,
+              "winrate": 45,
+              "kda": 2.2
             },
             "bestGame": {
               "id": "EUW1_7758951875",
@@ -16622,11 +16622,11 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791110854549,
+            "lastGameAt": 1791219619264,
             "totals": {
-              "k": 1691,
-              "d": 2065,
-              "a": 2592
+              "k": 1700,
+              "d": 2070,
+              "a": 2601
             },
             "dmgPerMin": 856,
             "avgVision": 31.5,
@@ -16662,10 +16662,10 @@
               },
               {
                 "key": "Syndra",
-                "games": 25,
-                "wins": 14,
-                "winrate": 56,
-                "kda": 2.27,
+                "games": 26,
+                "wins": 15,
+                "winrate": 57.7,
+                "kda": 2.31,
                 "csPerMin": 6.5
               },
               {
@@ -16952,10 +16952,10 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 139,
-                "wins": 62,
-                "winrate": 44.6,
-                "kda": 2.19
+                "games": 140,
+                "wins": 63,
+                "winrate": 45,
+                "kda": 2.2
               },
               {
                 "key": "TOP",
@@ -16980,9 +16980,9 @@
               }
             ],
             "gold": {
-              "games": 117,
-              "avgGd15": 183,
-              "avgTgd15": 87,
+              "games": 118,
+              "avgGd15": 189,
+              "avgTgd15": 92,
               "throws": 13,
               "comebacks": 11,
               "biggestThrow": {
@@ -17109,11 +17109,11 @@
                 ]
               },
               "MIDDLE": {
-                "games": 139,
-                "wins": 62,
-                "winrate": 44.6,
-                "kda": 2.19,
-                "gd15": -234,
+                "games": 140,
+                "wins": 63,
+                "winrate": 45,
+                "kda": 2.2,
+                "gd15": -203,
                 "champs": [
                   {
                     "key": "Malzahar",
@@ -17124,10 +17124,10 @@
                   },
                   {
                     "key": "Syndra",
-                    "games": 23,
-                    "wins": 12,
-                    "winrate": 52.2,
-                    "kda": 2.13
+                    "games": 24,
+                    "wins": 13,
+                    "winrate": 54.2,
+                    "kda": 2.18
                   },
                   {
                     "key": "Ahri",
@@ -17263,7 +17263,7 @@
               "avgKda": 2.74,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 332,
+              "quadraGames": 333,
               "firstBloods": 17
             },
             "gameRecords": {
@@ -17401,7 +17401,7 @@
             "lp": {
               "win": 21,
               "loss": -16,
-              "winN": 11,
+              "winN": 12,
               "lossN": 9
             }
           },
@@ -17411,7 +17411,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-05T15:21:45.357Z",
+          "updatedAt": "2026-10-05T17:00:50.438Z",
           "lpHist": [
             [
               1790720384833,
@@ -17504,9 +17504,76 @@
             [
               1791110921985,
               1200
+            ],
+            [
+              1791219644840,
+              1218
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8004679192",
+              "t": 1791219619264,
+              "dur": 1630,
+              "win": true,
+              "champ": "Syndra",
+              "role": "MIDDLE",
+              "lvl": 16,
+              "k": 9,
+              "d": 5,
+              "a": 9,
+              "kp": 40,
+              "cs": 165,
+              "vis": 15,
+              "dmg": 28092,
+              "teamDmg": 112435,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3545,
+              "goldEarned": 11707,
+              "fb": false,
+              "items": [
+                4645,
+                2503,
+                6655,
+                2031,
+                3175,
+                0,
+                3340
+              ],
+              "spells": [
+                "SummonerTeleport",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Pantheon",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 13157,
+                "maxLeadMin": 28,
+                "maxDef": -596,
+                "tgd15": 667,
+                "gd15": 835
+              },
+              "lp": {
+                "d": 18,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8003359992",
@@ -18703,72 +18770,14 @@
                 "d": 19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7999346041",
-              "t": 1790754836313,
-              "dur": 2723,
-              "win": true,
-              "champ": "Swain",
-              "role": "TOP",
-              "lvl": 20,
-              "k": 13,
-              "d": 11,
-              "a": 12,
-              "kp": 41,
-              "cs": 244,
-              "vis": 29,
-              "dmg": 48923,
-              "teamDmg": 232857,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4481,
-              "goldEarned": 17113,
-              "fb": false,
-              "items": [
-                3065,
-                4633,
-                6657,
-                3116,
-                3118,
-                3111,
-                3364
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "Teemo",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 4914,
-                "maxLeadMin": 19,
-                "maxDef": -3099,
-                "tgd15": 3984,
-                "gd15": 1072
-              },
-              "lp": {
-                "d": 19,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791219619264,
+              1,
+              18
+            ],
             [
               1791110854549,
               0,
@@ -19262,11 +19271,6 @@
             [
               1785077152858,
               1,
-              null
-            ],
-            [
-              1784310006756,
-              0,
               null
             ]
           ]
