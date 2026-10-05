@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T21:59:39.704Z",
+  "generatedAt": "2026-10-05T22:01:42.616Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -11735,7 +11735,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-05T21:59:39.701Z",
+          "updatedAt": "2026-10-05T22:01:36.094Z",
           "lpHist": [
             [
               1790720384833,
@@ -16493,7 +16493,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1175,
+      "score": 1153,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16506,29 +16506,29 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 75,
+            "lp": 53,
             "wins": 162,
-            "losses": 173,
-            "winrate": 48.4,
+            "losses": 174,
+            "winrate": 48.2,
             "hotStreak": false
           },
           "stats": {
-            "games": 335,
+            "games": 336,
             "wins": 162,
-            "losses": 173,
-            "winrate": 48.4,
+            "losses": 174,
+            "winrate": 48.2,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
             "kda": 2.08,
             "csPerMin": 6,
-            "visPerMin": 1.01,
+            "visPerMin": 1.02,
             "dmgShare": 21.8,
             "avgDurationMin": 31,
             "streak": {
               "current": {
                 "type": "L",
-                "count": 2
+                "count": 3
               },
               "bestWin": 9,
               "worstLoss": 6
@@ -16536,20 +16536,19 @@
             "form": [
               "L",
               "L",
+              "L",
               "W",
               "L",
               "W",
               "W",
               "W",
               "L",
-              "L",
-              "W"
+              "L"
             ],
             "trend": [
               1,
               1,
               1,
-              1,
               0,
               0,
               0,
@@ -16564,21 +16563,22 @@
               1,
               0,
               1,
+              0,
               0,
               0
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 4,
+              "losses": 6,
+              "winrate": 40
             },
             "last20": {
               "games": 20,
-              "wins": 9,
-              "losses": 11,
-              "winrate": 45
+              "wins": 8,
+              "losses": 12,
+              "winrate": 40
             },
             "topChamps": [
               {
@@ -16670,14 +16670,14 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791234512867,
+            "lastGameAt": 1791237619776,
             "totals": {
-              "k": 1704,
-              "d": 2084,
-              "a": 2627
+              "k": 1708,
+              "d": 2092,
+              "a": 2633
             },
-            "dmgPerMin": 856,
-            "avgVision": 31.4,
+            "dmgPerMin": 855,
+            "avgVision": 31.5,
             "pentas": 0,
             "firstBloods": 18,
             "maxKills": 19,
@@ -16742,10 +16742,10 @@
               },
               {
                 "key": "Neeko",
-                "games": 12,
+                "games": 13,
                 "wins": 6,
-                "winrate": 50,
-                "kda": 1.86,
+                "winrate": 46.2,
+                "kda": 1.81,
                 "csPerMin": 2.3
               },
               {
@@ -17014,10 +17014,10 @@
               },
               {
                 "key": "UTILITY",
-                "games": 50,
+                "games": 51,
                 "wins": 24,
-                "winrate": 48,
-                "kda": 2.02
+                "winrate": 47.1,
+                "kda": 2
               },
               {
                 "key": "BOTTOM",
@@ -17028,9 +17028,9 @@
               }
             ],
             "gold": {
-              "games": 120,
-              "avgGd15": 172,
-              "avgTgd15": 96,
+              "games": 121,
+              "avgGd15": 176,
+              "avgTgd15": 81,
               "throws": 14,
               "comebacks": 11,
               "biggestThrow": {
@@ -17238,12 +17238,19 @@
                 ]
               },
               "UTILITY": {
-                "games": 50,
+                "games": 51,
                 "wins": 24,
-                "winrate": 48,
-                "kda": 2.02,
-                "gd15": -155,
+                "winrate": 47.1,
+                "kda": 2,
+                "gd15": -80,
                 "champs": [
+                  {
+                    "key": "Neeko",
+                    "games": 12,
+                    "wins": 5,
+                    "winrate": 41.7,
+                    "kda": 1.77
+                  },
                   {
                     "key": "Brand",
                     "games": 12,
@@ -17257,13 +17264,6 @@
                     "wins": 8,
                     "winrate": 66.7,
                     "kda": 2.35
-                  },
-                  {
-                    "key": "Neeko",
-                    "games": 11,
-                    "wins": 5,
-                    "winrate": 45.5,
-                    "kda": 1.82
                   },
                   {
                     "key": "Soraka",
@@ -17302,16 +17302,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 59,
+                "games": 60,
                 "wins": 30,
-                "winrate": 50.8
+                "winrate": 50
               },
               "champPool": 25,
               "kdaStreak": 3,
               "avgKda": 2.74,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 335,
+              "quadraGames": 336,
               "firstBloods": 18
             },
             "gameRecords": {
@@ -17450,7 +17450,7 @@
               "win": 21,
               "loss": -17,
               "winN": 12,
-              "lossN": 11
+              "lossN": 12
             }
           },
           "links": {
@@ -17459,7 +17459,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-05T21:12:35.961Z",
+          "updatedAt": "2026-10-05T22:01:42.614Z",
           "lpHist": [
             [
               1790720384833,
@@ -17564,9 +17564,76 @@
             [
               1791234573314,
               1175
+            ],
+            [
+              1791237697167,
+              1153
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005069144",
+              "t": 1791237619776,
+              "dur": 1609,
+              "win": false,
+              "champ": "Neeko",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 4,
+              "d": 8,
+              "a": 6,
+              "kp": 56,
+              "cs": 68,
+              "vis": 55,
+              "dmg": 15694,
+              "teamDmg": 69476,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 496,
+              "goldEarned": 8912,
+              "fb": false,
+              "items": [
+                3020,
+                3871,
+                2031,
+                3152,
+                6655,
+                3145,
+                3364
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                "perk-images/Styles/7200_Domination.png"
+              ],
+              "opp": {
+                "champ": "Rakan",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 976,
+                "maxLeadMin": 11,
+                "maxDef": -14198,
+                "tgd15": -1684,
+                "gd15": 741
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005010528",
@@ -18763,72 +18830,14 @@
                 "d": 20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7999709021",
-              "t": 1790787666972,
-              "dur": 1249,
-              "win": true,
-              "champ": "Heimerdinger",
-              "role": "TOP",
-              "lvl": 15,
-              "k": 4,
-              "d": 2,
-              "a": 0,
-              "kp": 19,
-              "cs": 174,
-              "vis": 19,
-              "dmg": 18150,
-              "teamDmg": 59354,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6496,
-              "goldEarned": 8788,
-              "fb": false,
-              "items": [
-                3020,
-                2503,
-                3089,
-                0,
-                0,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerExhaust",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "DrMundo",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHaste"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 6786,
-                "maxLeadMin": 21,
-                "maxDef": 0,
-                "tgd15": 3277,
-                "gd15": 1520
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791237619776,
+              0,
+              -22
+            ],
             [
               1791234512867,
               0,
@@ -19321,11 +19330,6 @@
             ],
             [
               1785346453722,
-              0,
-              null
-            ],
-            [
-              1785081480021,
               0,
               null
             ]
