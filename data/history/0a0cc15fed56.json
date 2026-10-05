@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8004443036",
+      "t": 1791201352783,
+      "dur": 1622,
+      "win": false,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 14,
+      "k": 6,
+      "d": 5,
+      "a": 3,
+      "kp": 69,
+      "cs": 276,
+      "vis": 13,
+      "dmg": 20444,
+      "teamDmg": 71267,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1066,
+      "goldEarned": 14386,
+      "fb": true,
+      "items": [
+        3031,
+        2523,
+        3085,
+        3033,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Caitlyn",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 279,
+        "maxLeadMin": 7,
+        "maxDef": -13444,
+        "tgd15": -6488,
+        "gd15": 640
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8003907365",
       "t": 1791139744393,
       "dur": 920,
