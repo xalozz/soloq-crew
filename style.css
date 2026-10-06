@@ -277,7 +277,7 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .throw-tag, .comeback-tag { font-size: 9px; font-weight: 900; letter-spacing: .06em; padding: 1px 6px; border-radius: 4px; }
 .throw-tag { background: rgba(242, 101, 126, .18); color: var(--loss); }
 .comeback-tag { background: rgba(51, 214, 154, .18); color: var(--win); }
-.ico.item.empty { background: var(--panel-3); opacity: .5; }
+.ico.item.empty { background: var(--panel-3); opacity: .5; padding: 0; margin: 0; }
 .m-lp { font-size: 15px; font-weight: 900; text-align: right; display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2; }
 .m-lp small { font-size: 10px; font-weight: 700; color: var(--muted); }
 
@@ -301,8 +301,8 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .md-bans small { font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 3px; }
 .md-bans .champ { filter: grayscale(1); }
 .md-p {
-  display: grid; grid-template-columns: auto minmax(0, 1fr) 40px 44px auto; align-items: center; gap: 8px;
-  padding: 5px 8px; border-radius: 8px; background: var(--panel-3); border: 1px solid transparent;
+  display: grid; grid-template-columns: 70px minmax(0, 1fr) 36px 44px 170px; align-items: center; gap: 8px;
+  padding: 5px 8px; min-height: 50px; box-sizing: border-box; border-radius: 8px; background: var(--panel-3); border: 1px solid transparent;
 }
 .md-p.friend { border-color: rgba(255, 255, 255, .15); }
 .md-p.me { border-color: var(--accent); background: linear-gradient(90deg, rgba(214, 255, 61, .12), var(--panel-3)); }
@@ -318,7 +318,8 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .md-num { display: flex; flex-direction: column; align-items: center; line-height: 1.1; }
 .md-num b { font-size: 12px; }
 .md-num small { font-size: 9px; color: var(--muted); }
-.md-items { gap: 2px; }
+.md-items { gap: 2px; flex-wrap: nowrap; justify-content: flex-end; }
+.md-items .ico { width: 21px !important; height: 21px !important; flex: none; }
 .md-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 12px; }
 .md-foot a { font-size: 12px; font-weight: 700; padding: 6px 12px; border: 1px solid var(--line); border-radius: 10px; color: #cfcfd6; }
 .md-foot a:hover { border-color: var(--accent); color: var(--accent); }
