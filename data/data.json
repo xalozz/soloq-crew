@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:18:30.366Z",
+  "generatedAt": "2026-10-06T19:19:28.772Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13651,7 +13651,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1862,
+      "score": 1882,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13664,47 +13664,46 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "II",
-            "lp": 62,
-            "wins": 450,
+            "lp": 82,
+            "wins": 451,
             "losses": 450,
-            "winrate": 50,
+            "winrate": 50.1,
             "hotStreak": false
           },
           "stats": {
-            "games": 871,
-            "wins": 441,
+            "games": 872,
+            "wins": 442,
             "losses": 430,
-            "winrate": 50.6,
+            "winrate": 50.7,
             "avgK": 7.3,
             "avgD": 7,
             "avgA": 7,
-            "kda": 2.04,
+            "kda": 2.03,
             "csPerMin": 6.7,
             "visPerMin": 0.8,
             "dmgShare": 20.7,
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "L",
+                "type": "W",
                 "count": 1
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
-              "L",
-              "W",
               "W",
               "L",
               "W",
+              "W",
               "L",
               "W",
               "L",
+              "W",
               "L",
-              "W"
+              "L"
             ],
             "trend": [
-              0,
               1,
               1,
               1,
@@ -13723,7 +13722,8 @@
               0,
               1,
               1,
-              0
+              0,
+              1
             ],
             "mainRole": "MIDDLE",
             "last10": {
@@ -13734,16 +13734,16 @@
             },
             "last20": {
               "games": 20,
-              "wins": 12,
-              "losses": 8,
-              "winrate": 60
+              "wins": 13,
+              "losses": 7,
+              "winrate": 65
             },
             "topChamps": [
               {
                 "key": "Fizz",
-                "games": 226,
-                "wins": 126,
-                "winrate": 55.8,
+                "games": 227,
+                "wins": 127,
+                "winrate": 55.9,
                 "kda": 2.21
               },
               {
@@ -13828,11 +13828,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1791305987672,
+            "lastGameAt": 1791314257560,
             "totals": {
-              "k": 6354,
-              "d": 6098,
-              "a": 6057
+              "k": 6365,
+              "d": 6108,
+              "a": 6064
             },
             "dmgPerMin": 823,
             "avgVision": 24.6,
@@ -13844,9 +13844,9 @@
             "champs": [
               {
                 "key": "Fizz",
-                "games": 226,
-                "wins": 126,
-                "winrate": 55.8,
+                "games": 227,
+                "wins": 127,
+                "winrate": 55.9,
                 "kda": 2.21,
                 "csPerMin": 6.5
               },
@@ -14126,10 +14126,10 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 653,
-                "wins": 340,
+                "games": 654,
+                "wins": 341,
                 "winrate": 52.1,
-                "kda": 2.02
+                "kda": 2.01
               },
               {
                 "key": "JUNGLE",
@@ -14161,8 +14161,8 @@
               }
             ],
             "gold": {
-              "games": 132,
-              "avgGd15": 7,
+              "games": 133,
+              "avgGd15": 3,
               "avgTgd15": 332,
               "throws": 14,
               "comebacks": 11,
@@ -14341,17 +14341,17 @@
                 ]
               },
               "MIDDLE": {
-                "games": 653,
-                "wins": 340,
+                "games": 654,
+                "wins": 341,
                 "winrate": 52.1,
-                "kda": 2.02,
-                "gd15": 341,
+                "kda": 2.01,
+                "gd15": 327,
                 "champs": [
                   {
                     "key": "Fizz",
-                    "games": 226,
-                    "wins": 126,
-                    "winrate": 55.8,
+                    "games": 227,
+                    "wins": 127,
+                    "winrate": 55.9,
                     "kda": 2.21
                   },
                   {
@@ -14462,8 +14462,8 @@
             "awards": {
               "oneTrick": {
                 "champ": "Fizz",
-                "wins": 126,
-                "games": 226
+                "wins": 127,
+                "games": 227
               },
               "mainChar": {
                 "champ": "Malzahar",
@@ -14481,7 +14481,7 @@
               "avgKda": 2.92,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 871,
+              "quadraGames": 872,
               "firstBloods": 103
             },
             "gameRecords": {
@@ -14619,7 +14619,7 @@
             "lp": {
               "win": 20,
               "loss": -17,
-              "winN": 18,
+              "winN": 19,
               "lossN": 16
             }
           },
@@ -14629,7 +14629,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-06T17:00:17.292Z",
+          "updatedAt": "2026-10-06T19:19:28.767Z",
           "lpHist": [
             [
               1790720384833,
@@ -14774,9 +14774,76 @@
             [
               1791306011712,
               1862
+            ],
+            [
+              1791314363479,
+              1882
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005730062",
+              "t": 1791314257560,
+              "dur": 2118,
+              "win": true,
+              "champ": "Fizz",
+              "role": "MIDDLE",
+              "lvl": 18,
+              "k": 11,
+              "d": 10,
+              "a": 7,
+              "kp": 41,
+              "cs": 179,
+              "vis": 18,
+              "dmg": 27987,
+              "teamDmg": 135250,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 13076,
+              "goldEarned": 15277,
+              "fb": false,
+              "items": [
+                4646,
+                3100,
+                3171,
+                3157,
+                4645,
+                1052,
+                3364
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Syndra",
+                "spells": [
+                  "SummonerTeleport",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 13195,
+                "maxLeadMin": 36,
+                "maxDef": -58,
+                "tgd15": 339,
+                "gd15": -491
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005585535",
@@ -15973,72 +16040,14 @@
                 "d": 19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8001361218",
-              "t": 1790946583363,
-              "dur": 1952,
-              "win": false,
-              "champ": "Fizz",
-              "role": "MIDDLE",
-              "lvl": 16,
-              "k": 9,
-              "d": 8,
-              "a": 7,
-              "kp": 39,
-              "cs": 178,
-              "vis": 20,
-              "dmg": 21217,
-              "teamDmg": 128972,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1901,
-              "goldEarned": 12228,
-              "fb": false,
-              "items": [
-                4645,
-                3100,
-                3171,
-                3157,
-                4630,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Galio",
-                "spells": [
-                  "SummonerTeleport",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 2980,
-                "maxLeadMin": 30,
-                "maxDef": -5553,
-                "tgd15": -2982,
-                "gd15": -207
-              },
-              "lp": {
-                "d": 0,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791314257560,
+              1,
+              20
+            ],
             [
               1791305987672,
               0,
@@ -16531,11 +16540,6 @@
             ],
             [
               1788638938816,
-              0,
-              null
-            ],
-            [
-              1788633356112,
               0,
               null
             ]
