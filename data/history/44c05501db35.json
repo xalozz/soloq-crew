@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8005585535",
+      "t": 1791305987672,
+      "dur": 1609,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 2,
+      "d": 8,
+      "a": 0,
+      "kp": 18,
+      "cs": 238,
+      "vis": 16,
+      "dmg": 13513,
+      "teamDmg": 72304,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8287,
+      "goldEarned": 9908,
+      "fb": false,
+      "items": [
+        1056,
+        3116,
+        3118,
+        3175,
+        2508,
+        3147,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Zed",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1116,
+        "maxLeadMin": 7,
+        "maxDef": -15486,
+        "tgd15": -2129,
+        "gd15": -533
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8005543722",
       "t": 1791304100998,
       "dur": 2100,

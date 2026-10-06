@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T16:55:13.110Z",
+  "generatedAt": "2026-10-06T17:00:17.295Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13628,7 +13628,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1882,
+      "score": 1862,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13641,17 +13641,17 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "II",
-            "lp": 82,
+            "lp": 62,
             "wins": 450,
-            "losses": 449,
-            "winrate": 50.1,
+            "losses": 450,
+            "winrate": 50,
             "hotStreak": false
           },
           "stats": {
-            "games": 870,
+            "games": 871,
             "wins": 441,
-            "losses": 429,
-            "winrate": 50.7,
+            "losses": 430,
+            "winrate": 50.6,
             "avgK": 7.3,
             "avgD": 7,
             "avgA": 7,
@@ -13662,13 +13662,14 @@
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 2
+                "type": "L",
+                "count": 1
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
+              "L",
               "W",
               "W",
               "L",
@@ -13677,12 +13678,10 @@
               "W",
               "L",
               "L",
-              "W",
-              "L"
+              "W"
             ],
             "trend": [
               0,
-              0,
               1,
               1,
               1,
@@ -13700,7 +13699,8 @@
               1,
               0,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "MIDDLE",
             "last10": {
@@ -13732,10 +13732,10 @@
               },
               {
                 "key": "Malzahar",
-                "games": 118,
+                "games": 119,
                 "wins": 69,
-                "winrate": 58.5,
-                "kda": 2.13
+                "winrate": 58,
+                "kda": 2.11
               },
               {
                 "key": "LeeSin",
@@ -13805,10 +13805,10 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1791304100998,
+            "lastGameAt": 1791305987672,
             "totals": {
-              "k": 6352,
-              "d": 6090,
+              "k": 6354,
+              "d": 6098,
               "a": 6057
             },
             "dmgPerMin": 823,
@@ -13837,10 +13837,10 @@
               },
               {
                 "key": "Malzahar",
-                "games": 118,
+                "games": 119,
                 "wins": 69,
-                "winrate": 58.5,
-                "kda": 2.13,
+                "winrate": 58,
+                "kda": 2.11,
                 "csPerMin": 8.4
               },
               {
@@ -14103,7 +14103,7 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 652,
+                "games": 653,
                 "wins": 340,
                 "winrate": 52.1,
                 "kda": 2.02
@@ -14138,9 +14138,9 @@
               }
             ],
             "gold": {
-              "games": 131,
-              "avgGd15": 11,
-              "avgTgd15": 351,
+              "games": 132,
+              "avgGd15": 7,
+              "avgTgd15": 332,
               "throws": 14,
               "comebacks": 11,
               "biggestThrow": {
@@ -14318,11 +14318,11 @@
                 ]
               },
               "MIDDLE": {
-                "games": 652,
+                "games": 653,
                 "wins": 340,
                 "winrate": 52.1,
                 "kda": 2.02,
-                "gd15": 357,
+                "gd15": 341,
                 "champs": [
                   {
                     "key": "Fizz",
@@ -14333,10 +14333,10 @@
                   },
                   {
                     "key": "Malzahar",
-                    "games": 117,
+                    "games": 118,
                     "wins": 69,
-                    "winrate": 59,
-                    "kda": 2.14
+                    "winrate": 58.5,
+                    "kda": 2.12
                   },
                   {
                     "key": "Zed",
@@ -14444,8 +14444,8 @@
               },
               "mainChar": {
                 "champ": "Malzahar",
-                "winrate": 58.5,
-                "games": 118
+                "winrate": 58,
+                "games": 119
               },
               "autofill": {
                 "lane": "SOLO",
@@ -14455,10 +14455,10 @@
               },
               "champPool": 29,
               "kdaStreak": 4,
-              "avgKda": 2.93,
+              "avgKda": 2.92,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 870,
+              "quadraGames": 871,
               "firstBloods": 103
             },
             "gameRecords": {
@@ -14597,7 +14597,7 @@
               "win": 20,
               "loss": -17,
               "winN": 18,
-              "lossN": 15
+              "lossN": 16
             }
           },
           "links": {
@@ -14606,7 +14606,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-06T16:29:13.797Z",
+          "updatedAt": "2026-10-06T17:00:17.292Z",
           "lpHist": [
             [
               1790720384833,
@@ -14747,9 +14747,76 @@
             [
               1791304148177,
               1882
+            ],
+            [
+              1791306011712,
+              1862
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005585535",
+              "t": 1791305987672,
+              "dur": 1609,
+              "win": false,
+              "champ": "Malzahar",
+              "role": "MIDDLE",
+              "lvl": 15,
+              "k": 2,
+              "d": 8,
+              "a": 0,
+              "kp": 18,
+              "cs": 238,
+              "vis": 16,
+              "dmg": 13513,
+              "teamDmg": 72304,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8287,
+              "goldEarned": 9908,
+              "fb": false,
+              "items": [
+                1056,
+                3116,
+                3118,
+                3175,
+                2508,
+                3147,
+                3363
+              ],
+              "spells": [
+                "SummonerTeleport",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Zed",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1116,
+                "maxLeadMin": 7,
+                "maxDef": -15486,
+                "tgd15": -2129,
+                "gd15": -533
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005543722",
@@ -15946,72 +16013,14 @@
                 "d": 0,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8001348386",
-              "t": 1790944304043,
-              "dur": 396,
-              "win": false,
-              "champ": "Rumble",
-              "role": "MIDDLE",
-              "lvl": 7,
-              "k": 1,
-              "d": 0,
-              "a": 0,
-              "kp": 50,
-              "cs": 45,
-              "vis": 2,
-              "dmg": 1236,
-              "teamDmg": 5987,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1373,
-              "goldEarned": 2556,
-              "fb": true,
-              "items": [
-                1056,
-                1052,
-                1028,
-                3020,
-                0,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                "perk-images/Styles/7200_Domination.png"
-              ],
-              "opp": {
-                "champ": "Yasuo",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 490,
-                "maxLeadMin": 3,
-                "maxDef": -1494,
-                "tgd15": null,
-                "gd15": null
-              },
-              "lp": {
-                "d": 0,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791305987672,
+              0,
+              -20
+            ],
             [
               1791304100998,
               1,
@@ -16504,11 +16513,6 @@
             ],
             [
               1788633356112,
-              0,
-              null
-            ],
-            [
-              1788631169359,
               0,
               null
             ]
@@ -17486,7 +17490,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-06T16:55:13.107Z",
+          "updatedAt": "2026-10-06T17:00:10.508Z",
           "lpHist": [
             [
               1790720384833,
