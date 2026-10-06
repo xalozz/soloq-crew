@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T21:36:28.735Z",
+  "generatedAt": "2026-10-06T22:15:29.039Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -10980,7 +10980,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 2120,
+      "score": 2099,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -10992,35 +10992,36 @@
           "profileIconId": 1109,
           "rank": {
             "tier": "EMERALD",
-            "division": "III",
-            "lp": 20,
+            "division": "IV",
+            "lp": 99,
             "wins": 96,
-            "losses": 95,
-            "winrate": 50.3,
-            "hotStreak": true
+            "losses": 96,
+            "winrate": 50,
+            "hotStreak": false
           },
           "stats": {
-            "games": 191,
+            "games": 192,
             "wins": 95,
-            "losses": 96,
-            "winrate": 49.7,
+            "losses": 97,
+            "winrate": 49.5,
             "avgK": 7.3,
             "avgD": 6,
-            "avgA": 7.4,
-            "kda": 2.45,
+            "avgA": 7.3,
+            "kda": 2.43,
             "csPerMin": 8.1,
             "visPerMin": 0.67,
-            "dmgShare": 23.5,
-            "avgDurationMin": 30.4,
+            "dmgShare": 23.6,
+            "avgDurationMin": 30.3,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 5
+                "type": "L",
+                "count": 1
               },
               "bestWin": 6,
               "worstLoss": 5
             },
             "form": [
+              "L",
               "W",
               "W",
               "W",
@@ -11029,13 +11030,11 @@
               "L",
               "W",
               "W",
-              "W",
               "W"
             ],
             "trend": [
               1,
               1,
-              1,
               0,
               1,
               0,
@@ -11052,20 +11051,21 @@
               1,
               1,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "BOTTOM",
             "last10": {
               "games": 10,
-              "wins": 9,
-              "losses": 1,
-              "winrate": 90
+              "wins": 8,
+              "losses": 2,
+              "winrate": 80
             },
             "last20": {
               "games": 20,
-              "wins": 14,
-              "losses": 6,
-              "winrate": 70
+              "wins": 13,
+              "losses": 7,
+              "winrate": 65
             },
             "topChamps": [
               {
@@ -11077,10 +11077,10 @@
               },
               {
                 "key": "Viktor",
-                "games": 26,
+                "games": 27,
                 "wins": 12,
-                "winrate": 46.2,
-                "kda": 2.33
+                "winrate": 44.4,
+                "kda": 2.23
               },
               {
                 "key": "Caitlyn",
@@ -11119,11 +11119,11 @@
               "kda": 1.46
             },
             "bestRole": {
-              "key": "MIDDLE",
-              "games": 5,
-              "wins": 3,
-              "winrate": 60,
-              "kda": 2.86
+              "key": "BOTTOM",
+              "games": 175,
+              "wins": 90,
+              "winrate": 51.4,
+              "kda": 2.5
             },
             "worstRole": {
               "key": "TOP",
@@ -11157,11 +11157,11 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1791322456949,
+            "lastGameAt": 1791324798813,
             "totals": {
-              "k": 1397,
-              "d": 1143,
-              "a": 1406
+              "k": 1400,
+              "d": 1153,
+              "a": 1407
             },
             "dmgPerMin": 913,
             "avgVision": 20.3,
@@ -11181,10 +11181,10 @@
               },
               {
                 "key": "Viktor",
-                "games": 26,
+                "games": 27,
                 "wins": 12,
-                "winrate": 46.2,
-                "kda": 2.33,
+                "winrate": 44.4,
+                "kda": 2.23,
                 "csPerMin": 7.7
               },
               {
@@ -11349,10 +11349,10 @@
               },
               {
                 "key": "MIDDLE",
-                "games": 5,
+                "games": 6,
                 "wins": 3,
-                "winrate": 60,
-                "kda": 2.86
+                "winrate": 50,
+                "kda": 2.23
               },
               {
                 "key": "UTILITY",
@@ -11370,9 +11370,9 @@
               }
             ],
             "gold": {
-              "games": 125,
-              "avgGd15": 248,
-              "avgTgd15": 201,
+              "games": 126,
+              "avgGd15": 223,
+              "avgTgd15": 176,
               "throws": 17,
               "comebacks": 11,
               "biggestThrow": {
@@ -11480,18 +11480,18 @@
                 ]
               },
               "MIDDLE": {
-                "games": 5,
+                "games": 6,
                 "wins": 3,
-                "winrate": 60,
-                "kda": 2.86,
-                "gd15": -494,
+                "winrate": 50,
+                "kda": 2.23,
+                "gd15": -960,
                 "champs": [
                   {
                     "key": "Viktor",
-                    "games": 2,
+                    "games": 3,
                     "wins": 1,
-                    "winrate": 50,
-                    "kda": 2
+                    "winrate": 33.3,
+                    "kda": 1.3
                   },
                   {
                     "key": "Malzahar",
@@ -11604,16 +11604,16 @@
               },
               "autofill": {
                 "lane": "BOTTOM",
-                "games": 16,
+                "games": 17,
                 "wins": 5,
-                "winrate": 31.3
+                "winrate": 29.4
               },
               "champPool": 14,
               "kdaStreak": 5,
-              "avgKda": 3.71,
+              "avgKda": 3.69,
               "pentas": 1,
               "quadras": 3,
-              "quadraGames": 191,
+              "quadraGames": 192,
               "firstBloods": 29
             },
             "gameRecords": {
@@ -11750,9 +11750,9 @@
             },
             "lp": {
               "win": 19,
-              "loss": -18,
+              "loss": -19,
               "winN": 20,
-              "lossN": 8
+              "lossN": 9
             }
           },
           "links": {
@@ -11761,7 +11761,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-06T21:36:28.732Z",
+          "updatedAt": "2026-10-06T22:15:29.036Z",
           "lpHist": [
             [
               1790720384833,
@@ -11882,9 +11882,76 @@
             [
               1791322583400,
               2120
+            ],
+            [
+              1791324923744,
+              2099
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005975625",
+              "t": 1791324798813,
+              "dur": 1646,
+              "win": false,
+              "champ": "Viktor",
+              "role": "MIDDLE",
+              "lvl": 15,
+              "k": 3,
+              "d": 10,
+              "a": 1,
+              "kp": 36,
+              "cs": 234,
+              "vis": 12,
+              "dmg": 24866,
+              "teamDmg": 75257,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 874,
+              "goldEarned": 11164,
+              "fb": false,
+              "items": [
+                6655,
+                1056,
+                3157,
+                4645,
+                3175,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerTeleport"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Lissandra",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -14632,
+                "tgd15": -2980,
+                "gd15": -2824
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005918992",
@@ -13081,72 +13148,14 @@
                 "d": 19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8001481609",
-              "t": 1790954670786,
-              "dur": 2185,
-              "win": true,
-              "champ": "Jinx",
-              "role": "BOTTOM",
-              "lvl": 18,
-              "k": 15,
-              "d": 8,
-              "a": 6,
-              "kp": 53,
-              "cs": 333,
-              "vis": 36,
-              "dmg": 48839,
-              "teamDmg": 140036,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 1,
-              "towerDmg": 15589,
-              "goldEarned": 21565,
-              "fb": false,
-              "items": [
-                3033,
-                2523,
-                3085,
-                3031,
-                6673,
-                3026,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBarrier"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Ezreal",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerBarrier"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 5401,
-                "maxLeadMin": 37,
-                "maxDef": -6915,
-                "tgd15": -1049,
-                "gd15": 823
-              },
-              "lp": {
-                "d": 19,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791324798813,
+              0,
+              -21
+            ],
             [
               1791322456949,
               1,
@@ -13640,11 +13649,6 @@
             [
               1787040025594,
               1,
-              null
-            ],
-            [
-              1787037763307,
-              0,
               null
             ]
           ]
