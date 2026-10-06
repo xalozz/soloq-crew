@@ -339,6 +339,18 @@ const REGION_LOG = { EUW1: 'euw', EUN1: 'eune', NA1: 'na', KR: 'kr', BR1: 'br', 
 const logUrl = (id) => { const [r, n] = id.split('_'); return `https://www.leagueofgraphs.com/match/${REGION_LOG[r] ?? 'euw'}/${n}`; };
 const friendIds = () => new Set((DATA?.players ?? []).flatMap((p) => p.accounts.map((a) => a.riotId.toLowerCase())));
 
+// Nombre de jugador enlazado a su perfil de OP.GG (pestaña nueva)
+function opggName(rid, matchId) {
+  const i = (rid || '').lastIndexOf('#');
+  if (i < 1) return h('b', { title: rid }, rid);
+  const region = REGION_LOG[(matchId || '').split('_')[0]] ?? 'euw';
+  const url = `https://op.gg/lol/summoners/${region}/${encodeURIComponent(rid.slice(0, i))}-${encodeURIComponent(rid.slice(i + 1))}`;
+  const a = extLink(url, rid, 'md-link');
+  a.title = `Ver ${rid} en OP.GG`;
+  a.addEventListener('click', (e) => e.stopPropagation());
+  return h('b', {}, a);
+}
+
 async function loadDetail(id) {
   if (detailCache.has(id)) return detailCache.get(id);
   try {
@@ -371,7 +383,7 @@ function matchDetailView(id, meRiotId) {
           const kda = (p.k + p.a) / Math.max(1, p.d);
           return h('div', { class: `md-p ${rid === me ? 'me' : friends.has(rid) ? 'friend' : ''}` },
             h('div', { class: 'md-lo' }, loadoutBlock(p, 32), p.lvl ? h('span', { class: 'md-lvl' }, p.lvl) : null),
-            h('div', { class: 'md-name' }, h('b', { title: p.rid }, p.rid), h('span', {}, h('span', {}, p.k), ' / ', h('span', { class: 'neg' }, p.d), ' / ', h('span', {}, p.a),
+            h('div', { class: 'md-name' }, opggName(p.rid, id), h('span', {}, h('span', {}, p.k), ' / ', h('span', { class: 'neg' }, p.d), ' / ', h('span', {}, p.a),
               h('small', {}, ` · ${p.d ? fmt(kda, 1) : 'Perfect'} KDA`))),
             h('div', { class: 'md-num' }, h('b', {}, p.cs), h('small', {}, 'CS')),
             h('div', { class: 'md-num' }, h('b', {}, goldK(p.dmg, false)), h('small', {}, 'daño')),
