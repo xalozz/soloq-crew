@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:00:35.023Z",
+  "generatedAt": "2026-10-06T18:18:30.366Z",
   "ddragonVersion": "16.19.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -16547,7 +16547,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1189,
+      "score": 1167,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16560,47 +16560,46 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 89,
+            "lp": 67,
             "wins": 164,
-            "losses": 174,
-            "winrate": 48.5,
+            "losses": 175,
+            "winrate": 48.4,
             "hotStreak": false
           },
           "stats": {
-            "games": 338,
+            "games": 339,
             "wins": 164,
-            "losses": 174,
-            "winrate": 48.5,
+            "losses": 175,
+            "winrate": 48.4,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
             "kda": 2.09,
             "csPerMin": 6,
-            "visPerMin": 1.02,
+            "visPerMin": 1.01,
             "dmgShare": 21.8,
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 2
+                "type": "L",
+                "count": 1
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
-              "W",
-              "W",
-              "L",
-              "L",
               "L",
               "W",
+              "W",
+              "L",
+              "L",
               "L",
               "W",
+              "L",
               "W",
               "W"
             ],
             "trend": [
-              1,
               0,
               0,
               0,
@@ -16619,20 +16618,21 @@
               0,
               0,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 6,
-              "losses": 4,
-              "winrate": 60
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
-              "wins": 8,
-              "losses": 12,
-              "winrate": 40
+              "wins": 7,
+              "losses": 13,
+              "winrate": 35
             },
             "topChamps": [
               {
@@ -16687,10 +16687,10 @@
             },
             "bestRole": {
               "key": "BOTTOM",
-              "games": 9,
+              "games": 10,
               "wins": 6,
-              "winrate": 66.7,
-              "kda": 2.8
+              "winrate": 60,
+              "kda": 2.94
             },
             "worstRole": {
               "key": "MIDDLE",
@@ -16724,11 +16724,11 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791305635905,
+            "lastGameAt": 1791310643393,
             "totals": {
-              "k": 1729,
-              "d": 2097,
-              "a": 2647
+              "k": 1737,
+              "d": 2102,
+              "a": 2660
             },
             "dmgPerMin": 855,
             "avgVision": 31.4,
@@ -16736,7 +16736,7 @@
             "firstBloods": 18,
             "maxKills": 19,
             "maxDurationMin": 51.6,
-            "avgKp": 38,
+            "avgKp": 39,
             "champs": [
               {
                 "key": "Heimerdinger",
@@ -16955,6 +16955,14 @@
                 "csPerMin": 6.7
               },
               {
+                "key": "Jhin",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 4.2,
+                "csPerMin": 6.2
+              },
+              {
                 "key": "Locke",
                 "games": 1,
                 "wins": 0,
@@ -17075,17 +17083,17 @@
               },
               {
                 "key": "BOTTOM",
-                "games": 9,
+                "games": 10,
                 "wins": 6,
-                "winrate": 66.7,
-                "kda": 2.8
+                "winrate": 60,
+                "kda": 2.94
               }
             ],
             "gold": {
-              "games": 123,
-              "avgGd15": 206,
-              "avgTgd15": 128,
-              "throws": 14,
+              "games": 124,
+              "avgGd15": 212,
+              "avgTgd15": 187,
+              "throws": 15,
               "comebacks": 11,
               "biggestThrow": {
                 "id": "EUW1_8000335789",
@@ -17262,11 +17270,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 9,
+                "games": 10,
                 "wins": 6,
-                "winrate": 66.7,
-                "kda": 2.8,
-                "gd15": -417,
+                "winrate": 60,
+                "kda": 2.94,
+                "gd15": -214,
                 "champs": [
                   {
                     "key": "Caitlyn",
@@ -17281,6 +17289,13 @@
                     "wins": 2,
                     "winrate": 100,
                     "kda": 5
+                  },
+                  {
+                    "key": "Jhin",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 4.2
                   },
                   {
                     "key": "Brand",
@@ -17356,16 +17371,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 60,
+                "games": 61,
                 "wins": 30,
-                "winrate": 50
+                "winrate": 49.2
               },
               "champPool": 26,
               "kdaStreak": 3,
-              "avgKda": 2.76,
+              "avgKda": 2.77,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 338,
+              "quadraGames": 339,
               "firstBloods": 18
             },
             "gameRecords": {
@@ -17502,9 +17517,9 @@
             },
             "lp": {
               "win": 21,
-              "loss": -17,
+              "loss": -18,
               "winN": 14,
-              "lossN": 12
+              "lossN": 13
             }
           },
           "links": {
@@ -17513,7 +17528,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-06T17:00:10.508Z",
+          "updatedAt": "2026-10-06T18:18:30.362Z",
           "lpHist": [
             [
               1790720384833,
@@ -17630,9 +17645,76 @@
             [
               1791305707600,
               1189
+            ],
+            [
+              1791310703708,
+              1167
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8005652931",
+              "t": 1791310643393,
+              "dur": 2213,
+              "win": false,
+              "champ": "Jhin",
+              "role": "BOTTOM",
+              "lvl": 16,
+              "k": 8,
+              "d": 5,
+              "a": 13,
+              "kp": 51,
+              "cs": 227,
+              "vis": 27,
+              "dmg": 24955,
+              "teamDmg": 138332,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 9684,
+              "goldEarned": 14888,
+              "fb": false,
+              "items": [
+                3094,
+                6697,
+                3036,
+                6676,
+                1018,
+                1037,
+                3340
+              ],
+              "spells": [
+                "SummonerBarrier",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Yunara",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerBarrier"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 7786,
+                "maxLeadMin": 20,
+                "maxDef": -8736,
+                "tgd15": 7513,
+                "gd15": 1008
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8005576103",
@@ -18829,72 +18911,14 @@
                 "d": -19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8000146681",
-              "t": 1790809427030,
-              "dur": 2418,
-              "win": true,
-              "champ": "Heimerdinger",
-              "role": "TOP",
-              "lvl": 20,
-              "k": 7,
-              "d": 5,
-              "a": 12,
-              "kp": 40,
-              "cs": 280,
-              "vis": 34,
-              "dmg": 57115,
-              "teamDmg": 195202,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 10615,
-              "goldEarned": 15995,
-              "fb": false,
-              "items": [
-                4645,
-                6653,
-                3089,
-                3157,
-                1026,
-                3020,
-                3340
-              ],
-              "spells": [
-                "SummonerExhaust",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Darius",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHaste"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 4333,
-                "maxLeadMin": 41,
-                "maxDef": -3948,
-                "tgd15": 590,
-                "gd15": 1100
-              },
-              "lp": {
-                "d": 21,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791310643393,
+              0,
+              -22
+            ],
             [
               1791305635905,
               1,
@@ -19387,11 +19411,6 @@
             ],
             [
               1785605176483,
-              0,
-              null
-            ],
-            [
-              1785416906851,
               0,
               null
             ]

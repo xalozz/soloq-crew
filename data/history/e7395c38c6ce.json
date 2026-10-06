@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8005652931",
+      "t": 1791310643393,
+      "dur": 2213,
+      "win": false,
+      "champ": "Jhin",
+      "role": "BOTTOM",
+      "lvl": 16,
+      "k": 8,
+      "d": 5,
+      "a": 13,
+      "kp": 51,
+      "cs": 227,
+      "vis": 27,
+      "dmg": 24955,
+      "teamDmg": 138332,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9684,
+      "goldEarned": 14888,
+      "fb": false,
+      "items": [
+        3094,
+        6697,
+        3036,
+        6676,
+        1018,
+        1037,
+        3340
+      ],
+      "spells": [
+        "SummonerBarrier",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Yunara",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7786,
+        "maxLeadMin": 20,
+        "maxDef": -8736,
+        "tgd15": 7513,
+        "gd15": 1008
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8005576103",
       "t": 1791305635905,
       "dur": 1208,
