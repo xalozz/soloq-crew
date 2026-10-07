@@ -1,0 +1,326 @@
+{
+  "id": "EUW1_8006243684",
+  "t": 1791375963231,
+  "dur": 2410,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": false,
+      "kills": 43,
+      "gold": 79150,
+      "bans": [
+        "Blitzcrank",
+        "TahmKench",
+        "Fizz",
+        "Illaoi"
+      ],
+      "players": [
+        {
+          "rid": "Kurt#4201",
+          "pos": "TOP",
+          "lvl": 20,
+          "champ": "Renekton",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 7,
+          "d": 11,
+          "a": 11,
+          "cs": 243,
+          "dmg": 39015,
+          "gold": 14960,
+          "items": [
+            1036,
+            3071,
+            6692,
+            3047,
+            3161,
+            6333,
+            3364
+          ]
+        },
+        {
+          "rid": "v3noder#EUW",
+          "pos": "JUNGLE",
+          "lvl": 18,
+          "champ": "Kayn",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 3,
+          "d": 7,
+          "a": 8,
+          "cs": 251,
+          "dmg": 20924,
+          "gold": 14619,
+          "items": [
+            3071,
+            3065,
+            6333,
+            3047,
+            0,
+            6692,
+            3364
+          ]
+        },
+        {
+          "rid": "FatdruidindaMid#SPK",
+          "pos": "MIDDLE",
+          "lvl": 17,
+          "champ": "Zed",
+          "spells": [
+            "SummonerDot",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 9,
+          "d": 11,
+          "a": 8,
+          "cs": 162,
+          "dmg": 30640,
+          "gold": 15546,
+          "items": [
+            6694,
+            3171,
+            6699,
+            2520,
+            6696,
+            2021,
+            3340
+          ]
+        },
+        {
+          "rid": "SALCHIENVA2EZ#EUW",
+          "pos": "BOTTOM",
+          "lvl": 18,
+          "champ": "Xerath",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 21,
+          "d": 9,
+          "a": 10,
+          "cs": 259,
+          "dmg": 64548,
+          "gold": 21587,
+          "items": [
+            3135,
+            3118,
+            4645,
+            3089,
+            6653,
+            4646,
+            3340
+          ]
+        },
+        {
+          "rid": "Räky#2803",
+          "pos": "UTILITY",
+          "lvl": 15,
+          "champ": "Seraphine",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 3,
+          "d": 7,
+          "a": 20,
+          "cs": 45,
+          "dmg": 22265,
+          "gold": 12438,
+          "items": [
+            3871,
+            3020,
+            2503,
+            3116,
+            3916,
+            3157,
+            3364
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": true,
+      "kills": 43,
+      "gold": 81827,
+      "bans": [
+        "Ashe",
+        "Sylas",
+        "Fizz",
+        "Caitlyn",
+        "Nasus"
+      ],
+      "players": [
+        {
+          "rid": "IlSamurai33#EUW",
+          "pos": "TOP",
+          "lvl": 19,
+          "champ": "Chogath",
+          "spells": [
+            "SummonerTeleport",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 5,
+          "d": 5,
+          "a": 9,
+          "cs": 195,
+          "dmg": 26735,
+          "gold": 12850,
+          "items": [
+            1056,
+            3143,
+            3047,
+            2504,
+            3084,
+            1057,
+            3340
+          ]
+        },
+        {
+          "rid": "CVI lleppis#Finn",
+          "pos": "JUNGLE",
+          "lvl": 18,
+          "champ": "Shyvana",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 9,
+          "d": 6,
+          "a": 17,
+          "cs": 238,
+          "dmg": 34494,
+          "gold": 17774,
+          "items": [
+            3161,
+            3111,
+            6333,
+            3053,
+            1029,
+            3078,
+            3364
+          ]
+        },
+        {
+          "rid": "FesAo 11#EUW",
+          "pos": "MIDDLE",
+          "lvl": 18,
+          "champ": "Malzahar",
+          "spells": [
+            "SummonerTeleport",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 14,
+          "d": 8,
+          "a": 13,
+          "cs": 296,
+          "dmg": 56499,
+          "gold": 19816,
+          "items": [
+            6653,
+            2503,
+            3175,
+            3157,
+            3116,
+            3135,
+            3340
+          ]
+        },
+        {
+          "rid": "danylion#EUW",
+          "pos": "BOTTOM",
+          "lvl": 18,
+          "champ": "Jhin",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 12,
+          "d": 14,
+          "a": 13,
+          "cs": 252,
+          "dmg": 43934,
+          "gold": 19703,
+          "items": [
+            3072,
+            6676,
+            3094,
+            3036,
+            3031,
+            1036,
+            3340
+          ]
+        },
+        {
+          "rid": "princesse déchue#BIZOU",
+          "pos": "UTILITY",
+          "lvl": 16,
+          "champ": "Janna",
+          "spells": [
+            "SummonerFlash",
+            "SummonerExhaust"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 3,
+          "d": 10,
+          "a": 23,
+          "cs": 33,
+          "dmg": 8094,
+          "gold": 11684,
+          "items": [
+            3870,
+            3107,
+            3009,
+            6617,
+            8020,
+            3222,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}
