@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8006361188",
+      "t": 1791386527797,
+      "dur": 1903,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 6,
+      "d": 7,
+      "a": 8,
+      "kp": 41,
+      "cs": 281,
+      "vis": 33,
+      "dmg": 19550,
+      "teamDmg": 107874,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 15062,
+      "fb": false,
+      "items": [
+        3031,
+        6676,
+        3047,
+        3036,
+        6673,
+        2055,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "MasterYi",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2361,
+        "maxLeadMin": 15,
+        "maxDef": -6716,
+        "tgd15": 2361,
+        "gd15": 1193
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8006322274",
       "t": 1791384231737,
       "dur": 2249,
