@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8006281211",
+      "t": 1791380494067,
+      "dur": 1713,
+      "win": true,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 8,
+      "d": 4,
+      "a": 7,
+      "kp": 41,
+      "cs": 181,
+      "vis": 28,
+      "dmg": 16372,
+      "teamDmg": 114817,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8894,
+      "goldEarned": 12252,
+      "fb": false,
+      "items": [
+        1056,
+        3100,
+        3171,
+        3157,
+        4646,
+        1058,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "AurelionSol",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10569,
+        "maxLeadMin": 29,
+        "maxDef": -2514,
+        "tgd15": 909,
+        "gd15": 1085
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8006275997",
       "t": 1791378371505,
       "dur": 1364,
