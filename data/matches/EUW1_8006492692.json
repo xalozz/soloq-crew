@@ -1,0 +1,327 @@
+{
+  "id": "EUW1_8006492692",
+  "t": 1791393464273,
+  "dur": 1343,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": false,
+      "kills": 13,
+      "gold": 38587,
+      "bans": [
+        "Caitlyn",
+        "Katarina",
+        "Aatrox",
+        "Darius",
+        "Lillia"
+      ],
+      "players": [
+        {
+          "rid": "ADRX#1v9",
+          "pos": "TOP",
+          "lvl": 15,
+          "champ": "Sion",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 9,
+          "d": 7,
+          "a": 2,
+          "cs": 165,
+          "dmg": 17645,
+          "gold": 11354,
+          "items": [
+            3009,
+            1083,
+            2520,
+            6670,
+            3142,
+            3035,
+            3340
+          ]
+        },
+        {
+          "rid": "Deikers#SORA",
+          "pos": "JUNGLE",
+          "lvl": 12,
+          "champ": "Kayn",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 2,
+          "d": 7,
+          "a": 6,
+          "cs": 111,
+          "dmg": 9473,
+          "gold": 7563,
+          "items": [
+            3071,
+            6692,
+            1029,
+            2422,
+            0,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "rebeut charmant#EUW",
+          "pos": "MIDDLE",
+          "lvl": 13,
+          "champ": "Lissandra",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 0,
+          "d": 7,
+          "a": 2,
+          "cs": 171,
+          "dmg": 12694,
+          "gold": 7015,
+          "items": [
+            1056,
+            6655,
+            3175,
+            3145,
+            1058,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "ElChuecoAsesino#LAN",
+          "pos": "BOTTOM",
+          "lvl": 11,
+          "champ": "Jinx",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 2,
+          "d": 10,
+          "a": 2,
+          "cs": 145,
+          "dmg": 12085,
+          "gold": 7362,
+          "items": [
+            1086,
+            2523,
+            3085,
+            0,
+            0,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "Febwer#EUW",
+          "pos": "UTILITY",
+          "lvl": 10,
+          "champ": "Milio",
+          "spells": [
+            "SummonerHeal",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 0,
+          "d": 6,
+          "a": 4,
+          "cs": 19,
+          "dmg": 2865,
+          "gold": 5293,
+          "items": [
+            6620,
+            3158,
+            3870,
+            3114,
+            1052,
+            0,
+            3364
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": true,
+      "kills": 37,
+      "gold": 53003,
+      "bans": [
+        "Yasuo",
+        "Leblanc",
+        "Nocturne",
+        "Sivir",
+        "Olaf"
+      ],
+      "players": [
+        {
+          "rid": "GH Traffy#VIT",
+          "pos": "TOP",
+          "lvl": 15,
+          "champ": "Urgot",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 4,
+          "d": 5,
+          "a": 4,
+          "cs": 155,
+          "dmg": 13860,
+          "gold": 8817,
+          "items": [
+            3071,
+            3077,
+            1037,
+            0,
+            1054,
+            3047,
+            3340
+          ]
+        },
+        {
+          "rid": "samwel#1551",
+          "pos": "JUNGLE",
+          "lvl": 15,
+          "champ": "Chogath",
+          "spells": [
+            "SummonerFlash",
+            "SummonerSmite"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 7,
+          "d": 2,
+          "a": 5,
+          "cs": 193,
+          "dmg": 10640,
+          "gold": 10756,
+          "items": [
+            3742,
+            3084,
+            3009,
+            4401,
+            1028,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "xkekkox15#EUW",
+          "pos": "MIDDLE",
+          "lvl": 16,
+          "champ": "Yone",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 17,
+          "d": 0,
+          "a": 5,
+          "cs": 222,
+          "dmg": 34433,
+          "gold": 15932,
+          "items": [
+            3095,
+            1086,
+            6673,
+            3172,
+            3031,
+            1036,
+            3340
+          ]
+        },
+        {
+          "rid": "Big C king#EUW",
+          "pos": "BOTTOM",
+          "lvl": 14,
+          "champ": "Smolder",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 9,
+          "d": 2,
+          "a": 10,
+          "cs": 159,
+          "dmg": 21184,
+          "gold": 11091,
+          "items": [
+            1055,
+            3508,
+            3161,
+            3044,
+            3067,
+            0,
+            3363
+          ]
+        },
+        {
+          "rid": "xPeris#6969",
+          "pos": "UTILITY",
+          "lvl": 10,
+          "champ": "Thresh",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 0,
+          "d": 4,
+          "a": 13,
+          "cs": 25,
+          "dmg": 5337,
+          "gold": 6407,
+          "items": [
+            3190,
+            3067,
+            3876,
+            1029,
+            3009,
+            1033,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}
