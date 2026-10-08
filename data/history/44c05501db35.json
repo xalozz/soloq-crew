@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8007258832",
+      "t": 1791470860561,
+      "dur": 1574,
+      "win": false,
+      "champ": "Ziggs",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 4,
+      "d": 10,
+      "a": 7,
+      "kp": 44,
+      "cs": 193,
+      "vis": 8,
+      "dmg": 17928,
+      "teamDmg": 78234,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 479,
+      "goldEarned": 10707,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        3175,
+        6653,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ekko",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -13794,
+        "tgd15": -4808,
+        "gd15": -3635
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8007232946",
       "t": 1791469001633,
       "dur": 1888,
