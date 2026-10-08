@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8007331810",
+      "t": 1791475666473,
+      "dur": 1589,
+      "win": false,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 13,
+      "k": 6,
+      "d": 8,
+      "a": 4,
+      "kp": 42,
+      "cs": 178,
+      "vis": 20,
+      "dmg": 12957,
+      "teamDmg": 81114,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 10304,
+      "fb": false,
+      "items": [
+        4645,
+        2510,
+        2420,
+        3020,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Graves",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1703,
+        "maxLeadMin": 13,
+        "maxDef": -10228,
+        "tgd15": -1722,
+        "gd15": -272
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8007016887",
       "t": 1791438722674,
       "dur": 2026,
