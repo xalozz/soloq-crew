@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T16:09:09.270Z",
+  "generatedAt": "2026-10-08T16:33:09.373Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -4909,6 +4909,3215 @@
       ]
     },
     {
+      "name": "xPeris",
+      "links": [],
+      "bestAccount": 0,
+      "score": 2194,
+      "accounts": [
+        {
+          "riotId": "xPeris#6969",
+          "gameName": "xPeris",
+          "tagLine": "6969",
+          "label": null,
+          "region": "euw1",
+          "level": 612,
+          "profileIconId": 7120,
+          "rank": {
+            "tier": "EMERALD",
+            "division": "III",
+            "lp": 94,
+            "wins": 438,
+            "losses": 424,
+            "winrate": 50.8,
+            "hotStreak": false
+          },
+          "stats": {
+            "games": 846,
+            "wins": 433,
+            "losses": 413,
+            "winrate": 51.2,
+            "avgK": 4.5,
+            "avgD": 7.8,
+            "avgA": 13.7,
+            "kda": 2.33,
+            "csPerMin": 3.1,
+            "visPerMin": 1.78,
+            "dmgShare": 13.8,
+            "avgDurationMin": 30.4,
+            "streak": {
+              "current": {
+                "type": "W",
+                "count": 1
+              },
+              "bestWin": 10,
+              "worstLoss": 8
+            },
+            "form": [
+              "W",
+              "L",
+              "W",
+              "W",
+              "W",
+              "W",
+              "L",
+              "L",
+              "L",
+              "W"
+            ],
+            "trend": [
+              1,
+              1,
+              0,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1
+            ],
+            "mainRole": "UTILITY",
+            "last10": {
+              "games": 10,
+              "wins": 6,
+              "losses": 4,
+              "winrate": 60
+            },
+            "last20": {
+              "games": 20,
+              "wins": 14,
+              "losses": 6,
+              "winrate": 70
+            },
+            "topChamps": [
+              {
+                "key": "Zac",
+                "games": 78,
+                "wins": 41,
+                "winrate": 52.6,
+                "kda": 2.78
+              },
+              {
+                "key": "Rakan",
+                "games": 66,
+                "wins": 36,
+                "winrate": 54.5,
+                "kda": 2.7
+              },
+              {
+                "key": "Thresh",
+                "games": 63,
+                "wins": 39,
+                "winrate": 61.9,
+                "kda": 2.55
+              },
+              {
+                "key": "Elise",
+                "games": 53,
+                "wins": 28,
+                "winrate": 52.8,
+                "kda": 2.26
+              },
+              {
+                "key": "Ivern",
+                "games": 45,
+                "wins": 26,
+                "winrate": 57.8,
+                "kda": 2.79
+              }
+            ],
+            "bestChamp": {
+              "key": "Xerath",
+              "games": 11,
+              "wins": 10,
+              "winrate": 90.9,
+              "kda": 2.01
+            },
+            "worstChamp": {
+              "key": "Jax",
+              "games": 4,
+              "wins": 0,
+              "winrate": 0,
+              "kda": 1.41
+            },
+            "bestRole": {
+              "key": "UTILITY",
+              "games": 450,
+              "wins": 238,
+              "winrate": 52.9,
+              "kda": 2.3
+            },
+            "worstRole": {
+              "key": "MIDDLE",
+              "games": 11,
+              "wins": 3,
+              "winrate": 27.3,
+              "kda": 1.79
+            },
+            "bestGame": {
+              "id": "EUW1_7850457879",
+              "t": 1778533080505,
+              "dur": 1753,
+              "champ": "Viego",
+              "role": "JUNGLE",
+              "k": 15,
+              "d": 1,
+              "a": 8,
+              "win": true,
+              "kda": 23
+            },
+            "worstGame": {
+              "id": "EUW1_7979431751",
+              "t": 1789062103979,
+              "dur": 1608,
+              "champ": "Braum",
+              "role": "UTILITY",
+              "k": 0,
+              "d": 10,
+              "a": 1,
+              "win": false,
+              "kda": 0.1
+            },
+            "firstGameAt": 1768843553467,
+            "lastGameAt": 1791477081261,
+            "totals": {
+              "k": 3820,
+              "d": 6601,
+              "a": 11585
+            },
+            "dmgPerMin": 548,
+            "avgVision": 54.2,
+            "pentas": 0,
+            "firstBloods": 62,
+            "maxKills": 22,
+            "maxDurationMin": 50.5,
+            "avgKp": 54,
+            "champs": [
+              {
+                "key": "Zac",
+                "games": 78,
+                "wins": 41,
+                "winrate": 52.6,
+                "kda": 2.78,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Rakan",
+                "games": 66,
+                "wins": 36,
+                "winrate": 54.5,
+                "kda": 2.7,
+                "csPerMin": 1
+              },
+              {
+                "key": "Thresh",
+                "games": 63,
+                "wins": 39,
+                "winrate": 61.9,
+                "kda": 2.55,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Elise",
+                "games": 53,
+                "wins": 28,
+                "winrate": 52.8,
+                "kda": 2.26,
+                "csPerMin": 4.2
+              },
+              {
+                "key": "Ivern",
+                "games": 45,
+                "wins": 26,
+                "winrate": 57.8,
+                "kda": 2.79,
+                "csPerMin": 4.4
+              },
+              {
+                "key": "FiddleSticks",
+                "games": 43,
+                "wins": 24,
+                "winrate": 55.8,
+                "kda": 2.42,
+                "csPerMin": 5.1
+              },
+              {
+                "key": "Galio",
+                "games": 39,
+                "wins": 21,
+                "winrate": 53.8,
+                "kda": 2.48,
+                "csPerMin": 1.3
+              },
+              {
+                "key": "Leona",
+                "games": 31,
+                "wins": 18,
+                "winrate": 58.1,
+                "kda": 2.75,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Viego",
+                "games": 30,
+                "wins": 13,
+                "winrate": 43.3,
+                "kda": 1.87,
+                "csPerMin": 5.8
+              },
+              {
+                "key": "Pyke",
+                "games": 25,
+                "wins": 16,
+                "winrate": 64,
+                "kda": 1.89,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Karma",
+                "games": 25,
+                "wins": 10,
+                "winrate": 40,
+                "kda": 2.15,
+                "csPerMin": 1.4
+              },
+              {
+                "key": "Nautilus",
+                "games": 23,
+                "wins": 14,
+                "winrate": 60.9,
+                "kda": 2.65,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Nami",
+                "games": 22,
+                "wins": 9,
+                "winrate": 40.9,
+                "kda": 2.57,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Milio",
+                "games": 21,
+                "wins": 7,
+                "winrate": 33.3,
+                "kda": 2.5,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Shyvana",
+                "games": 20,
+                "wins": 11,
+                "winrate": 55,
+                "kda": 2.45,
+                "csPerMin": 6.8
+              },
+              {
+                "key": "Rammus",
+                "games": 20,
+                "wins": 12,
+                "winrate": 60,
+                "kda": 3.59,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Maokai",
+                "games": 15,
+                "wins": 6,
+                "winrate": 40,
+                "kda": 2.39,
+                "csPerMin": 3.1
+              },
+              {
+                "key": "Nocturne",
+                "games": 14,
+                "wins": 7,
+                "winrate": 50,
+                "kda": 2.25,
+                "csPerMin": 6
+              },
+              {
+                "key": "Alistar",
+                "games": 13,
+                "wins": 7,
+                "winrate": 53.8,
+                "kda": 2.08,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Braum",
+                "games": 13,
+                "wins": 7,
+                "winrate": 53.8,
+                "kda": 2.12,
+                "csPerMin": 0.8
+              },
+              {
+                "key": "Nunu",
+                "games": 13,
+                "wins": 5,
+                "winrate": 38.5,
+                "kda": 2.05,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Pantheon",
+                "games": 12,
+                "wins": 8,
+                "winrate": 66.7,
+                "kda": 1.75,
+                "csPerMin": 1.7
+              },
+              {
+                "key": "Sylas",
+                "games": 12,
+                "wins": 6,
+                "winrate": 50,
+                "kda": 1.71,
+                "csPerMin": 4.7
+              },
+              {
+                "key": "Malphite",
+                "games": 11,
+                "wins": 4,
+                "winrate": 36.4,
+                "kda": 1.84,
+                "csPerMin": 4.7
+              },
+              {
+                "key": "Xerath",
+                "games": 11,
+                "wins": 10,
+                "winrate": 90.9,
+                "kda": 2.01,
+                "csPerMin": 1.7
+              },
+              {
+                "key": "Shen",
+                "games": 9,
+                "wins": 5,
+                "winrate": 55.6,
+                "kda": 3.13,
+                "csPerMin": 3.1
+              },
+              {
+                "key": "Rengar",
+                "games": 8,
+                "wins": 4,
+                "winrate": 50,
+                "kda": 1.6,
+                "csPerMin": 5.6
+              },
+              {
+                "key": "Blitzcrank",
+                "games": 8,
+                "wins": 5,
+                "winrate": 62.5,
+                "kda": 2.43,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Lulu",
+                "games": 8,
+                "wins": 3,
+                "winrate": 37.5,
+                "kda": 2.1,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Brand",
+                "games": 6,
+                "wins": 2,
+                "winrate": 33.3,
+                "kda": 1.62,
+                "csPerMin": 2.1
+              },
+              {
+                "key": "Sejuani",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 2.52,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "Mel",
+                "games": 5,
+                "wins": 2,
+                "winrate": 40,
+                "kda": 1.5,
+                "csPerMin": 4.2
+              },
+              {
+                "key": "Jax",
+                "games": 4,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.41,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "Zilean",
+                "games": 4,
+                "wins": 3,
+                "winrate": 75,
+                "kda": 2.58,
+                "csPerMin": 1.1
+              },
+              {
+                "key": "Kayn",
+                "games": 4,
+                "wins": 2,
+                "winrate": 50,
+                "kda": 1.67,
+                "csPerMin": 5.7
+              },
+              {
+                "key": "Teemo",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.42,
+                "csPerMin": 4.7
+              },
+              {
+                "key": "MonkeyKing",
+                "games": 3,
+                "wins": 2,
+                "winrate": 66.7,
+                "kda": 2.36,
+                "csPerMin": 5.9
+              },
+              {
+                "key": "Lissandra",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.68,
+                "csPerMin": 4.2
+              },
+              {
+                "key": "Ornn",
+                "games": 3,
+                "wins": 1,
+                "winrate": 33.3,
+                "kda": 1.83,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "Yuumi",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.92,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Janna",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.6,
+                "csPerMin": 0.6
+              },
+              {
+                "key": "Soraka",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.86,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Briar",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.75,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "XinZhao",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.58,
+                "csPerMin": 4.9
+              },
+              {
+                "key": "Seraphine",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 5.9,
+                "csPerMin": 1.3
+              },
+              {
+                "key": "Volibear",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 1.14,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "Renata",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.84,
+                "csPerMin": 1
+              },
+              {
+                "key": "Renekton",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.48,
+                "csPerMin": 6.7
+              },
+              {
+                "key": "Bard",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 2.81,
+                "csPerMin": 0.7
+              },
+              {
+                "key": "Neeko",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2,
+                "csPerMin": 5.1
+              },
+              {
+                "key": "Malzahar",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.44,
+                "csPerMin": 7.8
+              },
+              {
+                "key": "Rell",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.22,
+                "csPerMin": 0.9
+              },
+              {
+                "key": "Morgana",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.8,
+                "csPerMin": 1.5
+              },
+              {
+                "key": "Swain",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.93,
+                "csPerMin": 1
+              },
+              {
+                "key": "Velkoz",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 1.36,
+                "csPerMin": 2.2
+              },
+              {
+                "key": "Chogath",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.1,
+                "csPerMin": 5.3
+              },
+              {
+                "key": "Fizz",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.25,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Lux",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.93,
+                "csPerMin": 1.2
+              },
+              {
+                "key": "Rumble",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.71,
+                "csPerMin": 6.2
+              },
+              {
+                "key": "Naafiri",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.4,
+                "csPerMin": 4.9
+              },
+              {
+                "key": "Skarner",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 3.14,
+                "csPerMin": 5.5
+              },
+              {
+                "key": "Poppy",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 1.83,
+                "csPerMin": 1
+              },
+              {
+                "key": "Anivia",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.1,
+                "csPerMin": 1.2
+              },
+              {
+                "key": "Senna",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.8,
+                "csPerMin": 1.4
+              },
+              {
+                "key": "Zyra",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.44,
+                "csPerMin": 1.9
+              },
+              {
+                "key": "Ziggs",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.4,
+                "csPerMin": 5.3
+              },
+              {
+                "key": "Olaf",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.45,
+                "csPerMin": 6.1
+              },
+              {
+                "key": "Annie",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 2.73,
+                "csPerMin": 0.8
+              },
+              {
+                "key": "Ambessa",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.67,
+                "csPerMin": 5.2
+              },
+              {
+                "key": "Garen",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 1.38,
+                "csPerMin": 6.1
+              },
+              {
+                "key": "TahmKench",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.4,
+                "csPerMin": 1.4
+              },
+              {
+                "key": "DrMundo",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 5.33,
+                "csPerMin": 6.5
+              },
+              {
+                "key": "Akali",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 4.67,
+                "csPerMin": 6.5
+              },
+              {
+                "key": "MasterYi",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.85,
+                "csPerMin": 5.4
+              },
+              {
+                "key": "Qiyana",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.31,
+                "csPerMin": 4.9
+              },
+              {
+                "key": "Diana",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 3.4,
+                "csPerMin": 5.6
+              },
+              {
+                "key": "Ahri",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.5,
+                "csPerMin": 4.8
+              },
+              {
+                "key": "Vi",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 3.29,
+                "csPerMin": 5.3
+              },
+              {
+                "key": "Veigar",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 3.25,
+                "csPerMin": 7.4
+              },
+              {
+                "key": "Ashe",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.4,
+                "csPerMin": 1.3
+              },
+              {
+                "key": "LeeSin",
+                "games": 1,
+                "wins": 1,
+                "winrate": 100,
+                "kda": 3.5,
+                "csPerMin": 5.5
+              },
+              {
+                "key": "Amumu",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.4,
+                "csPerMin": 5
+              }
+            ],
+            "roles": [
+              {
+                "key": "UTILITY",
+                "games": 450,
+                "wins": 238,
+                "winrate": 52.9,
+                "kda": 2.3
+              },
+              {
+                "key": "JUNGLE",
+                "games": 371,
+                "wins": 188,
+                "winrate": 50.7,
+                "kda": 2.43
+              },
+              {
+                "key": "TOP",
+                "games": 13,
+                "wins": 4,
+                "winrate": 30.8,
+                "kda": 1.38
+              },
+              {
+                "key": "MIDDLE",
+                "games": 11,
+                "wins": 3,
+                "winrate": 27.3,
+                "kda": 1.79
+              },
+              {
+                "key": "BOTTOM",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.4
+              }
+            ],
+            "gold": {
+              "games": 117,
+              "avgGd15": 46,
+              "avgTgd15": 262,
+              "throws": 14,
+              "comebacks": 11,
+              "biggestThrow": {
+                "id": "EUW1_8006395060",
+                "t": 1791389305332,
+                "dur": 2414,
+                "champ": "Thresh",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 7,
+                "a": 30,
+                "win": false,
+                "kda": 4.57,
+                "val": 9108,
+                "min": 16
+              },
+              "biggestComeback": {
+                "id": "EUW1_7985064657",
+                "t": 1789506077681,
+                "dur": 2240,
+                "champ": "Elise",
+                "role": "UTILITY",
+                "k": 8,
+                "d": 12,
+                "a": 18,
+                "win": true,
+                "kda": 2.17,
+                "val": -7572,
+                "min": 0
+              },
+              "biggestLead": {
+                "id": "EUW1_7971010086",
+                "t": 1788375738010,
+                "dur": 1758,
+                "champ": "Pyke",
+                "role": "UTILITY",
+                "k": 12,
+                "d": 8,
+                "a": 11,
+                "win": true,
+                "kda": 2.88,
+                "val": 17679,
+                "min": 30
+              },
+              "best15": {
+                "id": "EUW1_7971010086",
+                "t": 1788375738010,
+                "dur": 1758,
+                "champ": "Pyke",
+                "role": "UTILITY",
+                "k": 12,
+                "d": 8,
+                "a": 11,
+                "win": true,
+                "kda": 2.88,
+                "val": 1953,
+                "min": 30
+              },
+              "worst15": {
+                "id": "EUW1_7970274130",
+                "t": 1788303658142,
+                "dur": 2077,
+                "champ": "Nami",
+                "role": "UTILITY",
+                "k": 0,
+                "d": 18,
+                "a": 18,
+                "win": false,
+                "kda": 1,
+                "val": -3794,
+                "min": 32
+              }
+            },
+            "byRole": {
+              "TOP": {
+                "games": 13,
+                "wins": 4,
+                "winrate": 30.8,
+                "kda": 1.38,
+                "gd15": -1234,
+                "champs": [
+                  {
+                    "key": "Ornn",
+                    "games": 3,
+                    "wins": 1,
+                    "winrate": 33.3,
+                    "kda": 1.83
+                  },
+                  {
+                    "key": "Renekton",
+                    "games": 2,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 0.48
+                  },
+                  {
+                    "key": "Shyvana",
+                    "games": 2,
+                    "wins": 1,
+                    "winrate": 50,
+                    "kda": 2.78
+                  },
+                  {
+                    "key": "Jax",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.18
+                  },
+                  {
+                    "key": "Malphite",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.2
+                  },
+                  {
+                    "key": "Shen",
+                    "games": 1,
+                    "wins": 1,
+                    "winrate": 100,
+                    "kda": 2
+                  }
+                ]
+              },
+              "JUNGLE": {
+                "games": 371,
+                "wins": 188,
+                "winrate": 50.7,
+                "kda": 2.43,
+                "gd15": -1403,
+                "champs": [
+                  {
+                    "key": "Zac",
+                    "games": 77,
+                    "wins": 41,
+                    "winrate": 53.2,
+                    "kda": 2.8
+                  },
+                  {
+                    "key": "Ivern",
+                    "games": 43,
+                    "wins": 25,
+                    "winrate": 58.1,
+                    "kda": 2.85
+                  },
+                  {
+                    "key": "Elise",
+                    "games": 41,
+                    "wins": 22,
+                    "winrate": 53.7,
+                    "kda": 2.41
+                  },
+                  {
+                    "key": "FiddleSticks",
+                    "games": 38,
+                    "wins": 22,
+                    "winrate": 57.9,
+                    "kda": 2.48
+                  },
+                  {
+                    "key": "Viego",
+                    "games": 30,
+                    "wins": 13,
+                    "winrate": 43.3,
+                    "kda": 1.87
+                  },
+                  {
+                    "key": "Rammus",
+                    "games": 20,
+                    "wins": 12,
+                    "winrate": 60,
+                    "kda": 3.59
+                  }
+                ]
+              },
+              "MIDDLE": {
+                "games": 11,
+                "wins": 3,
+                "winrate": 27.3,
+                "kda": 1.79,
+                "gd15": null,
+                "champs": [
+                  {
+                    "key": "Mel",
+                    "games": 3,
+                    "wins": 1,
+                    "winrate": 33.3,
+                    "kda": 1.61
+                  },
+                  {
+                    "key": "Lissandra",
+                    "games": 2,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.93
+                  },
+                  {
+                    "key": "Malzahar",
+                    "games": 2,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.44
+                  },
+                  {
+                    "key": "Naafiri",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.4
+                  },
+                  {
+                    "key": "Akali",
+                    "games": 1,
+                    "wins": 1,
+                    "winrate": 100,
+                    "kda": 4.67
+                  },
+                  {
+                    "key": "Ahri",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.5
+                  }
+                ]
+              },
+              "BOTTOM": {
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 2.4,
+                "gd15": null,
+                "champs": [
+                  {
+                    "key": "Ziggs",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 2.4
+                  }
+                ]
+              },
+              "UTILITY": {
+                "games": 450,
+                "wins": 238,
+                "winrate": 52.9,
+                "kda": 2.3,
+                "gd15": 83,
+                "champs": [
+                  {
+                    "key": "Rakan",
+                    "games": 66,
+                    "wins": 36,
+                    "winrate": 54.5,
+                    "kda": 2.7
+                  },
+                  {
+                    "key": "Thresh",
+                    "games": 63,
+                    "wins": 39,
+                    "winrate": 61.9,
+                    "kda": 2.55
+                  },
+                  {
+                    "key": "Galio",
+                    "games": 39,
+                    "wins": 21,
+                    "winrate": 53.8,
+                    "kda": 2.48
+                  },
+                  {
+                    "key": "Leona",
+                    "games": 31,
+                    "wins": 18,
+                    "winrate": 58.1,
+                    "kda": 2.75
+                  },
+                  {
+                    "key": "Pyke",
+                    "games": 25,
+                    "wins": 16,
+                    "winrate": 64,
+                    "kda": 1.89
+                  },
+                  {
+                    "key": "Karma",
+                    "games": 25,
+                    "wins": 10,
+                    "winrate": 40,
+                    "kda": 2.15
+                  }
+                ]
+              }
+            },
+            "awards": {
+              "oneTrick": {
+                "champ": "Zac",
+                "wins": 41,
+                "games": 78
+              },
+              "mainChar": {
+                "champ": "Thresh",
+                "winrate": 61.9,
+                "games": 63
+              },
+              "autofill": {
+                "lane": "UTILITY",
+                "games": 396,
+                "wins": 195,
+                "winrate": 49.2
+              },
+              "champPool": 53,
+              "kdaStreak": 3,
+              "avgKda": 3.12,
+              "pentas": 0,
+              "quadras": 3,
+              "quadraGames": 846,
+              "firstBloods": 62
+            },
+            "gameRecords": {
+              "kills": {
+                "id": "EUW1_7847872168",
+                "t": 1778348241706,
+                "dur": 1642,
+                "champ": "Viego",
+                "role": "JUNGLE",
+                "k": 22,
+                "d": 4,
+                "a": 8,
+                "win": true,
+                "kda": 7.5,
+                "val": 22
+              },
+              "assists": {
+                "id": "EUW1_7884953715",
+                "t": 1781283542999,
+                "dur": 1888,
+                "champ": "Nami",
+                "role": "UTILITY",
+                "k": 4,
+                "d": 5,
+                "a": 40,
+                "win": true,
+                "kda": 8.8,
+                "val": 40
+              },
+              "damage": {
+                "id": "EUW1_7764554348",
+                "t": 1772750878910,
+                "dur": 2080,
+                "champ": "Elise",
+                "role": "JUNGLE",
+                "k": 14,
+                "d": 5,
+                "a": 14,
+                "win": true,
+                "kda": 5.6,
+                "val": 65574
+              },
+              "vision": {
+                "id": "EUW1_7843793547",
+                "t": 1778012045297,
+                "dur": 2738,
+                "champ": "Thresh",
+                "role": "UTILITY",
+                "k": 5,
+                "d": 11,
+                "a": 26,
+                "win": false,
+                "kda": 2.82,
+                "val": 158
+              },
+              "longestWin": {
+                "id": "EUW1_7752022864",
+                "t": 1772041555540,
+                "dur": 2978,
+                "champ": "FiddleSticks",
+                "role": "JUNGLE",
+                "k": 10,
+                "d": 9,
+                "a": 20,
+                "win": true,
+                "kda": 3.33,
+                "val": 2978
+              },
+              "kda": {
+                "id": "EUW1_7952915263",
+                "t": 1786919233915,
+                "dur": 1370,
+                "champ": "Galio",
+                "role": "UTILITY",
+                "k": 3,
+                "d": 1,
+                "a": 20,
+                "win": true,
+                "kda": 23,
+                "val": 23
+              },
+              "kp": {
+                "id": "EUW1_7912434476",
+                "t": 1783522176829,
+                "dur": 2008,
+                "champ": "Milio",
+                "role": "UTILITY",
+                "k": 2,
+                "d": 6,
+                "a": 23,
+                "win": true,
+                "kda": 4.17,
+                "val": 89
+              },
+              "towers": {
+                "id": "EUW1_7751798666",
+                "t": 1772032738689,
+                "dur": 2991,
+                "champ": "Teemo",
+                "role": "TOP",
+                "k": 2,
+                "d": 11,
+                "a": 9,
+                "win": false,
+                "kda": 1,
+                "val": 13516
+              },
+              "gold": {
+                "id": "EUW1_7869800484",
+                "t": 1780076962406,
+                "dur": 3031,
+                "champ": "Zac",
+                "role": "JUNGLE",
+                "k": 14,
+                "d": 8,
+                "a": 24,
+                "win": false,
+                "kda": 4.75,
+                "val": 25581
+              },
+              "csMin": {
+                "id": "EUW1_7736611523",
+                "t": 1771277634900,
+                "dur": 1653,
+                "champ": "Malzahar",
+                "role": "MIDDLE",
+                "k": 5,
+                "d": 8,
+                "a": 2,
+                "win": false,
+                "kda": 0.88,
+                "val": 9
+              }
+            },
+            "lp": {
+              "win": 22,
+              "loss": -20,
+              "winN": 13,
+              "lossN": 6
+            }
+          },
+          "links": {
+            "opgg": "https://www.op.gg/summoners/euw/xPeris-6969",
+            "ugg": "https://u.gg/lol/profile/euw1/xPeris-6969/overview",
+            "dpm": "https://dpm.lol/xPeris-6969",
+            "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
+          },
+          "updatedAt": "2026-10-08T16:33:09.369Z",
+          "lpHist": [
+            [
+              1790720384833,
+              2035
+            ],
+            [
+              1790722393465,
+              2035
+            ],
+            [
+              1790805726808,
+              2055
+            ],
+            [
+              1790866841291,
+              2034
+            ],
+            [
+              1791040027460,
+              2054
+            ],
+            [
+              1791041714876,
+              2074
+            ],
+            [
+              1791043991080,
+              2054
+            ],
+            [
+              1791115314496,
+              2074
+            ],
+            [
+              1791153129419,
+              2094
+            ],
+            [
+              1791211484157,
+              2114
+            ],
+            [
+              1791213717819,
+              2134
+            ],
+            [
+              1791242319830,
+              2154
+            ],
+            [
+              1791328883161,
+              2134
+            ],
+            [
+              1791386585672,
+              2114
+            ],
+            [
+              1791389365940,
+              2094
+            ],
+            [
+              1791393549770,
+              2114
+            ],
+            [
+              1791395109417,
+              2134
+            ],
+            [
+              1791409946366,
+              2154
+            ],
+            [
+              1791469030633,
+              2174
+            ],
+            [
+              1791470890352,
+              2154
+            ],
+            [
+              1791477183873,
+              2194
+            ]
+          ],
+          "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8007342254",
+              "t": 1791477081261,
+              "dur": 1932,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 14,
+              "k": 3,
+              "d": 7,
+              "a": 20,
+              "kp": 59,
+              "cs": 27,
+              "vis": 99,
+              "dmg": 8176,
+              "teamDmg": 124498,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2677,
+              "goldEarned": 10392,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3109,
+                3211,
+                3009,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Alistar",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerExhaust"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 6019,
+                "maxLeadMin": 33,
+                "maxDef": -1679,
+                "tgd15": -52,
+                "gd15": 428
+              },
+              "lp": {
+                "d": 40,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8007258832",
+              "t": 1791470860561,
+              "dur": 1574,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 13,
+              "k": 2,
+              "d": 8,
+              "a": 13,
+              "kp": 60,
+              "cs": 20,
+              "vis": 46,
+              "dmg": 6963,
+              "teamDmg": 78234,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 276,
+              "goldEarned": 7789,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3009,
+                3110,
+                3076,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Rammus",
+                "spells": [
+                  "SummonerExhaust",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 0,
+                "maxLeadMin": 0,
+                "maxDef": -13794,
+                "tgd15": -4808,
+                "gd15": -728
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8007232946",
+              "t": 1791469001633,
+              "dur": 1888,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 14,
+              "k": 0,
+              "d": 5,
+              "a": 20,
+              "kp": 51,
+              "cs": 29,
+              "vis": 93,
+              "dmg": 7853,
+              "teamDmg": 130447,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 810,
+              "goldEarned": 9081,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3110,
+                3009,
+                3076,
+                1029,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Karma",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8109,
+                "maxLeadMin": 32,
+                "maxDef": -1031,
+                "tgd15": 1242,
+                "gd15": 114
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006838886",
+              "t": 1791409895201,
+              "dur": 1525,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 5,
+              "d": 6,
+              "a": 13,
+              "kp": 47,
+              "cs": 22,
+              "vis": 56,
+              "dmg": 10677,
+              "teamDmg": 108159,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3609,
+              "goldEarned": 8898,
+              "fb": true,
+              "items": [
+                3190,
+                3876,
+                3050,
+                3110,
+                3009,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Bard",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 6133,
+                "maxLeadMin": 26,
+                "maxDef": -25,
+                "tgd15": 1189,
+                "gd15": -372
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006513293",
+              "t": 1791395079410,
+              "dur": 1286,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 10,
+              "k": 1,
+              "d": 4,
+              "a": 14,
+              "kp": 47,
+              "cs": 20,
+              "vis": 37,
+              "dmg": 5844,
+              "teamDmg": 78969,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3084,
+              "goldEarned": 6913,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3109,
+                2022,
+                3009,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Karma",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 13716,
+                "maxLeadMin": 22,
+                "maxDef": 0,
+                "tgd15": 7252,
+                "gd15": 589
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006492692",
+              "t": 1791393464273,
+              "dur": 1343,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 10,
+              "k": 0,
+              "d": 4,
+              "a": 13,
+              "kp": 35,
+              "cs": 25,
+              "vis": 46,
+              "dmg": 5337,
+              "teamDmg": 85454,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3424,
+              "goldEarned": 6407,
+              "fb": false,
+              "items": [
+                3190,
+                3067,
+                3876,
+                1029,
+                3009,
+                1033,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Milio",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 14497,
+                "maxLeadMin": 22,
+                "maxDef": -341,
+                "tgd15": 5980,
+                "gd15": 437
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006395060",
+              "t": 1791389305332,
+              "dur": 2414,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 15,
+              "k": 2,
+              "d": 7,
+              "a": 30,
+              "kp": 55,
+              "cs": 40,
+              "vis": 110,
+              "dmg": 11658,
+              "teamDmg": 168251,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1989,
+              "goldEarned": 12617,
+              "fb": false,
+              "items": [
+                3190,
+                3109,
+                3876,
+                3050,
+                3009,
+                3075,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Ivern",
+                "spells": [
+                  "SummonerExhaust",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 9108,
+                "maxLeadMin": 16,
+                "maxDef": -9093,
+                "tgd15": 8956,
+                "gd15": 945
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006361188",
+              "t": 1791386527797,
+              "dur": 1903,
+              "win": false,
+              "champ": "Elise",
+              "role": "UTILITY",
+              "lvl": 14,
+              "k": 6,
+              "d": 9,
+              "a": 9,
+              "kp": 44,
+              "cs": 40,
+              "vis": 68,
+              "dmg": 16325,
+              "teamDmg": 107874,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 10413,
+              "fb": false,
+              "items": [
+                4646,
+                3871,
+                4645,
+                3020,
+                3067,
+                3916,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerExhaust"
+              ],
+              "runes": [
+                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Teemo",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 2361,
+                "maxLeadMin": 15,
+                "maxDef": -6716,
+                "tgd15": 2361,
+                "gd15": -725
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8006032013",
+              "t": 1791328764521,
+              "dur": 936,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 7,
+              "k": 0,
+              "d": 5,
+              "a": 2,
+              "kp": 50,
+              "cs": 24,
+              "vis": 20,
+              "dmg": 2733,
+              "teamDmg": 27627,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 3699,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                1001,
+                0,
+                0,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Xerath",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 22,
+                "maxLeadMin": 2,
+                "maxDef": -11630,
+                "tgd15": -11015,
+                "gd15": -820
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8005140926",
+              "t": 1791242253739,
+              "dur": 1582,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 13,
+              "k": 1,
+              "d": 8,
+              "a": 19,
+              "kp": 71,
+              "cs": 29,
+              "vis": 66,
+              "dmg": 7391,
+              "teamDmg": 86397,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1058,
+              "goldEarned": 8228,
+              "fb": false,
+              "items": [
+                3190,
+                0,
+                3876,
+                3009,
+                1028,
+                3109,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Leona",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 14958,
+                "maxLeadMin": 27,
+                "maxDef": -689,
+                "tgd15": 1445,
+                "gd15": -319
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8004584850",
+              "t": 1791213670450,
+              "dur": 1928,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 13,
+              "k": 2,
+              "d": 10,
+              "a": 14,
+              "kp": 39,
+              "cs": 31,
+              "vis": 77,
+              "dmg": 10993,
+              "teamDmg": 151527,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1491,
+              "goldEarned": 9230,
+              "fb": false,
+              "items": [
+                3190,
+                3211,
+                3876,
+                1057,
+                3009,
+                3109,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Leona",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 2034,
+                "maxLeadMin": 11,
+                "maxDef": -4605,
+                "tgd15": 379,
+                "gd15": 105
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8004553734",
+              "t": 1791211415550,
+              "dur": 2219,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 15,
+              "k": 1,
+              "d": 7,
+              "a": 19,
+              "kp": 50,
+              "cs": 18,
+              "vis": 101,
+              "dmg": 9541,
+              "teamDmg": 165383,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6783,
+              "goldEarned": 9895,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3009,
+                3109,
+                3067,
+                1029,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Lulu",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 7254,
+                "maxLeadMin": 37,
+                "maxDef": -4378,
+                "tgd15": -842,
+                "gd15": -770
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8004193999",
+              "t": 1791153025867,
+              "dur": 1559,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 1,
+              "d": 6,
+              "a": 14,
+              "kp": 48,
+              "cs": 21,
+              "vis": 81,
+              "dmg": 8905,
+              "teamDmg": 81670,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3363,
+              "goldEarned": 8513,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3050,
+                3067,
+                0,
+                3009,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Pyke",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 10655,
+                "maxLeadMin": 26,
+                "maxDef": -211,
+                "tgd15": 3774,
+                "gd15": 910
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8003403307",
+              "t": 1791115242403,
+              "dur": 1851,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 16,
+              "k": 3,
+              "d": 8,
+              "a": 22,
+              "kp": 81,
+              "cs": 31,
+              "vis": 64,
+              "dmg": 12593,
+              "teamDmg": 128341,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2177,
+              "goldEarned": 10189,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3110,
+                3050,
+                3009,
+                1029,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Nami",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 10821,
+                "maxLeadMin": 31,
+                "maxDef": -3397,
+                "tgd15": -2275,
+                "gd15": -657
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8002581306",
+              "t": 1791043950162,
+              "dur": 2074,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 14,
+              "k": 1,
+              "d": 13,
+              "a": 19,
+              "kp": 48,
+              "cs": 27,
+              "vis": 114,
+              "dmg": 10286,
+              "teamDmg": 154018,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1038,
+              "goldEarned": 10138,
+              "fb": false,
+              "items": [
+                3190,
+                3050,
+                3876,
+                3009,
+                2524,
+                3076,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Nami",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 3017,
+                "maxLeadMin": 18,
+                "maxDef": -6085,
+                "tgd15": 1567,
+                "gd15": -585
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8002551172",
+              "t": 1791041629831,
+              "dur": 1368,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 5,
+              "d": 6,
+              "a": 25,
+              "kp": 77,
+              "cs": 15,
+              "vis": 50,
+              "dmg": 11288,
+              "teamDmg": 94867,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4178,
+              "goldEarned": 9585,
+              "fb": true,
+              "items": [
+                3190,
+                3876,
+                3050,
+                3009,
+                3067,
+                1031,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Resolve/Guardian/Guardian.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Neeko",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8980,
+                "maxLeadMin": 18,
+                "maxDef": -79,
+                "tgd15": 5923,
+                "gd15": 1699
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8002516327",
+              "t": 1791040008003,
+              "dur": 1517,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 13,
+              "k": 2,
+              "d": 10,
+              "a": 26,
+              "kp": 65,
+              "cs": 20,
+              "vis": 62,
+              "dmg": 4839,
+              "teamDmg": 84158,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5392,
+              "goldEarned": 8755,
+              "fb": true,
+              "items": [
+                3190,
+                3050,
+                3876,
+                3067,
+                3009,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Lux",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerExhaust"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 11787,
+                "maxLeadMin": 26,
+                "maxDef": -303,
+                "tgd15": -45,
+                "gd15": -374
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8000514841",
+              "t": 1790866783568,
+              "dur": 1542,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 10,
+              "k": 1,
+              "d": 8,
+              "a": 14,
+              "kp": 68,
+              "cs": 19,
+              "vis": 44,
+              "dmg": 8240,
+              "teamDmg": 82299,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2856,
+              "goldEarned": 7316,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3050,
+                1029,
+                1029,
+                3009,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerExhaust"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Bard",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 900,
+                "maxLeadMin": 11,
+                "maxDef": -12738,
+                "tgd15": -1635,
+                "gd15": 602
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_8000088439",
+              "t": 1790805676557,
+              "dur": 1396,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 11,
+              "k": 0,
+              "d": 3,
+              "a": 16,
+              "kp": 53,
+              "cs": 29,
+              "vis": 51,
+              "dmg": 4193,
+              "teamDmg": 79992,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 489,
+              "goldEarned": 7109,
+              "fb": false,
+              "items": [
+                3190,
+                3067,
+                3876,
+                3009,
+                1029,
+                1033,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerExhaust"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Lulu",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 10669,
+                "maxLeadMin": 24,
+                "maxDef": -411,
+                "tgd15": 2676,
+                "gd15": -318
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
+            {
+              "v": 4,
+              "id": "EUW1_7998698424",
+              "t": 1790698364599,
+              "dur": 1083,
+              "win": true,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 10,
+              "k": 4,
+              "d": 0,
+              "a": 8,
+              "kp": 50,
+              "cs": 23,
+              "vis": 33,
+              "dmg": 6499,
+              "teamDmg": 63797,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3862,
+              "goldEarned": 6722,
+              "fb": false,
+              "items": [
+                3190,
+                0,
+                3876,
+                3009,
+                1031,
+                3067,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Lulu",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 8425,
+                "maxLeadMin": 18,
+                "maxDef": -132,
+                "tgd15": 5626,
+                "gd15": 1375
+              },
+              "lp": null
+            }
+          ],
+          "seq": [
+            [
+              1791477081261,
+              1,
+              40
+            ],
+            [
+              1791470860561,
+              0,
+              -20
+            ],
+            [
+              1791469001633,
+              1,
+              20
+            ],
+            [
+              1791409895201,
+              1,
+              20
+            ],
+            [
+              1791395079410,
+              1,
+              20
+            ],
+            [
+              1791393464273,
+              1,
+              20
+            ],
+            [
+              1791389305332,
+              0,
+              -20
+            ],
+            [
+              1791386527797,
+              0,
+              -20
+            ],
+            [
+              1791328764521,
+              0,
+              -20
+            ],
+            [
+              1791242253739,
+              1,
+              20
+            ],
+            [
+              1791213670450,
+              1,
+              20
+            ],
+            [
+              1791211415550,
+              1,
+              20
+            ],
+            [
+              1791153025867,
+              1,
+              20
+            ],
+            [
+              1791115242403,
+              1,
+              20
+            ],
+            [
+              1791043950162,
+              0,
+              -20
+            ],
+            [
+              1791041629831,
+              1,
+              20
+            ],
+            [
+              1791040008003,
+              1,
+              20
+            ],
+            [
+              1790866783568,
+              0,
+              -21
+            ],
+            [
+              1790805676557,
+              1,
+              20
+            ],
+            [
+              1790698364599,
+              1,
+              null
+            ],
+            [
+              1790632295058,
+              0,
+              null
+            ],
+            [
+              1790610257288,
+              1,
+              null
+            ],
+            [
+              1790548403036,
+              1,
+              null
+            ],
+            [
+              1790546281622,
+              1,
+              null
+            ],
+            [
+              1790544551629,
+              1,
+              null
+            ],
+            [
+              1790542240650,
+              1,
+              null
+            ],
+            [
+              1790525792097,
+              0,
+              null
+            ],
+            [
+              1790523501456,
+              0,
+              null
+            ],
+            [
+              1790514344916,
+              1,
+              null
+            ],
+            [
+              1790436309524,
+              1,
+              null
+            ],
+            [
+              1790182171378,
+              0,
+              null
+            ],
+            [
+              1790111288429,
+              1,
+              null
+            ],
+            [
+              1790027097030,
+              0,
+              null
+            ],
+            [
+              1789942478241,
+              0,
+              null
+            ],
+            [
+              1789940004976,
+              1,
+              null
+            ],
+            [
+              1789938854856,
+              1,
+              null
+            ],
+            [
+              1789854303914,
+              0,
+              null
+            ],
+            [
+              1789848664781,
+              0,
+              null
+            ],
+            [
+              1789833434678,
+              0,
+              null
+            ],
+            [
+              1789749932070,
+              1,
+              null
+            ],
+            [
+              1789684031183,
+              0,
+              null
+            ],
+            [
+              1789665677853,
+              0,
+              null
+            ],
+            [
+              1789593660791,
+              0,
+              null
+            ],
+            [
+              1789582474870,
+              0,
+              null
+            ],
+            [
+              1789580371794,
+              1,
+              null
+            ],
+            [
+              1789578029622,
+              1,
+              null
+            ],
+            [
+              1789576037693,
+              1,
+              null
+            ],
+            [
+              1789574023106,
+              0,
+              null
+            ],
+            [
+              1789572311980,
+              1,
+              null
+            ],
+            [
+              1789508356540,
+              1,
+              null
+            ],
+            [
+              1789506077681,
+              1,
+              null
+            ],
+            [
+              1789487864402,
+              1,
+              null
+            ],
+            [
+              1789420976791,
+              0,
+              null
+            ],
+            [
+              1789419125807,
+              0,
+              null
+            ],
+            [
+              1789410418535,
+              1,
+              null
+            ],
+            [
+              1789397164950,
+              1,
+              null
+            ],
+            [
+              1789338730314,
+              0,
+              null
+            ],
+            [
+              1789336743800,
+              1,
+              null
+            ],
+            [
+              1789334977355,
+              1,
+              null
+            ],
+            [
+              1789313746483,
+              0,
+              null
+            ],
+            [
+              1789310592301,
+              1,
+              null
+            ],
+            [
+              1789258333687,
+              1,
+              null
+            ],
+            [
+              1789252652426,
+              0,
+              null
+            ],
+            [
+              1789224314468,
+              1,
+              null
+            ],
+            [
+              1789222302493,
+              0,
+              null
+            ],
+            [
+              1789147660924,
+              0,
+              null
+            ],
+            [
+              1789144778565,
+              1,
+              null
+            ],
+            [
+              1789140897705,
+              0,
+              null
+            ],
+            [
+              1789139023299,
+              0,
+              null
+            ],
+            [
+              1789077314911,
+              0,
+              null
+            ],
+            [
+              1789075338493,
+              0,
+              null
+            ],
+            [
+              1789062103979,
+              0,
+              null
+            ],
+            [
+              1789059962695,
+              0,
+              null
+            ],
+            [
+              1789057022752,
+              1,
+              null
+            ],
+            [
+              1789054889505,
+              0,
+              null
+            ],
+            [
+              1789052226470,
+              0,
+              null
+            ],
+            [
+              1788985171615,
+              1,
+              null
+            ],
+            [
+              1788978871378,
+              0,
+              null
+            ],
+            [
+              1788976305905,
+              1,
+              null
+            ],
+            [
+              1788973413751,
+              0,
+              null
+            ],
+            [
+              1788971713800,
+              1,
+              null
+            ],
+            [
+              1788906242849,
+              0,
+              null
+            ],
+            [
+              1788903777233,
+              1,
+              null
+            ],
+            [
+              1788817059197,
+              0,
+              null
+            ],
+            [
+              1788733887430,
+              1,
+              null
+            ],
+            [
+              1788731613920,
+              1,
+              null
+            ],
+            [
+              1788637557728,
+              1,
+              null
+            ],
+            [
+              1788633356112,
+              0,
+              null
+            ],
+            [
+              1788631169359,
+              0,
+              null
+            ],
+            [
+              1788607529674,
+              0,
+              null
+            ],
+            [
+              1788564466040,
+              0,
+              null
+            ],
+            [
+              1788560936218,
+              1,
+              null
+            ],
+            [
+              1788558780706,
+              1,
+              null
+            ],
+            [
+              1788555904193,
+              0,
+              null
+            ],
+            [
+              1788553771215,
+              1,
+              null
+            ],
+            [
+              1788550656308,
+              1,
+              null
+            ],
+            [
+              1788548459688,
+              1,
+              null
+            ],
+            [
+              1788545361481,
+              1,
+              null
+            ],
+            [
+              1788476017532,
+              0,
+              null
+            ],
+            [
+              1788375738010,
+              1,
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
@@ -7835,3208 +11044,6 @@
             ],
             [
               1788805175654,
-              0,
-              null
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "name": "xPeris",
-      "links": [],
-      "bestAccount": 0,
-      "score": 2154,
-      "accounts": [
-        {
-          "riotId": "xPeris#6969",
-          "gameName": "xPeris",
-          "tagLine": "6969",
-          "label": null,
-          "region": "euw1",
-          "level": 612,
-          "profileIconId": 7120,
-          "rank": {
-            "tier": "EMERALD",
-            "division": "III",
-            "lp": 54,
-            "wins": 437,
-            "losses": 424,
-            "winrate": 50.8,
-            "hotStreak": false
-          },
-          "stats": {
-            "games": 845,
-            "wins": 432,
-            "losses": 413,
-            "winrate": 51.1,
-            "avgK": 4.5,
-            "avgD": 7.8,
-            "avgA": 13.7,
-            "kda": 2.33,
-            "csPerMin": 3.1,
-            "visPerMin": 1.78,
-            "dmgShare": 13.8,
-            "avgDurationMin": 30.4,
-            "streak": {
-              "current": {
-                "type": "L",
-                "count": 1
-              },
-              "bestWin": 10,
-              "worstLoss": 8
-            },
-            "form": [
-              "L",
-              "W",
-              "W",
-              "W",
-              "W",
-              "L",
-              "L",
-              "L",
-              "W",
-              "W"
-            ],
-            "trend": [
-              0,
-              1,
-              1,
-              0,
-              1,
-              1,
-              0,
-              1,
-              1,
-              1,
-              1,
-              1,
-              0,
-              0,
-              0,
-              1,
-              1,
-              1,
-              1,
-              0
-            ],
-            "mainRole": "UTILITY",
-            "last10": {
-              "games": 10,
-              "wins": 6,
-              "losses": 4,
-              "winrate": 60
-            },
-            "last20": {
-              "games": 20,
-              "wins": 13,
-              "losses": 7,
-              "winrate": 65
-            },
-            "topChamps": [
-              {
-                "key": "Zac",
-                "games": 78,
-                "wins": 41,
-                "winrate": 52.6,
-                "kda": 2.78
-              },
-              {
-                "key": "Rakan",
-                "games": 66,
-                "wins": 36,
-                "winrate": 54.5,
-                "kda": 2.7
-              },
-              {
-                "key": "Thresh",
-                "games": 62,
-                "wins": 38,
-                "winrate": 61.3,
-                "kda": 2.54
-              },
-              {
-                "key": "Elise",
-                "games": 53,
-                "wins": 28,
-                "winrate": 52.8,
-                "kda": 2.26
-              },
-              {
-                "key": "Ivern",
-                "games": 45,
-                "wins": 26,
-                "winrate": 57.8,
-                "kda": 2.79
-              }
-            ],
-            "bestChamp": {
-              "key": "Xerath",
-              "games": 11,
-              "wins": 10,
-              "winrate": 90.9,
-              "kda": 2.01
-            },
-            "worstChamp": {
-              "key": "Jax",
-              "games": 4,
-              "wins": 0,
-              "winrate": 0,
-              "kda": 1.41
-            },
-            "bestRole": {
-              "key": "UTILITY",
-              "games": 449,
-              "wins": 237,
-              "winrate": 52.8,
-              "kda": 2.3
-            },
-            "worstRole": {
-              "key": "MIDDLE",
-              "games": 11,
-              "wins": 3,
-              "winrate": 27.3,
-              "kda": 1.79
-            },
-            "bestGame": {
-              "id": "EUW1_7850457879",
-              "t": 1778533080505,
-              "dur": 1753,
-              "champ": "Viego",
-              "role": "JUNGLE",
-              "k": 15,
-              "d": 1,
-              "a": 8,
-              "win": true,
-              "kda": 23
-            },
-            "worstGame": {
-              "id": "EUW1_7979431751",
-              "t": 1789062103979,
-              "dur": 1608,
-              "champ": "Braum",
-              "role": "UTILITY",
-              "k": 0,
-              "d": 10,
-              "a": 1,
-              "win": false,
-              "kda": 0.1
-            },
-            "firstGameAt": 1768843553467,
-            "lastGameAt": 1791470860561,
-            "totals": {
-              "k": 3817,
-              "d": 6594,
-              "a": 11565
-            },
-            "dmgPerMin": 548,
-            "avgVision": 54.2,
-            "pentas": 0,
-            "firstBloods": 62,
-            "maxKills": 22,
-            "maxDurationMin": 50.5,
-            "avgKp": 54,
-            "champs": [
-              {
-                "key": "Zac",
-                "games": 78,
-                "wins": 41,
-                "winrate": 52.6,
-                "kda": 2.78,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Rakan",
-                "games": 66,
-                "wins": 36,
-                "winrate": 54.5,
-                "kda": 2.7,
-                "csPerMin": 1
-              },
-              {
-                "key": "Thresh",
-                "games": 62,
-                "wins": 38,
-                "winrate": 61.3,
-                "kda": 2.54,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Elise",
-                "games": 53,
-                "wins": 28,
-                "winrate": 52.8,
-                "kda": 2.26,
-                "csPerMin": 4.2
-              },
-              {
-                "key": "Ivern",
-                "games": 45,
-                "wins": 26,
-                "winrate": 57.8,
-                "kda": 2.79,
-                "csPerMin": 4.4
-              },
-              {
-                "key": "FiddleSticks",
-                "games": 43,
-                "wins": 24,
-                "winrate": 55.8,
-                "kda": 2.42,
-                "csPerMin": 5.1
-              },
-              {
-                "key": "Galio",
-                "games": 39,
-                "wins": 21,
-                "winrate": 53.8,
-                "kda": 2.48,
-                "csPerMin": 1.3
-              },
-              {
-                "key": "Leona",
-                "games": 31,
-                "wins": 18,
-                "winrate": 58.1,
-                "kda": 2.75,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Viego",
-                "games": 30,
-                "wins": 13,
-                "winrate": 43.3,
-                "kda": 1.87,
-                "csPerMin": 5.8
-              },
-              {
-                "key": "Pyke",
-                "games": 25,
-                "wins": 16,
-                "winrate": 64,
-                "kda": 1.89,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Karma",
-                "games": 25,
-                "wins": 10,
-                "winrate": 40,
-                "kda": 2.15,
-                "csPerMin": 1.4
-              },
-              {
-                "key": "Nautilus",
-                "games": 23,
-                "wins": 14,
-                "winrate": 60.9,
-                "kda": 2.65,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Nami",
-                "games": 22,
-                "wins": 9,
-                "winrate": 40.9,
-                "kda": 2.57,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Milio",
-                "games": 21,
-                "wins": 7,
-                "winrate": 33.3,
-                "kda": 2.5,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Shyvana",
-                "games": 20,
-                "wins": 11,
-                "winrate": 55,
-                "kda": 2.45,
-                "csPerMin": 6.8
-              },
-              {
-                "key": "Rammus",
-                "games": 20,
-                "wins": 12,
-                "winrate": 60,
-                "kda": 3.59,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Maokai",
-                "games": 15,
-                "wins": 6,
-                "winrate": 40,
-                "kda": 2.39,
-                "csPerMin": 3.1
-              },
-              {
-                "key": "Nocturne",
-                "games": 14,
-                "wins": 7,
-                "winrate": 50,
-                "kda": 2.25,
-                "csPerMin": 6
-              },
-              {
-                "key": "Alistar",
-                "games": 13,
-                "wins": 7,
-                "winrate": 53.8,
-                "kda": 2.08,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Braum",
-                "games": 13,
-                "wins": 7,
-                "winrate": 53.8,
-                "kda": 2.12,
-                "csPerMin": 0.8
-              },
-              {
-                "key": "Nunu",
-                "games": 13,
-                "wins": 5,
-                "winrate": 38.5,
-                "kda": 2.05,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Pantheon",
-                "games": 12,
-                "wins": 8,
-                "winrate": 66.7,
-                "kda": 1.75,
-                "csPerMin": 1.7
-              },
-              {
-                "key": "Sylas",
-                "games": 12,
-                "wins": 6,
-                "winrate": 50,
-                "kda": 1.71,
-                "csPerMin": 4.7
-              },
-              {
-                "key": "Malphite",
-                "games": 11,
-                "wins": 4,
-                "winrate": 36.4,
-                "kda": 1.84,
-                "csPerMin": 4.7
-              },
-              {
-                "key": "Xerath",
-                "games": 11,
-                "wins": 10,
-                "winrate": 90.9,
-                "kda": 2.01,
-                "csPerMin": 1.7
-              },
-              {
-                "key": "Shen",
-                "games": 9,
-                "wins": 5,
-                "winrate": 55.6,
-                "kda": 3.13,
-                "csPerMin": 3.1
-              },
-              {
-                "key": "Rengar",
-                "games": 8,
-                "wins": 4,
-                "winrate": 50,
-                "kda": 1.6,
-                "csPerMin": 5.6
-              },
-              {
-                "key": "Blitzcrank",
-                "games": 8,
-                "wins": 5,
-                "winrate": 62.5,
-                "kda": 2.43,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Lulu",
-                "games": 8,
-                "wins": 3,
-                "winrate": 37.5,
-                "kda": 2.1,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Brand",
-                "games": 6,
-                "wins": 2,
-                "winrate": 33.3,
-                "kda": 1.62,
-                "csPerMin": 2.1
-              },
-              {
-                "key": "Sejuani",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 2.52,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Mel",
-                "games": 5,
-                "wins": 2,
-                "winrate": 40,
-                "kda": 1.5,
-                "csPerMin": 4.2
-              },
-              {
-                "key": "Jax",
-                "games": 4,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.41,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Zilean",
-                "games": 4,
-                "wins": 3,
-                "winrate": 75,
-                "kda": 2.58,
-                "csPerMin": 1.1
-              },
-              {
-                "key": "Kayn",
-                "games": 4,
-                "wins": 2,
-                "winrate": 50,
-                "kda": 1.67,
-                "csPerMin": 5.7
-              },
-              {
-                "key": "Teemo",
-                "games": 3,
-                "wins": 1,
-                "winrate": 33.3,
-                "kda": 1.42,
-                "csPerMin": 4.7
-              },
-              {
-                "key": "MonkeyKing",
-                "games": 3,
-                "wins": 2,
-                "winrate": 66.7,
-                "kda": 2.36,
-                "csPerMin": 5.9
-              },
-              {
-                "key": "Lissandra",
-                "games": 3,
-                "wins": 1,
-                "winrate": 33.3,
-                "kda": 1.68,
-                "csPerMin": 4.2
-              },
-              {
-                "key": "Ornn",
-                "games": 3,
-                "wins": 1,
-                "winrate": 33.3,
-                "kda": 1.83,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Yuumi",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.92,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Janna",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 2.6,
-                "csPerMin": 0.6
-              },
-              {
-                "key": "Soraka",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 1.86,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Briar",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 1.75,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "XinZhao",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.58,
-                "csPerMin": 4.9
-              },
-              {
-                "key": "Seraphine",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 5.9,
-                "csPerMin": 1.3
-              },
-              {
-                "key": "Volibear",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 1.14,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Renata",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.84,
-                "csPerMin": 1
-              },
-              {
-                "key": "Renekton",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.48,
-                "csPerMin": 6.7
-              },
-              {
-                "key": "Bard",
-                "games": 2,
-                "wins": 1,
-                "winrate": 50,
-                "kda": 2.81,
-                "csPerMin": 0.7
-              },
-              {
-                "key": "Neeko",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2,
-                "csPerMin": 5.1
-              },
-              {
-                "key": "Malzahar",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.44,
-                "csPerMin": 7.8
-              },
-              {
-                "key": "Rell",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.22,
-                "csPerMin": 0.9
-              },
-              {
-                "key": "Morgana",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.8,
-                "csPerMin": 1.5
-              },
-              {
-                "key": "Swain",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.93,
-                "csPerMin": 1
-              },
-              {
-                "key": "Velkoz",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.36,
-                "csPerMin": 2.2
-              },
-              {
-                "key": "Chogath",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.1,
-                "csPerMin": 5.3
-              },
-              {
-                "key": "Fizz",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.25,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Lux",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.93,
-                "csPerMin": 1.2
-              },
-              {
-                "key": "Rumble",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.71,
-                "csPerMin": 6.2
-              },
-              {
-                "key": "Naafiri",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.4,
-                "csPerMin": 4.9
-              },
-              {
-                "key": "Skarner",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 3.14,
-                "csPerMin": 5.5
-              },
-              {
-                "key": "Poppy",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.83,
-                "csPerMin": 1
-              },
-              {
-                "key": "Anivia",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.1,
-                "csPerMin": 1.2
-              },
-              {
-                "key": "Senna",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.8,
-                "csPerMin": 1.4
-              },
-              {
-                "key": "Zyra",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.44,
-                "csPerMin": 1.9
-              },
-              {
-                "key": "Ziggs",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.4,
-                "csPerMin": 5.3
-              },
-              {
-                "key": "Olaf",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.45,
-                "csPerMin": 6.1
-              },
-              {
-                "key": "Annie",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 2.73,
-                "csPerMin": 0.8
-              },
-              {
-                "key": "Ambessa",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.67,
-                "csPerMin": 5.2
-              },
-              {
-                "key": "Garen",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 1.38,
-                "csPerMin": 6.1
-              },
-              {
-                "key": "TahmKench",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.4,
-                "csPerMin": 1.4
-              },
-              {
-                "key": "DrMundo",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 5.33,
-                "csPerMin": 6.5
-              },
-              {
-                "key": "Akali",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 4.67,
-                "csPerMin": 6.5
-              },
-              {
-                "key": "MasterYi",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 0.85,
-                "csPerMin": 5.4
-              },
-              {
-                "key": "Qiyana",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.31,
-                "csPerMin": 4.9
-              },
-              {
-                "key": "Diana",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 3.4,
-                "csPerMin": 5.6
-              },
-              {
-                "key": "Ahri",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.5,
-                "csPerMin": 4.8
-              },
-              {
-                "key": "Vi",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 3.29,
-                "csPerMin": 5.3
-              },
-              {
-                "key": "Veigar",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 3.25,
-                "csPerMin": 7.4
-              },
-              {
-                "key": "Ashe",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.4,
-                "csPerMin": 1.3
-              },
-              {
-                "key": "LeeSin",
-                "games": 1,
-                "wins": 1,
-                "winrate": 100,
-                "kda": 3.5,
-                "csPerMin": 5.5
-              },
-              {
-                "key": "Amumu",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.4,
-                "csPerMin": 5
-              }
-            ],
-            "roles": [
-              {
-                "key": "UTILITY",
-                "games": 449,
-                "wins": 237,
-                "winrate": 52.8,
-                "kda": 2.3
-              },
-              {
-                "key": "JUNGLE",
-                "games": 371,
-                "wins": 188,
-                "winrate": 50.7,
-                "kda": 2.43
-              },
-              {
-                "key": "TOP",
-                "games": 13,
-                "wins": 4,
-                "winrate": 30.8,
-                "kda": 1.38
-              },
-              {
-                "key": "MIDDLE",
-                "games": 11,
-                "wins": 3,
-                "winrate": 27.3,
-                "kda": 1.79
-              },
-              {
-                "key": "BOTTOM",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.4
-              }
-            ],
-            "gold": {
-              "games": 116,
-              "avgGd15": 43,
-              "avgTgd15": 265,
-              "throws": 14,
-              "comebacks": 11,
-              "biggestThrow": {
-                "id": "EUW1_8006395060",
-                "t": 1791389305332,
-                "dur": 2414,
-                "champ": "Thresh",
-                "role": "UTILITY",
-                "k": 2,
-                "d": 7,
-                "a": 30,
-                "win": false,
-                "kda": 4.57,
-                "val": 9108,
-                "min": 16
-              },
-              "biggestComeback": {
-                "id": "EUW1_7985064657",
-                "t": 1789506077681,
-                "dur": 2240,
-                "champ": "Elise",
-                "role": "UTILITY",
-                "k": 8,
-                "d": 12,
-                "a": 18,
-                "win": true,
-                "kda": 2.17,
-                "val": -7572,
-                "min": 0
-              },
-              "biggestLead": {
-                "id": "EUW1_7971010086",
-                "t": 1788375738010,
-                "dur": 1758,
-                "champ": "Pyke",
-                "role": "UTILITY",
-                "k": 12,
-                "d": 8,
-                "a": 11,
-                "win": true,
-                "kda": 2.88,
-                "val": 17679,
-                "min": 30
-              },
-              "best15": {
-                "id": "EUW1_7971010086",
-                "t": 1788375738010,
-                "dur": 1758,
-                "champ": "Pyke",
-                "role": "UTILITY",
-                "k": 12,
-                "d": 8,
-                "a": 11,
-                "win": true,
-                "kda": 2.88,
-                "val": 1953,
-                "min": 30
-              },
-              "worst15": {
-                "id": "EUW1_7970274130",
-                "t": 1788303658142,
-                "dur": 2077,
-                "champ": "Nami",
-                "role": "UTILITY",
-                "k": 0,
-                "d": 18,
-                "a": 18,
-                "win": false,
-                "kda": 1,
-                "val": -3794,
-                "min": 32
-              }
-            },
-            "byRole": {
-              "TOP": {
-                "games": 13,
-                "wins": 4,
-                "winrate": 30.8,
-                "kda": 1.38,
-                "gd15": -1234,
-                "champs": [
-                  {
-                    "key": "Ornn",
-                    "games": 3,
-                    "wins": 1,
-                    "winrate": 33.3,
-                    "kda": 1.83
-                  },
-                  {
-                    "key": "Renekton",
-                    "games": 2,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 0.48
-                  },
-                  {
-                    "key": "Shyvana",
-                    "games": 2,
-                    "wins": 1,
-                    "winrate": 50,
-                    "kda": 2.78
-                  },
-                  {
-                    "key": "Jax",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.18
-                  },
-                  {
-                    "key": "Malphite",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.2
-                  },
-                  {
-                    "key": "Shen",
-                    "games": 1,
-                    "wins": 1,
-                    "winrate": 100,
-                    "kda": 2
-                  }
-                ]
-              },
-              "JUNGLE": {
-                "games": 371,
-                "wins": 188,
-                "winrate": 50.7,
-                "kda": 2.43,
-                "gd15": -1403,
-                "champs": [
-                  {
-                    "key": "Zac",
-                    "games": 77,
-                    "wins": 41,
-                    "winrate": 53.2,
-                    "kda": 2.8
-                  },
-                  {
-                    "key": "Ivern",
-                    "games": 43,
-                    "wins": 25,
-                    "winrate": 58.1,
-                    "kda": 2.85
-                  },
-                  {
-                    "key": "Elise",
-                    "games": 41,
-                    "wins": 22,
-                    "winrate": 53.7,
-                    "kda": 2.41
-                  },
-                  {
-                    "key": "FiddleSticks",
-                    "games": 38,
-                    "wins": 22,
-                    "winrate": 57.9,
-                    "kda": 2.48
-                  },
-                  {
-                    "key": "Viego",
-                    "games": 30,
-                    "wins": 13,
-                    "winrate": 43.3,
-                    "kda": 1.87
-                  },
-                  {
-                    "key": "Rammus",
-                    "games": 20,
-                    "wins": 12,
-                    "winrate": 60,
-                    "kda": 3.59
-                  }
-                ]
-              },
-              "MIDDLE": {
-                "games": 11,
-                "wins": 3,
-                "winrate": 27.3,
-                "kda": 1.79,
-                "gd15": null,
-                "champs": [
-                  {
-                    "key": "Mel",
-                    "games": 3,
-                    "wins": 1,
-                    "winrate": 33.3,
-                    "kda": 1.61
-                  },
-                  {
-                    "key": "Lissandra",
-                    "games": 2,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.93
-                  },
-                  {
-                    "key": "Malzahar",
-                    "games": 2,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.44
-                  },
-                  {
-                    "key": "Naafiri",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.4
-                  },
-                  {
-                    "key": "Akali",
-                    "games": 1,
-                    "wins": 1,
-                    "winrate": 100,
-                    "kda": 4.67
-                  },
-                  {
-                    "key": "Ahri",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 1.5
-                  }
-                ]
-              },
-              "BOTTOM": {
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 2.4,
-                "gd15": null,
-                "champs": [
-                  {
-                    "key": "Ziggs",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 2.4
-                  }
-                ]
-              },
-              "UTILITY": {
-                "games": 449,
-                "wins": 237,
-                "winrate": 52.8,
-                "kda": 2.3,
-                "gd15": 80,
-                "champs": [
-                  {
-                    "key": "Rakan",
-                    "games": 66,
-                    "wins": 36,
-                    "winrate": 54.5,
-                    "kda": 2.7
-                  },
-                  {
-                    "key": "Thresh",
-                    "games": 62,
-                    "wins": 38,
-                    "winrate": 61.3,
-                    "kda": 2.54
-                  },
-                  {
-                    "key": "Galio",
-                    "games": 39,
-                    "wins": 21,
-                    "winrate": 53.8,
-                    "kda": 2.48
-                  },
-                  {
-                    "key": "Leona",
-                    "games": 31,
-                    "wins": 18,
-                    "winrate": 58.1,
-                    "kda": 2.75
-                  },
-                  {
-                    "key": "Pyke",
-                    "games": 25,
-                    "wins": 16,
-                    "winrate": 64,
-                    "kda": 1.89
-                  },
-                  {
-                    "key": "Karma",
-                    "games": 25,
-                    "wins": 10,
-                    "winrate": 40,
-                    "kda": 2.15
-                  }
-                ]
-              }
-            },
-            "awards": {
-              "oneTrick": {
-                "champ": "Zac",
-                "wins": 41,
-                "games": 78
-              },
-              "mainChar": {
-                "champ": "Thresh",
-                "winrate": 61.3,
-                "games": 62
-              },
-              "autofill": {
-                "lane": "UTILITY",
-                "games": 396,
-                "wins": 195,
-                "winrate": 49.2
-              },
-              "champPool": 53,
-              "kdaStreak": 3,
-              "avgKda": 3.12,
-              "pentas": 0,
-              "quadras": 3,
-              "quadraGames": 845,
-              "firstBloods": 62
-            },
-            "gameRecords": {
-              "kills": {
-                "id": "EUW1_7847872168",
-                "t": 1778348241706,
-                "dur": 1642,
-                "champ": "Viego",
-                "role": "JUNGLE",
-                "k": 22,
-                "d": 4,
-                "a": 8,
-                "win": true,
-                "kda": 7.5,
-                "val": 22
-              },
-              "assists": {
-                "id": "EUW1_7884953715",
-                "t": 1781283542999,
-                "dur": 1888,
-                "champ": "Nami",
-                "role": "UTILITY",
-                "k": 4,
-                "d": 5,
-                "a": 40,
-                "win": true,
-                "kda": 8.8,
-                "val": 40
-              },
-              "damage": {
-                "id": "EUW1_7764554348",
-                "t": 1772750878910,
-                "dur": 2080,
-                "champ": "Elise",
-                "role": "JUNGLE",
-                "k": 14,
-                "d": 5,
-                "a": 14,
-                "win": true,
-                "kda": 5.6,
-                "val": 65574
-              },
-              "vision": {
-                "id": "EUW1_7843793547",
-                "t": 1778012045297,
-                "dur": 2738,
-                "champ": "Thresh",
-                "role": "UTILITY",
-                "k": 5,
-                "d": 11,
-                "a": 26,
-                "win": false,
-                "kda": 2.82,
-                "val": 158
-              },
-              "longestWin": {
-                "id": "EUW1_7752022864",
-                "t": 1772041555540,
-                "dur": 2978,
-                "champ": "FiddleSticks",
-                "role": "JUNGLE",
-                "k": 10,
-                "d": 9,
-                "a": 20,
-                "win": true,
-                "kda": 3.33,
-                "val": 2978
-              },
-              "kda": {
-                "id": "EUW1_7952915263",
-                "t": 1786919233915,
-                "dur": 1370,
-                "champ": "Galio",
-                "role": "UTILITY",
-                "k": 3,
-                "d": 1,
-                "a": 20,
-                "win": true,
-                "kda": 23,
-                "val": 23
-              },
-              "kp": {
-                "id": "EUW1_7912434476",
-                "t": 1783522176829,
-                "dur": 2008,
-                "champ": "Milio",
-                "role": "UTILITY",
-                "k": 2,
-                "d": 6,
-                "a": 23,
-                "win": true,
-                "kda": 4.17,
-                "val": 89
-              },
-              "towers": {
-                "id": "EUW1_7751798666",
-                "t": 1772032738689,
-                "dur": 2991,
-                "champ": "Teemo",
-                "role": "TOP",
-                "k": 2,
-                "d": 11,
-                "a": 9,
-                "win": false,
-                "kda": 1,
-                "val": 13516
-              },
-              "gold": {
-                "id": "EUW1_7869800484",
-                "t": 1780076962406,
-                "dur": 3031,
-                "champ": "Zac",
-                "role": "JUNGLE",
-                "k": 14,
-                "d": 8,
-                "a": 24,
-                "win": false,
-                "kda": 4.75,
-                "val": 25581
-              },
-              "csMin": {
-                "id": "EUW1_7736611523",
-                "t": 1771277634900,
-                "dur": 1653,
-                "champ": "Malzahar",
-                "role": "MIDDLE",
-                "k": 5,
-                "d": 8,
-                "a": 2,
-                "win": false,
-                "kda": 0.88,
-                "val": 9
-              }
-            },
-            "lp": {
-              "win": 20,
-              "loss": -20,
-              "winN": 12,
-              "lossN": 6
-            }
-          },
-          "links": {
-            "opgg": "https://www.op.gg/summoners/euw/xPeris-6969",
-            "ugg": "https://u.gg/lol/profile/euw1/xPeris-6969/overview",
-            "dpm": "https://dpm.lol/xPeris-6969",
-            "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
-          },
-          "updatedAt": "2026-10-08T14:48:15.927Z",
-          "lpHist": [
-            [
-              1790720384833,
-              2035
-            ],
-            [
-              1790722393465,
-              2035
-            ],
-            [
-              1790805726808,
-              2055
-            ],
-            [
-              1790866841291,
-              2034
-            ],
-            [
-              1791040027460,
-              2054
-            ],
-            [
-              1791041714876,
-              2074
-            ],
-            [
-              1791043991080,
-              2054
-            ],
-            [
-              1791115314496,
-              2074
-            ],
-            [
-              1791153129419,
-              2094
-            ],
-            [
-              1791211484157,
-              2114
-            ],
-            [
-              1791213717819,
-              2134
-            ],
-            [
-              1791242319830,
-              2154
-            ],
-            [
-              1791328883161,
-              2134
-            ],
-            [
-              1791386585672,
-              2114
-            ],
-            [
-              1791389365940,
-              2094
-            ],
-            [
-              1791393549770,
-              2114
-            ],
-            [
-              1791395109417,
-              2134
-            ],
-            [
-              1791409946366,
-              2154
-            ],
-            [
-              1791469030633,
-              2174
-            ],
-            [
-              1791470890352,
-              2154
-            ]
-          ],
-          "recent": [
-            {
-              "v": 4,
-              "id": "EUW1_8007258832",
-              "t": 1791470860561,
-              "dur": 1574,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 13,
-              "k": 2,
-              "d": 8,
-              "a": 13,
-              "kp": 60,
-              "cs": 20,
-              "vis": 46,
-              "dmg": 6963,
-              "teamDmg": 78234,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 276,
-              "goldEarned": 7789,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3009,
-                3110,
-                3076,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Rammus",
-                "spells": [
-                  "SummonerExhaust",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -13794,
-                "tgd15": -4808,
-                "gd15": -728
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8007232946",
-              "t": 1791469001633,
-              "dur": 1888,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 14,
-              "k": 0,
-              "d": 5,
-              "a": 20,
-              "kp": 51,
-              "cs": 29,
-              "vis": 93,
-              "dmg": 7853,
-              "teamDmg": 130447,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 810,
-              "goldEarned": 9081,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3110,
-                3009,
-                3076,
-                1029,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Karma",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 8109,
-                "maxLeadMin": 32,
-                "maxDef": -1031,
-                "tgd15": 1242,
-                "gd15": 114
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006838886",
-              "t": 1791409895201,
-              "dur": 1525,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 5,
-              "d": 6,
-              "a": 13,
-              "kp": 47,
-              "cs": 22,
-              "vis": 56,
-              "dmg": 10677,
-              "teamDmg": 108159,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3609,
-              "goldEarned": 8898,
-              "fb": true,
-              "items": [
-                3190,
-                3876,
-                3050,
-                3110,
-                3009,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Bard",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 6133,
-                "maxLeadMin": 26,
-                "maxDef": -25,
-                "tgd15": 1189,
-                "gd15": -372
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006513293",
-              "t": 1791395079410,
-              "dur": 1286,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 10,
-              "k": 1,
-              "d": 4,
-              "a": 14,
-              "kp": 47,
-              "cs": 20,
-              "vis": 37,
-              "dmg": 5844,
-              "teamDmg": 78969,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3084,
-              "goldEarned": 6913,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3109,
-                2022,
-                3009,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Karma",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHeal"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 13716,
-                "maxLeadMin": 22,
-                "maxDef": 0,
-                "tgd15": 7252,
-                "gd15": 589
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006492692",
-              "t": 1791393464273,
-              "dur": 1343,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 10,
-              "k": 0,
-              "d": 4,
-              "a": 13,
-              "kp": 35,
-              "cs": 25,
-              "vis": 46,
-              "dmg": 5337,
-              "teamDmg": 85454,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3424,
-              "goldEarned": 6407,
-              "fb": false,
-              "items": [
-                3190,
-                3067,
-                3876,
-                1029,
-                3009,
-                1033,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Milio",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 14497,
-                "maxLeadMin": 22,
-                "maxDef": -341,
-                "tgd15": 5980,
-                "gd15": 437
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006395060",
-              "t": 1791389305332,
-              "dur": 2414,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 15,
-              "k": 2,
-              "d": 7,
-              "a": 30,
-              "kp": 55,
-              "cs": 40,
-              "vis": 110,
-              "dmg": 11658,
-              "teamDmg": 168251,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1989,
-              "goldEarned": 12617,
-              "fb": false,
-              "items": [
-                3190,
-                3109,
-                3876,
-                3050,
-                3009,
-                3075,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Ivern",
-                "spells": [
-                  "SummonerExhaust",
-                  "SummonerHeal"
-                ],
-                "runes": [
-                  "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 9108,
-                "maxLeadMin": 16,
-                "maxDef": -9093,
-                "tgd15": 8956,
-                "gd15": 945
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006361188",
-              "t": 1791386527797,
-              "dur": 1903,
-              "win": false,
-              "champ": "Elise",
-              "role": "UTILITY",
-              "lvl": 14,
-              "k": 6,
-              "d": 9,
-              "a": 9,
-              "kp": 44,
-              "cs": 40,
-              "vis": 68,
-              "dmg": 16325,
-              "teamDmg": 107874,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 0,
-              "goldEarned": 10413,
-              "fb": false,
-              "items": [
-                4646,
-                3871,
-                4645,
-                3020,
-                3067,
-                3916,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerExhaust"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Teemo",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 2361,
-                "maxLeadMin": 15,
-                "maxDef": -6716,
-                "tgd15": 2361,
-                "gd15": -725
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006032013",
-              "t": 1791328764521,
-              "dur": 936,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 7,
-              "k": 0,
-              "d": 5,
-              "a": 2,
-              "kp": 50,
-              "cs": 24,
-              "vis": 20,
-              "dmg": 2733,
-              "teamDmg": 27627,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 0,
-              "goldEarned": 3699,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                1001,
-                0,
-                0,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Xerath",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 22,
-                "maxLeadMin": 2,
-                "maxDef": -11630,
-                "tgd15": -11015,
-                "gd15": -820
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8005140926",
-              "t": 1791242253739,
-              "dur": 1582,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 13,
-              "k": 1,
-              "d": 8,
-              "a": 19,
-              "kp": 71,
-              "cs": 29,
-              "vis": 66,
-              "dmg": 7391,
-              "teamDmg": 86397,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1058,
-              "goldEarned": 8228,
-              "fb": false,
-              "items": [
-                3190,
-                0,
-                3876,
-                3009,
-                1028,
-                3109,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Leona",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 14958,
-                "maxLeadMin": 27,
-                "maxDef": -689,
-                "tgd15": 1445,
-                "gd15": -319
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8004584850",
-              "t": 1791213670450,
-              "dur": 1928,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 13,
-              "k": 2,
-              "d": 10,
-              "a": 14,
-              "kp": 39,
-              "cs": 31,
-              "vis": 77,
-              "dmg": 10993,
-              "teamDmg": 151527,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1491,
-              "goldEarned": 9230,
-              "fb": false,
-              "items": [
-                3190,
-                3211,
-                3876,
-                1057,
-                3009,
-                3109,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Leona",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 2034,
-                "maxLeadMin": 11,
-                "maxDef": -4605,
-                "tgd15": 379,
-                "gd15": 105
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8004553734",
-              "t": 1791211415550,
-              "dur": 2219,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 15,
-              "k": 1,
-              "d": 7,
-              "a": 19,
-              "kp": 50,
-              "cs": 18,
-              "vis": 101,
-              "dmg": 9541,
-              "teamDmg": 165383,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6783,
-              "goldEarned": 9895,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3009,
-                3109,
-                3067,
-                1029,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Lulu",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHeal"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 7254,
-                "maxLeadMin": 37,
-                "maxDef": -4378,
-                "tgd15": -842,
-                "gd15": -770
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8004193999",
-              "t": 1791153025867,
-              "dur": 1559,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 1,
-              "d": 6,
-              "a": 14,
-              "kp": 48,
-              "cs": 21,
-              "vis": 81,
-              "dmg": 8905,
-              "teamDmg": 81670,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3363,
-              "goldEarned": 8513,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3050,
-                3067,
-                0,
-                3009,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Pyke",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 10655,
-                "maxLeadMin": 26,
-                "maxDef": -211,
-                "tgd15": 3774,
-                "gd15": 910
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8003403307",
-              "t": 1791115242403,
-              "dur": 1851,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 16,
-              "k": 3,
-              "d": 8,
-              "a": 22,
-              "kp": 81,
-              "cs": 31,
-              "vis": 64,
-              "dmg": 12593,
-              "teamDmg": 128341,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 2177,
-              "goldEarned": 10189,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3110,
-                3050,
-                3009,
-                1029,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Nami",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 10821,
-                "maxLeadMin": 31,
-                "maxDef": -3397,
-                "tgd15": -2275,
-                "gd15": -657
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8002581306",
-              "t": 1791043950162,
-              "dur": 2074,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 14,
-              "k": 1,
-              "d": 13,
-              "a": 19,
-              "kp": 48,
-              "cs": 27,
-              "vis": 114,
-              "dmg": 10286,
-              "teamDmg": 154018,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1038,
-              "goldEarned": 10138,
-              "fb": false,
-              "items": [
-                3190,
-                3050,
-                3876,
-                3009,
-                2524,
-                3076,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Nami",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHeal"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 3017,
-                "maxLeadMin": 18,
-                "maxDef": -6085,
-                "tgd15": 1567,
-                "gd15": -585
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8002551172",
-              "t": 1791041629831,
-              "dur": 1368,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 5,
-              "d": 6,
-              "a": 25,
-              "kp": 77,
-              "cs": 15,
-              "vis": 50,
-              "dmg": 11288,
-              "teamDmg": 94867,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4178,
-              "goldEarned": 9585,
-              "fb": true,
-              "items": [
-                3190,
-                3876,
-                3050,
-                3009,
-                3067,
-                1031,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Resolve/Guardian/Guardian.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Neeko",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 8980,
-                "maxLeadMin": 18,
-                "maxDef": -79,
-                "tgd15": 5923,
-                "gd15": 1699
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8002516327",
-              "t": 1791040008003,
-              "dur": 1517,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 13,
-              "k": 2,
-              "d": 10,
-              "a": 26,
-              "kp": 65,
-              "cs": 20,
-              "vis": 62,
-              "dmg": 4839,
-              "teamDmg": 84158,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 5392,
-              "goldEarned": 8755,
-              "fb": true,
-              "items": [
-                3190,
-                3050,
-                3876,
-                3067,
-                3009,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Lux",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerExhaust"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 11787,
-                "maxLeadMin": 26,
-                "maxDef": -303,
-                "tgd15": -45,
-                "gd15": -374
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8000514841",
-              "t": 1790866783568,
-              "dur": 1542,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 10,
-              "k": 1,
-              "d": 8,
-              "a": 14,
-              "kp": 68,
-              "cs": 19,
-              "vis": 44,
-              "dmg": 8240,
-              "teamDmg": 82299,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 2856,
-              "goldEarned": 7316,
-              "fb": false,
-              "items": [
-                3190,
-                3876,
-                3050,
-                1029,
-                1029,
-                3009,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerExhaust"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Bard",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 900,
-                "maxLeadMin": 11,
-                "maxDef": -12738,
-                "tgd15": -1635,
-                "gd15": 602
-              },
-              "lp": {
-                "d": -21,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8000088439",
-              "t": 1790805676557,
-              "dur": 1396,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 11,
-              "k": 0,
-              "d": 3,
-              "a": 16,
-              "kp": 53,
-              "cs": 29,
-              "vis": 51,
-              "dmg": 4193,
-              "teamDmg": 79992,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 489,
-              "goldEarned": 7109,
-              "fb": false,
-              "items": [
-                3190,
-                3067,
-                3876,
-                3009,
-                1029,
-                1033,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerExhaust"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Lulu",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 10669,
-                "maxLeadMin": 24,
-                "maxDef": -411,
-                "tgd15": 2676,
-                "gd15": -318
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7998698424",
-              "t": 1790698364599,
-              "dur": 1083,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 10,
-              "k": 4,
-              "d": 0,
-              "a": 8,
-              "kp": 50,
-              "cs": 23,
-              "vis": 33,
-              "dmg": 6499,
-              "teamDmg": 63797,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3862,
-              "goldEarned": 6722,
-              "fb": false,
-              "items": [
-                3190,
-                0,
-                3876,
-                3009,
-                1031,
-                3067,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Lulu",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHeal"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 8425,
-                "maxLeadMin": 18,
-                "maxDef": -132,
-                "tgd15": 5626,
-                "gd15": 1375
-              },
-              "lp": null
-            },
-            {
-              "v": 4,
-              "id": "EUW1_7998185660",
-              "t": 1790632295058,
-              "dur": 2095,
-              "win": false,
-              "champ": "Rakan",
-              "role": "UTILITY",
-              "lvl": 15,
-              "k": 0,
-              "d": 12,
-              "a": 24,
-              "kp": 62,
-              "cs": 32,
-              "vis": 95,
-              "dmg": 10051,
-              "teamDmg": 163483,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3247,
-              "goldEarned": 10415,
-              "fb": false,
-              "items": [
-                2065,
-                3190,
-                3876,
-                3158,
-                3050,
-                3108,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Resolve/Guardian/Guardian.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Thresh",
-                "spells": [
-                  "SummonerExhaust",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 1216,
-                "maxLeadMin": 13,
-                "maxDef": -9601,
-                "tgd15": 639,
-                "gd15": -543
-              },
-              "lp": null
-            }
-          ],
-          "seq": [
-            [
-              1791470860561,
-              0,
-              -20
-            ],
-            [
-              1791469001633,
-              1,
-              20
-            ],
-            [
-              1791409895201,
-              1,
-              20
-            ],
-            [
-              1791395079410,
-              1,
-              20
-            ],
-            [
-              1791393464273,
-              1,
-              20
-            ],
-            [
-              1791389305332,
-              0,
-              -20
-            ],
-            [
-              1791386527797,
-              0,
-              -20
-            ],
-            [
-              1791328764521,
-              0,
-              -20
-            ],
-            [
-              1791242253739,
-              1,
-              20
-            ],
-            [
-              1791213670450,
-              1,
-              20
-            ],
-            [
-              1791211415550,
-              1,
-              20
-            ],
-            [
-              1791153025867,
-              1,
-              20
-            ],
-            [
-              1791115242403,
-              1,
-              20
-            ],
-            [
-              1791043950162,
-              0,
-              -20
-            ],
-            [
-              1791041629831,
-              1,
-              20
-            ],
-            [
-              1791040008003,
-              1,
-              20
-            ],
-            [
-              1790866783568,
-              0,
-              -21
-            ],
-            [
-              1790805676557,
-              1,
-              20
-            ],
-            [
-              1790698364599,
-              1,
-              null
-            ],
-            [
-              1790632295058,
-              0,
-              null
-            ],
-            [
-              1790610257288,
-              1,
-              null
-            ],
-            [
-              1790548403036,
-              1,
-              null
-            ],
-            [
-              1790546281622,
-              1,
-              null
-            ],
-            [
-              1790544551629,
-              1,
-              null
-            ],
-            [
-              1790542240650,
-              1,
-              null
-            ],
-            [
-              1790525792097,
-              0,
-              null
-            ],
-            [
-              1790523501456,
-              0,
-              null
-            ],
-            [
-              1790514344916,
-              1,
-              null
-            ],
-            [
-              1790436309524,
-              1,
-              null
-            ],
-            [
-              1790182171378,
-              0,
-              null
-            ],
-            [
-              1790111288429,
-              1,
-              null
-            ],
-            [
-              1790027097030,
-              0,
-              null
-            ],
-            [
-              1789942478241,
-              0,
-              null
-            ],
-            [
-              1789940004976,
-              1,
-              null
-            ],
-            [
-              1789938854856,
-              1,
-              null
-            ],
-            [
-              1789854303914,
-              0,
-              null
-            ],
-            [
-              1789848664781,
-              0,
-              null
-            ],
-            [
-              1789833434678,
-              0,
-              null
-            ],
-            [
-              1789749932070,
-              1,
-              null
-            ],
-            [
-              1789684031183,
-              0,
-              null
-            ],
-            [
-              1789665677853,
-              0,
-              null
-            ],
-            [
-              1789593660791,
-              0,
-              null
-            ],
-            [
-              1789582474870,
-              0,
-              null
-            ],
-            [
-              1789580371794,
-              1,
-              null
-            ],
-            [
-              1789578029622,
-              1,
-              null
-            ],
-            [
-              1789576037693,
-              1,
-              null
-            ],
-            [
-              1789574023106,
-              0,
-              null
-            ],
-            [
-              1789572311980,
-              1,
-              null
-            ],
-            [
-              1789508356540,
-              1,
-              null
-            ],
-            [
-              1789506077681,
-              1,
-              null
-            ],
-            [
-              1789487864402,
-              1,
-              null
-            ],
-            [
-              1789420976791,
-              0,
-              null
-            ],
-            [
-              1789419125807,
-              0,
-              null
-            ],
-            [
-              1789410418535,
-              1,
-              null
-            ],
-            [
-              1789397164950,
-              1,
-              null
-            ],
-            [
-              1789338730314,
-              0,
-              null
-            ],
-            [
-              1789336743800,
-              1,
-              null
-            ],
-            [
-              1789334977355,
-              1,
-              null
-            ],
-            [
-              1789313746483,
-              0,
-              null
-            ],
-            [
-              1789310592301,
-              1,
-              null
-            ],
-            [
-              1789258333687,
-              1,
-              null
-            ],
-            [
-              1789252652426,
-              0,
-              null
-            ],
-            [
-              1789224314468,
-              1,
-              null
-            ],
-            [
-              1789222302493,
-              0,
-              null
-            ],
-            [
-              1789147660924,
-              0,
-              null
-            ],
-            [
-              1789144778565,
-              1,
-              null
-            ],
-            [
-              1789140897705,
-              0,
-              null
-            ],
-            [
-              1789139023299,
-              0,
-              null
-            ],
-            [
-              1789077314911,
-              0,
-              null
-            ],
-            [
-              1789075338493,
-              0,
-              null
-            ],
-            [
-              1789062103979,
-              0,
-              null
-            ],
-            [
-              1789059962695,
-              0,
-              null
-            ],
-            [
-              1789057022752,
-              1,
-              null
-            ],
-            [
-              1789054889505,
-              0,
-              null
-            ],
-            [
-              1789052226470,
-              0,
-              null
-            ],
-            [
-              1788985171615,
-              1,
-              null
-            ],
-            [
-              1788978871378,
-              0,
-              null
-            ],
-            [
-              1788976305905,
-              1,
-              null
-            ],
-            [
-              1788973413751,
-              0,
-              null
-            ],
-            [
-              1788971713800,
-              1,
-              null
-            ],
-            [
-              1788906242849,
-              0,
-              null
-            ],
-            [
-              1788903777233,
-              1,
-              null
-            ],
-            [
-              1788817059197,
-              0,
-              null
-            ],
-            [
-              1788733887430,
-              1,
-              null
-            ],
-            [
-              1788731613920,
-              1,
-              null
-            ],
-            [
-              1788637557728,
-              1,
-              null
-            ],
-            [
-              1788633356112,
-              0,
-              null
-            ],
-            [
-              1788631169359,
-              0,
-              null
-            ],
-            [
-              1788607529674,
-              0,
-              null
-            ],
-            [
-              1788564466040,
-              0,
-              null
-            ],
-            [
-              1788560936218,
-              1,
-              null
-            ],
-            [
-              1788558780706,
-              1,
-              null
-            ],
-            [
-              1788555904193,
-              0,
-              null
-            ],
-            [
-              1788553771215,
-              1,
-              null
-            ],
-            [
-              1788550656308,
-              1,
-              null
-            ],
-            [
-              1788548459688,
-              1,
-              null
-            ],
-            [
-              1788545361481,
-              1,
-              null
-            ],
-            [
-              1788476017532,
-              0,
-              null
-            ],
-            [
-              1788375738010,
-              1,
-              null
-            ],
-            [
-              1788303658142,
               0,
               null
             ]
