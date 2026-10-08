@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8007232946",
+      "t": 1791469001633,
+      "dur": 1888,
+      "win": true,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 5,
+      "d": 11,
+      "a": 14,
+      "kp": 49,
+      "cs": 152,
+      "vis": 16,
+      "dmg": 23372,
+      "teamDmg": 130447,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4931,
+      "goldEarned": 13676,
+      "fb": false,
+      "items": [
+        3094,
+        6655,
+        3170,
+        3157,
+        3100,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8109,
+        "maxLeadMin": 32,
+        "maxDef": -1031,
+        "tgd15": 1242,
+        "gd15": 178
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8007204888",
       "t": 1791466820253,
       "dur": 1674,
