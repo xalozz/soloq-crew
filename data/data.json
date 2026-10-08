@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T17:48:16.217Z",
+  "generatedAt": "2026-10-08T17:50:16.554Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -6266,7 +6266,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-10-08T17:48:16.211Z",
+          "updatedAt": "2026-10-08T17:50:16.547Z",
           "lpHist": [
             [
               1790720384833,
@@ -9128,7 +9128,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-08T17:48:10.114Z",
+          "updatedAt": "2026-10-08T17:50:06.631Z",
           "lpHist": [
             [
               1790720384833,
@@ -16737,7 +16737,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1165,
+      "score": 1143,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16750,35 +16750,36 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 65,
+            "lp": 43,
             "wins": 165,
-            "losses": 176,
-            "winrate": 48.4,
+            "losses": 177,
+            "winrate": 48.2,
             "hotStreak": false
           },
           "stats": {
-            "games": 341,
+            "games": 342,
             "wins": 165,
-            "losses": 176,
-            "winrate": 48.4,
+            "losses": 177,
+            "winrate": 48.2,
             "avgK": 5.1,
             "avgD": 6.2,
-            "avgA": 7.9,
+            "avgA": 7.8,
             "kda": 2.09,
             "csPerMin": 6,
             "visPerMin": 1.01,
-            "dmgShare": 21.9,
+            "dmgShare": 21.8,
             "avgDurationMin": 31,
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
               "L",
+              "L",
               "W",
               "L",
               "W",
@@ -16786,14 +16787,12 @@
               "L",
               "L",
               "L",
-              "W",
-              "L"
+              "W"
             ],
             "trend": [
               0,
               0,
               0,
-              0,
               1,
               0,
               0,
@@ -16809,6 +16808,7 @@
               1,
               0,
               1,
+              0,
               0
             ],
             "mainRole": "MIDDLE",
@@ -16914,13 +16914,13 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791391379852,
+            "lastGameAt": 1791481685959,
             "totals": {
               "k": 1752,
-              "d": 2118,
-              "a": 2680
+              "d": 2125,
+              "a": 2683
             },
-            "dmgPerMin": 857,
+            "dmgPerMin": 855,
             "avgVision": 31.3,
             "pentas": 0,
             "firstBloods": 19,
@@ -17145,6 +17145,14 @@
                 "csPerMin": 6.7
               },
               {
+                "key": "Vi",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.43,
+                "csPerMin": 5.2
+              },
+              {
                 "key": "Jhin",
                 "games": 1,
                 "wins": 0,
@@ -17277,12 +17285,19 @@
                 "wins": 6,
                 "winrate": 60,
                 "kda": 2.94
+              },
+              {
+                "key": "JUNGLE",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.43
               }
             ],
             "gold": {
-              "games": 126,
-              "avgGd15": 207,
-              "avgTgd15": 141,
+              "games": 127,
+              "avgGd15": 204,
+              "avgTgd15": 120,
               "throws": 15,
               "comebacks": 12,
               "biggestThrow": {
@@ -17405,6 +17420,22 @@
                     "wins": 1,
                     "winrate": 33.3,
                     "kda": 2.17
+                  }
+                ]
+              },
+              "JUNGLE": {
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.43,
+                "gd15": -194,
+                "champs": [
+                  {
+                    "key": "Vi",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 0.43
                   }
                 ]
               },
@@ -17561,16 +17592,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 61,
+                "games": 62,
                 "wins": 30,
-                "winrate": 49.2
+                "winrate": 48.4
               },
               "champPool": 26,
               "kdaStreak": 3,
               "avgKda": 2.76,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 341,
+              "quadraGames": 342,
               "firstBloods": 19
             },
             "gameRecords": {
@@ -17709,7 +17740,7 @@
               "win": 21,
               "loss": -18,
               "winN": 15,
-              "lossN": 14
+              "lossN": 15
             }
           },
           "links": {
@@ -17718,7 +17749,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-08T17:10:08.265Z",
+          "updatedAt": "2026-10-08T17:50:13.201Z",
           "lpHist": [
             [
               1790720384833,
@@ -17847,9 +17878,76 @@
             [
               1791391449476,
               1165
+            ],
+            [
+              1791481807813,
+              1143
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8007435679",
+              "t": 1791481685959,
+              "dur": 1639,
+              "win": false,
+              "champ": "Vi",
+              "role": "JUNGLE",
+              "lvl": 12,
+              "k": 0,
+              "d": 7,
+              "a": 3,
+              "kp": 21,
+              "cs": 141,
+              "vis": 19,
+              "dmg": 4706,
+              "teamDmg": 66504,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 0,
+              "goldEarned": 7784,
+              "fb": false,
+              "items": [
+                3111,
+                6699,
+                1036,
+                1029,
+                1037,
+                1018,
+                3364
+              ],
+              "spells": [
+                "SummonerSmite",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                "perk-images/Styles/7200_Domination.png"
+              ],
+              "opp": {
+                "champ": "Rammus",
+                "spells": [
+                  "SummonerSmite",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1312,
+                "maxLeadMin": 12,
+                "maxDef": -9707,
+                "tgd15": -2587,
+                "gd15": -194
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8006448483",
@@ -19046,72 +19144,14 @@
                 "d": -13,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8000335789",
-              "t": 1790851305809,
-              "dur": 2814,
-              "win": false,
-              "champ": "Heimerdinger",
-              "role": "TOP",
-              "lvl": 20,
-              "k": 8,
-              "d": 10,
-              "a": 10,
-              "kp": 32,
-              "cs": 251,
-              "vis": 44,
-              "dmg": 56492,
-              "teamDmg": 261750,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 8819,
-              "goldEarned": 17910,
-              "fb": false,
-              "items": [
-                4645,
-                6653,
-                3089,
-                3157,
-                3020,
-                4630,
-                3340
-              ],
-              "spells": [
-                "SummonerExhaust",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Darius",
-                "spells": [
-                  "SummonerHaste",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 11404,
-                "maxLeadMin": 24,
-                "maxDef": -7367,
-                "tgd15": 6264,
-                "gd15": 109
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791481685959,
+              0,
+              -22
+            ],
             [
               1791391379852,
               0,
@@ -19604,11 +19644,6 @@
             ],
             [
               1785692376041,
-              1,
-              null
-            ],
-            [
-              1785668002129,
               1,
               null
             ]
