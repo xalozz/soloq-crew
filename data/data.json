@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T12:28:56.643Z",
+  "generatedAt": "2026-10-08T12:59:56.561Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -13709,7 +13709,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1817,
+      "score": 1797,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -13721,17 +13721,17 @@
           "profileIconId": 1153,
           "rank": {
             "tier": "PLATINUM",
-            "division": "II",
-            "lp": 17,
+            "division": "III",
+            "lp": 97,
             "wins": 457,
-            "losses": 459,
-            "winrate": 49.9,
+            "losses": 460,
+            "winrate": 49.8,
             "hotStreak": false
           },
           "stats": {
-            "games": 887,
+            "games": 888,
             "wins": 448,
-            "losses": 439,
+            "losses": 440,
             "winrate": 50.5,
             "avgK": 7.3,
             "avgD": 7,
@@ -13743,26 +13743,25 @@
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 2
+                "type": "L",
+                "count": 1
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
-              "W",
-              "W",
-              "L",
-              "L",
               "L",
               "W",
               "W",
               "L",
+              "L",
+              "L",
+              "W",
+              "W",
               "L",
               "L"
             ],
             "trend": [
-              0,
               1,
               1,
               0,
@@ -13781,7 +13780,8 @@
               0,
               0,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "MIDDLE",
             "last10": {
@@ -13842,17 +13842,17 @@
             },
             "worstChamp": {
               "key": "Jax",
-              "games": 6,
+              "games": 7,
               "wins": 1,
-              "winrate": 16.7,
-              "kda": 1.02
+              "winrate": 14.3,
+              "kda": 0.96
             },
             "bestRole": {
               "key": "TOP",
-              "games": 33,
+              "games": 34,
               "wins": 18,
-              "winrate": 54.5,
-              "kda": 1.44
+              "winrate": 52.9,
+              "kda": 1.42
             },
             "worstRole": {
               "key": "UTILITY",
@@ -13886,11 +13886,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1791462479212,
+            "lastGameAt": 1791464311931,
             "totals": {
-              "k": 6448,
-              "d": 6202,
-              "a": 6159
+              "k": 6451,
+              "d": 6209,
+              "a": 6160
             },
             "dmgPerMin": 821,
             "avgVision": 24.6,
@@ -14046,10 +14046,10 @@
               },
               {
                 "key": "Jax",
-                "games": 6,
+                "games": 7,
                 "wins": 1,
-                "winrate": 16.7,
-                "kda": 1.02,
+                "winrate": 14.3,
+                "kda": 0.96,
                 "csPerMin": 6.3
               },
               {
@@ -14198,10 +14198,10 @@
               },
               {
                 "key": "TOP",
-                "games": 33,
+                "games": 34,
                 "wins": 18,
-                "winrate": 54.5,
-                "kda": 1.44
+                "winrate": 52.9,
+                "kda": 1.42
               },
               {
                 "key": "UTILITY",
@@ -14219,9 +14219,9 @@
               }
             ],
             "gold": {
-              "games": 148,
-              "avgGd15": 26,
-              "avgTgd15": 265,
+              "games": 149,
+              "avgGd15": 15,
+              "avgTgd15": 239,
               "throws": 15,
               "comebacks": 11,
               "biggestThrow": {
@@ -14297,11 +14297,11 @@
             },
             "byRole": {
               "TOP": {
-                "games": 33,
+                "games": 34,
                 "wins": 18,
-                "winrate": 54.5,
-                "kda": 1.44,
-                "gd15": -980,
+                "winrate": 52.9,
+                "kda": 1.42,
+                "gd15": -1100,
                 "champs": [
                   {
                     "key": "Teemo",
@@ -14312,10 +14312,10 @@
                   },
                   {
                     "key": "Jax",
-                    "games": 5,
+                    "games": 6,
                     "wins": 1,
-                    "winrate": 20,
-                    "kda": 1.1
+                    "winrate": 16.7,
+                    "kda": 1.02
                   },
                   {
                     "key": "Nasus",
@@ -14539,7 +14539,7 @@
               "avgKda": 2.91,
               "pentas": 0,
               "quadras": 2,
-              "quadraGames": 887,
+              "quadraGames": 888,
               "firstBloods": 104
             },
             "gameRecords": {
@@ -14678,7 +14678,7 @@
               "win": 20,
               "loss": -18,
               "winN": 25,
-              "lossN": 25
+              "lossN": 26
             }
           },
           "links": {
@@ -14687,7 +14687,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-08T12:28:56.637Z",
+          "updatedAt": "2026-10-08T12:59:56.555Z",
           "lpHist": [
             [
               1790720384833,
@@ -14896,9 +14896,76 @@
             [
               1791462530774,
               1817
+            ],
+            [
+              1791464391082,
+              1797
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8007170443",
+              "t": 1791464311931,
+              "dur": 1175,
+              "win": false,
+              "champ": "Jax",
+              "role": "TOP",
+              "lvl": 13,
+              "k": 3,
+              "d": 7,
+              "a": 1,
+              "kp": 20,
+              "cs": 125,
+              "vis": 10,
+              "dmg": 12461,
+              "teamDmg": 54384,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 6238,
+              "goldEarned": 7006,
+              "fb": false,
+              "items": [
+                1055,
+                3078,
+                1037,
+                2055,
+                3047,
+                0,
+                3340
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Tryndamere",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+                  "perk-images/Styles/7201_Precision.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 803,
+                "maxLeadMin": 4,
+                "maxDef": -10148,
+                "tgd15": -3540,
+                "gd15": -1580
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8007160193",
@@ -16095,72 +16162,14 @@
                 "d": 20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8003599883",
-              "t": 1791126005676,
-              "dur": 1854,
-              "win": false,
-              "champ": "Graves",
-              "role": "JUNGLE",
-              "lvl": 15,
-              "k": 5,
-              "d": 9,
-              "a": 1,
-              "kp": 46,
-              "cs": 204,
-              "vis": 28,
-              "dmg": 13861,
-              "teamDmg": 70240,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 5028,
-              "goldEarned": 13370,
-              "fb": false,
-              "items": [
-                3031,
-                6676,
-                3008,
-                3036,
-                1037,
-                1018,
-                3364
-              ],
-              "spells": [
-                "SummonerSmite",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "XinZhao",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerSmite"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -11249,
-                "tgd15": -3737,
-                "gd15": -344
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791464311931,
+              0,
+              -20
+            ],
             [
               1791462479212,
               1,
@@ -16654,11 +16663,6 @@
             [
               1789075338493,
               0,
-              null
-            ],
-            [
-              1789072997418,
-              1,
               null
             ]
           ]
