@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8008611449",
+      "t": 1791578649353,
+      "dur": 2211,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 7,
+      "d": 3,
+      "a": 9,
+      "kp": 53,
+      "cs": 389,
+      "vis": 18,
+      "dmg": 24789,
+      "teamDmg": 127881,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6614,
+      "goldEarned": 18358,
+      "fb": false,
+      "items": [
+        3165,
+        3118,
+        3175,
+        3116,
+        6653,
+        3135,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Zed",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 678,
+        "maxLeadMin": 14,
+        "maxDef": -6328,
+        "tgd15": -747,
+        "gd15": -107
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8008566462",
       "t": 1791576122526,
       "dur": 2318,
