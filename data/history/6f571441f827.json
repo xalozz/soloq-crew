@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8008419397",
+      "t": 1791569272477,
+      "dur": 1736,
+      "win": true,
+      "champ": "Nocturne",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 9,
+      "d": 7,
+      "a": 16,
+      "kp": 63,
+      "cs": 222,
+      "vis": 24,
+      "dmg": 22125,
+      "teamDmg": 129230,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2254,
+      "goldEarned": 14305,
+      "fb": false,
+      "items": [
+        6631,
+        3073,
+        3133,
+        3047,
+        6696,
+        2019,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Rengar",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9389,
+        "maxLeadMin": 29,
+        "maxDef": -3284,
+        "tgd15": 2210,
+        "gd15": 326
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8008370323",
       "t": 1791566888134,
       "dur": 2062,
