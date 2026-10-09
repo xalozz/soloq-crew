@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8008366039",
+      "t": 1791565777523,
+      "dur": 1460,
+      "win": true,
+      "champ": "JarvanIV",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 3,
+      "d": 1,
+      "a": 15,
+      "kp": 56,
+      "cs": 191,
+      "vis": 24,
+      "dmg": 9178,
+      "teamDmg": 72258,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 151,
+      "goldEarned": 11264,
+      "fb": false,
+      "items": [
+        3111,
+        6692,
+        3071,
+        3155,
+        1036,
+        1036,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Evelynn",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 12016,
+        "maxLeadMin": 24,
+        "maxDef": -15,
+        "tgd15": 1868,
+        "gd15": 303
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8007258832",
       "t": 1791470860561,
       "dur": 1574,
