@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T22:36:08.197Z",
+  "generatedAt": "2026-10-10T23:11:08.056Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -7906,7 +7906,7 @@
       "name": "xPeris",
       "links": [],
       "bestAccount": 0,
-      "score": 2146,
+      "score": 2166,
       "accounts": [
         {
           "riotId": "xPeris#6969",
@@ -7919,20 +7919,20 @@
           "rank": {
             "tier": "EMERALD",
             "division": "III",
-            "lp": 46,
-            "wins": 445,
+            "lp": 66,
+            "wins": 446,
             "losses": 433,
             "winrate": 50.7,
             "hotStreak": false
           },
           "stats": {
-            "games": 862,
-            "wins": 440,
+            "games": 863,
+            "wins": 441,
             "losses": 422,
-            "winrate": 51,
+            "winrate": 51.1,
             "avgK": 4.5,
             "avgD": 7.8,
-            "avgA": 13.7,
+            "avgA": 13.8,
             "kda": 2.33,
             "csPerMin": 3.1,
             "visPerMin": 1.8,
@@ -7941,26 +7941,25 @@
             "streak": {
               "current": {
                 "type": "W",
-                "count": 1
+                "count": 2
               },
               "bestWin": 10,
               "worstLoss": 8
             },
             "form": [
               "W",
-              "L",
-              "L",
-              "W",
               "W",
               "L",
               "L",
               "W",
+              "W",
               "L",
-              "W"
+              "L",
+              "W",
+              "L"
             ],
             "trend": [
               1,
-              1,
               0,
               1,
               0,
@@ -7978,6 +7977,7 @@
               1,
               0,
               0,
+              1,
               1
             ],
             "mainRole": "UTILITY",
@@ -8046,10 +8046,10 @@
             },
             "bestRole": {
               "key": "UTILITY",
-              "games": 466,
-              "wins": 245,
-              "winrate": 52.6,
-              "kda": 2.3
+              "games": 467,
+              "wins": 246,
+              "winrate": 52.7,
+              "kda": 2.29
             },
             "worstRole": {
               "key": "MIDDLE",
@@ -8083,13 +8083,13 @@
               "kda": 0.1
             },
             "firstGameAt": 1768843553467,
-            "lastGameAt": 1791671754192,
+            "lastGameAt": 1791673767448,
             "totals": {
-              "k": 3856,
-              "d": 6741,
-              "a": 11852
+              "k": 3860,
+              "d": 6752,
+              "a": 11868
             },
-            "dmgPerMin": 544,
+            "dmgPerMin": 543,
             "avgVision": 54.7,
             "pentas": 0,
             "firstBloods": 62,
@@ -8234,20 +8234,20 @@
                 "csPerMin": 3.1
               },
               {
+                "key": "Alistar",
+                "games": 14,
+                "wins": 8,
+                "winrate": 57.1,
+                "kda": 2.06,
+                "csPerMin": 0.9
+              },
+              {
                 "key": "Nocturne",
                 "games": 14,
                 "wins": 7,
                 "winrate": 50,
                 "kda": 2.25,
                 "csPerMin": 6
-              },
-              {
-                "key": "Alistar",
-                "games": 13,
-                "wins": 7,
-                "winrate": 53.8,
-                "kda": 2.08,
-                "csPerMin": 0.9
               },
               {
                 "key": "Braum",
@@ -8757,10 +8757,10 @@
             "roles": [
               {
                 "key": "UTILITY",
-                "games": 466,
-                "wins": 245,
-                "winrate": 52.6,
-                "kda": 2.3
+                "games": 467,
+                "wins": 246,
+                "winrate": 52.7,
+                "kda": 2.29
               },
               {
                 "key": "JUNGLE",
@@ -8792,11 +8792,11 @@
               }
             ],
             "gold": {
-              "games": 133,
-              "avgGd15": -9,
-              "avgTgd15": 44,
+              "games": 134,
+              "avgGd15": -7,
+              "avgTgd15": 41,
               "throws": 15,
-              "comebacks": 13,
+              "comebacks": 14,
               "biggestThrow": {
                 "id": "EUW1_8006395060",
                 "t": 1791389305332,
@@ -9039,11 +9039,11 @@
                 ]
               },
               "UTILITY": {
-                "games": 466,
-                "wins": 245,
-                "winrate": 52.6,
-                "kda": 2.3,
-                "gd15": 22,
+                "games": 467,
+                "wins": 246,
+                "winrate": 52.7,
+                "kda": 2.29,
+                "gd15": 24,
                 "champs": [
                   {
                     "key": "Thresh",
@@ -9112,7 +9112,7 @@
               "avgKda": 3.11,
               "pentas": 0,
               "quadras": 3,
-              "quadraGames": 862,
+              "quadraGames": 863,
               "firstBloods": 62
             },
             "gameRecords": {
@@ -9250,7 +9250,7 @@
             "lp": {
               "win": 21,
               "loss": -21,
-              "winN": 20,
+              "winN": 21,
               "lossN": 15
             }
           },
@@ -9260,7 +9260,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-10-10T22:36:08.192Z",
+          "updatedAt": "2026-10-10T23:11:08.052Z",
           "lpHist": [
             [
               1790720384833,
@@ -9409,9 +9409,76 @@
             [
               1791671762730,
               2146
+            ],
+            [
+              1791673862576,
+              2166
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8009895797",
+              "t": 1791673767448,
+              "dur": 1784,
+              "win": true,
+              "champ": "Alistar",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 4,
+              "d": 11,
+              "a": 16,
+              "kp": 49,
+              "cs": 16,
+              "vis": 78,
+              "dmg": 11011,
+              "teamDmg": 123586,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2257,
+              "goldEarned": 9253,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3009,
+                3050,
+                3075,
+                0,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Braum",
+                "spells": [
+                  "SummonerExhaust",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1556,
+                "maxLeadMin": 14,
+                "maxDef": -4473,
+                "tgd15": -387,
+                "gd15": 257
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8009860903",
@@ -10608,72 +10675,14 @@
                 "d": 20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8006838886",
-              "t": 1791409895201,
-              "dur": 1525,
-              "win": true,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 5,
-              "d": 6,
-              "a": 13,
-              "kp": 47,
-              "cs": 22,
-              "vis": 56,
-              "dmg": 10677,
-              "teamDmg": 108159,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 3609,
-              "goldEarned": 8898,
-              "fb": true,
-              "items": [
-                3190,
-                3876,
-                3050,
-                3110,
-                3009,
-                0,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Bard",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 6133,
-                "maxLeadMin": 26,
-                "maxDef": -25,
-                "tgd15": 1189,
-                "gd15": -372
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791673767448,
+              1,
+              20
+            ],
             [
               1791671754192,
               1,
@@ -11167,11 +11176,6 @@
             [
               1788903777233,
               1,
-              null
-            ],
-            [
-              1788817059197,
-              0,
               null
             ]
           ]
