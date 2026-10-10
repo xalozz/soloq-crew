@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8009926821",
+      "t": 1791676398372,
+      "dur": 2365,
+      "win": false,
+      "champ": "Xerath",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 3,
+      "d": 14,
+      "a": 12,
+      "kp": 38,
+      "cs": 33,
+      "vis": 98,
+      "dmg": 30984,
+      "teamDmg": 178465,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3176,
+      "goldEarned": 11219,
+      "fb": false,
+      "items": [
+        3871,
+        4645,
+        6655,
+        4646,
+        3020,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5081,
+        "maxLeadMin": 29,
+        "maxDef": -2667,
+        "tgd15": -1010,
+        "gd15": -457
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8009895797",
       "t": 1791673767448,
       "dur": 1784,
