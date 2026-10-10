@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8009546531",
+      "t": 1791658040929,
+      "dur": 2376,
+      "win": true,
+      "champ": "Rakan",
+      "role": "UTILITY",
+      "lvl": 17,
+      "k": 1,
+      "d": 13,
+      "a": 43,
+      "kp": 71,
+      "cs": 28,
+      "vis": 97,
+      "dmg": 5587,
+      "teamDmg": 196533,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 95,
+      "goldEarned": 12189,
+      "fb": false,
+      "items": [
+        2065,
+        3876,
+        3009,
+        3050,
+        3916,
+        2524,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Yuumi",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7694,
+        "maxLeadMin": 28,
+        "maxDef": -529,
+        "tgd15": 691,
+        "gd15": -1211
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8009416339",
       "t": 1791651123870,
       "dur": 2075,

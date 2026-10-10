@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T18:34:03.897Z",
+  "generatedAt": "2026-10-10T18:47:56.692Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -4912,7 +4912,7 @@
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
-      "score": 2156,
+      "score": 2176,
       "accounts": [
         {
           "riotId": "ArNOOBal#EUW",
@@ -4925,20 +4925,20 @@
           "rank": {
             "tier": "EMERALD",
             "division": "III",
-            "lp": 56,
-            "wins": 544,
+            "lp": 76,
+            "wins": 545,
             "losses": 536,
             "winrate": 50.4,
             "hotStreak": true
           },
           "stats": {
-            "games": 914,
-            "wins": 458,
+            "games": 915,
+            "wins": 459,
             "losses": 456,
-            "winrate": 50.1,
+            "winrate": 50.2,
             "avgK": 6.5,
             "avgD": 5.6,
-            "avgA": 9.2,
+            "avgA": 9.3,
             "kda": 2.8,
             "csPerMin": 6.6,
             "visPerMin": 1.03,
@@ -4947,7 +4947,7 @@
             "streak": {
               "current": {
                 "type": "W",
-                "count": 3
+                "count": 4
               },
               "bestWin": 8,
               "worstLoss": 8
@@ -4956,18 +4956,17 @@
               "W",
               "W",
               "W",
+              "W",
               "L",
               "L",
               "W",
               "L",
               "W",
-              "L",
               "L"
             ],
             "trend": [
               1,
               1,
-              1,
               0,
               0,
               0,
@@ -4982,6 +4981,7 @@
               1,
               0,
               0,
+              1,
               1,
               1,
               1
@@ -4989,9 +4989,9 @@
             "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 6,
+              "losses": 4,
+              "winrate": 60
             },
             "last20": {
               "games": 20,
@@ -5058,11 +5058,11 @@
               "kda": 1.73
             },
             "worstRole": {
-              "key": "UTILITY",
-              "games": 75,
-              "wins": 33,
-              "winrate": 44,
-              "kda": 2.33
+              "key": "TOP",
+              "games": 9,
+              "wins": 4,
+              "winrate": 44.4,
+              "kda": 2.46
             },
             "bestGame": {
               "id": "EUW1_7833228571",
@@ -5089,13 +5089,13 @@
               "kda": 0
             },
             "firstGameAt": 1772394469336,
-            "lastGameAt": 1791651123870,
+            "lastGameAt": 1791658040929,
             "totals": {
-              "k": 5945,
-              "d": 5138,
-              "a": 8423
+              "k": 5946,
+              "d": 5151,
+              "a": 8466
             },
-            "dmgPerMin": 664,
+            "dmgPerMin": 663,
             "avgVision": 30.5,
             "pentas": 0,
             "firstBloods": 60,
@@ -5176,20 +5176,20 @@
                 "csPerMin": 0.9
               },
               {
+                "key": "Rakan",
+                "games": 10,
+                "wins": 5,
+                "winrate": 50,
+                "kda": 3.23,
+                "csPerMin": 0.9
+              },
+              {
                 "key": "Amumu",
                 "games": 9,
                 "wins": 3,
                 "winrate": 33.3,
                 "kda": 3.07,
                 "csPerMin": 6.4
-              },
-              {
-                "key": "Rakan",
-                "games": 9,
-                "wins": 4,
-                "winrate": 44.4,
-                "kda": 3.18,
-                "csPerMin": 0.9
               },
               {
                 "key": "JarvanIV",
@@ -5426,10 +5426,10 @@
               },
               {
                 "key": "UTILITY",
-                "games": 75,
-                "wins": 33,
-                "winrate": 44,
-                "kda": 2.33
+                "games": 76,
+                "wins": 34,
+                "winrate": 44.7,
+                "kda": 2.35
               },
               {
                 "key": "MIDDLE",
@@ -5454,8 +5454,8 @@
               }
             ],
             "gold": {
-              "games": 148,
-              "avgGd15": 397,
+              "games": 149,
+              "avgGd15": 386,
               "avgTgd15": 707,
               "throws": 14,
               "comebacks": 8,
@@ -5687,11 +5687,11 @@
                 ]
               },
               "UTILITY": {
-                "games": 75,
-                "wins": 33,
-                "winrate": 44,
-                "kda": 2.33,
-                "gd15": -219,
+                "games": 76,
+                "wins": 34,
+                "winrate": 44.7,
+                "kda": 2.35,
+                "gd15": -295,
                 "champs": [
                   {
                     "key": "Braum",
@@ -5709,10 +5709,10 @@
                   },
                   {
                     "key": "Rakan",
-                    "games": 9,
-                    "wins": 4,
-                    "winrate": 44.4,
-                    "kda": 3.18
+                    "games": 10,
+                    "wins": 5,
+                    "winrate": 50,
+                    "kda": 3.23
                   },
                   {
                     "key": "Alistar",
@@ -5751,16 +5751,16 @@
               },
               "autofill": {
                 "lane": "JUNGLE",
-                "games": 108,
-                "wins": 49,
-                "winrate": 45.4
+                "games": 109,
+                "wins": 50,
+                "winrate": 45.9
               },
               "champPool": 23,
               "kdaStreak": 7,
-              "avgKda": 4.2,
+              "avgKda": 4.19,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 914,
+              "quadraGames": 915,
               "firstBloods": 60
             },
             "gameRecords": {
@@ -5778,17 +5778,17 @@
                 "val": 24
               },
               "assists": {
-                "id": "EUW1_7945460453",
-                "t": 1786298724037,
-                "dur": 2394,
+                "id": "EUW1_8009546531",
+                "t": 1791658040929,
+                "dur": 2376,
                 "champ": "Rakan",
                 "role": "UTILITY",
                 "k": 1,
-                "d": 6,
-                "a": 38,
+                "d": 13,
+                "a": 43,
                 "win": true,
-                "kda": 6.5,
-                "val": 38
+                "kda": 3.38,
+                "val": 43
               },
               "damage": {
                 "id": "EUW1_7761781372",
@@ -5898,7 +5898,7 @@
             "lp": {
               "win": 20,
               "loss": -19,
-              "winN": 29,
+              "winN": 30,
               "lossN": 24
             }
           },
@@ -5908,7 +5908,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-10T16:54:52.410Z",
+          "updatedAt": "2026-10-10T18:47:56.682Z",
           "lpHist": [
             [
               1790720384833,
@@ -6129,9 +6129,76 @@
             [
               1791651229635,
               2156
+            ],
+            [
+              1791658069536,
+              2176
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8009546531",
+              "t": 1791658040929,
+              "dur": 2376,
+              "win": true,
+              "champ": "Rakan",
+              "role": "UTILITY",
+              "lvl": 17,
+              "k": 1,
+              "d": 13,
+              "a": 43,
+              "kp": 71,
+              "cs": 28,
+              "vis": 97,
+              "dmg": 5587,
+              "teamDmg": 196533,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 95,
+              "goldEarned": 12189,
+              "fb": false,
+              "items": [
+                2065,
+                3876,
+                3009,
+                3050,
+                3916,
+                2524,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerExhaust"
+              ],
+              "runes": [
+                "perk-images/Styles/Resolve/Guardian/Guardian.png",
+                "perk-images/Styles/7200_Domination.png"
+              ],
+              "opp": {
+                "champ": "Yuumi",
+                "spells": [
+                  "SummonerExhaust",
+                  "SummonerHeal"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 7694,
+                "maxLeadMin": 28,
+                "maxDef": -529,
+                "tgd15": 691,
+                "gd15": -1211
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8009416339",
@@ -7328,72 +7395,14 @@
                 "d": 20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8005529711",
-              "t": 1791302974107,
-              "dur": 1914,
-              "win": true,
-              "champ": "Diana",
-              "role": "JUNGLE",
-              "lvl": 17,
-              "k": 10,
-              "d": 2,
-              "a": 15,
-              "kp": 53,
-              "cs": 203,
-              "vis": 20,
-              "dmg": 24706,
-              "teamDmg": 145785,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 1,
-              "towerDmg": 5340,
-              "goldEarned": 16101,
-              "fb": false,
-              "items": [
-                3152,
-                3157,
-                4633,
-                3047,
-                6653,
-                1058,
-                3340
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerSmite"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Khazix",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerSmite"
-                ],
-                "runes": [
-                  "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 3909,
-                "maxLeadMin": 32,
-                "maxDef": -3296,
-                "tgd15": -1190,
-                "gd15": -91
-              },
-              "lp": {
-                "d": 21,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791658040929,
+              1,
+              20
+            ],
             [
               1791651123870,
               1,
@@ -7886,11 +7895,6 @@
             ],
             [
               1789242919262,
-              1,
-              null
-            ],
-            [
-              1789239655647,
               1,
               null
             ]
