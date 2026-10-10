@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8009392482",
+      "t": 1791648745353,
+      "dur": 1844,
+      "win": true,
+      "champ": "Elise",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 16,
+      "d": 1,
+      "a": 12,
+      "kp": 65,
+      "cs": 275,
+      "vis": 32,
+      "dmg": 34083,
+      "teamDmg": 147697,
+      "penta": 0,
+      "quadra": 1,
+      "triple": 2,
+      "towerDmg": 4504,
+      "goldEarned": 18043,
+      "fb": false,
+      "items": [
+        4645,
+        4646,
+        3020,
+        3157,
+        3041,
+        3135,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "LeeSin",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10387,
+        "maxLeadMin": 31,
+        "maxDef": -42,
+        "tgd15": 2692,
+        "gd15": 641
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8009259820",
       "t": 1791641550141,
       "dur": 1613,
