@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T15:29:44.151Z",
+  "generatedAt": "2026-10-11T17:45:46.196Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -16937,7 +16937,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1139,
+      "score": 1117,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16950,17 +16950,17 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 39,
+            "lp": 17,
             "wins": 167,
-            "losses": 179,
-            "winrate": 48.3,
+            "losses": 180,
+            "winrate": 48.1,
             "hotStreak": false
           },
           "stats": {
-            "games": 346,
+            "games": 347,
             "wins": 167,
-            "losses": 179,
-            "winrate": 48.3,
+            "losses": 180,
+            "winrate": 48.1,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
@@ -16972,26 +16972,25 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
               "L",
-              "W",
-              "L",
-              "W",
-              "L",
               "L",
               "W",
               "L",
               "W",
+              "L",
+              "L",
+              "W",
+              "L",
               "W"
             ],
             "trend": [
               0,
-              0,
               1,
               1,
               1,
@@ -17009,14 +17008,15 @@
               1,
               0,
               1,
+              0,
               0
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 5,
-              "losses": 5,
-              "winrate": 50
+              "wins": 4,
+              "losses": 6,
+              "winrate": 40
             },
             "last20": {
               "games": 20,
@@ -17034,9 +17034,9 @@
               },
               {
                 "key": "Malzahar",
-                "games": 49,
+                "games": 50,
                 "wins": 28,
-                "winrate": 57.1,
+                "winrate": 56,
                 "kda": 2.45
               },
               {
@@ -17084,9 +17084,9 @@
             },
             "worstRole": {
               "key": "MIDDLE",
-              "games": 146,
+              "games": 147,
               "wins": 67,
-              "winrate": 45.9,
+              "winrate": 45.6,
               "kda": 2.24
             },
             "bestGame": {
@@ -17114,13 +17114,13 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791712099148,
+            "lastGameAt": 1791740687099,
             "totals": {
-              "k": 1763,
-              "d": 2147,
+              "k": 1767,
+              "d": 2149,
               "a": 2716
             },
-            "dmgPerMin": 855,
+            "dmgPerMin": 854,
             "avgVision": 31.1,
             "pentas": 0,
             "firstBloods": 20,
@@ -17138,9 +17138,9 @@
               },
               {
                 "key": "Malzahar",
-                "games": 49,
+                "games": 50,
                 "wins": 28,
-                "winrate": 57.1,
+                "winrate": 56,
                 "kda": 2.45,
                 "csPerMin": 8.1
               },
@@ -17468,9 +17468,9 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 146,
+                "games": 147,
                 "wins": 67,
-                "winrate": 45.9,
+                "winrate": 45.6,
                 "kda": 2.24
               },
               {
@@ -17503,9 +17503,9 @@
               }
             ],
             "gold": {
-              "games": 131,
-              "avgGd15": 198,
-              "avgTgd15": 115,
+              "games": 132,
+              "avgGd15": 214,
+              "avgTgd15": 94,
               "throws": 15,
               "comebacks": 12,
               "biggestThrow": {
@@ -17648,17 +17648,17 @@
                 ]
               },
               "MIDDLE": {
-                "games": 146,
+                "games": 147,
                 "wins": 67,
-                "winrate": 45.9,
+                "winrate": 45.6,
                 "kda": 2.24,
-                "gd15": -29,
+                "gd15": 25,
                 "champs": [
                   {
                     "key": "Malzahar",
-                    "games": 46,
+                    "games": 47,
                     "wins": 28,
-                    "winrate": 60.9,
+                    "winrate": 59.6,
                     "kda": 2.49
                   },
                   {
@@ -17809,8 +17809,8 @@
               },
               "mainChar": {
                 "champ": "Malzahar",
-                "winrate": 57.1,
-                "games": 49
+                "winrate": 56,
+                "games": 50
               },
               "autofill": {
                 "lane": "SOLO",
@@ -17823,7 +17823,7 @@
               "avgKda": 2.75,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 346,
+              "quadraGames": 347,
               "firstBloods": 20
             },
             "gameRecords": {
@@ -17960,9 +17960,9 @@
             },
             "lp": {
               "win": 20,
-              "loss": -18,
+              "loss": -19,
               "winN": 17,
-              "lossN": 17
+              "lossN": 18
             }
           },
           "links": {
@@ -17971,7 +17971,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-11T09:50:32.929Z",
+          "updatedAt": "2026-10-11T17:45:46.193Z",
           "lpHist": [
             [
               1790720384833,
@@ -18120,9 +18120,76 @@
             [
               1791712227541,
               1139
+            ],
+            [
+              1791740740991,
+              1117
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8010623083",
+              "t": 1791740687099,
+              "dur": 1079,
+              "win": false,
+              "champ": "Malzahar",
+              "role": "MIDDLE",
+              "lvl": 13,
+              "k": 4,
+              "d": 2,
+              "a": 0,
+              "kp": 40,
+              "cs": 163,
+              "vis": 6,
+              "dmg": 13238,
+              "teamDmg": 36733,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 3829,
+              "goldEarned": 7706,
+              "fb": false,
+              "items": [
+                1056,
+                2503,
+                2031,
+                3175,
+                3802,
+                1026,
+                3340
+              ],
+              "spells": [
+                "SummonerDot",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Ahri",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1280,
+                "maxLeadMin": 3,
+                "maxDef": -4423,
+                "tgd15": -2780,
+                "gd15": 2258
+              },
+              "lp": {
+                "d": -22,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8010099438",
@@ -19319,72 +19386,14 @@
                 "d": -22,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8001606307",
-              "t": 1790962553226,
-              "dur": 1908,
-              "win": false,
-              "champ": "Teemo",
-              "role": "TOP",
-              "lvl": 15,
-              "k": 2,
-              "d": 7,
-              "a": 3,
-              "kp": 26,
-              "cs": 162,
-              "vis": 25,
-              "dmg": 31745,
-              "teamDmg": 118898,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6827,
-              "goldEarned": 9066,
-              "fb": false,
-              "items": [
-                1086,
-                3087,
-                3118,
-                2031,
-                3009,
-                2508,
-                3340
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "TahmKench",
-                "spells": [
-                  "SummonerDot",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -12566,
-                "tgd15": -1158,
-                "gd15": -1132
-              },
-              "lp": {
-                "d": -22,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791740687099,
+              0,
+              -22
+            ],
             [
               1791712099148,
               0,
@@ -19877,11 +19886,6 @@
             ],
             [
               1786208815968,
-              1,
-              null
-            ],
-            [
-              1786205186760,
               1,
               null
             ]
