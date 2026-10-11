@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T23:55:08.064Z",
+  "generatedAt": "2026-10-11T09:50:32.935Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -16925,7 +16925,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1160,
+      "score": 1139,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -16938,47 +16938,46 @@
           "rank": {
             "tier": "SILVER",
             "division": "I",
-            "lp": 60,
+            "lp": 39,
             "wins": 167,
-            "losses": 178,
-            "winrate": 48.4,
+            "losses": 179,
+            "winrate": 48.3,
             "hotStreak": false
           },
           "stats": {
-            "games": 345,
+            "games": 346,
             "wins": 167,
-            "losses": 178,
-            "winrate": 48.4,
+            "losses": 179,
+            "winrate": 48.3,
             "avgK": 5.1,
             "avgD": 6.2,
             "avgA": 7.8,
             "kda": 2.09,
-            "csPerMin": 6,
+            "csPerMin": 6.1,
             "visPerMin": 1.01,
             "dmgShare": 21.8,
             "avgDurationMin": 30.9,
             "streak": {
               "current": {
-                "type": "W",
+                "type": "L",
                 "count": 1
               },
               "bestWin": 9,
               "worstLoss": 6
             },
             "form": [
-              "W",
-              "L",
-              "W",
-              "L",
               "L",
               "W",
               "L",
               "W",
+              "L",
+              "L",
               "W",
-              "L"
+              "L",
+              "W",
+              "W"
             ],
             "trend": [
-              1,
               0,
               0,
               1,
@@ -16997,7 +16996,8 @@
               0,
               1,
               0,
-              1
+              1,
+              0
             ],
             "mainRole": "MIDDLE",
             "last10": {
@@ -17008,9 +17008,9 @@
             },
             "last20": {
               "games": 20,
-              "wins": 10,
-              "losses": 10,
-              "winrate": 50
+              "wins": 9,
+              "losses": 11,
+              "winrate": 45
             },
             "topChamps": [
               {
@@ -17065,10 +17065,10 @@
             },
             "bestRole": {
               "key": "BOTTOM",
-              "games": 11,
+              "games": 12,
               "wins": 7,
-              "winrate": 63.6,
-              "kda": 2.8
+              "winrate": 58.3,
+              "kda": 2.56
             },
             "worstRole": {
               "key": "MIDDLE",
@@ -17102,14 +17102,14 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1791568297260,
+            "lastGameAt": 1791712099148,
             "totals": {
-              "k": 1762,
-              "d": 2138,
-              "a": 2707
+              "k": 1763,
+              "d": 2147,
+              "a": 2716
             },
             "dmgPerMin": 855,
-            "avgVision": 31.2,
+            "avgVision": 31.1,
             "pentas": 0,
             "firstBloods": 20,
             "maxKills": 19,
@@ -17333,6 +17333,14 @@
                 "csPerMin": 6.7
               },
               {
+                "key": "Yunara",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.11,
+                "csPerMin": 8.1
+              },
+              {
                 "key": "Vi",
                 "games": 1,
                 "wins": 0,
@@ -17469,10 +17477,10 @@
               },
               {
                 "key": "BOTTOM",
-                "games": 11,
+                "games": 12,
                 "wins": 7,
-                "winrate": 63.6,
-                "kda": 2.8
+                "winrate": 58.3,
+                "kda": 2.56
               },
               {
                 "key": "JUNGLE",
@@ -17483,9 +17491,9 @@
               }
             ],
             "gold": {
-              "games": 130,
-              "avgGd15": 212,
-              "avgTgd15": 131,
+              "games": 131,
+              "avgGd15": 198,
+              "avgTgd15": 115,
               "throws": 15,
               "comebacks": 12,
               "biggestThrow": {
@@ -17679,11 +17687,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 11,
+                "games": 12,
                 "wins": 7,
-                "winrate": 63.6,
-                "kda": 2.8,
-                "gd15": -75,
+                "winrate": 58.3,
+                "kda": 2.56,
+                "gd15": -245,
                 "champs": [
                   {
                     "key": "Caitlyn",
@@ -17698,6 +17706,13 @@
                     "wins": 2,
                     "winrate": 100,
                     "kda": 5
+                  },
+                  {
+                    "key": "Yunara",
+                    "games": 1,
+                    "wins": 0,
+                    "winrate": 0,
+                    "kda": 1.11
                   },
                   {
                     "key": "Sivir",
@@ -17787,16 +17802,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 63,
+                "games": 64,
                 "wins": 31,
-                "winrate": 49.2
+                "winrate": 48.4
               },
               "champPool": 26,
               "kdaStreak": 3,
-              "avgKda": 2.76,
+              "avgKda": 2.75,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 345,
+              "quadraGames": 346,
               "firstBloods": 20
             },
             "gameRecords": {
@@ -17935,7 +17950,7 @@
               "win": 20,
               "loss": -18,
               "winN": 17,
-              "lossN": 16
+              "lossN": 17
             }
           },
           "links": {
@@ -17944,7 +17959,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-10T11:56:38.958Z",
+          "updatedAt": "2026-10-11T09:50:32.929Z",
           "lpHist": [
             [
               1790720384833,
@@ -18089,9 +18104,76 @@
             [
               1791568385669,
               1160
+            ],
+            [
+              1791712227541,
+              1139
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8010099438",
+              "t": 1791712099148,
+              "dur": 1867,
+              "win": false,
+              "champ": "Yunara",
+              "role": "BOTTOM",
+              "lvl": 15,
+              "k": 1,
+              "d": 9,
+              "a": 9,
+              "kp": 53,
+              "cs": 251,
+              "vis": 15,
+              "dmg": 24457,
+              "teamDmg": 114571,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2153,
+              "goldEarned": 12323,
+              "fb": false,
+              "items": [
+                3085,
+                3032,
+                3031,
+                3123,
+                1036,
+                1029,
+                3340
+              ],
+              "spells": [
+                "SummonerBarrier",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Tristana",
+                "spells": [
+                  "SummonerBarrier",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1460,
+                "maxLeadMin": 19,
+                "maxDef": -4307,
+                "tgd15": -1895,
+                "gd15": -1600
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8008418831",
@@ -19288,72 +19370,14 @@
                 "d": -22,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8001565307",
-              "t": 1790960139141,
-              "dur": 1718,
-              "win": true,
-              "champ": "Heimerdinger",
-              "role": "TOP",
-              "lvl": 18,
-              "k": 7,
-              "d": 5,
-              "a": 3,
-              "kp": 29,
-              "cs": 224,
-              "vis": 25,
-              "dmg": 26005,
-              "teamDmg": 94086,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 7816,
-              "goldEarned": 12565,
-              "fb": true,
-              "items": [
-                3089,
-                6653,
-                4645,
-                3020,
-                1052,
-                1029,
-                3340
-              ],
-              "spells": [
-                "SummonerExhaust",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Olaf",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerHaste"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 5548,
-                "maxLeadMin": 18,
-                "maxDef": -373,
-                "tgd15": 3208,
-                "gd15": 2026
-              },
-              "lp": {
-                "d": 18,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791712099148,
+              0,
+              -21
+            ],
             [
               1791568297260,
               1,
@@ -19847,11 +19871,6 @@
             [
               1786205186760,
               1,
-              null
-            ],
-            [
-              1786036523843,
-              0,
               null
             ]
           ]
