@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8011530362",
+      "t": 1791825198322,
+      "dur": 1431,
+      "win": true,
+      "champ": "Lux",
+      "role": "UTILITY",
+      "lvl": 13,
+      "k": 4,
+      "d": 8,
+      "a": 15,
+      "kp": 45,
+      "cs": 64,
+      "vis": 48,
+      "dmg": 13504,
+      "teamDmg": 86370,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 293,
+      "goldEarned": 9188,
+      "fb": true,
+      "items": [
+        3118,
+        3871,
+        3020,
+        4646,
+        1052,
+        1058,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Nautilus",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 17179,
+        "maxLeadMin": 24,
+        "maxDef": -328,
+        "tgd15": 7641,
+        "gd15": 82
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8011410298",
       "t": 1791818103260,
       "dur": 1504,
