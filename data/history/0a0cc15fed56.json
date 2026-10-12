@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8011559421",
+      "t": 1791826834533,
+      "dur": 1568,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 14,
+      "k": 11,
+      "d": 4,
+      "a": 11,
+      "kp": 58,
+      "cs": 209,
+      "vis": 14,
+      "dmg": 19421,
+      "teamDmg": 96160,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 16642,
+      "goldEarned": 13968,
+      "fb": false,
+      "items": [
+        1086,
+        2523,
+        3085,
+        3031,
+        6670,
+        1036,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Aphelios",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9986,
+        "maxLeadMin": 27,
+        "maxDef": -1618,
+        "tgd15": 421,
+        "gd15": 2061
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8011532890",
       "t": 1791824989460,
       "dur": 1617,
