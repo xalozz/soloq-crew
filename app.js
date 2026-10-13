@@ -1051,7 +1051,11 @@ function renderGroupElo(players) {
   const box = document.getElementById('ge-chart');
   if (!box) return;
   const all = geSeries(players);
-  document.getElementById('ge-legend').replaceChildren(...all.map((s) => h('button', {
+  geHover = null;
+  const legend = document.getElementById('ge-legend');
+  legend.onmouseleave = () => geSetHover(null);
+  box.onmouseleave = () => geSetHover(null);
+  legend.replaceChildren(...all.map((s) => h('button', {
     class: `ge-chip ${geHidden.has(s.name) ? 'off' : ''}`, style: `--c:${s.color}`, 'aria-pressed': !geHidden.has(s.name),
     onclick: () => { geHidden.has(s.name) ? geHidden.delete(s.name) : geHidden.add(s.name); renderGroupElo(MODEL); },
     onmouseenter: () => geSetHover(s.name), onmouseleave: () => geSetHover(null),
@@ -1061,14 +1065,26 @@ function renderGroupElo(players) {
 
 // Resaltar una línea sin redibujar (así el tooltip y el ratón no se interrumpen)
 function geSetHover(name) {
+  if (geHover === name && name !== null) return;
   geHover = name;
   const svgEl = document.querySelector('#ge-chart svg');
   if (!svgEl) return;
+  svgEl.querySelector('.ge-top')?.remove();
+  if (name) {
+    const src = [...svgEl.querySelectorAll('.ge-line')].find((g) => g.dataset.name === name);
+    if (src) {
+      const top = src.cloneNode(true);
+      top.classList.add('ge-top', 'hot');
+      top.classList.remove('dim');
+      top.querySelectorAll('.hit').forEach((x) => x.remove());
+      top.style.pointerEvents = 'none';
+      svgEl.appendChild(top);
+    }
+  }
   for (const g of svgEl.querySelectorAll('.ge-line')) {
     const on = g.dataset.name === name;
     g.classList.toggle('hot', on);
     g.classList.toggle('dim', !!name && !on);
-    if (on) g.parentNode.appendChild(g); // encima del resto
   }
   for (const r of document.querySelectorAll('.ge-tr')) r.classList.toggle('dim', !!name && r.dataset.name !== name);
 }
