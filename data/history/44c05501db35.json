@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8012435466",
+      "t": 1791909560335,
+      "dur": 2159,
+      "win": false,
+      "champ": "JarvanIV",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 7,
+      "d": 15,
+      "a": 18,
+      "kp": 58,
+      "cs": 190,
+      "vis": 18,
+      "dmg": 21446,
+      "teamDmg": 147956,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4999,
+      "goldEarned": 15175,
+      "fb": false,
+      "items": [
+        3071,
+        6692,
+        3111,
+        3143,
+        6609,
+        3134,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Warwick",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1093,
+        "maxLeadMin": 27,
+        "maxDef": -8359,
+        "tgd15": -2762,
+        "gd15": 229
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8009531897",
       "t": 1791657159300,
       "dur": 2029,

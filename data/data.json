@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T16:25:31.573Z",
+  "generatedAt": "2026-10-13T16:41:39.016Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -10665,7 +10665,7 @@
       "name": "xPeris",
       "links": [],
       "bestAccount": 0,
-      "score": 2122,
+      "score": 2102,
       "accounts": [
         {
           "riotId": "xPeris#6969",
@@ -10678,17 +10678,17 @@
           "rank": {
             "tier": "EMERALD",
             "division": "III",
-            "lp": 22,
+            "lp": 2,
             "wins": 451,
-            "losses": 440,
+            "losses": 441,
             "winrate": 50.6,
             "hotStreak": false
           },
           "stats": {
-            "games": 875,
+            "games": 876,
             "wins": 446,
-            "losses": 429,
-            "winrate": 51,
+            "losses": 430,
+            "winrate": 50.9,
             "avgK": 4.4,
             "avgD": 7.8,
             "avgA": 13.8,
@@ -10700,7 +10700,7 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 2
+                "count": 3
               },
               "bestWin": 10,
               "worstLoss": 8
@@ -10708,18 +10708,17 @@
             "form": [
               "L",
               "L",
-              "W",
-              "L",
-              "L",
               "L",
               "W",
-              "W",
               "L",
-              "W"
+              "L",
+              "L",
+              "W",
+              "W",
+              "L"
             ],
             "trend": [
               0,
-              0,
               1,
               1,
               0,
@@ -10736,15 +10735,16 @@
               0,
               0,
               1,
+              0,
               0,
               0
             ],
             "mainRole": "UTILITY",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 3,
+              "losses": 7,
+              "winrate": 30
             },
             "last20": {
               "games": 20,
@@ -10755,10 +10755,10 @@
             "topChamps": [
               {
                 "key": "Thresh",
-                "games": 83,
+                "games": 84,
                 "wins": 48,
-                "winrate": 57.8,
-                "kda": 2.5
+                "winrate": 57.1,
+                "kda": 2.48
               },
               {
                 "key": "Zac",
@@ -10805,9 +10805,9 @@
             },
             "bestRole": {
               "key": "UTILITY",
-              "games": 479,
+              "games": 480,
               "wins": 251,
-              "winrate": 52.4,
+              "winrate": 52.3,
               "kda": 2.28
             },
             "worstRole": {
@@ -10842,14 +10842,14 @@
               "kda": 0.1
             },
             "firstGameAt": 1768843553467,
-            "lastGameAt": 1791906373112,
+            "lastGameAt": 1791909560335,
             "totals": {
-              "k": 3881,
-              "d": 6854,
-              "a": 12040
+              "k": 3882,
+              "d": 6866,
+              "a": 12055
             },
             "dmgPerMin": 540,
-            "avgVision": 55.1,
+            "avgVision": 55.2,
             "pentas": 0,
             "firstBloods": 62,
             "maxKills": 22,
@@ -10858,10 +10858,10 @@
             "champs": [
               {
                 "key": "Thresh",
-                "games": 83,
+                "games": 84,
                 "wins": 48,
-                "winrate": 57.8,
-                "kda": 2.5,
+                "winrate": 57.1,
+                "kda": 2.48,
                 "csPerMin": 0.9
               },
               {
@@ -11516,9 +11516,9 @@
             "roles": [
               {
                 "key": "UTILITY",
-                "games": 479,
+                "games": 480,
                 "wins": 251,
-                "winrate": 52.4,
+                "winrate": 52.3,
                 "kda": 2.28
               },
               {
@@ -11551,9 +11551,9 @@
               }
             ],
             "gold": {
-              "games": 146,
-              "avgGd15": -39,
-              "avgTgd15": 142,
+              "games": 147,
+              "avgGd15": -49,
+              "avgTgd15": 122,
               "throws": 18,
               "comebacks": 14,
               "biggestThrow": {
@@ -11798,18 +11798,18 @@
                 ]
               },
               "UTILITY": {
-                "games": 479,
+                "games": 480,
                 "wins": 251,
-                "winrate": 52.4,
+                "winrate": 52.3,
                 "kda": 2.28,
-                "gd15": -12,
+                "gd15": -22,
                 "champs": [
                   {
                     "key": "Thresh",
-                    "games": 83,
+                    "games": 84,
                     "wins": 48,
-                    "winrate": 57.8,
-                    "kda": 2.5
+                    "winrate": 57.1,
+                    "kda": 2.48
                   },
                   {
                     "key": "Rakan",
@@ -11853,7 +11853,7 @@
               "oneTrick": {
                 "champ": "Thresh",
                 "wins": 48,
-                "games": 83
+                "games": 84
               },
               "mainChar": {
                 "champ": "Leona",
@@ -11871,7 +11871,7 @@
               "avgKda": 3.09,
               "pentas": 0,
               "quadras": 3,
-              "quadraGames": 875,
+              "quadraGames": 876,
               "firstBloods": 62
             },
             "gameRecords": {
@@ -12010,7 +12010,7 @@
               "win": 21,
               "loss": -21,
               "winN": 26,
-              "lossN": 22
+              "lossN": 23
             }
           },
           "links": {
@@ -12019,7 +12019,7 @@
             "dpm": "https://dpm.lol/xPeris-6969",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xPeris-6969"
           },
-          "updatedAt": "2026-10-13T15:46:32.011Z",
+          "updatedAt": "2026-10-13T16:41:39.010Z",
           "lpHist": [
             [
               1790720384833,
@@ -12220,9 +12220,76 @@
             [
               1791906385844,
               2122
+            ],
+            [
+              1791909691891,
+              2102
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8012435466",
+              "t": 1791909560335,
+              "dur": 2159,
+              "win": false,
+              "champ": "Thresh",
+              "role": "UTILITY",
+              "lvl": 15,
+              "k": 1,
+              "d": 12,
+              "a": 15,
+              "kp": 37,
+              "cs": 34,
+              "vis": 128,
+              "dmg": 6397,
+              "teamDmg": 147956,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 2399,
+              "goldEarned": 10188,
+              "fb": false,
+              "items": [
+                3190,
+                3876,
+                3075,
+                3009,
+                1028,
+                3109,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerDot"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Seraphine",
+                "spells": [
+                  "SummonerHeal",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1093,
+                "maxLeadMin": 27,
+                "maxDef": -8359,
+                "tgd15": -2762,
+                "gd15": -1439
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8012373273",
@@ -13419,72 +13486,14 @@
                 "d": -20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8009259820",
-              "t": 1791641550141,
-              "dur": 1613,
-              "win": false,
-              "champ": "Thresh",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 1,
-              "d": 12,
-              "a": 14,
-              "kp": 45,
-              "cs": 28,
-              "vis": 68,
-              "dmg": 8875,
-              "teamDmg": 117145,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 236,
-              "goldEarned": 7182,
-              "fb": false,
-              "items": [
-                3190,
-                3082,
-                3876,
-                3024,
-                3009,
-                1028,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerDot"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Janna",
-                "spells": [
-                  "SummonerHeal",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -13206,
-                "tgd15": -5148,
-                "gd15": -1390
-              },
-              "lp": {
-                "d": -21,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791909560335,
+              0,
+              -20
+            ],
             [
               1791906373112,
               0,
@@ -13979,11 +13988,6 @@
               1789077314911,
               0,
               null
-            ],
-            [
-              1789075338493,
-              0,
-              null
             ]
           ]
         }
@@ -13993,7 +13997,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1749,
+      "score": 1728,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -14006,16 +14010,16 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "III",
-            "lp": 49,
+            "lp": 28,
             "wins": 467,
-            "losses": 473,
-            "winrate": 49.7,
+            "losses": 474,
+            "winrate": 49.6,
             "hotStreak": false
           },
           "stats": {
-            "games": 910,
+            "games": 911,
             "wins": 457,
-            "losses": 453,
+            "losses": 454,
             "winrate": 50.2,
             "avgK": 7.2,
             "avgD": 7,
@@ -14028,25 +14032,24 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 10,
               "worstLoss": 11
             },
             "form": [
               "L",
-              "W",
               "L",
               "W",
               "L",
-              "L",
-              "L",
-              "L",
               "W",
-              "L"
+              "L",
+              "L",
+              "L",
+              "L",
+              "W"
             ],
             "trend": [
-              0,
               1,
               0,
               0,
@@ -14065,6 +14068,7 @@
               1,
               0,
               1,
+              0,
               0
             ],
             "mainRole": "MIDDLE",
@@ -14170,14 +14174,14 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1791657159300,
+            "lastGameAt": 1791909560335,
             "totals": {
-              "k": 6587,
-              "d": 6347,
-              "a": 6356
+              "k": 6594,
+              "d": 6362,
+              "a": 6374
             },
-            "dmgPerMin": 819,
-            "avgVision": 24.5,
+            "dmgPerMin": 818,
+            "avgVision": 24.4,
             "pentas": 0,
             "firstBloods": 106,
             "maxKills": 26,
@@ -14250,11 +14254,11 @@
               },
               {
                 "key": "JarvanIV",
-                "games": 22,
+                "games": 23,
                 "wins": 8,
-                "winrate": 36.4,
-                "kda": 2.91,
-                "csPerMin": 6.2
+                "winrate": 34.8,
+                "kda": 2.79,
+                "csPerMin": 6.1
               },
               {
                 "key": "Viktor",
@@ -14475,9 +14479,9 @@
               },
               {
                 "key": "JUNGLE",
-                "games": 189,
+                "games": 190,
                 "wins": 84,
-                "winrate": 44.4,
+                "winrate": 44.2,
                 "kda": 2.27
               },
               {
@@ -14503,9 +14507,9 @@
               }
             ],
             "gold": {
-              "games": 171,
-              "avgGd15": -18,
-              "avgTgd15": 81,
+              "games": 172,
+              "avgGd15": -16,
+              "avgTgd15": 64,
               "throws": 17,
               "comebacks": 12,
               "biggestThrow": {
@@ -14632,11 +14636,11 @@
                 ]
               },
               "JUNGLE": {
-                "games": 189,
+                "games": 190,
                 "wins": 84,
-                "winrate": 44.4,
+                "winrate": 44.2,
                 "kda": 2.27,
-                "gd15": -135,
+                "gd15": -131,
                 "champs": [
                   {
                     "key": "LeeSin",
@@ -14661,10 +14665,10 @@
                   },
                   {
                     "key": "JarvanIV",
-                    "games": 22,
+                    "games": 23,
                     "wins": 8,
-                    "winrate": 36.4,
-                    "kda": 2.91
+                    "winrate": 34.8,
+                    "kda": 2.79
                   },
                   {
                     "key": "FiddleSticks",
@@ -14814,16 +14818,16 @@
               },
               "autofill": {
                 "lane": "SOLO",
-                "games": 200,
+                "games": 201,
                 "wins": 87,
-                "winrate": 43.5
+                "winrate": 43.3
               },
               "champPool": 30,
               "kdaStreak": 4,
               "avgKda": 2.95,
               "pentas": 0,
               "quadras": 3,
-              "quadraGames": 910,
+              "quadraGames": 911,
               "firstBloods": 106
             },
             "gameRecords": {
@@ -14962,7 +14966,7 @@
               "win": 20,
               "loss": -19,
               "winN": 34,
-              "lossN": 39
+              "lossN": 40
             }
           },
           "links": {
@@ -14971,7 +14975,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-12T17:13:44.311Z",
+          "updatedAt": "2026-10-13T16:41:31.343Z",
           "lpHist": [
             [
               1790720384833,
@@ -15276,9 +15280,76 @@
             [
               1791657229652,
               1749
+            ],
+            [
+              1791909685584,
+              1728
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8012435466",
+              "t": 1791909560335,
+              "dur": 2159,
+              "win": false,
+              "champ": "JarvanIV",
+              "role": "JUNGLE",
+              "lvl": 17,
+              "k": 7,
+              "d": 15,
+              "a": 18,
+              "kp": 58,
+              "cs": 190,
+              "vis": 18,
+              "dmg": 21446,
+              "teamDmg": 147956,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 4999,
+              "goldEarned": 15175,
+              "fb": false,
+              "items": [
+                3071,
+                6692,
+                3111,
+                3143,
+                6609,
+                3134,
+                3364
+              ],
+              "spells": [
+                "SummonerSmite",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                "perk-images/Styles/7200_Domination.png"
+              ],
+              "opp": {
+                "champ": "Warwick",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerSmite"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1093,
+                "maxLeadMin": 27,
+                "maxDef": -8359,
+                "tgd15": -2762,
+                "gd15": 229
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8009531897",
@@ -16475,72 +16546,14 @@
                 "d": 20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8007258832",
-              "t": 1791470860561,
-              "dur": 1574,
-              "win": false,
-              "champ": "Ziggs",
-              "role": "MIDDLE",
-              "lvl": 14,
-              "k": 4,
-              "d": 10,
-              "a": 7,
-              "kp": 44,
-              "cs": 193,
-              "vis": 8,
-              "dmg": 17928,
-              "teamDmg": 78234,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 479,
-              "goldEarned": 10707,
-              "fb": false,
-              "items": [
-                4645,
-                6655,
-                3175,
-                6653,
-                0,
-                0,
-                3363
-              ],
-              "spells": [
-                "SummonerTeleport",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Ekko",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                  "perk-images/Styles/7202_Sorcery.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -13794,
-                "tgd15": -4808,
-                "gd15": -3635
-              },
-              "lp": {
-                "d": -20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1791909560335,
+              0,
+              -21
+            ],
             [
               1791657159300,
               0,
@@ -17033,11 +17046,6 @@
             ],
             [
               1789637962947,
-              0,
-              null
-            ],
-            [
-              1789601531366,
               0,
               null
             ]
