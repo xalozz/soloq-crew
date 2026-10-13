@@ -25,6 +25,7 @@
       <div class="nav-links">
         <a href="#ranking" class="active">Ranking</a>
         <a href="#best5">Best 5</a>
+        <a href="#evolucion">Evolución</a>
         <a href="#estadisticas">Estadísticas</a>
         <a href="#dias">Días</a>
         <a href="#records">Récords</a>
@@ -79,6 +80,24 @@
         <button data-mode="elo" title="El de más rango entre los que juegan ese rol">Por elo</button>
       </div>
       <div id="best5-grid" class="best5"></div>
+    </section>
+
+    <section id="evolucion" class="section">
+      <h2 class="display display-md center">Evolución</h2>
+      <p class="center muted sub">El elo de todos a lo largo del tiempo · pulsa un nombre para mostrarlo u ocultarlo · pasa el ratón por una línea para resaltarla</p>
+      <div class="panel ge">
+        <div class="ge-bar">
+          <div class="toggle ge-range" id="ge-range">
+            <button data-days="14">2 semanas</button>
+            <button data-days="30" class="on">1 mes</button>
+            <button data-days="0">Todo</button>
+          </div>
+          <div class="ge-actions"><button id="ge-all">Todos</button><button id="ge-none">Ninguno</button></div>
+        </div>
+        <div id="ge-legend" class="ge-legend"></div>
+        <div id="ge-chart" class="ge-chart"></div>
+        <p class="muted small center">Línea continua: LP registrado · discontinua: estimado con sus victorias y derrotas (ver "Evolución de elo" en la ficha de cada uno)</p>
+      </div>
     </section>
 
     <section id="estadisticas" class="section">

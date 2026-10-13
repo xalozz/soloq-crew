@@ -26,6 +26,21 @@ const pct = (w, n) => (n ? Math.round((w / n) * 1000) / 10 : 0);
 const r1 = (x) => Math.round(x * 10) / 10;
 const r2 = (x) => Math.round(x * 100) / 100;
 
+// Primera partida de cada día (hora de Madrid): ¿cuánto se gana al "calentar"?
+const madridDay = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Madrid', year: 'numeric', month: '2-digit', day: '2-digit' });
+function firstOfDay(history) {
+  const first = new Map();
+  for (const g of history) {
+    const k = madridDay.format(new Date(g.t));
+    if (!first.has(k) || g.t < first.get(k).t) first.set(k, g);
+  }
+  const days = [...first.values()];
+  const wins = days.filter((g) => g.win).length;
+  const rest = history.length - days.length;
+  const restW = history.filter((g) => g.win).length - wins;
+  return { games: days.length, wins, winrate: pct(wins, days.length), restWinrate: pct(restW, rest) };
+}
+
 function streaks(history) {
   // current: desde la partida más reciente
   let current = { type: null, count: 0 };
@@ -126,6 +141,7 @@ export function computeAccountStats(history) {
     dmgShare: teamDmg ? Math.round((sum((g) => g.dmg) / teamDmg) * 1000) / 10 : null,
     avgDurationMin: r1(minutes / n),
     streak: streaks(history),
+    firstOfDay: firstOfDay(history),
     form: history.slice(0, 10).map((g) => (g.win ? 'W' : 'L')),
     trend: history.slice(0, 20).reverse().map((g) => (g.win ? 1 : 0)), // antigua → reciente
     mainRole,

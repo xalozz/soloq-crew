@@ -638,6 +638,7 @@ function tabStats(acc) {
       kv('Partidas lanzadas', s.gold ? `${s.gold.throws}` : null)),
     group('Rachas y LP',
       kv('Racha actual', streakChip(s)),
+      kv('1ª partida del día', s.firstOfDay ? h('span', { title: `${s.firstOfDay.wins}V en ${s.firstOfDay.games} días · resto de partidas: ${fmt(s.firstOfDay.restWinrate, 1)}%` }, `${fmt(s.firstOfDay.winrate, 0)}% WR`) : null, s.firstOfDay ? (s.firstOfDay.winrate >= 50 ? 'pos' : 'neg') : ''),
       kv('Mejor / peor', h('span', {}, h('span', { class: 'pos' }, `${s.streak.bestWin}V`), ' · ', h('span', { class: 'neg' }, `${s.streak.worstLoss}D`))),
       kv('LP por victoria', lp?.win != null ? `+${lp.win}` : null, 'pos'),
       kv('LP por derrota', lp?.loss != null ? `${lp.loss}` : null, 'neg')));
@@ -732,6 +733,7 @@ const STAT_CARDS = [
   { title: 'Visión', sub: 'Puntuación de visión por minuto', get: (s) => s.visPerMin, d: 2 },
   { title: '% daño', sub: 'Parte del daño a campeones de su equipo', get: (s) => s.dmgShare, d: 1, suffix: '%' },
   { title: 'Oro @15', sub: 'Diferencia media de oro con su rival de línea al minuto 15', get: (s) => s.gold?.avgGd15, fmt: goldK, games: (s) => s.gold.games },
+  { title: '1ª del día', sub: 'Winrate en la primera partida de cada día', get: (s) => (s.firstOfDay?.games >= 10 ? s.firstOfDay.winrate : null), d: 1, suffix: '%', games: (s) => s.firstOfDay.games },
   { title: 'Throws', sub: 'Partidas perdidas tras ir +3k de oro por equipo', get: (s) => s.gold?.throws, d: 0, games: (s) => s.gold.games },
 ];
 
@@ -1027,6 +1029,127 @@ function renderAwards(players) {
   document.getElementById('game-records').replaceChildren(...gcards);
 }
 
+// ---------------------------------------------------------------- evolución del grupo
+const GE_COLORS = ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#9085e9', '#e66767', '#7fb7ff'];
+const geHidden = new Set();
+let geDays = 30;
+let geHover = null;
+
+function geSeries(players) {
+  // Color fijo por jugador (orden de la configuración), no por posición en el ranking
+  return DATA.players.map((p0, i) => {
+    const p = players.find((x) => x.name === p0.name);
+    if (!p?.main) return null;
+    const { est, real } = eloSeries(p.main);
+    const pts = [...est.map((x) => [x[0], x[1], 1]), ...real.map((x) => [x[0], x[1], 0])].sort((a, b) => a[0] - b[0]);
+    if (p.score >= 0) pts.push([Date.now(), p.score, 0]);
+    return { name: p.name, color: GE_COLORS[i % GE_COLORS.length], pts, rank: p.rank, p };
+  }).filter((s) => s && s.pts.length >= 2);
+}
+
+function renderGroupElo(players) {
+  const box = document.getElementById('ge-chart');
+  if (!box) return;
+  const all = geSeries(players);
+  document.getElementById('ge-legend').replaceChildren(...all.map((s) => h('button', {
+    class: `ge-chip ${geHidden.has(s.name) ? 'off' : ''}`, style: `--c:${s.color}`, 'aria-pressed': !geHidden.has(s.name),
+    onclick: () => { geHidden.has(s.name) ? geHidden.delete(s.name) : geHidden.add(s.name); renderGroupElo(MODEL); },
+    onmouseenter: () => geSetHover(s.name), onmouseleave: () => geSetHover(null),
+  }, h('i'), s.name)));
+  drawGe(box, all);
+}
+
+// Resaltar una línea sin redibujar (así el tooltip y el ratón no se interrumpen)
+function geSetHover(name) {
+  geHover = name;
+  const svgEl = document.querySelector('#ge-chart svg');
+  if (!svgEl) return;
+  for (const g of svgEl.querySelectorAll('.ge-line')) {
+    const on = g.dataset.name === name;
+    g.classList.toggle('hot', on);
+    g.classList.toggle('dim', !!name && !on);
+    if (on) g.parentNode.appendChild(g); // encima del resto
+  }
+  for (const r of document.querySelectorAll('.ge-tr')) r.classList.toggle('dim', !!name && r.dataset.name !== name);
+}
+
+function drawGe(box, all) {
+  const now = Date.now();
+  const t0 = geDays ? now - geDays * 864e5 : Math.min(...all.map((s) => s.pts[0][0]));
+  const vis = all.filter((s) => !geHidden.has(s.name)).map((s) => {
+    // Recortar al rango, empezando en el valor que tenía en t0
+    const before = s.pts.filter((p) => p[0] <= t0).at(-1);
+    const inside = s.pts.filter((p) => p[0] > t0);
+    const pts = before ? [[t0, before[1], before[2]], ...inside] : inside;
+    return { ...s, pts };
+  }).filter((s) => s.pts.length >= 1);
+  const W = Math.max(320, box.clientWidth), H = W < 600 ? 300 : 380, L = 62, R = W < 600 ? 12 : 120, T = 14, B = 28;
+  if (!vis.length) { box.replaceChildren(h('p', { class: 'empty' }, 'Selecciona al menos un jugador.')); return; }
+  let lo = Math.min(...vis.flatMap((s) => s.pts.map((p) => p[1]))), hi = Math.max(...vis.flatMap((s) => s.pts.map((p) => p[1])));
+  lo = Math.max(0, Math.floor((lo - 20) / 100) * 100); hi = Math.ceil((hi + 20) / 100) * 100;
+  const x = (t) => L + ((t - t0) / Math.max(1, now - t0)) * (W - L - R);
+  const y = (v) => T + (1 - (v - lo) / Math.max(1, hi - lo)) * (H - T - B);
+  const els = [];
+  const span = hi - lo;
+  const step = span > 2400 ? 800 : span > 900 ? 400 : span > 300 ? 200 : 100;
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    els.push(svg('line', { x1: L, x2: W - R, y1: y(v), y2: y(v), class: 'grid' }));
+    const lab = v >= 2800 ? `M ${v - 2800}` : `${TIER_ES[TIERS[Math.floor(v / 400)]].slice(0, 3)} ${DIVS[Math.floor((v % 400) / 100)]}`;
+    els.push(svg('text', { x: L - 8, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, lab));
+  }
+  const nT = Math.max(2, Math.min(7, Math.floor((W - L - R) / 100)));
+  for (let k = 0; k < nT; k++) {
+    const t = t0 + ((now - t0) * k) / (nT - 1);
+    els.push(svg('text', { x: x(t), y: H - 8, class: 'axis', 'text-anchor': k === 0 ? 'start' : k === nT - 1 ? 'end' : 'middle' }, prettyDay(dayKey(t))));
+  }
+  // Etiquetas al final de cada línea sin solaparse (separación mínima de 15 px)
+  const labelY = new Map();
+  const labs = vis.map((s) => ({ n: s.name, y: y(s.pts.at(-1)[1]) })).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < labs.length; i++) if (labs[i].y - labs[i - 1].y < 15) labs[i].y = labs[i - 1].y + 15;
+  const over = labs.length ? labs.at(-1).y - (H - B) : 0;
+  if (over > 0) for (const l of labs) l.y -= over;
+  for (const l of labs) labelY.set(l.n, l.y);
+  const ordered = vis;
+  for (const s of ordered) {
+    const dim = false;
+    const path = (pts) => pts.map((p, i) => `${i ? 'L' : 'M'}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join('');
+    // Tramo estimado (discontinuo) y registrado (continuo)
+    const firstReal = s.pts.findIndex((p) => !p[2]);
+    const estPts = firstReal === -1 ? s.pts : s.pts.slice(0, firstReal + 1);
+    const realPts = firstReal === -1 ? [] : s.pts.slice(firstReal);
+    const g = svg('g', { class: 'ge-line', 'data-name': s.name, style: `--c:${s.color}` });
+    if (estPts.length > 1) g.append(svg('path', { d: path(estPts), class: 'est' }));
+    if (realPts.length > 1) g.append(svg('path', { d: path(realPts) }));
+    g.append(svg('path', { d: path(s.pts), class: 'hit' }));
+    const last = s.pts.at(-1);
+    g.append(svg('circle', { cx: x(last[0]), cy: y(last[1]), r: 4, class: 'end' }));
+    if (R > 40) g.append(svg('text', { x: x(last[0]) + 8, y: (labelY.get(s.name) ?? y(last[1])) + 4, class: 'ge-lab' }, s.name));
+    g.addEventListener('pointerenter', () => geSetHover(s.name));
+    g.addEventListener('pointerleave', () => geSetHover(null));
+    els.push(g);
+  }
+  const cross = svg('line', { class: 'ecross', y1: T, y2: H - B, x1: -10, x2: -10 });
+  const chart = svg('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': 'Evolución del elo de todos los jugadores' }, ...els, cross);
+  const tip = h('div', { class: 'etip ge-tip', hidden: true });
+  chart.addEventListener('pointermove', (e) => {
+    const r = chart.getBoundingClientRect();
+    const px = ((e.clientX - r.left) / r.width) * W;
+    if (px < L || px > W - R) { tip.hidden = true; cross.setAttribute('x1', -10); cross.setAttribute('x2', -10); return; }
+    const t = t0 + ((px - L) / (W - L - R)) * (now - t0);
+    cross.setAttribute('x1', px); cross.setAttribute('x2', px);
+    const rows = vis.map((s) => { const p = s.pts.filter((q) => q[0] <= t).at(-1); return p ? { s, v: p[1], est: p[2] } : null; })
+      .filter(Boolean).sort((a, b) => b.v - a.v);
+    tip.hidden = false;
+    tip.replaceChildren(h('b', {}, new Date(t).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: TZ })),
+      ...rows.map((row) => h('span', { class: `ge-tr ${geHover && geHover !== row.s.name ? 'dim' : ''}`, 'data-name': row.s.name },
+        h('i', { style: `background:${row.s.color}` }), row.s.name, h('em', {}, `${row.est ? '≈ ' : ''}${scoreLabel(row.v)}`))));
+    tip.style.left = `${Math.min(80, Math.max(20, (px / W) * 100))}%`;
+    tip.style.top = '8%';
+  });
+  chart.addEventListener('pointerleave', () => { tip.hidden = true; cross.setAttribute('x1', -10); cross.setAttribute('x2', -10); });
+  box.replaceChildren(chart, tip);
+}
+
 // ---------------------------------------------------------------- render
 let MODEL = [];
 
@@ -1059,6 +1182,7 @@ function render() {
   document.getElementById('stats').replaceChildren(
     ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '', rolesCard(MODEL) ?? '');
   renderBest5(MODEL);
+  requestAnimationFrame(() => renderGroupElo(MODEL));
   renderAwards(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
@@ -1074,6 +1198,16 @@ function wire() {
   });
   document.getElementById('search').addEventListener('input', (e) => { query = e.target.value; renderRows(); });
   document.getElementById('best5-info').addEventListener('click', best5Info);
+  document.getElementById('ge-range').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-days]');
+    if (!b) return;
+    geDays = Number(b.dataset.days);
+    for (const x of e.currentTarget.children) x.classList.toggle('on', x === b);
+    renderGroupElo(MODEL);
+  });
+  document.getElementById('ge-all').addEventListener('click', () => { geHidden.clear(); renderGroupElo(MODEL); });
+  document.getElementById('ge-none').addEventListener('click', () => { for (const p of DATA.players) geHidden.add(p.name); renderGroupElo(MODEL); });
+  let geT; window.addEventListener('resize', () => { clearTimeout(geT); geT = setTimeout(() => MODEL.length && renderGroupElo(MODEL), 150); });
   document.getElementById('best5-toggle').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-mode]');
     if (!b) return;

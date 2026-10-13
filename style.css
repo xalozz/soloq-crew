@@ -597,6 +597,38 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .gr-side { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .gr-ver { font-size: 10px; color: var(--accent); font-weight: 800; }
 
+/* ------------------------------------------------ evolución del grupo */
+.ge { padding: 18px 16px 12px; }
+.ge-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.ge-range { margin: 0; }
+.ge-range button.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ge-actions { display: flex; gap: 6px; }
+.ge-actions button { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 6px 12px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.ge-actions button:hover { border-color: var(--accent); }
+.ge-legend { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.ge-chip { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); background: var(--panel-3); border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 800; cursor: pointer; }
+.ge-chip i { width: 12px; height: 3px; border-radius: 2px; background: var(--c); }
+.ge-chip:hover { border-color: var(--c); }
+.ge-chip.off { opacity: .4; text-decoration: line-through; }
+.ge-chip.off i { background: #55555d; }
+.ge-chart { position: relative; }
+.ge-chart svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.ge-chart .grid { stroke: var(--line); }
+.ge-chart .axis { fill: var(--muted); font-size: 11px; font-family: inherit; }
+.ge-line path { fill: none; stroke: var(--c); stroke-width: 2; stroke-linejoin: round; transition: opacity .15s, stroke-width .15s; }
+.ge-line path.est { stroke-dasharray: 5 4; opacity: .75; }
+.ge-line path.hit { stroke: transparent; stroke-width: 14; stroke-dasharray: none; opacity: 1; cursor: pointer; }
+.ge-line .end { fill: var(--c); stroke: var(--panel); stroke-width: 2; }
+.ge-line .ge-lab { fill: var(--c); font-size: 12px; font-weight: 800; font-family: inherit; }
+.ge-line.dim { opacity: .15; }
+.ge-line.hot path:not(.hit) { stroke-width: 3.5; }
+.ge-chart .ecross { stroke: #5a5a63; stroke-dasharray: 3 3; }
+.ge-tip { transform: translate(-50%, 0); gap: 2px; min-width: 170px; }
+.ge-tr { display: grid; grid-template-columns: 10px 1fr auto; align-items: center; gap: 6px; font-size: 11px; }
+.ge-tr i { width: 8px; height: 8px; border-radius: 50%; }
+.ge-tr em { font-style: normal; color: var(--muted); }
+.ge-tr.dim { opacity: .4; }
+
 /* ------------------------------------------------ días */
 .days { max-width: 820px; margin: 0 auto; }
 .toggle { display: flex; justify-content: center; gap: 6px; margin: 0 auto 18px; }
