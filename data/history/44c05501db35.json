@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8012928020",
+      "t": 1791933401693,
+      "dur": 1975,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 6,
+      "d": 5,
+      "a": 4,
+      "kp": 56,
+      "cs": 258,
+      "vis": 35,
+      "dmg": 16203,
+      "teamDmg": 85581,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4539,
+      "goldEarned": 14206,
+      "fb": false,
+      "items": [
+        3047,
+        6676,
+        3036,
+        3031,
+        6670,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Nunu",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 126,
+        "maxLeadMin": 4,
+        "maxDef": -7871,
+        "tgd15": -680,
+        "gd15": -429
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8012903897",
       "t": 1791931128274,
       "dur": 1635,
