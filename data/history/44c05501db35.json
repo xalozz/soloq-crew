@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8013640479",
+      "t": 1792008032898,
+      "dur": 1520,
+      "win": true,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 6,
+      "d": 1,
+      "a": 6,
+      "kp": 32,
+      "cs": 200,
+      "vis": 25,
+      "dmg": 12141,
+      "teamDmg": 103589,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3938,
+      "goldEarned": 12344,
+      "fb": false,
+      "items": [
+        6676,
+        3031,
+        3047,
+        1018,
+        1036,
+        2055,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Zed",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13812,
+        "maxLeadMin": 26,
+        "maxDef": -232,
+        "tgd15": 6530,
+        "gd15": -988
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8013456282",
       "t": 1792000745636,
       "dur": 1969,
