@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8013798001",
+      "t": 1792015888608,
+      "dur": 1901,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 5,
+      "d": 10,
+      "a": 6,
+      "kp": 55,
+      "cs": 220,
+      "vis": 33,
+      "dmg": 20556,
+      "teamDmg": 93783,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2786,
+      "goldEarned": 12928,
+      "fb": false,
+      "items": [
+        3111,
+        6676,
+        3036,
+        3031,
+        0,
+        1036,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Warwick",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1967,
+        "maxLeadMin": 11,
+        "maxDef": -8113,
+        "tgd15": -1028,
+        "gd15": 1059
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8013770660",
       "t": 1792013664061,
       "dur": 1410,
