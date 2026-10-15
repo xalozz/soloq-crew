@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T22:27:47.546Z",
+  "generatedAt": "2026-10-15T12:12:21.683Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -14071,7 +14071,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1625,
+      "score": 1643,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -14084,17 +14084,17 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "IV",
-            "lp": 25,
-            "wins": 476,
+            "lp": 43,
+            "wins": 477,
             "losses": 487,
-            "winrate": 49.4,
+            "winrate": 49.5,
             "hotStreak": false
           },
           "stats": {
-            "games": 933,
-            "wins": 466,
+            "games": 934,
+            "wins": 467,
             "losses": 467,
-            "winrate": 49.9,
+            "winrate": 50,
             "avgK": 7.2,
             "avgD": 7,
             "avgA": 7,
@@ -14105,8 +14105,8 @@
             "avgDurationMin": 30.8,
             "streak": {
               "current": {
-                "type": "L",
-                "count": 3
+                "type": "W",
+                "count": 1
               },
               "bestWin": 10,
               "worstLoss": 11
@@ -14115,23 +14115,22 @@
               "games": 165,
               "wins": 78,
               "winrate": 47.3,
-              "restWinrate": 50.5
+              "restWinrate": 50.6
             },
             "form": [
-              "L",
-              "L",
-              "L",
               "W",
               "L",
               "L",
               "L",
               "W",
               "L",
+              "L",
+              "L",
+              "W",
               "L"
             ],
             "trend": [
               0,
-              0,
               1,
               1,
               1,
@@ -14149,20 +14148,21 @@
               1,
               0,
               0,
-              0
+              0,
+              1
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 2,
-              "losses": 8,
-              "winrate": 20
+              "wins": 3,
+              "losses": 7,
+              "winrate": 30
             },
             "last20": {
               "games": 20,
-              "wins": 8,
-              "losses": 12,
-              "winrate": 40
+              "wins": 9,
+              "losses": 11,
+              "winrate": 45
             },
             "topChamps": [
               {
@@ -14217,9 +14217,9 @@
             },
             "bestRole": {
               "key": "MIDDLE",
-              "games": 686,
-              "wins": 356,
-              "winrate": 51.9,
+              "games": 687,
+              "wins": 357,
+              "winrate": 52,
               "kda": 2
             },
             "worstRole": {
@@ -14254,11 +14254,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1792015888608,
+            "lastGameAt": 1792066309536,
             "totals": {
-              "k": 6722,
-              "d": 6523,
-              "a": 6535
+              "k": 6732,
+              "d": 6533,
+              "a": 6545
             },
             "dmgPerMin": 817,
             "avgVision": 24.4,
@@ -14318,10 +14318,10 @@
               },
               {
                 "key": "TwistedFate",
-                "games": 34,
-                "wins": 16,
-                "winrate": 47.1,
-                "kda": 1.8,
+                "games": 35,
+                "wins": 17,
+                "winrate": 48.6,
+                "kda": 1.81,
                 "csPerMin": 6.4
               },
               {
@@ -14552,9 +14552,9 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 686,
-                "wins": 356,
-                "winrate": 51.9,
+                "games": 687,
+                "wins": 357,
+                "winrate": 52,
                 "kda": 2
               },
               {
@@ -14587,11 +14587,11 @@
               }
             ],
             "gold": {
-              "games": 194,
-              "avgGd15": 3,
-              "avgTgd15": 68,
+              "games": 195,
+              "avgGd15": 10,
+              "avgTgd15": 72,
               "throws": 19,
-              "comebacks": 13,
+              "comebacks": 14,
               "biggestThrow": {
                 "id": "EUW1_7995462041",
                 "t": 1790429925770,
@@ -14767,11 +14767,11 @@
                 ]
               },
               "MIDDLE": {
-                "games": 686,
-                "wins": 356,
-                "winrate": 51.9,
+                "games": 687,
+                "wins": 357,
+                "winrate": 52,
                 "kda": 2,
-                "gd15": 112,
+                "gd15": 126,
                 "champs": [
                   {
                     "key": "Fizz",
@@ -14802,18 +14802,18 @@
                     "kda": 2.05
                   },
                   {
+                    "key": "TwistedFate",
+                    "games": 34,
+                    "wins": 16,
+                    "winrate": 47.1,
+                    "kda": 1.78
+                  },
+                  {
                     "key": "Yasuo",
                     "games": 34,
                     "wins": 14,
                     "winrate": 41.2,
                     "kda": 1.02
-                  },
-                  {
-                    "key": "TwistedFate",
-                    "games": 33,
-                    "wins": 15,
-                    "winrate": 45.5,
-                    "kda": 1.77
                   }
                 ]
               },
@@ -14907,7 +14907,7 @@
               "avgKda": 2.95,
               "pentas": 1,
               "quadras": 4,
-              "quadraGames": 933,
+              "quadraGames": 934,
               "firstBloods": 108
             },
             "gameRecords": {
@@ -15045,7 +15045,7 @@
             "lp": {
               "win": 20,
               "loss": -19,
-              "winN": 43,
+              "winN": 44,
               "lossN": 53
             }
           },
@@ -15055,7 +15055,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-14T22:12:53.282Z",
+          "updatedAt": "2026-10-15T12:12:21.671Z",
           "lpHist": [
             [
               1790720384833,
@@ -15456,9 +15456,76 @@
             [
               1792015967882,
               1625
+            ],
+            [
+              1792066335768,
+              1643
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8014092265",
+              "t": 1792066309536,
+              "dur": 2012,
+              "win": true,
+              "champ": "TwistedFate",
+              "role": "MIDDLE",
+              "lvl": 17,
+              "k": 10,
+              "d": 10,
+              "a": 10,
+              "kp": 53,
+              "cs": 213,
+              "vis": 21,
+              "dmg": 34916,
+              "teamDmg": 148984,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8524,
+              "goldEarned": 17620,
+              "fb": false,
+              "items": [
+                3094,
+                6655,
+                3170,
+                3157,
+                3100,
+                3089,
+                3363
+              ],
+              "spells": [
+                "SummonerTeleport",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Sylas",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+                  "perk-images/Styles/7202_Sorcery.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 3605,
+                "maxLeadMin": 17,
+                "maxDef": -4481,
+                "tgd15": 833,
+                "gd15": 1348
+              },
+              "lp": {
+                "d": 18,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8013798001",
@@ -16655,72 +16722,14 @@
                 "d": -21,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8012523256",
-              "t": 1791914174783,
-              "dur": 1308,
-              "win": false,
-              "champ": "Galio",
-              "role": "MIDDLE",
-              "lvl": 12,
-              "k": 2,
-              "d": 7,
-              "a": 7,
-              "kp": 53,
-              "cs": 136,
-              "vis": 13,
-              "dmg": 13657,
-              "teamDmg": 71262,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4782,
-              "goldEarned": 7591,
-              "fb": false,
-              "items": [
-                1056,
-                6664,
-                3173,
-                3108,
-                2031,
-                3147,
-                3363
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Domination/Electrocute/Electrocute.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "AurelionSol",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerTeleport"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 106,
-                "maxLeadMin": 2,
-                "maxDef": -7633,
-                "tgd15": -3311,
-                "gd15": -1187
-              },
-              "lp": {
-                "d": -21,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792066309536,
+              1,
+              18
+            ],
             [
               1792015888608,
               0,
@@ -17213,11 +17222,6 @@
             ],
             [
               1790448458387,
-              1,
-              null
-            ],
-            [
-              1790446488874,
               1,
               null
             ]
