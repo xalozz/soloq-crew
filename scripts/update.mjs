@@ -14,6 +14,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Riot, RiotError, compactMatch, matchDetail, profileLinks, loadDataDragon, MATCH_RECORD_VERSION } from './riot.mjs';
 import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
+import { computeDuos } from './duos.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONFIG = path.join(ROOT, 'config', 'players.json');
@@ -342,6 +343,21 @@ async function main() {
     }
   }
   await writeJson(LP_HIST, lpHist);
+
+  // Dúos y enfrentamientos entre miembros del grupo (cuenta principal, temporada actual)
+  const duoEntries = [];
+  for (const p of players) {
+    const a = p.accounts[p.bestAccount] ?? p.accounts[0];
+    const key = a?.riotId?.toLowerCase();
+    const puuid = key && cache[key]?.puuid;
+    if (!puuid) continue;
+    const stored = await readJson(histFile(puuid), { games: [] });
+    let games = Array.isArray(stored) ? stored : stored.games ?? [];
+    if (a.rank) games = games.slice(0, a.rank.wins + a.rank.losses);
+    duoEntries.push({ name: p.name, games, lpMap: assignLp(lpHist[key] ?? [], games), lpAvg: a.stats?.lp });
+  }
+  const { duos, rivals } = computeDuos(duoEntries);
+  for (const x of [...duos, ...rivals]) for (const g of x.recent) keepDetails.add(g.id); // si ya está descargado, no borrarlo
   // Borrar detalles que ya no hacen falta (solo si todas las cuentas se actualizaron bien)
   if (!failures && !QUICK) {
     for (const f of await readdir(MATCH_DIR)) {
@@ -355,6 +371,8 @@ async function main() {
     title: config.title ?? 'SoloQ Crew',
     subtitle: config.subtitle ?? '',
     players,
+    duos,
+    rivals,
   };
 
   // Si nada ha cambiado (salvo las marcas de tiempo) no reescribimos el fichero:

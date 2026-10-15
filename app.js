@@ -1029,6 +1029,91 @@ function renderAwards(players) {
   document.getElementById('game-records').replaceChildren(...gcards);
 }
 
+
+// ---------------------------------------------------------------- dúos
+const DUO_MIN = 5; // partidas juntos para tener tarjeta propia
+const shortDate = (t) => new Date(t).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: TZ });
+
+function duoGame(g, title, meRiotId, cls) {
+  const open = () => openMatchModal(g.id, title, meRiotId);
+  const kdas = g.kda.map(([k, d, a]) => `${k}/${d}/${a}`);
+  return h('button', {
+    class: `dg ${cls}`, onclick: open,
+    title: `${cls === 'w' ? 'Victoria' : 'Derrota'} · ${shortDate(g.t)}\n${g.c[0]} ${kdas[0]} · ${g.c[1]} ${kdas[1]}`,
+  }, champIcon(g.c[0], 22), champIcon(g.c[1], 22));
+}
+
+function duoSide(sd, p, other) {
+  const lpCls = sd.lp > 0 ? 'pos' : sd.lp < 0 ? 'neg' : '';
+  const lpTitle = sd.lpEst
+    ? `${sd.lpEst} partidas sin LP registrado (anteriores al 30 sep o varias seguidas): estimadas con su media de LP por victoria y por derrota`
+    : 'LP registrados partida a partida';
+  return h('div', { class: 'duo-side' },
+    h('div', { class: 'duo-who' }, p ? avatar(p, 26) : null, h('b', {}, sd.name)),
+    h('div', { class: 'kv' }, h('span', {}, 'LP juntos'),
+      h('b', { class: lpCls, title: lpTitle }, `${sd.lpEst ? '≈ ' : ''}${signed(sd.lp)} LP`)),
+    h('div', { class: 'kv' }, h('span', {}, `Winrate sin ${other}`),
+      h('b', {}, `${fmt(sd.wrWithout)}%`, h('small', { class: 'muted' }, ` · ${fmtInt(sd.gamesWithout)} part.`))),
+    h('div', { class: 'kv' }, h('span', {}, 'KDA juntos'),
+      h('b', {}, `${fmt(sd.kda.k)} / ${fmt(sd.kda.d)} / ${fmt(sd.kda.a)}`, h('small', { class: 'muted' }, ` · ${fmt(sd.kda.ratio, 2)}`))),
+    h('div', { class: 'duo-champs' }, sd.champs.map(([c, n]) => h('span', { class: 'duo-ch', title: `${c}: ${n} partidas` }, champIcon(c, 26), h('small', {}, n)))));
+}
+
+function duoCard(d, byName) {
+  const [A, B] = d.sides;
+  const pa = byName.get(d.a), pb = byName.get(d.b);
+  const base = (A.wrWithout + B.wrWithout) / 2;
+  const diff = d.wr - base;
+  const tag = d.games < 10 ? null
+    : diff >= 3 ? ['syn', `Sinergia +${fmt(diff)} pts`]
+    : diff <= -3 ? ['anti', `Mejor por separado ${fmt(diff)} pts`]
+    : ['neu', 'Ni suma ni resta'];
+  const title = `${d.a} & ${d.b}`;
+  return h('article', { class: 'duo panel' },
+    h('div', { class: 'duo-head' },
+      h('div', { class: 'duo-avs' }, pa ? avatar(pa, 40) : null, pb ? avatar(pb, 40) : null),
+      h('div', { class: 'duo-title' }, h('b', {}, title),
+        h('span', { class: 'muted' }, `${d.games} partidas · ${fmt(d.hours)} h juntos · desde el ${shortDate(d.first)}`)),
+      tag ? h('span', { class: `duo-tag ${tag[0]}`, title: `Winrate juntos frente a la media de sus winrates por separado (${fmt(base)}%)` }, tag[1]) : null),
+    h('div', { class: 'duo-wr' },
+      h('b', { class: d.wr >= 50 ? 'pos' : 'neg' }, `${fmt(d.wr)}%`),
+      h('div', { class: 'duo-bar' }, winBar(d.wins, d.losses)),
+      h('div', { class: 'duo-streaks' },
+        h('span', {}, h('small', {}, 'Racha'), h('span', { class: `chip ${d.streak.win ? 'chip-w' : 'chip-l'}` }, `${d.streak.n}${d.streak.win ? 'V' : 'D'}`)),
+        h('span', {}, h('small', {}, 'Mejor'), h('b', { class: 'pos' }, `${d.bestWin}V`)),
+        h('span', {}, h('small', {}, 'Peor'), h('b', { class: 'neg' }, `${d.bestLoss}D`)))),
+    h('div', { class: 'duo-sides' }, duoSide(A, pa, d.b), duoSide(B, pb, d.a)),
+    h('div', { class: 'duo-recent' }, h('small', { class: 'lbl' }, 'Últimas juntos'),
+      h('div', { class: 'dg-row' }, d.recent.map((g) => duoGame(g, title, pa?.main?.riotId, g.win ? 'w' : 'l')))));
+}
+
+function renderDuos(players) {
+  const byName = new Map(players.map((p) => [p.name, p]));
+  const duos = DATA.duos ?? [];
+  const main = duos.filter((d) => d.games >= DUO_MIN);
+  const minor = duos.filter((d) => d.games < DUO_MIN);
+  document.getElementById('duos-main').replaceChildren(...(main.length ? main.map((d) => duoCard(d, byName))
+    : [h('p', { class: 'empty center' }, 'Todavía no hay dúos con suficientes partidas.')]));
+  document.getElementById('duos-minor').replaceChildren(...(minor.length ? [
+    h('h3', { class: 'aw-sub' }, 'Alguna vez juntos'),
+    h('div', { class: 'duo-mini-list' }, minor.map((d) => h('div', { class: 'duo-mini' },
+      h('div', { class: 'duo-avs sm' }, byName.get(d.a) ? avatar(byName.get(d.a), 24) : null, byName.get(d.b) ? avatar(byName.get(d.b), 24) : null),
+      h('b', {}, `${d.a} & ${d.b}`),
+      h('span', { class: 'muted' }, `${d.games} part.`),
+      h('span', {}, h('span', { class: 'pos' }, `${d.wins}V`), ' ', h('span', { class: 'neg' }, `${d.losses}D`)),
+      h('div', { class: 'dg-row' }, d.recent.map((g) => duoGame(g, `${d.a} & ${d.b}`, byName.get(d.a)?.main?.riotId, g.win ? 'w' : 'l')))))),
+  ] : []));
+  const rivals = DATA.rivals ?? [];
+  document.getElementById('rivals').replaceChildren(
+    h('h3', { class: 'aw-sub' }, 'Cara a cara'),
+    rivals.length ? h('div', { class: 'duo-mini-list' }, rivals.map((r) => h('div', { class: 'duo-mini' },
+      h('div', { class: 'duo-avs sm' }, byName.get(r.a) ? avatar(byName.get(r.a), 24) : null, byName.get(r.b) ? avatar(byName.get(r.b), 24) : null),
+      h('b', {}, `${r.a} vs ${r.b}`),
+      h('span', { class: 'rv-score' }, h('b', { class: r.aWins >= r.bWins ? 'pos' : 'neg' }, r.aWins), ' – ', h('b', { class: r.bWins >= r.aWins ? 'pos' : 'neg' }, r.bWins)),
+      h('div', { class: 'dg-row' }, r.recent.map((g) => duoGame(g, `${r.a} vs ${r.b}`, byName.get(r.a)?.main?.riotId, g.aWin ? 'w' : 'l'))))))
+      : h('p', { class: 'muted small center' }, 'Esta temporada nadie del grupo se ha cruzado como rival en SoloQ. Cuando pase, aparecerá aquí quién ganó.'));
+}
+
 // ---------------------------------------------------------------- evolución del grupo
 const GE_COLORS = ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#9085e9', '#e66767', '#7fb7ff'];
 const geHidden = new Set();
@@ -1199,6 +1284,7 @@ function render() {
     ...STAT_CARDS.map((d) => statCard(d, MODEL)).filter(Boolean), kdaCard(MODEL) ?? '', rolesCard(MODEL) ?? '');
   renderBest5(MODEL);
   requestAnimationFrame(() => renderGroupElo(MODEL));
+  renderDuos(MODEL);
   renderAwards(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
