@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8015042620",
+      "t": 1792154287769,
+      "dur": 2387,
+      "win": false,
+      "champ": "Ziggs",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 3,
+      "d": 10,
+      "a": 3,
+      "kp": 25,
+      "cs": 300,
+      "vis": 32,
+      "dmg": 34475,
+      "teamDmg": 127787,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3667,
+      "goldEarned": 13602,
+      "fb": false,
+      "items": [
+        4645,
+        6655,
+        6653,
+        3157,
+        3171,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2275,
+        "maxLeadMin": 17,
+        "maxDef": -12810,
+        "tgd15": 1605,
+        "gd15": -619
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8015008829",
       "t": 1792151404241,
       "dur": 2211,
