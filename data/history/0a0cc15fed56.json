@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8015150742",
+      "t": 1792161734979,
+      "dur": 1585,
+      "win": false,
+      "champ": "MonkeyKing",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 1,
+      "d": 6,
+      "a": 6,
+      "kp": 29,
+      "cs": 172,
+      "vis": 28,
+      "dmg": 10664,
+      "teamDmg": 93451,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 9271,
+      "fb": false,
+      "items": [
+        3111,
+        3071,
+        3078,
+        2019,
+        0,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Skarner",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1728,
+        "maxLeadMin": 8,
+        "maxDef": -10635,
+        "tgd15": -2269,
+        "gd15": -1004
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8014346402",
       "t": 1792084783851,
       "dur": 1914,
