@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8015105994",
+      "t": 1792158816249,
+      "dur": 1363,
+      "win": true,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 3,
+      "d": 2,
+      "a": 8,
+      "kp": 28,
+      "cs": 176,
+      "vis": 7,
+      "dmg": 12745,
+      "teamDmg": 87932,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 14898,
+      "goldEarned": 12878,
+      "fb": false,
+      "items": [
+        3094,
+        3170,
+        6655,
+        2420,
+        3100,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Ahri",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 19951,
+        "maxLeadMin": 23,
+        "maxDef": 0,
+        "tgd15": 11360,
+        "gd15": 2285
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8015075344",
       "t": 1792157103787,
       "dur": 1505,
