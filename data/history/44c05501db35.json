@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8014962927",
+      "t": 1792146516904,
+      "dur": 2197,
+      "win": true,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 8,
+      "d": 15,
+      "a": 10,
+      "kp": 40,
+      "cs": 260,
+      "vis": 33,
+      "dmg": 27267,
+      "teamDmg": 151349,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9997,
+      "goldEarned": 17005,
+      "fb": false,
+      "items": [
+        3100,
+        6655,
+        3089,
+        3157,
+        3094,
+        3170,
+        3363
+      ],
+      "spells": [
+        "SummonerHaste",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5424,
+        "maxLeadMin": 37,
+        "maxDef": -4360,
+        "tgd15": -1011,
+        "gd15": 601
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8014923265",
       "t": 1792141257576,
       "dur": 1693,
