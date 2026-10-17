@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8016626192",
+      "t": 1792268507209,
+      "dur": 1600,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 9,
+      "d": 4,
+      "a": 3,
+      "kp": 39,
+      "cs": 191,
+      "vis": 21,
+      "dmg": 18261,
+      "teamDmg": 111625,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 144,
+      "goldEarned": 12500,
+      "fb": true,
+      "items": [
+        3071,
+        6676,
+        3047,
+        6695,
+        1036,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Udyr",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10062,
+        "maxLeadMin": 27,
+        "maxDef": 0,
+        "tgd15": 2881,
+        "gd15": 869
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8016587358",
       "t": 1792266533668,
       "dur": 1132,
