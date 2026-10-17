@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:18:22.683Z",
+  "generatedAt": "2026-10-17T15:15:09.295Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -2561,7 +2561,7 @@
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
-      "score": 2410,
+      "score": 2400,
       "accounts": [
         {
           "riotId": "ArNOOBal#EUW",
@@ -2569,22 +2569,22 @@
           "tagLine": "EUW",
           "label": null,
           "region": "euw1",
-          "level": 960,
+          "level": 961,
           "profileIconId": 7138,
           "rank": {
             "tier": "DIAMOND",
             "division": "IV",
-            "lp": 10,
+            "lp": 0,
             "wins": 565,
-            "losses": 545,
+            "losses": 546,
             "winrate": 50.9,
-            "hotStreak": true
+            "hotStreak": false
           },
           "stats": {
-            "games": 943,
+            "games": 944,
             "wins": 479,
-            "losses": 464,
-            "winrate": 50.8,
+            "losses": 465,
+            "winrate": 50.7,
             "avgK": 6.5,
             "avgD": 5.6,
             "avgA": 9.3,
@@ -2595,8 +2595,8 @@
             "avgDurationMin": 29.5,
             "streak": {
               "current": {
-                "type": "W",
-                "count": 4
+                "type": "L",
+                "count": 1
               },
               "bestWin": 8,
               "worstLoss": 8
@@ -2605,22 +2605,21 @@
               "games": 186,
               "wins": 91,
               "winrate": 48.9,
-              "restWinrate": 51.3
+              "restWinrate": 51.2
             },
             "form": [
+              "L",
               "W",
               "W",
               "W",
               "W",
               "L",
               "L",
-              "W",
               "W",
               "W",
               "W"
             ],
             "trend": [
-              1,
               0,
               1,
               1,
@@ -2639,20 +2638,21 @@
               1,
               1,
               1,
-              1
+              1,
+              0
             ],
             "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
-              "wins": 8,
-              "losses": 2,
-              "winrate": 80
+              "wins": 7,
+              "losses": 3,
+              "winrate": 70
             },
             "last20": {
               "games": 20,
-              "wins": 15,
-              "losses": 5,
-              "winrate": 75
+              "wins": 14,
+              "losses": 6,
+              "winrate": 70
             },
             "topChamps": [
               {
@@ -2744,14 +2744,14 @@
               "kda": 0
             },
             "firstGameAt": 1772394469336,
-            "lastGameAt": 1792244449840,
+            "lastGameAt": 1792249982956,
             "totals": {
-              "k": 6137,
-              "d": 5305,
-              "a": 8773
+              "k": 6140,
+              "d": 5313,
+              "a": 8776
             },
-            "dmgPerMin": 663,
-            "avgVision": 30.6,
+            "dmgPerMin": 662,
+            "avgVision": 30.7,
             "pentas": 0,
             "firstBloods": 60,
             "maxKills": 24,
@@ -2959,6 +2959,14 @@
                 "csPerMin": 7.8
               },
               {
+                "key": "Mel",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 0.75,
+                "csPerMin": 2.2
+              },
+              {
                 "key": "Maokai",
                 "games": 1,
                 "wins": 0,
@@ -3089,10 +3097,10 @@
               },
               {
                 "key": "UTILITY",
-                "games": 82,
+                "games": 83,
                 "wins": 38,
-                "winrate": 46.3,
-                "kda": 2.43
+                "winrate": 45.8,
+                "kda": 2.4
               },
               {
                 "key": "MIDDLE",
@@ -3117,9 +3125,9 @@
               }
             ],
             "gold": {
-              "games": 177,
-              "avgGd15": 320,
-              "avgTgd15": 745,
+              "games": 178,
+              "avgGd15": 316,
+              "avgTgd15": 734,
               "throws": 17,
               "comebacks": 9,
               "biggestThrow": {
@@ -3350,11 +3358,11 @@
                 ]
               },
               "UTILITY": {
-                "games": 82,
+                "games": 83,
                 "wins": 38,
-                "winrate": 46.3,
-                "kda": 2.43,
-                "gd15": -317,
+                "winrate": 45.8,
+                "kda": 2.4,
+                "gd15": -323,
                 "champs": [
                   {
                     "key": "Braum",
@@ -3414,16 +3422,16 @@
               },
               "autofill": {
                 "lane": "JUNGLE",
-                "games": 115,
+                "games": 116,
                 "wins": 54,
-                "winrate": 47
+                "winrate": 46.6
               },
               "champPool": 23,
               "kdaStreak": 7,
               "avgKda": 4.2,
               "pentas": 0,
               "quadras": 1,
-              "quadraGames": 943,
+              "quadraGames": 944,
               "firstBloods": 60
             },
             "gameRecords": {
@@ -3562,7 +3570,7 @@
               "win": 20,
               "loss": -19,
               "winN": 50,
-              "lossN": 32
+              "lossN": 33
             }
           },
           "links": {
@@ -3571,7 +3579,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-17T14:18:01.353Z",
+          "updatedAt": "2026-10-17T15:15:09.241Z",
           "lpHist": [
             [
               1790720384833,
@@ -3912,9 +3920,76 @@
             [
               1792244523537,
               2410
+            ],
+            [
+              1792250103658,
+              2400
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8016250887",
+              "t": 1792249982956,
+              "dur": 1746,
+              "win": false,
+              "champ": "Mel",
+              "role": "UTILITY",
+              "lvl": 12,
+              "k": 3,
+              "d": 8,
+              "a": 3,
+              "kp": 29,
+              "cs": 63,
+              "vis": 68,
+              "dmg": 9796,
+              "teamDmg": 77363,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 838,
+              "goldEarned": 8747,
+              "fb": false,
+              "items": [
+                3871,
+                2420,
+                3134,
+                3118,
+                3020,
+                1082,
+                3364
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerExhaust"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                "perk-images/Styles/7201_Precision.png"
+              ],
+              "opp": {
+                "champ": "Janna",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+                  "perk-images/Styles/7200_Domination.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 5,
+                "maxLeadMin": 1,
+                "maxDef": -11067,
+                "tgd15": -1214,
+                "gd15": -426
+              },
+              "lp": {
+                "d": -10,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8016155784",
@@ -5111,72 +5186,14 @@
                 "d": -20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8011233012",
-              "t": 1791802853941,
-              "dur": 1675,
-              "win": true,
-              "champ": "Nocturne",
-              "role": "JUNGLE",
-              "lvl": 16,
-              "k": 9,
-              "d": 7,
-              "a": 15,
-              "kp": 56,
-              "cs": 175,
-              "vis": 22,
-              "dmg": 18772,
-              "teamDmg": 112070,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 1258,
-              "goldEarned": 13316,
-              "fb": false,
-              "items": [
-                6631,
-                3142,
-                6696,
-                1001,
-                3814,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerSmite"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                "perk-images/Styles/7200_Domination.png"
-              ],
-              "opp": {
-                "champ": "Amumu",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerSmite"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 10665,
-                "maxLeadMin": 24,
-                "maxDef": 0,
-                "tgd15": 5792,
-                "gd15": 1640
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792249982956,
+              0,
+              -10
+            ],
             [
               1792244449840,
               1,
@@ -5670,11 +5687,6 @@
             [
               1790006871096,
               1,
-              null
-            ],
-            [
-              1789970691419,
-              0,
               null
             ]
           ]
@@ -21242,8 +21254,8 @@
             "a": 8.8,
             "ratio": 3.13
           },
-          "wrWithout": 51.3,
-          "gamesWithout": 833,
+          "wrWithout": 51.2,
+          "gamesWithout": 834,
           "champs": [
             [
               "Diana",
@@ -21617,8 +21629,8 @@
             "a": 7.7,
             "ratio": 3.21
           },
-          "wrWithout": 50.6,
-          "gamesWithout": 921,
+          "wrWithout": 50.5,
+          "gamesWithout": 922,
           "champs": [
             [
               "Diana",
@@ -21993,7 +22005,7 @@
             "ratio": 2.5
           },
           "wrWithout": 50.8,
-          "gamesWithout": 923,
+          "gamesWithout": 924,
           "champs": [
             [
               "Diana",
