@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8016424537",
+      "t": 1792258966367,
+      "dur": 1939,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 10,
+      "d": 4,
+      "a": 8,
+      "kp": 53,
+      "cs": 180,
+      "vis": 31,
+      "dmg": 27568,
+      "teamDmg": 128208,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2444,
+      "goldEarned": 14361,
+      "fb": false,
+      "items": [
+        3071,
+        6676,
+        1001,
+        6333,
+        3026,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Lillia",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6699,
+        "maxLeadMin": 26,
+        "maxDef": -4553,
+        "tgd15": -112,
+        "gd15": 141
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8016250887",
       "t": 1792249982956,
       "dur": 1746,
