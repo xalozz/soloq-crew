@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8015960297",
+      "t": 1792230609136,
+      "dur": 1912,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 11,
+      "d": 11,
+      "a": 8,
+      "kp": 43,
+      "cs": 175,
+      "vis": 23,
+      "dmg": 18048,
+      "teamDmg": 125677,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 14477,
+      "fb": false,
+      "items": [
+        3071,
+        6676,
+        3047,
+        6333,
+        2019,
+        1038,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "MasterYi",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4401,
+        "maxLeadMin": 24,
+        "maxDef": -6516,
+        "tgd15": -151,
+        "gd15": -885
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8015932348",
       "t": 1792227867846,
       "dur": 2321,
