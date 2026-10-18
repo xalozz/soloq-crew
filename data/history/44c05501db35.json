@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8017064206",
+      "t": 1792315816217,
+      "dur": 1896,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 3,
+      "d": 3,
+      "a": 3,
+      "kp": 46,
+      "cs": 303,
+      "vis": 24,
+      "dmg": 13511,
+      "teamDmg": 72979,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6875,
+      "goldEarned": 14048,
+      "fb": false,
+      "items": [
+        6653,
+        3165,
+        3118,
+        3175,
+        3116,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -9163,
+        "tgd15": -5444,
+        "gd15": 114
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8016926183",
       "t": 1792283903809,
       "dur": 1851,
