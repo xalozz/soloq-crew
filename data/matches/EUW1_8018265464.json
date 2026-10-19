@@ -1,0 +1,326 @@
+{
+  "id": "EUW1_8018265464",
+  "t": 1792407223878,
+  "dur": 1740,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": false,
+      "kills": 28,
+      "gold": 58473,
+      "bans": [
+        "MasterYi",
+        "Yorick",
+        "Alistar",
+        "Zilean"
+      ],
+      "players": [
+        {
+          "rid": "StreetPriced#Kench",
+          "pos": "TOP",
+          "lvl": 16,
+          "champ": "TahmKench",
+          "spells": [
+            "SummonerExhaust",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 6,
+          "d": 6,
+          "a": 3,
+          "cs": 158,
+          "dmg": 23755,
+          "gold": 10465,
+          "items": [
+            3084,
+            3111,
+            1120,
+            1082,
+            2510,
+            3082,
+            3340
+          ]
+        },
+        {
+          "rid": "Toftdahl#0810",
+          "pos": "JUNGLE",
+          "lvl": 15,
+          "champ": "Aatrox",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 6,
+          "d": 8,
+          "a": 6,
+          "cs": 191,
+          "dmg": 20454,
+          "gold": 12077,
+          "items": [
+            3047,
+            6697,
+            6699,
+            6333,
+            3134,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "Fyismwar#5336",
+          "pos": "MIDDLE",
+          "lvl": 16,
+          "champ": "Lux",
+          "spells": [
+            "SummonerDot",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+            "perk-images/Styles/7200_Domination.png"
+          ],
+          "k": 11,
+          "d": 7,
+          "a": 4,
+          "cs": 254,
+          "dmg": 38940,
+          "gold": 15389,
+          "items": [
+            6655,
+            4630,
+            3175,
+            3089,
+            4646,
+            4645,
+            3363
+          ]
+        },
+        {
+          "rid": "xALOzZ#EUW",
+          "pos": "BOTTOM",
+          "lvl": 14,
+          "champ": "Yunara",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 5,
+          "d": 9,
+          "a": 6,
+          "cs": 229,
+          "dmg": 14809,
+          "gold": 12890,
+          "items": [
+            1086,
+            3032,
+            3085,
+            3031,
+            3035,
+            1018,
+            3363
+          ]
+        },
+        {
+          "rid": "katt#SWE",
+          "pos": "UTILITY",
+          "lvl": 13,
+          "champ": "Yuumi",
+          "spells": [
+            "SummonerExhaust",
+            "SummonerHeal"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 0,
+          "d": 7,
+          "a": 12,
+          "cs": 19,
+          "dmg": 8313,
+          "gold": 7652,
+          "items": [
+            3870,
+            4642,
+            3109,
+            2022,
+            2530,
+            3916,
+            3363
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": true,
+      "kills": 37,
+      "gold": 65947,
+      "bans": [
+        "Draven",
+        "Belveth",
+        "Ambessa",
+        "Akshan",
+        "Xerath"
+      ],
+      "players": [
+        {
+          "rid": "MisterJ0ta1#EUWPT",
+          "pos": "TOP",
+          "lvl": 18,
+          "champ": "Chogath",
+          "spells": [
+            "SummonerTeleport",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 4,
+          "d": 6,
+          "a": 4,
+          "cs": 250,
+          "dmg": 25535,
+          "gold": 12436,
+          "items": [
+            3152,
+            4633,
+            3111,
+            6664,
+            0,
+            1056,
+            3363
+          ]
+        },
+        {
+          "rid": "Ałéx#Faith",
+          "pos": "JUNGLE",
+          "lvl": 17,
+          "champ": "Viego",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 21,
+          "d": 7,
+          "a": 6,
+          "cs": 215,
+          "dmg": 33930,
+          "gold": 18068,
+          "items": [
+            6673,
+            6672,
+            6676,
+            3033,
+            3111,
+            2019,
+            3364
+          ]
+        },
+        {
+          "rid": "Camel Blue#4444",
+          "pos": "MIDDLE",
+          "lvl": 18,
+          "champ": "Viktor",
+          "spells": [
+            "SummonerTeleport",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 11,
+          "d": 4,
+          "a": 10,
+          "cs": 242,
+          "dmg": 31307,
+          "gold": 15852,
+          "items": [
+            4645,
+            3157,
+            3175,
+            3100,
+            1056,
+            2503,
+            3340
+          ]
+        },
+        {
+          "rid": "Str1der#STR",
+          "pos": "BOTTOM",
+          "lvl": 15,
+          "champ": "Smolder",
+          "spells": [
+            "SummonerBarrier",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 0,
+          "d": 5,
+          "a": 10,
+          "cs": 230,
+          "dmg": 20098,
+          "gold": 11215,
+          "items": [
+            3508,
+            1120,
+            2022,
+            3031,
+            3123,
+            1018,
+            3363
+          ]
+        },
+        {
+          "rid": "Miaou#Milky",
+          "pos": "UTILITY",
+          "lvl": 13,
+          "champ": "Nami",
+          "spells": [
+            "SummonerFlash",
+            "SummonerHeal"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 1,
+          "d": 6,
+          "a": 14,
+          "cs": 19,
+          "dmg": 5703,
+          "gold": 8376,
+          "items": [
+            3870,
+            6620,
+            3158,
+            6617,
+            4642,
+            1052,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}

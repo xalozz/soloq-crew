@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T05:42:13.985Z",
+  "generatedAt": "2026-10-19T10:55:15.928Z",
   "ddragonVersion": "16.20.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8116,7 +8116,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 2216,
+      "score": 2195,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -8128,22 +8128,22 @@
           "profileIconId": 1109,
           "rank": {
             "tier": "EMERALD",
-            "division": "II",
-            "lp": 16,
+            "division": "III",
+            "lp": 95,
             "wins": 105,
-            "losses": 100,
-            "winrate": 51.2,
+            "losses": 101,
+            "winrate": 51,
             "hotStreak": false
           },
           "stats": {
-            "games": 205,
+            "games": 206,
             "wins": 104,
-            "losses": 101,
-            "winrate": 50.7,
+            "losses": 102,
+            "winrate": 50.5,
             "avgK": 7.2,
-            "avgD": 5.9,
+            "avgD": 6,
             "avgA": 7.4,
-            "kda": 2.46,
+            "kda": 2.45,
             "csPerMin": 8.1,
             "visPerMin": 0.67,
             "dmgShare": 23.4,
@@ -8151,19 +8151,20 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 6,
               "worstLoss": 5
             },
             "firstOfDay": {
-              "games": 51,
+              "games": 52,
               "wins": 25,
-              "winrate": 49,
+              "winrate": 48.1,
               "restWinrate": 51.3
             },
             "form": [
               "L",
+              "L",
               "W",
               "W",
               "L",
@@ -8171,11 +8172,9 @@
               "W",
               "W",
               "W",
-              "W",
-              "L"
+              "W"
             ],
             "trend": [
-              0,
               1,
               1,
               1,
@@ -8194,6 +8193,7 @@
               0,
               1,
               1,
+              0,
               0
             ],
             "mainRole": "BOTTOM",
@@ -8240,10 +8240,10 @@
               },
               {
                 "key": "Yunara",
-                "games": 13,
+                "games": 14,
                 "wins": 8,
-                "winrate": 61.5,
-                "kda": 3.81
+                "winrate": 57.1,
+                "kda": 3.49
               }
             ],
             "bestChamp": {
@@ -8262,10 +8262,10 @@
             },
             "bestRole": {
               "key": "BOTTOM",
-              "games": 186,
+              "games": 187,
               "wins": 98,
-              "winrate": 52.7,
-              "kda": 2.53
+              "winrate": 52.4,
+              "kda": 2.52
             },
             "worstRole": {
               "key": "TOP",
@@ -8299,14 +8299,14 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1792322551577,
+            "lastGameAt": 1792407223878,
             "totals": {
-              "k": 1484,
-              "d": 1217,
-              "a": 1510
+              "k": 1489,
+              "d": 1226,
+              "a": 1516
             },
-            "dmgPerMin": 905,
-            "avgVision": 20.2,
+            "dmgPerMin": 903,
+            "avgVision": 20.3,
             "pentas": 1,
             "firstBloods": 31,
             "maxKills": 19,
@@ -8347,11 +8347,11 @@
               },
               {
                 "key": "Yunara",
-                "games": 13,
+                "games": 14,
                 "wins": 8,
-                "winrate": 61.5,
-                "kda": 3.81,
-                "csPerMin": 9.3
+                "winrate": 57.1,
+                "kda": 3.49,
+                "csPerMin": 9.2
               },
               {
                 "key": "Kaisa",
@@ -8485,10 +8485,10 @@
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 186,
+                "games": 187,
                 "wins": 98,
-                "winrate": 52.7,
-                "kda": 2.53
+                "winrate": 52.4,
+                "kda": 2.52
               },
               {
                 "key": "TOP",
@@ -8520,9 +8520,9 @@
               }
             ],
             "gold": {
-              "games": 139,
-              "avgGd15": 218,
-              "avgTgd15": 217,
+              "games": 140,
+              "avgGd15": 227,
+              "avgTgd15": 228,
               "throws": 18,
               "comebacks": 11,
               "biggestThrow": {
@@ -8674,11 +8674,11 @@
                 ]
               },
               "BOTTOM": {
-                "games": 186,
+                "games": 187,
                 "wins": 98,
-                "winrate": 52.7,
-                "kda": 2.53,
-                "gd15": 341,
+                "winrate": 52.4,
+                "kda": 2.52,
+                "gd15": 350,
                 "champs": [
                   {
                     "key": "Jinx",
@@ -8710,10 +8710,10 @@
                   },
                   {
                     "key": "Yunara",
-                    "games": 13,
+                    "games": 14,
                     "wins": 8,
-                    "winrate": 61.5,
-                    "kda": 3.81
+                    "winrate": 57.1,
+                    "kda": 3.49
                   },
                   {
                     "key": "Kaisa",
@@ -8767,10 +8767,10 @@
               },
               "champPool": 15,
               "kdaStreak": 5,
-              "avgKda": 3.8,
+              "avgKda": 3.78,
               "pentas": 1,
               "quadras": 3,
-              "quadraGames": 205,
+              "quadraGames": 206,
               "firstBloods": 31
             },
             "gameRecords": {
@@ -8909,7 +8909,7 @@
               "win": 20,
               "loss": -19,
               "winN": 29,
-              "lossN": 13
+              "lossN": 14
             }
           },
           "links": {
@@ -8918,7 +8918,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-18T18:18:51.809Z",
+          "updatedAt": "2026-10-19T10:55:15.875Z",
           "lpHist": [
             [
               1790720384833,
@@ -9095,9 +9095,76 @@
             [
               1792322685624,
               2216
+            ],
+            [
+              1792407310391,
+              2195
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8018265464",
+              "t": 1792407223878,
+              "dur": 1740,
+              "win": false,
+              "champ": "Yunara",
+              "role": "BOTTOM",
+              "lvl": 14,
+              "k": 5,
+              "d": 9,
+              "a": 6,
+              "kp": 39,
+              "cs": 229,
+              "vis": 23,
+              "dmg": 14809,
+              "teamDmg": 106271,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 7910,
+              "goldEarned": 12890,
+              "fb": false,
+              "items": [
+                1086,
+                3032,
+                3085,
+                3031,
+                3035,
+                1018,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerBarrier"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Smolder",
+                "spells": [
+                  "SummonerBarrier",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 1643,
+                "maxLeadMin": 15,
+                "maxDef": -7474,
+                "tgd15": 1643,
+                "gd15": 1513
+              },
+              "lp": {
+                "d": -21,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8017145176",
@@ -10294,72 +10361,14 @@
                 "d": 19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8005111524",
-              "t": 1791239872167,
-              "dur": 1935,
-              "win": false,
-              "champ": "Vayne",
-              "role": "TOP",
-              "lvl": 18,
-              "k": 5,
-              "d": 8,
-              "a": 3,
-              "kp": 31,
-              "cs": 251,
-              "vis": 11,
-              "dmg": 58273,
-              "teamDmg": 153095,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 10973,
-              "goldEarned": 14240,
-              "fb": false,
-              "items": [
-                3302,
-                3006,
-                3153,
-                3123,
-                3124,
-                1031,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerTeleport"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "DrMundo",
-                "spells": [
-                  "SummonerBarrier",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
-                  "perk-images/Styles/7201_Precision.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 0,
-                "maxLeadMin": 0,
-                "maxDef": -9713,
-                "tgd15": -1593,
-                "gd15": -588
-              },
-              "lp": {
-                "d": -21,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792407223878,
+              0,
+              -21
+            ],
             [
               1792322551577,
               0,
@@ -10852,11 +10861,6 @@
             ],
             [
               1787138808586,
-              0,
-              null
-            ],
-            [
-              1787131598083,
               0,
               null
             ]
@@ -21847,8 +21851,8 @@
             "a": 6.3,
             "ratio": 2.61
           },
-          "wrWithout": 51.6,
-          "gamesWithout": 182,
+          "wrWithout": 51.4,
+          "gamesWithout": 183,
           "champs": [
             [
               "Xayah",
@@ -22570,8 +22574,8 @@
             "a": 9,
             "ratio": 6.87
           },
-          "wrWithout": 49.7,
-          "gamesWithout": 199,
+          "wrWithout": 49.5,
+          "gamesWithout": 200,
           "champs": [
             [
               "Yunara",
