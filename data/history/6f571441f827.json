@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8018168115",
+      "t": 1792388453133,
+      "dur": 2049,
+      "win": true,
+      "champ": "Nocturne",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 11,
+      "d": 8,
+      "a": 15,
+      "kp": 46,
+      "cs": 227,
+      "vis": 31,
+      "dmg": 26447,
+      "teamDmg": 163628,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2417,
+      "goldEarned": 16672,
+      "fb": false,
+      "items": [
+        6631,
+        3073,
+        6696,
+        3047,
+        6333,
+        2055,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Shyvana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3556,
+        "maxLeadMin": 35,
+        "maxDef": -2472,
+        "tgd15": -2262,
+        "gd15": -249
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8017649246",
       "t": 1792347423574,
       "dur": 2016,
