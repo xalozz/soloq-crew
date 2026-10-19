@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8018654589",
+      "t": 1792434703882,
+      "dur": 2348,
+      "win": false,
+      "champ": "Swain",
+      "role": "UTILITY",
+      "lvl": 17,
+      "k": 3,
+      "d": 11,
+      "a": 16,
+      "kp": 54,
+      "cs": 80,
+      "vis": 110,
+      "dmg": 24135,
+      "teamDmg": 160905,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2283,
+      "goldEarned": 12542,
+      "fb": false,
+      "items": [
+        3118,
+        3876,
+        3020,
+        3157,
+        3116,
+        3082,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Senna",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1026,
+        "maxLeadMin": 5,
+        "maxDef": -9209,
+        "tgd15": -584,
+        "gd15": -518
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8015999901",
       "t": 1792233364482,
       "dur": 1533,
