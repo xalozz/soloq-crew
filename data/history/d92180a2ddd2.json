@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8018382965",
+      "t": 1792419070900,
+      "dur": 1969,
+      "win": false,
+      "champ": "Galio",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 2,
+      "d": 13,
+      "a": 11,
+      "kp": 42,
+      "cs": 56,
+      "vis": 79,
+      "dmg": 11800,
+      "teamDmg": 117674,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 986,
+      "goldEarned": 10451,
+      "fb": false,
+      "items": [
+        3190,
+        2504,
+        3876,
+        3047,
+        3076,
+        1031,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Alistar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 37,
+        "maxLeadMin": 2,
+        "maxDef": -14427,
+        "tgd15": -7513,
+        "gd15": -598
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8017570406",
       "t": 1792343783072,
       "dur": 1522,
