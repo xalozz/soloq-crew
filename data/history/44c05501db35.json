@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8020519322",
+      "t": 1792602637304,
+      "dur": 1701,
+      "win": false,
+      "champ": "Galio",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 0,
+      "d": 4,
+      "a": 13,
+      "kp": 43,
+      "cs": 168,
+      "vis": 15,
+      "dmg": 18116,
+      "teamDmg": 118218,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5599,
+      "goldEarned": 9391,
+      "fb": false,
+      "items": [
+        1056,
+        6664,
+        3173,
+        4633,
+        3076,
+        1029,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Fizz",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7961,
+        "maxLeadMin": 21,
+        "maxDef": -4354,
+        "tgd15": 5658,
+        "gd15": 567
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8020476338",
       "t": 1792600339818,
       "dur": 1389,
