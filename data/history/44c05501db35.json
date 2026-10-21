@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8020572924",
+      "t": 1792604691380,
+      "dur": 1462,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 3,
+      "d": 10,
+      "a": 4,
+      "kp": 50,
+      "cs": 141,
+      "vis": 21,
+      "dmg": 16413,
+      "teamDmg": 80230,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2472,
+      "goldEarned": 9629,
+      "fb": false,
+      "items": [
+        3170,
+        6655,
+        3094,
+        2421,
+        1058,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1661,
+        "maxLeadMin": 4,
+        "maxDef": -13691,
+        "tgd15": -6236,
+        "gd15": -2186
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8020519322",
       "t": 1792602637304,
       "dur": 1701,
