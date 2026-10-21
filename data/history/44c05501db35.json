@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8020398967",
+      "t": 1792596516765,
+      "dur": 2106,
+      "win": false,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 12,
+      "d": 11,
+      "a": 7,
+      "kp": 37,
+      "cs": 197,
+      "vis": 26,
+      "dmg": 31323,
+      "teamDmg": 163609,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2394,
+      "goldEarned": 14248,
+      "fb": false,
+      "items": [
+        4646,
+        3100,
+        4645,
+        3157,
+        3171,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "TwistedFate",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2913,
+        "maxLeadMin": 26,
+        "maxDef": -5288,
+        "tgd15": 566,
+        "gd15": -1312
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8020359833",
       "t": 1792593976250,
       "dur": 2215,
