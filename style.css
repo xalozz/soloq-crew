@@ -379,12 +379,26 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .chart svg { display: block; width: 100%; height: auto; touch-action: none; }
 .chart .grid { stroke: var(--line); stroke-width: 1; }
 .chart .axis { fill: var(--muted); font-size: 11px; font-family: inherit; }
-.chart .eline { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
-.chart .eline.est { stroke: #a9c93a; stroke-dasharray: 5 4; opacity: .8; }
+.chart .eline { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.chart .eline.est { stroke-dasharray: 5 4; opacity: .75; }
+.chart .grid.div { stroke: #26262b; stroke-dasharray: 3 5; }
+.chart .grid.tier { stroke: #34343b; }
+.echart { padding: 12px 12px 6px; }
+.echart-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 0 4px 6px; }
+.e-delta { display: inline-flex; align-items: baseline; gap: 6px; padding: 5px 10px; border-radius: 999px; background: var(--panel-3); font-size: 13px; }
+.e-delta small { color: #cfcfd6; font-size: 12px; }
+.toggle.e-range { margin: 0 0 0 auto; }
+.toggle.e-range button { padding: 5px 11px; font-size: 12px; }
+.echart-body { position: relative; }
+.echart-foot { display: flex; gap: 22px; flex-wrap: wrap; padding: 8px 6px 2px; border-top: 1px solid var(--line); margin-top: 6px; font-size: 13px; }
+.echart-foot > span { display: inline-flex; align-items: baseline; gap: 4px 8px; flex-wrap: wrap; }
+.echart-foot small { font-size: 10px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.echart-foot b { font-weight: 900; }
 .elegend { display: flex; gap: 16px; flex-wrap: wrap; padding: 6px 10px 4px; font-size: 11px; color: var(--muted); }
 .elegend span { display: inline-flex; align-items: center; gap: 6px; }
 .lg { display: inline-block; width: 18px; height: 0; border-top: 2px solid var(--accent); }
-.lg.est { border-top: 2px dashed #a9c93a; }
+.lg { border-top-color: #9aa0a6 !important; }
+.lg.est { border-top: 2px dashed #9aa0a6; }
 .etip small { color: var(--muted); }
 .chart .edot { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
 .chart .ecross { stroke: #5a5a63; stroke-width: 1; stroke-dasharray: 3 3; }

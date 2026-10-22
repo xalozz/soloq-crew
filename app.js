@@ -509,37 +509,128 @@ function eloSeries(acc) {
   return { est, real, W, L, measured: !!(lp?.winN || lp?.lossN) };
 }
 
-function eloChart(acc) {
-  const box = h('div', { class: 'chart' });
-  const ser = eloSeries(acc);
-  if (ser.est.length < 2 && ser.real.length < 2) {
-    box.append(h('p', { class: 'empty' }, 'Todavía no hay partidas suficientes para dibujar la evolución.'));
-    return box;
-  }
-  requestAnimationFrame(() => drawEloChart(box, ser));
-  return box;
-}
+const TIER_HEX = ['#8a7f79', '#c07f4c', '#a9b8c6', '#e8b949', '#45c8b6', '#35d08e', '#74a9ff', '#b77cf2'];
+const tierHex = (score) => TIER_HEX[Math.min(7, Math.max(0, Math.floor(score / 400)))];
+const ELO_RANGES = [[7, '7 días'], [30, '30 días'], [0, 'Temporada']];
+const eloRange = new Map(); // cuenta → días
+let eloGradId = 0;
 
-function drawEloChart(box, { est, real, W, L, measured }) {
-  const Wd = Math.max(300, box.clientWidth), H = 240, Lm = 64, R = 14, T = 14, B = 26;
-  // Un punto por partida (o por cambio de LP registrado), en orden: se lee como la curva de un torneo
+// Puntos [t, score, estimado] de toda la curva, uno por partida (o cambio de LP registrado)
+function eloPoints({ est, real }) {
   const pts = [...est.map((p) => [p[0], p[1], true]), ...real.map((p) => [p[0], p[1], false])]
     .sort((a, b) => a[0] - b[0])
     .filter((p, i, arr) => i === 0 || p[1] !== arr[i - 1][1] || p[2] !== arr[i - 1][2]);
-  if (pts.length < 2) pts.push([Date.now(), pts[0][1], false]);
+  if (pts.length === 1) pts.push([Date.now(), pts[0][1], false]);
+  return pts;
+}
+
+// Cambio de LP desde hace `days` días (el valor de antes de esa fecha como punto de partida)
+function eloDelta(pts, days) {
+  if (pts.length < 2) return null;
+  const from = Date.now() - days * 864e5;
+  const before = pts.filter((p) => p[0] <= from).at(-1) ?? pts[0];
+  return pts.at(-1)[1] - before[1];
+}
+
+function eloChart(acc) {
+  const box = h('div', { class: 'chart echart' });
+  const ser = eloSeries(acc);
+  const all = eloPoints(ser);
+  if (all.length < 2) {
+    box.append(h('p', { class: 'empty' }, 'Todavía no hay partidas suficientes para dibujar la evolución.'));
+    return box;
+  }
+  const key = acc.riotId;
+  const deltaChip = (days, label) => {
+    const d = eloDelta(all, days);
+    if (d == null) return null;
+    return h('span', { class: 'e-delta' }, h('small', {}, label),
+      h('b', { class: d > 0 ? 'pos' : d < 0 ? 'neg' : '' }, `${d > 0 ? '▲' : d < 0 ? '▼' : ''} ${Math.abs(d)} LP`));
+  };
+  const peak = all.reduce((m, p) => (p[1] > m[1] ? p : m));
+  const body = h('div', { class: 'echart-body' });
+  const draw = () => {
+    const days = eloRange.get(key) ?? 30;
+    const from = days ? Date.now() - days * 864e5 : -Infinity;
+    let pts = all.filter((p) => p[0] >= from);
+    const prev = all.filter((p) => p[0] < from).at(-1);
+    if (prev) pts = [[from, prev[1], prev[2]], ...pts];
+    if (pts.length < 2) pts = [[from, all.at(-1)[1], false], [Date.now(), all.at(-1)[1], false]];
+    for (const b of tabs.querySelectorAll('button')) b.classList.toggle('on', Number(b.dataset.days) === days);
+    drawEloChart(body, pts, ser);
+  };
+  const tabs = h('div', { class: 'toggle e-range' }, ELO_RANGES.map(([d, l]) =>
+    h('button', { 'data-days': d, onclick: () => { eloRange.set(key, d); draw(); } }, l)));
+  box.append(
+    h('div', { class: 'echart-top' }, deltaChip(30, 'Últimos 30 días'), deltaChip(7, 'Últimos 7 días'), tabs),
+    body,
+    h('div', { class: 'echart-foot' },
+      h('span', {}, h('small', {}, 'Pico'), h('b', { style: `color:${tierHex(peak[1])}` }, scoreLabel(peak[1])),
+        h('small', { class: 'muted' }, ` · ${new Date(peak[0]).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: TZ })}${peak[2] ? ' (estimado)' : ''}`)),
+      h('span', {}, h('small', {}, 'Ahora'), h('b', { style: `color:${tierHex(all.at(-1)[1])}` }, scoreLabel(all.at(-1)[1])))));
+  requestAnimationFrame(draw);
+  return box;
+}
+
+// Curva suave que no se pasa de los puntos (monotone cubic)
+function smoothPath(P) {
+  if (P.length < 3) return P.map(([px, py], i) => `${i ? 'L' : 'M'}${px.toFixed(1)},${py.toFixed(1)}`).join('');
+  const n = P.length, dx = [], m = [], tg = [];
+  for (let i = 0; i < n - 1; i++) { dx[i] = P[i + 1][0] - P[i][0] || 1e-6; m[i] = (P[i + 1][1] - P[i][1]) / dx[i]; }
+  tg[0] = m[0]; tg[n - 1] = m[n - 2];
+  for (let i = 1; i < n - 1; i++) tg[i] = m[i - 1] * m[i] <= 0 ? 0 : (3 * (dx[i - 1] + dx[i])) / ((2 * dx[i] + dx[i - 1]) / m[i - 1] + (dx[i] + 2 * dx[i - 1]) / m[i]);
+  let d = `M${P[0][0].toFixed(1)},${P[0][1].toFixed(1)}`;
+  for (let i = 0; i < n - 1; i++) {
+    const h3 = dx[i] / 3;
+    d += `C${(P[i][0] + h3).toFixed(1)},${(P[i][1] + tg[i] * h3).toFixed(1)} ${(P[i + 1][0] - h3).toFixed(1)},${(P[i + 1][1] - tg[i + 1] * h3).toFixed(1)} ${P[i + 1][0].toFixed(1)},${P[i + 1][1].toFixed(1)}`;
+  }
+  return d;
+}
+
+function drawEloChart(box, pts, { W, L, measured }) {
+  const Wd = Math.max(300, box.clientWidth), H = 250, Lm = 40, R = 12, T = 16, B = 24;
   const n = pts.length;
   let lo = Math.min(...pts.map((p) => p[1])), hi = Math.max(...pts.map((p) => p[1]));
-  lo = Math.max(0, Math.floor((lo - 15) / 100) * 100); hi = Math.ceil((hi + 15) / 100) * 100;
+  const pad = Math.max(20, (hi - lo) * 0.12);
+  lo = Math.max(0, lo - pad); hi = hi + pad;
   const x = (i) => Lm + (i / Math.max(1, n - 1)) * (Wd - Lm - R);
   const y = (v) => T + (1 - (v - lo) / Math.max(1, hi - lo)) * (H - T - B);
   const els = [];
-  const span = hi - lo;
-  const step = span > 2400 ? 800 : span > 700 ? 400 : 100;
-  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
-    els.push(svg('line', { x1: Lm, x2: Wd - R, y1: y(v), y2: y(v), class: 'grid' }));
-    const lab = v >= 2800 ? `M ${v - 2800}` : `${TIER_ES[TIERS[Math.floor(v / 400)]].slice(0, 3)} ${DIVS[Math.floor((v % 400) / 100)]}`;
-    els.push(svg('text', { x: Lm - 8, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, lab));
+  const id = `eg${++eloGradId}`;
+
+  // Degradado vertical: cada tramo de la curva toma el color de su liga
+  const stops = [];
+  const top = y(hi), bot = y(lo);
+  const at = (v) => Math.min(1, Math.max(0, (y(v) - top) / Math.max(1, bot - top)));
+  for (let t = Math.min(7, Math.floor(hi / 400)); t >= Math.max(0, Math.floor(lo / 400)); t--) {
+    const upper = t === 7 ? hi : (t + 1) * 400, lower = t * 400;
+    stops.push(svg('stop', { offset: at(Math.min(hi, upper)), 'stop-color': TIER_HEX[t] }));
+    stops.push(svg('stop', { offset: at(Math.max(lo, lower)), 'stop-color': TIER_HEX[t] }));
   }
+  els.push(svg('defs', {},
+    svg('linearGradient', { id: `${id}l`, gradientUnits: 'userSpaceOnUse', x1: 0, x2: 0, y1: top, y2: bot }, ...stops),
+    svg('linearGradient', { id: `${id}f`, x1: 0, x2: 0, y1: 0, y2: 1 },
+      svg('stop', { offset: 0, 'stop-color': '#fff', 'stop-opacity': 0.22 }), svg('stop', { offset: 1, 'stop-color': '#fff', 'stop-opacity': 0 })),
+    svg('mask', { id: `${id}m` }, svg('rect', { x: 0, y: 0, width: Wd, height: H, fill: `url(#${id}f)` }))));
+
+  // Líneas de división (discontinuas) y de liga con su emblema
+  const span = hi - lo;
+  const step = span > 1200 ? 400 : 100;
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    const tierLine = v % 400 === 0 && v <= 2800;
+    els.push(svg('line', { x1: Lm, x2: Wd - R, y1: y(v), y2: y(v), class: tierLine ? 'grid tier' : 'grid div' }));
+    if (v > 2800) {
+      els.push(svg('text', { x: Lm - 6, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, `${v - 2800}`));
+    } else if (tierLine || step === 100) {
+      const t = Math.floor(v / 400);
+      if (tierLine) {
+        els.push(svg('image', { href: `${CDRAGON}/rcp-fe-lol-shared-components/global/default/${TIERS[t].toLowerCase()}.png`, x: Lm - 34, y: y(v) - 13, width: 26, height: 26 }));
+      } else {
+        els.push(svg('text', { x: Lm - 8, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, DIVS[Math.floor((v % 400) / 100)]));
+      }
+    }
+  }
+  // Fechas
   const nTicks = Math.max(2, Math.min(6, Math.floor((Wd - Lm) / 110)));
   const seen = new Set();
   for (let k = 0; k < nTicks; k++) {
@@ -549,15 +640,19 @@ function drawEloChart(box, { est, real, W, L, measured }) {
     seen.add(key);
     els.push(svg('text', { x: x(i), y: H - 6, class: 'axis', 'text-anchor': k === 0 ? 'start' : k === nTicks - 1 ? 'end' : 'middle' }, prettyDay(key)));
   }
-  // Tramo estimado (discontinuo) y registrado (continuo); comparten el punto de unión
+
+  const P = pts.map((p, i) => [x(i), y(p[1])]);
+  const curve = smoothPath(P);
+  els.push(svg('path', { d: `${curve}L${P.at(-1)[0].toFixed(1)},${bot}L${P[0][0].toFixed(1)},${bot}Z`, fill: `url(#${id}l)`, mask: `url(#${id}m)` }));
+  // Tramo estimado algo apagado y discontinuo; tramo registrado sólido
   const lastEst = pts.map((p) => p[2]).lastIndexOf(true);
-  const line = (from, to, cls) => {
-    if (to - from < 1) return;
-    const d = pts.slice(from, to + 1).map((p, j) => `${j ? 'L' : 'M'}${x(from + j).toFixed(1)},${y(p[1]).toFixed(1)}`).join('');
-    els.push(svg('path', { d, class: cls }));
-  };
-  if (lastEst >= 0) line(0, Math.min(n - 1, lastEst + 1), 'eline est');
-  line(Math.max(0, lastEst + 1), n - 1, 'eline');
+  if (lastEst >= 0) {
+    const e = Math.min(n - 1, lastEst + 1);
+    els.push(svg('path', { d: smoothPath(P.slice(0, e + 1)), class: 'eline est', style: `stroke:url(#${id}l)` }));
+    if (e < n - 1) els.push(svg('path', { d: smoothPath(P.slice(e)), class: 'eline', style: `stroke:url(#${id}l)` }));
+  } else els.push(svg('path', { d: curve, class: 'eline', style: `stroke:url(#${id}l)` }));
+  els.push(svg('circle', { cx: P.at(-1)[0], cy: P.at(-1)[1], r: 3.5, fill: tierHex(pts.at(-1)[1]) }));
+
   const dot = svg('circle', { r: 5, class: 'edot', cx: -20, cy: -20 });
   const cross = svg('line', { class: 'ecross', y1: T, y2: H - B, x1: -20, x2: -20 });
   const chart = svg('svg', { viewBox: `0 0 ${Wd} ${H}`, width: Wd, height: H, role: 'img', 'aria-label': 'Evolución del elo' }, ...els, cross, dot);
@@ -568,19 +663,20 @@ function drawEloChart(box, { est, real, W, L, measured }) {
     const i = Math.max(0, Math.min(n - 1, Math.round(((px - Lm) / (Wd - Lm - R)) * (n - 1))));
     const p = pts[i];
     dot.setAttribute('cx', x(i)); dot.setAttribute('cy', y(p[1]));
+    dot.style.fill = tierHex(p[1]);
     cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i));
     tip.hidden = false;
     tip.replaceChildren(
-      h('b', {}, new Date(p[0]).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })),
-      h('span', {}, `${p[2] ? '≈ ' : ''}${scoreLabel(p[1])}`),
-      p[2] ? h('small', {}, 'estimado') : null);
+      h('b', { style: `color:${tierHex(p[1])}` }, `${p[2] ? '≈ ' : ''}${scoreLabel(p[1])}`),
+      h('span', {}, new Date(p[0]).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: TZ })),
+      ...(p[2] ? [h('small', {}, 'estimado')] : []));
     tip.style.left = `${(x(i) / Wd) * 100}%`;
     tip.style.top = `${(y(p[1]) / H) * 100}%`;
   });
   chart.addEventListener('pointerleave', () => { tip.hidden = true; dot.setAttribute('cx', -20); cross.setAttribute('x1', -20); cross.setAttribute('x2', -20); });
   const legend = h('div', { class: 'elegend' },
-    lastEst >= 0 ? h('span', {}, h('i', { class: 'lg est' }), `Estimado con sus victorias y derrotas (≈ +${W} / −${L} LP por partida${measured ? ', medidos' : ''})`) : null,
-    real.length ? h('span', {}, h('i', { class: 'lg' }), 'LP registrado') : null,
+    lastEst >= 0 ? h('span', {}, h('i', { class: 'lg est' }), `Estimado (≈ +${W} / −${L} LP por partida${measured ? ', medidos' : ''})`) : null,
+    h('span', {}, h('i', { class: 'lg' }), 'LP registrado'),
     h('span', { class: 'lg-note' }, `${n} puntos · uno por partida`));
   box.replaceChildren(chart, tip, legend);
 }
