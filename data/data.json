@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T13:22:10.876Z",
+  "generatedAt": "2026-10-22T13:23:14.330Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8154,7 +8154,7 @@
             "winrate": 50.2,
             "avgK": 7.2,
             "avgD": 6,
-            "avgA": 7.3,
+            "avgA": 7.4,
             "kda": 2.43,
             "csPerMin": 8.1,
             "visPerMin": 0.67,
@@ -8163,7 +8163,7 @@
             "streak": {
               "current": {
                 "type": "L",
-                "count": 1
+                "count": 2
               },
               "bestWin": 6,
               "worstLoss": 5
@@ -8176,18 +8176,17 @@
             },
             "form": [
               "L",
-              "W",
-              "W",
-              "L",
-              "L",
               "L",
               "W",
               "W",
               "L",
+              "L",
+              "L",
+              "W",
+              "W",
               "L"
             ],
             "trend": [
-              1,
               0,
               1,
               1,
@@ -8206,6 +8205,7 @@
               0,
               1,
               1,
+              0,
               0
             ],
             "mainRole": "BOTTOM",
@@ -8217,9 +8217,9 @@
             },
             "last20": {
               "games": 20,
-              "wins": 12,
-              "losses": 8,
-              "winrate": 60
+              "wins": 11,
+              "losses": 9,
+              "winrate": 55
             },
             "topChamps": [
               {
@@ -8277,7 +8277,7 @@
               "games": 192,
               "wins": 100,
               "winrate": 52.1,
-              "kda": 2.49
+              "kda": 2.5
             },
             "worstRole": {
               "key": "TOP",
@@ -8310,14 +8310,14 @@
               "win": false,
               "kda": 0.33
             },
-            "firstGameAt": 1762451205365,
-            "lastGameAt": 1792433200843,
+            "firstGameAt": 1763494188287,
+            "lastGameAt": 1792675270185,
             "totals": {
-              "k": 1518,
-              "d": 1262,
-              "a": 1543
+              "k": 1516,
+              "d": 1263,
+              "a": 1553
             },
-            "dmgPerMin": 900,
+            "dmgPerMin": 901,
             "avgVision": 20.3,
             "pentas": 1,
             "firstBloods": 32,
@@ -8367,11 +8367,11 @@
               },
               {
                 "key": "Kaisa",
-                "games": 13,
+                "games": 14,
                 "wins": 4,
-                "winrate": 30.8,
-                "kda": 2.44,
-                "csPerMin": 8.3
+                "winrate": 28.6,
+                "kda": 2.43,
+                "csPerMin": 8.1
               },
               {
                 "key": "Ezreal",
@@ -8430,14 +8430,6 @@
                 "csPerMin": 1
               },
               {
-                "key": "Varus",
-                "games": 2,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.33,
-                "csPerMin": 8.1
-              },
-              {
                 "key": "Sylas",
                 "games": 1,
                 "wins": 1,
@@ -8452,6 +8444,14 @@
                 "winrate": 0,
                 "kda": 3,
                 "csPerMin": 1
+              },
+              {
+                "key": "Varus",
+                "games": 1,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.33,
+                "csPerMin": 7.8
               },
               {
                 "key": "Malzahar",
@@ -8500,7 +8500,7 @@
                 "games": 192,
                 "wins": 100,
                 "winrate": 52.1,
-                "kda": 2.49
+                "kda": 2.5
               },
               {
                 "key": "TOP",
@@ -8532,9 +8532,9 @@
               }
             ],
             "gold": {
-              "games": 144,
-              "avgGd15": 194,
-              "avgTgd15": 215,
+              "games": 145,
+              "avgGd15": 191,
+              "avgTgd15": 213,
               "throws": 19,
               "comebacks": 11,
               "biggestThrow": {
@@ -8689,8 +8689,8 @@
                 "games": 192,
                 "wins": 100,
                 "winrate": 52.1,
-                "kda": 2.49,
-                "gd15": 309,
+                "kda": 2.5,
+                "gd15": 305,
                 "champs": [
                   {
                     "key": "Jinx",
@@ -8729,10 +8729,10 @@
                   },
                   {
                     "key": "Kaisa",
-                    "games": 13,
+                    "games": 14,
                     "wins": 4,
-                    "winrate": 30.8,
-                    "kda": 2.44
+                    "winrate": 28.6,
+                    "kda": 2.43
                   }
                 ]
               },
@@ -8779,7 +8779,7 @@
               },
               "champPool": 15,
               "kdaStreak": 5,
-              "avgKda": 3.73,
+              "avgKda": 3.74,
               "pentas": 1,
               "quadras": 3,
               "quadraGames": 211,
@@ -8921,7 +8921,7 @@
               "win": 20,
               "loss": -20,
               "winN": 31,
-              "lossN": 16
+              "lossN": 17
             }
           },
           "links": {
@@ -8930,7 +8930,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-22T13:22:10.814Z",
+          "updatedAt": "2026-10-22T13:23:14.274Z",
           "lpHist": [
             [
               1790720384833,
@@ -9134,6 +9134,69 @@
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8021351481",
+              "t": 1792675270185,
+              "dur": 2090,
+              "win": false,
+              "champ": "Kaisa",
+              "role": "BOTTOM",
+              "lvl": 16,
+              "k": 4,
+              "d": 7,
+              "a": 12,
+              "kp": 64,
+              "cs": 240,
+              "vis": 23,
+              "dmg": 29998,
+              "teamDmg": 139356,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 854,
+              "goldEarned": 13824,
+              "fb": false,
+              "items": [
+                1086,
+                3124,
+                2421,
+                3115,
+                6672,
+                1058,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerBarrier"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7203_Whimsy.png"
+              ],
+              "opp": {
+                "champ": "Ezreal",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerBarrier"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                  "perk-images/Styles/7203_Whimsy.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 604,
+                "maxLeadMin": 14,
+                "maxDef": -8614,
+                "tgd15": -168,
+                "gd15": -189
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8018629084",
@@ -10330,72 +10393,14 @@
                 "d": -21,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8005918992",
-              "t": 1791322456949,
-              "dur": 1952,
-              "win": true,
-              "champ": "Jinx",
-              "role": "BOTTOM",
-              "lvl": 18,
-              "k": 14,
-              "d": 2,
-              "a": 10,
-              "kp": 69,
-              "cs": 337,
-              "vis": 26,
-              "dmg": 49752,
-              "teamDmg": 116537,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 16784,
-              "goldEarned": 19591,
-              "fb": false,
-              "items": [
-                3031,
-                2523,
-                3085,
-                3033,
-                3026,
-                2055,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBarrier"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Vayne",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerBarrier"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 8323,
-                "maxLeadMin": 33,
-                "maxDef": -2042,
-                "tgd15": -2042,
-                "gd15": -1479
-              },
-              "lp": {
-                "d": 19,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792675270185,
+              0,
+              -20
+            ],
             [
               1792433200843,
               0,
@@ -10888,11 +10893,6 @@
             ],
             [
               1788286318272,
-              1,
-              null
-            ],
-            [
-              1787158240465,
               1,
               null
             ]
