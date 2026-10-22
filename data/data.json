@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T12:56:13.750Z",
+  "generatedAt": "2026-10-22T13:22:10.876Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8128,7 +8128,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 2194,
+      "score": 2174,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -8141,17 +8141,17 @@
           "rank": {
             "tier": "EMERALD",
             "division": "III",
-            "lp": 94,
+            "lp": 74,
             "wins": 107,
-            "losses": 103,
-            "winrate": 51,
+            "losses": 104,
+            "winrate": 50.7,
             "hotStreak": false
           },
           "stats": {
-            "games": 210,
+            "games": 211,
             "wins": 106,
-            "losses": 104,
-            "winrate": 50.5,
+            "losses": 105,
+            "winrate": 50.2,
             "avgK": 7.2,
             "avgD": 6,
             "avgA": 7.3,
@@ -8169,9 +8169,9 @@
               "worstLoss": 5
             },
             "firstOfDay": {
-              "games": 52,
+              "games": 53,
               "wins": 25,
-              "winrate": 48.1,
+              "winrate": 47.2,
               "restWinrate": 51.3
             },
             "form": [
@@ -8274,10 +8274,10 @@
             },
             "bestRole": {
               "key": "BOTTOM",
-              "games": 191,
+              "games": 192,
               "wins": 100,
-              "winrate": 52.4,
-              "kda": 2.5
+              "winrate": 52.1,
+              "kda": 2.49
             },
             "worstRole": {
               "key": "TOP",
@@ -8310,14 +8310,14 @@
               "win": false,
               "kda": 0.33
             },
-            "firstGameAt": 1763494188287,
+            "firstGameAt": 1762451205365,
             "lastGameAt": 1792433200843,
             "totals": {
-              "k": 1512,
-              "d": 1256,
-              "a": 1541
+              "k": 1518,
+              "d": 1262,
+              "a": 1543
             },
-            "dmgPerMin": 901,
+            "dmgPerMin": 900,
             "avgVision": 20.3,
             "pentas": 1,
             "firstBloods": 32,
@@ -8430,6 +8430,14 @@
                 "csPerMin": 1
               },
               {
+                "key": "Varus",
+                "games": 2,
+                "wins": 0,
+                "winrate": 0,
+                "kda": 1.33,
+                "csPerMin": 8.1
+              },
+              {
                 "key": "Sylas",
                 "games": 1,
                 "wins": 1,
@@ -8444,14 +8452,6 @@
                 "winrate": 0,
                 "kda": 3,
                 "csPerMin": 1
-              },
-              {
-                "key": "Varus",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 1.33,
-                "csPerMin": 7.8
               },
               {
                 "key": "Malzahar",
@@ -8497,10 +8497,10 @@
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 191,
+                "games": 192,
                 "wins": 100,
-                "winrate": 52.4,
-                "kda": 2.5
+                "winrate": 52.1,
+                "kda": 2.49
               },
               {
                 "key": "TOP",
@@ -8686,10 +8686,10 @@
                 ]
               },
               "BOTTOM": {
-                "games": 191,
+                "games": 192,
                 "wins": 100,
-                "winrate": 52.4,
-                "kda": 2.5,
+                "winrate": 52.1,
+                "kda": 2.49,
                 "gd15": 309,
                 "champs": [
                   {
@@ -8779,10 +8779,10 @@
               },
               "champPool": 15,
               "kdaStreak": 5,
-              "avgKda": 3.74,
+              "avgKda": 3.73,
               "pentas": 1,
               "quadras": 3,
-              "quadraGames": 210,
+              "quadraGames": 211,
               "firstBloods": 32
             },
             "gameRecords": {
@@ -8930,7 +8930,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-22T11:47:02.105Z",
+          "updatedAt": "2026-10-22T13:22:10.814Z",
           "lpHist": [
             [
               1790720384833,
@@ -9127,6 +9127,10 @@
             [
               1792433259635,
               2194
+            ],
+            [
+              1792675328198,
+              2174
             ]
           ],
           "recent": [
@@ -21971,8 +21975,8 @@
             "a": 6.3,
             "ratio": 2.61
           },
-          "wrWithout": 51.3,
-          "gamesWithout": 187,
+          "wrWithout": 51.1,
+          "gamesWithout": 188,
           "champs": [
             [
               "Xayah",
@@ -22694,8 +22698,8 @@
             "a": 8.3,
             "ratio": 5.14
           },
-          "wrWithout": 49.8,
-          "gamesWithout": 203,
+          "wrWithout": 49.5,
+          "gamesWithout": 204,
           "champs": [
             [
               "Yunara",
