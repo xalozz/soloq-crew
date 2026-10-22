@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8021322256",
+      "t": 1792673711541,
+      "dur": 1728,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 4,
+      "d": 10,
+      "a": 2,
+      "kp": 30,
+      "cs": 158,
+      "vis": 25,
+      "dmg": 11198,
+      "teamDmg": 106485,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6476,
+      "goldEarned": 10777,
+      "fb": false,
+      "items": [
+        3094,
+        6657,
+        3170,
+        3157,
+        2022,
+        1052,
+        3363
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Zed",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 178,
+        "maxLeadMin": 8,
+        "maxDef": -11163,
+        "tgd15": -5142,
+        "gd15": -1014
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8021302917",
       "t": 1792671578242,
       "dur": 1691,
