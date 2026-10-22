@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T10:49:12.028Z",
+  "generatedAt": "2026-10-22T11:19:13.503Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -14314,7 +14314,7 @@
       "name": "El Desgracias v2",
       "links": [],
       "bestAccount": 0,
-      "score": 1630,
+      "score": 1649,
       "accounts": [
         {
           "riotId": "El Desgracias v2#EUW",
@@ -14327,17 +14327,17 @@
           "rank": {
             "tier": "PLATINUM",
             "division": "IV",
-            "lp": 30,
-            "wins": 504,
+            "lp": 49,
+            "wins": 505,
             "losses": 514,
-            "winrate": 49.5,
+            "winrate": 49.6,
             "hotStreak": false
           },
           "stats": {
-            "games": 988,
-            "wins": 494,
+            "games": 989,
+            "wins": 495,
             "losses": 494,
-            "winrate": 50,
+            "winrate": 50.1,
             "avgK": 7.2,
             "avgD": 7,
             "avgA": 7,
@@ -14348,7 +14348,7 @@
             "avgDurationMin": 30.8,
             "streak": {
               "current": {
-                "type": "L",
+                "type": "W",
                 "count": 1
               },
               "bestWin": 10,
@@ -14361,19 +14361,18 @@
               "restWinrate": 50.5
             },
             "form": [
-              "L",
-              "W",
               "W",
               "L",
               "W",
               "W",
               "L",
+              "W",
+              "W",
               "L",
               "L",
               "L"
             ],
             "trend": [
-              1,
               0,
               0,
               1,
@@ -14392,14 +14391,15 @@
               0,
               1,
               1,
-              0
+              0,
+              1
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
@@ -14460,9 +14460,9 @@
             },
             "bestRole": {
               "key": "MIDDLE",
-              "games": 723,
-              "wins": 374,
-              "winrate": 51.7,
+              "games": 724,
+              "wins": 375,
+              "winrate": 51.8,
               "kda": 2
             },
             "worstRole": {
@@ -14497,11 +14497,11 @@
               "kda": 0
             },
             "firstGameAt": 1769986840562,
-            "lastGameAt": 1792666087391,
+            "lastGameAt": 1792667857375,
             "totals": {
-              "k": 7139,
-              "d": 6920,
-              "a": 6955
+              "k": 7144,
+              "d": 6921,
+              "a": 6960
             },
             "dmgPerMin": 820,
             "avgVision": 24.2,
@@ -14585,11 +14585,11 @@
               },
               {
                 "key": "Viktor",
-                "games": 26,
-                "wins": 14,
-                "winrate": 53.8,
-                "kda": 1.73,
-                "csPerMin": 7
+                "games": 27,
+                "wins": 15,
+                "winrate": 55.6,
+                "kda": 1.78,
+                "csPerMin": 7.1
               },
               {
                 "key": "Teemo",
@@ -14795,9 +14795,9 @@
             "roles": [
               {
                 "key": "MIDDLE",
-                "games": 723,
-                "wins": 374,
-                "winrate": 51.7,
+                "games": 724,
+                "wins": 375,
+                "winrate": 51.8,
                 "kda": 2
               },
               {
@@ -14830,9 +14830,9 @@
               }
             ],
             "gold": {
-              "games": 249,
-              "avgGd15": 39,
-              "avgTgd15": 14,
+              "games": 250,
+              "avgGd15": 44,
+              "avgTgd15": 39,
               "throws": 23,
               "comebacks": 21,
               "biggestThrow": {
@@ -15010,11 +15010,11 @@
                 ]
               },
               "MIDDLE": {
-                "games": 723,
-                "wins": 374,
-                "winrate": 51.7,
+                "games": 724,
+                "wins": 375,
+                "winrate": 51.8,
                 "kda": 2,
-                "gd15": 136,
+                "gd15": 146,
                 "champs": [
                   {
                     "key": "Fizz",
@@ -15150,7 +15150,7 @@
               "avgKda": 2.95,
               "pentas": 1,
               "quadras": 4,
-              "quadraGames": 988,
+              "quadraGames": 989,
               "firstBloods": 113
             },
             "gameRecords": {
@@ -15288,7 +15288,7 @@
             "lp": {
               "win": 19,
               "loss": -19,
-              "winN": 71,
+              "winN": 72,
               "lossN": 80
             }
           },
@@ -15298,7 +15298,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-22T10:49:11.967Z",
+          "updatedAt": "2026-10-22T11:19:13.445Z",
           "lpHist": [
             [
               1790720384833,
@@ -15919,9 +15919,76 @@
             [
               1792666146506,
               1630
+            ],
+            [
+              1792667946886,
+              1649
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8021254378",
+              "t": 1792667857375,
+              "dur": 1411,
+              "win": true,
+              "champ": "Viktor",
+              "role": "MIDDLE",
+              "lvl": 15,
+              "k": 5,
+              "d": 1,
+              "a": 5,
+              "kp": 33,
+              "cs": 201,
+              "vis": 12,
+              "dmg": 16892,
+              "teamDmg": 78043,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 8603,
+              "goldEarned": 10406,
+              "fb": false,
+              "items": [
+                1056,
+                2503,
+                1058,
+                3171,
+                3100,
+                0,
+                3363
+              ],
+              "spells": [
+                "SummonerTeleport",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Yone",
+                "spells": [
+                  "SummonerDot",
+                  "SummonerFlash"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 6323,
+                "maxLeadMin": 15,
+                "maxDef": -25,
+                "tgd15": 6323,
+                "gd15": 1318
+              },
+              "lp": {
+                "d": 19,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8021247090",
@@ -17118,72 +17185,14 @@
                 "d": -20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8016881100",
-              "t": 1792280232910,
-              "dur": 1794,
-              "win": true,
-              "champ": "TwistedFate",
-              "role": "MIDDLE",
-              "lvl": 16,
-              "k": 7,
-              "d": 8,
-              "a": 16,
-              "kp": 61,
-              "cs": 164,
-              "vis": 18,
-              "dmg": 32576,
-              "teamDmg": 108309,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 6631,
-              "goldEarned": 13143,
-              "fb": false,
-              "items": [
-                3124,
-                3094,
-                3170,
-                3302,
-                1037,
-                6670,
-                3363
-              ],
-              "spells": [
-                "SummonerDot",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7204_Resolve.png"
-              ],
-              "opp": {
-                "champ": "Yone",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7204_Resolve.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 6410,
-                "maxLeadMin": 30,
-                "maxDef": -3418,
-                "tgd15": -3011,
-                "gd15": 288
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792667857375,
+              1,
+              19
+            ],
             [
               1792666087391,
               0,
@@ -17676,11 +17685,6 @@
             ],
             [
               1791469001633,
-              1,
-              20
-            ],
-            [
-              1791466820253,
               1,
               20
             ]
@@ -20831,7 +20835,7 @@
             "ratio": 2.22
           },
           "wrWithout": 50.7,
-          "gamesWithout": 807,
+          "gamesWithout": 808,
           "champs": [
             [
               "Fizz",
@@ -21178,8 +21182,8 @@
             "a": 6.7,
             "ratio": 1.91
           },
-          "wrWithout": 50.5,
-          "gamesWithout": 853,
+          "wrWithout": 50.6,
+          "gamesWithout": 854,
           "champs": [
             [
               "Zed",
@@ -22948,7 +22952,7 @@
             "ratio": 2.25
           },
           "wrWithout": 50.1,
-          "gamesWithout": 985,
+          "gamesWithout": 986,
           "champs": [
             [
               "Malzahar",
