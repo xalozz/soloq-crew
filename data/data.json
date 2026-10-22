@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T16:34:36.189Z",
+  "generatedAt": "2026-10-22T17:13:36.001Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -2561,7 +2561,7 @@
       "name": "ArNOOBal",
       "links": [],
       "bestAccount": 0,
-      "score": 2400,
+      "score": 2419,
       "accounts": [
         {
           "riotId": "ArNOOBal#EUW",
@@ -2574,15 +2574,15 @@
           "rank": {
             "tier": "DIAMOND",
             "division": "IV",
-            "lp": 0,
-            "wins": 573,
+            "lp": 19,
+            "wins": 574,
             "losses": 557,
-            "winrate": 50.7,
+            "winrate": 50.8,
             "hotStreak": false
           },
           "stats": {
-            "games": 963,
-            "wins": 487,
+            "games": 964,
+            "wins": 488,
             "losses": 476,
             "winrate": 50.6,
             "avgK": 6.5,
@@ -2595,8 +2595,8 @@
             "avgDurationMin": 29.5,
             "streak": {
               "current": {
-                "type": "L",
-                "count": 3
+                "type": "W",
+                "count": 1
               },
               "bestWin": 8,
               "worstLoss": 8
@@ -2605,16 +2605,16 @@
               "games": 191,
               "wins": 93,
               "winrate": 48.7,
-              "restWinrate": 51
+              "restWinrate": 51.1
             },
             "form": [
+              "W",
               "L",
               "L",
               "L",
               "W",
               "W",
               "W",
-              "L",
               "L",
               "L",
               "L"
@@ -2623,7 +2623,6 @@
               0,
               0,
               0,
-              0,
               1,
               1,
               1,
@@ -2639,20 +2638,21 @@
               1,
               0,
               0,
-              0
+              0,
+              1
             ],
             "mainRole": "JUNGLE",
             "last10": {
               "games": 10,
-              "wins": 3,
-              "losses": 7,
-              "winrate": 30
+              "wins": 4,
+              "losses": 6,
+              "winrate": 40
             },
             "last20": {
               "games": 20,
-              "wins": 8,
-              "losses": 12,
-              "winrate": 40
+              "wins": 9,
+              "losses": 11,
+              "winrate": 45
             },
             "topChamps": [
               {
@@ -2713,11 +2713,11 @@
               "kda": 1.73
             },
             "worstRole": {
-              "key": "TOP",
-              "games": 9,
-              "wins": 4,
-              "winrate": 44.4,
-              "kda": 2.46
+              "key": "UTILITY",
+              "games": 83,
+              "wins": 38,
+              "winrate": 45.8,
+              "kda": 2.4
             },
             "bestGame": {
               "id": "EUW1_7833228571",
@@ -2744,16 +2744,16 @@
               "kda": 0
             },
             "firstGameAt": 1772394469336,
-            "lastGameAt": 1792686819224,
+            "lastGameAt": 1792689102868,
             "totals": {
-              "k": 6303,
-              "d": 5437,
-              "a": 8910
+              "k": 6308,
+              "d": 5438,
+              "a": 8921
             },
-            "dmgPerMin": 663,
+            "dmgPerMin": 664,
             "avgVision": 30.6,
             "pentas": 0,
-            "firstBloods": 61,
+            "firstBloods": 62,
             "maxKills": 24,
             "maxDurationMin": 50.1,
             "avgKp": 51,
@@ -2919,6 +2919,14 @@
                 "csPerMin": 6.1
               },
               {
+                "key": "Malphite",
+                "games": 2,
+                "wins": 1,
+                "winrate": 50,
+                "kda": 6.43,
+                "csPerMin": 6.8
+              },
+              {
                 "key": "Veigar",
                 "games": 2,
                 "wins": 0,
@@ -3071,14 +3079,6 @@
                 "csPerMin": 7.9
               },
               {
-                "key": "Malphite",
-                "games": 1,
-                "wins": 0,
-                "winrate": 0,
-                "kda": 4.83,
-                "csPerMin": 6.7
-              },
-              {
                 "key": "Ekko",
                 "games": 1,
                 "wins": 0,
@@ -3111,10 +3111,10 @@
               },
               {
                 "key": "TOP",
-                "games": 9,
-                "wins": 4,
-                "winrate": 44.4,
-                "kda": 2.46
+                "games": 10,
+                "wins": 5,
+                "winrate": 50,
+                "kda": 2.74
               },
               {
                 "key": "BOTTOM",
@@ -3125,9 +3125,9 @@
               }
             ],
             "gold": {
-              "games": 197,
-              "avgGd15": 309,
-              "avgTgd15": 638,
+              "games": 198,
+              "avgGd15": 316,
+              "avgTgd15": 667,
               "throws": 20,
               "comebacks": 10,
               "biggestThrow": {
@@ -3203,11 +3203,11 @@
             },
             "byRole": {
               "TOP": {
-                "games": 9,
-                "wins": 4,
-                "winrate": 44.4,
-                "kda": 2.46,
-                "gd15": -1271,
+                "games": 10,
+                "wins": 5,
+                "winrate": 50,
+                "kda": 2.74,
+                "gd15": 189,
                 "champs": [
                   {
                     "key": "Shen",
@@ -3217,18 +3217,18 @@
                     "kda": 2.31
                   },
                   {
+                    "key": "Malphite",
+                    "games": 2,
+                    "wins": 1,
+                    "winrate": 50,
+                    "kda": 6.43
+                  },
+                  {
                     "key": "DrMundo",
                     "games": 1,
                     "wins": 0,
                     "winrate": 0,
                     "kda": 2.29
-                  },
-                  {
-                    "key": "Malphite",
-                    "games": 1,
-                    "wins": 0,
-                    "winrate": 0,
-                    "kda": 4.83
                   },
                   {
                     "key": "Nasus",
@@ -3422,17 +3422,17 @@
               },
               "autofill": {
                 "lane": "JUNGLE",
-                "games": 116,
-                "wins": 54,
-                "winrate": 46.6
+                "games": 117,
+                "wins": 55,
+                "winrate": 47
               },
-              "champPool": 23,
+              "champPool": 24,
               "kdaStreak": 7,
-              "avgKda": 4.19,
+              "avgKda": 4.2,
               "pentas": 0,
               "quadras": 1,
-              "quadraGames": 963,
-              "firstBloods": 61
+              "quadraGames": 964,
+              "firstBloods": 62
             },
             "gameRecords": {
               "kills": {
@@ -3527,17 +3527,17 @@
                 "val": 88
               },
               "towers": {
-                "id": "EUW1_7814180565",
-                "t": 1775665578641,
-                "dur": 1537,
-                "champ": "Diana",
-                "role": "JUNGLE",
-                "k": 9,
-                "d": 3,
-                "a": 3,
+                "id": "EUW1_8021579200",
+                "t": 1792689102868,
+                "dur": 1468,
+                "champ": "Malphite",
+                "role": "TOP",
+                "k": 5,
+                "d": 1,
+                "a": 11,
                 "win": true,
-                "kda": 4,
-                "val": 14655
+                "kda": 16,
+                "val": 15655
               },
               "gold": {
                 "id": "EUW1_7802502682",
@@ -3569,7 +3569,7 @@
             "lp": {
               "win": 20,
               "loss": -18,
-              "winN": 58,
+              "winN": 59,
               "lossN": 44
             }
           },
@@ -3579,7 +3579,7 @@
             "dpm": "https://dpm.lol/ArNOOBal-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/ArNOOBal-EUW"
           },
-          "updatedAt": "2026-10-22T16:34:36.142Z",
+          "updatedAt": "2026-10-22T17:13:35.954Z",
           "lpHist": [
             [
               1790720384833,
@@ -4000,9 +4000,76 @@
             [
               1792686870891,
               2400
+            ],
+            [
+              1792689210536,
+              2419
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8021579200",
+              "t": 1792689102868,
+              "dur": 1468,
+              "win": true,
+              "champ": "Malphite",
+              "role": "TOP",
+              "lvl": 16,
+              "k": 5,
+              "d": 1,
+              "a": 11,
+              "kp": 37,
+              "cs": 173,
+              "vis": 8,
+              "dmg": 21318,
+              "teamDmg": 105483,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 15655,
+              "goldEarned": 11357,
+              "fb": true,
+              "items": [
+                1028,
+                3068,
+                3075,
+                3047,
+                3110,
+                1057,
+                3340
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerTeleport"
+              ],
+              "runes": [
+                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+                "perk-images/Styles/7204_Resolve.png"
+              ],
+              "opp": {
+                "champ": "Zaahen",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerDot"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 15548,
+                "maxLeadMin": 25,
+                "maxDef": -5,
+                "tgd15": 6475,
+                "gd15": 1648
+              },
+              "lp": {
+                "d": 19,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8021537406",
@@ -5199,72 +5266,14 @@
                 "d": 0,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8016250887",
-              "t": 1792249982956,
-              "dur": 1746,
-              "win": false,
-              "champ": "Mel",
-              "role": "UTILITY",
-              "lvl": 12,
-              "k": 3,
-              "d": 8,
-              "a": 3,
-              "kp": 29,
-              "cs": 63,
-              "vis": 68,
-              "dmg": 9796,
-              "teamDmg": 77363,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 838,
-              "goldEarned": 8747,
-              "fb": false,
-              "items": [
-                3871,
-                2420,
-                3134,
-                3118,
-                3020,
-                1082,
-                3364
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerExhaust"
-              ],
-              "runes": [
-                "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-                "perk-images/Styles/7201_Precision.png"
-              ],
-              "opp": {
-                "champ": "Janna",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerDot"
-                ],
-                "runes": [
-                  "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 5,
-                "maxLeadMin": 1,
-                "maxDef": -11067,
-                "tgd15": -1214,
-                "gd15": -426
-              },
-              "lp": {
-                "d": -10,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792689102868,
+              1,
+              19
+            ],
             [
               1792686819224,
               0,
@@ -5757,11 +5766,6 @@
             ],
             [
               1790874559033,
-              1,
-              20
-            ],
-            [
-              1790872719411,
               1,
               20
             ]
@@ -21593,8 +21597,8 @@
             "a": 8.8,
             "ratio": 3.13
           },
-          "wrWithout": 51,
-          "gamesWithout": 853,
+          "wrWithout": 51.1,
+          "gamesWithout": 854,
           "champs": [
             [
               "Diana",
@@ -21968,8 +21972,8 @@
             "a": 7.7,
             "ratio": 2.38
           },
-          "wrWithout": 50.7,
-          "gamesWithout": 940,
+          "wrWithout": 50.8,
+          "gamesWithout": 941,
           "champs": [
             [
               "Diana",
@@ -22344,7 +22348,7 @@
             "ratio": 3.21
           },
           "wrWithout": 50.4,
-          "gamesWithout": 941,
+          "gamesWithout": 942,
           "champs": [
             [
               "Diana",
