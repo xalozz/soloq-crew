@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8022488074",
+      "t": 1792765222736,
+      "dur": 1384,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 3,
+      "d": 8,
+      "a": 2,
+      "kp": 36,
+      "cs": 124,
+      "vis": 10,
+      "dmg": 10651,
+      "teamDmg": 61858,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2622,
+      "goldEarned": 8801,
+      "fb": false,
+      "items": [
+        1086,
+        3009,
+        3153,
+        3094,
+        1042,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Sion",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 142,
+        "maxLeadMin": 3,
+        "maxDef": -13747,
+        "tgd15": -8494,
+        "gd15": -1714
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8022437206",
       "t": 1792763058786,
       "dur": 2007,
