@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T20:51:46.705Z",
+  "generatedAt": "2026-10-23T20:52:50.756Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -15342,7 +15342,7 @@
             "dpm": "https://dpm.lol/El%20Desgracias%20v2-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/El%20Desgracias%20v2-EUW"
           },
-          "updatedAt": "2026-10-23T20:51:46.647Z",
+          "updatedAt": "2026-10-23T20:52:50.702Z",
           "lpHist": [
             [
               1790720384833,
@@ -17788,7 +17788,7 @@
       "name": "FesAo 11",
       "links": [],
       "bestAccount": 0,
-      "score": 1222,
+      "score": 1202,
       "accounts": [
         {
           "riotId": "FesAo 11#EUW",
@@ -17801,29 +17801,29 @@
           "rank": {
             "tier": "GOLD",
             "division": "IV",
-            "lp": 22,
+            "lp": 2,
             "wins": 187,
-            "losses": 193,
-            "winrate": 49.2,
+            "losses": 194,
+            "winrate": 49.1,
             "hotStreak": false
           },
           "stats": {
-            "games": 380,
+            "games": 381,
             "wins": 187,
-            "losses": 193,
-            "winrate": 49.2,
+            "losses": 194,
+            "winrate": 49.1,
             "avgK": 5.1,
             "avgD": 6.1,
             "avgA": 8,
             "kda": 2.13,
             "csPerMin": 6,
-            "visPerMin": 1.01,
+            "visPerMin": 1,
             "dmgShare": 21.8,
             "avgDurationMin": 30.7,
             "streak": {
               "current": {
                 "type": "L",
-                "count": 2
+                "count": 3
               },
               "bestWin": 9,
               "worstLoss": 6
@@ -17832,22 +17832,21 @@
               "games": 135,
               "wins": 69,
               "winrate": 51.1,
-              "restWinrate": 48.2
+              "restWinrate": 48
             },
             "form": [
               "L",
               "L",
+              "L",
               "W",
               "W",
               "W",
               "W",
               "L",
               "W",
-              "L",
-              "W"
+              "L"
             ],
             "trend": [
-              0,
               1,
               1,
               0,
@@ -17865,15 +17864,16 @@
               1,
               1,
               1,
+              0,
               0,
               0
             ],
             "mainRole": "MIDDLE",
             "last10": {
               "games": 10,
-              "wins": 6,
-              "losses": 4,
-              "winrate": 60
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
@@ -17884,10 +17884,10 @@
             "topChamps": [
               {
                 "key": "Heimerdinger",
-                "games": 75,
+                "games": 76,
                 "wins": 38,
-                "winrate": 50.7,
-                "kda": 2.08
+                "winrate": 50,
+                "kda": 2.1
               },
               {
                 "key": "Malzahar",
@@ -17971,13 +17971,13 @@
               "kda": 0
             },
             "firstGameAt": 1766001277913,
-            "lastGameAt": 1792767074827,
+            "lastGameAt": 1792788659726,
             "totals": {
-              "k": 1929,
-              "d": 2329,
-              "a": 3032
+              "k": 1935,
+              "d": 2333,
+              "a": 3040
             },
-            "dmgPerMin": 850,
+            "dmgPerMin": 851,
             "avgVision": 30.9,
             "pentas": 0,
             "firstBloods": 21,
@@ -17987,11 +17987,11 @@
             "champs": [
               {
                 "key": "Heimerdinger",
-                "games": 75,
+                "games": 76,
                 "wins": 38,
-                "winrate": 50.7,
-                "kda": 2.08,
-                "csPerMin": 7
+                "winrate": 50,
+                "kda": 2.1,
+                "csPerMin": 6.9
               },
               {
                 "key": "Malzahar",
@@ -18340,10 +18340,10 @@
               },
               {
                 "key": "TOP",
-                "games": 146,
+                "games": 147,
                 "wins": 76,
-                "winrate": 52.1,
-                "kda": 2
+                "winrate": 51.7,
+                "kda": 2.01
               },
               {
                 "key": "UTILITY",
@@ -18368,9 +18368,9 @@
               }
             ],
             "gold": {
-              "games": 165,
-              "avgGd15": 153,
-              "avgTgd15": 64,
+              "games": 166,
+              "avgGd15": 146,
+              "avgTgd15": 47,
               "throws": 16,
               "comebacks": 14,
               "biggestThrow": {
@@ -18446,18 +18446,18 @@
             },
             "byRole": {
               "TOP": {
-                "games": 146,
+                "games": 147,
                 "wins": 76,
-                "winrate": 52.1,
-                "kda": 2,
-                "gd15": 403,
+                "winrate": 51.7,
+                "kda": 2.01,
+                "gd15": 386,
                 "champs": [
                   {
                     "key": "Heimerdinger",
-                    "games": 74,
+                    "games": 75,
                     "wins": 38,
-                    "winrate": 51.4,
-                    "kda": 2.08
+                    "winrate": 50.7,
+                    "kda": 2.1
                   },
                   {
                     "key": "Teemo",
@@ -18670,7 +18670,7 @@
               "oneTrick": {
                 "champ": "Heimerdinger",
                 "wins": 38,
-                "games": 75
+                "games": 76
               },
               "mainChar": {
                 "champ": "Malzahar",
@@ -18685,10 +18685,10 @@
               },
               "champPool": 27,
               "kdaStreak": 4,
-              "avgKda": 2.85,
+              "avgKda": 2.86,
               "pentas": 0,
               "quadras": 0,
-              "quadraGames": 380,
+              "quadraGames": 381,
               "firstBloods": 21
             },
             "gameRecords": {
@@ -18827,7 +18827,7 @@
               "win": 20,
               "loss": -20,
               "winN": 37,
-              "lossN": 31
+              "lossN": 32
             }
           },
           "links": {
@@ -18836,7 +18836,7 @@
             "dpm": "https://dpm.lol/FesAo%2011-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/FesAo%2011-EUW"
           },
-          "updatedAt": "2026-10-23T14:51:34.733Z",
+          "updatedAt": "2026-10-23T20:52:47.153Z",
           "lpHist": [
             [
               1790720384833,
@@ -19121,9 +19121,76 @@
             [
               1792767088982,
               1222
+            ],
+            [
+              1792788761776,
+              1202
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8022958617",
+              "t": 1792788659726,
+              "dur": 2079,
+              "win": false,
+              "champ": "Heimerdinger",
+              "role": "TOP",
+              "lvl": 19,
+              "k": 6,
+              "d": 4,
+              "a": 8,
+              "kp": 40,
+              "cs": 209,
+              "vis": 24,
+              "dmg": 33916,
+              "teamDmg": 151874,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 5445,
+              "goldEarned": 12616,
+              "fb": false,
+              "items": [
+                6653,
+                3020,
+                3165,
+                3116,
+                1058,
+                0,
+                3340
+              ],
+              "spells": [
+                "SummonerExhaust",
+                "SummonerFlash"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Nasus",
+                "spells": [
+                  "SummonerTeleport",
+                  "SummonerHaste"
+                ],
+                "runes": [
+                  "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 2132,
+                "maxLeadMin": 9,
+                "maxDef": -9527,
+                "tgd15": -2705,
+                "gd15": -981
+              },
+              "lp": {
+                "d": -20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8022521810",
@@ -20320,72 +20387,14 @@
                 "d": 19,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8013798001",
-              "t": 1792015888608,
-              "dur": 1901,
-              "win": false,
-              "champ": "Syndra",
-              "role": "MIDDLE",
-              "lvl": 17,
-              "k": 8,
-              "d": 4,
-              "a": 6,
-              "kp": 70,
-              "cs": 220,
-              "vis": 21,
-              "dmg": 29590,
-              "teamDmg": 93783,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 4688,
-              "goldEarned": 14256,
-              "fb": false,
-              "items": [
-                3089,
-                2503,
-                3175,
-                4646,
-                4645,
-                0,
-                3340
-              ],
-              "spells": [
-                "SummonerTeleport",
-                "SummonerFlash"
-              ],
-              "runes": [
-                "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
-                "perk-images/Styles/7202_Sorcery.png"
-              ],
-              "opp": {
-                "champ": "Varus",
-                "spells": [
-                  "SummonerFlash",
-                  "SummonerTeleport"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
-                  "perk-images/Styles/7200_Domination.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 1967,
-                "maxLeadMin": 11,
-                "maxDef": -8113,
-                "tgd15": -1028,
-                "gd15": -1761
-              },
-              "lp": {
-                "d": -75,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792788659726,
+              0,
+              -20
+            ],
             [
               1792767074827,
               0,
@@ -20880,11 +20889,6 @@
               1788815167529,
               0,
               null
-            ],
-            [
-              1788738655378,
-              0,
-              null
             ]
           ]
         }
@@ -21270,32 +21274,32 @@
     {
       "a": "El Desgracias v2",
       "b": "FesAo 11",
-      "games": 138,
+      "games": 139,
       "wins": 64,
-      "losses": 74,
-      "wr": 46.4,
+      "losses": 75,
+      "wr": 46,
       "streak": {
         "win": false,
-        "n": 2
+        "n": 3
       },
       "bestWin": 8,
       "bestLoss": 7,
       "first": 1770061137558,
-      "last": 1792767074827,
-      "hours": 71.5,
+      "last": 1792788659726,
+      "hours": 72,
       "sides": [
         {
           "name": "El Desgracias v2",
-          "lp": -202,
+          "lp": -223,
           "lpEst": 118,
           "kda": {
-            "k": 7.6,
+            "k": 7.7,
             "d": 7.4,
             "a": 6.7,
-            "ratio": 1.92
+            "ratio": 1.93
           },
-          "wrWithout": 50.5,
-          "gamesWithout": 863,
+          "wrWithout": 50.6,
+          "gamesWithout": 862,
           "champs": [
             [
               "Zed",
@@ -21313,20 +21317,20 @@
         },
         {
           "name": "FesAo 11",
-          "lp": -220,
+          "lp": -240,
           "lpEst": 118,
           "kda": {
             "k": 4.4,
             "d": 6.2,
             "a": 7.5,
-            "ratio": 1.92
+            "ratio": 1.93
           },
           "wrWithout": 50.8,
           "gamesWithout": 242,
           "champs": [
             [
               "Heimerdinger",
-              34
+              35
             ],
             [
               "Malzahar",
@@ -21340,6 +21344,31 @@
         }
       ],
       "recent": [
+        {
+          "id": "EUW1_8022958617",
+          "t": 1792788659726,
+          "win": false,
+          "c": [
+            "Malzahar",
+            "Heimerdinger"
+          ],
+          "kda": [
+            [
+              15,
+              9,
+              7
+            ],
+            [
+              6,
+              4,
+              8
+            ]
+          ],
+          "lp": [
+            -21,
+            -20
+          ]
+        },
         {
           "id": "EUW1_8022521810",
           "t": 1792767074827,
@@ -21612,31 +21641,6 @@
           ],
           "lp": [
             -21,
-            -21
-          ]
-        },
-        {
-          "id": "EUW1_8012903897",
-          "t": 1791931128274,
-          "win": false,
-          "c": [
-            "LeeSin",
-            "Malzahar"
-          ],
-          "kda": [
-            [
-              6,
-              9,
-              10
-            ],
-            [
-              3,
-              6,
-              11
-            ]
-          ],
-          "lp": [
-            -20,
             -21
           ]
         }
@@ -23205,8 +23209,8 @@
             "a": 3,
             "ratio": 0.76
           },
-          "wrWithout": 49.3,
-          "gamesWithout": 377,
+          "wrWithout": 49.2,
+          "gamesWithout": 378,
           "champs": [
             [
               "Malzahar",
@@ -23456,8 +23460,8 @@
             "a": 5,
             "ratio": 5.5
           },
-          "wrWithout": 49.1,
-          "gamesWithout": 379,
+          "wrWithout": 48.9,
+          "gamesWithout": 380,
           "champs": [
             [
               "Malzahar",
