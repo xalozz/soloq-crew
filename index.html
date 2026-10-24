@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- "Vista de ordenador" (menú Más): también funciona con la app instalada, donde Chrome no muestra su menú -->
+  <script>try { if (localStorage.getItem('sq-desktop') === '1') document.querySelector('meta[name=viewport]').setAttribute('content', 'width=1280, initial-scale=' + Math.min(1, screen.width / 1280).toFixed(3)); } catch (e) {}</script>
   <title>SoloQ Crew</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0a0b">
@@ -49,6 +51,7 @@
           <a href="#campeones">Campeones</a>
           <a href="#dias">Mejores días</a>
           <button data-action="compare">⚖ Comparar jugadores</button>
+          <button data-action="desktop" id="desktop-btn" hidden>🖥️ Vista de ordenador</button>
           <button data-action="install">📲 Instalar la app</button>
         </div>
       </div>

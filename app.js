@@ -2277,8 +2277,29 @@ function wireMore() {
     if (!el) return;
     if (el.dataset.action === 'compare') openCompare();
     if (el.dataset.action === 'install') installApp();
+    if (el.dataset.action === 'desktop') toggleDesktop();
     close();
   });
+  // Vista de ordenador: solo tiene sentido en pantallas pequeñas (o si ya está activada)
+  const desk = document.getElementById('desktop-btn');
+  const on = desktopOn();
+  desk.hidden = !on && Math.min(screen.width, screen.height) > 820 && screen.width > 1024;
+  desk.textContent = on ? '📱 Volver a la vista de móvil' : '🖥️ Vista de ordenador';
+}
+
+function desktopOn() {
+  try { return localStorage.getItem('sq-desktop') === '1'; } catch { return false; }
+}
+// Como "Sitio de escritorio" de Chrome, pero dentro de la web: funciona también con la app instalada
+function toggleDesktop() {
+  const on = !desktopOn();
+  try {
+    if (on) localStorage.setItem('sq-desktop', '1'); else localStorage.removeItem('sq-desktop');
+    location.reload();
+  } catch {
+    // Sin almacenamiento: se aplica solo a esta visita
+    document.querySelector('meta[name=viewport]').setAttribute('content', on ? `width=1280, initial-scale=${Math.min(1, screen.width / 1280).toFixed(3)}` : 'width=device-width, initial-scale=1, viewport-fit=cover');
+  }
 }
 
 // #partida/<id> abre una partida (enlaces de Discord) · #vs/<a>/<b> abre el comparador
