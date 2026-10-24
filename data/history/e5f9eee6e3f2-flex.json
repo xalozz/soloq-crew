@@ -1,0 +1,869 @@
+{
+  "games": [
+    {
+      "v": 4,
+      "id": "EUW1_7978642834",
+      "q": 440,
+      "t": 1788984987822,
+      "dur": 2100,
+      "win": false,
+      "champ": "KogMaw",
+      "role": "BOTTOM",
+      "lvl": 17,
+      "k": 11,
+      "d": 9,
+      "a": 4,
+      "kp": 34,
+      "cs": 308,
+      "vis": 45,
+      "dmg": 47236,
+      "teamDmg": 137395,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9487,
+      "goldEarned": 18833,
+      "fb": false,
+      "items": [
+        2420,
+        3089,
+        4646,
+        3135,
+        2510,
+        6655,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Smolder",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7975265726",
+      "q": 440,
+      "t": 1788712950874,
+      "dur": 1533,
+      "win": false,
+      "champ": "KogMaw",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 10,
+      "d": 9,
+      "a": 2,
+      "kp": 50,
+      "cs": 194,
+      "vis": 21,
+      "dmg": 28353,
+      "teamDmg": 73233,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3667,
+      "goldEarned": 13779,
+      "fb": false,
+      "items": [
+        4646,
+        3089,
+        3067,
+        1026,
+        3175,
+        6655,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7975205060",
+      "q": 440,
+      "t": 1788711162873,
+      "dur": 2148,
+      "win": true,
+      "champ": "Quinn",
+      "role": "TOP",
+      "lvl": 19,
+      "k": 12,
+      "d": 9,
+      "a": 11,
+      "kp": 74,
+      "cs": 199,
+      "vis": 34,
+      "dmg": 49431,
+      "teamDmg": 158645,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3216,
+      "goldEarned": 16749,
+      "fb": true,
+      "items": [
+        3036,
+        6672,
+        3031,
+        3006,
+        3153,
+        1036,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Poppy",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7975159098",
+      "q": 440,
+      "t": 1788708633746,
+      "dur": 1758,
+      "win": true,
+      "champ": "Chogath",
+      "role": "TOP",
+      "lvl": 18,
+      "k": 7,
+      "d": 4,
+      "a": 11,
+      "kp": 47,
+      "cs": 202,
+      "vis": 36,
+      "dmg": 35332,
+      "teamDmg": 127174,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 10259,
+      "goldEarned": 13356,
+      "fb": true,
+      "items": [
+        3152,
+        4633,
+        3076,
+        8020,
+        3111,
+        1011,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zaahen",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7971066182",
+      "q": 440,
+      "t": 1788378360059,
+      "dur": 2076,
+      "win": false,
+      "champ": "Chogath",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 7,
+      "d": 8,
+      "a": 1,
+      "kp": 32,
+      "cs": 234,
+      "vis": 50,
+      "dmg": 34026,
+      "teamDmg": 117097,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3336,
+      "goldEarned": 13644,
+      "fb": false,
+      "items": [
+        3152,
+        4633,
+        2504,
+        3143,
+        0,
+        3174,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Leblanc",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7969727931",
+      "q": 440,
+      "t": 1788279180861,
+      "dur": 916,
+      "win": true,
+      "champ": "Aurora",
+      "role": "MIDDLE",
+      "lvl": 10,
+      "k": 4,
+      "d": 2,
+      "a": 3,
+      "kp": 27,
+      "cs": 94,
+      "vis": 12,
+      "dmg": 11575,
+      "teamDmg": 53921,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6376,
+      "goldEarned": 5942,
+      "fb": false,
+      "items": [
+        3175,
+        6655,
+        3145,
+        2055,
+        1056,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Volibear",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7960442057",
+      "q": 440,
+      "t": 1787572018416,
+      "dur": 2060,
+      "win": false,
+      "champ": "Chogath",
+      "role": "TOP",
+      "lvl": 18,
+      "k": 10,
+      "d": 9,
+      "a": 5,
+      "kp": 65,
+      "cs": 209,
+      "vis": 56,
+      "dmg": 31778,
+      "teamDmg": 127525,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1207,
+      "goldEarned": 13476,
+      "fb": false,
+      "items": [
+        3111,
+        1031,
+        3084,
+        6665,
+        4633,
+        3076,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zaahen",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7955929263",
+      "q": 440,
+      "t": 1787178208683,
+      "dur": 2199,
+      "win": true,
+      "champ": "KogMaw",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 13,
+      "d": 10,
+      "a": 13,
+      "kp": 63,
+      "cs": 282,
+      "vis": 43,
+      "dmg": 56122,
+      "teamDmg": 143374,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 13411,
+      "goldEarned": 22532,
+      "fb": false,
+      "items": [
+        2421,
+        3089,
+        2510,
+        3135,
+        6655,
+        4646,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7955887186",
+      "q": 440,
+      "t": 1787175493782,
+      "dur": 1807,
+      "win": false,
+      "champ": "KogMaw",
+      "role": "BOTTOM",
+      "lvl": 14,
+      "k": 2,
+      "d": 8,
+      "a": 5,
+      "kp": 33,
+      "cs": 223,
+      "vis": 27,
+      "dmg": 23237,
+      "teamDmg": 85604,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5354,
+      "goldEarned": 13167,
+      "fb": false,
+      "items": [
+        4646,
+        6655,
+        1056,
+        3089,
+        3067,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Vayne",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7954588495",
+      "q": 440,
+      "t": 1787076659235,
+      "dur": 2295,
+      "win": true,
+      "champ": "Chogath",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 16,
+      "d": 7,
+      "a": 11,
+      "kp": 52,
+      "cs": 276,
+      "vis": 56,
+      "dmg": 48934,
+      "teamDmg": 163028,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 12168,
+      "goldEarned": 20930,
+      "fb": false,
+      "items": [
+        3152,
+        3111,
+        3075,
+        3084,
+        4633,
+        2504,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7944271091",
+      "q": 440,
+      "t": 1786206542145,
+      "dur": 1156,
+      "win": true,
+      "champ": "Chogath",
+      "role": "TOP",
+      "lvl": 15,
+      "k": 8,
+      "d": 1,
+      "a": 0,
+      "kp": 32,
+      "cs": 161,
+      "vis": 23,
+      "dmg": 18115,
+      "teamDmg": 49590,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9217,
+      "goldEarned": 9585,
+      "fb": false,
+      "items": [
+        3152,
+        3111,
+        1056,
+        4633,
+        1057,
+        1028,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Zaahen",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7925464372",
+      "q": 440,
+      "t": 1784657212932,
+      "dur": 2708,
+      "win": true,
+      "champ": "Xayah",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 21,
+      "d": 10,
+      "a": 11,
+      "kp": 71,
+      "cs": 346,
+      "vis": 49,
+      "dmg": 81477,
+      "teamDmg": 240343,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 1,
+      "towerDmg": 18285,
+      "goldEarned": 26027,
+      "fb": false,
+      "items": [
+        3139,
+        3508,
+        3031,
+        3036,
+        3072,
+        6675,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7925419843",
+      "q": 440,
+      "t": 1784654039648,
+      "dur": 2262,
+      "win": true,
+      "champ": "Xayah",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 10,
+      "d": 9,
+      "a": 16,
+      "kp": 55,
+      "cs": 355,
+      "vis": 43,
+      "dmg": 59160,
+      "teamDmg": 180837,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 24800,
+      "goldEarned": 22030,
+      "fb": false,
+      "items": [
+        3140,
+        6675,
+        3031,
+        3508,
+        3072,
+        3036,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Jhin",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7921493824",
+      "q": 440,
+      "t": 1784316258032,
+      "dur": 2142,
+      "win": true,
+      "champ": "Chogath",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 12,
+      "d": 1,
+      "a": 3,
+      "kp": 52,
+      "cs": 280,
+      "vis": 40,
+      "dmg": 46821,
+      "teamDmg": 135005,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 16844,
+      "goldEarned": 18120,
+      "fb": false,
+      "items": [
+        8020,
+        3111,
+        2504,
+        3084,
+        1031,
+        4633,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "DrMundo",
+        "spells": [
+          "SummonerHaste",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7918270272",
+      "q": 440,
+      "t": 1784036504195,
+      "dur": 1963,
+      "win": false,
+      "champ": "KogMaw",
+      "role": "BOTTOM",
+      "lvl": 15,
+      "k": 10,
+      "d": 13,
+      "a": 4,
+      "kp": 50,
+      "cs": 216,
+      "vis": 33,
+      "dmg": 33495,
+      "teamDmg": 105370,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3260,
+      "goldEarned": 17471,
+      "fb": false,
+      "items": [
+        3157,
+        2510,
+        4646,
+        6655,
+        3089,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Velkoz",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7887007804",
+      "q": 440,
+      "t": 1781439495136,
+      "dur": 1688,
+      "win": true,
+      "champ": "Chogath",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 6,
+      "d": 2,
+      "a": 5,
+      "kp": 27,
+      "cs": 201,
+      "vis": 38,
+      "dmg": 18342,
+      "teamDmg": 113640,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 14949,
+      "goldEarned": 12001,
+      "fb": false,
+      "items": [
+        3152,
+        0,
+        1056,
+        3170,
+        8020,
+        4633,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Leblanc",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": null
+    }
+  ],
+  "skipped": []
+}
