@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024024359",
+      "q": 420,
+      "t": 1792870655131,
+      "dur": 1522,
+      "win": true,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 4,
+      "d": 1,
+      "a": 10,
+      "kp": 32,
+      "cs": 186,
+      "vis": 13,
+      "dmg": 19709,
+      "teamDmg": 105038,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 14171,
+      "goldEarned": 12791,
+      "fb": false,
+      "items": [
+        3094,
+        6657,
+        3170,
+        2420,
+        3100,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerHaste",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "AurelionSol",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13467,
+        "maxLeadMin": 26,
+        "maxDef": 0,
+        "tgd15": 9277,
+        "gd15": 1904
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8023977654",
       "q": 420,
       "t": 1792868790311,
