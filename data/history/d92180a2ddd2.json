@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024070370",
+      "q": 420,
+      "t": 1792872682400,
+      "dur": 1594,
+      "win": false,
+      "champ": "Rakan",
+      "role": "UTILITY",
+      "lvl": 12,
+      "k": 4,
+      "d": 9,
+      "a": 9,
+      "kp": 76,
+      "cs": 26,
+      "vis": 41,
+      "dmg": 7002,
+      "teamDmg": 64147,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 878,
+      "goldEarned": 7825,
+      "fb": false,
+      "items": [
+        2065,
+        3876,
+        3050,
+        3158,
+        3067,
+        1029,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 100,
+        "maxLeadMin": 3,
+        "maxDef": -12466,
+        "tgd15": -4846,
+        "gd15": -670
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8023964037",
       "q": 420,
       "t": 1792867907279,
