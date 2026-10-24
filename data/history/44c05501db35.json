@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024186188",
+      "q": 420,
+      "t": 1792877634683,
+      "dur": 1879,
+      "win": false,
+      "champ": "Galio",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 5,
+      "d": 10,
+      "a": 10,
+      "kp": 50,
+      "cs": 144,
+      "vis": 17,
+      "dmg": 16056,
+      "teamDmg": 100038,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1551,
+      "goldEarned": 9697,
+      "fb": false,
+      "items": [
+        1056,
+        3174,
+        3076,
+        3157,
+        3152,
+        1029,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1057,
+        "maxLeadMin": 4,
+        "maxDef": -13006,
+        "tgd15": -1718,
+        "gd15": -121
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8024123196",
       "q": 420,
       "t": 1792874884546,
