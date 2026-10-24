@@ -2283,15 +2283,33 @@ function wireMore() {
   // Vista de ordenador: solo tiene sentido en pantallas pequeñas (o si ya está activada)
   const desk = document.getElementById('desktop-btn');
   const on = desktopOn();
-  desk.hidden = !on && Math.min(screen.width, screen.height) > 820 && screen.width > 1024;
-  desk.textContent = on ? '📱 Volver a la vista de móvil' : '🖥️ Vista de ordenador';
+  desk.hidden = !on && !chromeDesktopForced() && Math.min(screen.width, screen.height) > 820 && screen.width > 1024;
+  desk.textContent = on || chromeDesktopForced() ? '📱 Volver a la vista de móvil' : '🖥️ Vista de ordenador';
 }
 
 function desktopOn() {
   try { return localStorage.getItem('sq-desktop') === '1'; } catch { return false; }
 }
+// Chrome con "Sitio de escritorio" activado se presenta como un ordenador (sin "Android" ni "Mobile") aunque sea
+// un móvil táctil. En ese modo Chrome ignora el tamaño que pide la web, así que este botón no puede quitarlo.
+function chromeDesktopForced() {
+  return navigator.maxTouchPoints > 0 && Math.min(screen.width, screen.height) < 600
+    && !/Android|Mobile|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
 // Como "Sitio de escritorio" de Chrome, pero dentro de la web: funciona también con la app instalada
 function toggleDesktop() {
+  if (chromeDesktopForced()) {
+    try { localStorage.removeItem('sq-desktop'); } catch { /* nada */ }
+    const P = (...c) => h('p', {}, ...c);
+    openModal('Vista de móvil', h('div', { class: 'info-body' },
+      P('Ahora mismo la vista de ordenador la ha puesto ', h('b', {}, 'Chrome'), ' (su ajuste «Sitio de escritorio») y manda sobre este botón, también dentro de la app instalada. Para quitarla:'),
+      h('ol', {},
+        h('li', {}, 'Abre Chrome, el navegador normal, y pulsa ', h('b', {}, '⋮ → Configuración'), '.'),
+        h('li', {}, 'Entra en ', h('b', {}, 'Configuración de sitios → Sitio de escritorio'), ' (puede llamarse «Versión para ordenador»).'),
+        h('li', {}, 'Déjalo en ', h('b', {}, 'Vista predeterminada'), ' o quita la excepción de ', h('b', {}, 'xalozz.github.io'), '.')),
+      P('Luego cierra la app y vuelve a abrirla. A partir de ahí este botón cambia entre las dos vistas.')));
+    return;
+  }
   const on = !desktopOn();
   try {
     if (on) localStorage.setItem('sq-desktop', '1'); else localStorage.removeItem('sq-desktop');
