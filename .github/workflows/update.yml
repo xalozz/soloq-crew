@@ -40,6 +40,7 @@ jobs:
       - name: Actualizar en bucle
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}   # avisos en Discord (opcional)
           LOOP_SECONDS: 19800    # ~5h30m (margen para que la última vuelta termine antes del límite de 6 h)
           CYCLE_SECONDS: 60      # una pasada rápida por minuto
           FULL_EVERY: 15         # una pasada completa cada 15 ciclos
@@ -66,8 +67,11 @@ jobs:
                 sleep 5
               done
             fi
-            # Latido: commit vacío en la rama "heartbeat" (no publica la web); la web lo usa para el indicador "En directo"
-            hb=$(git commit-tree "$(git hash-object -t tree /dev/null)" -m "latido $(date -u +%FT%TZ)") && timeout 30 git push -f -q origin "$hb:refs/heads/heartbeat" || true
+            # Latido: commit vacío en la rama "heartbeat" (no publica la web). Su mensaje lleva el resultado de la
+            # pasada (.status.json: si Riot responde, si la clave vale y quién está jugando ahora); la web lo lee.
+            msg=(-m "latido $(date -u +%FT%TZ)")
+            [ -s .status.json ] && msg+=(-m "$(head -c 4000 .status.json | tr -d '\n')")
+            hb=$(git commit-tree "$(git hash-object -t tree /dev/null)" "${msg[@]}") && timeout 30 git push -f -q origin "$hb:refs/heads/heartbeat" || true
             i=$((i + 1))
             left=$((CYCLE_SECONDS - (SECONDS - t0)))
             [ $left -gt 0 ] && sleep $left

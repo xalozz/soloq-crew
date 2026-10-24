@@ -18,7 +18,11 @@ let DATA = null;
 let sortKey = 'rank';
 let query = '';
 let daysMode = 'up';
+let period = 'day';          // columna de LP del ranking: hoy, semana o mes
+let STATUS = null;           // resultado de la última pasada del actualizador (viaja en el latido)
+let LIVE = [];               // partidas en curso de los del grupo
 const expanded = new Set();
+const SITE_URL = 'https://xalozz.github.io/soloq-crew/';
 
 // ---------------------------------------------------------------- utilidades
 function h(tag, attrs, ...children) {
@@ -52,6 +56,40 @@ const dayFmt = new Intl.DateTimeFormat('sv-SE', { timeZone: TZ, year: 'numeric',
 const dayKey = (t) => dayFmt.format(new Date(t));
 const prettyDay = (key) => new Date(`${key}T12:00:00Z`).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 
+// Inicio de día, semana (lunes) y mes en hora de Madrid
+const partsFmt = new Intl.DateTimeFormat('en-US', { timeZone: TZ, hourCycle: 'h23', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', weekday: 'short' });
+const WD = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+function madridParts(t) {
+  const p = {};
+  for (const x of partsFmt.formatToParts(new Date(t))) p[x.type] = x.value;
+  return { y: +p.year, m: +p.month, d: +p.day, hh: +p.hour % 24, mm: +p.minute, ss: +p.second, wd: WD[p.weekday] ?? 0 };
+}
+function madridMidnight(y, m, d) {
+  const off = (t) => { const p = madridParts(t); return Date.UTC(p.y, p.m - 1, p.d, p.hh, p.mm, p.ss) - Math.floor(t / 1000) * 1000; };
+  const guess = Date.UTC(y, m - 1, d);
+  let t = guess - off(guess);
+  t = guess - off(t);
+  return t;
+}
+const dayStartMs = (t) => { const p = madridParts(t); return madridMidnight(p.y, p.m, p.d); };
+const weekStartMs = (t) => { const p = madridParts(t); return madridMidnight(p.y, p.m, p.d - p.wd); };
+const monthStartMs = (t) => { const p = madridParts(t); return madridMidnight(p.y, p.m, 1); };
+function weekKeyOf(t) {
+  const p = madridParts(t);
+  const date = new Date(Date.UTC(p.y, p.m - 1, p.d));
+  date.setUTCDate(date.getUTCDate() - ((date.getUTCDay() + 6) % 7) + 3);
+  const first = new Date(Date.UTC(date.getUTCFullYear(), 0, 4));
+  const week = 1 + Math.round(((date - first) / 864e5 - 3 + ((first.getUTCDay() + 6) % 7)) / 7);
+  return `${date.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+}
+const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'];
+function rangeLabel(from, toExcl) {
+  const a = madridParts(from), b = madridParts(toExcl - 1);
+  return a.m === b.m ? `${a.d}–${b.d} ${MONTHS_ES[b.m - 1]}` : `${a.d} ${MONTHS_ES[a.m - 1]} – ${b.d} ${MONTHS_ES[b.m - 1]}`;
+}
+const pct = (w, n) => (n ? (w / n) * 100 : 0);
+const plural = (n, one, many = `${one}s`) => `${fmtInt(n)} ${n === 1 ? one : many}`;
+
 function timeAgo(iso) {
   const min = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
   if (min < 1) return 'ahora mismo';
@@ -81,19 +119,21 @@ const tierKey = (rank) => (rank?.tier ? rank.tier.toLowerCase() : 'unranked');
 
 // ---------------------------------------------------------------- historial de LP
 // lpHist = [[timestamp, score], ...] ordenado; un punto por cada cambio de elo.
-function startOfDayScore(hist, today = dayKey(Date.now())) {
+// Elo al empezar un periodo: el último punto anterior o, si no hay, el primero del periodo.
+function scoreAtStart(hist, t0) {
   if (!hist?.length) return null;
   let base = null;
   for (const [t, s] of hist) {
-    if (dayKey(t) < today) base = s;
+    if (t < t0) base = s;
     else break;
   }
   if (base == null) {
-    const first = hist.find(([t]) => dayKey(t) === today);
+    const first = hist.find(([t]) => t >= t0);
     base = first ? first[1] : null;
   }
   return base;
 }
+const startOfDayScore = (hist) => scoreAtStart(hist, dayStartMs(Date.now()));
 function dailyDeltas(hist) {
   const out = [];
   if (!hist?.length) return out;
@@ -119,9 +159,6 @@ function buildModel(raw) {
     return {
       ...p, main, s, rank, score,
       baseScore: base,
-      today: base != null && score >= 0 ? score - base : null,
-      // Partidas jugadas hoy (hora de Madrid): sin partidas, "LP hoy" se muestra como "–"
-      gamesToday: (main?.recent ?? []).filter((g) => dayKey(g.t) === dayKey(Date.now())).length,
       wins: rank?.wins ?? 0, losses: rank?.losses ?? 0,
       winrate: rank ? rank.winrate : -1,
       totalGames: totalW + totalL,
@@ -138,9 +175,41 @@ function buildModel(raw) {
   return players;
 }
 
+// LP, partidas y puesto de cada uno en el periodo elegido (hoy, semana o mes) y en el anterior
+const PERIODS = {
+  day: { short: 'hoy', this: 'hoy', prev: 'ayer', start: dayStartMs },
+  week: { short: 'semana', this: 'esta semana', prev: 'la semana pasada', start: weekStartMs },
+  month: { short: 'mes', this: 'este mes', prev: 'el mes pasado', start: monthStartMs },
+};
+function gamesBetween(acc, from, to = Infinity) {
+  const seq = acc?.seq ?? (acc?.recent ?? []).map((g) => [g.t, g.win ? 1 : 0]);
+  return seq.filter(([t]) => t >= from && t < to);
+}
+function applyPeriod(players) {
+  const P = PERIODS[period];
+  const start = P.start(Date.now()), prevStart = P.start(start - 1);
+  for (const p of players) {
+    const hist = p.main?.lpHist;
+    const base = scoreAtStart(hist, start), prevBase = scoreAtStart(hist, prevStart);
+    const g = gamesBetween(p.main, start), gp = gamesBetween(p.main, prevStart, start);
+    const wins = g.filter((x) => x[1]).length;
+    p.per = { lp: base != null && p.score >= 0 ? p.score - base : null, games: g.length, wins, losses: g.length - wins };
+    p.perPrev = { lp: base != null && prevBase != null ? base - prevBase : null, games: gp.length };
+  }
+  const order = (key) => (a, b) => (b[key].lp ?? -1e9) - (a[key].lp ?? -1e9) || b.score - a.score;
+  const now = players.filter((p) => p.per.games).sort(order('per'));
+  const before = players.filter((p) => p.perPrev.games).sort(order('perPrev'));
+  for (const p of players) { p.perPos = null; p.perDelta = null; }
+  now.forEach((p, i) => {
+    p.perPos = i + 1;
+    const j = before.indexOf(p);
+    p.perDelta = j >= 0 ? j - i : null;
+  });
+}
+
 const SORTERS = {
   rank: (a, b) => b.score - a.score,
-  today: (a, b) => (b.gamesToday ? 1 : 0) - (a.gamesToday ? 1 : 0) || (b.today ?? -1e9) - (a.today ?? -1e9) || b.score - a.score,
+  period: (a, b) => (b.per.games ? 1 : 0) - (a.per.games ? 1 : 0) || (b.per.lp ?? -1e9) - (a.per.lp ?? -1e9) || b.score - a.score,
   winrate: (a, b) => b.winrate - a.winrate,
   streak: (a, b) => b.streakVal - a.streakVal,
   kda: (a, b) => (b.s?.kda ?? -1) - (a.s?.kda ?? -1),
@@ -230,12 +299,14 @@ function streakChip(s) {
   return h('span', { class: `chip ${win ? 'chip-w' : 'chip-l'}`, title: win ? 'Victorias seguidas' : 'Derrotas seguidas' }, `${c.count}${win ? 'V' : 'D'}`);
 }
 
-function todayCell(v, games) {
-  if (!games) return h('span', { class: 'today-none', title: 'No ha jugado hoy' }, '–');
-  const n = h('small', { class: 'today-n' }, `${games} part.`);
+function periodCell(p) {
+  const P = PERIODS[period];
+  const { lp: v, games, wins, losses } = p.per;
+  if (!games) return h('span', { class: 'today-none', title: `No ha jugado ${P.this}` }, '–');
+  const n = h('small', { class: 'today-n' }, `${wins}V ${losses}D`);
   if (v == null) return h('span', { class: 'today-wrap' }, h('span', { class: 'muted' }, '?'), n);
   if (v === 0) return h('span', { class: 'today-wrap', title: 'Ha ganado y perdido los mismos LP' }, h('b', { class: 'today-zero' }, '0'), n);
-  return h('span', { class: 'today-wrap' }, h('b', { class: v > 0 ? 'pos' : 'neg' }, `${v > 0 ? '▲' : '▼'} ${Math.abs(v)}`), n);
+  return h('span', { class: 'today-wrap', title: `${signed(v)} LP ${P.this} · ${games} partidas` }, h('b', { class: v > 0 ? 'pos' : 'neg' }, `${v > 0 ? '▲' : '▼'} ${Math.abs(v)}`), n);
 }
 
 function tierTag(rank) {
@@ -266,12 +337,33 @@ function podiumCard(p) {
 }
 
 // ---------------------------------------------------------------- tabla
+function posDeltaTag(d, title) {
+  if (!d) return null;
+  return h('small', { class: d > 0 ? 'pos' : 'neg', title }, `${d > 0 ? '▲' : '▼'}${Math.abs(d)}`);
+}
+
+// Segunda línea bajo el nombre: partida en curso, aviso de tilt o su Riot ID
+function whoLine(p) {
+  const live = liveOf(p.name);
+  if (live) {
+    const mates = live.g.p.filter((x) => x.n !== p.name);
+    const withTxt = mates.length ? ` · ${mates.some((x) => x.tm != null && x.tm !== live.me.tm) ? 'contra' : 'con'} ${mates.map((x) => x.n).join(', ')}` : '';
+    return h('span', { class: 'who-live', title: `${QUEUE_ES[live.g.q] ?? 'Partida'} en curso${withTxt}` },
+      h('i', { class: 'live-dot' }), live.me.c ? champIcon(live.me.c, 16) : null,
+      h('span', {}, `${QUEUE_ES[live.g.q] ?? 'En partida'} · `, liveMinutes(live.g.s), withTxt));
+  }
+  return h('span', {}, `${p.main.gameName}#${p.main.tagLine}`, p.accounts.length > 1 ? ` · +${p.accounts.length - 1}` : '');
+}
+
 function row(p, idx) {
   const s = p.s;
   const open = expanded.has(p.name);
   const byElo = sortKey === 'rank';
+  const byPeriod = sortKey === 'period';
   const shownPos = byElo ? p.pos : idx + 1;
-  const delta = byElo && p.posDelta ? h('small', { class: p.posDelta > 0 ? 'pos' : 'neg' }, `${p.posDelta > 0 ? '▲' : '▼'}${Math.abs(p.posDelta)}`) : null;
+  const delta = byElo ? posDeltaTag(p.posDelta, 'Puestos respecto a esta mañana')
+    : byPeriod && p.per.games ? posDeltaTag(p.perDelta, `Puestos respecto a ${PERIODS[period].prev}`) : null;
+  const tilt = tiltNow(p);
 
   const head = h('button', {
     class: 'tr', 'aria-expanded': open,
@@ -281,19 +373,19 @@ function row(p, idx) {
     h('span', { class: 'c-player' },
       avatar(p, 38),
       h('span', { class: 'who' },
-        h('b', {}, p.name),
-        h('span', {}, `${p.main.gameName}#${p.main.tagLine}`, p.accounts.length > 1 ? ` · +${p.accounts.length - 1}` : ''))),
+        h('b', {}, p.name, tilt ? h('span', { class: 'tilt-flag', title: tilt }, ' 🧊') : null),
+        whoLine(p))),
     h('span', { class: 'c-role' }, roleIcon(s?.mainRole)),
     h('span', { class: 'c-elo' }, crest(p.rank, 30),
       h('span', { class: 'elo-txt' }, h('b', { class: `t-${tierKey(p.rank)}` }, rankName(p.rank)), p.rank ? h('small', {}, `${p.rank.lp} LP`) : null)),
     h('span', { class: 'c-wr' }, winBar(p.wins, p.losses)),
     h('span', { class: 'c-trend' }, sparkline(s?.trend)),
     h('span', { class: 'c-streak' }, streakChip(s)),
-    h('span', { class: 'c-today' }, todayCell(p.today, p.gamesToday)),
+    h('span', { class: 'c-today' }, periodCell(p)),
     h('span', { class: 'c-kda' }, h('b', {}, s ? fmt(s.kda, 2) : '–')),
     h('span', { class: 'c-chev', 'aria-hidden': 'true' }, open ? '−' : '+'));
 
-  return h('div', { class: `row ${open ? 'open' : ''} ${byElo && shownPos <= 3 ? `top top${shownPos}` : ''} ${sortKey === 'today' && !p.gamesToday ? 'idle' : ''}`, role: 'row' },
+  return h('div', { class: `row ${open ? 'open' : ''} ${byElo && shownPos <= 3 ? `top top${shownPos}` : ''} ${byPeriod && !p.per.games ? 'idle' : ''} ${liveOf(p.name) ? 'is-live' : ''}`, role: 'row' },
     head,
     open ? playerDetail(p) : null);
 }
@@ -395,16 +487,25 @@ function matchDetailView(id, meRiotId) {
   return box;
 }
 
-// Ventana genérica (detalle de partida, explicaciones…)
-function openModal(title, content) {
-  const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
+// Ventana genérica (detalle de partida, explicaciones, comparador…). Devuelve la función para cerrarla.
+function openModal(title, content, { wide = false, onClose, head } = {}) {
+  const close = () => {
+    ov.remove();
+    document.removeEventListener('keydown', onKey);
+    document.body.classList.remove('modal-open');
+    // Si se abrió desde un enlace (#partida/… o #vs/…), al cerrar se limpia la dirección
+    if (/^#(partida|vs)\//.test(location.hash)) history.replaceState(null, '', location.pathname + location.search);
+    onClose?.();
+  };
   const onKey = (e) => { if (e.key === 'Escape') close(); };
   const ov = h('div', { class: 'modal', onclick: (e) => { if (e.target === ov) close(); } },
-    h('div', { class: 'modal-box narrow', role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
-      h('div', { class: 'modal-head' }, h('b', {}, title), h('button', { class: 'modal-x', onclick: close, 'aria-label': 'Cerrar' }, '×')),
+    h('div', { class: `modal-box ${wide ? '' : 'narrow'}`, role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
+      h('div', { class: 'modal-head' }, head ?? h('b', {}, title), h('button', { class: 'modal-x', onclick: close, 'aria-label': 'Cerrar' }, '×')),
       content));
   document.addEventListener('keydown', onKey);
+  document.body.classList.add('modal-open');
   document.body.append(ov);
+  return close;
 }
 
 function best5Info() {
@@ -427,16 +528,9 @@ function best5Info() {
     P(h('span', { class: 'muted' }, 'Datos: partidas de SoloQ de la temporada de la cuenta principal de cada uno.'))));
 }
 
-// Ventana con el detalle de una partida (desde los récords)
+// Ventana con el detalle de una partida (récords, novedades, dúos…)
 function openMatchModal(id, title, meRiotId) {
-  const close = () => { ov.remove(); document.removeEventListener('keydown', onKey); };
-  const onKey = (e) => { if (e.key === 'Escape') close(); };
-  const ov = h('div', { class: 'modal', onclick: (e) => { if (e.target === ov) close(); } },
-    h('div', { class: 'modal-box', role: 'dialog', 'aria-modal': 'true', 'aria-label': title },
-      h('div', { class: 'modal-head' }, h('b', {}, title), h('button', { class: 'modal-x', onclick: close, 'aria-label': 'Cerrar' }, '×')),
-      matchDetailView(id, meRiotId)));
-  document.addEventListener('keydown', onKey);
-  document.body.append(ov);
+  return openModal(title, matchDetailView(id, meRiotId), { wide: true });
 }
 
 function matchRow(g, acc) {
@@ -814,6 +908,7 @@ function playerDetail(p) {
       p.accounts.length > 1 ? h('div', { class: 'dacc' }, p.accounts.map((a, i) =>
         h('button', { class: i === ai ? 'on' : '', onclick: () => { detailAcc.set(p.name, i); renderRows(); } }, a.gameName))) : null,
       h('div', { class: 'dlinks' },
+        h('button', { class: 'dl-btn', onclick: () => openCompare(p.name) }, '⚖ Comparar'),
         Object.entries(acc.links || {}).filter(([k]) => k !== 'opgg').map(([k, url]) => extLink(url, `${LINK_LABELS[k] ?? k} ↗`)),
         acc.links?.opgg ? extLink(acc.links.opgg, 'Ver en OP.GG ↗', 'main') : null)),
     acc.error ? h('p', { class: 'err' }, `No se pudo actualizar esta cuenta: ${acc.error}`) : null,
@@ -1170,7 +1265,8 @@ function duoCard(d, byName) {
       h('div', { class: 'duo-avs' }, pa ? avatar(pa, 40) : null, pb ? avatar(pb, 40) : null),
       h('div', { class: 'duo-title' }, h('b', {}, title),
         h('span', { class: 'muted' }, `${d.games} partidas · ${fmt(d.hours)} h juntos · desde el ${shortDate(d.first)}`)),
-      tag ? h('span', { class: `duo-tag ${tag[0]}`, title: `Winrate juntos frente a la media de sus winrates por separado (${fmt(base)}%)` }, tag[1]) : null),
+      tag ? h('span', { class: `duo-tag ${tag[0]}`, title: `Winrate juntos frente a la media de sus winrates por separado (${fmt(base)}%)` }, tag[1]) : null,
+      h('button', { class: 'duo-cmp', title: `Comparar a ${d.a} y ${d.b}`, onclick: () => openCompare(d.a, d.b) }, '⚖')),
     h('div', { class: 'duo-wr' },
       h('b', { class: d.wr >= 50 ? 'pos' : 'neg' }, `${fmt(d.wr)}%`),
       h('div', { class: 'duo-bar' }, winBar(d.wins, d.losses)),
@@ -1347,10 +1443,867 @@ function drawGe(box, all) {
   box.replaceChildren(chart, tip);
 }
 
+// ---------------------------------------------------------------- en directo
+const QUEUE_ES = {
+  420: 'SoloQ', 440: 'Flex', 400: 'Normal', 430: 'Normal', 490: 'Normal', 480: 'Normal', 450: 'ARAM', 700: 'Clash', 720: 'Clash ARAM',
+  900: 'URF', 1900: 'URF', 1700: 'Arena', 1710: 'Arena', 1300: 'Nexus Blitz', 0: 'Personalizada',
+};
+function liveOf(name) {
+  for (const g of LIVE) {
+    const me = g.p.find((x) => x.n === name);
+    if (me) return { g, me };
+  }
+  return null;
+}
+const liveMinTxt = (start) => (start ? `${Math.max(0, Math.floor((Date.now() - start) / 60000))} min` : 'cargando');
+function liveMinutes(start) {
+  return h('span', { class: 'live-min', 'data-start': start || '' }, liveMinTxt(start));
+}
+// Los minutos avanzan solos sin volver a pintar nada
+function tickLive() {
+  for (const el of document.querySelectorAll('.live-min')) el.textContent = liveMinTxt(Number(el.dataset.start) || 0);
+}
+
+function renderLive() {
+  const box = document.getElementById('live-now');
+  const chip = document.getElementById('meta-live');
+  const playing = LIVE.reduce((n, g) => n + g.p.length, 0);
+  chip.hidden = !playing;
+  chip.querySelector('b').textContent = playing;
+  chip.title = playing ? LIVE.flatMap((g) => g.p.map((x) => x.n)).join(', ') : '';
+  if (!LIVE.length) { box.hidden = true; box.replaceChildren(); return; }
+  const byName = new Map(MODEL.map((p) => [p.name, p]));
+  box.hidden = false;
+  box.replaceChildren(
+    h('div', { class: 'live-head' }, h('i', { class: 'live-dot' }), h('b', {}, 'Jugando ahora'),
+      h('small', { class: 'muted' }, 'se comprueba cada minuto')),
+    h('div', { class: 'live-games' }, LIVE.map((g) => {
+      const vs = new Set(g.p.map((x) => x.tm)).size > 1;
+      const tag = vs ? h('span', { class: 'lg-tag vs' }, '¡Se enfrentan!')
+        : g.p.length > 1 ? h('span', { class: 'lg-tag duo' }, g.p.length === 2 ? 'En dúo' : `${g.p.length} juntos`) : null;
+      return h('div', { class: `live-game ${vs ? 'vs' : ''}` },
+        h('div', { class: 'lg-top' }, h('b', {}, QUEUE_ES[g.q] ?? 'Partida'), h('span', { class: 'muted' }, '·'), liveMinutes(g.s), tag),
+        h('div', { class: 'lg-players' }, g.p.map((x) => {
+          const p = byName.get(x.n);
+          return h('div', { class: `lg-p ${vs ? (x.tm === 100 ? 'blue' : 'red') : ''}` },
+            x.c ? champIcon(x.c, 36) : p ? avatar(p, 36) : null,
+            h('div', { class: 'lg-who' }, h('b', {}, x.n), h('small', {}, x.c ?? (p ? rankName(p.rank) : ''))));
+        })));
+    })));
+}
+
+// ---------------------------------------------------------------- tilt (aviso en el ranking)
+const TILT_K = 10;
+const shrink = (w, n, p0) => (w + TILT_K * p0) / (n + TILT_K);
+// Punto de parada: el primer nº de derrotas seguidas tras el que su winrate cae claramente (≥ 4 puntos)
+function tiltRule(t, wrPct) {
+  if (!t?.prev) return null;
+  const p0 = (wrPct ?? 50) / 100;
+  for (let k = 1; k <= 4; k++) {
+    const [w, n] = t.prev[3 + k] ?? [0, 0];
+    if (n >= 12 && shrink(w, n, p0) <= p0 - 0.04) return { k, w, n, wr: (w / n) * 100 };
+  }
+  return null;
+}
+// Hoy lleva tantas derrotas seguidas como su punto de parada (3 si no tiene uno claro) y sigue en sesión
+function tiltNow(p) {
+  const rec = p.main?.recent ?? [];
+  if (!rec.length || Date.now() - rec[0].t > 90 * 60e3) return null;
+  let n = 0;
+  for (let i = 0; i < rec.length; i++) {
+    const g = rec[i];
+    if (g.win) break;
+    if (i > 0 && rec[i - 1].t - (rec[i - 1].dur ?? 0) * 1000 - g.t > 40 * 60e3) break; // de otra sesión
+    n++;
+  }
+  const stop = tiltRule(p.s?.tilt, p.s?.winrate)?.k ?? 3;
+  return n >= stop ? `${n} derrotas seguidas: a partir de ${stop} su winrate suele caer. Igual toca parar` : null;
+}
+
+// ---------------------------------------------------------------- novedades
+function evParts(e) {
+  const i = (e.text ?? '').indexOf(' ');
+  return i > 0 ? [e.text.slice(0, i), e.text.slice(i + 1)] : ['•', e.text ?? ''];
+}
+function evSub(e) {
+  switch (e.type) {
+    case 'up': case 'down': return `viene de ${e.from}${e.lp != null ? ` · ${e.lp} LP` : ''}${e.peak ? ' · su mejor elo registrado' : ''}`;
+    case 'penta': case 'quadra': case 'record': return `${e.champ} · ${e.k}/${e.d}/${e.a} · ${e.win ? 'victoria' : 'derrota'}`;
+    case 'challengeStart': case 'challengeEnd': return (e.desc ?? '').split('\n')[0];
+    default: return '';
+  }
+}
+const evTime = (t) => new Date(t).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: TZ });
+
+function eventItem(e, byName) {
+  const [ico, txt] = evParts(e);
+  const p = byName.get(e.name);
+  const open = e.gameId ? () => openMatchModal(e.gameId, txt, p?.main?.riotId) : null;
+  return h(open ? 'button' : 'div', { class: `ev ev-${e.type}`, onclick: open, title: open ? 'Ver la partida' : null },
+    h('span', { class: 'ev-ico', 'aria-hidden': 'true' }, ico),
+    h('div', { class: 'ev-main' }, h('b', {}, txt), h('small', {}, [evTime(e.t), evSub(e)].filter(Boolean).join(' · '))),
+    open ? h('span', { class: 'ev-go' }, 'Ver →') : p ? avatar(p, 28) : null);
+}
+
+function renderEvents() {
+  const box = document.getElementById('events');
+  const list = DATA.events ?? [];
+  if (!list.length) {
+    box.replaceChildren(h('p', { class: 'empty' }, 'Todavía no hay novedades. Aquí saldrán las subidas y bajadas, los pentas, las rachas y los récords en cuanto pasen.'));
+    return;
+  }
+  const byName = new Map(MODEL.map((p) => [p.name, p]));
+  const today = dayKey(Date.now()), yest = dayKey(Date.now() - 864e5);
+  const groups = new Map();
+  for (const e of list.slice(0, 30)) {
+    const k = dayKey(e.t);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(e);
+  }
+  box.replaceChildren(...[...groups].map(([k, evs]) => h('div', { class: 'ev-day' },
+    h('h4', { class: 'ev-date' }, k === today ? 'Hoy' : k === yest ? 'Ayer' : prettyDay(k)),
+    ...evs.map((e) => eventItem(e, byName)))));
+}
+
+// Aviso arriba con lo de las últimas 12 h (se puede cerrar; no vuelve a salir en este navegador)
+function renderBanner() {
+  const box = document.getElementById('banner');
+  let seen = 0;
+  try { seen = Number(localStorage.getItem('sq-banner-seen')) || 0; } catch { /* sin almacenamiento */ }
+  const fresh = (DATA.events ?? []).filter((e) => Date.now() - e.t < 12 * 3600e3 && e.t > seen);
+  if (!fresh.length) { box.hidden = true; return; }
+  const [ico, txt] = evParts(fresh[0]);
+  box.hidden = false;
+  box.replaceChildren(
+    h('span', { class: 'bn-ico', 'aria-hidden': 'true' }, ico),
+    h('a', { href: '#novedades', class: 'bn-txt' }, h('b', {}, txt),
+      h('small', {}, ` · ${ago(fresh[0].t)}${fresh.length > 1 ? ` · y ${fresh.length - 1} más` : ''}`)),
+    h('button', {
+      class: 'bn-x', 'aria-label': 'Cerrar aviso',
+      onclick: () => { try { localStorage.setItem('sq-banner-seen', String(fresh[0].t)); } catch { /* nada */ } box.hidden = true; },
+    }, '×'));
+}
+
+// ---------------------------------------------------------------- la semana
+let weekTab = 'current';
+let WEEKS = null; // archivo de semanas (data/weeks.json), se carga al abrir "Historial"
+
+const weekEnd = (w) => w.to ?? Math.min(Date.now(), w.from + 7 * 864e5);
+const weekSorted = (w) => [...w.players].sort((a, b) => (b.games ? 1 : 0) - (a.games ? 1 : 0) || (b.lp ?? -1e9) - (a.lp ?? -1e9) || b.games - a.games);
+
+function weekText(w) {
+  const pl = new Map(w.players.map((x) => [x.name, x]));
+  const act = weekSorted(w).filter((x) => x.games);
+  const idle = w.players.filter((x) => !x.games).map((x) => x.name);
+  const L = [
+    `📊 *SoloQ Crew · semana ${rangeLabel(w.from, weekEnd(w))}*${w.to ? '' : ' (en curso)'}`,
+    `${w.totals.games} partidas · ${Math.round(pct(w.totals.wins, w.totals.games))} % de victorias · ${fmt(w.totals.hours)} h`,
+    '',
+    ...act.map((x, i) => `${i + 1}. *${x.name}* ${x.lp == null ? '¿?' : signed(x.lp)} LP (${x.wins}V ${x.losses}D)`),
+  ];
+  if (idle.length) L.push(`_No jugaron: ${idle.join(', ')}_`);
+  L.push('');
+  if (w.mvp) L.push(`🏆 MVP: ${w.mvp}`);
+  if (w.worst) L.push(`📉 Peor semana: ${w.worst} (${signed(pl.get(w.worst).lp)} LP)`);
+  if (w.grinder) L.push(`🎮 Más viciado: ${w.grinder} (${pl.get(w.grinder).games} partidas)`);
+  if (w.hot) L.push(`🔥 Mejor racha: ${w.hot.name} (${w.hot.n} seguidas)`);
+  if (w.cold) L.push(`💀 Peor racha: ${w.cold.name} (${w.cold.n} seguidas)`);
+  if (w.duo) L.push(`🤝 Dúo de la semana: ${w.duo.a} & ${w.duo.b} (${w.duo.wins}V ${w.duo.games - w.duo.wins}D)`);
+  if (w.gotw) L.push(`⭐ Partida de la semana: ${w.gotw.name}, ${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`);
+  for (const g of w.pentas ?? []) L.push(`🖐️ Pentakill de ${g.name} con ${g.champ}`);
+  L.push('', `${SITE_URL}#semana`);
+  return L.join('\n');
+}
+
+function roundRect(x, X, Y, W, H, r) {
+  x.beginPath();
+  x.moveTo(X + r, Y); x.arcTo(X + W, Y, X + W, Y + H, r); x.arcTo(X + W, Y + H, X, Y + H, r);
+  x.arcTo(X, Y + H, X, Y, r); x.arcTo(X, Y, X + W, Y, r); x.closePath();
+}
+
+// Imagen para compartir (1080 px de ancho, sin imágenes externas)
+async function weekImage(w) {
+  const rows = weekSorted(w);
+  const hl = [];
+  const pl = new Map(w.players.map((x) => [x.name, x]));
+  if (w.mvp) hl.push(['🏆 MVP', w.mvp, `${signed(pl.get(w.mvp).lp)} LP`]);
+  if (w.grinder) hl.push(['🎮 Más viciado', w.grinder, `${pl.get(w.grinder).games} partidas`]);
+  if (w.hot) hl.push(['🔥 Mejor racha', w.hot.name, `${w.hot.n} victorias`]);
+  if (w.cold) hl.push(['💀 Peor racha', w.cold.name, `${w.cold.n} derrotas`]);
+  if (w.duo) hl.push(['🤝 Dúo', `${w.duo.a} & ${w.duo.b}`, `${w.duo.wins}V ${w.duo.games - w.duo.wins}D`]);
+  if (w.gotw) hl.push(['⭐ Partida', w.gotw.name, `${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`]);
+  const W = 1080, RH = 78, H = 330 + rows.length * (RH + 10) + Math.ceil(hl.length / 2) * 130 + 120;
+  const c = document.createElement('canvas');
+  c.width = W; c.height = H;
+  const x = c.getContext('2d');
+  try { await document.fonts?.ready; } catch { /* fuentes del sistema */ }
+  const F = (wt, size, it = '') => `${it} ${wt} ${size}px Archivo, system-ui, sans-serif`;
+  x.fillStyle = '#0a0a0b'; x.fillRect(0, 0, W, H);
+  const glow = x.createRadialGradient(W / 2, -120, 40, W / 2, -120, 760);
+  glow.addColorStop(0, 'rgba(214,255,61,.20)'); glow.addColorStop(1, 'rgba(214,255,61,0)');
+  x.fillStyle = glow; x.fillRect(0, 0, W, H);
+  x.fillStyle = '#d6ff3d'; roundRect(x, 60, 56, 70, 70, 18); x.fill();
+  x.fillStyle = '#0a0a0b'; x.font = F(900, 32, 'italic'); x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('SQ', 95, 92);
+  x.textAlign = 'left'; x.fillStyle = '#f4f4f5'; x.font = F(900, 30); x.fillText('SOLOQ', 150, 92);
+  x.fillStyle = '#d6ff3d'; x.fillText('CREW', 150 + x.measureText('SOLOQ ').width, 92);
+  x.fillStyle = '#f4f4f5'; x.font = F(900, 86, 'italic'); x.textBaseline = 'alphabetic'; x.fillText('LA SEMANA', 56, 228);
+  x.fillStyle = '#a9a9b2'; x.font = F(600, 30);
+  x.fillText(`${rangeLabel(w.from, weekEnd(w))}${w.to ? '' : ' (en curso)'} · ${w.totals.games} partidas · ${Math.round(pct(w.totals.wins, w.totals.games))} % victorias`, 60, 282);
+  let y = 320;
+  rows.forEach((r, i) => {
+    x.fillStyle = i === 0 && r.games ? 'rgba(214,255,61,.10)' : '#151517'; roundRect(x, 56, y, W - 112, RH, 16); x.fill();
+    x.fillStyle = r.games ? '#d6ff3d' : '#55555d'; x.font = F(900, 34, 'italic'); x.textBaseline = 'middle';
+    x.fillText(r.games ? String(i + 1) : '–', 84, y + RH / 2);
+    x.fillStyle = r.games ? '#f4f4f5' : '#6a6a73'; x.font = F(800, 34); x.fillText(r.name, 140, y + RH / 2);
+    x.textAlign = 'right';
+    if (r.games) {
+      x.fillStyle = r.lp > 0 ? '#33d69a' : r.lp < 0 ? '#f2657e' : '#cfcfd6'; x.font = F(900, 38);
+      x.fillText(r.lp == null ? '¿?' : `${signed(r.lp)} LP`, W - 84, y + RH / 2 - 2);
+      x.fillStyle = '#8e8e97'; x.font = F(600, 24); x.fillText(`${r.wins}V ${r.losses}D`, W - 300, y + RH / 2);
+    } else { x.fillStyle = '#6a6a73'; x.font = F(600, 26); x.fillText('no jugó', W - 84, y + RH / 2); }
+    x.textAlign = 'left';
+    y += RH + 10;
+  });
+  y += 20;
+  hl.forEach(([label, who, val], i) => {
+    const col = i % 2, X = 56 + col * ((W - 112) / 2 + 8), Y = y + Math.floor(i / 2) * 130;
+    x.fillStyle = '#151517'; roundRect(x, X, Y, (W - 112) / 2 - 8, 118, 16); x.fill();
+    x.textBaseline = 'alphabetic';
+    x.fillStyle = '#d6ff3d'; x.font = F(800, 24); x.fillText(label.toUpperCase(), X + 24, Y + 38);
+    x.fillStyle = '#f4f4f5'; x.font = F(900, 30); x.fillText(who.length > 24 ? `${who.slice(0, 23)}…` : who, X + 24, Y + 76);
+    x.fillStyle = '#a9a9b2'; x.font = F(600, 24); x.fillText(val, X + 24, Y + 106);
+  });
+  x.fillStyle = '#6a6a73'; x.font = F(600, 24); x.textAlign = 'center';
+  x.fillText(SITE_URL.replace('https://', ''), W / 2, H - 40);
+  return new Promise((res) => c.toBlob(res, 'image/png'));
+}
+
+async function shareWeek(w, btn) {
+  const old = btn.textContent;
+  btn.textContent = 'Generando…';
+  try {
+    const blob = await weekImage(w);
+    const file = new File([blob], `soloq-crew-${w.key}.png`, { type: 'image/png' });
+    if (navigator.canShare?.({ files: [file] })) {
+      try { await navigator.share({ files: [file], title: 'SoloQ Crew · la semana' }); return; } catch (e) { if (e.name === 'AbortError') return; }
+    }
+    const a = h('a', { href: URL.createObjectURL(blob), download: file.name });
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  } finally { btn.textContent = old; }
+}
+
+async function copyText(text, btn, done = '¡Copiado!') {
+  const old = btn.textContent;
+  try { await navigator.clipboard.writeText(text); btn.textContent = done; } catch {
+    // Sin permiso de portapapeles: se muestra para copiarlo a mano
+    openModal('Copiar', h('textarea', { class: 'copy-area', readonly: true, rows: 14 }, text));
+    return;
+  }
+  setTimeout(() => { btn.textContent = old; }, 1600);
+}
+
+function weekHighlights(w, byName) {
+  const P = (n) => byName.get(n);
+  const pl = new Map(w.players.map((x) => [x.name, x]));
+  const card = (ico, label, name, value, extra, onclick) => h(onclick ? 'button' : 'div', { class: `wk-hl ${onclick ? 'click' : ''}`, onclick },
+    h('span', { class: 'wk-lbl' }, h('span', { 'aria-hidden': 'true' }, ico), ` ${label}`),
+    h('div', { class: 'wk-who' }, name && P(name) ? avatar(P(name), 26) : null, h('b', {}, name ?? '–')),
+    h('span', { class: 'wk-val' }, value, extra ? h('small', {}, ` · ${extra}`) : null));
+  const out = [];
+  if (w.mvp) { const x = pl.get(w.mvp); out.push(card('🏆', 'MVP', w.mvp, `${signed(x.lp)} LP`, `${x.wins}V ${x.losses}D`)); }
+  if (w.worst) { const x = pl.get(w.worst); out.push(card('📉', 'Peor semana', w.worst, `${signed(x.lp)} LP`, `${x.wins}V ${x.losses}D`)); }
+  if (w.grinder) { const x = pl.get(w.grinder); out.push(card('🎮', 'Más viciado', w.grinder, `${x.games} partidas`, `${fmt(x.hours)} h`)); }
+  if (w.hot) out.push(card('🔥', 'Mejor racha', w.hot.name, `${w.hot.n} victorias seguidas`));
+  if (w.cold) out.push(card('💀', 'Peor racha', w.cold.name, `${w.cold.n} derrotas seguidas`));
+  if (w.duo) {
+    out.push(h('div', { class: 'wk-hl' }, h('span', { class: 'wk-lbl' }, '🤝 Dúo de la semana'),
+      h('div', { class: 'wk-who' }, h('span', { class: 'duo-avs sm' }, P(w.duo.a) ? avatar(P(w.duo.a), 24) : null, P(w.duo.b) ? avatar(P(w.duo.b), 24) : null), h('b', {}, `${w.duo.a} & ${w.duo.b}`)),
+      h('span', { class: 'wk-val' }, `${w.duo.games} partidas`, h('small', {}, ` · ${w.duo.wins}V ${w.duo.games - w.duo.wins}D`))));
+  }
+  if (w.gotw) out.push(card('⭐', 'Partida de la semana', w.gotw.name, `${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`, 'ver →', () => openMatchModal(w.gotw.id, `Partida de la semana · ${w.gotw.name}`, P(w.gotw.name)?.main?.riotId)));
+  for (const g of w.pentas ?? []) out.push(card('🖐️', 'Pentakill', g.name, `${g.champ} ${g.k}/${g.d}/${g.a}`, 'ver →', () => openMatchModal(g.id, `Pentakill · ${g.name}`, P(g.name)?.main?.riotId)));
+  return out;
+}
+
+function weekTable(w, byName) {
+  return h('div', { class: 'wk-table' },
+    h('div', { class: 'wk-row wk-th' }, h('span', {}, '#'), h('span', {}, 'Jugador'), h('span', {}, 'LP'), h('span', { class: 'wk-wl' }, 'V / D'),
+      h('span', { class: 'wk-h' }, 'Horas'), h('span', { class: 'wk-k' }, 'KDA')),
+    weekSorted(w).map((x, i) => {
+      const p = byName.get(x.name);
+      const idle = !x.games;
+      return h('div', { class: `wk-row ${idle ? 'idle' : ''}` },
+        h('span', { class: 'lb-pos' }, idle ? '–' : i + 1),
+        h('span', { class: 'wk-name' }, p ? avatar(p, 28) : null, h('b', {}, x.name)),
+        h('b', { class: `wk-lp ${x.lp > 0 ? 'pos' : x.lp < 0 ? 'neg' : 'muted'}`, title: x.start != null && x.end != null ? `${scoreLabel(x.start)} → ${scoreLabel(x.end)}` : '' },
+          idle ? 'no jugó' : x.lp == null ? '¿?' : `${signed(x.lp)} LP`),
+        h('span', { class: 'wk-wl' }, idle ? null : winBar(x.wins, x.losses)),
+        h('span', { class: 'wk-h' }, idle ? '' : `${fmt(x.hours)} h`),
+        h('span', { class: 'wk-k' }, idle ? '' : fmt((x.k + x.a) / Math.max(1, x.d), 2)));
+    }));
+}
+
+function weekView(w, byName) {
+  const stale = !w.to && w.key !== weekKeyOf(Date.now());
+  if (stale) return [h('p', { class: 'empty' }, 'Esta semana todavía no ha jugado nadie.')];
+  const copyBtn = h('button', { class: 'ghost-btn', onclick: () => copyText(weekText(w), copyBtn) }, '📋 Copiar resumen');
+  const imgBtn = h('button', { class: 'ghost-btn', onclick: () => shareWeek(w, imgBtn) }, '🖼️ Compartir imagen');
+  return [
+    h('div', { class: 'wk-head' },
+      h('div', {}, h('b', { class: 'wk-range' }, rangeLabel(w.from, weekEnd(w))), w.to ? null : h('span', { class: 'chip chip-w wk-live' }, 'en curso'),
+        h('span', { class: 'muted' }, ` · ${w.totals.games} partidas · ${Math.round(pct(w.totals.wins, w.totals.games))} % de victorias · ${fmt(w.totals.hours)} h jugadas`)),
+      h('div', { class: 'wk-actions' }, copyBtn, imgBtn)),
+    w.totals.games ? h('div', { class: 'wk-hls' }, weekHighlights(w, byName)) : null,
+    weekTable(w, byName),
+    h('p', { class: 'muted small center' }, 'LP: diferencia entre el elo registrado al empezar y al acabar la semana (pasa el ratón para verlo). "¿?": sin registro de LP.'),
+  ];
+}
+
+async function weekArchiveView(byName) {
+  if (!WEEKS) {
+    try {
+      const r = await fetch(`data/weeks.json?t=${Math.floor(Date.now() / 6e5)}`);
+      WEEKS = r.ok ? (await r.json()).weeks ?? [] : [];
+    } catch { WEEKS = []; }
+  }
+  if (!WEEKS.length) return [h('p', { class: 'empty' }, 'Todavía no hay semanas cerradas.')];
+  const wins = Object.entries(DATA.weekWins ?? {}).sort((a, b) => b[1] - a[1]);
+  return [
+    wins.length ? h('div', { class: 'wk-wins' }, h('span', { class: 'lbl' }, 'Semanas ganadas (MVP)'),
+      ...wins.map(([n, c]) => h('span', { class: 'wk-win' }, byName.get(n) ? avatar(byName.get(n), 24) : null, h('b', {}, n), h('span', { class: 'chip chip-w' }, `×${c}`)))) : null,
+    h('div', { class: 'wk-arch' }, WEEKS.map((w) => {
+      const top = weekSorted(w).filter((x) => x.games).slice(0, 3);
+      const open = () => { weekTab = 'w:' + w.key; renderWeek(); };
+      return h('button', { class: 'wk-card', onclick: open },
+        h('div', { class: 'wk-card-top' }, h('b', {}, rangeLabel(w.from, w.to)), h('small', { class: 'muted' }, `${w.totals.games} partidas`)),
+        w.mvp ? h('div', { class: 'wk-card-mvp' }, byName.get(w.mvp) ? avatar(byName.get(w.mvp), 30) : null,
+          h('div', {}, h('small', {}, '🏆 MVP'), h('b', {}, w.mvp))) : h('div', { class: 'muted small' }, 'Sin MVP'),
+        h('ol', { class: 'wk-card-top3' }, top.map((x) => h('li', {}, h('span', {}, x.name), h('b', { class: x.lp > 0 ? 'pos' : x.lp < 0 ? 'neg' : '' }, x.lp == null ? '¿?' : signed(x.lp))))));
+    })),
+  ];
+}
+
+async function renderWeek() {
+  const box = document.getElementById('week');
+  const byName = new Map(MODEL.map((p) => [p.name, p]));
+  for (const b of document.querySelectorAll('#week-tabs button')) b.classList.toggle('on', b.dataset.week === (weekTab.startsWith('w:') ? 'archive' : weekTab));
+  if (weekTab === 'archive') { box.replaceChildren(...(await weekArchiveView(byName))); return; }
+  let w = weekTab === 'current' ? DATA.week?.current : weekTab === 'last' ? DATA.week?.last : null;
+  if (weekTab.startsWith('w:')) w = (WEEKS ?? []).find((x) => x.key === weekTab.slice(2)) ?? null;
+  if (!w) { box.replaceChildren(h('p', { class: 'empty' }, 'Todavía no hay datos de esta semana.')); return; }
+  const back = weekTab.startsWith('w:') ? h('button', { class: 'ghost-btn wk-back', onclick: () => { weekTab = 'archive'; renderWeek(); } }, '← Volver al historial') : null;
+  box.replaceChildren(...[back, ...weekView(w, byName)].filter(Boolean));
+}
+
+// ---------------------------------------------------------------- retos
+const CH_TYPE = { race: 'Carrera de LP', target: 'Llegar a un rango', handicap: 'Con hándicap', games: 'Constancia' };
+const daysTxt = (ms) => { const d = Math.ceil(ms / 864e5); return d <= 1 ? 'mañana' : `en ${d} días`; };
+function challengeState(c) {
+  const now = Date.now();
+  if (now < c.from) return { cls: 'soon', label: `Empieza ${daysTxt(c.from - now)}` };
+  if (now < c.to) {
+    const d = Math.ceil((c.to - now) / 864e5);
+    return { cls: 'on', label: d <= 1 ? 'Último día' : `En juego · quedan ${d} días` };
+  }
+  return { cls: 'done', label: 'Terminado' };
+}
+
+function challengeCard(c, byName) {
+  const st = challengeState(c);
+  const finished = st.cls === 'done';
+  const maxAbs = Math.max(1, ...c.standings.map((s) => Math.abs(s.value ?? 0)));
+  const goal = c.type === 'target' && c.target ? `Meta: ${c.target}` : c.type === 'games' ? `Mínimo ${c.perWeek} partidas por semana` : c.type === 'handicap' ? 'Cada uno con su objetivo de LP' : 'Gana quien más LP sume';
+  const rows = c.standings.map((s, i) => {
+    let bar;
+    if (c.type === 'race') {
+      const w = (Math.abs(s.value) / maxAbs) * 50;
+      bar = h('div', { class: 'ch-div' }, h('i', { class: s.value >= 0 ? 'up' : 'down', style: s.value >= 0 ? `left:50%;width:${w}%` : `right:50%;width:${w}%` }));
+    } else if (c.type === 'games') {
+      bar = h('div', { class: 'ch-weeks' }, (s.weeks ?? []).map((n, wi) => h('i', {
+        class: n >= c.perWeek ? 'ok' : wi === s.weeks.length - 1 && !finished ? 'cur' : 'ko',
+        title: `Semana ${wi + 1}: ${n} partidas`,
+      }, n)));
+    } else {
+      bar = h('div', { class: 'ch-prog' }, h('i', { class: s.done ? 'done' : '', style: `width:${Math.min(100, (s.value ?? 0) * 100)}%` }));
+    }
+    const winner = finished && c.winners?.includes(s.name);
+    const p = byName.get(s.name);
+    return h('div', { class: `ch-row ${winner ? 'win' : ''}` },
+      h('span', { class: 'lb-pos' }, winner ? '🏆' : i + 1),
+      h('span', { class: 'ch-name' }, p ? avatar(p, 26) : null, h('b', {}, s.name)),
+      bar,
+      h('b', { class: `ch-val ${c.type === 'race' ? (s.value > 0 ? 'pos' : s.value < 0 ? 'neg' : '') : s.done ? 'pos' : ''}` }, s.label));
+  });
+  return h('article', { class: `ch panel ch-${st.cls}` },
+    h('div', { class: 'ch-head' },
+      h('div', {}, h('span', { class: 'ch-type' }, CH_TYPE[c.type] ?? c.type), h('h3', { class: 'ch-title' }, c.title),
+        h('span', { class: 'muted small' }, `${rangeLabel(c.from, c.to)} · ${goal}`)),
+      h('span', { class: `ch-state ${st.cls}` }, st.label)),
+    c.desc ? h('p', { class: 'ch-desc' }, c.desc) : null,
+    c.stake ? h('p', { class: 'ch-stake' }, '🎲 En juego: ', h('b', {}, c.stake)) : null,
+    finished && c.winners?.length ? h('p', { class: 'ch-winner' }, `🏆 ${c.winners.join(' y ')} gana${c.winners.length > 1 ? 'n' : ''} el reto`) : null,
+    st.cls === 'soon' ? h('div', { class: 'ch-soon' },
+      h('span', { class: 'muted small' }, 'Participan:'),
+      h('div', { class: 'ch-parts' }, c.standings.map((s) => h('span', { class: 'ch-part' }, byName.get(s.name) ? avatar(byName.get(s.name), 22) : null, s.name))),
+      h('span', { class: 'muted small' }, 'Cuando empiece, aquí saldrá la clasificación en directo.'))
+      : h('div', { class: 'ch-rows' }, rows));
+}
+
+function renderChallenges() {
+  const box = document.getElementById('challenges');
+  const list = DATA.challenges ?? [];
+  const byName = new Map(MODEL.map((p) => [p.name, p]));
+  const help = h('div', { class: 'ch-help' },
+    h('b', {}, '¿Queréis montar un reto? '), 'Decidle a xALOzZ cuál y se añade: ',
+    h('span', {}, 'carrera de LP entre dos fechas, llegar a un rango antes de un día, hándicap (cada uno con su objetivo) o constancia (mínimo de partidas por semana)'),
+    ', con lo que haya en juego.');
+  if (!list.length) { box.replaceChildren(h('p', { class: 'empty' }, 'No hay retos todavía.'), help); return; }
+  const order = { on: 0, soon: 1, done: 2 };
+  const sorted = [...list].sort((a, b) => order[challengeState(a).cls] - order[challengeState(b).cls] || b.to - a.to);
+  box.replaceChildren(...sorted.map((c) => challengeCard(c, byName)), help);
+}
+
+// ---------------------------------------------------------------- flex y clash
+function renderFlex() {
+  const box = document.getElementById('flex-box');
+  const f = DATA.flex;
+  const byName = new Map(MODEL.map((p) => [p.name, p]));
+  if (!f || (!f.players?.length && !f.lineups?.length && !f.clash?.length)) {
+    box.replaceChildren(h('p', { class: 'empty' }, 'Todavía no hay partidas de Flex ni de Clash esta temporada. En cuanto juguéis, aparecerán aquí vuestro rango de Flex y las alineaciones que más ganan.'));
+    return;
+  }
+  const ranks = [...(f.players ?? [])].sort((a, b) => rankScore(b.rank) - rankScore(a.rank) || b.games - a.games);
+  const lineups = [...(f.lineups ?? [])].sort((a, b) => b.n - a.n || b.wr - a.wr);
+  const best = lineups.filter((l) => l.n >= 5).reduce((m, l) => (!m || adjWr(l.w, l.n, 3) > adjWr(m.w, m.n, 3) ? l : m), null);
+  const avs = (names, size = 26) => h('span', { class: 'duo-avs sm' }, names.map((n) => (byName.get(n) ? avatar(byName.get(n), size) : null)));
+  const gameRow = (g) => h('button', { class: `fx-game ${g.win ? 'win' : 'loss'}`, onclick: () => openMatchModal(g.id, `${QUEUE_ES[g.q] ?? 'Partida'} · ${g.members.map((m) => m.name).join(', ')}`, byName.get(g.members[0]?.name)?.main?.riotId) },
+    h('b', { class: g.win ? 'pos' : 'neg' }, g.win ? 'Victoria' : 'Derrota'),
+    h('span', { class: 'muted' }, `${shortDate(g.t)} · ${mmss(g.dur ?? 0)}`),
+    h('span', { class: 'fx-members' }, g.members.map((m) => h('span', { class: 'fx-m', title: `${m.name} · ${m.champ} ${m.k}/${m.d}/${m.a}` }, champIcon(m.champ, 26), h('small', {}, m.name)))));
+  box.replaceChildren(
+    ranks.length ? h('div', { class: 'fx-ranks' }, ranks.map((x) => {
+      const p = byName.get(x.name);
+      return h('div', { class: 'fx-rank' },
+        p ? avatar(p, 34) : null,
+        h('div', { class: 'fx-who' }, h('b', {}, x.name), h('small', { class: 'muted' }, `${x.games} partida${x.games === 1 ? '' : 's'} de Flex${x.clash ? ` · ${x.clash} de Clash` : ''}`)),
+        crest(x.rank, 34),
+        h('div', { class: 'fx-elo' }, h('b', { class: `t-${tierKey(x.rank)}` }, rankName(x.rank)),
+          x.rank ? h('small', {}, `${x.rank.lp} LP · ${x.rank.wins}V ${x.rank.losses}D`) : h('small', { class: 'muted' }, 'sin clasificar')));
+    })) : null,
+    h('h3', { class: 'aw-sub' }, 'Alineaciones'),
+    lineups.length ? h('div', { class: 'fx-lineups' }, lineups.map((l) => h('div', { class: `fx-line ${l === best ? 'best' : ''}` },
+      avs(l.names),
+      h('div', { class: 'fx-line-names' }, h('b', {}, l.names.join(' · ')),
+        h('small', { class: 'muted' }, [l.flex ? `${l.flex} de Flex` : null, l.clash ? `${l.clash} de Clash` : null, `última: ${shortDate(l.last)}`].filter(Boolean).join(' · '))),
+      l === best ? h('span', { class: 'duo-tag syn' }, 'La que más gana') : h('span'),
+      h('div', { class: 'fx-line-wr' }, winBar(l.w, l.n - l.w)))))
+      : h('p', { class: 'empty' }, 'Aún no habéis jugado Flex o Clash juntos.'),
+    f.recent?.length ? h('h3', { class: 'aw-sub' }, 'Últimas partidas de Flex en grupo') : null,
+    f.recent?.length ? h('div', { class: 'fx-games' }, f.recent.slice(0, 10).map(gameRow)) : null,
+    f.clash?.length ? h('h3', { class: 'aw-sub' }, 'Clash') : null,
+    f.clash?.length ? h('div', { class: 'fx-games' }, f.clash.slice(0, 15).map(gameRow)) : null);
+}
+
+// ---------------------------------------------------------------- tilt y horarios
+let tiltWho = 'Grupo';
+const DOW_ES = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+const BANDS = ['0–4 h', '4–8 h', '8–12 h', '12–16 h', '16–20 h', '20–24 h'];
+const SESSION_L = ['1ª', '2ª', '3ª', '4ª', '5ª', '6ª+'];
+const PREV_L = ['3+ V', '2 V', '1 V', '1ª', '1 D', '2 D', '3 D', '4+ D'];
+const HOURS_L = ['< 1 h', '1–2 h', '2–3 h', '3 h +'];
+
+function tiltData(name) {
+  const rows = MODEL.filter((p) => p.s?.tilt);
+  const pick = name === 'Grupo' ? rows : rows.filter((p) => p.name === name);
+  if (!pick.length) return null;
+  const sum = (key) => pick[0].s.tilt[key].map((_, i) => pick.reduce((acc, p) => {
+    const c = p.s.tilt[key][i] ?? [0, 0];
+    return [acc[0] + c[0], acc[1] + c[1]];
+  }, [0, 0]));
+  const t = { hour: sum('hour'), dow: sum('dow'), grid: sum('grid'), session: sum('session'), prev: sum('prev'), hoursIn: sum('hoursIn') };
+  const w = t.dow.reduce((s, c) => s + c[0], 0), n = t.dow.reduce((s, c) => s + c[1], 0);
+  return { t, p0: n ? w / n : 0.5, n, sessions: pick.reduce((s, p) => s + (p.s.tilt.sessions ?? 0), 0) };
+}
+
+const wrColor = (d) => {
+  const a = Math.min(0.85, Math.abs(d) * 6);
+  return d >= 0 ? `rgba(51, 214, 154, ${a})` : `rgba(242, 101, 126, ${a})`;
+};
+
+function wrBars(title, sub, cells, labels, p0) {
+  return h('div', { class: 'tl-card' }, h('h4', { class: 'tl-title' }, title), sub ? h('p', { class: 'tl-sub' }, sub) : null,
+    h('div', { class: 'wrbars', style: `--cols:${cells.length}` }, cells.map(([w, n], i) => {
+      const raw = n ? w / n : null;
+      const d = n ? shrink(w, n, p0) - p0 : 0;
+      const hgt = raw == null ? 0 : Math.max(3, Math.min(100, ((raw - 0.25) / 0.5) * 100));
+      return h('div', { class: `wb ${n < 10 ? 'low' : ''}`, title: n ? `${labels[i]}: ${w}V ${n - w}D (${fmt(raw * 100, 1)} %)` : `${labels[i]}: sin partidas` },
+        h('span', { class: `wb-v ${d > 0.015 ? 'pos' : d < -0.015 ? 'neg' : ''}` }, raw == null ? '–' : `${Math.round(raw * 100)}%`),
+        h('div', { class: 'wb-track' }, h('i', { class: 'wb-50' }), h('i', { class: 'wb-bar', style: `height:${hgt}%;background:${n < 10 ? '#3a3a41' : d >= 0 ? 'var(--win)' : 'var(--loss)'};opacity:${n < 10 ? 1 : 0.45 + Math.min(0.55, Math.abs(d) * 6)}` })),
+        h('span', { class: 'wb-l' }, labels[i]),
+        h('span', { class: 'wb-n' }, `${n}`));
+    })));
+}
+
+function renderTilt() {
+  const who = document.getElementById('tilt-who');
+  const box = document.getElementById('tilt-box');
+  const rows = MODEL.filter((p) => p.s?.tilt);
+  if (!rows.length) { who.replaceChildren(); box.replaceChildren(h('p', { class: 'empty' }, 'Todavía no hay partidas suficientes.')); return; }
+  if (tiltWho !== 'Grupo' && !rows.some((p) => p.name === tiltWho)) tiltWho = 'Grupo';
+  who.replaceChildren(...['Grupo', ...rows.map((p) => p.name)].map((n) => h('button', {
+    class: `ge-chip ${n === tiltWho ? 'on' : ''}`, style: '--c: var(--accent)', 'aria-pressed': n === tiltWho,
+    onclick: () => { tiltWho = n; renderTilt(); },
+  }, h('i'), n === 'Grupo' ? 'Todo el grupo' : n)));
+  const D = tiltData(tiltWho);
+  const { t, p0 } = D;
+
+  // Mejor y peor momento (día × franja con al menos 15 partidas)
+  const cells = t.grid.map(([w, n], i) => ({ i, w, n, adj: n ? shrink(w, n, p0) : p0 })).filter((c) => c.n >= 15);
+  const bestC = cells.length ? cells.reduce((m, c) => (c.adj > m.adj ? c : m)) : null;
+  const worstC = cells.length ? cells.reduce((m, c) => (c.adj < m.adj ? c : m)) : null;
+  const cellName = (c) => `${DOW_ES[Math.floor(c.i / 6)].toLowerCase()} de ${BANDS[c.i % 6].replace(' h', '')} h`;
+  const player = MODEL.find((p) => p.name === tiltWho);
+  const rule = tiltWho === 'Grupo' ? tiltRule({ prev: t.prev }, p0 * 100) : tiltRule(player?.s?.tilt, player?.s?.winrate);
+  const [fw, fn] = t.session[0];
+  const afterW = [t.prev[0], t.prev[1]].reduce((a, c) => [a[0] + c[0], a[1] + c[1]], [0, 0]);
+  const tips = [];
+  if (rule) tips.push(['🧊', `Tras ${rule.k} derrota${rule.k > 1 ? 's' : ''} seguida${rule.k > 1 ? 's' : ''} ${tiltWho === 'Grupo' ? 'ganáis' : 'ganas'} el ${fmt(rule.wr, 0)} % (${rule.n} partidas). ${tiltWho === 'Grupo' ? 'Ese es vuestro punto para parar.' : 'Ese es tu punto para parar.'}`]);
+  else tips.push(['😌', 'No se ve un bajón claro después de perder: las derrotas seguidas no afectan más de lo normal.']);
+  if (afterW[1] >= 20 && shrink(afterW[0], afterW[1], p0) >= p0 + 0.03) tips.push(['🔥', `Con 2 o más victorias seguidas, el winrate sube al ${fmt(pct(afterW[0], afterW[1]), 0)} %: si vas en racha, sigue.`]);
+  if (fn >= 20) tips.push(['☕', `En la primera partida de cada sesión: ${fmt(pct(fw, fn), 0)} % (${fn} sesiones).`]);
+  if (bestC) tips.push(['📈', `Mejor momento: ${cellName(bestC)} (${fmt(pct(bestC.w, bestC.n), 0)} % en ${bestC.n} partidas).`]);
+  if (worstC && worstC !== bestC) tips.push(['📉', `Peor momento: ${cellName(worstC)} (${fmt(pct(worstC.w, worstC.n), 0)} % en ${worstC.n} partidas).`]);
+
+  const heat = h('div', { class: 'tl-card tl-heat' },
+    h('h4', { class: 'tl-title' }, 'Winrate por día y hora'),
+    h('p', { class: 'tl-sub' }, 'Hora de inicio de la partida (Madrid) · verde: mejor que la media, rojo: peor · las casillas con pocas partidas salen apagadas'),
+    h('div', { class: 'heat' },
+      h('span'), ...BANDS.map((b) => h('span', { class: 'heat-h' }, b)),
+      ...DOW_ES.flatMap((d, di) => [h('span', { class: 'heat-d' }, d.slice(0, 3)), ...BANDS.map((b, bi) => {
+        const [w, n] = t.grid[di * 6 + bi];
+        const d0 = n ? shrink(w, n, p0) - p0 : 0;
+        return h('span', { class: `heat-c ${n < 10 ? 'low' : ''}`, style: n >= 10 ? `background:${wrColor(d0)}` : '', title: n ? `${d} ${b}: ${w}V ${n - w}D (${fmt(pct(w, n), 1)} %)` : `${d} ${b}: sin partidas` },
+          n ? h('b', {}, `${Math.round(pct(w, n))}%`) : '·', n ? h('small', {}, n) : null);
+      })])));
+
+  box.replaceChildren(
+    h('div', { class: 'tl-card tl-rules' },
+      h('h4', { class: 'tl-title' }, tiltWho === 'Grupo' ? 'Lo que dicen vuestros datos' : `Lo que dicen los datos de ${tiltWho}`),
+      h('p', { class: 'tl-sub' }, `${fmtInt(D.n)} partidas en ${fmtInt(D.sessions)} sesiones · winrate medio ${fmt(p0 * 100, 1)} %`),
+      h('ul', { class: 'tl-tips' }, tips.map(([i, txt]) => h('li', {}, h('span', { 'aria-hidden': 'true' }, i), h('span', {}, txt))))),
+    heat,
+    wrBars('Según cómo venías', 'Resultado de la partida anterior en la misma sesión (V: victorias seguidas, D: derrotas seguidas)', t.prev, PREV_L, p0),
+    wrBars('Según la partida de la sesión', 'Primera, segunda, tercera… partida desde que empezaste a jugar', t.session, SESSION_L, p0),
+    wrBars('Según las horas seguidas jugando', 'Tiempo desde el inicio de la sesión', t.hoursIn, HOURS_L, p0),
+    wrBars('Por día de la semana', null, t.dow, DOW_ES.map((d) => d.slice(0, 3)), p0));
+}
+
+// ---------------------------------------------------------------- campeones del grupo
+let champsShowAll = false;
+function renderChampsGroup() {
+  const box = document.getElementById('champs-box');
+  const rows = MODEL.filter((p) => p.s?.champs?.length);
+  if (!rows.length) { box.replaceChildren(h('p', { class: 'empty' }, 'Sin datos todavía.')); return; }
+
+  // Dueño de cada campeón: el que mejor lo juega (winrate ajustado, mín. 5 partidas)
+  const byChamp = new Map();
+  for (const p of rows) {
+    for (const c of p.s.champs) {
+      const e = byChamp.get(c.key) ?? { key: c.key, total: 0, players: [] };
+      e.total += c.games;
+      e.players.push({ p, c });
+      byChamp.set(c.key, e);
+    }
+  }
+  const owned = [...byChamp.values()].map((e) => {
+    const cands = e.players.filter((x) => x.c.games >= 5);
+    const owner = cands.length ? cands.reduce((m, x) => (adjWr(x.c.wins, x.c.games, 3) > adjWr(m.c.wins, m.c.games, 3) ? x : m)) : null;
+    return { ...e, owner };
+  }).filter((e) => e.owner).sort((a, b) => b.total - a.total);
+  const shown = champsShowAll ? owned : owned.slice(0, 24);
+  const tiles = shown.map((e) => {
+    const others = e.players.filter((x) => x !== e.owner).sort((a, b) => b.c.games - a.c.games)
+      .map((x) => `${x.p.name}: ${fmt(x.c.winrate, 0)} % en ${x.c.games}`).join('\n');
+    return h('div', { class: 'own', title: `${e.key} · ${e.total} partidas en el grupo\n${e.owner.p.name}: ${fmt(e.owner.c.winrate, 0)} % en ${e.owner.c.games}${others ? `\n${others}` : ''}` },
+      h('div', { class: 'own-ic' }, champIcon(e.key, 52), h('span', { class: 'own-av' }, avatar(e.owner.p, 22))),
+      h('b', {}, e.key),
+      h('small', {}, h('span', { class: e.owner.c.winrate >= 50 ? 'pos' : 'neg' }, `${fmt(e.owner.c.winrate, 0)} %`), ` · ${e.owner.c.games}p · ${e.owner.p.name}`));
+  });
+
+  // Pool de cada uno
+  const pool = rows.map((p) => {
+    const cs = p.s.champs;
+    const total = cs.reduce((s, c) => s + c.games, 0);
+    const top3 = cs.slice(0, 3).reduce((s, c) => s + c.games, 0);
+    return { p, n: cs.length, used: cs.filter((c) => c.games >= 5).length, top3: total ? (top3 / total) * 100 : 0, top: cs[0], total };
+  }).sort((a, b) => b.top3 - a.top3);
+
+  // Némesis: rival directo de línea contra el que peor (y mejor) le va
+  const vsList = (p) => Object.entries(p.s.vs ?? {}).map(([champ, [n, w]]) => ({ champ, n, w, adj: adjWr(w, n, 3) }));
+  const nem = rows.map((p) => {
+    const l = vsList(p).filter((x) => x.n >= 4);
+    const worst = l.length ? l.reduce((m, x) => (x.adj < m.adj ? x : m)) : null;
+    const best = l.length ? l.reduce((m, x) => (x.adj > m.adj ? x : m)) : null;
+    return { p, worst, best };
+  });
+  const groupVs = new Map();
+  for (const p of rows) {
+    for (const x of vsList(p)) {
+      const e = groupVs.get(x.champ) ?? { champ: x.champ, n: 0, w: 0 };
+      e.n += x.n; e.w += x.w;
+      groupVs.set(x.champ, e);
+    }
+  }
+  const gWorst = [...groupVs.values()].filter((e) => e.n >= 10).sort((a, b) => adjWr(a.w, a.n, 5) - adjWr(b.w, b.n, 5)).slice(0, 8);
+  const vsTxt = (x) => `${x.w}V ${x.n - x.w}D · ${fmt(pct(x.w, x.n), 0)} %`;
+
+  box.replaceChildren(
+    h('h3', { class: 'aw-sub' }, 'El dueño de cada campeón'),
+    h('p', { class: 'muted small' }, 'Quién lo juega mejor del grupo (winrate ajustado, mínimo 5 partidas) · pasa el ratón para ver al resto'),
+    h('div', { class: 'owns' }, tiles),
+    owned.length > 24 ? h('div', { class: 'center' }, h('button', { class: 'ghost-btn', onclick: () => { champsShowAll = !champsShowAll; renderChampsGroup(); } }, champsShowAll ? 'Ver menos ↑' : `Ver los ${owned.length} →`)) : null,
+    h('h3', { class: 'aw-sub' }, 'El pool de cada uno'),
+    h('div', { class: 'pool' }, pool.map((x) => h('div', { class: 'pool-row' },
+      avatar(x.p, 28), h('b', { class: 'pool-name' }, x.p.name),
+      h('span', { class: 'pool-n', title: 'Campeones distintos esta temporada (con 5 o más partidas)' }, h('b', {}, x.n), ` campeones · ${x.used} con 5+ partidas`),
+      h('div', { class: 'pool-bar', title: `El ${fmt(x.top3, 0)} % de sus partidas son con sus 3 más jugados` },
+        h('i', { style: `width:${x.top3}%` }), h('span', {}, `${fmt(x.top3, 0)} % con su top 3`)),
+      x.top ? h('span', { class: 'pool-top' }, champIcon(x.top.key, 26), h('small', {}, `${x.top.games}p`)) : null))),
+    h('h3', { class: 'aw-sub' }, 'Némesis y presas'),
+    h('p', { class: 'muted small' }, 'Contra el rival directo de línea · mínimo 4 partidas · el que más te gana es buen candidato a ban'),
+    h('div', { class: 'nems' }, nem.map(({ p, worst, best }) => h('div', { class: 'nem' },
+      h('div', { class: 'nem-who' }, avatar(p, 28), h('b', {}, p.name)),
+      h('div', { class: 'nem-pair' },
+        worst ? h('div', { class: 'nem-c bad', title: 'Buen candidato a ban' }, champIcon(worst.champ, 34), h('div', {}, h('small', {}, 'Te gana'), h('b', {}, worst.champ), h('span', {}, vsTxt(worst)))) : h('span', { class: 'muted small' }, 'Pocos datos'),
+        best && best !== worst ? h('div', { class: 'nem-c good' }, champIcon(best.champ, 34), h('div', {}, h('small', {}, 'Le ganas'), h('b', {}, best.champ), h('span', {}, vsTxt(best)))) : null)))),
+    gWorst.length ? h('h3', { class: 'aw-sub' }, 'Los que más os ganan') : null,
+    gWorst.length ? h('div', { class: 'gnem' }, gWorst.map((e) => h('div', { class: 'gnem-c', title: `Contra ${e.champ} en vuestra línea: ${e.w}V ${e.n - e.w}D` },
+      champIcon(e.champ, 40), h('b', {}, e.champ), h('span', { class: pct(e.w, e.n) < 50 ? 'neg' : 'pos' }, `${fmt(pct(e.w, e.n), 0)} %`), h('small', { class: 'muted' }, `${e.n} partidas`)))) : null);
+}
+
+// ---------------------------------------------------------------- comparador
+const CMP_STATS = [
+  ['Winrate', (p) => p.rank?.winrate, (v) => `${fmt(v, 1)}%`],
+  ['KDA', (p) => p.s?.kda, (v) => fmt(v, 2)],
+  ['Kills / partida', (p) => p.s?.avgK, (v) => fmt(v, 1)],
+  ['Muertes / partida', (p) => p.s?.avgD, (v) => fmt(v, 1), 'low'],
+  ['Asistencias / partida', (p) => p.s?.avgA, (v) => fmt(v, 1)],
+  ['Participación en kills', (p) => p.s?.avgKp, (v) => `${v}%`],
+  ['CS / min', (p) => p.s?.csPerMin, (v) => fmt(v, 1)],
+  ['Daño / min', (p) => p.s?.dmgPerMin, (v) => fmtInt(v)],
+  ['% del daño del equipo', (p) => p.s?.dmgShare, (v) => `${fmt(v, 1)}%`],
+  ['Visión / min', (p) => p.s?.visPerMin, (v) => fmt(v, 2)],
+  ['Oro @15 vs rival', (p) => p.s?.gold?.avgGd15, (v) => goldK(v)],
+  ['First bloods', (p) => p.s?.firstBloods, (v) => v],
+  ['Pentakills', (p) => p.s?.pentas, (v) => v],
+  ['LP por victoria', (p) => p.s?.lp?.win, (v) => `+${v}`],
+  ['LP por derrota', (p) => p.s?.lp?.loss, (v) => `${v}`],
+  ['1ª partida del día', (p) => (p.s?.firstOfDay?.games >= 10 ? p.s.firstOfDay.winrate : null), (v) => `${fmt(v, 0)}%`],
+  ['Mejor racha', (p) => p.s?.streak?.bestWin, (v) => `${v}V`],
+  ['Peor racha', (p) => p.s?.streak?.worstLoss, (v) => `${v}D`, 'low'],
+  ['Partidas de la temporada', (p) => p.wins + p.losses, (v) => fmtInt(v), 'none'],
+];
+const CMP_COLORS = ['#3987e5', '#d95926'];
+
+function pairEloChart(A, B) {
+  const box = h('div', { class: 'chart cmp-chart' });
+  const series = [A, B].map((p, i) => {
+    const { est, real } = eloSeries(p.main);
+    const pts = [...est.map((x) => [x[0], x[1], 1]), ...real.map((x) => [x[0], x[1], 0])].sort((a, b) => a[0] - b[0]);
+    if (p.score >= 0) pts.push([Date.now(), p.score, 0]);
+    return { p, pts, color: CMP_COLORS[i] };
+  });
+  requestAnimationFrame(() => {
+    const W = Math.max(300, box.clientWidth), H = 220, L = 58, R = 12, T = 12, Bm = 24;
+    const now = Date.now(), t0 = now - 30 * 864e5;
+    const vis = series.map((s) => {
+      const before = s.pts.filter((q) => q[0] <= t0).at(-1);
+      return { ...s, pts: [...(before ? [[t0, before[1], before[2]]] : []), ...s.pts.filter((q) => q[0] > t0)] };
+    }).filter((s) => s.pts.length);
+    if (!vis.length) { box.replaceChildren(h('p', { class: 'empty' }, 'Sin datos de elo.')); return; }
+    let lo = Math.min(...vis.flatMap((s) => s.pts.map((q) => q[1]))), hi = Math.max(...vis.flatMap((s) => s.pts.map((q) => q[1])));
+    lo = Math.max(0, Math.floor((lo - 20) / 100) * 100); hi = Math.ceil((hi + 20) / 100) * 100;
+    const x = (t) => L + ((t - t0) / (now - t0)) * (W - L - R);
+    const y = (v) => T + (1 - (v - lo) / Math.max(1, hi - lo)) * (H - T - Bm);
+    const els = [];
+    const step = hi - lo > 900 ? 400 : hi - lo > 300 ? 200 : 100;
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+      els.push(svg('line', { x1: L, x2: W - R, y1: y(v), y2: y(v), class: 'grid' }));
+      els.push(svg('text', { x: L - 6, y: y(v) + 4, class: 'axis', 'text-anchor': 'end' }, v >= 2800 ? `M ${v - 2800}` : `${TIER_ES[TIERS[Math.floor(v / 400)]].slice(0, 3)} ${DIVS[Math.floor((v % 400) / 100)]}`));
+    }
+    for (let k = 0; k < 4; k++) {
+      const t = t0 + ((now - t0) * k) / 3;
+      els.push(svg('text', { x: x(t), y: H - 6, class: 'axis', 'text-anchor': k === 0 ? 'start' : k === 3 ? 'end' : 'middle' }, prettyDay(dayKey(t))));
+    }
+    for (const s of vis) {
+      const d = s.pts.map((q, i) => `${i ? 'L' : 'M'}${x(q[0]).toFixed(1)},${y(q[1]).toFixed(1)}`).join('');
+      els.push(svg('path', { d, fill: 'none', stroke: s.color, 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
+      const last = s.pts.at(-1);
+      els.push(svg('circle', { cx: x(last[0]), cy: y(last[1]), r: 4, fill: s.color }));
+    }
+    box.replaceChildren(svg('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': 'Elo de los dos en los últimos 30 días' }, ...els));
+  });
+  return box;
+}
+
+function compareView(A, B) {
+  let sa = 0, sb = 0;
+  const rows = CMP_STATS.map(([label, get, f, mode]) => {
+    const a = get(A), b = get(B);
+    if (a == null && b == null) return null;
+    let win = 0;
+    if (mode !== 'none' && a != null && b != null && a !== b) win = (mode === 'low' ? a < b : a > b) ? -1 : 1;
+    if (win < 0) sa++; else if (win > 0) sb++;
+    // Barras: el que gana, entera; el otro, en proporción (a media si hay valores negativos)
+    const share = (x, y) => (x == null || (!x && !y) ? 0 : Math.abs(x) / Math.max(Math.abs(x), Math.abs(y ?? 0)));
+    let wa = share(a, b), wb = share(b, a);
+    if (win) {
+      const lo = Math.min(a, b), hi = Math.max(a, b);
+      const loser = lo < 0 || hi <= 0 ? 0.5 : lo / hi;
+      wa = win < 0 ? 1 : loser;
+      wb = win > 0 ? 1 : loser;
+    }
+    return h('div', { class: 'cmp-row' },
+      h('b', { class: `cmp-v ${win < 0 ? 'win' : ''}` }, a == null ? '–' : f(a)),
+      h('div', { class: 'cmp-bar l' }, h('i', { style: `width:${wa * 100}%;background:${CMP_COLORS[0]};opacity:${win < 0 ? 1 : 0.45}` })),
+      h('span', { class: 'cmp-l' }, label),
+      h('div', { class: 'cmp-bar r' }, h('i', { style: `width:${wb * 100}%;background:${CMP_COLORS[1]};opacity:${win > 0 ? 1 : 0.45}` })),
+      h('b', { class: `cmp-v ${win > 0 ? 'win' : ''}` }, b == null ? '–' : f(b)));
+  }).filter(Boolean);
+  const diff = A.score >= 0 && B.score >= 0 ? A.score - B.score : null;
+  const lead = diff == null ? '' : diff === 0 ? 'Empatados en elo' : `${diff > 0 ? A.name : B.name} va ${Math.abs(diff)} LP por encima`;
+  const side = (p, i) => h('div', { class: `cmp-side s${i}` }, avatar(p, 54, 'big'), h('b', {}, p.name),
+    h('span', { class: 'cmp-rank' }, crest(p.rank, 26), h('span', { class: `t-${tierKey(p.rank)}` }, rankName(p.rank)), p.rank ? h('small', {}, ` ${p.rank.lp} LP`) : null),
+    h('span', { class: 'cmp-score' }, `${i ? sb : sa}`));
+  // Roles
+  const ROLES = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY'];
+  const roleBar = (p) => {
+    const br = p.s?.byRole ?? {};
+    const counts = ROLES.map((r) => br[r]?.games ?? 0);
+    const shares = pct100(counts);
+    return h('div', { class: 'cmp-roles' }, h('b', {}, p.name),
+      h('div', { class: 'rs-bar' }, ROLES.map((r, i) => (counts[i] ? h('i', { style: `flex:${counts[i]};background:${ROLE_COLOR[r]}`, title: `${ROLE_ES[r]}: ${shares[i]}%` }) : null))),
+      h('div', { class: 'cmp-role-l' }, ROLES.map((r, i) => (shares[i] >= 8 ? h('span', {}, roleIcon(r), `${shares[i]}%`) : null))));
+  };
+  // Campeones en común
+  const ca = new Map((A.s?.champs ?? []).map((c) => [c.key, c])), cb = new Map((B.s?.champs ?? []).map((c) => [c.key, c]));
+  const common = [...ca.keys()].filter((k) => cb.has(k) && ca.get(k).games >= 3 && cb.get(k).games >= 3)
+    .sort((x, y) => ca.get(y).games + cb.get(y).games - ca.get(x).games - cb.get(x).games).slice(0, 8);
+  // Juntos y en contra
+  const duo = (DATA.duos ?? []).find((d) => (d.a === A.name && d.b === B.name) || (d.a === B.name && d.b === A.name));
+  const riv = (DATA.rivals ?? []).find((d) => (d.a === A.name && d.b === B.name) || (d.a === B.name && d.b === A.name));
+  const rivTxt = riv ? (riv.a === A.name ? `${riv.aWins}–${riv.bWins}` : `${riv.bWins}–${riv.aWins}`) : null;
+  return [
+    h('div', { class: 'cmp-top' }, side(A, 0), h('div', { class: 'cmp-mid' }, h('b', { class: 'cmp-vs' }, 'VS'), h('small', {}, lead),
+      h('small', { class: 'muted' }, `${sa} a ${sb} en estadísticas`)), side(B, 1)),
+    h('div', { class: 'cmp-h2h' },
+      duo ? h('span', {}, '🤝 Juntos: ', h('b', {}, `${plural(duo.games, 'partida')} · ${duo.wins}V ${duo.losses}D (${fmt(duo.wr, 0)} %)`)) : h('span', { class: 'muted' }, '🤝 No han jugado juntos esta temporada'),
+      rivTxt ? h('span', {}, '⚔️ Cara a cara: ', h('b', {}, rivTxt)) : null),
+    h('div', { class: 'cmp-rows' }, rows),
+    h('h4', { class: 'sx-h' }, 'Elo en los últimos 30 días'),
+    h('div', { class: 'cmp-legend' }, [A, B].map((p, i) => h('span', {}, h('i', { style: `background:${CMP_COLORS[i]}` }), p.name))),
+    pairEloChart(A, B),
+    h('h4', { class: 'sx-h' }, 'Roles'),
+    h('div', { class: 'cmp-roles-wrap' }, roleBar(A), roleBar(B)),
+    common.length ? h('h4', { class: 'sx-h' }, 'Campeones que juegan los dos') : null,
+    common.length ? h('div', { class: 'cmp-champs' }, common.map((k) => {
+      const a = ca.get(k), b = cb.get(k);
+      return h('div', { class: 'cmp-ch' },
+        h('span', { class: a.winrate >= b.winrate ? 'pos' : '' }, `${fmt(a.winrate, 0)}%`, h('small', {}, ` (${a.games})`)),
+        champIcon(k, 34),
+        h('span', { class: b.winrate > a.winrate ? 'pos' : '' }, `${fmt(b.winrate, 0)}%`, h('small', {}, ` (${b.games})`)));
+    })) : null,
+  ];
+}
+
+function openCompare(aName, bName) {
+  if (!MODEL.length) return;
+  const players = [...MODEL].sort(SORTERS.rank);
+  let A = MODEL.find((p) => p.name === aName) ?? players[0];
+  let B = MODEL.find((p) => p.name === bName && p !== A) ?? players.find((p) => p !== A);
+  const body = h('div', { class: 'cmp' });
+  const sel = (cur, onChange) => h('select', { class: 'cmp-sel', onchange: (e) => onChange(MODEL.find((p) => p.name === e.target.value)) },
+    players.map((p) => h('option', { value: p.name, selected: p === cur }, p.name)));
+  let selA, selB;
+  const draw = () => {
+    history.replaceState(null, '', `#vs/${encodeURIComponent(A.name)}/${encodeURIComponent(B.name)}`);
+    selA.value = A.name; selB.value = B.name;
+    body.replaceChildren(...compareView(A, B).filter(Boolean));
+  };
+  selA = sel(A, (p) => { if (p === B) B = A; A = p; draw(); });
+  selB = sel(B, (p) => { if (p === A) A = B; B = p; draw(); });
+  const linkBtn = h('button', { class: 'ghost-btn', onclick: () => copyText(location.href, linkBtn, '¡Enlace copiado!') }, '🔗 Copiar enlace');
+  const bar = h('div', { class: 'cmp-bar-top' }, selA, h('button', { class: 'cmp-swap', title: 'Intercambiar', onclick: () => { [A, B] = [B, A]; draw(); } }, '⇄'), selB, linkBtn);
+  openModal('Comparar jugadores', h('div', { class: 'cmp-wrap' }, bar, body), { wide: true, head: h('b', {}, '⚖ Comparar jugadores') });
+  draw();
+}
+
+// ---------------------------------------------------------------- menú "Más", instalar la app y enlaces directos
+let installEvt = null;
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvt = e; });
+
+function installApp() {
+  if (installEvt) {
+    installEvt.prompt();
+    installEvt.userChoice.finally(() => { installEvt = null; });
+    return;
+  }
+  const P = (...c) => h('p', {}, ...c);
+  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  openModal('Instalar la app', h('div', { class: 'info-body' },
+    standalone ? P('Ya la estás usando como app 👌')
+      : ios ? [P('En el iPhone se instala desde Safari:'), h('ol', {}, h('li', {}, 'Pulsa el botón ', h('b', {}, 'Compartir'), ' (el cuadrado con la flecha).'),
+        h('li', {}, 'Elige ', h('b', {}, 'Añadir a pantalla de inicio'), '.'), h('li', {}, 'Pulsa ', h('b', {}, 'Añadir'), '.'))]
+      : [P('En Android, abre el menú del navegador (⋮) y pulsa ', h('b', {}, 'Instalar aplicación'), ' o ', h('b', {}, 'Añadir a pantalla de inicio'), '.'),
+        P('En el ordenador (Chrome o Edge), usa el icono de instalar de la barra de direcciones.')],
+    P(h('span', { class: 'muted' }, 'Se abre a pantalla completa, con el icono de SoloQ Crew, y si no hay conexión enseña los últimos datos.'))));
+}
+
+function wireMore() {
+  const btn = document.getElementById('more-btn');
+  const menu = document.getElementById('more-menu');
+  const close = () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); };
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+    btn.setAttribute('aria-expanded', String(!menu.hidden));
+  });
+  document.addEventListener('click', (e) => { if (!menu.hidden && !menu.contains(e.target)) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  menu.addEventListener('click', (e) => {
+    const el = e.target.closest('a,button');
+    if (!el) return;
+    if (el.dataset.action === 'compare') openCompare();
+    if (el.dataset.action === 'install') installApp();
+    close();
+  });
+}
+
+// #partida/<id> abre una partida (enlaces de Discord) · #vs/<a>/<b> abre el comparador
+function handleHash() {
+  let hash = location.hash;
+  try { hash = decodeURIComponent(hash); } catch { /* tal cual */ }
+  let m;
+  if ((m = hash.match(/^#partida\/(.+)$/))) {
+    const id = m[1];
+    const e = (DATA.events ?? []).find((x) => x.gameId === id);
+    const p = e ? MODEL.find((q) => q.name === e.name) : MODEL.find((q) => (q.main?.recent ?? []).some((g) => g.id === id));
+    openMatchModal(id, e ? evParts(e)[1] : 'Partida', p?.main?.riotId);
+  } else if ((m = hash.match(/^#vs\/([^/]+)\/(.+)$/))) {
+    if (!document.querySelector('.cmp')) openCompare(m[1], m[2]);
+  }
+}
+
 // ---------------------------------------------------------------- render
 let MODEL = [];
 
 function renderRows() {
+  applyPeriod(MODEL);
+  const label = `LP ${PERIODS[period].short}`;
+  document.getElementById('th-period').textContent = label;
+  document.getElementById('sort-period').textContent = label;
   const q = query.trim().toLowerCase();
   const list = [...MODEL].sort(SORTERS[sortKey])
     .filter((p) => !q || p.name.toLowerCase().includes(q) || p.accounts.some((a) => a.riotId.toLowerCase().includes(q)));
@@ -1360,8 +2313,11 @@ function renderRows() {
 }
 
 function renderMeta() {
+  if (!DATA) return;
   const ago = timeAgo(DATA.generatedAt);
-  document.getElementById('updated').textContent = `Actualizado ${ago}`;
+  const checked = STATUS?.at && !STATUS.err ? timeAgo(new Date(STATUS.at).toISOString()) : null;
+  document.getElementById('updated').textContent = checked ? `Comprobado ${checked}` : `Actualizado ${ago}`;
+  document.getElementById('refresh').title = `Última novedad en los datos: ${ago}${checked ? ` · comprobado ${checked}` : ''} · se recarga sola cada minuto`;
   document.getElementById('meta-updated').textContent = ago.replace('hace ', '');
   const games = MODEL.reduce((n, p) => n + p.totalGames, 0);
   const wins = MODEL.reduce((n, p) => n + p.accounts.reduce((m, a) => m + (a.rank?.wins ?? 0), 0), 0);
@@ -1384,6 +2340,10 @@ function render() {
   renderAwards(MODEL);
   renderDays(MODEL);
   renderRecords(MODEL);
+  // Cada sección nueva va aparte: si una falla, el resto de la web se sigue viendo
+  for (const fn of [renderLive, renderBanner, renderEvents, renderWeek, renderChallenges, renderFlex, renderTilt, renderChampsGroup]) {
+    try { fn(); } catch (err) { console.error(fn.name, err); }
+  }
 }
 
 function wire() {
@@ -1395,6 +2355,24 @@ function wire() {
     renderRows();
   });
   document.getElementById('search').addEventListener('input', (e) => { query = e.target.value; renderRows(); });
+  document.getElementById('period').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-period]');
+    if (!b) return;
+    period = b.dataset.period;
+    for (const x of e.currentTarget.children) x.classList.toggle('on', x === b);
+    sortKey = 'period';
+    for (const x of document.getElementById('sort').children) x.classList.toggle('on', x.dataset.sort === 'period');
+    renderRows();
+  });
+  document.getElementById('compare-btn').addEventListener('click', () => openCompare());
+  document.getElementById('week-tabs').addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-week]');
+    if (!b) return;
+    weekTab = b.dataset.week;
+    renderWeek();
+  });
+  wireMore();
+  setInterval(tickLive, 30_000);
   document.getElementById('best5-info').addEventListener('click', best5Info);
   document.getElementById('ge-range').addEventListener('click', (e) => {
     const b = e.target.closest('button[data-days]');
@@ -1420,12 +2398,16 @@ function wire() {
     for (const x of e.currentTarget.children) x.classList.toggle('on', x === b);
     renderDays(MODEL);
   });
-  // Enlace activo del menú según la sección visible
+  // Enlace activo del menú según la sección visible (las del menú "Más" marcan el botón "Más")
   const links = [...document.querySelectorAll('.nav-links a')];
+  const moreIds = new Set([...document.querySelectorAll('#more-menu a')].map((a) => a.getAttribute('href')));
+  const moreBtn = document.getElementById('more-btn');
   const io = new IntersectionObserver((entries) => {
     for (const en of entries) {
       if (!en.isIntersecting) continue;
-      links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${en.target.id}`));
+      const id = `#${en.target.id}`;
+      links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === id));
+      moreBtn.classList.toggle('active', moreIds.has(id));
     }
   }, { rootMargin: '-45% 0px -50% 0px' });
   document.querySelectorAll('main section[id]').forEach((s) => io.observe(s));
@@ -1445,6 +2427,7 @@ async function refreshData(manual = false) {
       const fresh = await res.json();
       if (!DATA || fresh.generatedAt !== DATA.generatedAt) {
         DATA = fresh;
+        WEEKS = null;
         detailCache.clear();
         render();
       } else renderMeta();
@@ -1454,31 +2437,54 @@ async function refreshData(manual = false) {
   refreshing = false;
 }
 
-// Indicador de si el actualizador automático (GitHub Actions) está encendido
+// Estado del actualizador automático. Cada minuto deja un "latido" en la rama heartbeat;
+// el mensaje del latido lleva el resultado de la pasada: si Riot respondió, si la clave vale y quién está jugando.
 async function checkLive() {
   const el = document.getElementById('live');
-  if (!el) return;
+  if (!el || document.hidden) return;
   const set = (cls, text, title) => { el.className = `live ${cls}`; el.querySelector('span').textContent = text; el.title = title; };
+  const prevLive = JSON.stringify(LIVE);
   try {
-    // El actualizador hace un "latido" cada minuto en la rama heartbeat
     const r = await fetch('https://api.github.com/repos/xalozz/soloq-crew/commits/heartbeat', { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
-    const t = new Date((await r.json()).commit.committer.date).getTime();
-    const mins = Math.round((Date.now() - t) / 60000);
-    if (mins <= 4) set('on', 'En directo', `Último latido hace ${mins <= 0 ? 'menos de 1' : mins} min: mira el rango de todos cada minuto`);
-    else set('off', 'Parado', `Sin latido desde hace ${mins} min. Se relanza solo; si dura mucho, avisa`);
+    const j = await r.json();
+    const beat = new Date(j.commit.committer.date).getTime();
+    const msg = j.commit.message ?? '';
+    const i = msg.indexOf('\n\n');
+    let st = null;
+    if (i >= 0) { try { st = JSON.parse(msg.slice(i + 2).trim()); } catch { st = null; } }
+    STATUS = { ...(st ?? {}), beat };
+    const mins = Math.round((Date.now() - beat) / 60000);
+    const fresh = mins <= 4;
+    LIVE = fresh && Array.isArray(st?.live) ? st.live : [];
+    const checked = st?.at ? Math.round((Date.now() - st.at) / 60000) : mins;
+    const agoMin = (m) => (m <= 0 ? 'hace menos de 1 min' : `hace ${m} min`);
+    if (!fresh) set('off', 'Parado', `Sin latido desde hace ${mins} min. Se relanza solo; si dura mucho, avisa`);
+    else if (st?.err === 'key') set('off', 'Clave caducada', 'Riot rechaza la clave de la API: los datos no se actualizan hasta renovarla (secreto RIOT_API_KEY en GitHub)');
+    else if (st?.err) set('warn', 'Riot no responde', `La última comprobación falló${st.msg ? ` (${st.msg})` : ''}. Se reintenta cada minuto`);
+    else if (st?.at && checked > 10) set('warn', 'Con retraso', `La última comprobación correcta fue ${agoMin(checked)}`);
+    else {
+      set('on', 'En directo', `Comprobado ${agoMin(checked)} · última novedad ${DATA ? timeAgo(DATA.generatedAt) : '–'}`
+        + `${st?.accErr?.length ? ` · sin actualizar: ${st.accErr.join(', ')}` : ''}`);
+    }
   } catch {
     set('unk', 'Estado ?', 'No se ha podido comprobar el estado (pulsa para verlo en GitHub)');
   }
+  renderMeta();
+  if (JSON.stringify(LIVE) !== prevLive && MODEL.length) { renderLive(); renderRows(); }
 }
 
 async function init() {
   wire();
-  checkLive();
-  setInterval(checkLive, 3 * 60_000);
-  document.getElementById('refresh').addEventListener('click', () => refreshData(true));
+  // App instalable y con los últimos datos sin conexión
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+  setInterval(checkLive, 2 * 60_000);
+  document.getElementById('refresh').addEventListener('click', () => { refreshData(true); checkLive(); });
   setInterval(() => refreshData(false), 60_000);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshData(false); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) { refreshData(false); checkLive(); } });
+  window.addEventListener('hashchange', () => DATA && handleHash());
   try {
     const res = await fetch(`data/data.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(res.status);
@@ -1488,6 +2494,8 @@ async function init() {
     return;
   }
   render();
+  checkLive();
+  handleHash();
 }
 
 init();

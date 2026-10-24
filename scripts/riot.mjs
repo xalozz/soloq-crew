@@ -22,17 +22,20 @@ export class RiotError extends Error {
 
 export class Riot {
   // minIntervalMs: 1250 respeta 100 peticiones / 2 min (límite de claves dev/personal).
-  constructor(apiKey, { minIntervalMs = 1250 } = {}) {
+  constructor(apiKey, { minIntervalMs = 1250, baseUrl = process.env.RIOT_API_BASE } = {}) {
     if (!apiKey) throw new Error('Falta RIOT_API_KEY');
     this.apiKey = apiKey;
     this.minIntervalMs = minIntervalMs;
+    this.baseUrl = baseUrl || null; // solo para pruebas: http://127.0.0.1:PUERTO
     this.lastCall = 0;
     this.calls = 0;
+    this.matchCache = new Map(); // una partida de dos amigos se descarga una sola vez por ejecución
   }
 
   async get(host, path, params = {}) {
     const qs = new URLSearchParams(params).toString();
-    const url = `https://${host}.api.riotgames.com${path}${qs ? `?${qs}` : ''}`;
+    const base = this.baseUrl ? `${this.baseUrl}/${host}` : `https://${host}.api.riotgames.com`;
+    const url = `${base}${path}${qs ? `?${qs}` : ''}`;
 
     for (let attempt = 0; attempt < 5; attempt++) {
       const wait = this.lastCall + this.minIntervalMs - Date.now();
@@ -86,10 +89,24 @@ export class Riot {
     return this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/by-puuid/${puuid}/ids`, params);
   }
   match(platform, id) {
-    return this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/${id}`);
+    if (!this.matchCache.has(id)) {
+      const p = this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/${id}`);
+      p.catch(() => this.matchCache.delete(id)); // si falla, que se pueda reintentar
+      this.matchCache.set(id, p);
+    }
+    return this.matchCache.get(id);
   }
   timeline(platform, id) {
     return this.get(PLATFORM_TO_MATCH_REGION[platform], `/lol/match/v5/matches/${id}/timeline`);
+  }
+  // Partida en curso (Spectator-V5). null si no está jugando.
+  async activeGame(platform, puuid) {
+    try {
+      return await this.get(platform, `/lol/spectator/v5/active-games/by-summoner/${puuid}`);
+    } catch (err) {
+      if (err instanceof RiotError && err.status === 404) return null;
+      throw err;
+    }
   }
 }
 
@@ -142,6 +159,7 @@ export function compactMatch(match, puuid, dd, timeline) {
   return {
     v: MATCH_RECORD_VERSION,
     id: match.metadata.matchId,
+    q: info.queueId ?? null,
     t: info.gameEndTimestamp ?? (info.gameStartTimestamp + info.gameDuration * 1000),
     dur: info.gameDuration,
     win: !!me.win,

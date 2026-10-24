@@ -177,7 +177,67 @@ export function computeAccountStats(history) {
     byRole: roleBreakdown(history),
     awards: awardStats(history),
     gameRecords: gameRecords(history),
+    tilt: tiltStats(history),
+    vs: vsChamps(history),
   };
+}
+
+// ---------------------------------------------------------------- tilt y horarios
+// Hora y día de la semana (hora de Madrid) del inicio de cada partida.
+const WEEKDAY = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+const madridHW = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Madrid', hour: 'numeric', hourCycle: 'h23', weekday: 'short' });
+function hourDow(t) {
+  let hh = 0, wd = 0;
+  for (const p of madridHW.formatToParts(new Date(t))) {
+    if (p.type === 'hour') hh = Number(p.value) % 24;
+    else if (p.type === 'weekday') wd = WEEKDAY[p.value] ?? 0;
+  }
+  return [hh, wd];
+}
+
+export const SESSION_GAP_MS = 40 * 60e3; // más de 40 min sin jugar = sesión nueva
+
+// Cada casilla es [victorias, partidas].
+//  hour[24]   por hora de inicio · dow[7] por día (lunes = 0) · grid[7×6] día × franja de 4 h
+//  session[6] por número de partida dentro de la sesión (6 = sexta o más)
+//  prev[8]    según cómo venía en esa sesión: tras 3+V, 2V, 1V · 1ª de la sesión · tras 1D, 2D, 3D, 4+D
+//  hoursIn[4] según cuánto llevaba jugando seguido: <1 h, 1-2 h, 2-3 h, 3 h o más
+function tiltStats(history) {
+  if (history.length < 10) return null;
+  const asc = [...history].sort((a, b) => a.t - b.t);
+  const z = (n) => Array.from({ length: n }, () => [0, 0]);
+  const out = { hour: z(24), dow: z(7), grid: z(42), session: z(6), prev: z(8), hoursIn: z(4), sessions: 0 };
+  const add = (cell, win) => { if (win) cell[0]++; cell[1]++; };
+  let prevEnd = -Infinity, sessStart = 0, idx = 0, runW = 0, runL = 0;
+  for (const g of asc) {
+    const start = g.t - (g.dur || 0) * 1000;
+    if (start - prevEnd > SESSION_GAP_MS) { out.sessions++; sessStart = start; idx = 0; runW = 0; runL = 0; }
+    idx++;
+    const [hh, wd] = hourDow(start);
+    add(out.hour[hh], g.win);
+    add(out.dow[wd], g.win);
+    add(out.grid[wd * 6 + Math.floor(hh / 4)], g.win);
+    add(out.session[Math.min(idx, 6) - 1], g.win);
+    const prevIdx = idx === 1 ? 3 : runW ? 3 - Math.min(runW, 3) : 3 + Math.min(runL, 4);
+    add(out.prev[prevIdx], g.win);
+    add(out.hoursIn[Math.min(3, Math.floor((start - sessStart) / 3600e3))], g.win);
+    if (g.win) { runW++; runL = 0; } else { runL++; runW = 0; }
+    prevEnd = g.t;
+  }
+  return out;
+}
+
+// Rival directo de línea: campeón → [partidas, victorias]
+function vsChamps(history) {
+  const m = {};
+  for (const g of history) {
+    const c = g.opp?.champ;
+    if (!c) continue;
+    const e = m[c] ?? (m[c] = [0, 0]);
+    e[0]++;
+    if (g.win) e[1]++;
+  }
+  return m;
 }
 
 // Premios de temporada (inspirados en los del SoloQ Challenge)

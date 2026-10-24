@@ -1,0 +1,15 @@
+{
+  "_ayuda": "Tipos: race (más LP entre dos fechas), target (llegar a un rango: \"target\": \"DIAMOND IV\"), handicap (objetivo de LP por persona: \"targets\": {\"Nombre\": 150}, \"target\": 100 por defecto), games (constancia: \"perWeek\": 10). Fechas YYYY-MM-DD en hora de Madrid; el día \"to\" cuenta entero. \"players\": \"all\" o una lista de nombres.",
+  "challenges": [
+    {
+      "id": "carrera-noviembre-2026",
+      "title": "Carrera de noviembre",
+      "type": "race",
+      "from": "2026-11-01",
+      "to": "2026-11-30",
+      "players": "all",
+      "desc": "Gana quien más LP sume en SoloQ entre el 1 y el 30 de noviembre.",
+      "stake": ""
+    }
+  ]
+}

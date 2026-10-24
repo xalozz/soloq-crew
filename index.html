@@ -2,13 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SoloQ Crew</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0a0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="SoloQ Crew">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
@@ -27,12 +32,25 @@
       </a>
       <div class="nav-links">
         <a href="#ranking" class="active">Ranking</a>
-        <a href="#best5">Best 5</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#semana">Semana</a>
+        <a href="#retos">Retos</a>
         <a href="#evolucion">Evolución</a>
         <a href="#duos">Dúos</a>
         <a href="#estadisticas">Estadísticas</a>
-        <a href="#dias">Días</a>
         <a href="#records">Récords</a>
+      </div>
+      <div class="nav-more">
+        <button id="more-btn" class="more-btn" aria-haspopup="true" aria-expanded="false">Más <span aria-hidden="true">▾</span></button>
+        <div id="more-menu" class="more-menu" hidden>
+          <a href="#best5">Best 5</a>
+          <a href="#flex">Flex y Clash</a>
+          <a href="#tilt">Tilt y horarios</a>
+          <a href="#campeones">Campeones</a>
+          <a href="#dias">Mejores días</a>
+          <button data-action="compare">⚖ Comparar jugadores</button>
+          <button data-action="install">📲 Instalar la app</button>
+        </div>
       </div>
       <a id="live" class="live" href="https://github.com/xalozz/soloq-crew/actions/workflows/update.yml" target="_blank" rel="noopener" title="Estado del actualizador automático"><i></i><span>…</span></a>
       <button id="refresh" class="nav-updated" title="Recargar los datos más recientes (se actualizan solos cada minuto)"><span class="rf-ico" aria-hidden="true">↻</span> <span id="updated"></span></button>
@@ -40,40 +58,76 @@
   </header>
 
   <main class="wrap">
+    <div id="banner" class="banner" hidden></div>
+
     <section id="ranking" class="section">
       <div class="rank-head">
         <h1 class="display">Ranking</h1>
         <div class="head-meta">
-          <div class="meta-chip"><span>Última<br>actualización</span><b id="meta-updated">–</b></div>
+          <div class="meta-chip"><span>Última<br>novedad</span><b id="meta-updated">–</b></div>
           <div class="meta-chip"><span>Partidas<br>del grupo</span><b id="meta-games">–</b></div>
           <div class="meta-chip"><span>Winrate<br>del grupo</span><b id="meta-wr">–</b></div>
+          <a class="meta-chip live-chip" id="meta-live" href="#live-now" hidden><span>Jugando<br>ahora</span><b>0</b></a>
         </div>
       </div>
+
+      <div id="live-now" class="live-now" hidden></div>
 
       <div id="podium" class="podium"></div>
 
       <div class="controls">
         <div class="pills" id="sort" role="tablist" aria-label="Ordenar por">
           <button data-sort="rank" class="on">Elo</button>
-          <button data-sort="today">LP hoy</button>
+          <button data-sort="period" id="sort-period">LP hoy</button>
           <button data-sort="winrate">Winrate</button>
           <button data-sort="streak">Racha</button>
           <button data-sort="kda">KDA</button>
         </div>
-        <label class="search">
-          <input id="search" type="search" placeholder="Buscar jugador" autocomplete="off">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        </label>
+        <div class="controls-right">
+          <div class="seg" id="period" role="group" aria-label="Periodo de la columna de LP">
+            <button data-period="day" class="on">Hoy</button>
+            <button data-period="week">Semana</button>
+            <button data-period="month">Mes</button>
+          </div>
+          <button class="ghost-btn" id="compare-btn" title="Comparar dos jugadores">⚖ Comparar</button>
+          <label class="search">
+            <input id="search" type="search" placeholder="Buscar jugador" autocomplete="off">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </label>
+        </div>
       </div>
 
       <div class="table" role="table" aria-label="Clasificación">
         <div class="thead" role="row">
           <span>#</span><span>Jugador</span><span class="c-role">Rol</span><span>Elo</span>
           <span class="c-wr">V / D</span><span class="c-trend">Últimas 20</span><span class="c-streak">Racha</span>
-          <span class="c-today">LP hoy</span><span class="c-kda">KDA</span><span></span>
+          <span class="c-today" id="th-period">LP hoy</span><span class="c-kda">KDA</span><span></span>
         </div>
         <div id="rows"></div>
       </div>
+    </section>
+
+    <section id="novedades" class="section">
+      <h2 class="display display-md center">Novedades</h2>
+      <p class="center muted sub">Subidas y bajadas, pentakills, rachas y récords del grupo, en cuanto pasan · también llegan a #soloq en Discord</p>
+      <div id="events" class="panel feed"></div>
+    </section>
+
+    <section id="semana" class="section">
+      <h2 class="display display-md center">La semana</h2>
+      <p class="center muted sub">De lunes a domingo · el resumen de la semana pasada se publica en Discord cada lunes</p>
+      <div class="toggle" id="week-tabs">
+        <button data-week="current" class="on">Esta semana</button>
+        <button data-week="last">Semana pasada</button>
+        <button data-week="archive">Historial</button>
+      </div>
+      <div id="week" class="week"></div>
+    </section>
+
+    <section id="retos" class="section">
+      <h2 class="display display-md center">Retos</h2>
+      <p class="center muted sub">Piques con fecha de fin · con los LP registrados en la web</p>
+      <div id="challenges" class="challenges"></div>
     </section>
 
     <section id="best5" class="section">
@@ -112,10 +166,29 @@
       <div id="rivals" class="rivals"></div>
     </section>
 
+    <section id="flex" class="section">
+      <h2 class="display display-md center">Flex y Clash</h2>
+      <p class="center muted sub">Rango de Flex de cada uno y las partidas de Flex o Clash que habéis jugado juntos esta temporada</p>
+      <div id="flex-box" class="flexbox"></div>
+    </section>
+
     <section id="estadisticas" class="section">
       <h2 class="display display-md center">Estadísticas</h2>
       <p class="center muted sub">Medias por partida sobre las partidas de SoloQ de esta temporada (cuenta principal de cada uno)</p>
       <div id="stats" class="panel stats-grid"></div>
+    </section>
+
+    <section id="tilt" class="section">
+      <h2 class="display display-md center">Tilt y horarios</h2>
+      <p class="center muted sub">Cuándo ganáis y cuándo conviene parar · toda la temporada de SoloQ · una sesión son partidas con menos de 40 min entre ellas</p>
+      <div id="tilt-who" class="ge-legend tilt-who"></div>
+      <div id="tilt-box" class="tilt"></div>
+    </section>
+
+    <section id="campeones" class="section">
+      <h2 class="display display-md center">Campeones</h2>
+      <p class="center muted sub">Quién juega mejor cada campeón, el pool de cada uno y contra quién sufrís en la línea</p>
+      <div id="champs-box" class="champs"></div>
     </section>
 
     <section id="dias" class="section">
