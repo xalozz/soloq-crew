@@ -2,6 +2,65 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8023465682",
+      "t": 1792840332836,
+      "dur": 923,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 10,
+      "k": 4,
+      "d": 1,
+      "a": 1,
+      "kp": 22,
+      "cs": 131,
+      "vis": 10,
+      "dmg": 6379,
+      "teamDmg": 41236,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1883,
+      "goldEarned": 7565,
+      "fb": false,
+      "items": [
+        1086,
+        3032,
+        3085,
+        0,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Viktor",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13177,
+        "maxLeadMin": 15,
+        "maxDef": 0,
+        "tgd15": 13177,
+        "gd15": 2180
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8021634619",
       "t": 1792691948745,
       "dur": 2135,

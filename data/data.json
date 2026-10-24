@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T22:42:53.145Z",
+  "generatedAt": "2026-10-24T11:14:11.407Z",
   "ddragonVersion": "16.21.1",
   "title": "SoloQ Crew",
   "subtitle": "Ranking de la cuadrilla",
@@ -8148,7 +8148,7 @@
       "name": "xALOzZ",
       "links": [],
       "bestAccount": 0,
-      "score": 2193,
+      "score": 2213,
       "accounts": [
         {
           "riotId": "xALOzZ#EUW",
@@ -8160,18 +8160,18 @@
           "profileIconId": 1109,
           "rank": {
             "tier": "EMERALD",
-            "division": "III",
-            "lp": 93,
-            "wins": 109,
+            "division": "II",
+            "lp": 13,
+            "wins": 110,
             "losses": 105,
-            "winrate": 50.9,
+            "winrate": 51.2,
             "hotStreak": false
           },
           "stats": {
-            "games": 214,
-            "wins": 108,
+            "games": 215,
+            "wins": 109,
             "losses": 106,
-            "winrate": 50.5,
+            "winrate": 50.7,
             "avgK": 7.2,
             "avgD": 6,
             "avgA": 7.4,
@@ -8182,19 +8182,20 @@
             "avgDurationMin": 30.2,
             "streak": {
               "current": {
-                "type": "L",
+                "type": "W",
                 "count": 1
               },
               "bestWin": 6,
               "worstLoss": 5
             },
             "firstOfDay": {
-              "games": 53,
-              "wins": 25,
-              "winrate": 47.2,
+              "games": 54,
+              "wins": 26,
+              "winrate": 48.1,
               "restWinrate": 51.6
             },
             "form": [
+              "W",
               "L",
               "W",
               "W",
@@ -8202,12 +8203,10 @@
               "L",
               "W",
               "W",
-              "L",
               "L",
               "L"
             ],
             "trend": [
-              1,
               0,
               1,
               1,
@@ -8226,14 +8225,15 @@
               0,
               1,
               1,
-              0
+              0,
+              1
             ],
             "mainRole": "BOTTOM",
             "last10": {
               "games": 10,
-              "wins": 4,
-              "losses": 6,
-              "winrate": 40
+              "wins": 5,
+              "losses": 5,
+              "winrate": 50
             },
             "last20": {
               "games": 20,
@@ -8244,10 +8244,10 @@
             "topChamps": [
               {
                 "key": "Jinx",
-                "games": 60,
-                "wins": 36,
-                "winrate": 60,
-                "kda": 2.66
+                "games": 61,
+                "wins": 37,
+                "winrate": 60.7,
+                "kda": 2.67
               },
               {
                 "key": "Viktor",
@@ -8294,9 +8294,9 @@
             },
             "bestRole": {
               "key": "BOTTOM",
-              "games": 195,
-              "wins": 102,
-              "winrate": 52.3,
+              "games": 196,
+              "wins": 103,
+              "winrate": 52.6,
               "kda": 2.52
             },
             "worstRole": {
@@ -8331,14 +8331,14 @@
               "kda": 0.33
             },
             "firstGameAt": 1763494188287,
-            "lastGameAt": 1792691948745,
+            "lastGameAt": 1792840332836,
             "totals": {
-              "k": 1549,
-              "d": 1281,
-              "a": 1586
+              "k": 1553,
+              "d": 1282,
+              "a": 1587
             },
-            "dmgPerMin": 904,
-            "avgVision": 20.3,
+            "dmgPerMin": 903,
+            "avgVision": 20.2,
             "pentas": 1,
             "firstBloods": 32,
             "maxKills": 19,
@@ -8347,10 +8347,10 @@
             "champs": [
               {
                 "key": "Jinx",
-                "games": 60,
-                "wins": 36,
-                "winrate": 60,
-                "kda": 2.66,
+                "games": 61,
+                "wins": 37,
+                "winrate": 60.7,
+                "kda": 2.67,
                 "csPerMin": 8.6
               },
               {
@@ -8517,9 +8517,9 @@
             "roles": [
               {
                 "key": "BOTTOM",
-                "games": 195,
-                "wins": 102,
-                "winrate": 52.3,
+                "games": 196,
+                "wins": 103,
+                "winrate": 52.6,
                 "kda": 2.52
               },
               {
@@ -8552,9 +8552,9 @@
               }
             ],
             "gold": {
-              "games": 148,
-              "avgGd15": 163,
-              "avgTgd15": 194,
+              "games": 149,
+              "avgGd15": 176,
+              "avgTgd15": 281,
               "throws": 20,
               "comebacks": 11,
               "biggestThrow": {
@@ -8706,18 +8706,18 @@
                 ]
               },
               "BOTTOM": {
-                "games": 195,
-                "wins": 102,
-                "winrate": 52.3,
+                "games": 196,
+                "wins": 103,
+                "winrate": 52.6,
                 "kda": 2.52,
-                "gd15": 271,
+                "gd15": 285,
                 "champs": [
                   {
                     "key": "Jinx",
-                    "games": 60,
-                    "wins": 36,
-                    "winrate": 60,
-                    "kda": 2.66
+                    "games": 61,
+                    "wins": 37,
+                    "winrate": 60.7,
+                    "kda": 2.67
                   },
                   {
                     "key": "Xayah",
@@ -8783,13 +8783,13 @@
             "awards": {
               "oneTrick": {
                 "champ": "Jinx",
-                "wins": 36,
-                "games": 60
+                "wins": 37,
+                "games": 61
               },
               "mainChar": {
                 "champ": "Jinx",
-                "winrate": 60,
-                "games": 60
+                "winrate": 60.7,
+                "games": 61
               },
               "autofill": {
                 "lane": "BOTTOM",
@@ -8799,10 +8799,10 @@
               },
               "champPool": 15,
               "kdaStreak": 5,
-              "avgKda": 3.74,
+              "avgKda": 3.75,
               "pentas": 1,
               "quadras": 3,
-              "quadraGames": 214,
+              "quadraGames": 215,
               "firstBloods": 32
             },
             "gameRecords": {
@@ -8940,7 +8940,7 @@
             "lp": {
               "win": 20,
               "loss": -20,
-              "winN": 33,
+              "winN": 34,
               "lossN": 18
             }
           },
@@ -8950,7 +8950,7 @@
             "dpm": "https://dpm.lol/xALOzZ-EUW",
             "log": "https://www.leagueofgraphs.com/summoner/euw/xALOzZ-EUW"
           },
-          "updatedAt": "2026-10-22T21:32:42.484Z",
+          "updatedAt": "2026-10-24T11:14:11.352Z",
           "lpHist": [
             [
               1790720384833,
@@ -9163,9 +9163,76 @@
             [
               1792691970733,
               2193
+            ],
+            [
+              1792840445754,
+              2213
             ]
           ],
           "recent": [
+            {
+              "v": 4,
+              "id": "EUW1_8023465682",
+              "t": 1792840332836,
+              "dur": 923,
+              "win": true,
+              "champ": "Jinx",
+              "role": "BOTTOM",
+              "lvl": 10,
+              "k": 4,
+              "d": 1,
+              "a": 1,
+              "kp": 22,
+              "cs": 131,
+              "vis": 10,
+              "dmg": 6379,
+              "teamDmg": 41236,
+              "penta": 0,
+              "quadra": 0,
+              "triple": 0,
+              "towerDmg": 1883,
+              "goldEarned": 7565,
+              "fb": false,
+              "items": [
+                1086,
+                3032,
+                3085,
+                0,
+                0,
+                0,
+                3363
+              ],
+              "spells": [
+                "SummonerFlash",
+                "SummonerBarrier"
+              ],
+              "runes": [
+                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+                "perk-images/Styles/7202_Sorcery.png"
+              ],
+              "opp": {
+                "champ": "Viktor",
+                "spells": [
+                  "SummonerFlash",
+                  "SummonerTeleport"
+                ],
+                "runes": [
+                  "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+                  "perk-images/Styles/7204_Resolve.png"
+                ]
+              },
+              "gold": {
+                "maxLead": 13177,
+                "maxLeadMin": 15,
+                "maxDef": 0,
+                "tgd15": 13177,
+                "gd15": 2180
+              },
+              "lp": {
+                "d": 20,
+                "n": 1
+              }
+            },
             {
               "v": 4,
               "id": "EUW1_8021634619",
@@ -10362,72 +10429,14 @@
                 "d": -20,
                 "n": 1
               }
-            },
-            {
-              "v": 4,
-              "id": "EUW1_8014346402",
-              "t": 1792084783851,
-              "dur": 1914,
-              "win": true,
-              "champ": "Jinx",
-              "role": "BOTTOM",
-              "lvl": 16,
-              "k": 18,
-              "d": 5,
-              "a": 12,
-              "kp": 73,
-              "cs": 295,
-              "vis": 27,
-              "dmg": 33269,
-              "teamDmg": 122630,
-              "penta": 0,
-              "quadra": 0,
-              "triple": 0,
-              "towerDmg": 21268,
-              "goldEarned": 21275,
-              "fb": true,
-              "items": [
-                3036,
-                3032,
-                3140,
-                3031,
-                3026,
-                3085,
-                3363
-              ],
-              "spells": [
-                "SummonerFlash",
-                "SummonerBarrier"
-              ],
-              "runes": [
-                "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                "perk-images/Styles/7203_Whimsy.png"
-              ],
-              "opp": {
-                "champ": "Kaisa",
-                "spells": [
-                  "SummonerBarrier",
-                  "SummonerFlash"
-                ],
-                "runes": [
-                  "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
-                  "perk-images/Styles/7203_Whimsy.png"
-                ]
-              },
-              "gold": {
-                "maxLead": 9532,
-                "maxLeadMin": 25,
-                "maxDef": 0,
-                "tgd15": 522,
-                "gd15": 3526
-              },
-              "lp": {
-                "d": 20,
-                "n": 1
-              }
             }
           ],
           "seq": [
+            [
+              1792840332836,
+              1,
+              20
+            ],
             [
               1792691948745,
               0,
@@ -10921,11 +10930,6 @@
             [
               1788450514740,
               1,
-              null
-            ],
-            [
-              1788292513801,
-              0,
               null
             ]
           ]
@@ -22099,8 +22103,8 @@
             "a": 6.5,
             "ratio": 2.6
           },
-          "wrWithout": 51.6,
-          "gamesWithout": 190,
+          "wrWithout": 51.8,
+          "gamesWithout": 191,
           "champs": [
             [
               "Xayah",
@@ -22822,8 +22826,8 @@
             "a": 8.3,
             "ratio": 5.14
           },
-          "wrWithout": 49.8,
-          "gamesWithout": 207,
+          "wrWithout": 50,
+          "gamesWithout": 208,
           "champs": [
             [
               "Yunara",
