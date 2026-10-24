@@ -1,0 +1,923 @@
+{
+  "games": [
+    {
+      "v": 4,
+      "id": "EUW1_7969727931",
+      "q": 440,
+      "t": 1788279180861,
+      "dur": 916,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 10,
+      "k": 7,
+      "d": 3,
+      "a": 5,
+      "kp": 46,
+      "cs": 90,
+      "vis": 9,
+      "dmg": 10734,
+      "teamDmg": 53921,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 41,
+      "goldEarned": 7537,
+      "fb": false,
+      "items": [
+        3748,
+        1102,
+        3044,
+        1028,
+        0,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Kindred",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7944271091",
+      "q": 440,
+      "t": 1786206542145,
+      "dur": 1156,
+      "win": true,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 11,
+      "k": 1,
+      "d": 2,
+      "a": 1,
+      "kp": 8,
+      "cs": 140,
+      "vis": 14,
+      "dmg": 6414,
+      "teamDmg": 49590,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1030,
+      "goldEarned": 6695,
+      "fb": false,
+      "items": [
+        3152,
+        3147,
+        1082,
+        2422,
+        1052,
+        2022,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "LeeSin",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7921493824",
+      "q": 440,
+      "t": 1784316258032,
+      "dur": 2142,
+      "win": true,
+      "champ": "Anivia",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 4,
+      "d": 5,
+      "a": 10,
+      "kp": 48,
+      "cs": 229,
+      "vis": 26,
+      "dmg": 25370,
+      "teamDmg": 135005,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6730,
+      "goldEarned": 12443,
+      "fb": false,
+      "items": [
+        3118,
+        3040,
+        3170,
+        6657,
+        1082,
+        3147,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7881643443",
+      "q": 440,
+      "t": 1781023144973,
+      "dur": 2384,
+      "win": false,
+      "champ": "Zyra",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 6,
+      "d": 13,
+      "a": 14,
+      "kp": 59,
+      "cs": 78,
+      "vis": 123,
+      "dmg": 33231,
+      "teamDmg": 219565,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 132,
+      "goldEarned": 13403,
+      "fb": false,
+      "items": [
+        3871,
+        2503,
+        8010,
+        3020,
+        6653,
+        2420,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Leona",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7871974000",
+      "q": 440,
+      "t": 1780242231121,
+      "dur": 1108,
+      "win": false,
+      "champ": "Zyra",
+      "role": "UTILITY",
+      "lvl": 9,
+      "k": 0,
+      "d": 4,
+      "a": 5,
+      "kp": 63,
+      "cs": 22,
+      "vis": 28,
+      "dmg": 7020,
+      "teamDmg": 43747,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 95,
+      "goldEarned": 4672,
+      "fb": false,
+      "items": [
+        3871,
+        1082,
+        2031,
+        2503,
+        0,
+        1001,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Mel",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7871628900",
+      "q": 440,
+      "t": 1780224667556,
+      "dur": 1918,
+      "win": true,
+      "champ": "Morgana",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 7,
+      "d": 3,
+      "a": 17,
+      "kp": 52,
+      "cs": 42,
+      "vis": 70,
+      "dmg": 14271,
+      "teamDmg": 121418,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1129,
+      "goldEarned": 11383,
+      "fb": false,
+      "items": [
+        3157,
+        2503,
+        3871,
+        3158,
+        1026,
+        1052,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Xerath",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7871601114",
+      "q": 440,
+      "t": 1780222442622,
+      "dur": 1734,
+      "win": true,
+      "champ": "Zyra",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 4,
+      "d": 5,
+      "a": 13,
+      "kp": 41,
+      "cs": 57,
+      "vis": 47,
+      "dmg": 19799,
+      "teamDmg": 131563,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3506,
+      "goldEarned": 10647,
+      "fb": false,
+      "items": [
+        3871,
+        3041,
+        2503,
+        3020,
+        3916,
+        3147,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Mel",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7871578594",
+      "q": 440,
+      "t": 1780220190940,
+      "dur": 1864,
+      "win": true,
+      "champ": "Zyra",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 13,
+      "d": 7,
+      "a": 14,
+      "kp": 51,
+      "cs": 53,
+      "vis": 67,
+      "dmg": 25428,
+      "teamDmg": 140226,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1496,
+      "goldEarned": 13372,
+      "fb": false,
+      "items": [
+        3871,
+        2503,
+        3041,
+        8010,
+        3020,
+        6653,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Seraphine",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7870877981",
+      "q": 440,
+      "t": 1780158756105,
+      "dur": 1659,
+      "win": true,
+      "champ": "Zyra",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 6,
+      "d": 7,
+      "a": 20,
+      "kp": 60,
+      "cs": 49,
+      "vis": 54,
+      "dmg": 18951,
+      "teamDmg": 131948,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3631,
+      "goldEarned": 10829,
+      "fb": false,
+      "items": [
+        3871,
+        2503,
+        4005,
+        6653,
+        3020,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7870848671",
+      "q": 440,
+      "t": 1780156747627,
+      "dur": 1525,
+      "win": false,
+      "champ": "Milio",
+      "role": "UTILITY",
+      "lvl": 11,
+      "k": 0,
+      "d": 8,
+      "a": 6,
+      "kp": 43,
+      "cs": 18,
+      "vis": 44,
+      "dmg": 5701,
+      "teamDmg": 68585,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 440,
+      "goldEarned": 6216,
+      "fb": false,
+      "items": [
+        3870,
+        6617,
+        3158,
+        3107,
+        0,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Shen",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/Guardian/Guardian.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7858203318",
+      "q": 440,
+      "t": 1779128071949,
+      "dur": 1994,
+      "win": true,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 8,
+      "d": 10,
+      "a": 8,
+      "kp": 41,
+      "cs": 213,
+      "vis": 23,
+      "dmg": 25096,
+      "teamDmg": 131347,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 25,
+      "goldEarned": 14860,
+      "fb": false,
+      "items": [
+        3157,
+        2510,
+        3020,
+        3135,
+        0,
+        4645,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Shyvana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7833669259",
+      "q": 440,
+      "t": 1777225493112,
+      "dur": 1472,
+      "win": false,
+      "champ": "Anivia",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 2,
+      "d": 7,
+      "a": 3,
+      "kp": 42,
+      "cs": 154,
+      "vis": 10,
+      "dmg": 8443,
+      "teamDmg": 44819,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 8050,
+      "fb": true,
+      "items": [
+        1056,
+        6657,
+        3003,
+        2055,
+        1082,
+        3170,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Orianna",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7833630248",
+      "q": 440,
+      "t": 1777223715054,
+      "dur": 1460,
+      "win": false,
+      "champ": "Shyvana",
+      "role": "JUNGLE",
+      "lvl": 13,
+      "k": 4,
+      "d": 7,
+      "a": 4,
+      "kp": 40,
+      "cs": 145,
+      "vis": 39,
+      "dmg": 11459,
+      "teamDmg": 71608,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 8066,
+      "fb": false,
+      "items": [
+        2510,
+        6672,
+        1082,
+        0,
+        3047,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Briar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7818454378",
+      "q": 440,
+      "t": 1776013876147,
+      "dur": 1890,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 6,
+      "d": 10,
+      "a": 11,
+      "kp": 53,
+      "cs": 167,
+      "vis": 27,
+      "dmg": 27986,
+      "teamDmg": 133381,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 12402,
+      "fb": false,
+      "items": [
+        6698,
+        6676,
+        3111,
+        3814,
+        1038,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Sejuani",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7809912526",
+      "q": 440,
+      "t": 1775321320864,
+      "dur": 2537,
+      "win": false,
+      "champ": "Lillia",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 8,
+      "d": 6,
+      "a": 20,
+      "kp": 67,
+      "cs": 292,
+      "vis": 44,
+      "dmg": 43522,
+      "teamDmg": 198838,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3007,
+      "goldEarned": 19267,
+      "fb": false,
+      "items": [
+        3116,
+        6653,
+        3020,
+        2503,
+        4629,
+        3089,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Viego",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7802180309",
+      "q": 440,
+      "t": 1774724137472,
+      "dur": 2773,
+      "win": true,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 22,
+      "d": 8,
+      "a": 17,
+      "kp": 72,
+      "cs": 366,
+      "vis": 54,
+      "dmg": 64301,
+      "teamDmg": 233182,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 1,
+      "towerDmg": 4402,
+      "goldEarned": 27516,
+      "fb": false,
+      "items": [
+        3157,
+        6653,
+        3020,
+        3089,
+        3135,
+        2510,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Malphite",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
+      "id": "EUW1_7802123108",
+      "q": 440,
+      "t": 1774720560530,
+      "dur": 1846,
+      "win": true,
+      "champ": "Shen",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 1,
+      "d": 2,
+      "a": 18,
+      "kp": 53,
+      "cs": 181,
+      "vis": 30,
+      "dmg": 11278,
+      "teamDmg": 119997,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 786,
+      "goldEarned": 10735,
+      "fb": false,
+      "items": [
+        3748,
+        2525,
+        3111,
+        0,
+        2502,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Khazix",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": null
+    }
+  ],
+  "skipped": []
+}
