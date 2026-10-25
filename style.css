@@ -445,7 +445,7 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .kda-line small { font-size: 11px; font-weight: 600; color: var(--muted); }
 .kda-tot, .kda-games { font-size: 11px; color: var(--muted); }
 .kda-games b { color: var(--text); }
-.sgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 10px; }
 .sg { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; }
 .sg h5 { margin: 0 0 6px; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 .kv { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px solid #1f1f23; font-size: 12px; }

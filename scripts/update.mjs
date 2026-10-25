@@ -16,7 +16,7 @@ import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Riot, RiotError, compactMatch, matchDetail, profileLinks, loadDataDragon, MATCH_RECORD_VERSION } from './riot.mjs';
+import { Riot, RiotError, compactMatch, matchDetail, profileLinks, loadDataDragon, conductOf, MATCH_RECORD_VERSION } from './riot.mjs';
 import { computeAccountStats, pickBestAccount, rankScore } from './stats.mjs';
 import { computeDuos } from './duos.mjs';
 import { detectEvents, eventEmbed, welcomeEmbed } from './events.mjs';
@@ -186,6 +186,23 @@ async function updateAccount(riot, acc, region, cache, dd, budget, opts = {}) {
   }
   history.sort((a, b) => b.t - a.t);
   history.length = Math.min(history.length, HISTORY_CAP);
+
+  // Pings y rendiciones de las partidas guardadas antes de registrarlos: se completan poco a poco
+  // (de la más reciente a la más antigua) con su propio presupuesto, sin volver a bajar el resto de datos
+  const lacking = (seasonGames ? history.slice(0, seasonGames) : history).filter((g) => g.pg === undefined);
+  // Reparto a partes iguales entre cuentas para que todos tengan datos cuanto antes
+  for (const g of lacking.slice(0, Math.max(0, Math.min(budget.conduct ?? 0, budget.conductPer ?? Infinity)))) {
+    budget.conduct--;
+    try {
+      const m = await riot.match(region, g.id);
+      const me = m.info.participants.find((p) => p.puuid === puuid);
+      if (me) Object.assign(g, conductOf(me));
+    } catch (err) {
+      if (isKeyError(err)) throw err;
+      console.warn(`  ! pings ${g.id}: ${err.message}`);
+    }
+  }
+  if (lacking.length) console.log(`  pings y rendiciones: faltan ${lacking.filter((g) => g.pg === undefined).length} partidas`);
   await writeJson(hf, { games: history, skipped: [...skipped].slice(-2000), seasonComplete });
 
   // Flex y Clash: en cada pasada completa y cuando cambia el rango de Flex
@@ -361,7 +378,9 @@ async function main() {
   if (!QUICK) status.live = await checkLive(riot, liveAccounts, champIds);
 
   // Máximo de partidas antiguas a descargar por ejecución (el resto, en las siguientes)
-  const budget = QUICK ? { left: 0, details: 15, flex: 10 } : { left: Number(process.env.BACKFILL_BUDGET || 350), details: 80, flex: 60 };
+  const budget = QUICK ? { left: 0, details: 15, flex: 10, conduct: 0 }
+    : { left: Number(process.env.BACKFILL_BUDGET || 350), details: 80, flex: 60, conduct: Number(process.env.CONDUCT_BUDGET || 120) };
+  budget.conductPer = Math.ceil(budget.conduct / Math.max(1, config.players.reduce((n, p) => n + p.accounts.length, 0)));
   await mkdir(MATCH_DIR, { recursive: true });
   const players = [];
   let failures = 0;

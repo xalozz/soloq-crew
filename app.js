@@ -831,7 +831,13 @@ function tabStats(acc) {
       kv('1ª partida del día', s.firstOfDay ? h('span', { title: `${s.firstOfDay.wins}V en ${s.firstOfDay.games} días · resto de partidas: ${fmt(s.firstOfDay.restWinrate, 1)}%` }, `${fmt(s.firstOfDay.winrate, 0)}% WR`) : null, s.firstOfDay ? (s.firstOfDay.winrate >= 50 ? 'pos' : 'neg') : ''),
       kv('Mejor / peor', h('span', {}, h('span', { class: 'pos' }, `${s.streak.bestWin}V`), ' · ', h('span', { class: 'neg' }, `${s.streak.worstLoss}D`))),
       kv('LP por victoria', lp?.win != null ? `+${lp.win}` : null, 'pos'),
-      kv('LP por derrota', lp?.loss != null ? `${lp.loss}` : null, 'neg')));
+      kv('LP por derrota', lp?.loss != null ? `${lp.loss}` : null, 'neg')),
+    s.conduct ? group('Pings y rendiciones',
+      kv('Pings / partida', fmt(s.conduct.pings, 0)),
+      kv('"?" / partida', h('span', { title: `Récord: ${s.conduct.maxQ?.val ?? 0} en una partida` }, fmt(s.conduct.q, 1))),
+      kv('Rendiciones', h('span', { title: `${s.conduct.ffLosses} de ${s.conduct.losses} derrotas · ${s.conduct.ffEarly} antes del minuto 20` }, `${fmt(s.conduct.ffPct, 0)}%`)),
+      kv('Rival rendido', h('span', { title: `${s.conduct.ffWins} de ${s.conduct.wins} victorias acabaron con el rival rindiéndose` }, `${fmt(s.conduct.ffWinPct, 0)}%`)),
+      s.conduct.games < s.games * 0.97 ? h('small', { class: 'muted' }, `Con ${s.conduct.games} de ${s.games} partidas`) : null) : null);
 
   return h('div', { class: 'sx' },
     head,
@@ -1166,7 +1172,26 @@ const AWARDS = [
   { key: 'kda', icon: '✚', title: 'KDA player', desc: 'Mejor KDA medio por partida (mínimo 50 partidas).', val: (p) => (p.s?.games >= 50 ? p.s?.awards?.avgKda : null), fmt: (v) => `${fmt(v, 2)} KDA` },
   { key: 'sheriff', icon: '✪', title: 'El sheriff', desc: 'Más primeras sangres (first bloods).', val: (p) => p.s?.awards?.firstBloods, fmt: (v) => `${v} first bloods` },
   { key: 'pochi', icon: '☠', title: 'Pochiqueue', desc: 'La racha de derrotas seguidas más larga.', val: (p) => p.s?.streak?.worstLoss, fmt: (v) => `${v} seguidas`, bad: true },
+  { key: 'coward', icon: '⚐', title: 'Premio al más cobarde', desc: 'Más derrotas acabadas en rendición de su equipo, en % (mínimo 20 derrotas con datos).',
+    val: (p) => (p.s?.conduct?.losses >= 20 ? p.s.conduct.ffPct : null), fmt: (v) => `${fmt(v, 0)} % rendidas`, bad: true,
+    extra: (p) => `${p.s.conduct.ffLosses} de ${p.s.conduct.losses} derrotas · ${p.s.conduct.ffEarly} antes del 20`, note: conductNote },
+  { key: 'brave', icon: '⚑', title: 'Nunca se rinde', desc: 'Menos derrotas acabadas en rendición de su equipo, en % (mínimo 20 derrotas con datos).',
+    val: (p) => (p.s?.conduct?.losses >= 20 ? 100 - p.s.conduct.ffPct : null), fmt: (v) => `${fmt(100 - v, 0)} % rendidas`,
+    extra: (p) => `${p.s.conduct.ffLosses} de ${p.s.conduct.losses} derrotas` },
+  { key: 'qking', icon: '?', title: 'El rey del "?"', desc: 'Más pings de "?" por partida (el de "enemigo desaparecido", el favorito para meter presión a los suyos).',
+    val: (p) => (p.s?.conduct?.games >= 20 ? p.s.conduct.q : null), fmt: (v) => `${fmt(v, 1)} por partida`, bad: true,
+    extra: (p) => `récord: ${p.s.conduct.maxQ?.val ?? 0} en una partida`, note: conductNote },
+  { key: 'spam', icon: '!', title: 'El pesado de los pings', desc: 'Más pings por partida, de cualquier tipo.',
+    val: (p) => (p.s?.conduct?.games >= 20 ? p.s.conduct.pings : null), fmt: (v) => `${fmt(v, 0)} por partida`,
+    extra: (p) => `"todos adentro": ${fmt(p.s.conduct.allIn, 1)} · "atrás": ${fmt(p.s.conduct.back, 1)}` },
 ];
+
+// Mientras se completan los pings y rendiciones de partidas antiguas, se avisa de cuántas hay
+function conductNote(rows) {
+  const have = rows.reduce((n, p) => n + (p.s?.conduct?.games ?? 0), 0);
+  const all = rows.reduce((n, p) => n + (p.s?.games ?? 0), 0);
+  return all && have < all * 0.97 ? `Descargando datos de partidas antiguas: de momento, ${fmtInt(have)} de ${fmtInt(all)} partidas` : null;
+}
 
 const GAME_RECORDS = [
   ['kills', '⚔', 'Más kills', (v) => `${v} kills`],
@@ -1179,6 +1204,7 @@ const GAME_RECORDS = [
   ['towers', '♜', 'Más daño a torres', (v) => goldK(v, false)],
   ['gold', '¤', 'Más oro', (v) => goldK(v, false)],
   ['csMin', '⚘', 'Mejor CS/min', (v) => `${fmt(v, 1)} CS/min`],
+  ['q', '?', 'Más "?" en una partida', (v) => `${v} pings "?"`],
 ];
 
 function renderAwards(players) {
@@ -1611,6 +1637,8 @@ function weekText(w) {
   if (w.duo) L.push(`🤝 Dúo de la semana: ${w.duo.a} & ${w.duo.b} (${w.duo.wins}V ${w.duo.games - w.duo.wins}D)`);
   if (w.gotw) L.push(`⭐ Partida de la semana: ${w.gotw.name}, ${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`);
   for (const g of w.pentas ?? []) L.push(`🖐️ Pentakill de ${g.name} con ${g.champ}`);
+  if (w.coward) L.push(`🏳️ El más cobarde: ${w.coward.name} (rendición en ${w.coward.n} de sus ${w.coward.of} derrotas)`);
+  if (w.qKing) L.push(`❓ El rey del "?": ${w.qKing.name} (${fmt(w.qKing.avg, 1)} por partida)`);
   L.push('', `${SITE_URL}#semana`);
   return L.join('\n');
 }
@@ -1632,6 +1660,8 @@ async function weekImage(w) {
   if (w.cold) hl.push(['💀 Peor racha', w.cold.name, `${w.cold.n} derrotas`]);
   if (w.duo) hl.push(['🤝 Dúo', `${w.duo.a} & ${w.duo.b}`, `${w.duo.wins}V ${w.duo.games - w.duo.wins}D`]);
   if (w.gotw) hl.push(['⭐ Partida', w.gotw.name, `${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`]);
+  if (w.coward) hl.push(['🏳️ Más cobarde', w.coward.name, `${plural(w.coward.n, 'rendición', 'rendiciones')}`]);
+  if (w.qKing) hl.push(['❓ Rey del "?"', w.qKing.name, `${fmt(w.qKing.avg, 1)} por partida`]);
   const W = 1080, RH = 78, H = 330 + rows.length * (RH + 10) + Math.ceil(hl.length / 2) * 130 + 120;
   const c = document.createElement('canvas');
   c.width = W; c.height = H;
@@ -1723,6 +1753,8 @@ function weekHighlights(w, byName) {
   }
   if (w.gotw) out.push(card('⭐', 'Partida de la semana', w.gotw.name, `${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`, 'ver →', () => openMatchModal(w.gotw.id, `Partida de la semana · ${w.gotw.name}`, P(w.gotw.name)?.main?.riotId)));
   for (const g of w.pentas ?? []) out.push(card('🖐️', 'Pentakill', g.name, `${g.champ} ${g.k}/${g.d}/${g.a}`, 'ver →', () => openMatchModal(g.id, `Pentakill · ${g.name}`, P(g.name)?.main?.riotId)));
+  if (w.coward) out.push(card('🏳️', 'El más cobarde', w.coward.name, `${plural(w.coward.n, 'rendición', 'rendiciones')}`, `en ${w.coward.of} derrotas`));
+  if (w.qKing) out.push(card('❓', 'El rey del "?"', w.qKing.name, `${fmt(w.qKing.avg, 1)} por partida`, `${w.qKing.total} en total`));
   return out;
 }
 
@@ -2102,6 +2134,8 @@ const CMP_STATS = [
   ['1ª partida del día', (p) => (p.s?.firstOfDay?.games >= 10 ? p.s.firstOfDay.winrate : null), (v) => `${fmt(v, 0)}%`],
   ['Mejor racha', (p) => p.s?.streak?.bestWin, (v) => `${v}V`],
   ['Peor racha', (p) => p.s?.streak?.worstLoss, (v) => `${v}D`, 'low'],
+  ['Pings "?" / partida', (p) => p.s?.conduct?.q, (v) => fmt(v, 1), 'low'],
+  ['Derrotas rendidas', (p) => (p.s?.conduct?.losses >= 10 ? p.s.conduct.ffPct : null), (v) => `${fmt(v, 0)}%`, 'low'],
   ['Partidas de la temporada', (p) => p.wins + p.losses, (v) => fmtInt(v), 'none'],
 ];
 const CMP_COLORS = ['#3987e5', '#d95926'];

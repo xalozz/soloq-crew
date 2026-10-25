@@ -51,6 +51,7 @@ export const RECORD_DEFS = {
   towers: ['Más daño a torres', (v) => `${k1(v)} a torres`],
   gold: ['Más oro', (v) => `${k1(v)} de oro`],
   csMin: ['Mejor CS/min', (v) => `${String(v).replace('.', ',')} CS/min`],
+  q: ['Más "?" en una partida', (v) => `${v} pings de "?"`],
 };
 
 const STREAK_STEPS = [5, 7, 10, 15, 20];

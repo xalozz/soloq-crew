@@ -145,6 +145,26 @@ function loadout(p, dd) {
   };
 }
 
+// Pings (por tipo) y rendición de una partida. El "?" es el ping de "enemigo desaparecido".
+const PING_FIELDS = ['allInPings', 'assistMePings', 'baitPings', 'basicPings', 'commandPings', 'dangerPings', 'enemyMissingPings',
+  'enemyVisionPings', 'getBackPings', 'holdPings', 'needVisionPings', 'onMyWayPings', 'pushPings', 'retreatPings', 'visionClearedPings'];
+export function conductOf(p) {
+  const n = (k) => Number(p?.[k]) || 0;
+  return {
+    pg: {
+      t: PING_FIELDS.reduce((s, k) => s + n(k), 0), // todos
+      q: n('enemyMissingPings'),                     // "?"
+      ai: n('allInPings'),                           // todos adentro
+      gb: n('getBackPings') + n('retreatPings'),     // atrás / retirada
+      ba: n('baitPings'),
+      am: n('assistMePings'),
+      dg: n('dangerPings'),
+      ow: n('onMyWayPings'),
+    },
+    ff: p?.gameEndedInSurrender ? 1 : 0, // la partida acabó en rendición (si perdió, se rindió su equipo)
+  };
+}
+
 export function compactMatch(match, puuid, dd, timeline) {
   const info = match.info;
   const me = info.participants.find((p) => p.puuid === puuid);
@@ -178,6 +198,7 @@ export function compactMatch(match, puuid, dd, timeline) {
     towerDmg: me.damageDealtToBuildings ?? me.damageDealtToTurrets ?? 0,
     goldEarned: me.goldEarned || 0,
     fb: !!me.firstBloodKill,
+    ...conductOf(me),
     items: [me.item0, me.item1, me.item2, me.item3, me.item4, me.item5, me.item6].map((x) => x || 0),
     ...(({ spells, runes }) => ({ spells, runes }))(loadout(me, dd)),
     opp: opp ? loadout(opp, dd) : null,

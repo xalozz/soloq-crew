@@ -179,6 +179,39 @@ export function computeAccountStats(history) {
     gameRecords: gameRecords(history),
     tilt: tiltStats(history),
     vs: vsChamps(history),
+    conduct: conductStats(history),
+  };
+}
+
+// ---------------------------------------------------------------- pings y rendiciones
+// (solo partidas con estos datos: las antiguas se van completando en segundo plano)
+const FF_EARLY_S = 20 * 60; // rendición "temprana": antes del minuto 20
+function conductStats(history) {
+  const g = history.filter((x) => x.pg);
+  if (!g.length) return null;
+  const n = g.length;
+  const avg = (f) => r2(g.reduce((s, x) => s + (f(x) || 0), 0) / n);
+  const losses = g.filter((x) => !x.win), wins = g.filter((x) => x.win);
+  const ffL = losses.filter((x) => x.ff), ffW = wins.filter((x) => x.ff);
+  const maxQ = g.reduce((m, x) => (x.pg.q > (m?.pg.q ?? 0) ? x : m), null);
+  return {
+    games: n,
+    pings: r1(g.reduce((s, x) => s + x.pg.t, 0) / n),
+    q: avg((x) => x.pg.q),
+    allIn: avg((x) => x.pg.ai),
+    back: avg((x) => x.pg.gb),
+    bait: avg((x) => x.pg.ba),
+    danger: avg((x) => x.pg.dg),
+    omw: avg((x) => x.pg.ow),
+    maxQ: maxQ ? { ...gameBrief(maxQ), val: maxQ.pg.q } : null,
+    losses: losses.length,
+    ffLosses: ffL.length,
+    ffPct: pct(ffL.length, losses.length),
+    ffEarly: ffL.filter((x) => x.dur < FF_EARLY_S).length,
+    ffAvgMin: ffL.length ? r1(ffL.reduce((s, x) => s + x.dur, 0) / ffL.length / 60) : null,
+    wins: wins.length,
+    ffWins: ffW.length,
+    ffWinPct: pct(ffW.length, wins.length),
   };
 }
 
@@ -293,6 +326,7 @@ function gameRecords(history) {
     towers: best(long.filter((g) => g.towerDmg != null), (g) => g.towerDmg),
     gold: best(long.filter((g) => g.goldEarned != null), (g) => g.goldEarned),
     csMin: best(history.filter((g) => g.dur >= 900), (g) => r1(g.cs / (g.dur / 60))),
+    q: best(history.filter((g) => g.pg?.q), (g) => g.pg.q),
   };
   for (const k of Object.keys(out)) if (!out[k]) delete out[k];
   return out;
