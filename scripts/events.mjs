@@ -69,6 +69,11 @@ export function detectEvents(prevPlayers, players, ctx) {
   const events = [];
   const prevByName = new Map((prevPlayers ?? []).map((p) => [p.name, p]));
 
+  // El récord de "?" solo se anuncia cuando ya están los pings de toda la temporada (si no, saldrían falsos récords)
+  const pingsComplete = (prevPlayers ?? []).every((p) => {
+    const st = mainAcc(p)?.stats;
+    return !st || (st.conduct?.games ?? 0) >= st.games * 0.97;
+  });
   // Récords del grupo antes de esta pasada
   const groupBest = {};
   for (const p of prevPlayers ?? []) {
@@ -127,7 +132,7 @@ export function detectEvents(prevPlayers, players, ctx) {
     const freshIds = new Set(fresh.map((g) => g.id));
     for (const [rk, g] of Object.entries(a.stats?.gameRecords ?? {})) {
       const prev = groupBest[rk];
-      if (!g || !freshIds.has(g.id) || !RECORD_DEFS[rk]) continue;
+      if (!g || !freshIds.has(g.id) || !RECORD_DEFS[rk] || (rk === 'q' && !pingsComplete)) continue;
       if (prev && g.val <= prev.val) continue;
       events.push({
         ...base, type: 'record', t: g.t, gameId: g.id, rec: rk, val: g.val, champ: g.champ, k: g.k, d: g.d, a: g.a, win: g.win,
