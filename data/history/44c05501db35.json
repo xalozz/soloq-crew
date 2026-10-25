@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024907968",
+      "q": 420,
+      "t": 1792941244702,
+      "dur": 2104,
+      "win": true,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 6,
+      "d": 10,
+      "a": 4,
+      "kp": 29,
+      "cs": 220,
+      "vis": 18,
+      "dmg": 32776,
+      "teamDmg": 161088,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 12773,
+      "goldEarned": 15805,
+      "fb": false,
+      "pg": {
+        "t": 52,
+        "q": 6,
+        "ai": 0,
+        "gb": 16,
+        "ba": 0,
+        "am": 7,
+        "dg": 0,
+        "ow": 10
+      },
+      "ff": 0,
+      "items": [
+        3094,
+        3153,
+        3170,
+        3302,
+        3124,
+        3086,
+        3363
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1207,
+        "maxLeadMin": 18,
+        "maxDef": -6828,
+        "tgd15": -1075,
+        "gd15": -391
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8024860831",
       "q": 420,
       "t": 1792938578803,
