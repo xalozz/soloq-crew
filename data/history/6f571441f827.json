@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024658172",
+      "q": 420,
+      "t": 1792928183153,
+      "dur": 2164,
+      "win": false,
+      "champ": "Lillia",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 8,
+      "d": 8,
+      "a": 12,
+      "kp": 42,
+      "cs": 302,
+      "vis": 32,
+      "dmg": 30414,
+      "teamDmg": 158517,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5282,
+      "goldEarned": 16755,
+      "fb": false,
+      "items": [
+        2503,
+        2420,
+        3116,
+        4633,
+        6653,
+        3020,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Shyvana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7978,
+        "maxLeadMin": 29,
+        "maxDef": -2398,
+        "tgd15": 2609,
+        "gd15": -34
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8021685919",
       "t": 1792692924878,
       "dur": 591,
