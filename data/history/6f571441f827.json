@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024694321",
+      "q": 420,
+      "t": 1792930751614,
+      "dur": 2245,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 12,
+      "d": 9,
+      "a": 8,
+      "kp": 51,
+      "cs": 240,
+      "vis": 32,
+      "dmg": 36921,
+      "teamDmg": 176963,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2354,
+      "goldEarned": 18032,
+      "fb": false,
+      "items": [
+        6697,
+        6676,
+        3071,
+        3047,
+        6333,
+        3026,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Viego",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8232,
+        "maxLeadMin": 38,
+        "maxDef": -2308,
+        "tgd15": -1733,
+        "gd15": -1118
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8024658172",
       "q": 420,
       "t": 1792928183153,
