@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8025058231",
+      "q": 420,
+      "t": 1792946945282,
+      "dur": 1543,
+      "win": false,
+      "champ": "Lulu",
+      "role": "UTILITY",
+      "lvl": 13,
+      "k": 0,
+      "d": 5,
+      "a": 17,
+      "kp": 85,
+      "cs": 28,
+      "vis": 36,
+      "dmg": 5350,
+      "teamDmg": 77177,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 7517,
+      "fb": false,
+      "pg": {
+        "t": 50,
+        "q": 1,
+        "ai": 2,
+        "gb": 8,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 14
+      },
+      "ff": 0,
+      "items": [
+        3222,
+        6617,
+        3870,
+        3158,
+        3113,
+        3114,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Velkoz",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -13838,
+        "tgd15": -7392,
+        "gd15": -753
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8025001793",
       "q": 420,
       "t": 1792944378495,
