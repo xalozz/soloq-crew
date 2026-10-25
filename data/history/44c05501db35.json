@@ -2,6 +2,66 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8024554506",
+      "q": 420,
+      "t": 1792916988855,
+      "dur": 1446,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 14,
+      "k": 2,
+      "d": 5,
+      "a": 1,
+      "kp": 19,
+      "cs": 199,
+      "vis": 10,
+      "dmg": 6888,
+      "teamDmg": 57311,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6633,
+      "goldEarned": 11389,
+      "fb": false,
+      "items": [
+        3094,
+        6655,
+        3170,
+        3100,
+        1058,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1370,
+        "maxLeadMin": 11,
+        "maxDef": -9984,
+        "tgd15": -322,
+        "gd15": 36
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8024186188",
       "q": 420,
       "t": 1792877634683,
