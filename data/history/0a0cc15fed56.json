@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8025385913",
+      "q": 420,
+      "t": 1792960773135,
+      "dur": 2492,
+      "win": false,
+      "champ": "Ashe",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 10,
+      "d": 8,
+      "a": 11,
+      "kp": 57,
+      "cs": 305,
+      "vis": 26,
+      "dmg": 43378,
+      "teamDmg": 183148,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4757,
+      "goldEarned": 19575,
+      "fb": false,
+      "pg": {
+        "t": 51,
+        "q": 1,
+        "ai": 6,
+        "gb": 3,
+        "ba": 0,
+        "am": 5,
+        "dg": 0,
+        "ow": 13
+      },
+      "ff": 0,
+      "items": [
+        2523,
+        3046,
+        3139,
+        3033,
+        3153,
+        3065,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ziggs",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2523,
+        "maxLeadMin": 11,
+        "maxDef": -10693,
+        "tgd15": -999,
+        "gd15": 800
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8025329530",
       "q": 420,
       "t": 1792957292175,
