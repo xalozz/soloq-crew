@@ -1,0 +1,327 @@
+{
+  "id": "EUW1_7876676305",
+  "t": 1780608317416,
+  "dur": 1920,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": true,
+      "kills": 32,
+      "gold": 63679,
+      "bans": [
+        "Lulu",
+        "Shaco",
+        "Caitlyn",
+        "Mordekaiser",
+        "Naafiri"
+      ],
+      "players": [
+        {
+          "rid": "xPATQ#EUW",
+          "pos": "TOP",
+          "lvl": 19,
+          "champ": "Ornn",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 2,
+          "d": 3,
+          "a": 13,
+          "cs": 217,
+          "dmg": 20325,
+          "gold": 11898,
+          "items": [
+            6664,
+            3075,
+            3070,
+            3143,
+            3047,
+            1033,
+            3363
+          ]
+        },
+        {
+          "rid": "LOOK AT ME#XXXTT",
+          "pos": "JUNGLE",
+          "lvl": 16,
+          "champ": "LeeSin",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 16,
+          "d": 5,
+          "a": 5,
+          "cs": 173,
+          "dmg": 23690,
+          "gold": 15364,
+          "items": [
+            6333,
+            3047,
+            6698,
+            3133,
+            6696,
+            3155,
+            3340
+          ]
+        },
+        {
+          "rid": "VICO#1V2",
+          "pos": "MIDDLE",
+          "lvl": 16,
+          "champ": "Cassiopeia",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 8,
+          "d": 6,
+          "a": 4,
+          "cs": 189,
+          "dmg": 17488,
+          "gold": 12533,
+          "items": [
+            3157,
+            3170,
+            3040,
+            3116,
+            0,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "ZOINKS#GOOFY",
+          "pos": "BOTTOM",
+          "lvl": 16,
+          "champ": "Lucian",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 6,
+          "d": 4,
+          "a": 7,
+          "cs": 270,
+          "dmg": 29310,
+          "gold": 14756,
+          "items": [
+            1086,
+            3508,
+            6675,
+            2055,
+            3156,
+            3031,
+            3363
+          ]
+        },
+        {
+          "rid": "Feelness#dae",
+          "pos": "UTILITY",
+          "lvl": 15,
+          "champ": "Nami",
+          "spells": [
+            "SummonerFlash",
+            "SummonerHeal"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 0,
+          "d": 1,
+          "a": 17,
+          "cs": 33,
+          "dmg": 7550,
+          "gold": 9128,
+          "items": [
+            3870,
+            3107,
+            6620,
+            3158,
+            4642,
+            1082,
+            3364
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": false,
+      "kills": 19,
+      "gold": 58923,
+      "bans": [
+        "Darius",
+        "DrMundo",
+        "Quinn",
+        "Brand",
+        "Briar"
+      ],
+      "players": [
+        {
+          "rid": "Marsko#0212",
+          "pos": "TOP",
+          "lvl": 16,
+          "champ": "Warwick",
+          "spells": [
+            "SummonerBarrier",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 1,
+          "d": 8,
+          "a": 4,
+          "cs": 216,
+          "dmg": 15299,
+          "gold": 10237,
+          "items": [
+            1120,
+            3153,
+            3047,
+            3076,
+            3065,
+            2019,
+            3340
+          ]
+        },
+        {
+          "rid": "SGM Money#HSSEL",
+          "pos": "JUNGLE",
+          "lvl": 18,
+          "champ": "JarvanIV",
+          "spells": [
+            "SummonerFlash",
+            "SummonerSmite"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 6,
+          "d": 6,
+          "a": 11,
+          "cs": 295,
+          "dmg": 25822,
+          "gold": 15852,
+          "items": [
+            6696,
+            6698,
+            6333,
+            3047,
+            6694,
+            1038,
+            3364
+          ]
+        },
+        {
+          "rid": "ModeWine#EUW",
+          "pos": "MIDDLE",
+          "lvl": 15,
+          "champ": "Hwei",
+          "spells": [
+            "SummonerBarrier",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+            "perk-images/Styles/7201_Precision.png"
+          ],
+          "k": 9,
+          "d": 8,
+          "a": 6,
+          "cs": 209,
+          "dmg": 38299,
+          "gold": 13438,
+          "items": [
+            1056,
+            2503,
+            3175,
+            1058,
+            4645,
+            4628,
+            3340
+          ]
+        },
+        {
+          "rid": "BOUBIDIBOU#AAAAA",
+          "pos": "BOTTOM",
+          "lvl": 15,
+          "champ": "Ashe",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 2,
+          "d": 7,
+          "a": 2,
+          "cs": 240,
+          "dmg": 15327,
+          "gold": 11480,
+          "items": [
+            2523,
+            3046,
+            3031,
+            1036,
+            0,
+            0,
+            3363
+          ]
+        },
+        {
+          "rid": "it all away#EUW12",
+          "pos": "UTILITY",
+          "lvl": 13,
+          "champ": "Milio",
+          "spells": [
+            "SummonerHeal",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 1,
+          "d": 3,
+          "a": 12,
+          "cs": 29,
+          "dmg": 4658,
+          "gold": 7916,
+          "items": [
+            3870,
+            3107,
+            3108,
+            3158,
+            6617,
+            3114,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}
