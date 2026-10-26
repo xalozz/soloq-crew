@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8025781066",
+      "q": 420,
+      "t": 1792996784923,
+      "dur": 1509,
+      "win": false,
+      "champ": "Lux",
+      "role": "UTILITY",
+      "lvl": 11,
+      "k": 1,
+      "d": 4,
+      "a": 7,
+      "kp": 40,
+      "cs": 58,
+      "vis": 40,
+      "dmg": 12980,
+      "teamDmg": 81513,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 7027,
+      "fb": true,
+      "pg": {
+        "t": 21,
+        "q": 1,
+        "ai": 1,
+        "gb": 1,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 6
+      },
+      "ff": 1,
+      "items": [
+        3871,
+        6655,
+        1082,
+        1001,
+        3113,
+        3145,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Milio",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2130,
+        "maxLeadMin": 12,
+        "maxDef": -9707,
+        "tgd15": -994,
+        "gd15": 710
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8025115276",
       "q": 420,
       "t": 1792949624948,
