@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8027290974",
+      "q": 420,
+      "t": 1793124953716,
+      "dur": 2063,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 20,
+      "d": 3,
+      "a": 7,
+      "kp": 64,
+      "cs": 256,
+      "vis": 21,
+      "dmg": 46743,
+      "teamDmg": 138175,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 2,
+      "towerDmg": 4276,
+      "goldEarned": 21212,
+      "fb": false,
+      "pg": {
+        "t": 137,
+        "q": 9,
+        "ai": 0,
+        "gb": 31,
+        "ba": 0,
+        "am": 22,
+        "dg": 0,
+        "ow": 49
+      },
+      "ff": 0,
+      "items": [
+        6697,
+        6676,
+        3111,
+        6333,
+        6665,
+        3071,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "JarvanIV",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8852,
+        "maxLeadMin": 34,
+        "maxDef": -2796,
+        "tgd15": -1736,
+        "gd15": -338
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8027242955",
       "q": 420,
       "t": 1793122264224,
