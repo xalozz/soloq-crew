@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8027621221",
+      "q": 420,
+      "t": 1793136811292,
+      "dur": 1290,
+      "win": false,
+      "champ": "Trundle",
+      "role": "JUNGLE",
+      "lvl": 13,
+      "k": 1,
+      "d": 6,
+      "a": 4,
+      "kp": 36,
+      "cs": 166,
+      "vis": 18,
+      "dmg": 6919,
+      "teamDmg": 48717,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5177,
+      "goldEarned": 8630,
+      "fb": false,
+      "pg": {
+        "t": 33,
+        "q": 3,
+        "ai": 0,
+        "gb": 3,
+        "ba": 0,
+        "am": 2,
+        "dg": 0,
+        "ow": 14
+      },
+      "ff": 1,
+      "items": [
+        3047,
+        3078,
+        2055,
+        3074,
+        0,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Nunu",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -9641,
+        "tgd15": -3115,
+        "gd15": -145
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8027545304",
       "q": 420,
       "t": 1793135206106,
