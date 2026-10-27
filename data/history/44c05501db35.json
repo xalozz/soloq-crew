@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8027720386",
+      "q": 420,
+      "t": 1793141174871,
+      "dur": 1568,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 7,
+      "d": 16,
+      "a": 5,
+      "kp": 52,
+      "cs": 104,
+      "vis": 12,
+      "dmg": 17483,
+      "teamDmg": 80945,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3306,
+      "goldEarned": 11155,
+      "fb": false,
+      "pg": {
+        "t": 27,
+        "q": 5,
+        "ai": 0,
+        "gb": 0,
+        "ba": 0,
+        "am": 2,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 0,
+      "items": [
+        3144,
+        3170,
+        3124,
+        3094,
+        3302,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerHaste",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Xerath",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -16466,
+        "tgd15": -5715,
+        "gd15": 633
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8027666353",
       "q": 420,
       "t": 1793139015507,
