@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8027350800",
+      "q": 420,
+      "t": 1793126940561,
+      "dur": 1416,
+      "win": true,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 10,
+      "d": 0,
+      "a": 8,
+      "kp": 60,
+      "cs": 206,
+      "vis": 21,
+      "dmg": 18934,
+      "teamDmg": 84729,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5149,
+      "goldEarned": 12598,
+      "fb": false,
+      "pg": {
+        "t": 50,
+        "q": 0,
+        "ai": 3,
+        "gb": 14,
+        "ba": 0,
+        "am": 5,
+        "dg": 0,
+        "ow": 22
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        3157,
+        1082,
+        3047,
+        2055,
+        2510,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ekko",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15360,
+        "maxLeadMin": 24,
+        "maxDef": -1194,
+        "tgd15": 2414,
+        "gd15": 2562
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8027290974",
       "q": 420,
       "t": 1793124953716,
