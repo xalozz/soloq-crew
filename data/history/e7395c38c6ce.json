@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8028111685",
+      "q": 420,
+      "t": 1793194102877,
+      "dur": 2011,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 8,
+      "d": 10,
+      "a": 12,
+      "kp": 65,
+      "cs": 218,
+      "vis": 24,
+      "dmg": 28282,
+      "teamDmg": 110870,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1267,
+      "goldEarned": 13303,
+      "fb": false,
+      "pg": {
+        "t": 23,
+        "q": 7,
+        "ai": 0,
+        "gb": 9,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        3116,
+        2503,
+        3175,
+        3157,
+        6653,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Jhin",
+        "spells": [
+          "SummonerHaste",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 127,
+        "maxLeadMin": 4,
+        "maxDef": -9205,
+        "tgd15": -5793,
+        "gd15": -1290
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8028075225",
       "q": 420,
       "t": 1793191661841,
