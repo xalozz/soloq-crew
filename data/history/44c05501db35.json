@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8028781992",
+      "q": 420,
+      "t": 1793228538985,
+      "dur": 2300,
+      "win": true,
+      "champ": "Viktor",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 17,
+      "d": 8,
+      "a": 17,
+      "kp": 65,
+      "cs": 277,
+      "vis": 18,
+      "dmg": 55582,
+      "teamDmg": 188042,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9792,
+      "goldEarned": 20512,
+      "fb": false,
+      "pg": {
+        "t": 56,
+        "q": 3,
+        "ai": 0,
+        "gb": 3,
+        "ba": 0,
+        "am": 9,
+        "dg": 0,
+        "ow": 29
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        2503,
+        6653,
+        3157,
+        3100,
+        3171,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Yasuo",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6887,
+        "maxLeadMin": 27,
+        "maxDef": -1305,
+        "tgd15": -830,
+        "gd15": 1629
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8028720077",
       "q": 420,
       "t": 1793225864646,
