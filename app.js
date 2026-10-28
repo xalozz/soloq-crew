@@ -1008,7 +1008,7 @@ function rolesCard(players) {
           }),
           h('td', { class: 'rt-total', title: 'Analizadas / temporada' }, h('b', {}, total), p.wins + p.losses > total ? h('small', {}, ` / ${p.wins + p.losses}`) : null));
       })))),
-    h('p', { class: 'muted small center' }, 'Partidas de SoloQ de esta temporada de la cuenta principal. Resaltado: su rol principal. En "Partidas", analizadas / total de la temporada (mientras se descarga el historial pueden no coincidir; los remakes no cuentan).'));
+    h('p', { class: 'muted small center' }, 'Partidas de SoloQ de esta temporada de la cuenta principal. Resaltado: su rol principal. En "Partidas", analizadas / total de la temporada: cuando no coinciden es porque Riot ya no devuelve las partidas más antiguas de esa cuenta, así que los porcentajes salen de las que sí da.'));
 }
 
 // ---------------------------------------------------------------- días
