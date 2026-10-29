@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8029107403",
+      "q": 420,
+      "t": 1793277935192,
+      "dur": 1765,
+      "win": false,
+      "champ": "Tristana",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 2,
+      "d": 7,
+      "a": 3,
+      "kp": 22,
+      "cs": 213,
+      "vis": 30,
+      "dmg": 10608,
+      "teamDmg": 96825,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1720,
+      "goldEarned": 10386,
+      "fb": false,
+      "pg": {
+        "t": 33,
+        "q": 4,
+        "ai": 0,
+        "gb": 10,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        3031,
+        3172,
+        3032,
+        3140,
+        1018,
+        1042,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 613,
+        "maxLeadMin": 6,
+        "maxDef": -5082,
+        "tgd15": -725,
+        "gd15": -633
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8029082300",
       "q": 420,
       "t": 1793275878017,
