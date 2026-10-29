@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8029403746",
+      "q": 420,
+      "t": 1793296839056,
+      "dur": 1771,
+      "win": true,
+      "champ": "Diana",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 8,
+      "d": 5,
+      "a": 8,
+      "kp": 48,
+      "cs": 240,
+      "vis": 21,
+      "dmg": 24229,
+      "teamDmg": 116070,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2047,
+      "goldEarned": 14190,
+      "fb": false,
+      "pg": {
+        "t": 63,
+        "q": 0,
+        "ai": 2,
+        "gb": 9,
+        "ba": 0,
+        "am": 17,
+        "dg": 0,
+        "ow": 28
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        2420,
+        3102,
+        3020,
+        2510,
+        1058,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Maokai",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 11255,
+        "maxLeadMin": 30,
+        "maxDef": -10,
+        "tgd15": 3515,
+        "gd15": 423
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8029361406",
       "q": 420,
       "t": 1793294480368,
