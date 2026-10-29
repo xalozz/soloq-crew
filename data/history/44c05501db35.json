@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8029811733",
+      "q": 420,
+      "t": 1793314119437,
+      "dur": 1689,
+      "win": true,
+      "champ": "LeeSin",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 8,
+      "d": 3,
+      "a": 8,
+      "kp": 52,
+      "cs": 168,
+      "vis": 32,
+      "dmg": 14826,
+      "teamDmg": 103695,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1035,
+      "goldEarned": 12278,
+      "fb": false,
+      "pg": {
+        "t": 72,
+        "q": 0,
+        "ai": 0,
+        "gb": 9,
+        "ba": 0,
+        "am": 15,
+        "dg": 0,
+        "ow": 36
+      },
+      "ff": 0,
+      "items": [
+        3047,
+        6692,
+        6610,
+        2055,
+        3071,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Nocturne",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8170,
+        "maxLeadMin": 29,
+        "maxDef": -1547,
+        "tgd15": 311,
+        "gd15": -152
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8029744605",
       "q": 420,
       "t": 1793311560530,
