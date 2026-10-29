@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8029705614",
+      "q": 420,
+      "t": 1793309111392,
+      "dur": 1356,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 12,
+      "k": 2,
+      "d": 10,
+      "a": 5,
+      "kp": 39,
+      "cs": 142,
+      "vis": 22,
+      "dmg": 10245,
+      "teamDmg": 54846,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 8569,
+      "fb": false,
+      "pg": {
+        "t": 43,
+        "q": 1,
+        "ai": 0,
+        "gb": 10,
+        "ba": 0,
+        "am": 2,
+        "dg": 0,
+        "ow": 3
+      },
+      "ff": 0,
+      "items": [
+        1037,
+        6676,
+        3047,
+        1018,
+        1038,
+        2055,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Zyra",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 827,
+        "maxLeadMin": 4,
+        "maxDef": -12969,
+        "tgd15": -3827,
+        "gd15": 202
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8029235988",
       "q": 420,
       "t": 1793287425365,
