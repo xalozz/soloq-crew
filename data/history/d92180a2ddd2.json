@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8030404434",
+      "q": 420,
+      "t": 1793380760094,
+      "dur": 1537,
+      "win": true,
+      "champ": "Renata",
+      "role": "UTILITY",
+      "lvl": 13,
+      "k": 1,
+      "d": 7,
+      "a": 24,
+      "kp": 71,
+      "cs": 24,
+      "vis": 56,
+      "dmg": 8346,
+      "teamDmg": 101683,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3139,
+      "goldEarned": 8832,
+      "fb": false,
+      "pg": {
+        "t": 26,
+        "q": 4,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 5,
+        "dg": 0,
+        "ow": 9
+      },
+      "ff": 0,
+      "items": [
+        3158,
+        3876,
+        3109,
+        4005,
+        2022,
+        1029,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/Guardian/Guardian.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Rakan",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6260,
+        "maxLeadMin": 17,
+        "maxDef": -418,
+        "tgd15": 2768,
+        "gd15": 721
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8030380582",
       "q": 420,
       "t": 1793378908683,
