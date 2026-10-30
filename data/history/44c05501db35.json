@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8030739649",
+      "q": 420,
+      "t": 1793395316774,
+      "dur": 1600,
+      "win": true,
+      "champ": "Ziggs",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 8,
+      "d": 2,
+      "a": 8,
+      "kp": 42,
+      "cs": 224,
+      "vis": 24,
+      "dmg": 29808,
+      "teamDmg": 103362,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 13621,
+      "goldEarned": 12419,
+      "fb": false,
+      "pg": {
+        "t": 30,
+        "q": 10,
+        "ai": 1,
+        "gb": 6,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 3
+      },
+      "ff": 1,
+      "items": [
+        1056,
+        6655,
+        3175,
+        2420,
+        6653,
+        4645,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Akali",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10868,
+        "maxLeadMin": 27,
+        "maxDef": -109,
+        "tgd15": 2438,
+        "gd15": 1145
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8030632407",
       "q": 420,
       "t": 1793391776943,
