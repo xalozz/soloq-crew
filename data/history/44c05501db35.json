@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8030207391",
+      "q": 420,
+      "t": 1793368825164,
+      "dur": 1520,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 3,
+      "d": 9,
+      "a": 2,
+      "kp": 31,
+      "cs": 169,
+      "vis": 13,
+      "dmg": 14828,
+      "teamDmg": 78550,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 10709,
+      "fb": false,
+      "pg": {
+        "t": 53,
+        "q": 5,
+        "ai": 0,
+        "gb": 10,
+        "ba": 0,
+        "am": 14,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 1,
+      "items": [
+        3094,
+        3170,
+        6655,
+        3157,
+        2022,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lissandra",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 32,
+        "maxLeadMin": 2,
+        "maxDef": -13656,
+        "tgd15": -5771,
+        "gd15": -85
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8030189682",
       "q": 420,
       "t": 1793367035399,
