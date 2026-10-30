@@ -1573,22 +1573,25 @@ function eventItem(e, byName) {
 
 function renderEvents() {
   const box = document.getElementById('events');
-  const list = DATA.events ?? [];
+  // Solo los últimos 30 días, dentro de una caja con su propio scroll
+  const list = (DATA.events ?? []).filter((e) => Date.now() - e.t < 30 * 864e5);
   if (!list.length) {
-    box.replaceChildren(h('p', { class: 'empty' }, 'Todavía no hay novedades. Aquí saldrán las subidas y bajadas, los pentas, las rachas y los récords en cuanto pasen.'));
+    box.replaceChildren(h('p', { class: 'empty' }, 'Sin novedades en los últimos 30 días. Aquí saldrán las subidas y bajadas, los pentas, las rachas y los récords en cuanto pasen.'));
     return;
   }
   const byName = new Map(MODEL.map((p) => [p.name, p]));
   const today = dayKey(Date.now()), yest = dayKey(Date.now() - 864e5);
   const groups = new Map();
-  for (const e of list.slice(0, 30)) {
+  for (const e of list) {
     const k = dayKey(e.t);
     if (!groups.has(k)) groups.set(k, []);
     groups.get(k).push(e);
   }
-  box.replaceChildren(...[...groups].map(([k, evs]) => h('div', { class: 'ev-day' },
-    h('h4', { class: 'ev-date' }, k === today ? 'Hoy' : k === yest ? 'Ayer' : prettyDay(k)),
-    ...evs.map((e) => eventItem(e, byName)))));
+  box.replaceChildren(
+    h('div', { class: 'feed-head' }, h('b', {}, `${list.length} novedad${list.length === 1 ? '' : 'es'}`), h('span', { class: 'muted' }, 'últimos 30 días')),
+    h('div', { class: 'feed-scroll' }, [...groups].map(([k, evs]) => h('div', { class: 'ev-day' },
+      h('h4', { class: 'ev-date' }, k === today ? 'Hoy' : k === yest ? 'Ayer' : prettyDay(k)),
+      ...evs.map((e) => eventItem(e, byName))))));
 }
 
 // Aviso arriba con lo de las últimas 12 h (se puede cerrar; no vuelve a salir en este navegador)

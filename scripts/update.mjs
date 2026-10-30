@@ -53,7 +53,8 @@ const HISTORY_CAP = 3000;
 const MATCH_COUNT = Math.min(100, Number(process.env.MATCH_COUNT || 100));
 const RECENT_PUBLISHED = 20;
 const SEQ_PUBLISHED = 300; // partidas para la curva de elo y el ranking por semanas/meses
-const EVENTS_PUBLISHED = 40;
+const EVENTS_DAYS = 30;        // la web enseña las novedades de los últimos 30 días
+const EVENTS_PUBLISHED = 200;  // tope de seguridad
 const EVENTS_CAP = 300;
 const PENDING_MAX_AGE = 3 * 3600e3;  // avisos que no se pudieron enviar: se reintentan durante 3 h
 const WEEKLY_FROM_MIN = 9 * 60 + 45; // el resumen se cierra y se envía el lunes a partir de las 9:45
@@ -551,7 +552,7 @@ async function main() {
     players,
     duos,
     rivals,
-    events: log.events.slice(0, EVENTS_PUBLISHED),
+    events: log.events.filter((e) => e.t >= weekStart(now) - (EVENTS_DAYS - 7) * 864e5).slice(0, EVENTS_PUBLISHED),
     week: { current: currentWeek, last: weeksArchive.weeks[0] ?? null },
     weekWins,
     challenges,
