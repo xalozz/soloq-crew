@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8030380582",
+      "q": 420,
+      "t": 1793378908683,
+      "dur": 1562,
+      "win": false,
+      "champ": "Lulu",
+      "role": "UTILITY",
+      "lvl": 12,
+      "k": 2,
+      "d": 10,
+      "a": 3,
+      "kp": 50,
+      "cs": 16,
+      "vis": 46,
+      "dmg": 9358,
+      "teamDmg": 68069,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 7771,
+      "fb": false,
+      "pg": {
+        "t": 17,
+        "q": 5,
+        "ai": 0,
+        "gb": 5,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        4005,
+        3109,
+        3876,
+        3158,
+        4642,
+        2022,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerHeal"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Alistar",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 121,
+        "maxLeadMin": 2,
+        "maxDef": -13296,
+        "tgd15": -5387,
+        "gd15": -1464
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8027088418",
       "q": 420,
       "t": 1793113588301,
