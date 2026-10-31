@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8031573840",
+      "q": 420,
+      "t": 1793466726273,
+      "dur": 1464,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 13,
+      "k": 6,
+      "d": 7,
+      "a": 3,
+      "kp": 45,
+      "cs": 159,
+      "vis": 20,
+      "dmg": 14414,
+      "teamDmg": 90221,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 10123,
+      "fb": false,
+      "pg": {
+        "t": 25,
+        "q": 0,
+        "ai": 0,
+        "gb": 6,
+        "ba": 0,
+        "am": 8,
+        "dg": 0,
+        "ow": 5
+      },
+      "ff": 0,
+      "items": [
+        3031,
+        6676,
+        3008,
+        2055,
+        1036,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Talon",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1766,
+        "maxLeadMin": 4,
+        "maxDef": -5390,
+        "tgd15": 1068,
+        "gd15": -690
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8031355610",
       "q": 420,
       "t": 1793455008688,
