@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8031138451",
+      "q": 420,
+      "t": 1793438803116,
+      "dur": 1757,
+      "win": true,
+      "champ": "JarvanIV",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 2,
+      "d": 5,
+      "a": 21,
+      "kp": 62,
+      "cs": 181,
+      "vis": 30,
+      "dmg": 12885,
+      "teamDmg": 109644,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9058,
+      "goldEarned": 12532,
+      "fb": false,
+      "pg": {
+        "t": 69,
+        "q": 0,
+        "ai": 0,
+        "gb": 19,
+        "ba": 0,
+        "am": 22,
+        "dg": 0,
+        "ow": 16
+      },
+      "ff": 1,
+      "items": [
+        6610,
+        6692,
+        3111,
+        3071,
+        1029,
+        1029,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "LeeSin",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10362,
+        "maxLeadMin": 30,
+        "maxDef": -1066,
+        "tgd15": 7,
+        "gd15": 344
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8030739649",
       "q": 420,
       "t": 1793395316774,
