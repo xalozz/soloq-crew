@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8031731157",
+      "q": 420,
+      "t": 1793476126912,
+      "dur": 1518,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 13,
+      "k": 3,
+      "d": 11,
+      "a": 4,
+      "kp": 47,
+      "cs": 144,
+      "vis": 15,
+      "dmg": 11962,
+      "teamDmg": 63241,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2746,
+      "goldEarned": 9682,
+      "fb": false,
+      "pg": {
+        "t": 34,
+        "q": 5,
+        "ai": 0,
+        "gb": 6,
+        "ba": 0,
+        "am": 13,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        3100,
+        6655,
+        3170,
+        2421,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "KogMaw",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -8910,
+        "tgd15": -4949,
+        "gd15": -2580
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8031673078",
       "q": 420,
       "t": 1793473105533,
