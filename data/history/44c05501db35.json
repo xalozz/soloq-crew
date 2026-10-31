@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8031221772",
+      "q": 420,
+      "t": 1793446077731,
+      "dur": 1493,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 6,
+      "d": 3,
+      "a": 10,
+      "kp": 50,
+      "cs": 213,
+      "vis": 21,
+      "dmg": 25338,
+      "teamDmg": 97351,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 12072,
+      "goldEarned": 11955,
+      "fb": false,
+      "pg": {
+        "t": 51,
+        "q": 2,
+        "ai": 1,
+        "gb": 21,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 16
+      },
+      "ff": 0,
+      "items": [
+        6653,
+        2503,
+        3175,
+        3116,
+        0,
+        3916,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Katarina",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10199,
+        "maxLeadMin": 25,
+        "maxDef": -360,
+        "tgd15": 5476,
+        "gd15": 1849
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8031188430",
       "q": 420,
       "t": 1793444244542,
