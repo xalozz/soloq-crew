@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8032341407",
+      "q": 420,
+      "t": 1793537381704,
+      "dur": 1857,
+      "win": true,
+      "champ": "Galio",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 5,
+      "d": 6,
+      "a": 11,
+      "kp": 47,
+      "cs": 184,
+      "vis": 30,
+      "dmg": 19509,
+      "teamDmg": 114892,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1140,
+      "goldEarned": 12064,
+      "fb": false,
+      "pg": {
+        "t": 26,
+        "q": 2,
+        "ai": 0,
+        "gb": 4,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 9
+      },
+      "ff": 0,
+      "items": [
+        3075,
+        3173,
+        0,
+        6664,
+        2504,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Morgana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 11109,
+        "maxLeadMin": 31,
+        "maxDef": -680,
+        "tgd15": 1511,
+        "gd15": -178
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8032320225",
       "q": 420,
       "t": 1793535099539,
