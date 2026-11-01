@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8032205099",
+      "q": 420,
+      "t": 1793524612476,
+      "dur": 2214,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 4,
+      "d": 6,
+      "a": 7,
+      "kp": 28,
+      "cs": 309,
+      "vis": 22,
+      "dmg": 32886,
+      "teamDmg": 160139,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 12796,
+      "goldEarned": 15054,
+      "fb": false,
+      "pg": {
+        "t": 60,
+        "q": 14,
+        "ai": 1,
+        "gb": 12,
+        "ba": 0,
+        "am": 6,
+        "dg": 0,
+        "ow": 14
+      },
+      "ff": 0,
+      "items": [
+        3165,
+        2503,
+        3116,
+        3175,
+        6653,
+        1052,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Zoe",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5296,
+        "maxLeadMin": 37,
+        "maxDef": -2538,
+        "tgd15": -1561,
+        "gd15": -1050
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8031966137",
       "q": 420,
       "t": 1793487642403,
