@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8032292138",
+      "q": 420,
+      "t": 1793533251960,
+      "dur": 1572,
+      "win": true,
+      "champ": "Viktor",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 2,
+      "d": 5,
+      "a": 8,
+      "kp": 40,
+      "cs": 168,
+      "vis": 8,
+      "dmg": 20610,
+      "teamDmg": 78195,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3389,
+      "goldEarned": 8955,
+      "fb": false,
+      "pg": {
+        "t": 21,
+        "q": 1,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 9,
+        "dg": 0,
+        "ow": 8
+      },
+      "ff": 1,
+      "items": [
+        1056,
+        2503,
+        3171,
+        3100,
+        1052,
+        1052,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Malzahar",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2215,
+        "maxLeadMin": 27,
+        "maxDef": -2832,
+        "tgd15": -1966,
+        "gd15": -872
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8032239070",
       "q": 420,
       "t": 1793529396880,
