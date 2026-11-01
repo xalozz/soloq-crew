@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8032218244",
+      "q": 420,
+      "t": 1793526758131,
+      "dur": 1826,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 4,
+      "d": 10,
+      "a": 6,
+      "kp": 31,
+      "cs": 190,
+      "vis": 16,
+      "dmg": 19155,
+      "teamDmg": 123265,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1892,
+      "goldEarned": 12768,
+      "fb": false,
+      "pg": {
+        "t": 37,
+        "q": 5,
+        "ai": 0,
+        "gb": 14,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        3094,
+        3170,
+        6657,
+        3157,
+        3057,
+        3113,
+        3363
+      ],
+      "spells": [
+        "SummonerHaste",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Irelia",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1428,
+        "maxLeadMin": 7,
+        "maxDef": -8055,
+        "tgd15": -2041,
+        "gd15": 1259
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8032205099",
       "q": 420,
       "t": 1793524612476,
