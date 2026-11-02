@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033644766",
+      "q": 420,
+      "t": 1793633747918,
+      "dur": 1342,
+      "win": false,
+      "champ": "JarvanIV",
+      "role": "JUNGLE",
+      "lvl": 12,
+      "k": 1,
+      "d": 7,
+      "a": 5,
+      "kp": 30,
+      "cs": 124,
+      "vis": 23,
+      "dmg": 7200,
+      "teamDmg": 58641,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 7102,
+      "fb": false,
+      "pg": {
+        "t": 30,
+        "q": 3,
+        "ai": 1,
+        "gb": 11,
+        "ba": 0,
+        "am": 7,
+        "dg": 0,
+        "ow": 5
+      },
+      "ff": 1,
+      "items": [
+        3047,
+        6692,
+        3133,
+        2021,
+        0,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Shaco",
+        "spells": [
+          "SummonerSmite",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -13304,
+        "tgd15": -6485,
+        "gd15": -751
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033525384",
       "q": 420,
       "t": 1793625864361,
