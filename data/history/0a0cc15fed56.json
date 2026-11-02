@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033947215",
+      "q": 420,
+      "t": 1793649056933,
+      "dur": 1505,
+      "win": false,
+      "champ": "Kaisa",
+      "role": "BOTTOM",
+      "lvl": 13,
+      "k": 5,
+      "d": 5,
+      "a": 1,
+      "kp": 40,
+      "cs": 201,
+      "vis": 8,
+      "dmg": 17383,
+      "teamDmg": 61705,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2881,
+      "goldEarned": 10754,
+      "fb": false,
+      "pg": {
+        "t": 39,
+        "q": 4,
+        "ai": 2,
+        "gb": 7,
+        "ba": 0,
+        "am": 5,
+        "dg": 0,
+        "ow": 12
+      },
+      "ff": 0,
+      "items": [
+        1086,
+        3124,
+        2421,
+        6672,
+        3108,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerExhaust"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Twitch",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 114,
+        "maxLeadMin": 8,
+        "maxDef": -12911,
+        "tgd15": -6912,
+        "gd15": 532
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033901836",
       "q": 420,
       "t": 1793647051397,
