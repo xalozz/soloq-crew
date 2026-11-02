@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033917696",
+      "q": 420,
+      "t": 1793647394952,
+      "dur": 1371,
+      "win": true,
+      "champ": "Trundle",
+      "role": "JUNGLE",
+      "lvl": 13,
+      "k": 10,
+      "d": 3,
+      "a": 8,
+      "kp": 46,
+      "cs": 141,
+      "vis": 14,
+      "dmg": 15633,
+      "teamDmg": 82889,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8054,
+      "goldEarned": 11384,
+      "fb": false,
+      "pg": {
+        "t": 41,
+        "q": 0,
+        "ai": 0,
+        "gb": 6,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 24
+      },
+      "ff": 1,
+      "items": [
+        3742,
+        3078,
+        3047,
+        2019,
+        3133,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Kayn",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13393,
+        "maxLeadMin": 23,
+        "maxDef": -944,
+        "tgd15": 7796,
+        "gd15": 2146
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8032966501",
       "q": 420,
       "t": 1793564302538,
