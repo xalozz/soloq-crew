@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033818088",
+      "q": 420,
+      "t": 1793643558026,
+      "dur": 1505,
+      "win": true,
+      "champ": "Syndra",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 3,
+      "d": 1,
+      "a": 4,
+      "kp": 25,
+      "cs": 198,
+      "vis": 13,
+      "dmg": 19476,
+      "teamDmg": 85770,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9609,
+      "goldEarned": 10062,
+      "fb": false,
+      "pg": {
+        "t": 5,
+        "q": 2,
+        "ai": 0,
+        "gb": 0,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 1,
+      "items": [
+        1058,
+        6655,
+        3175,
+        2031,
+        4645,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Katarina",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8099,
+        "maxLeadMin": 26,
+        "maxDef": -1635,
+        "tgd15": 3,
+        "gd15": -459
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033752354",
       "q": 420,
       "t": 1793641747948,
