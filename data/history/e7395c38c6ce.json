@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033703281",
+      "q": 420,
+      "t": 1793638894432,
+      "dur": 2470,
+      "win": true,
+      "champ": "Gragas",
+      "role": "TOP",
+      "lvl": 20,
+      "k": 3,
+      "d": 10,
+      "a": 15,
+      "kp": 31,
+      "cs": 211,
+      "vis": 30,
+      "dmg": 26419,
+      "teamDmg": 189496,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5574,
+      "goldEarned": 14660,
+      "fb": false,
+      "pg": {
+        "t": 22,
+        "q": 5,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 5,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        6657,
+        3089,
+        3020,
+        3100,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Mordekaiser",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5299,
+        "maxLeadMin": 41,
+        "maxDef": -3313,
+        "tgd15": 1379,
+        "gd15": -420
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033525384",
       "q": 420,
       "t": 1793625864361,
