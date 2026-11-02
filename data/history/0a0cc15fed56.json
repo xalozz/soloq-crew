@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033810122",
+      "q": 420,
+      "t": 1793643426904,
+      "dur": 1759,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 16,
+      "k": 17,
+      "d": 7,
+      "a": 8,
+      "kp": 69,
+      "cs": 266,
+      "vis": 13,
+      "dmg": 31763,
+      "teamDmg": 99526,
+      "penta": 0,
+      "quadra": 1,
+      "triple": 1,
+      "towerDmg": 12469,
+      "goldEarned": 18689,
+      "fb": true,
+      "pg": {
+        "t": 44,
+        "q": 5,
+        "ai": 2,
+        "gb": 14,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        2019,
+        3032,
+        3085,
+        3036,
+        3031,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBoost"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Yunara",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBoost"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5613,
+        "maxLeadMin": 30,
+        "maxDef": -2487,
+        "tgd15": 1850,
+        "gd15": 2610
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033757894",
       "q": 420,
       "t": 1793641436447,
