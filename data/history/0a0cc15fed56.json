@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033638989",
+      "q": 420,
+      "t": 1793633855593,
+      "dur": 1560,
+      "win": false,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 13,
+      "k": 4,
+      "d": 6,
+      "a": 3,
+      "kp": 44,
+      "cs": 201,
+      "vis": 19,
+      "dmg": 13098,
+      "teamDmg": 65760,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 7352,
+      "goldEarned": 10535,
+      "fb": false,
+      "pg": {
+        "t": 38,
+        "q": 2,
+        "ai": 0,
+        "gb": 13,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        3085,
+        2523,
+        3031,
+        0,
+        0,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lucian",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 298,
+        "maxLeadMin": 3,
+        "maxDef": -11034,
+        "tgd15": -4083,
+        "gd15": -779
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8032933317",
       "q": 420,
       "t": 1793563919297,
