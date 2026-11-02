@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033496369",
+      "q": 420,
+      "t": 1793623681422,
+      "dur": 2288,
+      "win": true,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 5,
+      "d": 7,
+      "a": 5,
+      "kp": 33,
+      "cs": 274,
+      "vis": 45,
+      "dmg": 16653,
+      "teamDmg": 128481,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2926,
+      "goldEarned": 15895,
+      "fb": false,
+      "pg": {
+        "t": 67,
+        "q": 1,
+        "ai": 1,
+        "gb": 17,
+        "ba": 0,
+        "am": 16,
+        "dg": 0,
+        "ow": 9
+      },
+      "ff": 0,
+      "items": [
+        3111,
+        6676,
+        3031,
+        3036,
+        1018,
+        1037,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Ekko",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10005,
+        "maxLeadMin": 39,
+        "maxDef": -3328,
+        "tgd15": -1729,
+        "gd15": -2466
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033474010",
       "q": 420,
       "t": 1793620585584,

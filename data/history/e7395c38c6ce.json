@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8033496369",
+      "q": 420,
+      "t": 1793623681422,
+      "dur": 2288,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 0,
+      "d": 5,
+      "a": 9,
+      "kp": 30,
+      "cs": 255,
+      "vis": 24,
+      "dmg": 20170,
+      "teamDmg": 128481,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1744,
+      "goldEarned": 12405,
+      "fb": false,
+      "pg": {
+        "t": 14,
+        "q": 4,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 3
+      },
+      "ff": 0,
+      "items": [
+        6653,
+        2503,
+        3116,
+        4630,
+        0,
+        3175,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10005,
+        "maxLeadMin": 39,
+        "maxDef": -3328,
+        "tgd15": -1729,
+        "gd15": -586
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033474010",
       "q": 420,
       "t": 1793620585584,
