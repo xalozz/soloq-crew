@@ -117,8 +117,6 @@ export function detectEvents(prevPlayers, players, ctx) {
     for (const g of fresh) {
       const type = g.penta ? 'penta' : g.quadra ? 'quadra' : null;
       if (type) events.push({ ...base, type, t: g.t, gameId: g.id, champ: g.champ, k: g.k, d: g.d, a: g.a, win: g.win });
-      // Robos de dragón, barón, heraldo… (Riot da el número, no qué objetivo era)
-      if (g.st > 0) events.push({ ...base, type: 'steal', t: g.t, gameId: g.id, n: g.st, champ: g.champ, k: g.k, d: g.d, a: g.a, win: g.win });
     }
 
     // Rachas (al llegar a 5, 7, 10…) y rachas que se cortan
@@ -160,7 +158,6 @@ export function eventText(e) {
     case 'games': return `🎮 ${e.name} llega a ${e.n} partidas esta temporada`;
     case 'penta': return `🖐️ ¡Pentakill de ${e.name} con ${e.champ}!`;
     case 'quadra': return `✋ Cuádruple de ${e.name} con ${e.champ}`;
-    case 'steal': return e.n > 1 ? `🦝 ¡${e.name} roba ${e.n} objetivos épicos en una partida con ${e.champ}!` : `🦝 ¡${e.name} roba un objetivo épico con ${e.champ}!`;
     case 'streak': return e.kind === 'W' ? `🔥 ${e.name} lleva ${e.n} victorias seguidas` : `🧊 ${e.name} lleva ${e.n} derrotas seguidas`;
     case 'streakEnd': return e.kind === 'W' ? `✂️ Se acaba la racha de ${e.n} victorias de ${e.name}` : `🌤️ ${e.name} corta su racha de ${e.n} derrotas`;
     case 'record': return `🏆 Nuevo récord del grupo (${RECORD_DEFS[e.rec]?.[0] ?? e.rec}): ${e.name}, ${RECORD_DEFS[e.rec]?.[1](e.val) ?? e.val}`;
@@ -185,8 +182,6 @@ export function eventEmbed(e, { ddVersion } = {}) {
     }
     case 'games':
       return { ...base, color: COLOR.accent };
-    case 'steal':
-      return { ...base, description: [kda, 'Dragón, barón, heraldo o larvas: Riot no dice cuál 🤫'].join('\n'), color: COLOR.gold, thumbnail: champUrl(ddVersion, e.champ) ? { url: champUrl(ddVersion, e.champ) } : undefined };
     case 'penta':
     case 'quadra':
       return { ...base, description: kda, color: COLOR.gold, thumbnail: champUrl(ddVersion, e.champ) ? { url: champUrl(ddVersion, e.champ) } : undefined };
@@ -212,7 +207,6 @@ export function welcomeEmbed() {
     description: [
       'A partir de ahora este canal recibe:',
       '• ⬆️⬇️ Subidas y bajadas de división o liga',
-      '• 🦝 Robos de dragón o barón',
       '• 🖐️ Pentakills, 🔥 rachas de 5+ victorias o derrotas y 🏆 récords del grupo',
       '• 📊 Cada lunes, el resumen de la semana',
       '',

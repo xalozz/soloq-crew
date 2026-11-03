@@ -815,8 +815,7 @@ function tabStats(acc) {
       kv('KP media', s.avgKp != null ? `${s.avgKp}%` : null),
       kv('Récord de kills', s.maxKills),
       kv('First bloods', s.firstBloods),
-      kv('Pentakills', s.pentas),
-      kv('Robos de objetivos', s.awards?.stealGames ? h('span', { title: `Dragón, barón, heraldo o larvas robados (Riot no dice cuál) · ${s.awards.stealAssists} asistencias en robos${s.awards.stealGames < s.games ? ` · con ${s.awards.stealGames} de ${s.games} partidas` : ''}` }, `${s.awards.steals}`) : null)),
+      kv('Pentakills', s.pentas)),
     group('Farmeo y visión',
       kv('CS / min', fmt(s.csPerMin)),
       kv('Daño / min', s.dmgPerMin != null ? fmtInt(s.dmgPerMin) : null),
@@ -1166,10 +1165,6 @@ const AWARDS = [
     val: (p) => (p.s?.awards?.autofill?.games >= 20 ? p.s.awards.autofill.winrate : null), fmt: (v) => `${fmt(v, 1)}%`, extra: (p) => `${p.s.awards.autofill.games} part. fuera de línea` },
   { key: 'streak', icon: '⚡', title: 'Sin frenos', desc: 'La racha de victorias seguidas más larga.', val: (p) => p.s?.streak?.bestWin, fmt: (v) => `${v} seguidas` },
   { key: 'penta', icon: '✋', title: 'Pentakill hunter', desc: 'Más pentakills.', val: (p) => p.s?.awards?.pentas, fmt: (v) => `${v} penta${v === 1 ? '' : 's'}` },
-  { key: 'thief', icon: '❖', title: 'El ladrón', desc: 'Más objetivos épicos robados al rival (dragón, barón, heraldo o larvas: Riot no dice cuál).',
-    val: (p) => (p.s?.awards?.steals || null), fmt: (v) => `${v} robo${v === 1 ? '' : 's'}`,
-    extra: (p) => `${p.s.awards.stealAssists} asistencias en robos${p.s.awards.stealBest > 1 ? ` · ${p.s.awards.stealBest} en una partida` : ''}`,
-    note: (rows) => (rows.some((p) => (p.s?.awards?.stealGames ?? 0) < (p.s?.games ?? 0) * 0.97) ? 'Aún descargando datos de robos de partidas antiguas' : null) },
   { key: 'quadra', icon: '✦', title: 'Cuadra killer', desc: 'Más cuádruples asesinatos.', val: (p) => p.s?.awards?.quadras, fmt: (v) => `${v} cuadra${v === 1 ? '' : 's'}`,
     note: (rows) => (rows.some((p) => (p.s?.awards?.quadraGames ?? 0) < (p.s?.games ?? 0)) ? 'Aún descargando datos de cuádruples de partidas antiguas' : null) },
   { key: 'pool', icon: '◎', title: 'Maestro del champion pool', desc: 'Ha ganado con más campeones diferentes.', val: (p) => p.s?.awards?.champPool, fmt: (v) => `${v} campeones` },
@@ -1559,7 +1554,6 @@ function evParts(e) {
 function evSub(e) {
   switch (e.type) {
     case 'up': case 'down': return `viene de ${e.from}${e.lp != null ? ` · ${e.lp} LP` : ''}${e.peak ? ' · su mejor elo registrado' : ''}`;
-    case 'steal': return `${e.champ} · ${e.k}/${e.d}/${e.a} · ${e.win ? 'victoria' : 'derrota'} · Riot no dice si fue dragón o barón`;
     case 'penta': case 'quadra': case 'record': return `${e.champ} · ${e.k}/${e.d}/${e.a} · ${e.win ? 'victoria' : 'derrota'}`;
     case 'challengeStart': case 'challengeEnd': return (e.desc ?? '').split('\n')[0];
     default: return '';
@@ -1646,7 +1640,6 @@ function weekText(w) {
   if (w.duo) L.push(`🤝 Dúo de la semana: ${w.duo.a} & ${w.duo.b} (${w.duo.wins}V ${w.duo.games - w.duo.wins}D)`);
   if (w.gotw) L.push(`⭐ Partida de la semana: ${w.gotw.name}, ${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`);
   for (const g of w.pentas ?? []) L.push(`🖐️ Pentakill de ${g.name} con ${g.champ}`);
-  for (const g of w.steals ?? []) L.push(`🦝 Robo de objetivo de ${g.name} con ${g.champ}${g.n > 1 ? ` (×${g.n})` : ''}`);
   if (w.coward) L.push(`🏳️ El más cobarde: ${w.coward.name} (rendición en ${w.coward.n} de sus ${w.coward.of} derrotas)`);
   if (w.qKing) L.push(`❓ El rey del "?": ${w.qKing.name} (${fmt(w.qKing.avg, 1)} por partida)`);
   L.push('', `${SITE_URL}#semana`);
@@ -1763,7 +1756,6 @@ function weekHighlights(w, byName) {
   }
   if (w.gotw) out.push(card('⭐', 'Partida de la semana', w.gotw.name, `${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}`, 'ver →', () => openMatchModal(w.gotw.id, `Partida de la semana · ${w.gotw.name}`, P(w.gotw.name)?.main?.riotId)));
   for (const g of w.pentas ?? []) out.push(card('🖐️', 'Pentakill', g.name, `${g.champ} ${g.k}/${g.d}/${g.a}`, 'ver →', () => openMatchModal(g.id, `Pentakill · ${g.name}`, P(g.name)?.main?.riotId)));
-  for (const g of w.steals ?? []) out.push(card('🦝', g.n > 1 ? `${g.n} robos` : 'Robo de objetivo', g.name, `${g.champ} ${g.k}/${g.d}/${g.a}`, 'ver →', () => openMatchModal(g.id, `Robo · ${g.name}`, P(g.name)?.main?.riotId)));
   if (w.coward) out.push(card('🏳️', 'El más cobarde', w.coward.name, `${plural(w.coward.n, 'rendición', 'rendiciones')}`, `en ${w.coward.of} derrotas`));
   if (w.qKing) out.push(card('❓', 'El rey del "?"', w.qKing.name, `${fmt(w.qKing.avg, 1)} por partida`, `${w.qKing.total} en total`));
   return out;
@@ -2140,7 +2132,6 @@ const CMP_STATS = [
   ['Oro @15 vs rival', (p) => p.s?.gold?.avgGd15, (v) => goldK(v)],
   ['First bloods', (p) => p.s?.firstBloods, (v) => v],
   ['Pentakills', (p) => p.s?.pentas, (v) => v],
-  ['Robos de objetivos', (p) => p.s?.awards?.steals, (v) => v],
   ['LP por victoria', (p) => p.s?.lp?.win, (v) => `+${v}`],
   ['LP por derrota', (p) => p.s?.lp?.loss, (v) => `${v}`],
   ['1ª partida del día', (p) => (p.s?.firstOfDay?.games >= 10 ? p.s.firstOfDay.winrate : null), (v) => `${fmt(v, 0)}%`],

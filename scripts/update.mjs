@@ -190,7 +190,7 @@ async function updateAccount(riot, acc, region, cache, dd, budget, opts = {}) {
 
   // Pings y rendiciones de las partidas guardadas antes de registrarlos: se completan poco a poco
   // (de la más reciente a la más antigua) con su propio presupuesto, sin volver a bajar el resto de datos
-  const lacking = (seasonGames ? history.slice(0, seasonGames) : history).filter((g) => g.pg === undefined || g.st === undefined);
+  const lacking = (seasonGames ? history.slice(0, seasonGames) : history).filter((g) => g.pg === undefined);
   // Reparto a partes iguales entre cuentas para que todos tengan datos cuanto antes
   for (const g of lacking.slice(0, Math.max(0, Math.min(budget.conduct ?? 0, budget.conductPer ?? Infinity)))) {
     budget.conduct--;
@@ -203,7 +203,7 @@ async function updateAccount(riot, acc, region, cache, dd, budget, opts = {}) {
       console.warn(`  ! pings ${g.id}: ${err.message}`);
     }
   }
-  if (lacking.length) console.log(`  pings, rendiciones y robos: faltan ${lacking.filter((g) => g.pg === undefined || g.st === undefined).length} partidas`);
+  if (lacking.length) console.log(`  pings y rendiciones: faltan ${lacking.filter((g) => g.pg === undefined).length} partidas`);
   await writeJson(hf, { games: history, skipped: [...skipped].slice(-2000), seasonComplete });
 
   // Flex y Clash: en cada pasada completa y cuando cambia el rango de Flex

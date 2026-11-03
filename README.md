@@ -21,7 +21,7 @@ GitHub Action (bucle de ~5h30 que se relanza solo)
 ### Qué hay en la web
 
 - **Ranking** con quién está jugando ahora, aviso de tilt (🧊) y LP de hoy, de la semana o del mes.
-- **Novedades**: subidas y bajadas, pentas, robos de dragón o barón, rachas, récords del grupo y partidas jugadas (también en Discord).
+- **Novedades**: subidas y bajadas, pentas, rachas, récords del grupo y partidas jugadas (también en Discord).
 - **La semana**: resumen de lunes a domingo, historial de semanas, texto para WhatsApp e imagen para compartir.
   Cada lunes a partir de las 9:45 se publica el de la semana anterior en Discord.
 - **Retos** definidos en `config/challenges.json` (carrera de LP, llegar a un rango, hándicap o constancia).
