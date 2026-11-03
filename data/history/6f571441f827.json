@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8034432810",
+      "q": 420,
+      "t": 1793688382154,
+      "dur": 2136,
+      "win": false,
+      "champ": "Rammus",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 2,
+      "d": 4,
+      "a": 10,
+      "kp": 43,
+      "cs": 196,
+      "vis": 26,
+      "dmg": 15023,
+      "teamDmg": 125375,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 13376,
+      "fb": false,
+      "pg": {
+        "t": 87,
+        "q": 0,
+        "ai": 3,
+        "gb": 10,
+        "ba": 0,
+        "am": 13,
+        "dg": 0,
+        "ow": 42
+      },
+      "ff": 0,
+      "items": [
+        3143,
+        3075,
+        3068,
+        3742,
+        3047,
+        1033,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "MasterYi",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2404,
+        "maxLeadMin": 8,
+        "maxDef": -8022,
+        "tgd15": 844,
+        "gd15": -773
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8033917696",
       "q": 420,
       "t": 1793647394952,
