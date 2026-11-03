@@ -304,7 +304,22 @@ function awardStats(history) {
     pentas: history.reduce((s, g) => s + (g.penta || 0), 0),
     quadras: withFull.reduce((s, g) => s + (g.quadra || 0), 0),
     quadraGames: withFull.length,
+    ...stealStats(history),
     firstBloods: history.reduce((s, g) => s + (g.fb ? 1 : 0), 0),
+  };
+}
+
+// Robos de objetivos épicos (solo partidas con el dato; las antiguas se completan poco a poco)
+function stealStats(history) {
+  const g = history.filter((x) => x.st != null);
+  const best = g.reduce((m, x) => (x.st > (m?.st ?? 0) ? x : m), null);
+  const last = g.filter((x) => x.st > 0).sort((a, b) => b.t - a.t)[0];
+  return {
+    steals: g.reduce((s, x) => s + x.st, 0),
+    stealAssists: g.reduce((s, x) => s + (x.sta || 0), 0),
+    stealGames: g.length,
+    stealLast: last ? { ...gameBrief(last), val: last.st } : null,
+    stealBest: best ? best.st : 0,
   };
 }
 

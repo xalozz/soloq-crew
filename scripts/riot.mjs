@@ -162,6 +162,8 @@ export function conductOf(p) {
       ow: n('onMyWayPings'),
     },
     ff: p?.gameEndedInSurrender ? 1 : 0, // la partida acabó en rendición (si perdió, se rindió su equipo)
+    st: n('objectivesStolen'),                       // objetivos épicos robados (dragón, barón, heraldo…; Riot no dice cuál)
+    sta: n('objectivesStolenAssists'),               // asistencias en robos
   };
 }
 

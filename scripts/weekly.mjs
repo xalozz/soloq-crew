@@ -48,6 +48,7 @@ export function computeWeek(entries, from, to) {
       k: games.reduce((s, g) => s + g.k, 0), d: games.reduce((s, g) => s + g.d, 0), a: games.reduce((s, g) => s + g.a, 0),
       best: brief(best),
       pentas: games.filter((g) => g.penta).map(brief),
+      steals: games.filter((g) => g.st > 0).map((g) => ({ ...brief(g), n: g.st })),
       ffLosses: games.filter((g) => !g.win && g.ff).length,
       pingGames: games.filter((g) => g.pg).length,
       q: games.reduce((s, g) => s + (g.pg?.q ?? 0), 0),
@@ -91,6 +92,7 @@ export function computeWeek(entries, from, to) {
     duo,
     gotw: gotw ? { name: gotw.name, ...gotw.best } : null,
     pentas: active.flatMap((p) => p.pentas.map((g) => ({ name: p.name, ...g }))),
+    steals: active.flatMap((p) => (p.steals ?? []).map((g) => ({ name: p.name, ...g }))),
     coward: coward ? { name: coward.name, n: coward.ffLosses, of: coward.losses } : null,
     qKing: qKing ? { name: qKing.name, avg: r1(qKing.q / qKing.pingGames), total: qKing.q } : null,
   };
@@ -114,6 +116,7 @@ export function weekEmbed(w) {
   if (w.duo) f('🤝 Dúo de la semana', `${w.duo.a} & ${w.duo.b} · ${w.duo.games} partidas · ${w.duo.wins}V ${w.duo.games - w.duo.wins}D`);
   if (w.gotw) f('⭐ Partida de la semana', `${w.gotw.name} · [${w.gotw.champ} ${w.gotw.k}/${w.gotw.d}/${w.gotw.a}](${matchLink(w.gotw.id)})`);
   if (w.pentas.length) f('🖐️ Pentakills', w.pentas.map((g) => `${g.name} (${g.champ})`).join(', '));
+  if (w.steals?.length) f('🦝 Robos de objetivos', w.steals.map((g) => `${g.name} (${g.champ}${g.n > 1 ? ` ×${g.n}` : ''})`).join(', '));
   if (w.coward) f('🏳️ El más cobarde', `${w.coward.name} · rendición en ${w.coward.n} de sus ${w.coward.of} derrotas`);
   if (w.qKing) f('❓ El rey del "?"', `${w.qKing.name} · ${String(w.qKing.avg).replace('.', ',')} por partida`);
   const moves = w.players.filter((p) => p.games && p.start != null && p.end != null && Math.floor(p.start / 100) !== Math.floor(p.end / 100))
@@ -138,7 +141,7 @@ export function compactWeek(w) {
   return {
     key: w.key, from: w.from, to: w.to, totals: w.totals,
     mvp: w.mvp, worst: w.worst, grinder: w.grinder, hot: w.hot, cold: w.cold, duo: w.duo, gotw: w.gotw, pentas: w.pentas,
-    coward: w.coward ?? null, qKing: w.qKing ?? null,
+    coward: w.coward ?? null, qKing: w.qKing ?? null, steals: w.steals ?? [],
     players: w.players.map((p) => ({ name: p.name, games: p.games, wins: p.wins, losses: p.losses, lp: p.lp, hours: p.hours, start: p.start, end: p.end, bestW: p.bestW, worstL: p.worstL, k: p.k, d: p.d, a: p.a, best: p.best, ffLosses: p.ffLosses, q: p.q, pingGames: p.pingGames })),
   };
 }
