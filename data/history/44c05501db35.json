@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8035821576",
+      "q": 420,
+      "t": 1793813703851,
+      "dur": 1635,
+      "win": false,
+      "champ": "Graves",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 5,
+      "d": 7,
+      "a": 4,
+      "kp": 43,
+      "cs": 196,
+      "vis": 25,
+      "dmg": 9837,
+      "teamDmg": 77929,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6234,
+      "goldEarned": 11670,
+      "fb": false,
+      "pg": {
+        "t": 26,
+        "q": 0,
+        "ai": 0,
+        "gb": 3,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 13
+      },
+      "ff": 0,
+      "items": [
+        3031,
+        6676,
+        3047,
+        1036,
+        1036,
+        1037,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Teemo",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3407,
+        "maxLeadMin": 16,
+        "maxDef": -9015,
+        "tgd15": 2351,
+        "gd15": 1185
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8035768380",
       "q": 420,
       "t": 1793811745262,

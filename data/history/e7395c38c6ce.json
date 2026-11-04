@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8035821576",
+      "q": 420,
+      "t": 1793813703851,
+      "dur": 1635,
+      "win": false,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 6,
+      "d": 5,
+      "a": 5,
+      "kp": 52,
+      "cs": 230,
+      "vis": 15,
+      "dmg": 23276,
+      "teamDmg": 77929,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8491,
+      "goldEarned": 12940,
+      "fb": true,
+      "pg": {
+        "t": 19,
+        "q": 11,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 0
+      },
+      "ff": 0,
+      "items": [
+        1056,
+        3116,
+        3175,
+        6653,
+        2503,
+        1058,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3407,
+        "maxLeadMin": 16,
+        "maxDef": -9015,
+        "tgd15": 2351,
+        "gd15": 2242
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8035768380",
       "q": 420,
       "t": 1793811745262,
