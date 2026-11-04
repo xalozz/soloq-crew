@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8035948876",
+      "q": 420,
+      "t": 1793820190962,
+      "dur": 1767,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 3,
+      "d": 2,
+      "a": 4,
+      "kp": 26,
+      "cs": 270,
+      "vis": 18,
+      "dmg": 16909,
+      "teamDmg": 90476,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3930,
+      "goldEarned": 11657,
+      "fb": false,
+      "pg": {
+        "t": 14,
+        "q": 8,
+        "ai": 0,
+        "gb": 3,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 0
+      },
+      "ff": 1,
+      "items": [
+        1058,
+        6653,
+        2503,
+        0,
+        3175,
+        3116,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Riven",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8860,
+        "maxLeadMin": 30,
+        "maxDef": -31,
+        "tgd15": 2631,
+        "gd15": -735
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8035821576",
       "q": 420,
       "t": 1793813703851,

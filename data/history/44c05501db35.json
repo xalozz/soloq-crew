@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8035948876",
+      "q": 420,
+      "t": 1793820190962,
+      "dur": 1767,
+      "win": true,
+      "champ": "Zed",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 9,
+      "d": 3,
+      "a": 3,
+      "kp": 44,
+      "cs": 239,
+      "vis": 41,
+      "dmg": 17151,
+      "teamDmg": 90476,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 13998,
+      "fb": true,
+      "pg": {
+        "t": 20,
+        "q": 0,
+        "ai": 0,
+        "gb": 8,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 1,
+      "items": [
+        6692,
+        6699,
+        3158,
+        3033,
+        0,
+        1037,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Yone",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8860,
+        "maxLeadMin": 30,
+        "maxDef": -31,
+        "tgd15": 2631,
+        "gd15": 978
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8035889135",
       "q": 420,
       "t": 1793817870546,
