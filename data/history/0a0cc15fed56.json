@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8035670613",
+      "q": 420,
+      "t": 1793805576826,
+      "dur": 2541,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 16,
+      "d": 5,
+      "a": 10,
+      "kp": 54,
+      "cs": 422,
+      "vis": 19,
+      "dmg": 48420,
+      "teamDmg": 173728,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 2,
+      "towerDmg": 17652,
+      "goldEarned": 24832,
+      "fb": false,
+      "pg": {
+        "t": 77,
+        "q": 7,
+        "ai": 3,
+        "gb": 20,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 15
+      },
+      "ff": 0,
+      "items": [
+        3026,
+        6672,
+        3139,
+        3031,
+        3033,
+        2523,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kaisa",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 13640,
+        "maxLeadMin": 43,
+        "maxDef": -1986,
+        "tgd15": 847,
+        "gd15": -679
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8035571553",
       "q": 420,
       "t": 1793796512415,
