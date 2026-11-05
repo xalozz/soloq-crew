@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8036820291",
+      "q": 420,
+      "t": 1793901045050,
+      "dur": 2036,
+      "win": false,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 16,
+      "k": 5,
+      "d": 8,
+      "a": 6,
+      "kp": 28,
+      "cs": 259,
+      "vis": 31,
+      "dmg": 21444,
+      "teamDmg": 161935,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5168,
+      "goldEarned": 14011,
+      "fb": false,
+      "pg": {
+        "t": 65,
+        "q": 6,
+        "ai": 5,
+        "gb": 22,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 11
+      },
+      "ff": 0,
+      "items": [
+        1086,
+        2523,
+        6672,
+        3031,
+        3033,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "MissFortune",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6848,
+        "maxLeadMin": 21,
+        "maxDef": -5524,
+        "tgd15": 942,
+        "gd15": -1183
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8036779763",
       "q": 420,
       "t": 1793898094751,
