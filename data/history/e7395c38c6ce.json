@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8036731044",
+      "q": 420,
+      "t": 1793895466519,
+      "dur": 2066,
+      "win": false,
+      "champ": "Lux",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 0,
+      "d": 9,
+      "a": 14,
+      "kp": 64,
+      "cs": 72,
+      "vis": 91,
+      "dmg": 13449,
+      "teamDmg": 100589,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 9013,
+      "fb": false,
+      "pg": {
+        "t": 26,
+        "q": 5,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 9,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 0,
+      "items": [
+        3118,
+        3870,
+        3020,
+        2031,
+        4646,
+        3145,
+        3364
+      ],
+      "spells": [
+        "SummonerExhaust",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerHeal",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -6739,
+        "tgd15": -1287,
+        "gd15": -983
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8036598463",
       "q": 420,
       "t": 1793884568436,
