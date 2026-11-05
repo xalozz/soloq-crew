@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8036692921",
+      "q": 420,
+      "t": 1793892413606,
+      "dur": 1727,
+      "win": true,
+      "champ": "Galio",
+      "role": "UTILITY",
+      "lvl": 16,
+      "k": 5,
+      "d": 8,
+      "a": 23,
+      "kp": 78,
+      "cs": 24,
+      "vis": 88,
+      "dmg": 18709,
+      "teamDmg": 141380,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3658,
+      "goldEarned": 11902,
+      "fb": false,
+      "pg": {
+        "t": 32,
+        "q": 3,
+        "ai": 0,
+        "gb": 7,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 9
+      },
+      "ff": 1,
+      "items": [
+        3190,
+        3876,
+        4005,
+        3047,
+        3211,
+        6660,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Chogath",
+        "spells": [
+          "SummonerFlash",
+          "SummonerExhaust"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6107,
+        "maxLeadMin": 29,
+        "maxDef": -7720,
+        "tgd15": -2910,
+        "gd15": -601
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8034796878",
       "q": 420,
       "t": 1793727193429,
