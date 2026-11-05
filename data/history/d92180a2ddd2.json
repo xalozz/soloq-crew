@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8036903411",
+      "q": 420,
+      "t": 1793904667766,
+      "dur": 1490,
+      "win": false,
+      "champ": "Seraphine",
+      "role": "UTILITY",
+      "lvl": 11,
+      "k": 4,
+      "d": 10,
+      "a": 4,
+      "kp": 80,
+      "cs": 33,
+      "vis": 50,
+      "dmg": 11014,
+      "teamDmg": 49237,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 514,
+      "goldEarned": 7430,
+      "fb": false,
+      "pg": {
+        "t": 15,
+        "q": 4,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        2003,
+        3871,
+        3116,
+        4005,
+        0,
+        3158,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerHeal"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Lux",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 174,
+        "maxLeadMin": 3,
+        "maxDef": -17881,
+        "tgd15": -6935,
+        "gd15": -176
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8036877337",
       "q": 420,
       "t": 1793902908130,
