@@ -1,0 +1,327 @@
+{
+  "id": "EUW1_8038223010",
+  "t": 1794004933005,
+  "dur": 1585,
+  "teams": [
+    {
+      "teamId": 100,
+      "win": false,
+      "kills": 18,
+      "gold": 47020,
+      "bans": [
+        "Ahri",
+        "MasterYi",
+        "Caitlyn",
+        "Kaisa",
+        "Teemo"
+      ],
+      "players": [
+        {
+          "rid": "Betaliancea#26298",
+          "pos": "TOP",
+          "lvl": 15,
+          "champ": "Mordekaiser",
+          "spells": [
+            "SummonerTeleport",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 3,
+          "d": 10,
+          "a": 0,
+          "cs": 158,
+          "dmg": 18684,
+          "gold": 9490,
+          "items": [
+            1120,
+            3116,
+            3009,
+            4633,
+            3147,
+            1052,
+            3340
+          ]
+        },
+        {
+          "rid": "Dwayerx#EUW",
+          "pos": "JUNGLE",
+          "lvl": 15,
+          "champ": "Shyvana",
+          "spells": [
+            "SummonerSmite",
+            "SummonerFlash"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 7,
+          "d": 7,
+          "a": 4,
+          "cs": 180,
+          "dmg": 18001,
+          "gold": 11404,
+          "items": [
+            3161,
+            3078,
+            3156,
+            3111,
+            0,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "Fr3ZerToWin#EUW",
+          "pos": "MIDDLE",
+          "lvl": 13,
+          "champ": "Yone",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 1,
+          "d": 12,
+          "a": 7,
+          "cs": 173,
+          "dmg": 20048,
+          "gold": 8684,
+          "items": [
+            3031,
+            3153,
+            3172,
+            0,
+            0,
+            0,
+            3340
+          ]
+        },
+        {
+          "rid": "EIizabeth Grant#EUW",
+          "pos": "BOTTOM",
+          "lvl": 12,
+          "champ": "Jinx",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 4,
+          "d": 8,
+          "a": 1,
+          "cs": 199,
+          "dmg": 12885,
+          "gold": 9851,
+          "items": [
+            2523,
+            3031,
+            1086,
+            3144,
+            3086,
+            0,
+            3363
+          ]
+        },
+        {
+          "rid": "xPeris#6969",
+          "pos": "UTILITY",
+          "lvl": 12,
+          "champ": "Leona",
+          "spells": [
+            "SummonerFlash",
+            "SummonerExhaust"
+          ],
+          "runes": [
+            "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 3,
+          "d": 5,
+          "a": 7,
+          "cs": 23,
+          "dmg": 7657,
+          "gold": 7591,
+          "items": [
+            3190,
+            3109,
+            3876,
+            1029,
+            3111,
+            0,
+            3364
+          ]
+        }
+      ]
+    },
+    {
+      "teamId": 200,
+      "win": true,
+      "kills": 42,
+      "gold": 64039,
+      "bans": [
+        "Evelynn",
+        "Pyke",
+        "Shaco",
+        "Yasuo",
+        "Qiyana"
+      ],
+      "players": [
+        {
+          "rid": "Tmp#334",
+          "pos": "TOP",
+          "lvl": 18,
+          "champ": "Chogath",
+          "spells": [
+            "SummonerFlash",
+            "SummonerTeleport"
+          ],
+          "runes": [
+            "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 12,
+          "d": 1,
+          "a": 4,
+          "cs": 231,
+          "dmg": 30383,
+          "gold": 14845,
+          "items": [
+            4633,
+            3152,
+            3020,
+            2031,
+            3100,
+            1058,
+            3340
+          ]
+        },
+        {
+          "rid": "Inaartnetta#9340",
+          "pos": "JUNGLE",
+          "lvl": 17,
+          "champ": "Malphite",
+          "spells": [
+            "SummonerFlash",
+            "SummonerSmite"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+            "perk-images/Styles/7203_Whimsy.png"
+          ],
+          "k": 7,
+          "d": 3,
+          "a": 18,
+          "cs": 244,
+          "dmg": 22104,
+          "gold": 14703,
+          "items": [
+            3050,
+            3157,
+            3158,
+            3118,
+            3075,
+            0,
+            3364
+          ]
+        },
+        {
+          "rid": "Ckemaristib#5804",
+          "pos": "MIDDLE",
+          "lvl": 16,
+          "champ": "Katarina",
+          "spells": [
+            "SummonerFlash",
+            "SummonerDot"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 11,
+          "d": 7,
+          "a": 8,
+          "cs": 181,
+          "dmg": 28460,
+          "gold": 12518,
+          "items": [
+            6672,
+            1055,
+            3174,
+            3302,
+            1037,
+            2019,
+            3340
+          ]
+        },
+        {
+          "rid": "BZWTristanaOF#2910",
+          "pos": "BOTTOM",
+          "lvl": 13,
+          "champ": "Twitch",
+          "spells": [
+            "SummonerFlash",
+            "SummonerBarrier"
+          ],
+          "runes": [
+            "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+            "perk-images/Styles/7202_Sorcery.png"
+          ],
+          "k": 11,
+          "d": 4,
+          "a": 4,
+          "cs": 141,
+          "dmg": 25105,
+          "gold": 12984,
+          "items": [
+            1086,
+            6676,
+            2512,
+            3031,
+            1018,
+            1036,
+            3340
+          ]
+        },
+        {
+          "rid": "Aespa Winter#asp",
+          "pos": "UTILITY",
+          "lvl": 14,
+          "champ": "Nami",
+          "spells": [
+            "SummonerFlash",
+            "SummonerHeal"
+          ],
+          "runes": [
+            "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+            "perk-images/Styles/7204_Resolve.png"
+          ],
+          "k": 1,
+          "d": 3,
+          "a": 22,
+          "cs": 35,
+          "dmg": 10903,
+          "gold": 8989,
+          "items": [
+            3870,
+            3222,
+            6620,
+            3047,
+            1052,
+            0,
+            3364
+          ]
+        }
+      ]
+    }
+  ]
+}
