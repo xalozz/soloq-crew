@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038073006",
+      "q": 420,
+      "t": 1793998846083,
+      "dur": 1665,
+      "win": true,
+      "champ": "Viktor",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 7,
+      "d": 5,
+      "a": 5,
+      "kp": 35,
+      "cs": 213,
+      "vis": 13,
+      "dmg": 30961,
+      "teamDmg": 109411,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 9848,
+      "goldEarned": 12470,
+      "fb": false,
+      "pg": {
+        "t": 48,
+        "q": 9,
+        "ai": 0,
+        "gb": 24,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        0,
+        3171,
+        2503,
+        3157,
+        3100,
+        1052,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Akali",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9498,
+        "maxLeadMin": 28,
+        "maxDef": -184,
+        "tgd15": 1219,
+        "gd15": -1092
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038032805",
       "q": 420,
       "t": 1793996917251,
