@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038267498",
+      "q": 420,
+      "t": 1794007405007,
+      "dur": 2162,
+      "win": false,
+      "champ": "Xerath",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 4,
+      "d": 8,
+      "a": 14,
+      "kp": 49,
+      "cs": 54,
+      "vis": 97,
+      "dmg": 31552,
+      "teamDmg": 158146,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3904,
+      "goldEarned": 11998,
+      "fb": false,
+      "pg": {
+        "t": 5,
+        "q": 0,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 0
+      },
+      "ff": 0,
+      "items": [
+        3871,
+        3089,
+        4646,
+        6655,
+        1052,
+        3020,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerHeal"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Senna",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6103,
+        "maxLeadMin": 13,
+        "maxDef": -20,
+        "tgd15": 3947,
+        "gd15": 880
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038223010",
       "q": 420,
       "t": 1794004933005,
