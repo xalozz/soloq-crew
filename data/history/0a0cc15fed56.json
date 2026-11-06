@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8037606665",
+      "q": 420,
+      "t": 1793972470876,
+      "dur": 1476,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 13,
+      "k": 5,
+      "d": 4,
+      "a": 11,
+      "kp": 47,
+      "cs": 216,
+      "vis": 11,
+      "dmg": 22290,
+      "teamDmg": 93598,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 10064,
+      "goldEarned": 11962,
+      "fb": false,
+      "pg": {
+        "t": 38,
+        "q": 2,
+        "ai": 0,
+        "gb": 7,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 10
+      },
+      "ff": 1,
+      "items": [
+        1086,
+        2523,
+        6672,
+        1038,
+        1037,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Samira",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10378,
+        "maxLeadMin": 25,
+        "maxDef": -608,
+        "tgd15": 3081,
+        "gd15": 812
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8037580774",
       "q": 420,
       "t": 1793970613102,
