@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8037780332",
+      "q": 420,
+      "t": 1793984611053,
+      "dur": 1602,
+      "win": true,
+      "champ": "Zac",
+      "role": "UTILITY",
+      "lvl": 13,
+      "k": 3,
+      "d": 4,
+      "a": 14,
+      "kp": 40,
+      "cs": 24,
+      "vis": 52,
+      "dmg": 11093,
+      "teamDmg": 107746,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 509,
+      "goldEarned": 8702,
+      "fb": false,
+      "pg": {
+        "t": 36,
+        "q": 7,
+        "ai": 0,
+        "gb": 9,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 10
+      },
+      "ff": 1,
+      "items": [
+        1011,
+        3876,
+        3158,
+        3084,
+        1057,
+        1082,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Lulu",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 12175,
+        "maxLeadMin": 27,
+        "maxDef": -520,
+        "tgd15": 1371,
+        "gd15": 102
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8037747463",
       "q": 420,
       "t": 1793982584857,
