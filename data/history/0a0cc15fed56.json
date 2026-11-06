@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8037700465",
+      "q": 420,
+      "t": 1793979125490,
+      "dur": 1816,
+      "win": true,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 16,
+      "k": 3,
+      "d": 4,
+      "a": 14,
+      "kp": 39,
+      "cs": 215,
+      "vis": 15,
+      "dmg": 24635,
+      "teamDmg": 139228,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5658,
+      "goldEarned": 12648,
+      "fb": false,
+      "pg": {
+        "t": 36,
+        "q": 5,
+        "ai": 0,
+        "gb": 9,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        1086,
+        6672,
+        2523,
+        3033,
+        1037,
+        0,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Smolder",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8723,
+        "maxLeadMin": 31,
+        "maxDef": -1616,
+        "tgd15": 1659,
+        "gd15": -1528
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8037606665",
       "q": 420,
       "t": 1793972470876,
