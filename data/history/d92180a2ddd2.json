@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038668878",
+      "q": 420,
+      "t": 1794059322950,
+      "dur": 2107,
+      "win": false,
+      "champ": "Lulu",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 0,
+      "d": 8,
+      "a": 13,
+      "kp": 37,
+      "cs": 25,
+      "vis": 86,
+      "dmg": 6273,
+      "teamDmg": 154126,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1107,
+      "goldEarned": 9094,
+      "fb": false,
+      "pg": {
+        "t": 16,
+        "q": 0,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        3222,
+        3870,
+        2065,
+        3504,
+        0,
+        3158,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerHeal"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Thresh",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3539,
+        "maxLeadMin": 16,
+        "maxDef": -5626,
+        "tgd15": 2243,
+        "gd15": 104
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038637345",
       "q": 420,
       "t": 1794056606440,
