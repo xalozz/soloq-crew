@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038852726",
+      "q": 420,
+      "t": 1794069706859,
+      "dur": 2305,
+      "win": false,
+      "champ": "Jinx",
+      "role": "BOTTOM",
+      "lvl": 18,
+      "k": 7,
+      "d": 5,
+      "a": 6,
+      "kp": 42,
+      "cs": 387,
+      "vis": 21,
+      "dmg": 23039,
+      "teamDmg": 120211,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6795,
+      "goldEarned": 19329,
+      "fb": false,
+      "pg": {
+        "t": 56,
+        "q": 8,
+        "ai": 8,
+        "gb": 4,
+        "ba": 0,
+        "am": 9,
+        "dg": 0,
+        "ow": 10
+      },
+      "ff": 0,
+      "items": [
+        3036,
+        2523,
+        3140,
+        3031,
+        3095,
+        6672,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Ezreal",
+        "spells": [
+          "SummonerFlash",
+          "SummonerBarrier"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 1492,
+        "maxLeadMin": 14,
+        "maxDef": -4786,
+        "tgd15": 1280,
+        "gd15": 767
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038796401",
       "q": 420,
       "t": 1794066474857,
