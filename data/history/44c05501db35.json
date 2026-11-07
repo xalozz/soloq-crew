@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039134196",
+      "q": 420,
+      "t": 1794084336790,
+      "dur": 2436,
+      "win": false,
+      "champ": "TwistedFate",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 16,
+      "d": 7,
+      "a": 9,
+      "kp": 61,
+      "cs": 318,
+      "vis": 31,
+      "dmg": 40182,
+      "teamDmg": 160398,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8340,
+      "goldEarned": 24078,
+      "fb": false,
+      "pg": {
+        "t": 42,
+        "q": 7,
+        "ai": 0,
+        "gb": 1,
+        "ba": 0,
+        "am": 7,
+        "dg": 0,
+        "ow": 7
+      },
+      "ff": 0,
+      "items": [
+        3170,
+        6657,
+        3094,
+        3157,
+        3100,
+        3089,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Zoe",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8908,
+        "maxLeadMin": 24,
+        "maxDef": -326,
+        "tgd15": 4850,
+        "gd15": 4080
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8039093955",
       "q": 420,
       "t": 1794081456630,
