@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039101754",
+      "q": 420,
+      "t": 1794081914971,
+      "dur": 1873,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 11,
+      "d": 8,
+      "a": 7,
+      "kp": 58,
+      "cs": 157,
+      "vis": 21,
+      "dmg": 21659,
+      "teamDmg": 110290,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 803,
+      "goldEarned": 14658,
+      "fb": false,
+      "pg": {
+        "t": 105,
+        "q": 2,
+        "ai": 1,
+        "gb": 16,
+        "ba": 0,
+        "am": 19,
+        "dg": 0,
+        "ow": 41
+      },
+      "ff": 0,
+      "items": [
+        3071,
+        6676,
+        3111,
+        3026,
+        6333,
+        2055,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Elise",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4328,
+        "maxLeadMin": 27,
+        "maxDef": -5169,
+        "tgd15": -1082,
+        "gd15": 482
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038751305",
       "q": 420,
       "t": 1794064585108,
