@@ -2,6 +2,71 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039300687",
+      "q": 440,
+      "t": 1794090374151,
+      "dur": 1941,
+      "win": false,
+      "champ": "Shaco",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 9,
+      "d": 8,
+      "a": 9,
+      "kp": 56,
+      "cs": 144,
+      "vis": 27,
+      "dmg": 20180,
+      "teamDmg": 118144,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 298,
+      "goldEarned": 12340,
+      "fb": false,
+      "pg": {
+        "t": 33,
+        "q": 2,
+        "ai": 0,
+        "gb": 8,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 12
+      },
+      "ff": 0,
+      "items": [
+        6697,
+        6676,
+        3009,
+        3036,
+        1038,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Fizz",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": null
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038708175",
       "q": 440,
       "t": 1794061671668,
