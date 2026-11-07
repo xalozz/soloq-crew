@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039093955",
+      "q": 420,
+      "t": 1794081456630,
+      "dur": 1736,
+      "win": true,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 16,
+      "d": 7,
+      "a": 9,
+      "kp": 43,
+      "cs": 183,
+      "vis": 22,
+      "dmg": 35858,
+      "teamDmg": 137004,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 1,
+      "towerDmg": 13864,
+      "goldEarned": 14917,
+      "fb": false,
+      "pg": {
+        "t": 68,
+        "q": 5,
+        "ai": 0,
+        "gb": 10,
+        "ba": 0,
+        "am": 19,
+        "dg": 0,
+        "ow": 19
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        3100,
+        3171,
+        3157,
+        4646,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Taliyah",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHaste"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 14282,
+        "maxLeadMin": 29,
+        "maxDef": -292,
+        "tgd15": 5657,
+        "gd15": 2401
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8039026884",
       "q": 420,
       "t": 1794078065880,
