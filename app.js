@@ -2077,9 +2077,9 @@ function renderChampsGroup() {
   // Némesis: rival directo de línea contra el que peor (y mejor) le va
   const vsList = (p) => Object.entries(p.s.vs ?? {}).map(([champ, [n, w]]) => ({ champ, n, w, adj: adjWr(w, n, 3) }));
   const nem = rows.map((p) => {
-    const l = vsList(p).filter((x) => x.n >= 4);
-    const worst = l.length ? l.reduce((m, x) => (x.adj < m.adj ? x : m)) : null;
-    const best = l.length ? l.reduce((m, x) => (x.adj > m.adj ? x : m)) : null;
+    const l = vsList(p).filter((x) => x.n >= 4).sort((a, b) => a.adj - b.adj || b.n - a.n);
+    const worst = l.slice(0, NEM_N);
+    const best = l.slice(worst.length).reverse().slice(0, NEM_N);
     return { p, worst, best };
   });
   const groupVs = new Map();
@@ -2106,15 +2106,24 @@ function renderChampsGroup() {
         h('i', { style: `width:${x.top3}%` }), h('span', {}, `${fmt(x.top3, 0)} % con su top 3`)),
       x.top ? h('span', { class: 'pool-top' }, champIcon(x.top.key, 26), h('small', {}, `${x.top.games}p`)) : null))),
     h('h3', { class: 'aw-sub' }, 'Némesis y presas'),
-    h('p', { class: 'muted small' }, 'Contra el rival directo de línea · mínimo 4 partidas · el que más te gana es buen candidato a ban'),
+    h('p', { class: 'muted small' }, 'Contra el rival directo de línea · mínimo 4 partidas · los 5 que más te ganan y los 5 a los que más ganas'),
     h('div', { class: 'nems' }, nem.map(({ p, worst, best }) => h('div', { class: 'nem' },
       h('div', { class: 'nem-who' }, avatar(p, 28), h('b', {}, p.name)),
-      h('div', { class: 'nem-pair' },
-        worst ? h('div', { class: 'nem-c bad', title: 'Buen candidato a ban' }, champIcon(worst.champ, 34), h('div', {}, h('small', {}, 'Te gana'), h('b', {}, worst.champ), h('span', {}, vsTxt(worst)))) : h('span', { class: 'muted small' }, 'Pocos datos'),
-        best && best !== worst ? h('div', { class: 'nem-c good' }, champIcon(best.champ, 34), h('div', {}, h('small', {}, 'Le ganas'), h('b', {}, best.champ), h('span', {}, vsTxt(best)))) : null)))),
+      worst.length ? h('div', { class: 'nem-pair' },
+        nemCol('bad', 'Némesis · te ganan', worst, vsTxt),
+        best.length ? nemCol('good', 'Presas · les ganas', best, vsTxt) : null) : h('span', { class: 'muted small' }, 'Pocos datos')))),
     gWorst.length ? h('h3', { class: 'aw-sub' }, 'Los que más os ganan') : null,
     gWorst.length ? h('div', { class: 'gnem' }, gWorst.map((e) => h('div', { class: 'gnem-c', title: `Contra ${e.champ} en vuestra línea: ${e.w}V ${e.n - e.w}D` },
       champIcon(e.champ, 40), h('b', {}, e.champ), h('span', { class: pct(e.w, e.n) < 50 ? 'neg' : 'pos' }, `${fmt(pct(e.w, e.n), 0)} %`), h('small', { class: 'muted' }, `${e.n} partidas`)))) : null);
+}
+
+const NEM_N = 5;
+function nemCol(cls, title, list, vsTxt) {
+  return h('div', { class: `nem-col ${cls}` },
+    h('small', { class: 'nem-h' }, title),
+    list.map((x, i) => h('div', { class: 'nem-c', title: cls === 'bad' && i === 0 ? 'Buen candidato a ban' : `${x.champ}: ${vsTxt(x)}` },
+      champIcon(x.champ, i === 0 ? 34 : 26),
+      h('div', {}, h('b', {}, x.champ), h('span', {}, vsTxt(x))))));
 }
 
 // ---------------------------------------------------------------- comparador

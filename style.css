@@ -1103,11 +1103,16 @@ button.ev:focus-visible { outline: 2px solid var(--accent); }
 .nem { display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); }
 .nem-who { display: flex; align-items: center; gap: 8px; }
 .nem-who .avatar { border-radius: 50%; }
-.nem-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.nem-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
+.nem-col { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.nem-col .nem-c { padding: 4px 8px; }
+.nem-col .nem-c b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nem-h { padding: 0 2px 2px; }
+.nem-col.bad .nem-h { color: var(--loss); } .nem-col.good .nem-h { color: var(--win); }
 .nem-c { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border-radius: 10px; background: var(--panel-3); }
 .nem-c div { display: flex; flex-direction: column; line-height: 1.25; }
-.nem-c small { font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
-.nem-c.bad small { color: var(--loss); } .nem-c.good small { color: var(--win); }
+.nem-h { font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.nem-col.bad .nem-c:first-of-type { box-shadow: inset 3px 0 0 var(--loss); } .nem-col.good .nem-c:first-of-type { box-shadow: inset 3px 0 0 var(--win); }
 .nem-c span { font-size: 12px; color: #cfcfd6; }
 .gnem { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
 .gnem-c { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 10px 6px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); text-align: center; }
