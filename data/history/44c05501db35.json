@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038673506",
+      "q": 420,
+      "t": 1794059626423,
+      "dur": 2538,
+      "win": false,
+      "champ": "Ryze",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 5,
+      "d": 13,
+      "a": 10,
+      "kp": 35,
+      "cs": 284,
+      "vis": 23,
+      "dmg": 34634,
+      "teamDmg": 247109,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6192,
+      "goldEarned": 15957,
+      "fb": false,
+      "pg": {
+        "t": 25,
+        "q": 2,
+        "ai": 0,
+        "gb": 9,
+        "ba": 0,
+        "am": 8,
+        "dg": 0,
+        "ow": 2
+      },
+      "ff": 0,
+      "items": [
+        3040,
+        6657,
+        3174,
+        3157,
+        3110,
+        2522,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Gangplank",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4491,
+        "maxLeadMin": 18,
+        "maxDef": -4386,
+        "tgd15": 3080,
+        "gd15": 518
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038639697",
       "q": 420,
       "t": 1794056770487,
