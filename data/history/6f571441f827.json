@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038751305",
+      "q": 420,
+      "t": 1794064585108,
+      "dur": 2042,
+      "win": true,
+      "champ": "Lillia",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 5,
+      "d": 9,
+      "a": 11,
+      "kp": 48,
+      "cs": 256,
+      "vis": 32,
+      "dmg": 20903,
+      "teamDmg": 121038,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4431,
+      "goldEarned": 14653,
+      "fb": true,
+      "pg": {
+        "t": 63,
+        "q": 0,
+        "ai": 1,
+        "gb": 3,
+        "ba": 0,
+        "am": 13,
+        "dg": 0,
+        "ow": 32
+      },
+      "ff": 0,
+      "items": [
+        2503,
+        3157,
+        3116,
+        3020,
+        6653,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "JarvanIV",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7865,
+        "maxLeadMin": 34,
+        "maxDef": -1320,
+        "tgd15": 755,
+        "gd15": -100
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038646424",
       "q": 420,
       "t": 1794058295883,
