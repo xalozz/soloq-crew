@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038639697",
+      "q": 420,
+      "t": 1794056770487,
+      "dur": 1771,
+      "win": false,
+      "champ": "Fizz",
+      "role": "MIDDLE",
+      "lvl": 15,
+      "k": 8,
+      "d": 10,
+      "a": 8,
+      "kp": 55,
+      "cs": 185,
+      "vis": 28,
+      "dmg": 25438,
+      "teamDmg": 94146,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 5368,
+      "goldEarned": 12297,
+      "fb": false,
+      "pg": {
+        "t": 59,
+        "q": 8,
+        "ai": 1,
+        "gb": 8,
+        "ba": 0,
+        "am": 8,
+        "dg": 0,
+        "ow": 15
+      },
+      "ff": 0,
+      "items": [
+        4645,
+        3100,
+        3171,
+        3157,
+        3113,
+        1052,
+        3364
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Kennen",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -12565,
+        "tgd15": -8064,
+        "gd15": 1002
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038513685",
       "q": 420,
       "t": 1794045409164,
