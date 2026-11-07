@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8038752930",
+      "q": 420,
+      "t": 1794064822417,
+      "dur": 2417,
+      "win": false,
+      "champ": "Ezreal",
+      "role": "BOTTOM",
+      "lvl": 17,
+      "k": 3,
+      "d": 10,
+      "a": 14,
+      "kp": 50,
+      "cs": 294,
+      "vis": 21,
+      "dmg": 33980,
+      "teamDmg": 141114,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 10391,
+      "goldEarned": 17321,
+      "fb": false,
+      "pg": {
+        "t": 54,
+        "q": 6,
+        "ai": 4,
+        "gb": 6,
+        "ba": 0,
+        "am": 2,
+        "dg": 0,
+        "ow": 11
+      },
+      "ff": 0,
+      "items": [
+        6694,
+        3042,
+        3078,
+        2517,
+        3026,
+        2055,
+        3363
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerBarrier"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Aphelios",
+        "spells": [
+          "SummonerBarrier",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4109,
+        "maxLeadMin": 29,
+        "maxDef": -5913,
+        "tgd15": 737,
+        "gd15": -760
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8038668878",
       "q": 420,
       "t": 1794059322950,
