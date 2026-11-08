@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039883443",
+      "q": 420,
+      "t": 1794150585512,
+      "dur": 1844,
+      "win": true,
+      "champ": "Yasuo",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 7,
+      "d": 6,
+      "a": 8,
+      "kp": 50,
+      "cs": 215,
+      "vis": 20,
+      "dmg": 21919,
+      "teamDmg": 125048,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 11401,
+      "goldEarned": 13245,
+      "fb": false,
+      "pg": {
+        "t": 18,
+        "q": 2,
+        "ai": 0,
+        "gb": 6,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 3
+      },
+      "ff": 0,
+      "items": [
+        1054,
+        6673,
+        3172,
+        3031,
+        3153,
+        1036,
+        3363
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Zed",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 3759,
+        "maxLeadMin": 31,
+        "maxDef": -2124,
+        "tgd15": -341,
+        "gd15": -1907
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8039826107",
       "q": 420,
       "t": 1794147457158,
