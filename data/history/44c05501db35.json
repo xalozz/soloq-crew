@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039696766",
+      "q": 420,
+      "t": 1794138170452,
+      "dur": 1611,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 7,
+      "d": 5,
+      "a": 3,
+      "kp": 26,
+      "cs": 258,
+      "vis": 10,
+      "dmg": 22084,
+      "teamDmg": 107454,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 11804,
+      "goldEarned": 12960,
+      "fb": false,
+      "pg": {
+        "t": 15,
+        "q": 0,
+        "ai": 0,
+        "gb": 5,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 5
+      },
+      "ff": 0,
+      "items": [
+        6653,
+        2503,
+        3175,
+        3116,
+        3165,
+        2055,
+        3363
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerFlash",
+          "SummonerTeleport"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 5306,
+        "maxLeadMin": 24,
+        "maxDef": -1623,
+        "tgd15": -1142,
+        "gd15": 1110
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8039670583",
       "q": 420,
       "t": 1794135986098,
