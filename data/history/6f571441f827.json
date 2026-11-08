@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8039658197",
+      "q": 420,
+      "t": 1794135783808,
+      "dur": 1937,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 9,
+      "d": 11,
+      "a": 2,
+      "kp": 58,
+      "cs": 139,
+      "vis": 25,
+      "dmg": 17589,
+      "teamDmg": 91824,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 12779,
+      "fb": false,
+      "pg": {
+        "t": 88,
+        "q": 3,
+        "ai": 0,
+        "gb": 15,
+        "ba": 0,
+        "am": 18,
+        "dg": 0,
+        "ow": 33
+      },
+      "ff": 0,
+      "items": [
+        6333,
+        6676,
+        3047,
+        3071,
+        2019,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Khazix",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/DarkHarvest/DarkHarvest.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 0,
+        "maxLeadMin": 0,
+        "maxDef": -19513,
+        "tgd15": -3072,
+        "gd15": -428
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8039148080",
       "q": 420,
       "t": 1794084180622,
