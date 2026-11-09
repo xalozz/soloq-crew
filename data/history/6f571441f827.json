@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8041162633",
+      "q": 420,
+      "t": 1794250325781,
+      "dur": 1940,
+      "win": false,
+      "champ": "Janna",
+      "role": "UTILITY",
+      "lvl": 14,
+      "k": 0,
+      "d": 5,
+      "a": 20,
+      "kp": 61,
+      "cs": 36,
+      "vis": 72,
+      "dmg": 7250,
+      "teamDmg": 134542,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1010,
+      "goldEarned": 9009,
+      "fb": false,
+      "pg": {
+        "t": 73,
+        "q": 3,
+        "ai": 2,
+        "gb": 11,
+        "ba": 0,
+        "am": 10,
+        "dg": 0,
+        "ow": 24
+      },
+      "ff": 0,
+      "items": [
+        2065,
+        3870,
+        3009,
+        6617,
+        1082,
+        3504,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Karma",
+        "spells": [
+          "SummonerFlash",
+          "SummonerHeal"
+        ],
+        "runes": [
+          "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 7622,
+        "maxLeadMin": 23,
+        "maxDef": -1578,
+        "tgd15": 1421,
+        "gd15": -539
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8041116121",
       "q": 420,
       "t": 1794248162866,
