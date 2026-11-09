@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8041208006",
+      "q": 420,
+      "t": 1794252587819,
+      "dur": 1957,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 17,
+      "k": 11,
+      "d": 8,
+      "a": 6,
+      "kp": 40,
+      "cs": 199,
+      "vis": 25,
+      "dmg": 25070,
+      "teamDmg": 167087,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1423,
+      "goldEarned": 15118,
+      "fb": false,
+      "pg": {
+        "t": 57,
+        "q": 0,
+        "ai": 2,
+        "gb": 14,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 25
+      },
+      "ff": 0,
+      "items": [
+        3071,
+        6676,
+        3047,
+        6333,
+        2019,
+        1038,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Qiyana",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6141,
+        "maxLeadMin": 32,
+        "maxDef": -1420,
+        "tgd15": 1507,
+        "gd15": -338
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8041162633",
       "q": 420,
       "t": 1794250325781,
