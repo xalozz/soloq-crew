@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8041050560",
+      "q": 420,
+      "t": 1794244275029,
+      "dur": 1559,
+      "win": true,
+      "champ": "Ivern",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 2,
+      "d": 3,
+      "a": 17,
+      "kp": 59,
+      "cs": 127,
+      "vis": 28,
+      "dmg": 8513,
+      "teamDmg": 101780,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2890,
+      "goldEarned": 9658,
+      "fb": false,
+      "pg": {
+        "t": 42,
+        "q": 8,
+        "ai": 0,
+        "gb": 5,
+        "ba": 0,
+        "am": 9,
+        "dg": 0,
+        "ow": 12
+      },
+      "ff": 0,
+      "items": [
+        2055,
+        3116,
+        4642,
+        3158,
+        1028,
+        3118,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Udyr",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 10980,
+        "maxLeadMin": 26,
+        "maxDef": -1371,
+        "tgd15": -1234,
+        "gd15": -1002
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8040547914",
       "q": 420,
       "t": 1794178530393,
