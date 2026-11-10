@@ -114,11 +114,12 @@ export function computeAccountStats(history) {
   const cw = bestWorst(champs);
   const rw = bestWorst(roles);
 
-  // Mejor/peor partida: sin partidas de menos de 10 min (rendiciones tempranas); la peor, con al menos una muerte
+  // Mejor/peor partida: sin partidas de menos de 10 min (rendiciones tempranas); la peor, con al menos 5 muertes
+  // (si no, un 0/1/0 de una partida rendida cuenta como "peor partida")
   const pool = history.filter((g) => g.dur >= 600);
   const withKda = (pool.length ? pool : history).map((g) => ({ g, v: kda(g.k, g.d, g.a) }));
   const bestGame = withKda.reduce((m, x) => (x.v > m.v || (x.v === m.v && x.g.k > m.g.k) ? x : m));
-  const worstPool = withKda.filter((x) => x.g.d > 0);
+  const worstPool = withKda.filter((x) => x.g.d >= 5);
   const worstGame = (worstPool.length ? worstPool : withKda).reduce((m, x) => (x.v < m.v || (x.v === m.v && x.g.d > m.g.d) ? x : m));
 
   const last = (cnt) => history.slice(0, cnt);
