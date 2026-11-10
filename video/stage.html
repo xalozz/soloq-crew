@@ -1,0 +1,164 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Anton; src: url(node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2); }
+@font-face { font-family: Anton; src: url(node_modules/@fontsource/anton/files/anton-latin-ext-400-normal.woff2); unicode-range: U+0100-024F; }
+@font-face { font-family: Inter; font-weight: 400; src: url(node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2); }
+@font-face { font-family: Inter; font-weight: 600; src: url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2); }
+@font-face { font-family: Mono; font-weight: 500; src: url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2); }
+html, body { margin: 0; width: 1920px; height: 1080px; background: #07070a; overflow: hidden; }
+#stage { position: absolute; inset: 0; overflow: hidden; color: #f4f4f6; font-family: Inter, sans-serif; }
+#bg { position: absolute; inset: -60px; }
+#cam { position: absolute; inset: 0; transform-origin: 50% 50%; }
+#grain { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; opacity: .22; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(0,0,0,.75) 100%); }
+#bars::before, #bars::after { content: ''; position: absolute; left: 0; right: 0; height: 64px; background: #000; z-index: 5; }
+#bars::before { top: 0; } #bars::after { bottom: 0; }
+.abs { position: absolute; }
+.anton { font-family: Anton, sans-serif; text-transform: uppercase; letter-spacing: .01em; line-height: .92; }
+.mono { font-family: Mono, monospace; text-transform: uppercase; letter-spacing: .32em; font-weight: 500; }
+.av { border-radius: 50%; display: grid; place-items: center; overflow: hidden; background: #15151b; }
+.av img { width: 100%; height: 100%; object-fit: cover; }
+.flash { position: absolute; inset: 0; background: #fff; mix-blend-mode: overlay; }
+</style></head>
+<body><div id="stage"><div id="bg"></div><div id="cam"></div><div id="vig"></div><canvas id="grain" width="480" height="270"></canvas><div id="bars"></div></div>
+<script>
+const SPEC = window.SPEC;
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lin = (t, a, b) => clamp((t - a) / (b - a));
+const eo = (x) => 1 - Math.pow(1 - x, 3);           // ease-out cubic
+const eio = (x) => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const eback = (x) => { const c = 1.4; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const mix = (a, b, x) => a + (b - a) * x;
+const $ = (tag, css, html) => { const e = document.createElement(tag); if (css) e.style.cssText = css; if (html != null) e.innerHTML = html; return e; };
+const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+const cam = document.getElementById('cam'), bg = document.getElementById('bg');
+
+// Grano de película: ruido determinista por fotograma
+const gctx = document.getElementById('grain').getContext('2d');
+const gimg = gctx.createImageData(480, 270);
+function grain(f) {
+  let s = (f * 9301 + 49297) % 233280 || 1;
+  const d = gimg.data;
+  for (let i = 0; i < d.length; i += 4) { s = (s * 16807) % 2147483647; const v = s & 255; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; }
+  gctx.putImageData(gimg, 0, 0);
+}
+
+// Números que cuentan: cada grupo de cifras del texto sube de 0 a su valor
+function countUp(text, p) {
+  return String(text).replace(/\d[\d.]*/g, (m) => {
+    const v = Number(m.replace(/\./g, ''));
+    const x = Math.round(v * p);
+    return v >= 1000 ? String(x).replace(/\B(?=(\d{3})+(?!\d))/g, '.') : String(x);
+  });
+}
+const tierRgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)).join(',');
+
+function avatar(p, size) {
+  const img = p.iconSrc ? `<img src="${p.iconSrc}">` : `<span class="anton" style="font-size:${size * .5}px;color:${p.color}">${esc(p.initial)}</span>`;
+  return `<div class="av" style="width:${size}px;height:${size}px;box-shadow:0 0 0 ${Math.max(3, size / 40)}px ${p.color}, 0 0 ${size / 2}px rgba(${tierRgb(p.color)},.45)">${img}</div>`;
+}
+function fitFont(text, family, maxW, start) {
+  const c = fitFont.c ?? (fitFont.c = document.createElement('canvas').getContext('2d'));
+  let s = start;
+  while (s > 20) { c.font = `${s}px ${family}`; if (c.measureText(text).width <= maxW) break; s -= 2; }
+  return s;
+}
+
+// ------------------------------------------------------------------ escenas
+const SCENES = {
+  intro: { dur: 6.5, render(t) {
+    bg.style.background = `radial-gradient(ellipse at 50% ${mix(60, 50, t / 6.5)}%, rgba(120,120,150,${.10 * lin(t, 0, 2)}) 0%, transparent 60%)`;
+    cam.style.transform = `scale(${mix(1.0, 1.06, t / 6.5)})`;
+    const line = eo(lin(t, .3, 1.6));
+    const title = lin(t, 1.1, 2.6), sub = lin(t, 3.0, 3.9), out = lin(t, 5.7, 6.5);
+    const sp = mix(.6, .14, eo(title));
+    cam.innerHTML = `
+      <div class="abs" style="left:${W / 2 - 420 * line}px;top:600px;width:${840 * line}px;height:2px;background:linear-gradient(90deg,transparent,#fff 30%,#fff 70%,transparent);opacity:${.6 * (1 - out)}"></div>
+      <div class="abs anton" style="left:0;right:0;top:400px;text-align:center;font-size:170px;letter-spacing:${sp}em;opacity:${eo(title) * (1 - out)};filter:blur(${(1 - eo(title)) * 14}px)">SoloQ Crew</div>
+      <div class="abs mono" style="left:0;right:0;top:640px;text-align:center;font-size:26px;color:#9a9aa6;opacity:${eo(sub) * (1 - out)};transform:translateY(${(1 - eo(sub)) * 18}px)">${SPEC.players} jugadores · ${SPEC.total} partidas · temporada 2026</div>`;
+  } },
+  outro: { dur: 4.5, render(t) {
+    bg.style.background = '';
+    cam.style.transform = `scale(${mix(1.0, 1.04, t / 4.5)})`;
+    const a = eo(lin(t, .2, 1.2)), b = eo(lin(t, 1.4, 2.2)), out = lin(t, 3.6, 4.5);
+    cam.innerHTML = `
+      <div class="abs anton" style="left:0;right:0;top:430px;text-align:center;font-size:110px;opacity:${a * (1 - out)};filter:blur(${(1 - a) * 10}px)">Faltan cinco</div>
+      <div class="abs mono" style="left:0;right:0;top:590px;text-align:center;font-size:24px;color:#8a8a96;opacity:${b * (1 - out)}">xalozz.github.io/soloq-crew</div>`;
+  } },
+};
+
+// Presentación de cada jugador
+const STAT_AT = [2.4, 4.6, 6.8], CLOSE_AT = 9.0, PDUR = 11;
+function playerScene(p) {
+  const rgb = tierRgb(p.color);
+  return { dur: PDUR, render(t) {
+    const slam = eback(lin(t, .25, .75)), slamA = lin(t, .25, .45);
+    const move = eio(lin(t, 1.7, 2.3));
+    const closeT = lin(t, CLOSE_AT - .35, CLOSE_AT), closeIn = eo(lin(t, CLOSE_AT, CLOSE_AT + .9));
+    const end = lin(t, PDUR - .45, PDUR);
+    cam.style.transform = `scale(${mix(1.0, 1.05, t / PDUR)}) translateX(${mix(8, -8, t / PDUR)}px)`;
+    bg.style.background = `radial-gradient(ellipse at ${mix(50, 25, move)}% 50%, rgba(${rgb},${.28 * slamA * (1 - closeT)}) 0%, transparent 55%),
+      linear-gradient(${100 + t * 4}deg, transparent 40%, rgba(${rgb},${.07 * (1 - closeT)}) 50%, transparent 60%)`;
+
+    // Identidad: centrada y grande al entrar, luego a la izquierda
+    const nameSize0 = fitFont(p.name.toUpperCase(), 'Anton', 1500, 230), nameSize1 = fitFont(p.name.toUpperCase(), 'Anton', 560, 110);
+    const ns = mix(nameSize0, nameSize1, move);
+    const avs = mix(250, 230, move);
+    const cx = mix(W / 2, 400, move);
+    const idTop = mix(250, 250, move);
+    const idA = slamA * (1 - closeT);
+    const scale = mix(1.25, 1, slam);
+    let html = `
+      <div class="abs" style="left:${cx - 800}px;width:1600px;top:${idTop}px;display:flex;flex-direction:column;align-items:center;gap:${mix(34, 30, move)}px;opacity:${idA};transform:scale(${scale});filter:blur(${(1 - slamA) * 12}px)">
+        ${avatar(p, avs)}
+        <div class="anton" style="font-size:${ns}px;white-space:nowrap">${esc(p.name)}</div>
+        <div class="mono" style="font-size:${mix(30, 26, move)}px;color:${p.color};letter-spacing:.24em">${esc(p.rank)}</div>
+      </div>`;
+    // Línea vertical separadora
+    const sep = eo(lin(t, 2.0, 2.6)) * (1 - closeT);
+    html += `<div class="abs" style="left:780px;top:${540 - 330 * sep}px;width:2px;height:${660 * sep}px;background:linear-gradient(transparent,rgba(${rgb},.8),transparent)"></div>`;
+    // Estadísticas
+    p.stats.forEach((s, i) => {
+      const at = STAT_AT[i];
+      const a = eo(lin(t, at, at + .5));
+      if (a <= 0) return;
+      const cnt = eo(lin(t, at, at + 1.1));
+      const top = 175 + i * 255;
+      const hit = Math.exp(-Math.max(0, t - at) * 7) * (t >= at ? 1 : 0);
+      html += `
+        <div class="abs" style="left:870px;top:${top}px;width:960px;opacity:${a * (1 - closeT)};transform:translateX(${(1 - a) * 70}px) scale(${1 + hit * .04});transform-origin:0 50%;filter:blur(${(1 - a) * 8}px)">
+          <div class="mono" style="font-size:22px;color:${p.color}">${esc(s.label)}</div>
+          <div style="display:flex;align-items:baseline;gap:22px;margin-top:6px">
+            <span class="anton" style="font-size:132px;text-shadow:0 0 ${40 * hit}px rgba(${rgb},.9)">${esc(countUp(s.big, cnt))}</span>
+            ${s.unit ? `<span style="font-size:40px;font-weight:600;color:#e6e6ea">${esc(s.unit)}</span>` : ''}
+          </div>
+          ${s.sub ? `<div style="font-size:28px;color:#8f8f9b;margin-top:2px">${esc(s.sub)}</div>` : ''}
+        </div>`;
+    });
+    // Frase final
+    if (closeIn > 0) {
+      html += `<div class="abs" style="left:0;right:0;top:470px;text-align:center;opacity:${closeIn * (1 - end)};filter:blur(${(1 - closeIn) * 10}px)">
+        <div style="font-size:64px;font-weight:600;letter-spacing:-.01em">${esc(p.closing)}</div>
+        <div class="mono" style="font-size:22px;color:${p.color};margin-top:26px;opacity:.9">${esc(p.name)}</div></div>`;
+    }
+    // Destello en cada golpe
+    const fl = [0.25, ...STAT_AT].reduce((m, at) => Math.max(m, t >= at ? Math.exp(-(t - at) * 14) : 0), 0);
+    html += `<div class="flash" style="opacity:${fl * .35}"></div>`;
+    cam.innerHTML = html;
+  } };
+}
+
+window.buildScenes = () => {
+  const list = [['intro', SCENES.intro]];
+  SPEC.cast.forEach((p, i) => list.push([`p${i}`, playerScene(p)]));
+  list.push(['outro', SCENES.outro]);
+  return list.map(([id, s]) => ({ id, dur: s.dur }));
+};
+window.renderAt = (id, t, frame) => {
+  const s = id === 'intro' ? SCENES.intro : id === 'outro' ? SCENES.outro : playerScene(SPEC.cast[Number(id.slice(1))]);
+  s.render(t);
+  grain(frame);
+};
+</script></body></html>
