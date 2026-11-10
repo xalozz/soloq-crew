@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8042131052",
+      "q": 420,
+      "t": 1794336023045,
+      "dur": 2078,
+      "win": false,
+      "champ": "Kennen",
+      "role": "TOP",
+      "lvl": 17,
+      "k": 3,
+      "d": 10,
+      "a": 6,
+      "kp": 33,
+      "cs": 148,
+      "vis": 29,
+      "dmg": 33387,
+      "teamDmg": 141966,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 578,
+      "goldEarned": 11170,
+      "fb": false,
+      "pg": {
+        "t": 14,
+        "q": 7,
+        "ai": 0,
+        "gb": 3,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 1
+      },
+      "ff": 0,
+      "items": [
+        3020,
+        2031,
+        3152,
+        3157,
+        4645,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerDot",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Mordekaiser",
+        "spells": [
+          "SummonerFlash",
+          "SummonerDot"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 815,
+        "maxLeadMin": 7,
+        "maxDef": -12333,
+        "tgd15": -688,
+        "gd15": -1325
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8042054206",
       "q": 420,
       "t": 1794331681907,
