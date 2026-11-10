@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8042030447",
+      "q": 420,
+      "t": 1794331270718,
+      "dur": 2139,
+      "win": true,
+      "champ": "Kennen",
+      "role": "TOP",
+      "lvl": 19,
+      "k": 4,
+      "d": 8,
+      "a": 9,
+      "kp": 30,
+      "cs": 198,
+      "vis": 45,
+      "dmg": 17800,
+      "teamDmg": 132318,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4709,
+      "goldEarned": 12690,
+      "fb": true,
+      "pg": {
+        "t": 46,
+        "q": 0,
+        "ai": 2,
+        "gb": 10,
+        "ba": 0,
+        "am": 8,
+        "dg": 0,
+        "ow": 22
+      },
+      "ff": 1,
+      "items": [
+        3152,
+        3157,
+        4645,
+        3020,
+        1055,
+        1058,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerTeleport"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7202_Sorcery.png"
+      ],
+      "opp": {
+        "champ": "Vayne",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7204_Resolve.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8954,
+        "maxLeadMin": 36,
+        "maxDef": -1440,
+        "tgd15": 57,
+        "gd15": -1241
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8041208006",
       "q": 420,
       "t": 1794252587819,
