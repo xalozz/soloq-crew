@@ -2,6 +2,219 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8043572023",
+      "q": 420,
+      "t": 1794436067713,
+      "dur": 1905,
+      "win": true,
+      "champ": "Sejuani",
+      "role": "JUNGLE",
+      "lvl": 16,
+      "k": 8,
+      "d": 7,
+      "a": 14,
+      "kp": 69,
+      "cs": 189,
+      "vis": 29,
+      "dmg": 26011,
+      "teamDmg": 116667,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 882,
+      "goldEarned": 13440,
+      "fb": false,
+      "pg": {
+        "t": 21,
+        "q": 2,
+        "ai": 0,
+        "gb": 5,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 10
+      },
+      "ff": 0,
+      "items": [
+        1011,
+        3111,
+        6664,
+        3082,
+        3075,
+        3084,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Viego",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/Conqueror/Conqueror.png",
+          "perk-images/Styles/7200_Domination.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 2402,
+        "maxLeadMin": 32,
+        "maxDef": -2474,
+        "tgd15": -1071,
+        "gd15": -243
+      }
+    },
+    {
+      "v": 4,
+      "id": "EUW1_8043511403",
+      "q": 420,
+      "t": 1794433856474,
+      "dur": 1868,
+      "win": false,
+      "champ": "Ivern",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 2,
+      "d": 8,
+      "a": 9,
+      "kp": 41,
+      "cs": 148,
+      "vis": 36,
+      "dmg": 8631,
+      "teamDmg": 98026,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3000,
+      "goldEarned": 10697,
+      "fb": false,
+      "pg": {
+        "t": 34,
+        "q": 2,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 17
+      },
+      "ff": 0,
+      "items": [
+        3107,
+        3067,
+        3158,
+        2022,
+        3118,
+        3116,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Graves",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 186,
+        "maxLeadMin": 2,
+        "maxDef": -7535,
+        "tgd15": -2372,
+        "gd15": -310
+      }
+    },
+    {
+      "v": 4,
+      "id": "EUW1_8043467339",
+      "q": 420,
+      "t": 1794431729369,
+      "dur": 1557,
+      "win": true,
+      "champ": "Ivern",
+      "role": "JUNGLE",
+      "lvl": 14,
+      "k": 2,
+      "d": 3,
+      "a": 14,
+      "kp": 40,
+      "cs": 142,
+      "vis": 34,
+      "dmg": 8694,
+      "teamDmg": 104932,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 7398,
+      "goldEarned": 11369,
+      "fb": false,
+      "pg": {
+        "t": 44,
+        "q": 9,
+        "ai": 1,
+        "gb": 7,
+        "ba": 0,
+        "am": 10,
+        "dg": 0,
+        "ow": 8
+      },
+      "ff": 0,
+      "items": [
+        3107,
+        3118,
+        3067,
+        3158,
+        1052,
+        3116,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Khazix",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 11058,
+        "maxLeadMin": 26,
+        "maxDef": -499,
+        "tgd15": 2610,
+        "gd15": -2115
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8043005203",
       "q": 420,
       "t": 1794410765272,
