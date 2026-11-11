@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8043049548",
+      "q": 420,
+      "t": 1794412683835,
+      "dur": 1644,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 16,
+      "k": 5,
+      "d": 5,
+      "a": 8,
+      "kp": 35,
+      "cs": 177,
+      "vis": 15,
+      "dmg": 15511,
+      "teamDmg": 95484,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 8390,
+      "goldEarned": 11046,
+      "fb": false,
+      "pg": {
+        "t": 13,
+        "q": 6,
+        "ai": 1,
+        "gb": 0,
+        "ba": 0,
+        "am": 4,
+        "dg": 0,
+        "ow": 2
+      },
+      "ff": 0,
+      "items": [
+        1056,
+        2503,
+        2031,
+        3116,
+        3175,
+        6653,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7203_Whimsy.png"
+      ],
+      "opp": {
+        "champ": "Ahri",
+        "spells": [
+          "SummonerDot",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 12305,
+        "maxLeadMin": 28,
+        "maxDef": -780,
+        "tgd15": 5262,
+        "gd15": -1078
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8042872783",
       "q": 420,
       "t": 1794400956718,
