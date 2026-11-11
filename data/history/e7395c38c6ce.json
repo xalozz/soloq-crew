@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8042817221",
+      "q": 420,
+      "t": 1794396792697,
+      "dur": 2115,
+      "win": true,
+      "champ": "Malzahar",
+      "role": "MIDDLE",
+      "lvl": 18,
+      "k": 8,
+      "d": 5,
+      "a": 18,
+      "kp": 59,
+      "cs": 258,
+      "vis": 21,
+      "dmg": 32886,
+      "teamDmg": 157324,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 6853,
+      "goldEarned": 14961,
+      "fb": false,
+      "pg": {
+        "t": 10,
+        "q": 2,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 1,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 0,
+      "items": [
+        6653,
+        2503,
+        3175,
+        3116,
+        3135,
+        0,
+        3340
+      ],
+      "spells": [
+        "SummonerTeleport",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "perk-images/Styles/7204_Resolve.png"
+      ],
+      "opp": {
+        "champ": "Anivia",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15034,
+        "maxLeadMin": 36,
+        "maxDef": 0,
+        "tgd15": 3662,
+        "gd15": 633
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8042221677",
       "q": 420,
       "t": 1794340407381,

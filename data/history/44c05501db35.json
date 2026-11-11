@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8042817221",
+      "q": 420,
+      "t": 1794396792697,
+      "dur": 2115,
+      "win": true,
+      "champ": "Zed",
+      "role": "JUNGLE",
+      "lvl": 18,
+      "k": 17,
+      "d": 2,
+      "a": 16,
+      "kp": 75,
+      "cs": 247,
+      "vis": 43,
+      "dmg": 48235,
+      "teamDmg": 157324,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 4122,
+      "goldEarned": 19337,
+      "fb": false,
+      "pg": {
+        "t": 69,
+        "q": 1,
+        "ai": 3,
+        "gb": 9,
+        "ba": 0,
+        "am": 19,
+        "dg": 0,
+        "ow": 14
+      },
+      "ff": 0,
+      "items": [
+        6699,
+        3158,
+        6692,
+        3139,
+        3036,
+        3814,
+        3364
+      ],
+      "spells": [
+        "SummonerSmite",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "perk-images/Styles/7201_Precision.png"
+      ],
+      "opp": {
+        "champ": "Rammus",
+        "spells": [
+          "SummonerSmite",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7201_Precision.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 15034,
+        "maxLeadMin": 36,
+        "maxDef": 0,
+        "tgd15": 3662,
+        "gd15": 1692
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8042769308",
       "q": 420,
       "t": 1794391275318,
