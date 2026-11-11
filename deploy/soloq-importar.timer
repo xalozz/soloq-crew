@@ -1,0 +1,10 @@
+[Unit]
+Description=SoloQ Crew: copia a SQLite lo publicado por la GitHub Action, cada minuto (a los :45, tras el espejo)
+
+[Timer]
+OnCalendar=*:*:45
+AccuracySec=5s
+Persistent=false
+
+[Install]
+WantedBy=timers.target

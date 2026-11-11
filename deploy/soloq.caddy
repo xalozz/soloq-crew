@@ -1,0 +1,13 @@
+# Versión en Python (FastAPI + SQLite), en pruebas mientras convive con la GitHub Action.
+soloq-nuevo.xalozz.es {
+	import privado
+	encode zstd gzip
+	request_body {
+		max_size 16KB
+	}
+	reverse_proxy 127.0.0.1:8001
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+}

@@ -136,3 +136,40 @@ index.html app.js style.css sw.js manifest.webmanifest   la web
 - La web lee el estado del latido de la API de GitHub sin autenticar (60 consultas por hora y por IP),
   por eso lo comprueba cada 2 minutos.
 - Proyecto no afiliado a Riot Games.
+
+## Versión en Python (servidor propio) — en pruebas
+
+Reescritura del actualizador y del servidor en Python + SQLite para el VPS, con la misma lógica que los
+scripts de Node. Mientras convive con la GitHub Action vive en `soloq-nuevo.xalozz.es` y **no manda nada
+a Discord**.
+
+```
+soloq/update.py     una pasada (rápida o completa): port de scripts/update.mjs y compañía
+soloq/bucle.py      el bucle de la Action: rápida cada minuto, completa cada 15, latido en la base de datos
+soloq/server.py     FastAPI: la web y /data/data.json, /data/weeks.json, /data/matches/<id>.json, /api/latido
+soloq/store.py      esquema SQLite (cuentas, partidas, fotos de LP, detalles, semanas, eventos, avisos, estado)
+soloq/importer.py   data/*.json → SQLite (y al revés), comprobando elemento a elemento que no se pierde nada
+deploy/             unidades systemd, sitio de Caddy, empaquetar.sh e instalar.sh
+tests/              paridad con Node (funciones y pasadas completas contra una API de Riot simulada),
+                    importador y servidor
+```
+
+```bash
+python -m venv .venv && .venv/Scripts/pip install -r requirements.txt     # Python 3.13+
+.venv/Scripts/python -m unittest discover -s tests -t .                   # necesita Node para la paridad
+.venv/Scripts/python -m soloq.importer importar data --db datos/soloq.db  # carga y comprueba
+SOLOQ_HOSTS=localhost:8001 .venv/Scripts/python -m soloq.server --port 8001
+```
+
+- Variables: `SOLOQ_DATA` (carpeta de `soloq.db`), `SOLOQ_HOSTS`, `SOLOQ_SITE` (enlaces de Discord), y las
+  mismas de Node (`MIN_INTERVAL_MS`, `BACKFILL_BUDGET`, `MATCH_COUNT`, `CONDUCT_BUDGET`). La clave de Riot y el
+  webhook van por credenciales de systemd (`/etc/soloq/riot-api-key`, `/etc/soloq/discord-webhook`), nunca en el repo.
+- La web es la misma; `app.js` solo cambia en que su dirección es la de donde se sirve y en que, fuera de
+  GitHub Pages, el latido lo lee de `api/latido`.
+- Mientras no haya clave en el servidor, `soloq-importar.timer` copia cada minuto lo que publica la Action
+  (desde el clon de `main` del espejo) para que la web de prueba muestre datos vivos.
+
+**Corte final** (lo decide Álvaro): desactivar la Action; poner la clave y el webhook en `/etc/soloq/`; quitar
+`MIN_INTERVAL_MS=2500` de `soloq-actualizador.service` y activar su `LoadCredential=discord-webhook`;
+`SOLOQ_SITE`/`SOLOQ_HOSTS` y el sitio de Caddy a `soloq.xalozz.es`; última importación desde `main` justo antes
+(`importer importar … --reemplazar`) y arrancar el actualizador.

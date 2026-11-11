@@ -3,3 +3,10 @@ node_modules/
 .quick-state.json
 .status.json
 .champ-ids.json
+.venv/
+__pycache__/
+datos/
+*.db
+*.db-wal
+*.db-shm
+deploy-paquete.tgz
