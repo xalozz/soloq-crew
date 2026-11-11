@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8043300471",
+      "q": 420,
+      "t": 1794424795132,
+      "dur": 1801,
+      "win": true,
+      "champ": "Lux",
+      "role": "MIDDLE",
+      "lvl": 17,
+      "k": 4,
+      "d": 1,
+      "a": 3,
+      "kp": 22,
+      "cs": 228,
+      "vis": 27,
+      "dmg": 17289,
+      "teamDmg": 95215,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 1210,
+      "goldEarned": 10691,
+      "fb": false,
+      "pg": {
+        "t": 37,
+        "q": 9,
+        "ai": 0,
+        "gb": 2,
+        "ba": 0,
+        "am": 3,
+        "dg": 0,
+        "ow": 5
+      },
+      "ff": 0,
+      "items": [
+        1058,
+        3118,
+        3175,
+        1082,
+        4646,
+        1058,
+        3340
+      ],
+      "spells": [
+        "SummonerBarrier",
+        "SummonerFlash"
+      ],
+      "runes": [
+        "perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Syndra",
+        "spells": [
+          "SummonerTeleport",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 6529,
+        "maxLeadMin": 30,
+        "maxDef": 0,
+        "tgd15": 1542,
+        "gd15": -266
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8043159684",
       "q": 420,
       "t": 1794418901191,
