@@ -12,6 +12,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 APP=/srv/soloq/app
 DATA=/srv/soloq/data
 
+cd "$APP"   # python -m soloq.… necesita estar en la carpeta de la app
+
 for f in riot-api-key discord-webhook; do
   [ -s "/etc/soloq/$f" ] || { echo "Falta /etc/soloq/$f: no se hace el corte."; exit 1; }
   chmod 600 "/etc/soloq/$f"
