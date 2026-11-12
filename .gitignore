@@ -3,3 +3,11 @@ node_modules/
 .quick-state.json
 .status.json
 .champ-ids.json
+
+# Vídeo: todo lo generado se rehace con los scripts
+video/out/
+video/stills/
+video/music.wav
+video/*.mp4
+video/spec.json
+video/render.log

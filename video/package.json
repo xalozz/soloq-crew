@@ -1,0 +1,19 @@
+{
+  "name": "video",
+  "version": "1.0.0",
+  "description": "- `spec.mjs`: saca los datos de `data/data.json` y genera `spec.json` (jugadores, datos y frases).\r - `stage.html`: escenas animadas (se renderiza con Playwright fotograma a fotograma).\r - `render.cjs`: `node render.cjs stills` (capturas) / `node render.cjs video` (escenas en `out/`).\r - `music.py`: música sintetizada sincronizada con las escenas (`python3 music.py out/scenes.json music.wav`).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "playwright": "^1.65.0"
+  }
+}

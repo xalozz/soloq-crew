@@ -6,159 +6,392 @@
 @font-face { font-family: Inter; font-weight: 400; src: url(node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2); }
 @font-face { font-family: Inter; font-weight: 600; src: url(node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2); }
 @font-face { font-family: Mono; font-weight: 500; src: url(node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2); }
-html, body { margin: 0; width: 1920px; height: 1080px; background: #07070a; overflow: hidden; }
-#stage { position: absolute; inset: 0; overflow: hidden; color: #f4f4f6; font-family: Inter, sans-serif; }
-#bg { position: absolute; inset: -60px; }
-#cam { position: absolute; inset: 0; transform-origin: 50% 50%; }
-#grain { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: overlay; opacity: .22; }
-#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(0,0,0,.75) 100%); }
-#bars::before, #bars::after { content: ''; position: absolute; left: 0; right: 0; height: 64px; background: #000; z-index: 5; }
+html, body { margin: 0; width: 1920px; height: 1080px; background: #000; overflow: hidden; }
+#stage { position: absolute; inset: 0; overflow: hidden; color: #f4f4f6; font-family: Inter, sans-serif; background: #07070a; }
+#world { position: absolute; inset: 0; transform-origin: 50% 50%; }
+#bg { position: absolute; inset: -80px; }
+#back, #cam, #front { position: absolute; inset: 0; }
+#back > *, #front > * { position: absolute; display: none; }
+.sp { overflow: hidden; }
+.sp img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+#grain { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: overlay; opacity: .2; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 45%, rgba(0,0,0,.72) 100%); }
+#flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+#bars::before, #bars::after { content: ''; position: absolute; left: 0; right: 0; height: 64px; background: #000; }
 #bars::before { top: 0; } #bars::after { bottom: 0; }
 .abs { position: absolute; }
-.anton { font-family: Anton, sans-serif; text-transform: uppercase; letter-spacing: .01em; line-height: .92; }
-.mono { font-family: Mono, monospace; text-transform: uppercase; letter-spacing: .32em; font-weight: 500; }
-.av { border-radius: 50%; display: grid; place-items: center; overflow: hidden; background: #15151b; }
-.av img { width: 100%; height: 100%; object-fit: cover; }
-.flash { position: absolute; inset: 0; background: #fff; mix-blend-mode: overlay; }
+.anton { font-family: Anton, sans-serif; text-transform: uppercase; letter-spacing: .01em; line-height: .95; }
+.mono { font-family: Mono, monospace; text-transform: uppercase; letter-spacing: .3em; font-weight: 500; }
+.nw { white-space: nowrap; }
+.av { border-radius: 50%; object-fit: cover; }
 </style></head>
-<body><div id="stage"><div id="bg"></div><div id="cam"></div><div id="vig"></div><canvas id="grain" width="480" height="270"></canvas><div id="bars"></div></div>
+<body><div id="stage">
+  <div id="world"><div id="bg"></div><div id="back"></div><div id="cam"></div><div id="front"></div></div>
+  <div id="vig"></div><div id="flash"></div><canvas id="grain" width="480" height="270"></canvas><div id="bars"></div>
+</div>
 <script>
 const SPEC = window.SPEC;
-const W = 1920, H = 1080;
+const W = 1920, H = 1080, BG = '#07070a', RED = '#ff4655', GOLDC = '#f0b63f';
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const lin = (t, a, b) => clamp((t - a) / (b - a));
-const eo = (x) => 1 - Math.pow(1 - x, 3);           // ease-out cubic
+const eo = (x) => 1 - Math.pow(1 - x, 3);
+const ei = (x) => x * x * x;
 const eio = (x) => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
-const eback = (x) => { const c = 1.4; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const eback = (x) => { const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
 const mix = (a, b, x) => a + (b - a) * x;
-const $ = (tag, css, html) => { const e = document.createElement(tag); if (css) e.style.cssText = css; if (html != null) e.innerHTML = html; return e; };
+const hash = (i, s = 1) => { const x = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return x - Math.floor(x); };
 const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
-const cam = document.getElementById('cam'), bg = document.getElementById('bg');
+const fmtN = (x) => String(Math.round(x)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+const rgbOf = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)).join(',');
+const $id = (x) => document.getElementById(x);
+const world = $id('world'), cam = $id('cam'), bg = $id('bg'), back = $id('back'), front = $id('front'), flashEl = $id('flash');
 
-// Grano de película: ruido determinista por fotograma
-const gctx = document.getElementById('grain').getContext('2d');
-const gimg = gctx.createImageData(480, 270);
+// ---------------------------------------------------------------- imágenes persistentes (ya decodificadas)
+const SPL = {}, AV = {}, CREST = {};
+function addImg(parent, src, cls) { const i = new Image(); i.src = src; if (cls) i.className = cls; parent.appendChild(i); return i; }
+const loads = [];
+for (const p of SPEC.cast) {
+  if (!AV[p.icon]) { AV[p.icon] = addImg(front, `assets/icon/${p.icon}.png`, 'av'); loads.push(AV[p.icon].decode()); }
+  if (!CREST[p.tier]) { CREST[p.tier] = addImg(back, `assets/crest/${p.tier}.png`); loads.push(CREST[p.tier].decode()); }
+  for (const s of p.stats) if (s.champ && !SPL[s.champ]) {
+    const d = document.createElement('div'); d.className = 'sp'; back.appendChild(d);
+    const im = addImg(d, `assets/splashc/${s.champ}.jpg`); loads.push(im.decode());
+    SPL[s.champ] = { box: d, im };
+  }
+}
+window.ready = Promise.all(loads);
+function hideAll() { for (const e of back.children) e.style.display = 'none'; for (const e of front.children) e.style.display = 'none'; }
+function showAvatar(p, cx, cy, size, opacity = 1, extra = '') {
+  const e = AV[p.icon];
+  e.style.cssText = `display:block;left:${cx - size / 2}px;top:${cy - size / 2}px;width:${size}px;height:${size}px;opacity:${opacity};box-shadow:0 0 0 ${Math.max(3, size / 42)}px ${p.color},0 0 ${size / 2}px rgba(${rgbOf(p.color)},.5);${extra}`;
+}
+function showCrest(p, cx, cy, size, opacity) {
+  CREST[p.tier].style.cssText = `display:block;left:${cx - size / 2}px;top:${cy - size / 2}px;width:${size}px;height:${size}px;object-fit:contain;opacity:${opacity}`;
+}
+function showSplash(champ, { x = 860, slide = 0, opacity = 1, zoom = 1.08, filter = '', ox = 0 }) {
+  const s = SPL[champ];
+  s.box.style.cssText = `display:block;left:${x + slide}px;top:0;width:${W - x}px;height:${H}px;opacity:${opacity};clip-path:polygon(17% 0,100% 0,100% 100%,0 100%);-webkit-mask-image:linear-gradient(90deg,transparent 2%,#000 38%)`;
+  s.im.style.cssText = `transform:scale(${zoom}) translateX(${ox}px);filter:brightness(.78) saturate(1.1) ${filter}`;
+}
+
+// ---------------------------------------------------------------- grano y efectos de cámara
+const gctx = $id('grain').getContext('2d'), gimg = gctx.createImageData(480, 270);
 function grain(f) {
-  let s = (f * 9301 + 49297) % 233280 || 1;
-  const d = gimg.data;
+  let s = (f * 9301 + 49297) % 233280 || 1; const d = gimg.data;
   for (let i = 0; i < d.length; i += 4) { s = (s * 16807) % 2147483647; const v = s & 255; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; }
   gctx.putImageData(gimg, 0, 0);
 }
-
-// Números que cuentan: cada grupo de cifras del texto sube de 0 a su valor
-function countUp(text, p) {
-  return String(text).replace(/\d[\d.]*/g, (m) => {
-    const v = Number(m.replace(/\./g, ''));
-    const x = Math.round(v * p);
-    return v >= 1000 ? String(x).replace(/\B(?=(\d{3})+(?!\d))/g, '.') : String(x);
-  });
+// hits: [[tiempo, fuerza]] → sacudida y destello
+function fx(t, hits, zoom = 1) {
+  let sx = 0, sy = 0, fl = 0;
+  for (const [h, a] of hits) {
+    if (t < h) continue;
+    const e = Math.exp(-(t - h) * 8) * a;
+    sx += Math.sin((t - h) * 71 + h) * e; sy += Math.cos((t - h) * 83 + h * 2) * e * .7;
+    fl = Math.max(fl, Math.exp(-(t - h) * 13) * Math.min(1, a / 20));
+  }
+  world.style.transform = `translate(${sx.toFixed(2)}px,${sy.toFixed(2)}px) scale(${zoom})`;
+  flashEl.style.opacity = (fl * .3).toFixed(3);
 }
-const tierRgb = (hex) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)).join(',');
-
-function avatar(p, size) {
-  const img = p.iconSrc ? `<img src="${p.iconSrc}">` : `<span class="anton" style="font-size:${size * .5}px;color:${p.color}">${esc(p.initial)}</span>`;
-  return `<div class="av" style="width:${size}px;height:${size}px;box-shadow:0 0 0 ${Math.max(3, size / 40)}px ${p.color}, 0 0 ${size / 2}px rgba(${tierRgb(p.color)},.45)">${img}</div>`;
-}
-function fitFont(text, family, maxW, start) {
-  const c = fitFont.c ?? (fitFont.c = document.createElement('canvas').getContext('2d'));
+function fit(text, maxW, start, family = 'Anton') {
+  const c = fit.c ?? (fit.c = document.createElement('canvas').getContext('2d'));
   let s = start;
-  while (s > 20) { c.font = `${s}px ${family}`; if (c.measureText(text).width <= maxW) break; s -= 2; }
+  while (s > 24) { c.font = `${s}px ${family}`; if (c.measureText(text).width <= maxW) break; s -= 2; }
   return s;
 }
+const countUp = (text, p) => String(text).replace(/\d[\d.]*/g, (m) => { const v = Number(m.replace(/\./g, '')); return m.includes('.') ? fmtN(v * p) : String(Math.round(v * p)); });
 
-// ------------------------------------------------------------------ escenas
-const SCENES = {
-  intro: { dur: 6.5, render(t) {
-    bg.style.background = `radial-gradient(ellipse at 50% ${mix(60, 50, t / 6.5)}%, rgba(120,120,150,${.10 * lin(t, 0, 2)}) 0%, transparent 60%)`;
-    cam.style.transform = `scale(${mix(1.0, 1.06, t / 6.5)})`;
-    const line = eo(lin(t, .3, 1.6));
-    const title = lin(t, 1.1, 2.6), sub = lin(t, 3.0, 3.9), out = lin(t, 5.7, 6.5);
-    const sp = mix(.6, .14, eo(title));
-    cam.innerHTML = `
-      <div class="abs" style="left:${W / 2 - 420 * line}px;top:600px;width:${840 * line}px;height:2px;background:linear-gradient(90deg,transparent,#fff 30%,#fff 70%,transparent);opacity:${.6 * (1 - out)}"></div>
-      <div class="abs anton" style="left:0;right:0;top:400px;text-align:center;font-size:170px;letter-spacing:${sp}em;opacity:${eo(title) * (1 - out)};filter:blur(${(1 - eo(title)) * 14}px)">SoloQ Crew</div>
-      <div class="abs mono" style="left:0;right:0;top:640px;text-align:center;font-size:26px;color:#9a9aa6;opacity:${eo(sub) * (1 - out)};transform:translateY(${(1 - eo(sub)) * 18}px)">${SPEC.players} jugadores · ${SPEC.total} partidas · temporada 2026</div>`;
-  } },
-  outro: { dur: 4.5, render(t) {
-    bg.style.background = '';
-    cam.style.transform = `scale(${mix(1.0, 1.04, t / 4.5)})`;
-    const a = eo(lin(t, .2, 1.2)), b = eo(lin(t, 1.4, 2.2)), out = lin(t, 3.6, 4.5);
-    cam.innerHTML = `
-      <div class="abs anton" style="left:0;right:0;top:430px;text-align:center;font-size:110px;opacity:${a * (1 - out)};filter:blur(${(1 - a) * 10}px)">Faltan cinco</div>
-      <div class="abs mono" style="left:0;right:0;top:590px;text-align:center;font-size:24px;color:#8a8a96;opacity:${b * (1 - out)}">xalozz.github.io/soloq-crew</div>`;
-  } },
+// ---------------------------------------------------------------- gags (u = segundos desde que entra el dato)
+const TX = 130, TY = 350; // bloque de texto del dato
+const GAGS = {
+  none: () => ({}),
+  // Sellos rojos "D", uno por derrota
+  stamps(s, u) {
+    const cols = 6, cell = 134; let html = '';
+    for (let i = 0; i < s.count; i++) {
+      const at = .3 + i * .13, a = lin(u, at, at + .1);
+      if (a <= 0) continue;
+      const x = 1010 + (i % cols) * cell, y = 330 + Math.floor(i / cols) * cell;
+      html += `<div class="abs anton" style="left:${x}px;top:${y}px;width:106px;height:106px;border:7px solid ${RED};color:${RED};font-size:78px;display:grid;place-items:center;border-radius:10px;opacity:${a};transform:rotate(${(hash(i) - .5) * 14}deg) scale(${1 + (1 - eo(a)) * 1.4})">D</div>`;
+    }
+    return { html, hits: Array.from({ length: s.count }, (_, i) => [.3 + i * .13, 5]) };
+  },
+  // Cruces, una por muerte
+  deaths(s, u) {
+    let html = '';
+    for (let i = 0; i < s.deaths; i++) {
+      const at = .45 + i * .1, a = lin(u, at, at + .08);
+      if (a <= 0) continue;
+      html += `<div class="abs" style="left:${TX + i * 58}px;top:${TY + 400}px;font-size:54px;font-weight:600;color:${RED};opacity:${a};transform:scale(${1 + (1 - a) * 1.5})">✕</div>`;
+    }
+    return { html, hits: Array.from({ length: s.deaths }, (_, i) => [.45 + i * .1, 3]) };
+  },
+  // El oro baja a cero y se caen las monedas
+  gold(s, u) {
+    const p = eio(lin(u, .9, 2.1)); let html = '';
+    for (let i = 0; i < 22; i++) {
+      const u0 = .9 + hash(i, 3) * 1.1, dt = u - u0;
+      if (dt <= 0) continue;
+      const x = TX + 40 + hash(i, 5) * 620 + dt * (hash(i, 7) - .5) * 160, y = TY + 150 + dt * dt * 1500 - dt * 260, r = 26 + hash(i, 9) * 22;
+      html += `<div class="abs" style="left:${x}px;top:${y}px;width:${r}px;height:${r}px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe9a8,${GOLDC} 55%,#8a5a10);box-shadow:0 0 14px rgba(240,182,63,.6);transform:scaleX(${Math.abs(Math.cos(dt * 9 + i))})"></div>`;
+    }
+    return { html, big: fmtN(s.val * (1 - p)), bigColor: p > .98 ? '#6d6d78' : GOLDC, hits: [[.9, 8]] };
+  },
+  // Mel devuelve el número rebotado
+  reflect(s, u) {
+    const r = eo(lin(u, .8, 1.5)), a = lin(u, .8, .9) * (1 - lin(u, 1.2, 1.6));
+    const html = `<div class="abs" style="left:${1380 - 100 - r * 700}px;top:${540 - 100 - r * 700}px;width:${200 + r * 1400}px;height:${200 + r * 1400}px;border-radius:50%;border:${10 - r * 6}px solid #ffd77a;box-shadow:0 0 80px #ffc94d, inset 0 0 80px rgba(255,201,77,.5);opacity:${a}"></div>`;
+    const b = Math.sin(Math.PI * lin(u, .8, 1.25));
+    return { html, bigStyle: `transform:translateX(${-b * 70}px) scaleX(${1 - 2 * lin(u, .8, .95) * (1 - lin(u, 1.05, 1.2))});text-shadow:0 0 ${b * 60}px #ffc94d`, hits: [[.8, 14]] };
+  },
+  // Corte de viento que parte el dato en dos
+  slash(s, u) {
+    const sw = lin(u, .85, .97); let html = '';
+    if (sw > 0 && u < 1.5) {
+      const a = 1 - lin(u, .97, 1.5);
+      html += `<div class="abs" style="left:-400px;top:520px;width:2800px;height:${mix(14, 3, lin(u, .97, 1.4))}px;background:linear-gradient(90deg,transparent ${sw * 100 - 60}%,#fff ${sw * 100 - 5}%,#dff 100%);clip-path:inset(0 ${100 - sw * 100}% 0 0);transform:rotate(-16deg);opacity:${a};box-shadow:0 0 40px #bff"></div>`;
+      for (let i = 0; i < 5; i++) {
+        const x = -300 + eo(lin(u, .9 + i * .05, 1.5 + i * .05)) * 2600;
+        html += `<div class="abs" style="left:${x}px;top:${250 + i * 150}px;width:${260 + hash(i) * 300}px;height:2px;background:linear-gradient(90deg,transparent,#cff,transparent);transform:rotate(-16deg);opacity:${.7 * a}"></div>`;
+      }
+    }
+    return { html, split: u >= .95 ? 10 + 34 * Math.exp(-(u - .95) * 3) : 0, hits: [[.95, 26]] };
+  },
+  // Gráfica real de LP
+  chart(s, u) {
+    const pts = s.points, x0 = 1000, y0 = 310, w = 800, h = 460;
+    const mn = Math.min(...pts), mx = Math.max(...pts), k = Math.max(2, Math.ceil(eio(lin(u, .25, 1.9)) * pts.length));
+    const P = pts.slice(0, k).map((v, i) => [x0 + (i / (pts.length - 1)) * w, y0 + (1 - (v - mn) / (mx - mn || 1)) * h]);
+    const path = P.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(' ');
+    const [ex, ey] = P[P.length - 1], a = lin(u, .1, .3);
+    let grid = ''; for (let i = 0; i <= 4; i++) grid += `<line x1="${x0}" x2="${x0 + w}" y1="${y0 + i * h / 4}" y2="${y0 + i * h / 4}" stroke="rgba(255,255,255,.08)"/>`;
+    return { html: `<svg class="abs" style="left:0;top:0;opacity:${a}" width="1920" height="1080">${grid}
+      <path d="${path} L${ex} ${y0 + h} L${x0} ${y0 + h} Z" fill="rgba(255,70,85,.14)"/>
+      <path d="${path}" fill="none" stroke="${RED}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${ex}" cy="${ey}" r="11" fill="#fff"/><circle cx="${ex}" cy="${ey}" r="24" fill="none" stroke="${RED}" stroke-width="3" opacity=".7"/></svg>
+      <div class="abs mono" style="left:${x0}px;top:${y0 + h + 22}px;font-size:20px;color:#8f8f9b;opacity:${a}">LP · últimas partidas</div>
+      <div class="abs anton" style="left:${x0 + w - 300}px;width:300px;text-align:right;top:${y0 - 70}px;font-size:54px;color:${RED};opacity:${lin(u, 1.8, 2.1)}">${pts[pts.length - 1] - mx} LP</div>` };
+  },
+  // Mira de francotiradora y disparo
+  crosshair(s, u) {
+    const tx = TX + 330, ty = TY + 175, m = eio(lin(u, .15, .8));
+    const cx = mix(1650, tx, m) + Math.sin(u * 9) * 14 * (1 - m), cy = mix(180, ty, m) + Math.cos(u * 7) * 10 * (1 - m);
+    const shot = u >= 1.0, rc = shot ? Math.exp(-(u - 1) * 6) * 90 : 0, R = mix(150, 96, m);
+    let html = `<svg class="abs" style="left:0;top:0;opacity:${shot ? Math.max(0, 1 - (u - 1) * 1.6) : lin(u, .1, .25)}" width="1920" height="1080" stroke="${RED}" fill="none" stroke-width="5">
+      <circle cx="${cx}" cy="${cy - rc}" r="${R}"/><circle cx="${cx}" cy="${cy - rc}" r="6" fill="${RED}"/>
+      <path d="M${cx - R - 40} ${cy - rc}H${cx - 30}M${cx + 30} ${cy - rc}H${cx + R + 40}M${cx} ${cy - rc - R - 40}V${cy - rc - 30}M${cx} ${cy - rc + 30}V${cy - rc + R + 40}"/></svg>`;
+    if (shot) {
+      let cr = '';
+      for (let i = 0; i < 11; i++) {
+        const ang = (i / 11) * Math.PI * 2 + hash(i) * .5, len = (90 + hash(i, 2) * 300) * eo(lin(u, 1, 1.12));
+        const mx2 = tx + Math.cos(ang) * len * .5 + (hash(i, 4) - .5) * 40, my2 = ty + Math.sin(ang) * len * .5 + (hash(i, 5) - .5) * 40;
+        cr += `<path d="M${tx} ${ty}L${mx2} ${my2}L${tx + Math.cos(ang) * len} ${ty + Math.sin(ang) * len}"/>`;
+      }
+      html += `<svg class="abs" style="left:0;top:0" width="1920" height="1080" stroke="#fff" fill="none" stroke-width="3" opacity=".9">${cr}<circle cx="${tx}" cy="${ty}" r="14" fill="#000" stroke="#fff"/></svg>`;
+    }
+    return { html, over: true, hits: [[1.0, 30]], bigStyle: shot ? `transform:translate(${Math.exp(-(u - 1) * 7) * -22}px,0) rotate(${-1.2 * (1 - Math.exp(-(u - 1) * 7))}deg)` : '' };
+  },
+  // Grietas sobre el escudo, una por muerte
+  crack(s, u) {
+    const cx = 1420, cy = 540; let paths = '';
+    for (let i = 0; i < s.deaths; i++) {
+      const at = .4 + i * .14, a = eo(lin(u, at, at + .1));
+      if (a <= 0) continue;
+      const ang = (i / s.deaths) * Math.PI * 2 + hash(i) * .6; let x = cx, y = cy, d = `M${x} ${y}`;
+      for (let k = 1; k <= 4; k++) { const r = k * (70 + hash(i, k) * 60) * a, an = ang + (hash(i, k + 9) - .5) * .7; x = cx + Math.cos(an) * r; y = cy + Math.sin(an) * r; d += `L${x.toFixed(1)} ${y.toFixed(1)}`; }
+      paths += `<path d="${d}"/>`;
+    }
+    const end = .4 + s.deaths * .14, broken = lin(u, end, end + .15);
+    return { html: `<svg class="abs" style="left:0;top:0" width="1920" height="1080" stroke="#dff4ff" fill="none" stroke-width="${4 + broken * 3}" stroke-linejoin="bevel" opacity=".95">${paths}</svg>`,
+      splashFilter: `grayscale(${broken}) brightness(${1 - broken * .45})`, hits: [...Array.from({ length: s.deaths }, (_, i) => [.4 + i * .14, 6]), [end, 26]] };
+  },
+  // Martillo de forja que aplasta el número
+  hammer(s, u) {
+    const fall = ei(lin(u, .55, .9)), lift = eio(lin(u, 1.5, 2.2)), y = mix(-760, TY - 640 + 150, fall) - lift * 900;
+    let html = `<div class="abs" style="left:${TX + 20}px;top:${y}px;width:640px;height:640px;opacity:${1 - lin(u, 2, 2.2)}">
+      <div class="abs" style="left:260px;top:0;width:120px;height:400px;background:linear-gradient(90deg,#3a2414,#6b4526,#2a1a0e)"></div>
+      <div class="abs" style="left:0;top:380px;width:640px;height:260px;border-radius:18px;background:linear-gradient(180deg,#4a4038,#221c18 70%,#ff7a1a);box-shadow:0 30px 80px rgba(255,110,20,.55), inset 0 -14px 30px rgba(255,140,40,.7)"></div></div>`;
+    if (u >= .9) for (let i = 0; i < 26; i++) {
+      const dt = u - .9, ang = Math.PI + hash(i) * Math.PI, v = 500 + hash(i, 2) * 900;
+      html += `<div class="abs" style="left:${TX + 340 + Math.cos(ang) * v * dt}px;top:${TY + 250 + Math.sin(ang) * v * dt * .5 + dt * dt * 900}px;width:${6 + hash(i, 3) * 8}px;height:${6 + hash(i, 3) * 8}px;border-radius:50%;background:#ffb347;box-shadow:0 0 16px #ff7a1a;opacity:${Math.max(0, 1 - dt * 1.6)}"></div>`;
+    }
+    const sq = u >= .9 ? .55 + .2 * (1 - Math.exp(-(u - .9) * 2)) : 1;
+    return { html, over: true, bigStyle: `transform:scaleY(${sq}) scaleX(${1 + (1 - sq) * .25});transform-origin:0 100%`, bigColor: u >= .9 ? '#ffb070' : null, hits: [[.9, 34]] };
+  },
+  // Bandera blanca
+  flag(s, u) {
+    const rise = eo(lin(u, .2, .9)), x0 = 1180, y0 = 300 + (1 - rise) * 500, wv = (x, k) => Math.sin(x * .013 - u * 7 + k) * 26 * (x / 520);
+    let top = '', bot = '';
+    for (let x = 0; x <= 520; x += 26) { top += `${x0 + x},${y0 + wv(x, 0)} `; bot = `${x0 + x},${y0 + 300 + wv(x, .6)} ` + bot; }
+    return { html: `<svg class="abs" style="left:0;top:0;opacity:${lin(u, .2, .4)}" width="1920" height="1080">
+      <rect x="${x0 - 14}" y="${y0 - 30}" width="14" height="640" rx="6" fill="#b9b9c4"/>
+      <polygon points="${top}${bot}" fill="#f6f6f8"/><polygon points="${top}${bot}" fill="url(#fg)"/>
+      <defs><linearGradient id="fg" x1="0" x2="1"><stop offset="0" stop-color="rgba(0,0,0,.25)"/><stop offset=".3" stop-color="rgba(0,0,0,0)"/><stop offset=".6" stop-color="rgba(0,0,0,.18)"/><stop offset="1" stop-color="rgba(0,0,0,0)"/></linearGradient></defs></svg>` };
+  },
+  // Pantalla llena de pings
+  pings(s, u) {
+    const COL = ['#f4c542', '#ff5a5a', '#4aa8ff', '#f4c542', '#56d67a']; let html = '';
+    for (let i = 0; i < 64; i++) {
+      const at = .25 + i * .036, a = lin(u, at, at + .1);
+      if (a <= 0) continue;
+      const x = 60 + hash(i, 1) * 1760, y = 110 + hash(i, 2) * 820, c = COL[i % 5], sz = 64 + hash(i, 3) * 60, ring = lin(u, at, at + .5);
+      html += `<div class="abs" style="left:${x - sz / 2}px;top:${y - sz / 2}px;width:${sz}px;height:${sz}px;border-radius:50%;border:5px solid ${c};color:${c};display:grid;place-items:center;font:600 ${sz * .6}px Inter;background:rgba(7,7,10,.55);opacity:${a * .92};transform:scale(${eback(a)})">${i % 5 === 1 ? '!' : i % 5 === 2 ? '➜' : '?'}</div>
+        <div class="abs" style="left:${x - sz}px;top:${y - sz}px;width:${sz * 2}px;height:${sz * 2}px;border-radius:50%;border:3px solid ${c};opacity:${(1 - ring) * .7};transform:scale(${.4 + ring})"></div>`;
+    }
+    return { html, behind: true, hits: Array.from({ length: 16 }, (_, i) => [.25 + i * .144, 4]) };
+  },
+  // Lluvia de "?"
+  questions(s, u) {
+    let html = '';
+    for (let i = 0; i < 70; i++) {
+      const at = .2 + hash(i, 1) * 2.2, dt = u - at;
+      if (dt <= 0) continue;
+      const sz = 70 + hash(i, 2) * 150;
+      html += `<div class="abs anton" style="left:${40 + hash(i, 3) * 1800}px;top:${-200 + dt * (500 + hash(i, 4) * 600)}px;font-size:${sz}px;color:#f4c542;opacity:${.25 + hash(i, 5) * .6};transform:rotate(${(hash(i, 6) - .5) * 50 + dt * 30}deg)">?</div>`;
+    }
+    return { html, behind: true };
+  },
+  // Esferas oscuras que salen disparadas contra el número
+  spheres(s, u) {
+    const tx = TX + 330, ty = TY + 175; let html = '';
+    for (let i = 0; i < 3; i++) {
+      const at = .75 + i * .16, fly = ei(lin(u, at - .5, at)), orb = u * 3 + i * 2.1;
+      if (u >= at + .02) { const r = eo(lin(u, at, at + .45)); html += `<div class="abs" style="left:${tx - 40 - r * 300 + (i - 1) * 150}px;top:${ty - 40 - r * 300}px;width:${80 + r * 600}px;height:${80 + r * 600}px;border-radius:50%;border:6px solid #b46bff;opacity:${1 - r}"></div>`; continue; }
+      const sx = 1400 + Math.cos(orb) * 260, sy = 540 + Math.sin(orb) * 200, x = mix(sx, tx + (i - 1) * 150, fly), y = mix(sy, ty, fly);
+      html += `<div class="abs" style="left:${x - 60}px;top:${y - 60}px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e9c8ff,#7a2bd6 45%,#1a0633 80%);box-shadow:0 0 60px #8f3cff, 0 0 120px rgba(143,60,255,.5);opacity:${lin(u, .1, .3)}"></div>`;
+    }
+    const j = [0, 1, 2].reduce((m, i) => m + (u >= .75 + i * .16 ? Math.exp(-(u - .75 - i * .16) * 9) : 0), 0);
+    return { html, over: true, bigStyle: `transform:translate(${-j * 26}px,${j * 8}px) skewX(${-j * 5}deg)`, bigColor: j > .05 ? '#d9b3ff' : null, hits: [0, 1, 2].map((i) => [.75 + i * .16, 18]) };
+  },
 };
 
-// Presentación de cada jugador
-const STAT_AT = [2.4, 4.6, 6.8], CLOSE_AT = 9.0, PDUR = 11;
-function playerScene(p) {
-  const rgb = tierRgb(p.color);
-  return { dur: PDUR, render(t) {
-    const slam = eback(lin(t, .25, .75)), slamA = lin(t, .25, .45);
-    const move = eio(lin(t, 1.7, 2.3));
-    const closeT = lin(t, CLOSE_AT - .35, CLOSE_AT), closeIn = eo(lin(t, CLOSE_AT, CLOSE_AT + .9));
-    const end = lin(t, PDUR - .45, PDUR);
-    cam.style.transform = `scale(${mix(1.0, 1.05, t / PDUR)}) translateX(${mix(8, -8, t / PDUR)}px)`;
-    bg.style.background = `radial-gradient(ellipse at ${mix(50, 25, move)}% 50%, rgba(${rgb},${.28 * slamA * (1 - closeT)}) 0%, transparent 55%),
-      linear-gradient(${100 + t * 4}deg, transparent 40%, rgba(${rgb},${.07 * (1 - closeT)}) 50%, transparent 60%)`;
+// ---------------------------------------------------------------- escena de jugador
+function statBlock(p, s, u, g, dur) {
+  const a = eo(lin(u, 0, .32)), out = lin(u, dur - .18, dur), cnt = eo(lin(u, 0, .7));
+  const bigTxt = g.big ?? countUp(s.big, cnt), size = fit(s.big, s.unit ? 560 : 760, 250);
+  const hit = Math.exp(-u * 7);
+  const inner = `
+    <div class="mono" style="font-size:26px;color:${p.color}">${esc(s.label)}</div>
+    <div style="display:flex;align-items:baseline;gap:26px;margin-top:10px">
+      <span class="anton nw" style="display:inline-block;font-size:${size}px;color:${g.bigColor ?? '#f4f4f6'};text-shadow:0 0 ${50 * hit}px rgba(${rgbOf(p.color)},.9);${g.bigStyle ?? ''}">${esc(bigTxt)}</span>
+      ${s.unit ? `<span class="nw" style="font-size:46px;font-weight:600;color:#e6e6ea">${esc(s.unit)}</span>` : ''}
+    </div>
+    ${s.sub ? `<div style="font-size:38px;color:#a2a2ae;margin-top:8px;opacity:${lin(u, .35, .7)}">${esc(s.sub)}</div>` : ''}`;
+  const base = `left:${TX}px;top:${TY}px;width:900px;opacity:${a * (1 - out)};filter:blur(${(1 - a) * 10 + out * 8}px)`;
+  const tr = `translateX(${(1 - a) * -90 - out * 120}px) scale(${1 + hit * .05})`;
+  if (!g.split) return `<div class="abs" style="${base};transform:${tr};transform-origin:0 50%">${inner}</div>`;
+  const d = g.split;
+  return `<div class="abs" style="${base};transform:${tr} translate(${-d}px,${-d * .3}px);clip-path:polygon(-20% -20%,120% -20%,120% 30%,-20% 62%)">${inner}</div>
+    <div class="abs" style="${base};transform:${tr} translate(${d}px,${d * .3}px);clip-path:polygon(-20% 62%,120% 30%,120% 120%,-20% 120%)">${inner}</div>`;
+}
 
-    // Identidad: centrada y grande al entrar, luego a la izquierda
-    const nameSize0 = fitFont(p.name.toUpperCase(), 'Anton', 1500, 230), nameSize1 = fitFont(p.name.toUpperCase(), 'Anton', 560, 110);
-    const ns = mix(nameSize0, nameSize1, move);
-    const avs = mix(250, 230, move);
-    const cx = mix(W / 2, 400, move);
-    const idTop = mix(250, 250, move);
+function playerScene(p, idx) {
+  const rgb = rgbOf(p.color), SLAM = .5, C = p.closeAt;
+  const hits = [[SLAM, 30]];
+  for (const s of p.stats) { hits.push([s.at, 13]); for (const [h, a] of (GAGS[s.gag](s, 0).hits ?? [])) hits.push([s.at + h, a]); }
+  hits.push([C + .15, 8]);
+  return { dur: p.dur, render(t) {
+    hideAll();
+    const slam = eback(lin(t, SLAM, SLAM + .45)), slamA = lin(t, SLAM, SLAM + .12);
+    const m = eio(lin(t, 1.9, 2.45)), closeT = lin(t, C - .3, C), end = lin(t, p.dur - .4, p.dur);
+    fx(t, hits, mix(1, 1.03, t / p.dur));
+    bg.style.background = `radial-gradient(ellipse at ${mix(50, 22, m)}% ${mix(50, 30, m)}%, rgba(${rgb},${.3 * slamA * (1 - closeT)}) 0%, transparent ${mix(55, 45, m)}%),
+      linear-gradient(${100 + t * 5}deg, transparent 42%, rgba(${rgb},${.06 * slamA * (1 - closeT)}) 50%, transparent 58%), ${BG}`;
+    let html = '';
+    // Antes del golpe: contador
+    if (t < SLAM + .1) html += `<div class="abs mono" style="left:0;right:0;top:520px;text-align:center;font-size:28px;color:#8f8f9b;opacity:${lin(t, 0, .15) * (1 - lin(t, SLAM - .08, SLAM))}">0${idx + 1} / 0${SPEC.cast.length}</div>`;
+    // Identidad
     const idA = slamA * (1 - closeT);
-    const scale = mix(1.25, 1, slam);
-    let html = `
-      <div class="abs" style="left:${cx - 800}px;width:1600px;top:${idTop}px;display:flex;flex-direction:column;align-items:center;gap:${mix(34, 30, move)}px;opacity:${idA};transform:scale(${scale});filter:blur(${(1 - slamA) * 12}px)">
-        ${avatar(p, avs)}
-        <div class="anton" style="font-size:${ns}px;white-space:nowrap">${esc(p.name)}</div>
-        <div class="mono" style="font-size:${mix(30, 26, move)}px;color:${p.color};letter-spacing:.24em">${esc(p.rank)}</div>
-      </div>`;
-    // Línea vertical separadora
-    const sep = eo(lin(t, 2.0, 2.6)) * (1 - closeT);
-    html += `<div class="abs" style="left:780px;top:${540 - 330 * sep}px;width:2px;height:${660 * sep}px;background:linear-gradient(transparent,rgba(${rgb},.8),transparent)"></div>`;
-    // Estadísticas
+    if (idA > 0) {
+      const sc = mix(1.5, 1, slam), s0 = fit(p.name.toUpperCase(), 1500, 240), ns = mix(s0, 76, m);
+      showCrest(p, mix(960, 960, m), 540, mix(820, 820, m), .1 * idA * (1 - m));
+      showAvatar(p, mix(960, 196, m), mix(300, 178, m), mix(270, 124, m) * (m > 0 ? 1 : sc), idA);
+      html += `<div class="abs anton nw" style="left:${mix(960, 290, m)}px;top:${mix(470, 128, m)}px;font-size:${ns}px;opacity:${idA};transform:translateX(${-(1 - m) * 50}%) scale(${m > 0 ? 1 : sc});filter:blur(${(1 - slamA) * 14}px)">${esc(p.name)}</div>
+        <div class="abs mono nw" style="left:${mix(960, 293, m)}px;top:${mix(470 + s0 + 26, 218, m)}px;font-size:${mix(32, 22, m)}px;color:${p.color};letter-spacing:.24em;opacity:${idA * lin(t, SLAM + .15, SLAM + .5)};transform:translateX(${-(1 - m) * 50}%)">${esc(p.rank)}</div>`;
+      html += `<div class="abs" style="left:${TX}px;top:285px;width:${760 * eo(lin(t, 2.2, 2.8))}px;height:2px;background:linear-gradient(90deg,rgba(${rgb},.9),transparent);opacity:${1 - closeT}"></div>`;
+    }
+    // Datos
     p.stats.forEach((s, i) => {
-      const at = STAT_AT[i];
-      const a = eo(lin(t, at, at + .5));
-      if (a <= 0) return;
-      const cnt = eo(lin(t, at, at + 1.1));
-      const top = 175 + i * 255;
-      const hit = Math.exp(-Math.max(0, t - at) * 7) * (t >= at ? 1 : 0);
-      html += `
-        <div class="abs" style="left:870px;top:${top}px;width:960px;opacity:${a * (1 - closeT)};transform:translateX(${(1 - a) * 70}px) scale(${1 + hit * .04});transform-origin:0 50%;filter:blur(${(1 - a) * 8}px)">
-          <div class="mono" style="font-size:22px;color:${p.color}">${esc(s.label)}</div>
-          <div style="display:flex;align-items:baseline;gap:22px;margin-top:6px">
-            <span class="anton" style="font-size:132px;text-shadow:0 0 ${40 * hit}px rgba(${rgb},.9)">${esc(countUp(s.big, cnt))}</span>
-            ${s.unit ? `<span style="font-size:40px;font-weight:600;color:#e6e6ea">${esc(s.unit)}</span>` : ''}
-          </div>
-          ${s.sub ? `<div style="font-size:28px;color:#8f8f9b;margin-top:2px">${esc(s.sub)}</div>` : ''}
-        </div>`;
+      const u = t - s.at, e = i + 1 < p.stats.length ? p.stats[i + 1].at : C;
+      if (u < 0 || t >= e) return;
+      const dur = e - s.at, g = GAGS[s.gag](s, u), a = eo(lin(u, 0, .3)), out = lin(u, dur - .18, dur);
+      if (s.champ) {
+        showSplash(s.champ, { slide: (1 - a) * 260 + out * 160, opacity: a * (1 - out), zoom: mix(1.2, 1.07, u / dur), ox: mix(20, -10, u / dur), filter: g.splashFilter ?? '' });
+        html += `<div class="abs mono" style="right:90px;bottom:110px;font-size:22px;color:#fff;opacity:${.75 * a * (1 - out)};text-shadow:0 2px 12px #000">${esc(s.champName)}</div>`;
+      }
+      const block = statBlock(p, s, u, g, dur), gh = g.html ? `<div class="abs" style="inset:0;opacity:${1 - out}">${g.html}</div>` : '';
+      html += g.over || !g.behind && !s.champ ? block + gh : gh + block;
     });
     // Frase final
-    if (closeIn > 0) {
-      html += `<div class="abs" style="left:0;right:0;top:470px;text-align:center;opacity:${closeIn * (1 - end)};filter:blur(${(1 - closeIn) * 10}px)">
-        <div style="font-size:64px;font-weight:600;letter-spacing:-.01em">${esc(p.closing)}</div>
-        <div class="mono" style="font-size:22px;color:${p.color};margin-top:26px;opacity:.9">${esc(p.name)}</div></div>`;
+    const ci = eo(lin(t, C + .15, C + .8));
+    if (ci > 0) {
+      const two = !!p.closing2, c2 = eo(lin(t, C + 1.9, C + 2.3));
+      html += `<div class="abs" style="left:120px;right:120px;top:${two ? 420 : 455}px;text-align:center;opacity:${ci * (1 - end)};filter:blur(${(1 - ci) * 10}px)">
+        <div style="font-size:${fit(p.closing, 1480, 70, 'Inter')}px;font-weight:600;letter-spacing:-.01em">${esc(p.closing)}</div>
+        ${two ? `<div style="font-size:70px;font-weight:600;margin-top:22px;color:${p.color};opacity:${c2};transform:translateY(${(1 - c2) * 16}px)">${esc(p.closing2)}</div>` : ''}
+        <div class="mono" style="font-size:22px;color:${p.color};margin-top:34px;opacity:.85">${esc(p.name)}</div></div>`;
     }
-    // Destello en cada golpe
-    const fl = [0.25, ...STAT_AT].reduce((m, at) => Math.max(m, t >= at ? Math.exp(-(t - at) * 14) : 0), 0);
-    html += `<div class="flash" style="opacity:${fl * .35}"></div>`;
     cam.innerHTML = html;
   } };
 }
 
-window.buildScenes = () => {
-  const list = [['intro', SCENES.intro]];
-  SPEC.cast.forEach((p, i) => list.push([`p${i}`, playerScene(p)]));
-  list.push(['outro', SCENES.outro]);
-  return list.map(([id, s]) => ({ id, dur: s.dur }));
-};
-window.renderAt = (id, t, frame) => {
-  const s = id === 'intro' ? SCENES.intro : id === 'outro' ? SCENES.outro : playerScene(SPEC.cast[Number(id.slice(1))]);
-  s.render(t);
-  grain(frame);
-};
+// ---------------------------------------------------------------- intro y final
+const INTRO = { dur: SPEC.intro.dur, render(t) {
+  hideAll();
+  const TE = [1.0, 1.55, 2.0, 2.35, 2.62], SL = 3.0;
+  fx(t, [...TE.map((x) => [x, 9]), [SL, 34]], mix(1, 1.05, t / this.dur));
+  bg.style.background = `radial-gradient(ellipse at 50% 50%, rgba(255,70,85,${.16 * lin(t, SL, SL + .3)}) 0%, transparent 60%), ${BG}`;
+  let html = '';
+  TE.forEach((x, i) => {
+    const next = TE[i + 1] ?? SL;
+    if (t >= x && t < next) {
+      const j = hash(Math.floor(t * 30), i);
+      html += `<div class="abs anton nw" style="left:0;right:0;top:${430 + (j - .5) * 14}px;text-align:center;font-size:150px;color:${i % 2 ? '#f4f4f6' : RED};opacity:.9;transform:translateX(${(j - .5) * 30}px) skewX(${(j - .5) * 8}deg)">${esc(SPEC.intro.teasers[i])}</div>
+        <div class="abs" style="left:0;right:0;top:${300 + j * 400}px;height:${6 + j * 30}px;background:rgba(255,255,255,.12)"></div>`;
+    }
+  });
+  if (t >= SL) {
+    const a = eback(lin(t, SL, SL + .45)), out = lin(t, this.dur - .7, this.dur), s1 = eo(lin(t, 4.1, 4.7)), s2 = eo(lin(t, 5.3, 5.9));
+    html += `<div class="abs anton nw" style="left:0;right:0;top:360px;text-align:center;font-size:230px;letter-spacing:.06em;opacity:${1 - out};transform:scale(${mix(1.6, 1, a)})">SoloQ Crew</div>
+      <div class="abs" style="left:${960 - 520 * s1}px;top:630px;width:${1040 * s1}px;height:3px;background:${RED};opacity:${1 - out}"></div>
+      <div class="abs mono" style="left:0;right:0;top:668px;text-align:center;font-size:30px;color:#c9c9d2;opacity:${s1 * (1 - out)}">${SPEC.intro.players} jugadores · ${SPEC.intro.games} partidas · 0 Challengers</div>
+      <div class="abs" style="left:0;right:0;top:760px;text-align:center;font-size:30px;color:#8f8f9b;font-style:italic;opacity:${s2 * (1 - out)}">Basado en hechos reales</div>`;
+  }
+  cam.innerHTML = html;
+} };
+
+const FIN = SPEC.finale, MONT = .34, M0 = .3, LINES_AT = M0 + SPEC.cast.length * MONT + .25, LSTEP = 1.25, LAST_AT = LINES_AT + FIN.lines.length * LSTEP + .35;
+const FINALE = { dur: FIN.dur, render(t) {
+  hideAll();
+  const hits = [...SPEC.cast.map((_, i) => [M0 + i * MONT, 12]), ...FIN.lines.map((_, i) => [LINES_AT + i * LSTEP, 14]), [LAST_AT, 36]];
+  fx(t, hits, mix(1, 1.04, t / this.dur));
+  let html = ''; const out = lin(t, this.dur - .8, this.dur);
+  const mi = Math.floor((t - M0) / MONT);
+  if (t >= M0 && mi < SPEC.cast.length) {
+    const p = SPEC.cast[SPEC.cast.length - 1 - mi], u = (t - M0) - mi * MONT, a = eo(lin(u, 0, .12));
+    bg.style.background = `radial-gradient(ellipse at 50% 45%, rgba(${rgbOf(p.color)},.4) 0%, transparent 60%), ${BG}`;
+    showAvatar(p, 960, 430, 360 * mix(1.3, 1, a), 1);
+    html += `<div class="abs anton nw" style="left:0;right:0;top:680px;text-align:center;font-size:${fit(p.name.toUpperCase(), 1500, 150)}px;transform:scale(${mix(1.2, 1, a)})">${esc(p.name)}</div>`;
+  } else if (t >= LINES_AT) {
+    bg.style.background = `radial-gradient(ellipse at 50% 50%, rgba(255,70,85,${.2 * lin(t, LAST_AT, LAST_AT + .3)}) 0%, transparent 60%), ${BG}`;
+    const lastA = lin(t, LAST_AT - .25, LAST_AT);
+    FIN.lines.forEach((l, i) => {
+      const at = LINES_AT + i * LSTEP, a = eo(lin(t, at, at + .3)); if (a <= 0) return;
+      html += `<div class="abs nw" style="left:0;right:0;top:${250 + i * 150}px;display:flex;justify-content:center;align-items:baseline;gap:28px;opacity:${a * (1 - lastA)};transform:translateX(${(1 - a) * (i % 2 ? 120 : -120)}px);filter:blur(${(1 - a) * 8}px)">
+        <span class="anton" style="font-size:124px">${countUp(l[0], eo(lin(t, at, at + .8)))}</span><span style="font-size:48px;font-weight:600;color:#c9c9d2">${esc(l[1])}</span></div>`;
+    });
+    if (t >= LAST_AT) {
+      const a = eback(lin(t, LAST_AT, LAST_AT + .4)), u1 = eo(lin(t, LAST_AT + 1.5, LAST_AT + 2.1));
+      html += `<div class="abs nw" style="left:0;right:0;top:330px;display:flex;justify-content:center;align-items:baseline;gap:40px;opacity:${1 - out};transform:scale(${mix(1.8, 1, a)})">
+        <span class="anton" style="font-size:340px;color:${RED}">${FIN.last[0]}</span><span class="anton" style="font-size:170px">${FIN.last[1]}</span></div>
+        <div class="abs mono" style="left:0;right:0;top:760px;text-align:center;font-size:30px;color:#c9c9d2;opacity:${u1 * (1 - out)}">${FIN.url}</div>`;
+    }
+  } else bg.style.background = BG;
+  cam.innerHTML = html;
+} };
+
+const sceneOf = (id) => (id === 'intro' ? INTRO : id === 'finale' ? FINALE : playerScene(SPEC.cast[Number(id.slice(1))], Number(id.slice(1))));
+const cache = {};
+window.buildScenes = () => ['intro', ...SPEC.cast.map((_, i) => `p${i}`), 'finale'].map((id) => ({ id, dur: sceneOf(id).dur }));
+window.renderAt = (id, t, frame) => { (cache[id] ??= sceneOf(id)).render(t); grain(frame); };
 </script></body></html>
