@@ -25,6 +25,8 @@ try {
 
     # Compilar la web sobre esa copia (npm ci: exactamente las versiones de package-lock.json)
     Push-Location "$tmp\src\web"
+    # npm y Vite escriben avisos por stderr: que no corten el script; lo que cuenta es el código de salida
+    $ErrorActionPreference = 'Continue'
     try {
         $env:PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = '1'
         npm ci --no-audit --no-fund
@@ -32,6 +34,7 @@ try {
         npm run build
         if ($LASTEXITCODE -ne 0) { throw 'Falló la compilación de la web' }
     } finally {
+        $ErrorActionPreference = 'Stop'
         Pop-Location
     }
 
