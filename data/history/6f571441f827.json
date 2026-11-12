@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8044135827",
+      "q": 420,
+      "t": 1794504408445,
+      "dur": 1594,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 3,
+      "d": 5,
+      "a": 9,
+      "kp": 31,
+      "cs": 160,
+      "vis": 17,
+      "dmg": 11074,
+      "teamDmg": 109585,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3412,
+      "goldEarned": 10786,
+      "fb": false,
+      "pg": {
+        "t": 84,
+        "q": 0,
+        "ai": 2,
+        "gb": 29,
+        "ba": 0,
+        "am": 19,
+        "dg": 0,
+        "ow": 26
+      },
+      "ff": 0,
+      "items": [
+        3047,
+        6676,
+        3123,
+        3071,
+        2019,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Warwick",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9653,
+        "maxLeadMin": 27,
+        "maxDef": -583,
+        "tgd15": 3691,
+        "gd15": -2746
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8043259076",
       "q": 420,
       "t": 1794423897068,
