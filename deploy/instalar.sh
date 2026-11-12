@@ -1,6 +1,6 @@
 #!/bin/bash
 # Instala o actualiza la versión Python de SoloQ Crew en el VPS. Se ejecuta como root (sudo bash) con el
-# paquete del código ya subido a /tmp/soloq-app.tgz (lo hace deploy/desplegar.ps1). No toca el espejo
+# paquete del código ya subido a /tmp/soloq-app.tgz (lo hace deploy/desplegar.ps1, con la web compilada en web/dist). No toca el espejo
 # (/srv/soloq/web, soloq-espejo.*). Tras el corte final (deploy/corte.sh, marca /etc/soloq/corte) respeta
 # ese estado: sitio definitivo en Caddy, sin importar de la Action y con los drop-ins del corte.
 set -euo pipefail
@@ -20,6 +20,8 @@ rm -f /tmp/soloq-app.tgz
 "$APP/.venv/bin/pip" install -q --disable-pip-version-check -r "$APP/requirements.txt"
 chown -R root:soloq "$APP"
 chmod -R u=rwX,g=rX,o= "$APP"
+# La web: la nueva compilada (web/dist, la pone desplegar.ps1) o, si no viene, la antigua de la raíz
+if [ -f "$APP/web/dist/index.html" ]; then echo "web: React (web/dist)"; else echo "web: la antigua de la raíz (sin web/dist)"; fi
 
 install -m 644 "$APP"/deploy/soloq-web.service "$APP"/deploy/soloq-actualizador.service \
   "$APP"/deploy/soloq-importar.service "$APP"/deploy/soloq-importar.timer /etc/systemd/system/

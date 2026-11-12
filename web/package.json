@@ -1,0 +1,29 @@
+{
+  "name": "soloq-crew-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web de SoloQ Crew (React + TypeScript + Vite). Se compila a web/dist y la sirve soloq/server.py",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "test:parity": "node tests/parity.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.62.1",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}

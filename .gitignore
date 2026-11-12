@@ -11,6 +11,11 @@ datos/
 *.db-shm
 deploy-paquete.tgz
 
+# Web (React): se compila con npm run build; las pruebas de paridad dejan aquí capturas y diferencias
+web/dist/
+web/tests/out/
+web/tests/*.log
+
 # Vídeo (rama video-trailer): todo lo generado se rehace con los scripts
 video/out/
 video/stills/

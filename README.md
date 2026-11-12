@@ -123,7 +123,8 @@ scripts/time.mjs        fechas en hora de Madrid
 scripts/demo.mjs        datos falsos para previsualizar
 config/challenges.json  retos
 data/                   data.json, events.json, weeks.json, notify-state.json, history/ y puuids.json (generado)
-index.html app.js style.css sw.js manifest.webmanifest   la web
+index.html app.js style.css sw.js manifest.webmanifest   la web (la que publica GitHub Pages)
+web/                    la misma web en React + TypeScript + Vite (ver "Web nueva")
 .github/workflows/update.yml  actualización automática
 ```
 
@@ -169,8 +170,37 @@ SOLOQ_HOSTS=localhost:8001 .venv/Scripts/python -m soloq.server --port 8001
 - Mientras no haya clave en el servidor, `soloq-importar.timer` copia cada minuto lo que publica la Action
   (desde el clon de `main` del espejo) para que la web de prueba muestre datos vivos.
 
-**Despliegue**: `powershell -ExecutionPolicy Bypass -File deploy\desplegar.ps1` (empaqueta el último commit con
-`git archive` y ejecuta `deploy/instalar.sh` en el VPS; se niega si hay cambios sin commit).
+**Despliegue**: `powershell -ExecutionPolicy Bypass -File deploy\desplegar.ps1` (saca el último commit con
+`git archive`, compila la web nueva sobre esa copia con `npm ci` + `npm run build`, empaqueta el código con
+`web/dist` y ejecuta `deploy/instalar.sh` en el VPS; se niega si hay cambios sin commit).
+
+### Web nueva (React + TypeScript + Vite) — `web/`
+
+Port de `index.html` + `app.js` con el mismo HTML, las mismas clases y el mismo `style.css` de la raíz (se
+importa tal cual). La web de la raíz **no se toca**: es la que siguen sirviendo GitHub Pages y el espejo.
+
+```
+web/src/types.ts        tipos de data.json, weeks.json, detalle de partida y latido
+web/src/lib/            formatos y fechas, modelo del ranking, series de elo, la semana (texto e imagen)
+web/src/components/     piezas comunes, ficha de jugador, partidas, gráfica de elo, comparador, ventanas
+web/src/sections/       una por sección de la página
+web/sw/sw.ts            service worker (se compila con la lista de ficheros de cada versión)
+web/public/viewport.js  "Vista de ordenador" antes de pintar (fichero aparte: la CSP no admite scripts en línea)
+web/tests/parity.mjs    paridad con la web antigua (DOM normalizado y capturas, escritorio y móvil)
+```
+
+```bash
+cd web && npm ci
+npm run dev           # http://localhost:5173 con los datos de data/ (latido: el de GitHub)
+npm run typecheck
+npm run build         # → web/dist (lo sirve soloq/server.py si existe; si no, la web de la raíz)
+npm run test:parity   # necesita npm run build antes y Edge instalado
+```
+
+`soloq/server.py` sirve `web/dist` (`/`, `/assets/*` con caché de un año porque llevan el hash en el nombre,
+`sw.js`, `viewport.js`, manifest e iconos) y su CSP ya no lleva hashes de scripts en línea. Sin `web/dist`
+sirve la web antigua como hasta ahora. El service worker guarda el código por versión (borra las anteriores) y va
+primero a la red para la página y los datos: sin conexión enseña los últimos datos y nunca deja código viejo.
 
 **Corte final** (lo decide Álvaro), en este orden:
 1. Desactivar la Action en GitHub (*Actions → Actualizar datos → ⋯ → Disable workflow*): si no, los avisos de
