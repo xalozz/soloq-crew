@@ -3,22 +3,16 @@
 Ranking de SoloQ del grupo de amigos (cuentas en `config/players.json`). Lo común (VPS, stack, Git) está en
 `..\CLAUDE.md`; aquí solo lo de este proyecto. Detalle de funciones y del actualizador en `README.md`.
 
-## Estado (12 nov 2026)
-- **Producción hoy**: GitHub Action (`.github/workflows/update.yml`, Node: `scripts/*.mjs`) que hace commit de
-  `data/*.json` en `main` cada pocos minutos + GitHub Pages (`xalozz.github.io/soloq-crew`) y el espejo estático
-  `soloq.xalozz.es` (clon de `main` en `/srv/soloq/web`, `soloq-espejo.timer`). La web es la de la raíz
-  (`index.html`, `app.js`, `style.css`, `sw.js`): **no tocarla mientras sirva a Pages y al espejo**.
-- **Reescritura del backend en Python** (`soloq/`, FastAPI + SQLite) ya en `main`, con pruebas de paridad contra los
-  scripts de Node. Desplegada en `soloq-nuevo.xalozz.es` (127.0.0.1:8001) leyendo lo que publica la Action
-  (`soloq-importar.timer`); su actualizador propio está parado hasta el corte.
-- **Corte final pendiente de Álvaro**: desactivar la Action, poner `/etc/soloq/riot-api-key` y
-  `/etc/soloq/discord-webhook`, y ejecutar `deploy/corte.sh` (ver README, «Corte final»). Hasta entonces el
-  actualizador en Python **no** debe mandar nada a Discord (los avisos saldrían dos veces).
-- **Web nueva** en `web/` (React + TypeScript + Vite; Node solo para compilar). Paridad comprobada con la de la raíz
-  (`npm run test:parity`, ~10 min, Edge). El servidor Python sirve `web/dist` si existe; `desplegar.ps1` la compila
-  desde el commit. Tras el corte la web de la raíz sobra (se puede borrar junto con Pages).
-- El corte lo hace `deploy/poner-claves.sh` (Álvaro, interactivo): pide las claves, las comprueba y, si la Action ya
-  está desactivada, ejecuta `corte.sh`. El actualizador no arranca sin la marca `/etc/soloq/corte`.
+## Estado (12 nov 2026, corte hecho)
+- **Producción**: `soloq.xalozz.es` → servidor propio (FastAPI + SQLite, 127.0.0.1:8001) con la web nueva de `web/`
+  (React + TypeScript + Vite; Node solo para compilar). El actualizador (`soloq-actualizador`, Python) consulta a
+  Riot y avisa a Discord. `soloq-nuevo.xalozz.es` redirige a `soloq.xalozz.es`.
+- La GitHub Action está **desactivada** y el espejo e importador apagados. GitHub Pages sigue sirviendo la web
+  vieja de la raíz con los últimos datos publicados (ya no se actualiza): se puede apagar en GitHub (Settings →
+  Pages) y borrar la web de la raíz, `scripts/*.mjs` y `data/` cuando se quiera. `/srv/soloq/web` (clon del espejo)
+  también sobra.
+- Claves en `/etc/soloq/riot-api-key` y `/etc/soloq/discord-webhook` (root, 600), por `LoadCredential`.
+- Estado del corte: marca `/etc/soloq/corte` y drop-ins `corte.conf`; `instalar.sh` lo respeta en cada despliegue.
 - La rama `video-trailer` es el vídeo «roast» (aparcado; lo generado está en `.gitignore`).
 
 ## Comandos
