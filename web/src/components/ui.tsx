@@ -4,7 +4,7 @@ import { useApp, useTick } from '../ctx';
 import type { Player } from '../lib/model';
 import { liveMinTxt } from '../lib/model';
 import type { Loadout as LoadoutT, Rank, Stats } from '../types';
-import { CDRAGON, fmt, px, rankName, ROLE_ES, ROLE_ICON, tierKey } from '../lib/util';
+import { fmt, px, rankName, ROLE_ES, ROLE_ICON, tierKey } from '../lib/util';
 
 const box = (size: number) => ({ width: px(size), height: px(size) });
 
@@ -44,7 +44,7 @@ export function ChampIcon({ champ, size = 26 }: { champ: string | null | undefin
 
 export function Crest({ rank, size = 30 }: { rank: Rank | null | undefined; size?: number }) {
   const key = tierKey(rank);
-  const src = key === 'unranked' ? null : `${CDRAGON}/rcp-fe-lol-shared-components/global/default/${key}.png`;
+  const src = key === 'unranked' ? null : `img/rango/${key}.png`;
   const [bad, broke] = useBroken(src);
   if (!src || bad) return <span className="crest ph" style={box(size)} />;
   return <img className="crest" width={size} height={size} alt="" loading="lazy" src={src} onError={broke} />;
@@ -54,7 +54,7 @@ export function RoleIcon({ role }: { role: string | null | undefined }) {
   if (!role || !ROLE_ICON[role]) return <span className="muted">–</span>;
   return (
     <img className="role-ico" width={22} height={22} alt={ROLE_ES[role]} title={ROLE_ES[role]} loading="lazy"
-      src={`${CDRAGON}/rcp-fe-lol-static-assets/global/default/svg/position-${ROLE_ICON[role]}.svg`} />
+      src={`img/rol/${ROLE_ICON[role]}.svg`} />
   );
 }
 

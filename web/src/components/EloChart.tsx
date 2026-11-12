@@ -2,7 +2,7 @@
 import { useLayoutEffect, useMemo, useRef, useState, type PointerEvent, type ReactNode, type RefObject } from 'react';
 import type { Account } from '../types';
 import { ELO_RANGES, eloDelta, eloPoints, eloSeries, nextGradId, smoothPath, TIER_HEX, tierHex, type EloPt, type EloSeries } from '../lib/elo';
-import { CDRAGON, dateTime, dayKey, DIVS, prettyDay, scoreLabel, shortDate, TIERS } from '../lib/util';
+import { dateTime, dayKey, DIVS, prettyDay, scoreLabel, shortDate, TIERS } from '../lib/util';
 
 /** Mide el ancho de la caja después de pintar (como el requestAnimationFrame de antes) */
 export function useWidth<T extends HTMLElement>(): [RefObject<T | null>, number | null] {
@@ -97,7 +97,7 @@ function EloDraw({ pts, ser: { W, L, measured }, width }: { pts: EloPt[]; ser: E
     } else if (tierLine || step === 100) {
       const t = Math.floor(v / 400);
       if (tierLine) {
-        els.push(<image key={`i${v}`} href={`${CDRAGON}/rcp-fe-lol-shared-components/global/default/${TIERS[t].toLowerCase()}.png`} x={Lm - 34} y={y(v) - 13} width={26} height={26} />);
+        els.push(<image key={`i${v}`} href={`img/rango/${TIERS[t].toLowerCase()}.png`} x={Lm - 34} y={y(v) - 13} width={26} height={26} />);
       } else {
         els.push(<text key={`a${v}`} x={Lm - 8} y={y(v) + 4} className="axis" textAnchor="end">{DIVS[Math.floor((v % 400) / 100)]}</text>);
       }

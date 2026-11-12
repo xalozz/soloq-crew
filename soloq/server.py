@@ -168,6 +168,20 @@ def asset(name: str):
     return FileResponse(f, media_type=ASSET_TYPES[m.group(1)], headers={"Cache-Control": IMMUTABLE})
 
 
+IMG = re.compile(r"^(rango/[a-z]+\.png|rol/[a-z]+\.svg)$")
+
+
+@app.api_route("/img/{folder}/{name}", methods=["GET", "HEAD"])
+def img(folder: str, name: str):
+    """Emblemas de rango e iconos de posición, copiados de communitydragon (que tarda segundos en servirlos)."""
+    rel = f"{folder}/{name}"
+    f = _web["dir"] / "img" / rel
+    if not _web["dist"] or not IMG.match(rel) or not f.is_file():
+        return _error(404, "no encontrado")
+    media = "image/png" if name.endswith(".png") else "image/svg+xml"
+    return FileResponse(f, media_type=media, headers={"Cache-Control": "public, max-age=604800"})
+
+
 @app.api_route("/data/data.json", methods=["GET", "HEAD"])
 def data_json():
     text = _one("SELECT datos FROM estado WHERE clave = 'publicado'")

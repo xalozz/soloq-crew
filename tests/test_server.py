@@ -90,6 +90,8 @@ class Servidor(unittest.TestCase):
         (dist / "assets" / "index-Zz9.css").write_text("body{}", encoding="utf-8")
         for name in ("sw.js", "viewport.js", "manifest.webmanifest", "favicon.svg", "icon-192.png"):
             (dist / name).write_bytes(b"x")
+        (dist / "img" / "rango").mkdir(parents=True)
+        (dist / "img" / "rango" / "gold.png").write_bytes(b"png")
         try:
             server.configure_web(dist)
             r = self.c.get("/")
@@ -111,6 +113,10 @@ class Servidor(unittest.TestCase):
                 self.assertEqual(r.headers["cache-control"], "no-cache", name)
             for bad in ("/app.js", "/style.css", "/assets/..%2Findex.html", "/assets/nada.js", "/assets/x.map", "/assets/a.b.js",
                         "/icon-512.png", "/README.md"):
+                self.assertEqual(self.c.get(bad).status_code, 404, bad)
+            g = self.c.get("/img/rango/gold.png")
+            self.assertEqual((g.status_code, g.headers["content-type"]), (200, "image/png"))
+            for bad in ("/img/rango/plata.png", "/img/rango/Gold.png", "/img/otra/gold.png", "/img/rango/..%2F..%2Findex.html"):
                 self.assertEqual(self.c.get(bad).status_code, 404, bad)
             self.assertEqual(self.c.get("/data/data.json").json()["generatedAt"], "2026-11-11T10:00:00.000Z")
         finally:
