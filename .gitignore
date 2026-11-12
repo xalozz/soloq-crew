@@ -10,3 +10,11 @@ datos/
 *.db-wal
 *.db-shm
 deploy-paquete.tgz
+
+# Vídeo (rama video-trailer): todo lo generado se rehace con los scripts
+video/out/
+video/stills/
+video/music.wav
+video/*.mp4
+video/spec.json
+video/render.log

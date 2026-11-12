@@ -169,7 +169,16 @@ SOLOQ_HOSTS=localhost:8001 .venv/Scripts/python -m soloq.server --port 8001
 - Mientras no haya clave en el servidor, `soloq-importar.timer` copia cada minuto lo que publica la Action
   (desde el clon de `main` del espejo) para que la web de prueba muestre datos vivos.
 
-**Corte final** (lo decide Álvaro): desactivar la Action; poner la clave y el webhook en `/etc/soloq/`; quitar
-`MIN_INTERVAL_MS=2500` de `soloq-actualizador.service` y activar su `LoadCredential=discord-webhook`;
-`SOLOQ_SITE`/`SOLOQ_HOSTS` y el sitio de Caddy a `soloq.xalozz.es`; última importación desde `main` justo antes
-(`importer importar … --reemplazar`) y arrancar el actualizador.
+**Despliegue**: `powershell -ExecutionPolicy Bypass -File deploy\desplegar.ps1` (empaqueta el último commit con
+`git archive` y ejecuta `deploy/instalar.sh` en el VPS; se niega si hay cambios sin commit).
+
+**Corte final** (lo decide Álvaro), en este orden:
+1. Desactivar la Action en GitHub (*Actions → Actualizar datos → ⋯ → Disable workflow*): si no, los avisos de
+   Discord saldrían dos veces y las dos gastarían la misma clave.
+2. Poner la clave de Riot y el webhook en el VPS: `/etc/soloq/riot-api-key` y `/etc/soloq/discord-webhook`
+   (root, 600, una línea cada uno).
+3. `Get-Content -Raw deploy/corte.sh | ssh xalozz "tr -d '\r' | sed '1s/^\xEF\xBB\xBF//' | sudo bash"`: última
+' | sed '1s/^ï»¿//' | sudo bash"`: última
+   importación de lo publicado, fin del espejo y del importador, ritmo normal de peticiones, Discord activado,
+   `soloq.xalozz.es` al servidor propio y `soloq-nuevo` redirigiendo allí. Los ajustes van en drop-ins de systemd y
+   la marca `/etc/soloq/corte`, así que los despliegues siguientes respetan el estado.

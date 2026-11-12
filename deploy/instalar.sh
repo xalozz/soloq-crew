@@ -1,6 +1,8 @@
 #!/bin/bash
 # Instala o actualiza la versión Python de SoloQ Crew en el VPS. Se ejecuta como root (sudo bash) con el
-# paquete del código ya subido a /tmp/soloq-app.tgz. No toca el espejo (/srv/soloq/web, soloq-espejo.*).
+# paquete del código ya subido a /tmp/soloq-app.tgz (lo hace deploy/desplegar.ps1). No toca el espejo
+# (/srv/soloq/web, soloq-espejo.*). Tras el corte final (deploy/corte.sh, marca /etc/soloq/corte) respeta
+# ese estado: sitio definitivo en Caddy, sin importar de la Action y con los drop-ins del corte.
 set -euo pipefail
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 APP=/srv/soloq/app
@@ -21,8 +23,13 @@ chmod -R u=rwX,g=rX,o= "$APP"
 
 install -m 644 "$APP"/deploy/soloq-web.service "$APP"/deploy/soloq-actualizador.service \
   "$APP"/deploy/soloq-importar.service "$APP"/deploy/soloq-importar.timer /etc/systemd/system/
-install -m 644 "$APP/deploy/soloq.caddy" /etc/caddy/sitios/soloq-nuevo.caddy
-grep -q '^8001 ' /srv/PUERTOS || echo '8001 soloq   -> soloq-nuevo.xalozz.es (Python; en pruebas, convive con el espejo de GitHub)' >> /srv/PUERTOS
+CORTE=0; [ -e /etc/soloq/corte ] && CORTE=1
+if [ "$CORTE" = 1 ]; then
+  install -m 644 "$APP/deploy/soloq-final.caddy" /etc/caddy/sitios/soloq.caddy
+else
+  install -m 644 "$APP/deploy/soloq.caddy" /etc/caddy/sitios/soloq-nuevo.caddy
+  grep -q '^8001 ' /srv/PUERTOS || echo '8001 soloq   -> soloq-nuevo.xalozz.es (Python; en pruebas, convive con el espejo de GitHub)' >> /srv/PUERTOS
+fi
 
 cd "$APP"
 # Primera carga (o recarga) desde el clon de main que mantiene el espejo, con comprobación
@@ -34,13 +41,14 @@ if [ ! -e /etc/soloq/riot-api-key ]; then
 fi
 
 systemctl daemon-reload
-systemctl enable -q soloq-web.service soloq-importar.timer soloq-actualizador.service
+systemctl enable -q soloq-web.service soloq-actualizador.service
+[ "$CORTE" = 1 ] || { systemctl enable -q soloq-importar.timer; systemctl start soloq-importar.timer; }
 systemctl restart soloq-web.service
-systemctl start soloq-importar.timer
 systemctl restart soloq-actualizador.service || true   # sin clave, systemd lo salta (condición)
 
 sudo -u caddy caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile 2>&1 | tail -1
 systemctl reload caddy
 sleep 2
 systemctl --no-pager --lines=0 status soloq-web.service | head -3
-curl -s -o /dev/null -w 'local %{http_code}\n' -H 'Host: soloq-nuevo.xalozz.es' http://127.0.0.1:8001/data/data.json
+HOST=soloq-nuevo.xalozz.es; [ "$CORTE" = 1 ] && HOST=soloq.xalozz.es
+curl -s -o /dev/null -w 'local %{http_code}\n' -H "Host: $HOST" http://127.0.0.1:8001/data/data.json

@@ -1,0 +1,19 @@
+# SoloQ Crew (FastAPI + SQLite) tras el corte final (deploy/corte.sh).
+soloq.xalozz.es {
+	import privado
+	encode zstd gzip
+	request_body {
+		max_size 16KB
+	}
+	reverse_proxy 127.0.0.1:8001
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+}
+
+# Dirección de las pruebas: lleva a la definitiva.
+soloq-nuevo.xalozz.es {
+	import privado
+	redir https://soloq.xalozz.es{uri} permanent
+}
