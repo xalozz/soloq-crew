@@ -2,6 +2,77 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8044007103",
+      "q": 420,
+      "t": 1794496614956,
+      "dur": 2008,
+      "win": true,
+      "champ": "Rakan",
+      "role": "UTILITY",
+      "lvl": 15,
+      "k": 4,
+      "d": 12,
+      "a": 26,
+      "kp": 68,
+      "cs": 24,
+      "vis": 86,
+      "dmg": 10408,
+      "teamDmg": 136017,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 2720,
+      "goldEarned": 12104,
+      "fb": false,
+      "pg": {
+        "t": 19,
+        "q": 2,
+        "ai": 2,
+        "gb": 3,
+        "ba": 0,
+        "am": 0,
+        "dg": 0,
+        "ow": 4
+      },
+      "ff": 0,
+      "items": [
+        3190,
+        2065,
+        3876,
+        3050,
+        3158,
+        3109,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerDot"
+      ],
+      "runes": [
+        "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Leona",
+        "spells": [
+          "SummonerExhaust",
+          "SummonerFlash"
+        ],
+        "runes": [
+          "perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 8043,
+        "maxLeadMin": 34,
+        "maxDef": -2575,
+        "tgd15": 950,
+        "gd15": 530
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8043572023",
       "q": 420,
       "t": 1794436067713,
