@@ -8,6 +8,8 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent           # raíz del repo: la web (index.html, app.js…) y config/
+# La web nueva (React) compilada; si no está, se sirve la de la raíz (index.html + app.js)
+WEB_DIST = Path(os.environ.get("SOLOQ_WEB") or ROOT / "web" / "dist")
 CONFIG_DIR = Path(os.environ.get("SOLOQ_CONFIG") or ROOT / "config")
 DATA_DIR = Path(os.environ.get("SOLOQ_DATA") or ROOT / "datos")
 DB_PATH = DATA_DIR / "soloq.db"

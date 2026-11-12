@@ -1,0 +1,2 @@
+/* El contenedor de React no cuenta para el diseño: sus hijos se colocan como si colgaran de <body> */
+#root { display: contents; }

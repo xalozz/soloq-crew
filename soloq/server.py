@@ -1,4 +1,7 @@
-"""Servidor de la web: la página (index.html, app.js…) y los datos desde SQLite.
+"""Servidor de la web: la página y los datos desde SQLite.
+
+La página es la web nueva compilada (web/dist: index.html, assets/ con hash, sw.js…) si existe; si no, la
+antigua de la raíz del repo (index.html, app.js, style.css…), así un despliegue sin compilar sigue funcionando.
 
 Sirve las mismas rutas que leía la web en GitHub Pages, así el frontend apenas cambia:
   /data/data.json             lo último que publicó el actualizador (texto tal cual)
@@ -18,6 +21,7 @@ import json
 import re
 import sqlite3
 import threading
+from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse, Response
@@ -42,6 +46,12 @@ STATIC = {
     "icon-512.png": "image/png",
     "icon-maskable-512.png": "image/png",
 }
+# Web nueva (web/dist): sin app.js ni style.css sueltos (van en assets/ con hash) y con viewport.js
+DIST_STATIC = {k: v for k, v in STATIC.items() if k not in ("app.js", "style.css")} | {"viewport.js": "text/javascript; charset=utf-8"}
+ASSET = re.compile(r"^[\w-]+\.(js|css|png|svg|webp|woff2?)$")
+ASSET_TYPES = {"js": "text/javascript; charset=utf-8", "css": "text/css; charset=utf-8", "png": "image/png",
+               "svg": "image/svg+xml", "webp": "image/webp", "woff": "font/woff", "woff2": "font/woff2"}
+IMMUTABLE = "public, max-age=31536000, immutable"   # assets/ lleva el hash del contenido en el nombre
 MATCH_ID = re.compile(r"^[A-Z0-9]{2,6}_\d{1,15}$")
 _hosts = {"port": None}
 _local = threading.local()
@@ -58,10 +68,10 @@ def allowed_hosts():
     return hosts
 
 
-def _inline_hashes():
-    """sha256 de los <script> en línea de index.html: la CSP permite esos y ningún otro."""
+def _inline_hashes(root):
+    """sha256 de los <script> en línea de index.html: la CSP permite esos y ningún otro (la web nueva no tiene)."""
     try:
-        html = (config.ROOT / "index.html").read_text(encoding="utf-8")
+        html = (root / "index.html").read_text(encoding="utf-8")
     except OSError:
         return ""
     out = []
@@ -71,12 +81,28 @@ def _inline_hashes():
     return " ".join(out)
 
 
-CSP = (
-    f"default-src 'self'; script-src 'self' {_inline_hashes()}; "
-    "style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; "
-    "img-src 'self' data: blob: https://ddragon.leagueoflegends.com https://raw.communitydragon.org; "
-    "connect-src 'self'; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
-)
+def _csp(root):
+    hashes = _inline_hashes(root)
+    return (
+        f"default-src 'self'; script-src 'self'{' ' + hashes if hashes else ''}; "
+        "style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; "
+        "img-src 'self' data: blob: https://ddragon.leagueoflegends.com https://raw.communitydragon.org; "
+        "connect-src 'self'; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+    )
+
+
+_web = {"dir": config.ROOT, "dist": False, "csp": ""}
+
+
+def configure_web(dist=None):
+    """Elige qué web se sirve: la compilada (web/dist) si tiene index.html; si no, la de la raíz. Y su CSP."""
+    dist = Path(dist) if dist else config.WEB_DIST
+    use = (dist / "index.html").is_file()
+    root = dist if use else config.ROOT
+    _web.update(dir=root, dist=use, csp=_csp(root))
+
+
+configure_web()
 
 
 def db():
@@ -118,18 +144,28 @@ async def guard(request: Request, call_next):
     if ".." in path or "\\" in path or "//" in path:
         return _error(404, "no encontrado")
     response = await call_next(request)
-    response.headers["Cache-Control"] = "no-cache"
+    if "cache-control" not in response.headers:
+        response.headers["Cache-Control"] = "no-cache"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["Referrer-Policy"] = "no-referrer"
     response.headers["X-Robots-Tag"] = "noindex, nofollow, noarchive"
-    response.headers["Content-Security-Policy"] = CSP
+    response.headers["Content-Security-Policy"] = _web["csp"]
     return response
 
 
 @app.api_route("/", methods=["GET", "HEAD"])
 def index():
-    return FileResponse(config.ROOT / "index.html", media_type=STATIC["index.html"])
+    return FileResponse(_web["dir"] / "index.html", media_type=STATIC["index.html"])
+
+
+@app.api_route("/assets/{name}", methods=["GET", "HEAD"])
+def asset(name: str):
+    m = ASSET.match(name)
+    f = _web["dir"] / "assets" / name
+    if not _web["dist"] or not m or not f.is_file():
+        return _error(404, "no encontrado")
+    return FileResponse(f, media_type=ASSET_TYPES[m.group(1)], headers={"Cache-Control": IMMUTABLE})
 
 
 @app.api_route("/data/data.json", methods=["GET", "HEAD"])
@@ -165,10 +201,11 @@ def latido():
 
 @app.api_route("/{name}", methods=["GET", "HEAD"])
 def static(name: str):
-    media = STATIC.get(name)
-    if not media:
+    media = (DIST_STATIC if _web["dist"] else STATIC).get(name)
+    f = _web["dir"] / name
+    if not media or not f.is_file():
         return _error(404, "no encontrado")
-    return FileResponse(config.ROOT / name, media_type=media)
+    return FileResponse(f, media_type=media)
 
 
 def main(argv=None):
