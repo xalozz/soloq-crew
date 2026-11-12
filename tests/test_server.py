@@ -73,7 +73,7 @@ class Servidor(unittest.TestCase):
         r = self.c.get("/")
         csp = r.headers["content-security-policy"]
         self.assertIn("default-src 'self'", csp)
-        self.assertEqual(csp.count("'sha256-"), 3)      # los tres <script> en línea de index.html, ninguno más
+        self.assertEqual(csp.count("'sha256-"), 1)      # el <script> en línea de index.html (redirección), ninguno más
         self.assertNotIn("unsafe-inline'; font", csp.split("script-src")[1].split(";")[0])
         self.assertIn("noindex", r.headers["x-robots-tag"])
         self.assertEqual(r.headers["x-frame-options"], "DENY")
@@ -124,7 +124,7 @@ class Servidor(unittest.TestCase):
         # Sin web/dist (o sin su index.html) vuelve la web antigua
         self.assertEqual(self.c.get("/app.js").status_code, 200)
         self.assertEqual(self.c.get("/assets/index-Ab12_cD.js").status_code, 404)
-        self.assertEqual(self.c.get("/").headers["content-security-policy"].count("'sha256-"), 3)
+        self.assertEqual(self.c.get("/").headers["content-security-policy"].count("'sha256-"), 1)
 
     def test_sin_datos(self):
         tmp = Path(tempfile.mkdtemp())
