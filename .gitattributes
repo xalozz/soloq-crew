@@ -1,0 +1,6 @@
+# Lo que se ejecuta o se instala en el VPS va siempre con LF (git archive aplica core.autocrlf).
+*.sh text eol=lf
+*.service text eol=lf
+*.timer text eol=lf
+*.caddy text eol=lf
+*.py text eol=lf

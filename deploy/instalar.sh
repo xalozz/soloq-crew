@@ -33,7 +33,7 @@ fi
 
 cd "$APP"
 # Primera carga (o recarga) desde el clon de main que mantiene el espejo, con comprobación
-if [ ! -e /etc/soloq/riot-api-key ]; then
+if [ "$CORTE" = 0 ]; then
   runuser -u soloq -- env SOLOQ_DATA="$DATA" "$APP/.venv/bin/python" -m soloq.importer importar /srv/soloq/web/data --reemplazar \
     --db "$DATA/soloq.db" < /dev/null
   runuser -u soloq -- env SOLOQ_DATA="$DATA" "$APP/.venv/bin/python" -m soloq.importer importar /srv/soloq/web/data --espejo \

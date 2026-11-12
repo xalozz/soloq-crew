@@ -2,7 +2,9 @@
 Description=SoloQ Crew: actualizador (API de Riot -> SQLite), pasada rapida cada minuto y completa cada 15
 After=network-online.target
 Wants=network-online.target
-# Sin clave de Riot no arranca (mientras tanto, soloq-importar.timer copia lo que publica la GitHub Action)
+# Solo tras el corte final (deploy/corte.sh deja la marca) y con clave de Riot. Antes, soloq-importar.timer copia
+# lo que publica la GitHub Action; así, aunque la clave ya esté puesta, un reinicio no lo arranca antes de tiempo.
+ConditionPathExists=/etc/soloq/corte
 ConditionPathExists=/etc/soloq/riot-api-key
 
 [Service]

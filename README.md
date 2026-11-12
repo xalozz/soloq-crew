@@ -177,8 +177,9 @@ SOLOQ_HOSTS=localhost:8001 .venv/Scripts/python -m soloq.server --port 8001
    Discord saldrían dos veces y las dos gastarían la misma clave.
 2. Poner la clave de Riot y el webhook en el VPS: `/etc/soloq/riot-api-key` y `/etc/soloq/discord-webhook`
    (root, 600, una línea cada uno).
+   Lo más cómodo: `ssh -t xalozz "sudo bash /srv/soloq/app/deploy/poner-claves.sh"`, que las pide sin mostrarlas,
+   las comprueba contra Riot y Discord y, si la Action ya está desactivada, hace también el paso 3.
 3. `Get-Content -Raw deploy/corte.sh | ssh xalozz "tr -d '\r' | sed '1s/^\xEF\xBB\xBF//' | sudo bash"`: última
-' | sed '1s/^ï»¿//' | sudo bash"`: última
    importación de lo publicado, fin del espejo y del importador, ritmo normal de peticiones, Discord activado,
    `soloq.xalozz.es` al servidor propio y `soloq-nuevo` redirigiendo allí. Los ajustes van en drop-ins de systemd y
    la marca `/etc/soloq/corte`, así que los despliegues siguientes respetan el estado.
