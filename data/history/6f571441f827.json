@@ -2,6 +2,148 @@
   "games": [
     {
       "v": 4,
+      "id": "EUW1_8044185727",
+      "q": 420,
+      "t": 1794507173619,
+      "dur": 1808,
+      "win": false,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 14,
+      "d": 7,
+      "a": 4,
+      "kp": 62,
+      "cs": 177,
+      "vis": 24,
+      "dmg": 26327,
+      "teamDmg": 93654,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 0,
+      "goldEarned": 13973,
+      "fb": false,
+      "pg": {
+        "t": 104,
+        "q": 0,
+        "ai": 3,
+        "gb": 21,
+        "ba": 0,
+        "am": 24,
+        "dg": 0,
+        "ow": 45
+      },
+      "ff": 1,
+      "items": [
+        6333,
+        6676,
+        1001,
+        3071,
+        3026,
+        1029,
+        3340
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Belveth",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+          "perk-images/Styles/7203_Whimsy.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 4410,
+        "maxLeadMin": 17,
+        "maxDef": -7373,
+        "tgd15": 3889,
+        "gd15": 2361
+      }
+    },
+    {
+      "v": 4,
+      "id": "EUW1_8044135827",
+      "q": 420,
+      "t": 1794504408445,
+      "dur": 1594,
+      "win": true,
+      "champ": "Briar",
+      "role": "JUNGLE",
+      "lvl": 15,
+      "k": 3,
+      "d": 5,
+      "a": 9,
+      "kp": 31,
+      "cs": 160,
+      "vis": 17,
+      "dmg": 11074,
+      "teamDmg": 109585,
+      "penta": 0,
+      "quadra": 0,
+      "triple": 0,
+      "towerDmg": 3412,
+      "goldEarned": 10786,
+      "fb": false,
+      "pg": {
+        "t": 84,
+        "q": 0,
+        "ai": 2,
+        "gb": 29,
+        "ba": 0,
+        "am": 19,
+        "dg": 0,
+        "ow": 26
+      },
+      "ff": 0,
+      "items": [
+        3047,
+        6676,
+        3123,
+        3071,
+        2019,
+        0,
+        3364
+      ],
+      "spells": [
+        "SummonerFlash",
+        "SummonerSmite"
+      ],
+      "runes": [
+        "perk-images/Styles/Precision/PressTheAttack/PressTheAttack.png",
+        "perk-images/Styles/7200_Domination.png"
+      ],
+      "opp": {
+        "champ": "Warwick",
+        "spells": [
+          "SummonerFlash",
+          "SummonerSmite"
+        ],
+        "runes": [
+          "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+          "perk-images/Styles/7202_Sorcery.png"
+        ]
+      },
+      "gold": {
+        "maxLead": 9653,
+        "maxLeadMin": 27,
+        "maxDef": -583,
+        "tgd15": 3691,
+        "gd15": -2746
+      }
+    },
+    {
+      "v": 4,
       "id": "EUW1_8043259076",
       "q": 420,
       "t": 1794423897068,
