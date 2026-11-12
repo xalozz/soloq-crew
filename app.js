@@ -26,6 +26,7 @@ const expanded = new Set();
 const SITE_URL = new URL('./', location.href).href;
 // En GitHub Pages el latido está en la rama "heartbeat"; en el servidor propio, en api/latido
 const ON_PAGES = location.hostname.endsWith('github.io');
+let OWN_SERVER = false;       // se sabe en el primer latido: hay api/latido (servidor en Python)
 
 // ---------------------------------------------------------------- utilidades
 function h(tag, attrs, ...children) {
@@ -2534,7 +2535,15 @@ async function checkLive() {
   const prevLive = JSON.stringify(LIVE);
   try {
     let beat, st = null;
-    if (ON_PAGES) {
+    // Servidor propio: api/latido. Si no existe (GitHub Pages o el espejo estático), la rama "heartbeat".
+    const own = ON_PAGES ? null : await fetch(`api/latido?t=${Date.now()}`, { cache: 'no-store' }).catch(() => null);
+    OWN_SERVER = !!own?.ok && (own.headers.get('content-type') ?? '').includes('json');
+    if (OWN_SERVER) {
+      document.getElementById('live')?.setAttribute('href', 'api/latido');
+      const j = await own.json();   // { beat, status: resultado de la última pasada }
+      beat = j.beat;
+      st = j.status ?? null;
+    } else {
       const r = await fetch('https://api.github.com/repos/xalozz/soloq-crew/commits/heartbeat', { cache: 'no-store' });
       if (!r.ok) throw new Error(r.status);
       const j = await r.json();
@@ -2542,13 +2551,6 @@ async function checkLive() {
       const msg = j.commit.message ?? '';
       const i = msg.indexOf('\n\n');
       if (i >= 0) { try { st = JSON.parse(msg.slice(i + 2).trim()); } catch { st = null; } }
-    } else {
-      // { beat, status: resultado de la última pasada }
-      const r = await fetch(`api/latido?t=${Date.now()}`, { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status);
-      const j = await r.json();
-      beat = j.beat;
-      st = j.status ?? null;
     }
     if (!beat) throw new Error('sin latido');
     STATUS = { ...(st ?? {}), beat };
@@ -2558,7 +2560,7 @@ async function checkLive() {
     const checked = st?.at ? Math.round((Date.now() - st.at) / 60000) : mins;
     const agoMin = (m) => (m <= 0 ? 'hace menos de 1 min' : `hace ${m} min`);
     if (!fresh) set('off', 'Parado', `Sin latido desde hace ${mins} min. Se relanza solo; si dura mucho, avisa`);
-    else if (st?.err === 'key') set('off', 'Clave caducada', `Riot rechaza la clave de la API: los datos no se actualizan hasta renovarla (${ON_PAGES ? 'secreto RIOT_API_KEY en GitHub' : 'clave de Riot en el servidor'})`);
+    else if (st?.err === 'key') set('off', 'Clave caducada', `Riot rechaza la clave de la API: los datos no se actualizan hasta renovarla (${OWN_SERVER ? 'clave de Riot en el servidor' : 'secreto RIOT_API_KEY en GitHub'})`);
     else if (st?.err) set('warn', 'Riot no responde', `La última comprobación falló${st.msg ? ` (${st.msg})` : ''}. Se reintenta cada minuto`);
     else if (st?.at && checked > 10) set('warn', 'Con retraso', `La última comprobación correcta fue ${agoMin(checked)}`);
     else {
@@ -2566,7 +2568,7 @@ async function checkLive() {
         + `${st?.accErr?.length ? ` · sin actualizar: ${st.accErr.join(', ')}` : ''}`);
     }
   } catch {
-    set('unk', 'Estado ?', `No se ha podido comprobar el estado${ON_PAGES ? ' (pulsa para verlo en GitHub)' : ''}`);
+    set('unk', 'Estado ?', `No se ha podido comprobar el estado${OWN_SERVER ? '' : ' (pulsa para verlo en GitHub)'}`);
   }
   renderMeta();
   if (JSON.stringify(LIVE) !== prevLive && MODEL.length) { renderLive(); renderRows(); }
@@ -2574,7 +2576,6 @@ async function checkLive() {
 
 async function init() {
   wire();
-  if (!ON_PAGES) document.getElementById('live')?.setAttribute('href', 'api/latido');
   // App instalable y con los últimos datos sin conexión
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     navigator.serviceWorker.register('sw.js').catch(() => {});
