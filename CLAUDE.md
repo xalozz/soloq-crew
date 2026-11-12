@@ -7,10 +7,10 @@ Ranking de SoloQ del grupo de amigos (cuentas en `config/players.json`). Lo com�
 - **Producción**: `soloq.xalozz.es` → servidor propio (FastAPI + SQLite, 127.0.0.1:8001) con la web nueva de `web/`
   (React + TypeScript + Vite; Node solo para compilar). El actualizador (`soloq-actualizador`, Python) consulta a
   Riot y avisa a Discord. `soloq-nuevo.xalozz.es` redirige a `soloq.xalozz.es`.
-- La GitHub Action está **desactivada** y el espejo e importador apagados. GitHub Pages sigue sirviendo la web
-  vieja de la raíz con los últimos datos publicados (ya no se actualiza): se puede apagar en GitHub (Settings →
-  Pages) y borrar la web de la raíz, `scripts/*.mjs` y `data/` cuando se quiera. `/srv/soloq/web` (clon del espejo)
-  también sobra.
+- La GitHub Action está **desactivada** y el espejo e importador apagados. GitHub Pages solo sirve `index.html` de la
+  raíz, que redirige a `soloq.xalozz.es` (conserva el `#…`): no quitar Pages mientras queden enlaces viejos. Lo demás
+  de la raíz (`app.js`, `sw.js`, `scripts/*.mjs`, `data/`) es la web y el actualizador viejos: se puede borrar (ojo:
+  `web/` importa `../style.css`; muévelo dentro de `web/` antes). `/srv/soloq/web` (clon del espejo) también sobra.
 - Claves en `/etc/soloq/riot-api-key` y `/etc/soloq/discord-webhook` (root, 600), por `LoadCredential`.
 - Estado del corte: marca `/etc/soloq/corte` y drop-ins `corte.conf`; `instalar.sh` lo respeta en cada despliegue.
 - La rama `video-trailer` es el vídeo «roast» (aparcado; lo generado está en `.gitignore`).
