@@ -14,6 +14,11 @@ Ranking de SoloQ del grupo de amigos (cuentas en `config/players.json`). Lo com�
 - **Corte final pendiente de Álvaro**: desactivar la Action, poner `/etc/soloq/riot-api-key` y
   `/etc/soloq/discord-webhook`, y ejecutar `deploy/corte.sh` (ver README, «Corte final»). Hasta entonces el
   actualizador en Python **no** debe mandar nada a Discord (los avisos saldrían dos veces).
+- **Web nueva** en `web/` (React + TypeScript + Vite; Node solo para compilar). Paridad comprobada con la de la raíz
+  (`npm run test:parity`, ~10 min, Edge). El servidor Python sirve `web/dist` si existe; `desplegar.ps1` la compila
+  desde el commit. Tras el corte la web de la raíz sobra (se puede borrar junto con Pages).
+- El corte lo hace `deploy/poner-claves.sh` (Álvaro, interactivo): pide las claves, las comprueba y, si la Action ya
+  está desactivada, ejecuta `corte.sh`. El actualizador no arranca sin la marca `/etc/soloq/corte`.
 - La rama `video-trailer` es el vídeo «roast» (aparcado; lo generado está en `.gitignore`).
 
 ## Comandos
