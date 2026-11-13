@@ -939,7 +939,8 @@ button.ev:focus-visible { outline: 2px solid var(--accent); }
 .ev-go { font-size: 11px; font-weight: 900; color: var(--accent); flex: none; }
 .ev .avatar { border-radius: 50%; }
 .ev-up, .ev-placed { border-left: 3px solid var(--win); }
-.ev-down { border-left: 3px solid var(--loss); }
+.ev-down, .ev-roast { border-left: 3px solid var(--loss); }
+.ev-burn { font-size: 13px; font-weight: 700; font-style: italic; color: var(--loss); }
 .ev-penta, .ev-quadra, .ev-record, .ev-challengeEnd { border-left: 3px solid #f5c542; }
 
 /* ------------------------------------------------ la semana */

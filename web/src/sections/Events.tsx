@@ -13,7 +13,7 @@ export function evParts(e: GameEvent): [string, string] {
 function evSub(e: GameEvent): string {
   switch (e.type) {
     case 'up': case 'down': return `viene de ${e.from}${e.lp != null ? ` · ${e.lp} LP` : ''}${e.peak ? ' · su mejor elo registrado' : ''}`;
-    case 'penta': case 'quadra': case 'record': return `${e.champ} · ${e.k}/${e.d}/${e.a} · ${e.win ? 'victoria' : 'derrota'}`;
+    case 'penta': case 'quadra': case 'record': case 'roast': return `${e.champ} · ${e.k}/${e.d}/${e.a} · ${e.win ? 'victoria' : 'derrota'}`;
     case 'challengeStart': case 'challengeEnd': return (e.desc ?? '').split('\n')[0];
     default: return '';
   }
@@ -28,7 +28,7 @@ function EventItem({ e, byName }: { e: GameEvent; byName: Map<string, Player> })
   const body = (
     <>
       <span className="ev-ico" aria-hidden="true">{ico}</span>
-      <div className="ev-main"><b>{txt}</b><small>{[evTime(e.t), evSub(e)].filter(Boolean).join(' · ')}</small></div>
+      <div className="ev-main"><b>{txt}</b>{e.roast ? <span className="ev-burn">{e.roast}</span> : null}<small>{[evTime(e.t), evSub(e)].filter(Boolean).join(' · ')}</small></div>
       {open ? <span className="ev-go">Ver →</span> : p ? <Avatar p={p} size={28} /> : null}
     </>
   );

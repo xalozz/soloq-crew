@@ -1,0 +1,175 @@
+{
+  "_como": "Frases de los roasts. Se puede añadir o quitar cualquiera sin tocar código (una por línea dentro de cada lista). Huecos que se rellenan solos: {name} {champ} {k} {d} {a} {min} {pos}, y según el caso {pct} {media} {lead} {gd} {rival} {q} {csmin} {vis} {w} {l} {hora} {nth} {horas}. La primera palabra de cada «texto» es el icono.",
+
+  "remates": {
+    "baja": [
+      "pero lo va a seguir intentando XD",
+      "se creía que tal",
+      "seguro que ha sido culpa de sus equipos",
+      "volviendo a donde pertenece",
+      "nadie lo ha visto venir. bueno, todos",
+      "vaya manco",
+      "y mañana más"
+    ],
+    "bajaLiga": [
+      "se creía que tal",
+      "por fin donde se merece",
+      "bienvenido a casa",
+      "seguro que el problema son los jungla",
+      "lo de la liga anterior fue un préstamo",
+      "¿no le da vergüenza? a nosotros sí"
+    ],
+    "ascensor": [
+      "por {nth} vez en dos semanas, pero lo va a seguir intentando XD",
+      "{nth} vez que baja aquí. ese es su nivel, que lo asuma",
+      "{nth} vez. ya le cobran el alquiler",
+      "{nth} vez. hardstuck de manual"
+    ],
+    "duraPoco": [
+      "le ha durado {horas} h la alegría",
+      "{horas} h ha aguantado arriba. menudo paquete",
+      "subió hace {horas} h. lo bueno dura poco y lo de {name} menos"
+    ],
+    "liderBaja": [
+      "el «bueno» del grupo. se acabó la tontería",
+      "el primero del grupo, ojo. el nivel del grupo da pena",
+      "y este es el mejor que tenemos. madre mía",
+      "el rey está desnudo"
+    ],
+    "sube": [
+      "a ver lo que dura",
+      "hasta mañana",
+      "le han tocado buenos equipos, no hay otra explicación",
+      "que no se acostumbre",
+      "menudo boosteo le han hecho"
+    ],
+    "subeLiga": [
+      "a ver lo que dura",
+      "que no se acostumbre, payaso",
+      "ya está el sistema roto otra vez",
+      "nos vemos en una semana en la liga de antes",
+      "carreado hasta aquí, ni una partida suya"
+    ],
+    "rachaL5": [
+      "seguro que ha sido culpa de sus equipos",
+      "apaga ya, joder",
+      "igual el problema no son los demás",
+      "pero seguro que sigue jugando"
+    ],
+    "rachaL7": [
+      "ya es por cabezonería",
+      "¿no le da vergüenza? a nosotros sí",
+      "que alguien le quite el ordenador",
+      "dale a desinstalar, venga"
+    ],
+    "rachaL10": [
+      "¿no te da vergüenza? a nosotros sí",
+      "esto ya es denunciable",
+      "riot debería banearle por el bien del juego",
+      "cualquier bot lo haría mejor"
+    ],
+    "rachaW": [
+      "ya las devolverá",
+      "que lo disfrute, no lo va a volver a ver",
+      "rivales con la mano vendada, seguro",
+      "alguien le está jugando las partidas"
+    ],
+    "finRachaW": [
+      "ya decíamos",
+      "la realidad vuelve",
+      "duró lo que tenía que durar",
+      "volvemos a la normalidad"
+    ],
+    "finRachaL": [
+      "le ha tocado un equipo que carrea",
+      "hasta un reloj parado acierta dos veces al día",
+      "LP por pena"
+    ],
+    "penta": [
+      "contra cinco bots, seguro",
+      "el resto del mes ni una",
+      "lo va a estar contando un año"
+    ],
+    "pentaDerrota": [
+      "y pierde. esto es un meme",
+      "y pierde. lo único bueno que ha hecho este mes y no ha servido para nada",
+      "y aun así pierde. LOL"
+    ],
+    "quadra": [
+      "y la quinta se la roba el support. normal",
+      "casi. como siempre"
+    ],
+    "record": [
+      "tampoco era difícil en este grupo",
+      "con el nivel que hay aquí, menudo mérito"
+    ],
+    "clasifica": [
+      "ya tenemos otro al que reírnos",
+      "a ver cuánto aguanta ahí"
+    ],
+    "partidas": [
+      "y sigue igual de malo",
+      "tantas partidas y ni una idea",
+      "y ni con esas aprende"
+    ]
+  },
+
+  "partidas": {
+    "tirada": {
+      "texto": "🎁 {name} pierde con {champ} después de ir +{lead} de oro",
+      "remates": ["cómo", "grande!", "LOL", "hay que ser malo de cojones", "eso no lo hace cualquiera", "regalada, como siempre"]
+    },
+    "feedPierde": {
+      "texto": "💀 {name} {k}/{d}/{a} con {champ}",
+      "remates": ["¿está inteando o es así de malo?", "vaya manco", "sus compañeros deberían poder denunciarle", "menudo lastre", "el banco del equipo rival", "LOL"]
+    },
+    "feedGana": {
+      "texto": "💀 {name} gana {k}/{d}/{a} con {champ}",
+      "remates": ["regalada por cuatro desconocidos", "menudo parásito", "ha ganado a pesar de {name}", "su equipo ha jugado 4 contra 6 y aun así", "LP por la cara"]
+    },
+    "lastrePierde": {
+      "texto": "🧱 {name} es el que menos daño hace y el que más muere de su equipo ({champ}, {k}/{d}/{a})",
+      "remates": ["el peor de la partida con diferencia", "vaya manco", "¿está inteando o es así de malo?", "menudo lastre"]
+    },
+    "lastreGana": {
+      "texto": "🧱 {name} gana siendo el que menos daño hace y el que más muere de su equipo ({champ}, {k}/{d}/{a})",
+      "remates": ["menudo parásito", "carreado de principio a fin", "regalada", "que les dé las gracias a los otros cuatro"]
+    },
+    "mochila": {
+      "texto": "🎒 {name} gana con {champ} haciendo el {pct}% del daño de su equipo",
+      "remates": ["menudo parásito", "regalada por cuatro desconocidos", "un {champ} normal hace el {media}%", "de paquete en la moto", "LP por la cara", "ni se ha enterado de que ha ganado"]
+    },
+    "sinDanio": {
+      "texto": "🪶 {name} pierde con {champ} haciendo el {pct}% del daño de su equipo",
+      "remates": ["un {champ} normal hace el {media}%", "¿estaba jugando o mirando?", "vaya manco", "menudo lastre", "cualquier bot hace más"]
+    },
+    "linea": {
+      "texto": "📉 {name} va −{gd} de oro contra el {rival} en el minuto 15",
+      "remates": ["le han pasado por encima", "vaya manco", "{rival} diff", "le han usado de cajero automático", "línea donada"]
+    },
+    "ff": {
+      "texto": "🏳️ {name} se rinde en el minuto {min} con {champ}",
+      "remates": ["rajado", "ni lo intenta", "seguro que ha sido culpa de sus equipos", "a la primera de cambio"]
+    },
+    "preguntas": {
+      "texto": "❓ {name} pierde con {champ} después de {q} pings de «?»",
+      "remates": ["la única pregunta es qué hace jugando a esto", "mucho «?» y poco juego", "LOL", "el «?» se lo pone el grupo a él"]
+    },
+    "cs": {
+      "texto": "🌾 {name} {csmin} CS/min con {champ}",
+      "remates": ["vaya manco", "eso no es farmear, es pasear", "los minions se mueren de viejos", "no tiene manos"]
+    },
+    "vision": {
+      "texto": "🙈 {name} {vis} de visión en {min} minutos con {champ}",
+      "remates": ["¿le cobran los wards o qué?", "jugando a ciegas", "rata", "el mapa a oscuras y la cabeza también"]
+    },
+    "maldito": {
+      "texto": "🔁 {name} vuelve a perder con {champ} ({w}V–{l}D esta temporada)",
+      "remates": ["no aprende", "ni queriendo", "que alguien se lo banee", "cada vez que lo coge alguien de su equipo se plantea dejar el juego"]
+    },
+    "madrugada": {
+      "texto": "🌙 {name} pierde a las {hora} con {champ}",
+      "remates": ["que se vaya a dormir", "ni dormir sabe hacer bien", "nada bueno pasa a estas horas", "mañana igual de malo pero sin dormir"]
+    }
+  }
+}

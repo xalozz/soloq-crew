@@ -312,7 +312,7 @@ def load_data_dragon(version, http=None):
     if not version:
         return {"spells": {}, "runes": {}}
     base = f"{config.DDRAGON_BASE}/cdn/{version}/data/en_US"
-    spells, runes, champs = {}, {}, {}
+    spells, runes, champs, tags = {}, {}, {}, {}
     client = http or httpx.Client(timeout=20)
     try:
         s = client.get(f"{base}/summoner.json").json()
@@ -333,9 +333,11 @@ def load_data_dragon(version, http=None):
         c = client.get(f"{base}/champion.json").json()
         for ch in c["data"].values():
             champs[str(ch["key"])] = ch["id"]
+            if ch.get("tags"):
+                tags[ch["id"]] = ch["tags"][0]
     except Exception:
         pass
-    return {"spells": spells, "runes": runes, "champs": champs}
+    return {"spells": spells, "runes": runes, "champs": champs, "tags": tags}
 
 
 def ddragon_version(http=None):

@@ -297,7 +297,7 @@ class PasadasDePuntaAPunta(unittest.TestCase):
         self.srv.reset_logs()
         store = Store(self.db)
         status, code = run_pass(quick, store=store, env=self.env(now), players_config=self.players_cfg, challenge_defs=CHALLENGES["challenges"],
-                                now=lambda: now, webhook=hook, api_key="RGAPI-prueba")
+                                now=lambda: now, webhook=hook, api_key="RGAPI-prueba", roasts=False)
         py_log, py_discord = self.srv.log, self.srv.discord
         out = self.tmp / "py-export"
         shutil.rmtree(out, ignore_errors=True)

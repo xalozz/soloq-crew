@@ -262,6 +262,7 @@ export interface GameEvent {
   a?: number;
   win?: boolean;
   desc?: string;
+  roast?: string;
   [extra: string]: unknown;
 }
 

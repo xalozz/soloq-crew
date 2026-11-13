@@ -25,7 +25,8 @@ from . import config
 from .challenges import challenge_embed, challenge_event, challenge_status, compute_challenges
 from .discord import send_discord
 from .duos import compute_duos
-from .events import event_embed, detect_events, welcome_embed
+from .events import event_embed, detect_events, main_acc, welcome_embed
+from .roasts import add_damage_samples, add_roasts, leader_of, seed_damage_base
 from .flex import QUEUE_CLASH, flex_group_stats, update_flex_history
 from .importer import hash_of
 from .js import INF, dumps, jround
@@ -141,8 +142,9 @@ def _strip(o):
 
 class Updater:
     def __init__(self, store, players_config, challenge_defs, riot=None, now=None, discord=None, http=None,
-                 api_key=None, webhook=_UNDEF, env=None):
+                 api_key=None, webhook=_UNDEF, env=None, roasts=True):
         self.store = store
+        self.roasts = roasts
         self.config = players_config
         self.challenge_defs = challenge_defs
         self.now_fn = now or (lambda: int(time.time() * 1000))
@@ -255,7 +257,10 @@ class Updater:
                 if rec and not timeline and (prev_g or {}).get("gold"):
                     rec["gold"] = prev_g["gold"]
                 if is_recent and rec:
-                    store.write_detail(mid, match_detail(match, dd))
+                    det = match_detail(match, dd)
+                    store.write_detail(mid, det)
+                    if self.roasts:
+                        add_damage_samples(store, det, (dd or {}).get("tags"))
                 if rec:
                     i = next((k for k, g in enumerate(history) if g["id"] == mid), -1)
                     if i >= 0:
@@ -307,7 +312,10 @@ class Updater:
                 continue
             try:
                 budget["details"] -= 1
-                store.write_detail(mid, match_detail(riot.match(region, mid), dd))
+                det = match_detail(riot.match(region, mid), dd)
+                store.write_detail(mid, det)
+                if self.roasts:
+                    add_damage_samples(store, det, (dd or {}).get("tags"))
             except Exception as err:
                 if is_key_error(err):
                     raise
@@ -420,6 +428,8 @@ class Updater:
         if dd_version is None:
             dd_version = (previous or {}).get("ddragonVersion")
         dd = load_data_dragon(dd_version, self.http)
+        if self.roasts:
+            seed_damage_base(store, dd.get("tags"))
         if dd.get("champs"):
             champ_ids = dd["champs"]
             store.set_state("campeones", champ_ids)
@@ -474,6 +484,7 @@ class Updater:
         keep_details = set()
         peak_before = {}
         new_games = {}
+        season_hists, rids = {}, {}
         for p in players:
             for a in p["accounts"]:
                 key = acc_key(a)
@@ -500,6 +511,9 @@ class Updater:
                         a["stats"]["lp"] = lp_averages(a["_history"], lp_map)
                 if a.get("_newGames"):
                     new_games[key] = a["_newGames"]
+                if a.get("_history") is not None:
+                    season_hists[key] = a["_history"][:a["rank"]["wins"] + a["rank"]["losses"]] if a.get("rank") else a["_history"]
+                    rids[key] = a.get("riotId")
                 for k in ("_history", "_newGames", "_leagueAt"):
                     a.pop(k, None)
                 if a.get("_detailIds"):
@@ -509,6 +523,21 @@ class Updater:
 
         events = detect_events(previous["players"], players, {"now": now, "newGames": new_games, "peakBefore": peak_before}) \
             if previous and not previous.get("demo") else []
+        if self.roasts and previous and not previous.get("demo"):
+            try:
+                mains_now = [{"name": p["name"], "key": acc_key(main_acc(p))} for p in players if main_acc(p)]
+                details = {}
+                for gs in new_games.values():
+                    for g in gs:
+                        raw = store.read_detail_raw(g["id"])
+                        if raw:
+                            details[g["id"]] = json.loads(raw)
+                events = add_roasts(events, {"now": now, "log": store.read_events()["events"], "players": mains_now,
+                                             "newGames": new_games, "histories": season_hists, "base": store.get_state("dmgBase"),
+                                             "tags": dd.get("tags"), "details": details, "rids": rids,
+                                             "leader": leader_of(players, main_acc)})
+            except Exception:
+                log.exception("  ! roasts")
 
         mains = []
         for p in players:

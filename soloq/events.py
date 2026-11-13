@@ -230,6 +230,8 @@ def event_text(e):
         return f"🏆 Nuevo récord del grupo ({d[0] if d else e['rec']}): {e['name']}, {d[1](e['val']) if d else js_str(e['val'])}"
     if t == "challengeStart":
         return f"🏁 Empieza el reto «{e['title']}»"
+    if t == "roast":
+        return e.get("text") or ""
     if t == "challengeEnd":
         w = e.get("winners") or []
         if w:
@@ -239,6 +241,13 @@ def event_text(e):
 
 
 def event_embed(e, dd_version=None):
+    out = _event_embed(e, dd_version)
+    if e.get("roast"):
+        out["description"] = "\n".join(x for x in [f"**{e['roast']}**", out.get("description")] if x)
+    return out
+
+
+def _event_embed(e, dd_version=None):
     kda = f"{e['champ']} · {e['k']}/{e['d']}/{e['a']} · {'victoria' if e['win'] else 'derrota'}" if e.get("k") is not None else None
     base = {"title": e["text"], "url": match_link(e["gameId"]) if e.get("gameId") else f"{config.SITE}#novedades", "timestamp": iso(e["t"])}
     t = e["type"]
@@ -258,8 +267,14 @@ def event_embed(e, dd_version=None):
         if thumb:
             out["thumbnail"] = {"url": thumb}
         return out
+    if t == "roast":
+        out = {**base, "description": kda, "color": COLOR["loss"]}
+        if thumb:
+            out["thumbnail"] = {"url": thumb}
+        return out
     if t == "streak":
-        return {**base, "description": "Que no pare 🚀" if e["kind"] == "W" else "Igual toca descansar un rato",
+        default = "Que no pare 🚀" if e["kind"] == "W" else "Igual toca descansar un rato"
+        return {**base, "description": None if e.get("roast") else default,
                 "color": COLOR["win"] if e["kind"] == "W" else COLOR["loss"]}
     if t == "streakEnd":
         return {**base, "color": COLOR["loss"] if e["kind"] == "W" else COLOR["win"]}

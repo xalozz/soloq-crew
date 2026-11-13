@@ -2,6 +2,11 @@
 
 Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 
+## 2026-11-13
+- Llegan los roasts: cada subida, bajada, racha, penta o récord trae su comentario, y las partidas para olvidar (feedeos, ventajas tiradas, victorias de paquete con muy poco daño, rendiciones, pings de «?»…) salen en Novedades y en Discord. Como mucho dos por persona al día.
+- El daño se juzga según el campeón: un Malphite tanque no se compara con un Renekton.
+- Las frases están en una lista que se puede ampliar con las vuestras.
+
 ## 2026-11-12
 - La web se ha mudado a soloq.xalozz.es y ahora funciona en un servidor propio: se actualiza cada minuto sin depender de GitHub. La dirección vieja lleva a la nueva.
 - Web rehecha por dentro: se ve y funciona igual, pero los enlaces a una sección te dejan en ella y ya no aparece el texto «nullnull» al final de Flex y Clash.
