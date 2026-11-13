@@ -31,6 +31,9 @@ ProtectKernelLogs=yes
 ProtectControlGroups=yes
 ProtectClock=yes
 ProtectHostname=yes
+# Sin salida a internet (2026-11-13): La web solo sirve datos; Riot y Discord los usa soloq-actualizador, no esta. Solo habla con Caddy por 127.0.0.1.
+IPAddressAllow=localhost
+IPAddressDeny=any
 RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
 RestrictNamespaces=yes
 RestrictRealtime=yes
