@@ -22,6 +22,8 @@ from .tiempo import day_start, madrid_parts
 
 log = logging.getLogger("soloq")
 
+RARE_MIN_SEASON = 20            # partidas de temporada para que un campeón cuente como «raro»
+RARE_MAX = 3                    # «raro»: como mucho su 3.ª partida con ese campeón en la temporada
 ROAST_PER_DAY = 2               # avisos «roast» de partida por jugador y día (los remates de los hitos no cuentan)
 # % del daño del equipo por debajo del cual es «daño bajo», por tipo principal del campeón (sin tanques ni supports)
 LOW_DMG = {"Marksman": 15, "Mage": 15, "Assassin": 13, "Fighter": 11}
@@ -77,10 +79,10 @@ def _team_worst(g, detail, rid):
     return False
 
 
-def detect_game(g, history, tags, detail=None, rid=None):
+def detect_game(g, history, tags, detail=None, rid=None, names=None):
     """(clave, valores) del roast más gordo de una partida, o None."""
     win, mins = g["win"], _mins(g)
-    v = {"champ": g["champ"], "k": g["k"], "d": g["d"], "a": g["a"], "min": js_str(math.floor(mins)), "pos": POS_ES.get(g.get("role"), "")}
+    v = {"champ": (names or {}).get(g["champ"], g["champ"]), "k": g["k"], "d": g["d"], "a": g["a"], "min": js_str(math.floor(mins)), "pos": POS_ES.get(g.get("role"), "")}
     gold = g.get("gold") or {}
     share = _share(g)
 
@@ -99,13 +101,16 @@ def detect_game(g, history, tags, detail=None, rid=None):
         return "ff", v
     if not win and ((g.get("pg") or {}).get("q") or 0) >= 10:
         return "preguntas", {**v, "q": js_str(g["pg"]["q"])}
+    same = [x for x in history if x["champ"] == g["champ"]]
+    n = len(same) + (0 if any(x["id"] == g["id"] for x in same) else 1)
+    if len(history) >= RARE_MIN_SEASON and n <= RARE_MAX:
+        return ("estreno" if n == 1 else "raro") + ("Gana" if win else "Pierde"), {**v, "n": js_str(n), "nth": NTH[n] if n < len(NTH) else ""}
     if g.get("role") in ("TOP", "MIDDLE", "BOTTOM") and mins >= 20 and g["cs"] / mins < 5:
         return "cs", {**v, "csmin": es_1dec(g["cs"] / mins)}
     vis_floor = 0.9 if g.get("role") == "UTILITY" else 0.35
     if mins >= 20 and g["vis"] / mins < vis_floor:
         return "vision", {**v, "vis": js_str(g["vis"])}
     if not win:
-        same = [x for x in history if x["champ"] == g["champ"]]
         w = sum(1 for x in same if x["win"])
         if len(same) >= 8 and w / len(same) < 0.4:
             return "maldito", {**v, "w": js_str(w), "l": js_str(len(same) - w)}
@@ -185,7 +190,8 @@ def add_roasts(events, ctx):
         for g in sorted(ctx["newGames"].get(key) or [], key=lambda x: x["t"]):
             if used[key] >= ROAST_PER_DAY or now - g["t"] > 12 * 3600e3:
                 continue
-            hit = detect_game(g, hist, ctx.get("tags"), (ctx.get("details") or {}).get(g["id"]), ctx["rids"].get(key))
+            hit = detect_game(g, hist, ctx.get("tags"), (ctx.get("details") or {}).get(g["id"]), ctx["rids"].get(key),
+                              ctx.get("names"))
             if not hit:
                 continue
             k, vals = hit

@@ -5,6 +5,7 @@ Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 ## 2026-11-13
 - Llegan los roasts: cada subida, bajada, racha, penta o récord trae su comentario, y las partidas para olvidar (feedeos, ventajas tiradas, victorias de paquete con muy poco daño, rendiciones, pings de «?»…) salen en Novedades y en Discord. Como mucho dos por persona al día.
 - El daño se juzga según el tipo de campeón: a un tanque o a un support no se le pide el daño de un tirador.
+- También hay roast cuando alguien saca un campeón que no juega nunca (su primera, segunda o tercera partida con él en la temporada).
 - Las frases están en una lista que se puede ampliar con las vuestras.
 
 ## 2026-11-12

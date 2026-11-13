@@ -526,7 +526,7 @@ class Updater:
                             details[g["id"]] = json.loads(raw)
                 events = add_roasts(events, {"now": now, "log": store.read_events()["events"], "players": mains_now,
                                              "newGames": new_games, "histories": season_hists,
-                                             "tags": dd.get("tags"), "details": details, "rids": rids,
+                                             "tags": dd.get("tags"), "names": dd.get("names"), "details": details, "rids": rids,
                                              "leader": leader_of(players, main_acc)})
             except Exception:
                 log.exception("  ! roasts")

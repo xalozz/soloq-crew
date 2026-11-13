@@ -46,6 +46,17 @@ class Roasts(unittest.TestCase):
         self.assertTrue(emb["description"].startswith("**"))
         self.assertNotIn("descansar", emb["description"])
 
+    def test_campeon_raro(self):
+        season = [game(100 + i, champ="Ahri", win=True) for i in range(25)]
+        g = game(1, champ="Kayn", win=False)
+        k, v = roasts.detect_game(g, [g] + season, TAGS, names={"Kayn": "Kayn"})
+        self.assertEqual((k, v["n"]), ("estrenoPierde", "1"))
+        olds = [game(200 + i, champ="Kayn", win=True) for i in range(2)]
+        k, v = roasts.detect_game(game(2, champ="Kayn", win=True), olds + season, TAGS)
+        self.assertEqual((k, v["nth"]), ("raroGana", "tercera"))
+        self.assertIsNone(roasts.detect_game(game(3, champ="Ahri", win=True), season, TAGS))
+        self.assertIsNone(roasts.detect_game(game(4, champ="Kayn", win=True), season[:10], TAGS))
+
     def test_ascensor(self):
         down = {"name": "Pepe", "key": "pepe", "type": "down", "to": "Oro II", "from": "Oro I", "t": NOW, "id": "down:pepe:Oro II:1"}
         old = [{**down, "t": NOW - 3 * 864e5, "id": "a"}, {**down, "t": NOW - 6 * 864e5, "id": "b"}]

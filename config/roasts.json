@@ -161,6 +161,22 @@
       "texto": "🙈 {name} {vis} de visión en {min} minutos con {champ}",
       "remates": ["¿le cobran los wards o qué?", "rata", "jugando a ciegas", "grande!"]
     },
+    "estrenoPierde": {
+      "texto": "🎲 {name} se juega su primera partida de la temporada con {champ} y pierde",
+      "remates": ["{champ}, por ejemplo, ¿no?", "a probar cosas en ranked, grande!", "sus compañeros encantados de ser el banco de pruebas", "para eso están las normales", "seguro que ha sido culpa de sus equipos", "LOL"]
+    },
+    "estrenoGana": {
+      "texto": "🎲 {name} se juega su primera partida de la temporada con {champ} y gana",
+      "remates": ["{champ}, por ejemplo, ¿no?", "carreado igual", "a ver si va a ser que el problema es su main XD", "la suerte del principiante"]
+    },
+    "raroPierde": {
+      "texto": "🎲 {name} saca a {champ} por {nth} vez en toda la temporada y pierde",
+      "remates": ["{champ}, por ejemplo, ¿no?", "{n} partidas en toda la temporada, ¿y hoy tocaba?", "pero lo va a seguir intentando XD", "grande!"]
+    },
+    "raroGana": {
+      "texto": "🎲 {name} saca a {champ} por {nth} vez en toda la temporada y gana",
+      "remates": ["{champ}, por ejemplo, ¿no?", "carreado igual", "que no se lo crea mucho", "hasta un reloj parado"]
+    },
     "maldito": {
       "texto": "🔁 {name} vuelve a perder con {champ} ({w}V–{l}D esta temporada)",
       "remates": ["pero lo va a seguir intentando XD", "no aprende", "ni queriendo", "seguro que ha sido culpa de sus equipos"]
