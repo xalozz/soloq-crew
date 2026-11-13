@@ -1,29 +1,29 @@
 {
-  "_como": "Frases de los roasts. Se puede añadir o quitar cualquiera sin tocar código. Huecos que se rellenan solos: {name} {champ} {k} {d} {a} {min} {pos}, y según el caso {pct} {lead} {gd} {rival} {q} {csmin} {vis} {w} {l} {hora} {nth} {horas}. La primera palabra de cada «texto» es el icono.",
+  "_como": "Frases de los roasts. Se puede añadir o quitar cualquiera sin tocar código. Huecos que se rellenan solos: {name} {champ} {k} {d} {a} {min} {pos}, y según el caso {pct} {lead} {gd} {rival} {q} {csmin} {vis} {w} {l} {hora} {nth} {n} {horas}. La primera palabra de cada «texto» es el icono.",
 
   "remates": {
     "baja": [
       "pero lo va a seguir intentando XD",
       "se creía que tal",
       "seguro que ha sido culpa de sus equipos",
-      "nadie se lo esperaba XD",
-      "grande!",
       "vaya manco",
-      "LOL"
+      "patético",
+      "menudo paquete",
+      "grande!"
     ],
     "bajaLiga": [
       "se creía que tal",
       "seguro que ha sido culpa de sus equipos",
       "¿no le da vergüenza? a nosotros sí",
-      "de vuelta a donde pertenece",
+      "de vuelta a la basura, que es lo suyo",
       "menudo paquete",
-      "LOL"
+      "patético"
     ],
     "ascensor": [
       "por {nth} vez en dos semanas, pero lo va a seguir intentando XD",
-      "{nth} vez. hardstuck",
-      "{nth} vez que baja aquí. ese es su nivel",
-      "{nth} vez. a ver si a la próxima se queda ya"
+      "{nth} vez. hardstuck y además manco",
+      "{nth} vez que baja aquí. ese es su nivel, que se lo meta en la cabeza",
+      "{nth} vez. da vergüenza ajena"
     ],
     "duraPoco": [
       "le ha durado {horas} h XD",
@@ -34,59 +34,59 @@
       "y este es el mejor del grupo. madre mía",
       "el bueno del grupo XD",
       "se creía que tal",
-      "el nivel del grupo, señores"
+      "el mejor de un grupo de mancos sigue siendo un manco"
     ],
     "sube": [
       "a ver lo que dura",
-      "le han carreado",
-      "que no se acostumbre",
+      "carreado, obviamente",
+      "boosteado por sus equipos",
       "hasta mañana XD"
     ],
     "subeLiga": [
       "a ver lo que dura",
-      "que no se acostumbre",
       "carreado hasta aquí",
-      "nos vemos la semana que viene abajo"
+      "nos vemos la semana que viene abajo XD",
+      "boosteado por sus equipos"
     ],
     "rachaL5": [
       "seguro que ha sido culpa de sus equipos",
-      "apaga ya",
       "pero seguro que sigue jugando XD",
+      "vaya manco",
       "grande!"
     ],
     "rachaL7": [
       "¿no le da vergüenza? a nosotros sí",
       "pero lo va a seguir intentando XD",
-      "que alguien le quite el ordenador",
-      "seguro que ha sido culpa de sus equipos"
+      "seguro que ha sido culpa de sus equipos",
+      "patético"
     ],
     "rachaL10": [
       "¿no te da vergüenza? a nosotros sí",
-      "desinstala",
+      "desinstala, inútil",
       "cualquier bot lo hace mejor",
-      "LOL"
+      "esto ya es para denunciar"
     ],
     "rachaW": [
       "ya las devolverá",
-      "contra quién, ¿bots?",
+      "contra bots, seguro",
       "alguien le está jugando las partidas",
-      "que lo disfrute, no se va a repetir"
+      "carreado cinco veces seguidas, que también tiene mérito"
     ],
     "finRachaW": [
       "ya decíamos",
-      "lo raro era lo otro",
       "se acabó la tontería",
+      "volvió el manco",
       "LOL"
     ],
     "finRachaL": [
       "por pena",
-      "le ha tocado un equipo que carrea",
+      "carreado, obviamente",
       "hasta un mono gana alguna"
     ],
     "penta": [
       "contra bots, seguro",
-      "lo va a estar contando un año",
-      "y el resto de la partida, ni una"
+      "y el resto de la partida, ni una",
+      "ni un ciego falla eso"
     ],
     "pentaDerrota": [
       "y pierde. LOL",
@@ -98,17 +98,17 @@
       "casi. como siempre"
     ],
     "record": [
-      "tampoco era difícil en este grupo",
+      "tampoco era difícil en este grupo de mancos",
       "con el nivel que hay aquí, tampoco es mérito"
     ],
     "clasifica": [
       "a ver cuánto aguanta ahí",
-      "otro más del que reírse"
+      "otro manco más"
     ],
     "partidas": [
       "y sigue igual de malo",
       "y ni con esas aprende",
-      "tanto jugar para esto"
+      "y sigue sin tener ni puta idea"
     ]
   },
 
@@ -119,11 +119,11 @@
     },
     "feedPierde": {
       "texto": "💀 {name} {k}/{d}/{a} con {champ}",
-      "remates": ["¿está inteando o es así de malo?", "vaya manco", "menudo lastre", "sus compañeros tienen que estar encantados", "LOL", "grande!"]
+      "remates": ["¿está inteando o es así de malo?", "vaya manco", "menudo lastre", "qué puto asco", "LOL", "grande!"]
     },
     "feedGana": {
       "texto": "💀 {name} gana {k}/{d}/{a} con {champ}",
-      "remates": ["menudo parásito", "carreado", "que les dé las gracias a los otros cuatro", "LP por la cara", "ha ganado a pesar de {name}"]
+      "remates": ["menudo parásito", "carreado, obviamente", "LP por la cara", "ha ganado a pesar de {name}", "sus compañeros merecen una paga"]
     },
     "lastrePierde": {
       "texto": "🧱 {name} es el que menos daño hace y el que más muere de su equipo ({champ}, {k}/{d}/{a})",
@@ -131,59 +131,59 @@
     },
     "lastreGana": {
       "texto": "🧱 {name} gana siendo el que menos daño hace y el que más muere de su equipo ({champ}, {k}/{d}/{a})",
-      "remates": ["menudo parásito", "carreado de principio a fin", "que les dé las gracias a los otros cuatro"]
+      "remates": ["menudo parásito", "carreado de principio a fin", "LP por la cara"]
     },
     "mochila": {
       "texto": "🎒 {name} gana con {champ} haciendo el {pct}% del daño de su equipo",
-      "remates": ["menudo parásito", "carreado", "LP por la cara", "que les dé las gracias a los otros cuatro", "de paquete"]
+      "remates": ["menudo parásito", "carreado, obviamente", "LP por la cara", "de paquete", "vaya inútil"]
     },
     "sinDanio": {
       "texto": "🪶 {name} pierde con {champ} haciendo el {pct}% del daño de su equipo",
-      "remates": ["¿estaba jugando o mirando?", "vaya manco", "menudo lastre", "grande!"]
+      "remates": ["¿está inteando o es así de malo?", "vaya manco", "menudo lastre", "vaya inútil", "grande!"]
     },
     "linea": {
       "texto": "📉 {name} va −{gd} de oro contra el {rival} en el minuto 15",
-      "remates": ["le han pasado por encima", "vaya manco", "{rival} diff", "LOL"]
+      "remates": ["vaya manco", "{rival} diff", "humillado", "LOL"]
     },
     "ff": {
       "texto": "🏳️ {name} se rinde en el minuto {min} con {champ}",
-      "remates": ["rajado", "ni lo intenta", "seguro que ha sido culpa de sus equipos", "grande!"]
+      "remates": ["rajado", "rajado de mierda", "seguro que ha sido culpa de sus equipos", "grande!"]
     },
     "preguntas": {
       "texto": "❓ {name} pierde con {champ} después de {q} pings de «?»",
-      "remates": ["el «?» se lo ponemos nosotros", "y encima pierde XD", "seguro que ha sido culpa de sus equipos", "LOL"]
+      "remates": ["el «?» se lo ponemos nosotros, payaso", "y encima pierde XD", "seguro que ha sido culpa de sus equipos", "menudo payaso"]
     },
     "cs": {
       "texto": "🌾 {name} {csmin} CS/min con {champ}",
-      "remates": ["vaya manco", "cómo", "no tiene manos", "LOL"]
+      "remates": ["vaya manco", "cómo", "no tiene manos", "patético"]
     },
     "vision": {
       "texto": "🙈 {name} {vis} de visión en {min} minutos con {champ}",
-      "remates": ["¿le cobran los wards o qué?", "rata", "jugando a ciegas", "grande!"]
+      "remates": ["rata", "vaya inútil", "patético", "grande!"]
     },
     "estrenoPierde": {
       "texto": "🎲 {name} se juega su primera partida de la temporada con {champ} y pierde",
-      "remates": ["{champ}, por ejemplo, ¿no?", "a probar cosas en ranked, grande!", "sus compañeros encantados de ser el banco de pruebas", "para eso están las normales", "seguro que ha sido culpa de sus equipos", "LOL"]
+      "remates": ["{champ}, por ejemplo, ¿no?", "aprendiendo en ranked con cuatro rehenes. menudo sinvergüenza", "si ya es malo con sus mains, imagínate con esto", "menudo payaso", "seguro que ha sido culpa de sus equipos"]
     },
     "estrenoGana": {
       "texto": "🎲 {name} se juega su primera partida de la temporada con {champ} y gana",
-      "remates": ["{champ}, por ejemplo, ¿no?", "carreado igual", "a ver si va a ser que el problema es su main XD", "la suerte del principiante"]
+      "remates": ["{champ}, por ejemplo, ¿no?", "carreado, obviamente", "menudo parásito", "con su main no gana ni una y con esto sí. que se lo haga mirar"]
     },
     "raroPierde": {
       "texto": "🎲 {name} saca a {champ} por {nth} vez en toda la temporada y pierde",
-      "remates": ["{champ}, por ejemplo, ¿no?", "{n} partidas en toda la temporada, ¿y hoy tocaba?", "pero lo va a seguir intentando XD", "grande!"]
+      "remates": ["{champ}, por ejemplo, ¿no?", "si ya es malo con sus mains, imagínate con esto", "menudo payaso", "menudo sinvergüenza", "pero lo va a seguir intentando XD"]
     },
     "raroGana": {
       "texto": "🎲 {name} saca a {champ} por {nth} vez en toda la temporada y gana",
-      "remates": ["{champ}, por ejemplo, ¿no?", "carreado igual", "que no se lo crea mucho", "hasta un reloj parado"]
+      "remates": ["{champ}, por ejemplo, ¿no?", "carreado, obviamente", "menudo parásito", "que no se lo crea, que sigue siendo malo"]
     },
     "maldito": {
       "texto": "🔁 {name} vuelve a perder con {champ} ({w}V–{l}D esta temporada)",
-      "remates": ["pero lo va a seguir intentando XD", "no aprende", "ni queriendo", "seguro que ha sido culpa de sus equipos"]
+      "remates": ["pero lo va a seguir intentando XD", "¿no le da vergüenza? a nosotros sí", "menudo payaso", "seguro que ha sido culpa de sus equipos"]
     },
     "madrugada": {
       "texto": "🌙 {name} pierde a las {hora} con {champ}",
-      "remates": ["que se vaya a dormir", "nada bueno pasa a estas horas", "y mañana a currar XD", "grande!"]
+      "remates": ["ni dormir sabe", "patético", "seguro que ha sido culpa de sus equipos", "grande!"]
     }
   }
 }
