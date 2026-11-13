@@ -26,7 +26,7 @@ from .challenges import challenge_embed, challenge_event, challenge_status, comp
 from .discord import send_discord
 from .duos import compute_duos
 from .events import event_embed, detect_events, main_acc, welcome_embed
-from .roasts import add_damage_samples, add_roasts, leader_of, seed_damage_base
+from .roasts import add_roasts, leader_of
 from .flex import QUEUE_CLASH, flex_group_stats, update_flex_history
 from .importer import hash_of
 from .js import INF, dumps, jround
@@ -257,10 +257,7 @@ class Updater:
                 if rec and not timeline and (prev_g or {}).get("gold"):
                     rec["gold"] = prev_g["gold"]
                 if is_recent and rec:
-                    det = match_detail(match, dd)
-                    store.write_detail(mid, det)
-                    if self.roasts:
-                        add_damage_samples(store, det, (dd or {}).get("tags"))
+                    store.write_detail(mid, match_detail(match, dd))
                 if rec:
                     i = next((k for k, g in enumerate(history) if g["id"] == mid), -1)
                     if i >= 0:
@@ -312,10 +309,7 @@ class Updater:
                 continue
             try:
                 budget["details"] -= 1
-                det = match_detail(riot.match(region, mid), dd)
-                store.write_detail(mid, det)
-                if self.roasts:
-                    add_damage_samples(store, det, (dd or {}).get("tags"))
+                store.write_detail(mid, match_detail(riot.match(region, mid), dd))
             except Exception as err:
                 if is_key_error(err):
                     raise
@@ -428,8 +422,6 @@ class Updater:
         if dd_version is None:
             dd_version = (previous or {}).get("ddragonVersion")
         dd = load_data_dragon(dd_version, self.http)
-        if self.roasts:
-            seed_damage_base(store, dd.get("tags"))
         if dd.get("champs"):
             champ_ids = dd["champs"]
             store.set_state("campeones", champ_ids)
@@ -533,7 +525,7 @@ class Updater:
                         if raw:
                             details[g["id"]] = json.loads(raw)
                 events = add_roasts(events, {"now": now, "log": store.read_events()["events"], "players": mains_now,
-                                             "newGames": new_games, "histories": season_hists, "base": store.get_state("dmgBase"),
+                                             "newGames": new_games, "histories": season_hists,
                                              "tags": dd.get("tags"), "details": details, "rids": rids,
                                              "leader": leader_of(players, main_acc)})
             except Exception:

@@ -5,8 +5,8 @@ Las frases están en config/roasts.json (editable sin tocar código). Aquí solo
 - Remate: cada hito (subida, bajada, racha, penta, récord…) lleva un campo "roast" con una frase de su lista.
 - Partidas: cada partida nueva pasa por todos los detectores y se queda con el primero que salta (van por orden
   de gravedad). Como mucho ROAST_PER_DAY avisos de este tipo por jugador y día, para no llenar el canal.
-- Daño por campeón: % del daño del equipo de los 10 jugadores de cada partida descargada, por campeón y posición
-  (y por tipo de campeón y por posición, de respaldo). Un daño «bajo» es estar en el ~7 % peor de ese campeón.
+- Daño bajo: según el tipo principal del campeón en Data Dragon (tirador, mago, asesino, luchador); a tanques y
+  supports no se les mide el daño, ni a nadie que juegue de support.
 """
 
 import hashlib
@@ -23,9 +23,8 @@ from .tiempo import day_start, madrid_parts
 log = logging.getLogger("soloq")
 
 ROAST_PER_DAY = 2               # avisos «roast» de partida por jugador y día (los remates de los hitos no cuentan)
-BASE_MIN = 30                   # muestras mínimas para fiarse de la media de un campeón (si no, su tipo o su posición)
-BASE_IDS_CAP = 6000             # partidas ya contadas en la tabla de daño (para no contar dos veces)
-LOW_Z = 1.5                     # ~7 % peor de una normal
+# % del daño del equipo por debajo del cual es «daño bajo», por tipo principal del campeón (sin tanques ni supports)
+LOW_DMG = {"Marksman": 15, "Mage": 15, "Assassin": 13, "Fighter": 11}
 NTH = ["", "primera", "segunda", "tercera", "cuarta", "quinta", "sexta", "séptima", "octava", "novena", "décima"]
 POS_ES = {"TOP": "top", "JUNGLE": "jungla", "MIDDLE": "mid", "BOTTOM": "ADC", "UTILITY": "support"}
 
@@ -55,61 +54,6 @@ def _fill(s, vals):
     return s.format_map(defaultdict(str, {k: v for k, v in vals.items() if v is not None}))
 
 
-# ------------------------------------------------------------------ tabla de daño por campeón
-
-def add_damage_samples(store, detail, tags=None):
-    """Suma a la tabla las 10 muestras de una partida (una sola vez por partida)."""
-    if not detail or not detail.get("teams"):
-        return
-    base = store.get_state("dmgBase") or {"s": {}, "ids": []}
-    if detail["id"] in base["ids"]:
-        return
-    s = base["s"]
-    for team in detail["teams"]:
-        total = sum(p.get("dmg") or 0 for p in team["players"])
-        if not total:
-            continue
-        for p in team["players"]:
-            pos, champ = p.get("pos"), p.get("champ")
-            if not pos or not champ:
-                continue
-            share = (p.get("dmg") or 0) / total * 100
-            keys = [f"{champ}|{pos}", f"*|{pos}"]
-            tag = (tags or {}).get(champ)
-            if tag:
-                keys.append(f"#{tag}|{pos}")
-            for k in keys:
-                n, sm, sq = s.get(k) or [0, 0.0, 0.0]
-                s[k] = [n + 1, round(sm + share, 3), round(sq + share * share, 3)]
-    base["ids"] = (base["ids"] + [detail["id"]])[-BASE_IDS_CAP:]
-    store.set_state("dmgBase", base)
-
-
-def seed_damage_base(store, tags=None):
-    """Primera vez: la tabla sale de los detalles de partida que ya hay guardados."""
-    if store.get_state("dmgBase") is not None:
-        return
-    store.set_state("dmgBase", {"s": {}, "ids": []})
-    for mid in store.list_details():
-        raw = store.read_detail_raw(mid)
-        if raw:
-            add_damage_samples(store, json.loads(raw), tags)
-
-
-def damage_floor(base, champ, pos, tags=None):
-    """(umbral de daño bajo en %, media) para ese campeón en esa posición, o None si no hay datos."""
-    s = (base or {}).get("s") or {}
-    tag = (tags or {}).get(champ)
-    for k in (f"{champ}|{pos}", f"#{tag}|{pos}" if tag else None, f"*|{pos}"):
-        v = s.get(k) if k else None
-        if v and v[0] >= BASE_MIN:
-            n, sm, sq = v
-            mean = sm / n
-            sd = math.sqrt(max(0.0, sq / n - mean * mean))
-            return mean - LOW_Z * sd, mean
-    return None
-
-
 # ------------------------------------------------------------------ detectores de partida
 
 def _mins(g):
@@ -133,7 +77,7 @@ def _team_worst(g, detail, rid):
     return False
 
 
-def detect_game(g, history, base, tags, detail=None, rid=None):
+def detect_game(g, history, tags, detail=None, rid=None):
     """(clave, valores) del roast más gordo de una partida, o None."""
     win, mins = g["win"], _mins(g)
     v = {"champ": g["champ"], "k": g["k"], "d": g["d"], "a": g["a"], "min": js_str(math.floor(mins)), "pos": POS_ES.get(g.get("role"), "")}
@@ -144,12 +88,11 @@ def detect_game(g, history, base, tags, detail=None, rid=None):
         return "tirada", {**v, "lead": k1(gold["maxLead"]), "leadMin": gold.get("maxLeadMin")}
     if g["d"] >= 10 and g["k"] + g["a"] < g["d"]:
         return ("feedGana" if win else "feedPierde"), v
-    if _team_worst(g, detail, rid):
+    if g.get("role") != "UTILITY" and _team_worst(g, detail, rid):
         return ("lastreGana" if win else "lastrePierde"), v
-    if share is not None and g.get("role") and mins >= 15:
-        fl = damage_floor(base, g["champ"], g["role"], tags)
-        if fl and share < fl[0]:
-            return ("mochila" if win else "sinDanio"), {**v, "pct": js_str(round(share)), "media": js_str(round(fl[1]))}
+    low = LOW_DMG.get((tags or {}).get(g["champ"]))
+    if share is not None and low and g.get("role") not in (None, "UTILITY") and mins >= 15 and share < low:
+        return ("mochila" if win else "sinDanio"), {**v, "pct": js_str(round(share))}
     if gold.get("gd15") is not None and gold["gd15"] <= -2500 and g.get("opp"):
         return "linea", {**v, "gd": k1(-gold["gd15"]), "rival": g["opp"].get("champ")}
     if not win and g.get("ff") and mins < 21:
@@ -182,8 +125,7 @@ def _nth(n):
 def add_roasts(events, ctx):
     """Pone el remate a los hitos y añade los avisos «roast» de las partidas nuevas.
 
-    ctx: now, log (eventos ya publicados), players, newGames {key: [partidas]}, histories {key: [temporada]},
-         base (tabla de daño), tags, details {id: detalle}, rids {key: riotId}, leader (nombre del primero del grupo).
+    ctx: now, log (eventos ya publicados), players, newGames {key: [partidas]}, histories {key: [temporada]}, tags, details {id: detalle}, rids {key: riotId}, leader (nombre del primero del grupo).
     """
     P = phrases()
     rem = P.get("remates") or {}
@@ -243,7 +185,7 @@ def add_roasts(events, ctx):
         for g in sorted(ctx["newGames"].get(key) or [], key=lambda x: x["t"]):
             if used[key] >= ROAST_PER_DAY or now - g["t"] > 12 * 3600e3:
                 continue
-            hit = detect_game(g, hist, ctx.get("base"), ctx.get("tags"), (ctx.get("details") or {}).get(g["id"]), ctx["rids"].get(key))
+            hit = detect_game(g, hist, ctx.get("tags"), (ctx.get("details") or {}).get(g["id"]), ctx["rids"].get(key))
             if not hit:
                 continue
             k, vals = hit
