@@ -1,0 +1,9 @@
+/* Paleta de SoloQ Crew (negro y lima) para admin.css, que es común a las apps. */
+:root {
+  --a-bg: #0a0a0b; --a-surface: #131315; --a-surface-2: #1a1a1d; --a-border: #2a2a2f;
+  --a-text: #f4f4f5; --a-muted: #8e8e97; --a-faint: #5c5c66;
+  --a-accent: #d6ff3d; --a-accent-fg: #0a0a0b; --a-danger: #f2657e; --a-ok: #33d69a; --a-warn: #e8b949; --a-info: #74a9ff;
+  --a-font: "Archivo", system-ui, sans-serif; --a-display: "Archivo", system-ui, sans-serif;
+  --a-mono: "JetBrains Mono", ui-monospace, monospace;
+  --a-radius: 14px; --a-radius-s: 10px; --a-top: 24px;
+}

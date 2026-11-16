@@ -1,0 +1,82 @@
+/* Páginas de cuenta y administración de SoloQ Crew (entrar, alta, tu cuenta, /admin). Basado en el de luz y estado,
+   con la paleta de la web (negro y lima). */
+:root { --acento: #d6ff3d; --verde: #33d69a; --rojo: #f2657e; --ambar: #e8b949; --texto: #f4f4f5; --gris: #8e8e97; --tenue: #5c5c66; --linea: #2a2a2f; --fondo: #0a0a0b; --caja: #131315; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { background: var(--fondo); }
+body { margin: 0; min-height: 100vh; background: var(--fondo); color: var(--texto); font: 15px/1.5 "Archivo", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--acento); }
+
+.cab { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logo { margin: 0; font-weight: 800; font-size: 44px; letter-spacing: -0.05em; line-height: 1; font-style: italic; }
+.logo span { color: var(--acento); }
+.cab-der { display: flex; align-items: center; gap: 12px; }
+.salir { background: none; border: 1px solid var(--linea); color: var(--gris); border-radius: 999px; width: 30px; height: 30px; cursor: pointer; font-size: 14px; line-height: 1; }
+.salir:hover { color: var(--texto); border-color: var(--acento); }
+
+.centro { display: grid; place-items: center; }
+.entrar { width: min(320px, 100% - 32px); padding: 0; }
+.entrar .logo { margin-bottom: 36px; }
+.entrar form { display: grid; gap: 16px; }
+.entrar label { display: grid; gap: 6px; font: 11px "JetBrains Mono", monospace; color: var(--gris); letter-spacing: 0.08em; text-transform: uppercase; }
+.entrar input { background: var(--caja); border: 1px solid var(--linea); border-radius: 10px; color: var(--texto); font: 16px "Archivo", sans-serif; padding: 11px 14px; letter-spacing: normal; text-transform: none; }
+.entrar input:focus { outline: none; border-color: var(--acento); }
+#codigo { font-family: "JetBrains Mono", monospace; letter-spacing: 0.2em; }
+.entrar button { margin-top: 6px; background: var(--acento); color: var(--fondo); border: 0; border-radius: 10px; padding: 12px; font: 600 15px "Archivo", sans-serif; cursor: pointer; }
+.entrar button:hover { filter: brightness(1.08); }
+.entrar button:disabled { opacity: 0.5; }
+.error { margin: 0; min-height: 1.5em; color: var(--rojo); font-size: 14px; }
+
+.cab-pag { width: min(1240px, 100% - 32px); margin: 0 auto; padding: 28px 24px 0; }
+.cab-pag .logo { font-size: 36px; }
+.menu { display: flex; gap: 4px; font: 12px "JetBrains Mono", monospace; }
+.menu a { color: var(--gris); padding: 5px 10px; border: 1px solid transparent; border-radius: 999px; }
+.menu a:hover { color: var(--texto); }
+.menu a.on { color: var(--texto); border-color: var(--linea); }
+.a-sola { width: min(760px, 100% - 32px); margin: 28px auto 72px; }
+.a-layout { padding-top: 28px; }
+.entrar.ancho { width: min(440px, 100% - 32px); padding: 48px 0; }
+.entrar h1 { margin: 0; font-size: 22px; font-weight: 600; }
+.nota-entrar { margin: 0; font-size: 13px; color: var(--gris); }
+.nota-entrar a { color: var(--texto); text-decoration: underline; }
+.secreto { margin: 0; font: 14px "JetBrains Mono", monospace; letter-spacing: 0.06em; word-break: break-all; user-select: all; }
+@media (max-width: 720px) { .cab-pag { padding: 20px 0 0; } .cab-pag .logo { font-size: 30px; } .a-layout { padding-top: 12px; } }
+.a-card .qr { display: block; width: 200px; height: 200px; border-radius: 8px; background: #fff; margin: 12px 0; }
+.a-card .secreto { margin: 0 0 14px; }
+
+/* --- /admin de SoloQ: novedades, jugadores y retos --- */
+.a-layout input[type=date], .a-layout input[inputmode] { background: var(--a-surface-2); border: 1px solid var(--a-border); border-radius: var(--a-radius-s); color: var(--a-text); font: 14px var(--a-font); padding: 8px 10px; color-scheme: dark; }
+.s-tabla td { vertical-align: top; }
+.s-tabla .s-c { width: 72px; text-align: center; }
+.s-tabla input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--a-accent); cursor: pointer; }
+.s-params { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 8px; }
+.s-param { display: grid; gap: 4px; font-size: 12px; color: var(--a-muted); }
+.s-param input { width: 90px; padding: 6px 8px !important; }
+.s-param.ancho input { width: 260px; max-width: 100%; }
+.s-num { width: 90px !important; }
+.pad-x { padding: 0 18px 10px; }
+.s-textos { display: grid; gap: 8px; margin-top: 10px; }
+.s-textos label { display: grid; grid-template-columns: 130px minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+.s-textos input { width: 100%; }
+.s-textos code, .a-sub code { font: 12px var(--a-mono); color: var(--a-text); }
+.s-guardar { position: sticky; bottom: 0; display: flex; justify-content: flex-end; align-items: center; gap: 14px; padding: 12px 0; background: linear-gradient(transparent, var(--a-bg) 35%); }
+.s-guardar .a-msg { color: var(--a-warn); }
+.s-guardar .a-msg.err { color: var(--a-danger); }
+.s-jug .a-card-head { align-items: flex-end; }
+.s-nombre { display: grid; gap: 5px; font-size: 13px; color: var(--a-muted); flex: 1 1 220px; }
+.s-nombre input { font-size: 16px !important; font-weight: 600; }
+.s-cuenta { display: grid; grid-template-columns: minmax(150px, 1.4fr) 120px minmax(120px, 1fr) minmax(0, 1.6fr) 32px; gap: 10px; align-items: end; padding: 10px 0; border-top: 1px solid var(--a-border); }
+.s-cuenta label { display: grid; gap: 5px; font-size: 12px; color: var(--a-muted); min-width: 0; }
+.s-cuenta input, .s-cuenta select { width: 100% !important; }
+.s-estado { padding-bottom: 8px; min-width: 0; }
+.s-quien { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
+.s-objetivos { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.s-objetivos label { display: grid; gap: 4px; font-size: 12px; color: var(--a-muted); }
+@media (max-width: 720px) {
+  .s-cuenta { grid-template-columns: 1fr 1fr; }
+  .s-cuenta label:first-child, .s-estado { grid-column: 1 / -1; }
+  .s-textos label { grid-template-columns: 1fr auto; }
+  .s-textos label span { grid-column: 1 / -1; }
+}
+.a-form.inline label:has(> input[type=date]) { flex: 0 0 auto; }

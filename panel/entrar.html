@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SoloQ Crew · entrar</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/panel.css">
+  <script src="/entrar.js" defer></script>
+</head>
+<body class="centro">
+  <main class="entrar">
+    <p class="logo">soloq<span>.</span></p>
+    <form id="form" autocomplete="on">
+      <label>Usuario<input id="usuario" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required autofocus></label>
+      <label>Contraseña<input id="clave" type="password" autocomplete="current-password" required></label>
+      <label id="campo-codigo" hidden>Código de tu app de verificación<input id="codigo" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,7}" maxlength="7" placeholder="123 456"></label>
+      <button type="submit">Entrar</button>
+      <p id="error" class="error" role="alert"></p>
+      <p class="nota-entrar">¿No tienes cuenta o has perdido el acceso? Pide un enlace a quien te invitó.</p>
+    </form>
+  </main>
+</body>
+</html>

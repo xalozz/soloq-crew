@@ -3,6 +3,7 @@
 Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 
 ## 2026-11-16
+- Nuevo panel de administración en soloq.xalozz.es/admin (con cuenta por invitación): desde ahí se eligen qué novedades salen en la web y cuáles en Discord, se ajustan los umbrales de cada aviso (rachas, roasts, hitos de partidas…), se cambian los textos de los roasts, se añaden o quitan jugadores y cuentas, se crean y editan retos y se puede mandar un aviso de prueba a Discord.
 - Los roasts ya no llevan comentario: sale solo el dato (por ejemplo «4,7 CS/min con Galio»). Las subidas, bajadas y rachas vuelven a salir como antes.
 - Fuera los avisos por pings de «?» y por ir por detrás en oro en el minuto 15.
 

@@ -21,7 +21,7 @@ import time
 
 import httpx
 
-from . import config
+from . import ajustes as cfg_ajustes, config
 from .challenges import challenge_embed, challenge_event, challenge_status, compute_challenges
 from .discord import send_discord
 from .duos import compute_duos
@@ -142,8 +142,10 @@ def _strip(o):
 
 class Updater:
     def __init__(self, store, players_config, challenge_defs, riot=None, now=None, discord=None, http=None,
-                 api_key=None, webhook=_UNDEF, env=None, roasts=True):
+                 api_key=None, webhook=_UNDEF, env=None, roasts=True, settings=None, roast_texts=None):
         self.store = store
+        self.settings = settings or cfg_ajustes.completar(None)
+        self.roast_texts = roast_texts
         self.roasts = roasts
         self.config = players_config
         self.challenge_defs = challenge_defs
@@ -513,7 +515,9 @@ class Updater:
                 a.pop("_detailIds", None)
         store.write_lp_hist(lp_hist)
 
-        events = detect_events(previous["players"], players, {"now": now, "newGames": new_games, "peakBefore": peak_before}) \
+        avisos = self.settings["avisos"]
+        events = detect_events(previous["players"], players, {"now": now, "newGames": new_games, "peakBefore": peak_before,
+                                                              "params": {k: v["p"] for k, v in avisos.items()}}) \
             if previous and not previous.get("demo") else []
         if self.roasts and previous and not previous.get("demo"):
             try:
@@ -527,7 +531,8 @@ class Updater:
                 events = add_roasts(events, {"now": now, "log": store.read_events()["events"], "players": mains_now,
                                              "newGames": new_games, "histories": season_hists,
                                              "tags": dd.get("tags"), "names": dd.get("names"), "details": details, "rids": rids,
-                                             "leader": leader_of(players, main_acc)})
+                                             "leader": leader_of(players, main_acc), "ajustes": self.settings,
+                                             "textos": self.roast_texts})
             except Exception:
                 log.exception("  ! roasts")
 
@@ -654,6 +659,12 @@ class Updater:
         if last_week and not state.get("weeklySent"):
             state["weeklySent"] = last_week["key"]
 
+        aj = self.settings
+        hook = hook and aj["discord"]["activo"]
+
+        def to_discord(e):
+            return (aj["avisos"].get(cfg_ajustes.clave_evento(e)) or {}).get("discord", True)
+
         if hook:
             if not state.get("welcomed"):
                 items.append({"embed": welcome_embed(), "ok": lambda: state.__setitem__("welcomed", now)})
@@ -662,11 +673,18 @@ class Updater:
             for p in pending:
                 items.append({"embed": p["embed"], "id": p["id"], "at": p["at"], "ok": lambda: None})
             for e in events:
-                items.append({"embed": event_embed(e, dd_version), "id": e["id"], "at": now, "ok": lambda: None})
+                if to_discord(e):
+                    items.append({"embed": event_embed(e, dd_version), "id": e["id"], "at": now, "ok": lambda: None})
             for c in challenge_events:
-                items.append({"embed": challenge_embed(c["e"]), "ok": c["mark"]})
+                if to_discord(c["e"]):
+                    items.append({"embed": challenge_embed(c["e"]), "ok": c["mark"]})
+                else:
+                    c["mark"]()
             if not quick and last_week and state.get("weeklySent") != last_week["key"] and now - last_week["to"] < 2 * DAY:
-                items.append({"embed": week_embed(last_week), "ok": lambda: state.__setitem__("weeklySent", last_week["key"])})
+                if aj["avisos"]["semana"]["discord"]:
+                    items.append({"embed": week_embed(last_week), "ok": lambda: state.__setitem__("weeklySent", last_week["key"])})
+                else:
+                    state["weeklySent"] = last_week["key"]
         else:
             for c in challenge_events:
                 c["mark"]()
@@ -687,14 +705,23 @@ class Updater:
         self.store.write_notify_state(state)
 
 
-def load_configs():
-    players = json.loads((config.CONFIG_DIR / "players.json").read_text(encoding="utf-8"))
-    try:
-        ch = json.loads((config.CONFIG_DIR / "challenges.json").read_text(encoding="utf-8"))
-        defs = ch.get("challenges") or []
-    except (OSError, ValueError):
-        defs = []
-    return players, defs
+def load_configs(store=None):
+    """Jugadores, retos, ajustes y textos: lo guardado en /admin o, si no hay, lo de config/."""
+    c = cfg_ajustes.leer(store.get_state if store is not None else (lambda k: None))
+    return c["jugadores"], c["retos"], c["ajustes"], c["textos"]
+
+
+def discord_test(store, webhook, send, now):
+    """Aviso de prueba pedido desde /admin (la web no tiene salida a internet: lo manda el actualizador)."""
+    req = store.get_state(cfg_ajustes.K_PRUEBA)
+    if not req or req.get("hecha"):
+        return
+    if not webhook:
+        res = {"ok": False, "error": "no hay webhook de Discord configurado"}
+    else:
+        res = send([{"title": "🔔 Aviso de prueba", "description": "Si ves esto, los avisos de SoloQ Crew llegan a este canal.",
+                     "color": 0x5865F2, "timestamp": iso(now)}])
+    store.set_state(cfg_ajustes.K_PRUEBA, {**req, "hecha": now, "ok": bool(res.get("ok")), "error": res.get("error")})
 
 
 def run_pass(quick=False, store=None, env=None, **kw):
@@ -708,10 +735,17 @@ def run_pass(quick=False, store=None, env=None, **kw):
     status = {"v": 1, "at": 0, "ok": False, "full": not quick, "err": None, "msg": None, "live": None, "liveErr": None, "accErr": [], "calls": 0}
     try:
         try:
-            players, defs = load_configs() if "players_config" not in kw else (kw.pop("players_config"), kw.pop("challenge_defs", []))
+            if "players_config" in kw:
+                players, defs = kw.pop("players_config"), kw.pop("challenge_defs", [])
+            else:
+                players, defs, kw["settings"], kw["roast_texts"] = load_configs(store)
         except (OSError, ValueError):
             players, defs = None, []
         up = Updater(store, players, defs, env=env, **kw)
+        try:
+            discord_test(store, up.webhook, up.discord, up.now())
+        except Exception:
+            log.exception("  ! aviso de prueba")
         status = up.status
         up.run(quick)
         status["ok"] = True

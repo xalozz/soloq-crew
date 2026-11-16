@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>SoloQ Crew · tu cuenta</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/panel.css">
+  <script src="/cuenta.js" defer></script>
+</head>
+<body class="centro">
+  <main class="entrar ancho">
+    <p class="logo">soloq<span>.</span></p>
+    <p id="cargando" class="nota-entrar">Comprobando el enlace…</p>
+    <form id="form" hidden novalidate>
+      <h1 id="titulo"></h1>
+      <p id="intro" class="nota-entrar"></p>
+      <label id="campo-usuario">Usuario<input id="usuario" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="32"></label>
+      <input id="usuario-oculto" type="text" autocomplete="username" hidden>
+      <label>Contraseña<input id="clave" type="password" autocomplete="new-password" minlength="8"></label>
+      <label>Repite la contraseña<input id="clave2" type="password" autocomplete="new-password" minlength="8"></label>
+      <button type="submit" id="enviar"></button>
+      <p id="error" class="error" role="alert"></p>
+    </form>
+    <div id="malo" hidden>
+      <p id="malo-txt" class="error"></p>
+      <p class="nota-entrar"><a href="/entrar">Ir a entrar</a></p>
+    </div>
+  </main>
+</body>
+</html>

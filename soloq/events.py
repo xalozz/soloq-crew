@@ -119,6 +119,10 @@ def _last(xs):
 
 def detect_events(prev_players, players, ctx):
     now = ctx.get("now")
+    prm = ctx.get("params") or {}
+    milestones = (prm.get("games") or {}).get("hitos") or GAME_MILESTONES
+    steps = {"W": (prm.get("streakW") or {}).get("pasos") or STREAK_STEPS, "L": (prm.get("streakL") or {}).get("pasos") or STREAK_STEPS}
+    end_min = {"W": (prm.get("streakEndW") or {}).get("minimo") or 5, "L": (prm.get("streakEndL") or {}).get("minimo") or 5}
     events = []
     prev_by_name = {p["name"]: p for p in (prev_players or [])}
 
@@ -156,7 +160,7 @@ def detect_events(prev_players, players, ctx):
 
         g0 = b["rank"]["wins"] + b["rank"]["losses"] if b.get("rank") else 0
         g1 = a["rank"]["wins"] + a["rank"]["losses"] if a.get("rank") else 0
-        ms = _last([m for m in GAME_MILESTONES if g0 < m <= g1])
+        ms = _last([m for m in milestones if g0 < m <= g1])
         if ms:
             events.append({**base, "type": "games", "t": now, "n": ms})
 
@@ -174,10 +178,10 @@ def detect_events(prev_players, players, ctx):
         c1 = ((a.get("stats") or {}).get("streak") or {}).get("current") or {}
         if c1.get("type") and c1.get("count"):
             before = c0.get("count") if c0.get("type") == c1["type"] else 0
-            hit = _last([x for x in STREAK_STEPS if before < x <= c1["count"]])
+            hit = _last([x for x in steps.get(c1["type"], STREAK_STEPS) if before < x <= c1["count"]])
             if hit:
                 events.append({**base, "type": "streak", "t": fresh[0]["t"], "kind": c1["type"], "n": c1["count"]})
-            if c0.get("type") and c0["type"] != c1["type"] and c0["count"] >= 5:
+            if c0.get("type") and c0["type"] != c1["type"] and c0["count"] >= end_min.get(c0["type"], 5):
                 events.append({**base, "type": "streakEnd", "t": fresh[0]["t"], "kind": c0["type"], "n": c0["count"]})
 
         fresh_ids = {g["id"] for g in fresh}

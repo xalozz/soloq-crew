@@ -12,7 +12,7 @@ $scp = "$env:WINDIR\System32\OpenSSH\scp.exe"
 Push-Location $repo
 $tmp = Join-Path $env:TEMP "soloq-despliegue-$PID"
 try {
-    if (git status --porcelain -- soloq deploy config web index.html app.js style.css sw.js requirements.txt) {
+    if (git status --porcelain -- soloq panel deploy config web index.html app.js style.css sw.js requirements.txt) {
         throw 'Hay cambios sin commit en el código: haz commit antes de desplegar.'
     }
     # Copia limpia del último commit
@@ -41,7 +41,7 @@ try {
     $paquete = Join-Path $env:TEMP 'soloq-app.tgz'
     tar -czf $paquete -C "$tmp\src" soloq config deploy index.html app.js style.css sw.js `
         manifest.webmanifest favicon.svg favicon-32.png apple-touch-icon.png icon-192.png icon-512.png `
-        icon-maskable-512.png requirements.txt README.md web/dist
+        icon-maskable-512.png requirements.txt README.md web/dist panel
     if ($LASTEXITCODE -ne 0) { throw 'Falló el empaquetado' }
     Write-Host "Desplegando $(git log -1 --format='%h %s')"
     & $scp -q $paquete xalozz:/tmp/soloq-app.tgz

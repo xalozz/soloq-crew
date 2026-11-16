@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SoloQ Crew · tu cuenta</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/panel.css">
+  <link rel="stylesheet" href="/admin-tema.css">
+  <link rel="stylesheet" href="/admin.css">
+  <script src="/menu.js" defer></script>
+  <script src="/ajustes.js" defer></script>
+</head>
+<body>
+  <header class="cab cab-pag">
+    <a class="logo" href="/">soloq<span>.</span></a>
+    <div class="cab-der"><nav id="menu" class="menu" aria-label="Menú"></nav><button data-salir class="salir" title="Salir" aria-label="Salir">⏻</button></div>
+  </header>
+  <div class="a-main a-sola">
+    <header class="a-head"><div><h1>Tu cuenta</h1><p class="a-sub" id="quien"></p></div></header>
+    <section class="a-card">
+      <h2>Contraseña</h2>
+      <form class="a-form" id="pw" novalidate>
+        <input type="text" id="pw-user" autocomplete="username" hidden>
+        <label>Contraseña actual<input type="password" id="pw-actual" autocomplete="current-password"></label>
+        <label>Nueva<input type="password" id="pw-nueva" autocomplete="new-password" minlength="8"></label>
+        <label>Repite la nueva<input type="password" id="pw-nueva2" autocomplete="new-password" minlength="8"></label>
+        <div class="a-actions"><button class="a-btn primary" type="submit">Cambiar contraseña</button></div>
+        <p class="a-msg" id="pw-msg" role="status"></p>
+      </form>
+      <p class="a-sub">Al cambiarla se cierra la sesión en tus otros dispositivos.</p>
+    </section>
+    <section class="a-card" id="dos">
+      <div class="a-card-head"><h2>Verificación en dos pasos</h2><span id="dos-estado"></span></div>
+      <p class="a-sub" id="dos-intro"></p>
+      <div id="dos-alta" hidden>
+        <p class="a-sub">Escanea este QR con tu app de códigos (Google Authenticator, Aegis, 1Password, Authy…) o añade la
+          cuenta a mano con la clave de debajo (tipo: basada en tiempo).</p>
+        <img id="dos-qr" class="qr" alt="Código QR para la app de códigos" width="200" height="200">
+        <p id="dos-secreto" class="secreto"></p>
+      </div>
+      <form class="a-form" id="dos-form" novalidate hidden>
+        <input type="text" id="dos-user" autocomplete="username" hidden>
+        <label>Tu contraseña<input type="password" id="dos-clave" autocomplete="current-password"></label>
+        <label>Código que muestra la app<input type="text" id="dos-codigo" inputmode="numeric" autocomplete="one-time-code" maxlength="7" placeholder="123 456"></label>
+        <div class="a-actions"><button class="a-btn primary" type="submit" id="dos-ok"></button><button class="a-btn" type="button" id="dos-cancelar">Cancelar</button></div>
+      </form>
+      <div class="a-actions" id="dos-acciones"><button class="a-btn" type="button" id="dos-empezar"></button></div>
+      <p class="a-msg" id="dos-msg" role="status"></p>
+    </section>
+    <section class="a-card flush">
+      <div class="a-card-head pad"><h2>Dónde tienes la sesión abierta</h2><button class="a-btn small" type="button" id="todas">Cerrar sesión en todos</button></div>
+      <div class="a-table-wrap"><table class="a-table"><thead><tr><th>Dispositivo</th><th>IP</th><th>Inicio</th><th>Último uso</th></tr></thead><tbody id="sesiones"></tbody></table></div>
+    </section>
+  </div>
+</body>
+</html>

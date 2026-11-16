@@ -9,7 +9,10 @@ Sirve las mismas rutas que leía la web en GitHub Pages, así el frontend apenas
   /data/matches/<id>.json     detalle de una partida
   /api/latido                 { beat, status }: si el actualizador sigue vivo y cómo fue la última pasada
 
-Pensado para ir detrás de Caddy escuchando solo en 127.0.0.1. Solo lectura: no hay nada que no sea GET.
+Y la administración (/admin, con cuentas por invitación como luz y estado: /entrar, /cuenta, /ajustes y /api/…): lo
+único que escribe. Todo lo que no es GET exige la cabecera X-Panel y va bajo /api/. El ranking sigue siendo público.
+
+Pensado para ir detrás de Caddy escuchando solo en 127.0.0.1.
 
   python -m soloq.server [--port 8001]
 """
@@ -18,16 +21,17 @@ import argparse
 import base64
 import hashlib
 import json
+import os
 import re
 import sqlite3
 import threading
 from pathlib import Path
 
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse, Response
 from starlette.middleware.gzip import GZipMiddleware
 
-from . import config
+from . import accounts, config, cuentas_api, gestion
 from .js import dumps
 
 app = FastAPI(title="SoloQ Crew", docs_url=None, redoc_url=None, openapi_url=None)
@@ -55,6 +59,21 @@ IMMUTABLE = "public, max-age=31536000, immutable"   # assets/ lleva el hash del 
 MATCH_ID = re.compile(r"^[A-Z0-9]{2,6}_\d{1,15}$")
 _hosts = {"port": None}
 _local = threading.local()
+
+# Cuentas y administración (páginas en panel/, mismas piezas que luz y estado)
+PANEL_DIR = config.ROOT / "panel"
+PANEL = {"/entrar": "entrar.html", "/entrar.js": "entrar.js", "/cuenta": "cuenta.html", "/cuenta.js": "cuenta.js",
+         "/ajustes": "ajustes.html", "/ajustes.js": "ajustes.js", "/admin": "admin.html", "/admin.js": "admin.js",
+         "/admin.css": "admin.css", "/admin-tema.css": "admin-tema.css", "/admin-app.js": "admin-app.js",
+         "/menu.js": "menu.js", "/panel.css": "panel.css"}
+PANEL_TYPES = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8"}
+PRIVADOS = {"/admin", "/admin.js", "/admin-app.js", "/ajustes", "/ajustes.js", "/api/me", "/api/clave", "/api/salir-todo",
+            "/api/2fa", "/api/2fa/nuevo"}
+SOLO_ADMIN = {"/admin", "/admin.js", "/admin-app.js"}
+SEGURO = os.environ.get("SOLOQ_SEGURO", "1") == "1"
+accounts.DB_PATH = config.DATA_DIR / "cuentas.db"
+cuentas_api.configurar("soloq", secure=SEGURO, public_url=os.environ.get("SOLOQ_SITE", "").rstrip("/"),
+                       server_info=gestion.info_servidor)
 
 
 def configure(port):
@@ -135,16 +154,45 @@ def _error(status, msg):
 
 @app.middleware("http")
 async def guard(request: Request, call_next):
+    path = request.url.path
     if request.method not in ("GET", "HEAD"):
-        return _error(405, "solo lectura")
+        if not path.startswith("/api/"):
+            return _error(405, "solo lectura")
+        if request.headers.get("x-panel") != "1":
+            return _error(403, "petición no permitida")
+        try:
+            if int(request.headers.get("content-length") or 0) > gestion.MAX_BODY:
+                return _error(413, "demasiado grande")
+        except ValueError:
+            return _error(400, "petición no válida")
     hosts = allowed_hosts()
     if hosts and request.headers.get("host", "").lower() not in hosts:
         return _error(403, "host no permitido")
-    path = request.url.path
     if ".." in path or "\\" in path or "//" in path:
         return _error(404, "no encontrado")
+    request.state.user = None
+    touched: list = []
+    cuenta = path in PANEL or path.startswith("/api/") and path not in ("/api/latido",)
+    if path in PRIVADOS or path.startswith("/api/admin/"):
+        user = cuentas_api.session_user(request, touched)
+        if user is None:
+            if path.startswith("/api/"):
+                return JSONResponse({"detail": "Tienes que entrar."}, status_code=401)
+            return RedirectResponse("/entrar", status_code=303)
+        request.state.user = user
+        if path in SOLO_ADMIN and not user["is_admin"]:
+            return RedirectResponse("/ajustes", status_code=303)
+    elif path == "/entrar":
+        user = cuentas_api.session_user(request)
+        if user is not None:
+            return RedirectResponse("/admin" if user["is_admin"] else "/ajustes", status_code=303)
     response = await call_next(request)
-    if "cache-control" not in response.headers:
+    cookie = request.cookies.get(cuentas_api.CONF["cookie"])
+    if touched and cookie and cuentas_api.CONF["cookie"] not in response.headers.get("set-cookie", ""):
+        cuentas_api.set_cookie(response, cookie)        # sesión renovada: la cookie dura otros 30 días
+    if cuenta:
+        response.headers["Cache-Control"] = "no-store"
+    elif "cache-control" not in response.headers:
         response.headers["Cache-Control"] = "no-cache"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
@@ -152,6 +200,10 @@ async def guard(request: Request, call_next):
     response.headers["X-Robots-Tag"] = "noindex, nofollow, noarchive"
     response.headers["Content-Security-Policy"] = _web["csp"]
     return response
+
+
+app.include_router(cuentas_api.router)
+app.include_router(gestion.router)
 
 
 @app.api_route("/", methods=["GET", "HEAD"])
@@ -185,7 +237,7 @@ def img(folder: str, name: str):
 @app.api_route("/data/data.json", methods=["GET", "HEAD"])
 def data_json():
     text = _one("SELECT datos FROM estado WHERE clave = 'publicado'")
-    return _json(text) if text else _error(404, "todavía no hay datos")
+    return _json(gestion.filtrar_publicado(text)) if text else _error(404, "todavía no hay datos")
 
 
 @app.api_route("/data/weeks.json", methods=["GET", "HEAD"])
@@ -215,6 +267,10 @@ def latido():
 
 @app.api_route("/{name}", methods=["GET", "HEAD"])
 def static(name: str):
+    panel = PANEL.get("/" + name)
+    if panel:
+        f = PANEL_DIR / panel
+        return FileResponse(f, media_type=PANEL_TYPES[f.suffix])
     media = (DIST_STATIC if _web["dist"] else STATIC).get(name)
     f = _web["dir"] / name
     if not media or not f.is_file():
