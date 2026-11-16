@@ -2,6 +2,10 @@
 
 Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 
+## 2026-11-16
+- Los roasts ya no llevan comentario: sale solo el dato (por ejemplo «4,7 CS/min con Galio»). Las subidas, bajadas y rachas vuelven a salir como antes.
+- Fuera los avisos por pings de «?».
+
 ## 2026-11-13
 - Llegan los roasts: cada subida, bajada, racha, penta o récord trae su comentario, y las partidas para olvidar (feedeos, ventajas tiradas, victorias de paquete con muy poco daño, rendiciones, pings de «?»…) salen en Novedades y en Discord. Como mucho dos por persona al día.
 - El daño se juzga según el tipo de campeón: a un tanque o a un support no se le pide el daño de un tirador.
