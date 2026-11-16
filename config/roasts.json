@@ -1,5 +1,5 @@
 {
-  "_como": "Textos de los avisos de partida. Se puede cambiar cualquiera sin tocar código. Huecos que se rellenan solos: {name} {champ} {k} {d} {a} {min} {pos}, y según el caso {pct} {lead} {gd} {rival} {csmin} {vis} {w} {l} {hora} {nth} {n}. La primera palabra de cada «texto» es el icono.",
+  "_como": "Textos de los avisos de partida. Se puede cambiar cualquiera sin tocar código. Huecos que se rellenan solos: {name} {champ} {k} {d} {a} {min} {pos}, y según el caso {pct} {lead} {csmin} {vis} {w} {l} {hora} {nth} {n}. La primera palabra de cada «texto» es el icono.",
   "partidas": {
     "tirada": {
       "texto": "🎁 {name} pierde con {champ} después de ir +{lead} de oro"
@@ -21,9 +21,6 @@
     },
     "sinDanio": {
       "texto": "🪶 {name} pierde con {champ} haciendo el {pct}% del daño de su equipo"
-    },
-    "linea": {
-      "texto": "📉 {name} va −{gd} de oro contra el {rival} en el minuto 15"
     },
     "ff": {
       "texto": "🏳️ {name} se rinde en el minuto {min} con {champ}"

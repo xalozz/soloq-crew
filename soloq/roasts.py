@@ -85,8 +85,6 @@ def detect_game(g, history, tags, detail=None, rid=None, names=None):
     low = LOW_DMG.get((tags or {}).get(g["champ"]))
     if share is not None and low and g.get("role") not in (None, "UTILITY") and mins >= 15 and share < low:
         return ("mochila" if win else "sinDanio"), {**v, "pct": js_str(round(share))}
-    if gold.get("gd15") is not None and gold["gd15"] <= -2500 and g.get("opp"):
-        return "linea", {**v, "gd": k1(-gold["gd15"]), "rival": g["opp"].get("champ")}
     if not win and g.get("ff") and mins < 21:
         return "ff", v
     same = [x for x in history if x["champ"] == g["champ"]]
