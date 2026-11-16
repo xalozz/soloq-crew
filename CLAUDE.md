@@ -21,7 +21,8 @@ hasta que se guarden desde ahí). Lo común (VPS, stack, Git) está en
   `soloq/cuentas_api.py` y `soloq/admin.py` (consola) copiados de luz; páginas en `panel/` (`admin.js`/`admin.css`
   son los comunes; `admin-app.js` lo propio). Base de cuentas: `/srv/soloq/data/cuentas.db`. El ranking sigue público;
   solo `/admin`, `/ajustes` y `/api/admin/*`, `/api/me`… piden sesión. Lo que no es GET exige `X-Panel: 1`.
-  Consola: `cd /srv/soloq/app && sudo runuser -u soloq -- env SOLOQ_DATA=/srv/soloq/data .venv/bin/python -m soloq.admin usuarios|invitar [--admin]|restablecer <usuario>`.
+  Consola (desde /tmp; `alvaro` no entra en /srv/soloq/app): `sudo -u soloq env SOLOQ_DATA=/srv/soloq/data SOLOQ_SITE=https://soloq.xalozz.es/ PYTHONPATH=/srv/soloq/app /srv/soloq/app/.venv/bin/python -m soloq.admin usuarios|invitar [--admin]|restablecer <usuario>`.
+  Primera cuenta admin: invitación creada así el 16 nov 2026.
 - Secciones propias (`soloq/gestion.py` + `soloq/ajustes.py`): Novedades (web/Discord por tipo, umbrales, roasts por
   día, textos de los roasts, aviso de prueba), Jugadores y Retos. Se guardan en la tabla `estado` (`cfg_ajustes`,
   `cfg_jugadores`, `cfg_retos`, `cfg_textos`; si falta una, vale `config/*.json` o los valores por defecto de
