@@ -80,3 +80,10 @@ a:hover { color: var(--acento); }
   .s-textos label span { grid-column: 1 / -1; }
 }
 .a-form.inline label:has(> input[type=date]) { flex: 0 0 auto; }
+
+/* Paso entre páginas (panel, cuenta, administración): fundido; el logo se queda quieto.
+   Navegadores sin transiciones entre documentos (Firefox) cambian de página como siempre. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+.logo { view-transition-name: logo; }

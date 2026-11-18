@@ -10,7 +10,7 @@ import { fmt, pct, plural, rangeLabel, scoreLabel, signed, weekKeyOf } from '../
 export async function copyText(text: string, setLabel: (l: string | null) => void, openModal: AppApi['openModal'], done = '¡Copiado!'): Promise<void> {
   try { await navigator.clipboard.writeText(text); setLabel(done); } catch {
     // Sin permiso de portapapeles: se muestra para copiarlo a mano
-    openModal('Copiar', <textarea className="copy-area" readOnly rows={14} defaultValue={text} />);
+    openModal('Copiar', <textarea className="copy-area" data-autofocus="" readOnly rows={14} defaultValue={text} />);
     return;
   }
   setTimeout(() => setLabel(null), 1600);

@@ -2,6 +2,13 @@
 
 Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 
+## 2026-11-18
+- Las ventanas de la web (detalle de partida, comparador, explicaciones…) se cierran tocando fuera o con Esc, y aparecen con una animación suave.
+- El menú «Más» se cierra con Esc o tocando fuera.
+- En el panel de administración, al confirmar algo peligroso (borrar, quitar, desactivar) el botón que queda marcado es «Cancelar», así que un Intro sin querer ya no hace nada. Las ventanas se cierran con Esc o tocando fuera.
+- Los avisos de administración ya no se tapan unos a otros: se apilan abajo, cada uno con su ✕, y los de error se quedan hasta que los cierras.
+- Al pasar de una página a otra del panel de administración hay un fundido suave en vez de un salto.
+
 ## 2026-11-16
 - Nuevo panel de administración en soloq.xalozz.es/admin (con cuenta por invitación): desde ahí se eligen qué novedades salen en la web y cuáles en Discord, se ajustan los umbrales de cada aviso (rachas, roasts, hitos de partidas…), se cambian los textos de los roasts, se añaden o quitan jugadores y cuentas, se crean y editan retos y se puede mandar un aviso de prueba a Discord.
 - Los roasts ya no llevan comentario: sale solo el dato (por ejemplo «4,7 CS/min con Galio»). Las subidas, bajadas y rachas vuelven a salir como antes.

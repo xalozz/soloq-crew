@@ -172,15 +172,15 @@ export function Compare({ aName, bName }: { aName?: string; bName?: string }) {
   useEffect(() => {
     history.replaceState(null, '', `#vs/${encodeURIComponent(A.name)}/${encodeURIComponent(B.name)}`);
   }, [A.name, B.name]);
-  const sel = (cur: Player, onChange: (p: Player) => void) => (
-    <select className="cmp-sel" value={cur.name} onChange={(e) => onChange(model.find((p) => p.name === e.target.value)!)}>
+  const sel = (cur: Player, onChange: (p: Player) => void, first = false) => (
+    <select className="cmp-sel" data-autofocus={first ? '' : undefined} value={cur.name} onChange={(e) => onChange(model.find((p) => p.name === e.target.value)!)}>
       {players.map((p) => <option key={p.name} value={p.name}>{p.name}</option>)}
     </select>
   );
   return (
     <div className="cmp-wrap">
       <div className="cmp-bar-top">
-        {sel(A, (p) => setPair(p === B ? [p.name, A.name] : [p.name, B.name]))}
+        {sel(A, (p) => setPair(p === B ? [p.name, A.name] : [p.name, B.name]), true)}
         <button className="cmp-swap" title="Intercambiar" onClick={() => setPair([B.name, A.name])}>⇄</button>
         {sel(B, (p) => setPair(p === A ? [B.name, p.name] : [A.name, p.name]))}
         <TempButton cls="ghost-btn" label="🔗 Copiar enlace" run={(set) => { void copyText(location.href, set, openModal, '¡Enlace copiado!'); }} />

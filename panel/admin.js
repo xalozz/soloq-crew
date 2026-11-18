@@ -81,40 +81,95 @@
   const CATS = { acceso: 'Accesos', cuenta: 'Cuentas', admin: 'Administración', app: APP.appCat };
 
   // ------------------------------------------------------------------ avisos y diálogos
+  // Avisos: se apilan abajo en un popover manual (capa superior, sin z-index). Los de error se quedan hasta
+  // cerrarlos; los demás se van a los 5 s, salvo mientras tengan el foco. Con una ventana abierta, esperan.
+  let toastBox = null;
+  const toastQueue = [];
+  const modalOpen = () => !!document.querySelector('dialog:modal');
+  function announce(text) {
+    if (typeof document.ariaNotify === 'function') { document.ariaNotify(text); return; }
+    let live = document.getElementById('a-live');
+    if (!live) {
+      live = document.createElement('div');
+      live.id = 'a-live'; live.className = 'a-sr'; live.setAttribute('aria-live', 'polite');
+      document.body.appendChild(live);
+    }
+    live.textContent = '';
+    setTimeout(() => { live.textContent = text; }, 50);
+  }
+  function dropToast(t) {
+    const hadFocus = t.contains(document.activeElement);
+    const next = t.nextElementSibling || t.previousElementSibling;
+    t.remove();
+    if (!toastBox.children.length && toastBox.matches(':popover-open')) toastBox.hidePopover();
+    if (hadFocus && next) $('button', next).focus();
+  }
   function toast(text, tone = 'ok') {
+    if (modalOpen()) { toastQueue.push([text, tone]); return; }
+    if (!toastBox) {
+      toastBox = document.createElement('div');
+      toastBox.className = 'a-toasts';
+      toastBox.setAttribute('popover', 'manual');
+      toastBox.setAttribute('role', 'region');
+      toastBox.setAttribute('aria-label', 'Avisos');
+      document.body.appendChild(toastBox);
+    }
     const t = document.createElement('div');
     t.className = `a-toast ${tone}`;
-    t.setAttribute('role', tone === 'err' ? 'alert' : 'status');
-    t.textContent = text;
-    document.body.appendChild(t);
-    setTimeout(() => t.classList.add('out'), 3200);
-    setTimeout(() => t.remove(), 3700);
+    t.innerHTML = '<span></span><button type="button" aria-label="Cerrar aviso">✕</button>';
+    t.firstChild.textContent = text;
+    t.lastChild.addEventListener('click', () => dropToast(t));
+    toastBox.appendChild(t);
+    if (toastBox.showPopover && !toastBox.matches(':popover-open')) toastBox.showPopover();
+    announce(text);
+    if (tone === 'err') return;
+    const expire = () => { if (!t.isConnected) return; if (t.contains(document.activeElement)) setTimeout(expire, 1500); else dropToast(t); };
+    setTimeout(expire, 5000);
   }
 
-  function modal(html, { wide = false } = {}) {
-    const wrap = document.createElement('div');
-    wrap.className = 'a-modal';
-    wrap.innerHTML = `<div class="a-modal-bg" data-x></div><div class="a-modal-panel ${wide ? 'wide' : ''}" role="dialog" aria-modal="true">
-      <button class="a-btn ghost a-modal-x" type="button" data-x aria-label="Cerrar">✕</button>${html}</div>`;
-    const before = document.activeElement;
-    const close = () => { wrap.remove(); document.removeEventListener('keydown', onKey); if (before && before.focus) before.focus(); };
-    const onKey = (ev) => { if (ev.key === 'Escape') close(); };
-    wrap.addEventListener('click', (ev) => { if (ev.target.closest('[data-x]')) close(); });
-    document.addEventListener('keydown', onKey);
-    document.body.appendChild(wrap);
-    const first = wrap.querySelector('input, select, textarea, .a-modal-panel button:not([data-x])');
-    if (first) first.focus();
-    return { root: $('.a-modal-panel', wrap), close };
+  // Ventanas: <dialog> nativo. El navegador bloquea la página de detrás, mantiene el foco dentro, cierra con Esc
+  // (y tocando fuera con closedby="any") y devuelve el foco al botón que la abrió. onClose se llama siempre.
+  let dialogSeq = 0;
+  function outsideDismiss(d) {     // closedby="any" donde no existe (Safari): pulsar y soltar fuera del cuadro
+    if ('closedBy' in HTMLDialogElement.prototype) return;
+    const out = (e) => { const r = d.getBoundingClientRect(); return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom; };
+    let pressedOut = false;
+    d.addEventListener('pointerdown', (e) => { pressedOut = e.target === d && out(e); });
+    d.addEventListener('pointerup', (e) => { if (pressedOut && out(e)) d.close(); });
+  }
+  function modal(html, { wide = false, onClose = null } = {}) {
+    const d = document.createElement('dialog');
+    d.className = `a-dialog${wide ? ' wide' : ''}`;
+    d.setAttribute('closedby', 'any');
+    d.innerHTML = `<button class="a-btn ghost a-modal-x" type="button" data-x aria-label="Cerrar">✕</button>${html}`;
+    const title = $('h2', d);
+    if (title) { title.id = title.id || `a-dlg-${++dialogSeq}`; d.setAttribute('aria-labelledby', title.id); }
+    if (!$('[autofocus]', d)) {
+      const first = $('input:not([type=hidden]), select, textarea, button:not([data-x])', d);
+      if (first) first.setAttribute('autofocus', '');
+    }
+    const close = () => { if (d.open) d.close(); };
+    d.addEventListener('click', (ev) => { if (ev.target.closest('[data-x]')) close(); });
+    d.addEventListener('close', () => {
+      if (onClose) onClose();
+      setTimeout(() => d.remove(), 300);                          // deja terminar la animación de salida
+      while (toastQueue.length && !modalOpen()) toast(...toastQueue.shift());
+    });
+    outsideDismiss(d);
+    document.body.appendChild(d);
+    d.showModal();
+    return { root: d, close };
   }
 
+  // Confirmación: el foco empieza en Cancelar (la acción segura); Esc o tocar fuera = Cancelar.
   function confirmBox(title, text, okLabel, danger = false) {
     return new Promise((resolve) => {
+      let ok = false;
       const m = modal(`<h2>${esc(title)}</h2><p class="a-sub">${text}</p>
-        <div class="a-actions end"><button class="a-btn" type="button" data-no>Cancelar</button>
-        <button class="a-btn ${danger ? 'danger solid' : 'primary'}" type="button" data-ok>${esc(okLabel)}</button></div>`);
-      $('[data-ok]', m.root).focus();
-      $('[data-no]', m.root).addEventListener('click', () => { m.close(); resolve(false); });
-      $('[data-ok]', m.root).addEventListener('click', () => { m.close(); resolve(true); });
+        <div class="a-actions end"><button class="a-btn" type="button" data-x autofocus>Cancelar</button>
+        <button class="a-btn ${danger ? 'danger solid' : 'primary'}" type="button" data-ok>${esc(okLabel)}</button></div>`,
+      { onClose: () => resolve(ok) });
+      $('[data-ok]', m.root).addEventListener('click', () => { ok = true; m.close(); });
     });
   }
 

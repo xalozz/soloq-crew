@@ -25,7 +25,6 @@ export function Header({ live, updated, refreshTitle, spin, onRefresh, onCompare
   live: LiveState; updated: string; refreshTitle: string; spin: boolean;
   onRefresh: () => void; onCompare: () => void; onInstall: () => void; onDesktop: () => void;
 }) {
-  const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const menu = useRef<HTMLDivElement>(null);
   // Vista de ordenador: solo tiene sentido en pantallas pequeñas (o si ya está activada)
@@ -37,12 +36,18 @@ export function Header({ live, updated, refreshTitle, spin, onRefresh, onCompare
     };
   });
 
+  // Menú "Más" con popover: el navegador lo cierra con Esc o tocando fuera y devuelve el foco al botón.
+  // Donde no hay anclaje CSS (Firefox), se coloca bajo el botón justo antes de abrirse.
   useEffect(() => {
-    const onDoc = (e: MouseEvent) => { if (menu.current && !menu.current.hidden && !menu.current.contains(e.target as Node)) setOpen(false); };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
-    document.addEventListener('click', onDoc);
-    document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('click', onDoc); document.removeEventListener('keydown', onKey); };
+    const m = menu.current!;
+    const onToggle = (e: Event) => {
+      if ((e as ToggleEvent).newState !== 'open' || CSS.supports('anchor-name: --a')) return;
+      const r = document.getElementById('more-btn')!.getBoundingClientRect();
+      m.style.top = `${r.bottom + 8}px`;
+      m.style.right = `${document.documentElement.clientWidth - r.right}px`;
+    };
+    m.addEventListener('beforetoggle', onToggle);
+    return () => m.removeEventListener('beforetoggle', onToggle);
   }, []);
 
   // Enlace activo del menú según la sección visible (las del menú "Más" marcan el botón "Más")
@@ -54,7 +59,7 @@ export function Header({ live, updated, refreshTitle, spin, onRefresh, onCompare
     return () => io.disconnect();
   }, []);
 
-  const act = (fn?: () => void) => () => { fn?.(); setOpen(false); };
+  const act = (fn?: () => void) => () => { fn?.(); if (menu.current?.matches(':popover-open')) menu.current.hidePopover(); };
   return (
     <header className="nav-wrap">
       <nav className="nav">
@@ -66,9 +71,8 @@ export function Header({ live, updated, refreshTitle, spin, onRefresh, onCompare
           <a key={h} href={h} className={(active ?? '#ranking') === h ? 'active' : undefined}>{l}</a>
         ))}</div>
         <div className="nav-more">
-          <button id="more-btn" className={`more-btn${active && MORE_IDS.has(active) ? ' active' : ''}`} aria-haspopup="true" aria-expanded={open ? 'true' : 'false'}
-            onClick={(e) => { e.stopPropagation(); setOpen((o) => !o); }}>Más <span aria-hidden="true">▾</span></button>
-          <div id="more-menu" className="more-menu" hidden={!open} ref={menu}>
+          <button id="more-btn" className={`more-btn${active && MORE_IDS.has(active) ? ' active' : ''}`} popoverTarget="more-menu">Más <span aria-hidden="true">▾</span></button>
+          <div id="more-menu" className="more-menu" popover="auto" ref={menu}>
             {MORE.map(([h, l]) => <a key={h} href={h} onClick={act()}>{l}</a>)}
             <button data-action="compare" onClick={act(onCompare)}>⚖ Comparar jugadores</button>
             <button data-action="desktop" id="desktop-btn" hidden={desk.hidden} onClick={act(onDesktop)}>{desk.text}</button>

@@ -336,10 +336,41 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .rec.clickable { cursor: pointer; }
 .rec.clickable:hover { border-color: #44444c; }
 .rec.clickable .rec-t::after { content: " ↗"; color: var(--accent); }
-.modal { position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .7); display: grid; place-items: center; padding: 16px; }
-.modal-box { width: min(1100px, 100%); max-height: calc(100vh - 32px); overflow: auto; background: var(--bg); border: 1px solid var(--line); border-radius: 16px; }
+/* Ventanas: <dialog> abierto con showModal() (capa superior, sin z-index propio) */
+dialog.modal-box {
+  width: min(1100px, calc(100% - 32px)); max-width: none; max-height: calc(100vh - 32px); margin: auto; padding: 0; overflow: auto;
+  color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 16px;
+}
+dialog.modal-box.narrow { width: min(620px, calc(100% - 32px)); }
+/* Que la rueda o el dedo sobre la ventana o el fondo no desplacen la página de detrás */
+dialog.modal-box:modal { overscroll-behavior: contain; }
+dialog.modal-box::backdrop { overflow: hidden; overscroll-behavior: contain; }
 .modal-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 1; }
-.modal-box.narrow { width: min(620px, 100%); }
+/* Entrada y salida: fundido (y un leve zoom si no se pide menos movimiento). data-closing: salida en Firefox/Safari */
+dialog.modal-box {
+  opacity: 0;
+  transition-property: opacity, transform, display, overlay; transition-duration: .2s; transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+dialog.modal-box::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  transition-property: background-color, display, overlay; transition-duration: .2s; transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+dialog.modal-box[open]:where(:not([data-closing])) { opacity: 1; }
+dialog.modal-box[open]:where(:not([data-closing]))::backdrop { background-color: rgba(0, 0, 0, .7); }
+@starting-style {
+  dialog.modal-box[open]:where(:not([data-closing])) { opacity: 0; }
+  dialog.modal-box[open]:where(:not([data-closing]))::backdrop { background-color: rgba(0, 0, 0, 0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog.modal-box { transform: scale(.96); }
+  dialog.modal-box[open]:where(:not([data-closing])) { transform: none; }
+  @starting-style { dialog.modal-box[open]:where(:not([data-closing])) { transform: scale(.96); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.modal-box, dialog.modal-box::backdrop { transition-duration: .1s; }
+}
 .info-btn {
   -webkit-text-fill-color: var(--accent-ink); background: var(--accent); color: var(--accent-ink); border: 0; cursor: pointer;
   width: 30px; height: 30px; border-radius: 50%; font: 900 17px/30px Georgia, serif; font-style: italic; vertical-align: middle;
@@ -841,18 +872,32 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 }
 
 /* ------------------------------------------------ menú "Más" */
-.nav-more { position: relative; flex: none; }
+.nav-more { flex: none; }
 .more-btn {
   border: 1px solid var(--line); background: rgba(19, 19, 21, .85); border-radius: 999px; padding: 9px 14px;
   font-size: 13.5px; font-weight: 600; color: #d6d6db; cursor: pointer; white-space: nowrap;
 }
-.more-btn:hover, .more-btn[aria-expanded="true"] { color: var(--text); border-color: #44444c; }
+.more-btn { anchor-name: --more-btn; }
+.more-btn:hover, .nav-more:has(.more-menu:popover-open) .more-btn { color: var(--text); border-color: #44444c; }
 .more-btn.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-style: italic; font-weight: 800; }
+/* Popover en la capa superior, pegado bajo el botón (anclaje CSS; sin él, Header.tsx pone top/right al abrirlo) */
 .more-menu {
-  position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; min-width: 220px; display: flex; flex-direction: column; gap: 2px;
+  position: fixed; inset: auto; margin: 0; min-width: 220px; flex-direction: column; gap: 2px; color: inherit;
   padding: 6px; background: #141416; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 40px -12px rgba(0, 0, 0, .7);
 }
-.more-menu[hidden] { display: none; }
+.more-menu:popover-open { display: flex; }
+@supports (anchor-name: --a) {
+  .more-menu { position-anchor: --more-btn; top: calc(anchor(bottom) + 8px); right: anchor(right); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .more-menu {
+    opacity: 0; translate: 0 -.25rem;
+    transition-property: opacity, translate, display, overlay; transition-duration: .15s;
+    transition-behavior: allow-discrete;
+  }
+  .more-menu:popover-open { opacity: 1; translate: 0 0; transition-duration: .1s; }
+  @starting-style { .more-menu:popover-open { opacity: 0; translate: 0 -.25rem; } }
+}
 .more-menu a, .more-menu button {
   display: block; text-align: left; padding: 9px 12px; border-radius: 9px; font-size: 14px; font-weight: 600; color: #d6d6db;
   background: none; border: 0; cursor: pointer; font-family: inherit;
@@ -860,7 +905,6 @@ button.nav-updated:hover { border-color: var(--accent); color: var(--text); }
 .more-menu a:hover, .more-menu button:hover { background: var(--panel-3); color: var(--text); }
 .more-menu button { border-top: 1px solid var(--line); border-radius: 0 0 9px 9px; }
 .more-menu button + button { border-radius: 9px; border-top: 0; }
-body.modal-open { overflow: hidden; }
 
 /* ------------------------------------------------ aviso de novedades */
 .banner {
