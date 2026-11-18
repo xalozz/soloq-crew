@@ -3,9 +3,8 @@
 Lo que cambia en SoloQ Crew, en palabras de quien la usa. Lo más nuevo, arriba.
 
 ## 2026-11-18
-- Las ventanas de la web (detalle de partida, comparador, explicaciones…) se cierran tocando fuera o con Esc, y aparecen con una animación suave.
-- El menú «Más» se cierra con Esc o tocando fuera.
-- En el panel de administración, al confirmar algo peligroso (borrar, quitar, desactivar) el botón que queda marcado es «Cancelar», así que un Intro sin querer ya no hace nada. Las ventanas se cierran con Esc o tocando fuera.
+- Las ventanas de la web (detalle de partida, comparador, explicaciones…) aparecen con una animación suave.
+- En el panel de administración, al confirmar algo peligroso (borrar, quitar, desactivar) el botón que queda marcado es «Cancelar», así que un Intro sin querer ya no hace nada.
 - Los avisos de administración ya no se tapan unos a otros: se apilan abajo, cada uno con su ✕, y los de error se quedan hasta que los cierras.
 - Al pasar de una página a otra del panel de administración hay un fundido suave en vez de un salto.
 
